@@ -1,0 +1,1309 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>Mode - geotrellis.raster.op.focal.Mode</title>
+          <meta name="description" content="Mode - geotrellis.raster.op.focal.Mode" />
+          <meta name="keywords" content="Mode geotrellis.raster.op.focal.Mode" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'geotrellis.raster.op.focal.Mode';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <img src="../../../../lib/class_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.raster">raster</a>.<a href="../package.html" class="extype" name="geotrellis.raster.op">op</a>.<a href="package.html" class="extype" name="geotrellis.raster.op.focal">focal</a></p>
+        <h1>Mode</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Mode</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="n">n: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a>]</span>)</span><span class="result"> extends <a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="HasAnalysisArea.html" class="extype" name="geotrellis.raster.op.focal.HasAnalysisArea">HasAnalysisArea</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Computes the mode of a neighborhood for a given raster
+</p></div><dl class="paramcmts block"><dt class="param">r</dt><dd class="cmt"><p>Raster on which to run the focal operation.</p></dd><dt class="param">n</dt><dd class="cmt"><p>Neighborhood to use for this operation (e.g., <a href="Square.html" class="extype" name="geotrellis.raster.op.focal.Square">Square</a>(1))
+</p></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="HasAnalysisArea.html" class="extype" name="geotrellis.raster.op.focal.HasAnalysisArea">HasAnalysisArea</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>], <span class="extype" name="scala.Cloneable">Cloneable</span>, <span class="extype" name="java.lang.Cloneable">Cloneable</span>, <a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>], <a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>], <a href="FocalOperationBase.html" class="extype" name="geotrellis.raster.op.focal.FocalOperationBase">FocalOperationBase</a>, <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>], <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
+                <span class="toggle diagram-link">Type Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph161" viewBox="0.00 0.00 532.00 128.00" height="128pt" width="532pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 124)" class="graph" id="graph1"><polygon points="-4,5 -4,-124 529,-124 529,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><g class="cluster" id="graph4"></g><!-- node5 --><g class="node implicit-outgoing class" id="graph161_5"><a xlink:title="geotrellis.raster.op.focal.Mode can be implicitly converted to Operation[Mode] by the implicit method implicitLiteral in object geotrellis.Operation" xlink:href="../../../Operation.html#inheritance-diagram"><polygon points="500,-50 382,-50 382,-24 500,-24 500,-50" stroke="#ababab" fill="#e1e1e1"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="392" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#7d7d7d" font-size="10.00" font-family="Arial" y="-34.6667" x="414" text-anchor="start">Operation[Mode]</text></a></g><!-- node0 --><g class="node this class" id="graph161_0"><a xlink:title="geotrellis.raster.op.focal.Mode (this class)" xlink:href="#inheritance-diagram"><polygon points="310,-50 240,-50 240,-24 310,-24 310,-50" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="250" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-34.6667" x="272" text-anchor="start">Mode</text></a></g><!-- node0&#45;&gt;node5 --><g class="edge implicit-outgoing" id="0_5"><a xlink:title="Mode can be implicitly converted to Operation[Mode]"><path d="M317.677,-37C333.343,-37 351.541,-37 369.068,-37" stroke="#d4d4d4" fill="none"></path><polygon points="369.23,-38.7501 374.23,-37 369.23,-35.2501 369.23,-38.7501" stroke="#d4d4d4" fill="#d4d4d4"></polygon></a><text fill="#aaaaaa" font-size="10.00" font-family="Arial" y="-41" x="346" text-anchor="middle">implicitly</text></g><!-- node1 --><g class="node class" id="graph161_1"><a xlink:title="geotrellis.raster.op.focal.FocalOp" xlink:href="FocalOp.html#inheritance-diagram"><polygon points="116,-120 5.68434e-14,-120 7.10543e-15,-94 116,-94 116,-120" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-115" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="32" text-anchor="start">FocalOp[Raster]</text></a></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph161_1_0"><a xlink:title="Mode is a subtype of FocalOp[Raster]"><path d="M103.172,-92.4284C143.825,-79.3146 202.726,-60.3143 239.928,-48.3136" stroke="#d4d4d4" fill="none"></path><polygon points="102.529,-90.797 98.3075,-93.9976 103.603,-94.128 102.529,-90.797" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph161_2"><a xlink:title="geotrellis.raster.op.focal.HasAnalysisArea" xlink:href="HasAnalysisArea.html#inheritance-diagram"><polygon points="284,-120 134,-120 134,-94 284,-94 284,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="144" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="166" text-anchor="start">HasAnalysisArea[Mode]</text></a></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph161_2_0"><a xlink:title="Mode is a subtype of HasAnalysisArea[Mode]"><path d="M224.877,-90.1605C236.471,-77.8641 251.965,-61.4313 262.642,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="223.571,-88.995 221.414,-93.8335 226.117,-91.3961 223.571,-88.995" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node trait" id="graph161_3"><a xlink:title="scala.Product"><polygon points="380,-120 302,-120 302,-94 380,-94 380,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="312" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="334" text-anchor="start">Product</text></a></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph161_3_0"><a xlink:title="Mode is a subtype of Product"><path d="M325.123,-90.1605C313.529,-77.8641 298.035,-61.4313 287.358,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="323.883,-91.3961 328.586,-93.8335 326.429,-88.995 323.883,-91.3961" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node4 --><g class="node trait" id="graph161_4"><a xlink:title="scala.Serializable"><polygon points="494,-120 398,-120 398,-94 494,-94 494,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="408" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="430" text-anchor="start">Serializable</text></a></g><!-- node4&#45;&gt;node0 --><g class="edge inheritance" id="graph161_4_0"><a xlink:title="Mode is a subtype of Serializable"><path d="M409.457,-92.0409C378.979,-79.5646 335.984,-61.9641 306.883,-50.0514" stroke="#d4d4d4" fill="none"></path><polygon points="408.947,-93.7229 414.237,-93.9976 410.273,-90.4838 408.947,-93.7229" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="geotrellis.raster.op.focal.Mode"><span>Mode</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="geotrellis.raster.op.focal.HasAnalysisArea"><span>HasAnalysisArea</span></li><li class="in" name="scala.Cloneable"><span>Cloneable</span></li><li class="in" name="java.lang.Cloneable"><span>Cloneable</span></li><li class="in" name="geotrellis.raster.op.focal.FocalOp"><span>FocalOp</span></li><li class="in" name="geotrellis.raster.op.focal.FocalOperation"><span>FocalOperation</span></li><li class="in" name="geotrellis.raster.op.focal.FocalOperationBase"><span>FocalOperationBase</span></li><li class="in" name="geotrellis.Operation"><span>Operation</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+                <span class="filtertype">Implicitly<br />
+                </span>
+                <ol id="implicits"> <li class="in" name="geotrellis.Operation.implicitLiteral" data-hidden="false"><span>by implicitLiteral</span></li><li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.any2stringfmt" data-hidden="true"><span>by any2stringfmt</span></li><li class="in" name="scala.Predef.any2ArrowAssoc" data-hidden="true"><span>by any2ArrowAssoc</span></li><li class="in" name="scala.Predef.any2Ensuring" data-hidden="true"><span>by any2Ensuring</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="geotrellis.raster.op.focal.Mode#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(r:geotrellis.Op[geotrellis.Raster],n:geotrellis.Op[geotrellis.raster.op.focal.Neighborhood]):geotrellis.raster.op.focal.Mode"></a>
+      <a id="&lt;init&gt;:Mode"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Mode</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="n">n: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a>]</span>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">r</dt><dd class="cmt"><p>Raster on which to run the focal operation.</p></dd><dt class="param">n</dt><dd class="cmt"><p>Neighborhood to use for this operation (e.g., <a href="Square.html" class="extype" name="geotrellis.raster.op.focal.Square">Square</a>(1))
+</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="geotrellis.Operation.Args" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Args=List[Any]"></a>
+      <a id="Args:Args"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Args</span><span class="result"> = <span class="extype" name="scala.collection.immutable.List">List</span>[<span class="extype" name="scala.Any">Any</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.Steps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Steps=PartialFunction[Any,geotrellis.StepOutput[T]]"></a>
+      <a id="Steps:Steps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Steps</span><span class="result"> = <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:AnyRef):Boolean"></a>
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a>
+      <a id="+(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <span class="extype" name="scala.runtime.StringAdd">StringAdd</span> performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
+    </li><li name="scala.Predef.any2ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a>
+      <a id="-&gt;[B](B):(Mode,B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method any2ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:AnyRef):Boolean"></a>
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.raster.op.focal.FocalOperation#_run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_run(context:geotrellis.Context):geotrellis.StepOutput[T]"></a>
+      <a id="_run(Context):StepOutput[Raster]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_run</span><span class="params">(<span name="context">context: <a href="../../../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a> → <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.focal.FocalOperation#analysisAreaOp" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="analysisAreaOp:geotrellis.Operation[Option[geotrellis.RasterExtent]]"></a>
+      <a id="analysisAreaOp:Operation[Option[RasterExtent]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">analysisAreaOp</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Option">Option</span>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a> → <a href="FocalOperationBase.html" class="extype" name="geotrellis.raster.op.focal.FocalOperationBase">FocalOperationBase</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.raster.op.focal.FocalOperation#canEqual" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="canEqual(other:Any):Boolean"></a>
+      <a id="canEqual(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">canEqual</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a> → Equals</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">java.lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="geotrellis.Operation#debug" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="debug:Boolean"></a>
+      <a id="debug:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">debug</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation#dispatch" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dispatch(dispatcher:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
+      <a id="dispatch(ActorRef):DispatchedOperation[Raster]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dispatch</span><span class="params">(<span name="dispatcher">dispatcher: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../../../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring((Mode)⇒Boolean,⇒Any):Mode"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method any2Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a>
+      <a id="ensuring((Mode)⇒Boolean):Mode"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method any2Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring(Boolean,⇒Any):Mode"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method any2Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a>
+      <a id="ensuring(Boolean):Mode"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method any2Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.Operation#filter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="filter(f:T=&gt;Boolean):geotrellis.Operation[T]"></a>
+      <a id="filter((Raster)⇒Boolean):Operation[Raster]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">filter</span><span class="params">(<span name="f">f: (<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">java.lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="geotrellis.Operation#flatMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="flatMap[U](f:T=&gt;geotrellis.Operation[U]):geotrellis.Operation[U]"></a>
+      <a id="flatMap[U]((Raster)⇒Operation[U]):Operation[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">flatMap</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>) ⇒ <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a new operation with a function that takes the result of this operation
+and returns a new operation.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation with a function that takes the result of this operation
+and returns a new operation.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation#foreach" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="foreach[U](f:T=&gt;U):Unit"></a>
+      <a id="foreach[U]((Raster)⇒U):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreach</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>) ⇒ <span class="extype" name="geotrellis.Operation.foreach.U">U</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create an operation that applies the function f to the result of this operation,
+but returns nothing.</p><div class="fullcomment"><div class="comment cmt"><p>Create an operation that applies the function f to the result of this operation,
+but returns nothing.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="scala.Predef.any2stringfmt#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a>
+      <a id="formatted(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <span class="extype" name="scala.runtime.StringFormat">StringFormat</span> performed by method any2stringfmt in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="geotrellis.raster.op.focal.FocalOp#getCalculation" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getCalculation(r:geotrellis.Raster,n:geotrellis.raster.op.focal.Neighborhood):geotrellis.raster.op.focal.FocalCalculation[T]withgeotrellis.raster.op.focal.Initialization"></a>
+      <a id="getCalculation(Raster,Neighborhood):FocalCalculation[Raster]withInitialization"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getCalculation</span><span class="params">(<span name="r">r: <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>, <span name="n">n: <a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a></span>)</span><span class="result">: <a href="FocalCalculation.html" class="extype" name="geotrellis.raster.op.focal.FocalCalculation">FocalCalculation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="Initialization.html" class="extype" name="geotrellis.raster.op.focal.Initialization">Initialization</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Gets a calculation to be used with this focal operation for the given raster
+neighborhood.</p><div class="fullcomment"><div class="comment cmt"><p>Gets a calculation to be used with this focal operation for the given raster
+neighborhood.</p><p>Choosing the calculation based on on the raster and neighborhood allows flexibility
+in what calculation to use; if some calculations are faster
+for some neighborhoods (e.g., using a <a href="CellwiseCalculation.html" class="extype" name="geotrellis.raster.op.focal.CellwiseCalculation">CellwiseCalculation</a>
+for <a href="Square.html" class="extype" name="geotrellis.raster.op.focal.Square">Square</a> neighborhoods and a <a href="CursorCalculation.html" class="extype" name="geotrellis.raster.op.focal.CursorCalculation">CursorCalculation</a> for
+all other neighborhoods), or if you want to change the calculation
+based on the raster's data type, you can do so by returning the
+correct <a href="FocalCalculation.html" class="extype" name="geotrellis.raster.op.focal.FocalCalculation">FocalCalculation</a> from this function.
+</p></div><dl class="paramcmts block"><dt class="param">r</dt><dd class="cmt"><p>Raster that the focal calculation will run against.</p></dd><dt class="param">n</dt><dd class="cmt"><p>Neighborhood that will be used in the focal operation.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a> → <a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a></dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.raster.op.focal.HasAnalysisArea#makeClone" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="makeClone():SELF"></a>
+      <a id="makeClone():Mode"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">makeClone</span><span class="params">()</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HasAnalysisArea.html" class="extype" name="geotrellis.raster.op.focal.HasAnalysisArea">HasAnalysisArea</a></dd></dl></div>
+    </li><li name="geotrellis.Operation#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="map[U](f:T=&gt;U):geotrellis.Operation[U]"></a>
+      <a id="map[U]((Raster)⇒U):Operation[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">map</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>) ⇒ <span class="extype" name="geotrellis.Operation.map.U">U</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.map.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a new operation that returns the result of the provided function that
+takes this operation's result as its argument.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation that returns the result of the provided function that
+takes this operation's result as its argument.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.focal.Mode#n" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="n:geotrellis.Op[geotrellis.raster.op.focal.Neighborhood]"></a>
+      <a id="n:Op[Neighborhood]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">n</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Neighborhood to use for this operation (e.</p><div class="fullcomment"><div class="comment cmt"><p>Neighborhood to use for this operation (e.g., <a href="Square.html" class="extype" name="geotrellis.raster.op.focal.Square">Square</a>(1))
+</p></div></div>
+    </li><li name="geotrellis.Operation#name" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="name:String"></a>
+      <a id="name:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">name</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Return operation identified (class simple name).</p><div class="fullcomment"><div class="comment cmt"><p>Return operation identified (class simple name).
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.raster.op.focal.FocalOperation#nextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nextSteps:PartialFunction[Any,geotrellis.StepOutput[T]]"></a>
+      <a id="nextSteps:PartialFunction[Any,StepOutput[Raster]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nextSteps</span><span class="result">: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a> → <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.Operation#processNextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="processNextSteps(args:Operation.this.Args):geotrellis.StepOutput[T]"></a>
+      <a id="processNextSteps(Args):StepOutput[Raster]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">processNextSteps</span><span class="params">(<span name="args">args: <a href="#Args=List[Any]" class="extmbr" name="geotrellis.raster.op.focal.Mode.Args">Args</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.focal.FocalOperation#productArity" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="productArity:Int"></a>
+      <a id="productArity:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">productArity</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a> → Product</dd></dl></div>
+    </li><li name="geotrellis.raster.op.focal.FocalOperation#productElement" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="productElement(n:Int):Any"></a>
+      <a id="productElement(Int):Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">productElement</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a> → Product</dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#productIterator" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="productIterator:Iterator[Any]"></a>
+      <a id="productIterator:Iterator[Any]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">productIterator</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="scala.Any">Any</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#productPrefix" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="productPrefix:String"></a>
+      <a id="productPrefix:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">productPrefix</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
+    </li><li name="geotrellis.raster.op.focal.Mode#r" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="r:geotrellis.Op[geotrellis.Raster]"></a>
+      <a id="r:Op[Raster]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">r</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Raster on which to run the focal operation.</p>
+    </li><li name="geotrellis.Operation#run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="run(context:geotrellis.Context):geotrellis.StepOutput[T]"></a>
+      <a id="run(Context):StepOutput[Raster]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">run</span><span class="params">(<span name="context">context: <a href="../../../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Execute this operation and return the result.</p><div class="fullcomment"><div class="comment cmt"><p>Execute this operation and return the result.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation#runAsync" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="runAsync(args:Operation.this.Args):geotrellis.StepOutput[T]"></a>
+      <a id="runAsync(Args):StepOutput[Raster]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">runAsync</span><span class="params">(<span name="args">args: <a href="#Args=List[Any]" class="extmbr" name="geotrellis.raster.op.focal.Mode.Args">Args</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.focal.HasAnalysisArea#setAnalysisArea" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setAnalysisArea(op:geotrellis.Operation[Option[geotrellis.RasterExtent]]):SELF"></a>
+      <a id="setAnalysisArea(Operation[Option[RasterExtent]]):Mode"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setAnalysisArea</span><span class="params">(<span name="op">op: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Option">Option</span>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]]</span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HasAnalysisArea.html" class="extype" name="geotrellis.raster.op.focal.HasAnalysisArea">HasAnalysisArea</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="geotrellis.Operation#withResult" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withResult[U](f:T=&gt;geotrellis.Operation[U]):geotrellis.Operation[U]"></a>
+      <a id="withResult[U]((Raster)⇒Operation[U]):Operation[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withResult</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>) ⇒ <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a new operation with a function that takes the result of this operation
+and returns a new operation.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation with a function that takes the result of this operation
+and returns a new operation.</p><p>Same as flatMap.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="scala.Predef.any2ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a>
+      <a id="→[B](B):(Mode,B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method any2ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Shadowed Implict Value Members</h3>
+              <ol><li name="geotrellis.Operation.implicitLiteral#canEqual" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="canEqual(that:Any):Boolean"></a>
+      <a id="canEqual(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">canEqual</span><span class="params">(<span name="that">that: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mode: Operation[Mode]).canEqual(that)</pre></div></dd><dt>Definition Classes</dt><dd>Equals</dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#debug" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="debug:Boolean"></a>
+      <a id="debug:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">debug</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mode: Operation[Mode]).debug</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#dispatch" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dispatch(dispatcher:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
+      <a id="dispatch(ActorRef):DispatchedOperation[Mode]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">dispatch</span><span class="params">(<span name="dispatcher">dispatcher: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../../../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mode: Operation[Mode]).dispatch(dispatcher)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#filter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="filter(f:T=&gt;Boolean):geotrellis.Operation[T]"></a>
+      <a id="filter((Mode)⇒Boolean):Operation[Mode]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">filter</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mode: Operation[Mode]).filter(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#flatMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="flatMap[U](f:T=&gt;geotrellis.Operation[U]):geotrellis.Operation[U]"></a>
+      <a id="flatMap[U]((Mode)⇒Operation[U]):Operation[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">flatMap</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>) ⇒ <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a new operation with a function that takes the result of this operation
+and returns a new operation.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation with a function that takes the result of this operation
+and returns a new operation.
+</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mode: Operation[Mode]).flatMap(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#foreach" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="foreach[U](f:T=&gt;U):Unit"></a>
+      <a id="foreach[U]((Mode)⇒U):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">foreach</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>) ⇒ <span class="extype" name="geotrellis.Operation.foreach.U">U</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create an operation that applies the function f to the result of this operation,
+but returns nothing.</p><div class="fullcomment"><div class="comment cmt"><p>Create an operation that applies the function f to the result of this operation,
+but returns nothing.
+</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mode: Operation[Mode]).foreach(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="map[U](f:T=&gt;U):geotrellis.Operation[U]"></a>
+      <a id="map[U]((Mode)⇒U):Operation[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">map</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>) ⇒ <span class="extype" name="geotrellis.Operation.map.U">U</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.map.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a new operation that returns the result of the provided function that
+takes this operation's result as its argument.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation that returns the result of the provided function that
+takes this operation's result as its argument.
+</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mode: Operation[Mode]).map(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#name" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="name:String"></a>
+      <a id="name:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">name</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Return operation identified (class simple name).</p><div class="fullcomment"><div class="comment cmt"><p>Return operation identified (class simple name).
+</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mode: Operation[Mode]).name</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#nextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nextSteps:PartialFunction[Any,geotrellis.StepOutput[T]]"></a>
+      <a id="nextSteps:PartialFunction[Any,StepOutput[Mode]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">nextSteps</span><span class="result">: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mode: Operation[Mode]).nextSteps</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#processNextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="processNextSteps(args:Operation.this.Args):geotrellis.StepOutput[T]"></a>
+      <a id="processNextSteps(List[Any]):StepOutput[Mode]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">processNextSteps</span><span class="params">(<span name="args">args: <span class="extype" name="scala.collection.immutable.List">List</span>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mode: Operation[Mode]).processNextSteps(args)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#productArity" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="productArity:Int"></a>
+      <a id="productArity:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">productArity</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mode: Operation[Mode]).productArity</pre></div></dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#productElement" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="productElement(n:Int):Any"></a>
+      <a id="productElement(Int):Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">productElement</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mode: Operation[Mode]).productElement(n)</pre></div></dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="run(context:geotrellis.Context):geotrellis.StepOutput[T]"></a>
+      <a id="run(Context):StepOutput[Mode]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">run</span><span class="params">(<span name="context">context: <a href="../../../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Execute this operation and return the result.</p><div class="fullcomment"><div class="comment cmt"><p>Execute this operation and return the result.
+</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mode: Operation[Mode]).run(context)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#runAsync" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="runAsync(args:Operation.this.Args):geotrellis.StepOutput[T]"></a>
+      <a id="runAsync(List[Any]):StepOutput[Mode]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">runAsync</span><span class="params">(<span name="args">args: <span class="extype" name="scala.collection.immutable.List">List</span>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mode: Operation[Mode]).runAsync(args)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:Any"></a>
+      <a id="self:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">self</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <span class="extype" name="scala.runtime.StringAdd">StringAdd</span> performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mode: StringAdd).self</pre></div></dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
+    </li><li name="scala.Predef.any2stringfmt#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:Any"></a>
+      <a id="self:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">self</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <span class="extype" name="scala.runtime.StringFormat">StringFormat</span> performed by method any2stringfmt in scala.Predef.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mode: StringFormat).self</pre></div></dd><dt>Definition Classes</dt><dd>StringFormat</dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#withResult" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withResult[U](f:T=&gt;geotrellis.Operation[U]):geotrellis.Operation[U]"></a>
+      <a id="withResult[U]((Mode)⇒Operation[U]):Operation[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">withResult</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>) ⇒ <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a new operation with a function that takes the result of this operation
+and returns a new operation.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation with a function that takes the result of this operation
+and returns a new operation.</p><p>Same as flatMap.
+</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mode: Operation[Mode]).withResult(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.Predef.any2ArrowAssoc#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:Mode"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use leftOfArrow instead">x</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method any2ArrowAssoc in scala.Predef.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mode: ArrowAssoc[Mode]).x</pre></div></dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>leftOfArrow<code> instead</code></u></code></p></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:Mode"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use resultOfEnsuring instead">x</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] performed by method any2Ensuring in scala.Predef.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(mode: Ensuring[Mode]).x</pre></div></dd><dt>Definition Classes</dt><dd>Ensuring</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>resultOfEnsuring<code> instead</code></u></code></p></dd></dl></div>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="geotrellis.raster.op.focal.HasAnalysisArea">
+              <h3>Inherited from <a href="HasAnalysisArea.html" class="extype" name="geotrellis.raster.op.focal.HasAnalysisArea">HasAnalysisArea</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>]</h3>
+            </div><div class="parent" name="scala.Cloneable">
+              <h3>Inherited from <span class="extype" name="scala.Cloneable">Cloneable</span></h3>
+            </div><div class="parent" name="java.lang.Cloneable">
+              <h3>Inherited from <span class="extype" name="java.lang.Cloneable">Cloneable</span></h3>
+            </div><div class="parent" name="geotrellis.raster.op.focal.FocalOp">
+              <h3>Inherited from <a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</h3>
+            </div><div class="parent" name="geotrellis.raster.op.focal.FocalOperation">
+              <h3>Inherited from <a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</h3>
+            </div><div class="parent" name="geotrellis.raster.op.focal.FocalOperationBase">
+              <h3>Inherited from <a href="FocalOperationBase.html" class="extype" name="geotrellis.raster.op.focal.FocalOperationBase">FocalOperationBase</a></h3>
+            </div><div class="parent" name="geotrellis.Operation">
+              <h3>Inherited from <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        <div class="conversion" name="geotrellis.Operation.implicitLiteral">
+              <h3>Inherited by implicit conversion implicitLiteral from
+                <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to <span class="extype" name="scala.runtime.StringAdd">StringAdd</span>
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2stringfmt">
+              <h3>Inherited by implicit conversion any2stringfmt from
+                <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to <span class="extype" name="scala.runtime.StringFormat">StringFormat</span>
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2ArrowAssoc">
+              <h3>Inherited by implicit conversion any2ArrowAssoc from
+                <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2Ensuring">
+              <h3>Inherited by implicit conversion any2Ensuring from
+                <a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

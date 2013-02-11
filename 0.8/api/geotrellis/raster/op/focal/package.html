@@ -1,0 +1,1271 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>focal - geotrellis.raster.op.focal</title>
+          <meta name="description" content="focal - geotrellis.raster.op.focal" />
+          <meta name="keywords" content="focal geotrellis.raster.op.focal" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'geotrellis.raster.op.focal.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.raster">raster</a>.<a href="../package.html" class="extype" name="geotrellis.raster.op">op</a></p>
+        <h1>focal</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">focal</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block diagram-container" id="content-diagram-container">
+                <span class="toggle diagram-link">Content Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph140" viewBox="0.00 0.00 2980.87 282.00" height="282pt" width="2981pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 278)" class="graph" id="graph1"><polygon points="-4,5 -4,-278 2977.87,-278 2977.87,5 -4,5" stroke="white" fill="white"></polygon><!-- node0 --><g class="node trait" id="graph140_0"><a xlink:title="geotrellis.raster.op.focal.SurfacePointCalculation" xlink:href="SurfacePointCalculation.html#inheritance-diagram"><polygon points="368.872,-150 208.872,-150 208.872,-124 368.872,-124 368.872,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-145" x="218.872" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="240.872" text-anchor="start">SurfacePointCalculation[T]</text></a></g><!-- node1 --><g class="node class" id="graph140_1"><a xlink:title="geotrellis.raster.op.focal.CellwiseSumCalc" xlink:href="CellwiseSumCalc.html#inheritance-diagram"><polygon points="290.872,-88 170.872,-88 170.872,-62 290.872,-62 290.872,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="180.872" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="202.872" text-anchor="start">CellwiseSumCalc</text></a></g><!-- node2 --><g class="node class" id="graph140_2"><a xlink:title="geotrellis.raster.op.focal.CursorSumCalc" xlink:href="CursorSumCalc.html#inheritance-diagram"><polygon points="946.872,-88 832.872,-88 832.872,-62 946.872,-62 946.872,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="842.872" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="864.872" text-anchor="start">CursorSumCalc</text></a></g><!-- node3 --><g class="node class" id="graph140_3"><a xlink:title="geotrellis.raster.op.focal.Sum" xlink:href="Sum.html#inheritance-diagram"><polygon points="1754.87,-88 1688.87,-88 1688.87,-62 1754.87,-62 1754.87,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="1698.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="1720.87" text-anchor="start">Sum</text></a></g><!-- node4 --><g class="node class" id="graph140_4"><a xlink:title="geotrellis.raster.op.focal.Slope" xlink:href="Slope.html#inheritance-diagram"><polygon points="1312.87,-88 1242.87,-88 1242.87,-62 1312.87,-62 1312.87,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="1252.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="1274.87" text-anchor="start">Slope</text></a></g><!-- node5 --><g class="node class" id="graph140_5"><a xlink:title="geotrellis.raster.op.focal.Kernel" xlink:href="Kernel.html#inheritance-diagram"><polygon points="2510.87,-212 2438.87,-212 2438.87,-186 2510.87,-186 2510.87,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-207" x="2448.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="2470.87" text-anchor="start">Kernel</text></a></g><!-- node6 --><g class="node class" id="graph140_6"><a xlink:title="geotrellis.raster.op.focal.Annulus" xlink:href="Annulus.html#inheritance-diagram"><polygon points="2608.87,-212 2528.87,-212 2528.87,-186 2608.87,-186 2608.87,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-207" x="2538.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="2560.87" text-anchor="start">Annulus</text></a></g><!-- node7 --><g class="node class" id="graph140_7"><a xlink:title="geotrellis.raster.op.focal.Wedge" xlink:href="Wedge.html#inheritance-diagram"><polygon points="2702.87,-212 2626.87,-212 2626.87,-186 2702.87,-186 2702.87,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-207" x="2636.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="2658.87" text-anchor="start">Wedge</text></a></g><!-- node8 --><g class="node class" id="graph140_8"><a xlink:title="geotrellis.raster.op.focal.Nesw" xlink:href="Nesw.html#inheritance-diagram"><polygon points="2790.87,-212 2720.87,-212 2720.87,-186 2790.87,-186 2790.87,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-207" x="2730.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="2752.87" text-anchor="start">Nesw</text></a></g><!-- node9 --><g class="node class" id="graph140_9"><a xlink:title="geotrellis.raster.op.focal.Circle" xlink:href="Circle.html#inheritance-diagram"><polygon points="2878.87,-212 2808.87,-212 2808.87,-186 2878.87,-186 2878.87,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-207" x="2818.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="2840.87" text-anchor="start">Circle</text></a></g><!-- node10 --><g class="node class" id="graph140_10"><a xlink:title="geotrellis.raster.op.focal.Square" xlink:href="Square.html#inheritance-diagram"><polygon points="2972.87,-212 2896.87,-212 2896.87,-186 2972.87,-186 2972.87,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-207" x="2906.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="2928.87" text-anchor="start">Square</text></a></g><!-- node11 --><g class="node trait" id="graph140_11"><a xlink:title="geotrellis.raster.op.focal.Neighborhood" xlink:href="Neighborhood.html#inheritance-diagram"><polygon points="2761.87,-274 2657.87,-274 2657.87,-248 2761.87,-248 2761.87,-274" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-269" x="2667.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="2689.87" text-anchor="start">Neighborhood</text></a></g><!-- node11&#45;&gt;node5 --><g class="edge inheritance" id="graph140_11_5"><a xlink:title="Kernel is a subtype of Neighborhood"><path d="M2652.74,-246.723C2614.96,-237.169 2564.37,-224.163 2519.87,-212 2517.05,-211.228 2514.13,-210.416 2511.2,-209.591" stroke="#d4d4d4" fill="none"></path><polygon points="2652.47,-248.461 2657.75,-247.989 2653.33,-245.067 2652.47,-248.461" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node11&#45;&gt;node6 --><g class="edge inheritance" id="graph140_11_6"><a xlink:title="Annulus is a subtype of Neighborhood"><path d="M2675.38,-245.832C2651.9,-235.511 2621.15,-221.989 2598.73,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="2674.69,-247.441 2679.97,-247.851 2676.1,-244.237 2674.69,-247.441" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node11&#45;&gt;node7 --><g class="edge inheritance" id="graph140_11_7"><a xlink:title="Wedge is a subtype of Neighborhood"><path d="M2697.34,-243.727C2690.08,-233.724 2681.08,-221.332 2674.4,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="2695.98,-244.833 2700.33,-247.851 2698.81,-242.777 2695.98,-244.833" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node11&#45;&gt;node8 --><g class="edge inheritance" id="graph140_11_8"><a xlink:title="Nesw is a subtype of Neighborhood"><path d="M2722.69,-243.727C2730.11,-233.724 2739.3,-221.332 2746.13,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="2721.2,-242.793 2719.63,-247.851 2724.01,-244.879 2721.2,-242.793" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node11&#45;&gt;node9 --><g class="edge inheritance" id="graph140_11_9"><a xlink:title="Circle is a subtype of Neighborhood"><path d="M2742.93,-245.703C2765.21,-235.398 2794.28,-221.948 2815.5,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="2742.09,-244.164 2738.29,-247.851 2743.56,-247.34 2742.09,-244.164" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node11&#45;&gt;node10 --><g class="edge inheritance" id="graph140_11_10"><a xlink:title="Square is a subtype of Neighborhood"><path d="M2762.61,-246.501C2798.03,-236.757 2845.76,-223.62 2887.87,-212 2890.73,-211.212 2893.68,-210.396 2896.65,-209.575" stroke="#d4d4d4" fill="none"></path><polygon points="2761.83,-244.9 2757.47,-247.913 2762.76,-248.275 2761.83,-244.9" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node12 --><g class="node class" id="graph140_12"><a xlink:title="geotrellis.raster.op.focal.ScalarMoransI" xlink:href="ScalarMoransI.html#inheritance-diagram"><polygon points="2146.87,-88 2038.87,-88 2038.87,-62 2146.87,-62 2146.87,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="2048.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="2070.87" text-anchor="start">ScalarMoransI</text></a></g><!-- node13 --><g class="node class" id="graph140_13"><a xlink:title="geotrellis.raster.op.focal.RasterMoransI" xlink:href="RasterMoransI.html#inheritance-diagram"><polygon points="2272.87,-88 2164.87,-88 2164.87,-62 2272.87,-62 2272.87,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="2174.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="2196.87" text-anchor="start">RasterMoransI</text></a></g><!-- node14 --><g class="node class" id="graph140_14"><a xlink:title="geotrellis.raster.op.focal.CellwiseModeCalc" xlink:href="CellwiseModeCalc.html#inheritance-diagram"><polygon points="432.872,-88 308.872,-88 308.872,-62 432.872,-62 432.872,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="318.872" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="340.872" text-anchor="start">CellwiseModeCalc</text></a></g><!-- node15 --><g class="node class" id="graph140_15"><a xlink:title="geotrellis.raster.op.focal.CursorModeCalc" xlink:href="CursorModeCalc.html#inheritance-diagram"><polygon points="568.872,-88 450.872,-88 450.872,-62 568.872,-62 568.872,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="460.872" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="482.872" text-anchor="start">CursorModeCalc</text></a></g><!-- node16 --><g class="node class" id="graph140_16"><a xlink:title="geotrellis.raster.op.focal.Mode" xlink:href="Mode.html#inheritance-diagram"><polygon points="1842.87,-88 1772.87,-88 1772.87,-62 1842.87,-62 1842.87,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="1782.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="1804.87" text-anchor="start">Mode</text></a></g><!-- node17 --><g class="node class" id="graph140_17"><a xlink:title="geotrellis.raster.op.focal.Min" xlink:href="Min.html#inheritance-diagram"><polygon points="1920.87,-88 1860.87,-88 1860.87,-62 1920.87,-62 1920.87,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="1870.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="1892.87" text-anchor="start">Min</text></a></g><!-- node18 --><g class="node trait" id="graph140_18"><a xlink:title="geotrellis.raster.op.focal.MedianModeCalculation" xlink:href="MedianModeCalculation.html#inheritance-diagram"><polygon points="534.872,-150 386.872,-150 386.872,-124 534.872,-124 534.872,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-145" x="396.872" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="418.872" text-anchor="start">MedianModeCalculation</text></a></g><!-- node18&#45;&gt;node14 --><g class="edge inheritance" id="graph140_18_14"><a xlink:title="CellwiseModeCalc is a subtype of MedianModeCalculation"><path d="M437.341,-120.789C422.569,-110.613 403.766,-97.6603 389.931,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="436.675,-122.456 441.785,-123.851 438.661,-119.574 436.675,-122.456" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node18&#45;&gt;node15 --><g class="edge inheritance" id="graph140_18_15"><a xlink:title="CursorModeCalc is a subtype of MedianModeCalculation"><path d="M474.523,-119.727C482.429,-109.724 492.223,-97.3317 499.495,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="472.991,-118.843 471.264,-123.851 475.737,-121.014 472.991,-118.843" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node19 --><g class="node class" id="graph140_19"><a xlink:title="geotrellis.raster.op.focal.CellwiseMedianCalc" xlink:href="CellwiseMedianCalc.html#inheritance-diagram"><polygon points="152.872,-88 20.8721,-88 20.8721,-62 152.872,-62 152.872,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="30.8721" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="52.8721" text-anchor="start">CellwiseMedianCalc</text></a></g><!-- node18&#45;&gt;node19 --><g class="edge inheritance" id="graph140_18_19"><a xlink:title="CellwiseMedianCalc is a subtype of MedianModeCalculation"><path d="M381.783,-124.242C321.49,-114.467 236.415,-100.568 161.872,-88 159.005,-87.5166 156.077,-87.0204 153.12,-86.5169" stroke="#d4d4d4" fill="none"></path><polygon points="381.592,-125.984 386.808,-125.057 382.152,-122.529 381.592,-125.984" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node20 --><g class="node class" id="graph140_20"><a xlink:title="geotrellis.raster.op.focal.CursorMedianCalc" xlink:href="CursorMedianCalc.html#inheritance-diagram"><polygon points="710.872,-88 586.872,-88 586.872,-62 710.872,-62 710.872,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="596.872" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="618.872" text-anchor="start">CursorMedianCalc</text></a></g><!-- node18&#45;&gt;node20 --><g class="edge inheritance" id="graph140_18_20"><a xlink:title="CursorMedianCalc is a subtype of MedianModeCalculation"><path d="M505.714,-122.212C537.263,-111.807 579.092,-98.0126 609.382,-88.0232" stroke="#d4d4d4" fill="none"></path><polygon points="504.942,-120.623 500.742,-123.851 506.039,-123.947 504.942,-120.623" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node21 --><g class="node class" id="graph140_21"><a xlink:title="geotrellis.raster.op.focal.Median" xlink:href="Median.html#inheritance-diagram"><polygon points="1406.87,-88 1330.87,-88 1330.87,-62 1406.87,-62 1406.87,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="1340.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="1362.87" text-anchor="start">Median</text></a></g><!-- node22 --><g class="node class" id="graph140_22"><a xlink:title="geotrellis.raster.op.focal.CursorMeanCalc" xlink:href="CursorMeanCalc.html#inheritance-diagram"><polygon points="1224.87,-88 1106.87,-88 1106.87,-62 1224.87,-62 1224.87,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="1116.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="1138.87" text-anchor="start">CursorMeanCalc</text></a></g><!-- node23 --><g class="node class" id="graph140_23"><a xlink:title="geotrellis.raster.op.focal.CellwiseMeanCalc" xlink:href="CellwiseMeanCalc.html#inheritance-diagram"><polygon points="1088.87,-88 964.872,-88 964.872,-62 1088.87,-62 1088.87,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="974.872" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="996.872" text-anchor="start">CellwiseMeanCalc</text></a></g><!-- node24 --><g class="node class" id="graph140_24"><a xlink:title="geotrellis.raster.op.focal.Mean" xlink:href="Mean.html#inheritance-diagram"><polygon points="1494.87,-88 1424.87,-88 1424.87,-62 1494.87,-62 1494.87,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="1434.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="1456.87" text-anchor="start">Mean</text></a></g><!-- node25 --><g class="node class" id="graph140_25"><a xlink:title="geotrellis.raster.op.focal.Max" xlink:href="Max.html#inheritance-diagram"><polygon points="1576.87,-88 1512.87,-88 1512.87,-62 1576.87,-62 1576.87,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="1522.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="1544.87" text-anchor="start">Max</text></a></g><!-- node26 --><g class="node class" id="graph140_26"><a xlink:title="geotrellis.raster.op.focal.DirectHillshade" xlink:href="DirectHillshade.html#inheritance-diagram"><polygon points="2498.87,-88 2388.87,-88 2388.87,-62 2498.87,-62 2498.87,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="2398.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="2420.87" text-anchor="start">DirectHillshade</text></a></g><!-- node27 --><g class="node class" id="graph140_27"><a xlink:title="geotrellis.raster.op.focal.FocalOperation4" xlink:href="FocalOperation4.html#inheritance-diagram"><polygon points="2064.87,-212 1886.87,-212 1886.87,-186 2064.87,-186 2064.87,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-207" x="1896.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="1918.87" text-anchor="start">FocalOperation4[A, B, C, D, T]</text></a></g><!-- node34 --><g class="node class" id="graph140_34"><a xlink:title="geotrellis.raster.op.focal.FocalOp4" xlink:href="FocalOp4.html#inheritance-diagram"><polygon points="2050.87,-150 1900.87,-150 1900.87,-124 2050.87,-124 2050.87,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-145" x="1910.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1932.87" text-anchor="start">FocalOp4[A, B, C, D, T]</text></a></g><!-- node27&#45;&gt;node34 --><g class="edge inheritance" id="graph140_27_34"><a xlink:title="FocalOp4[A, B, C, D, T] is a subtype of FocalOperation4[A, B, C, D, T]"><path d="M1975.87,-180.646C1975.87,-170.843 1975.87,-159.003 1975.87,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="1974.12,-180.851 1975.87,-185.851 1977.62,-180.851 1974.12,-180.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node28 --><g class="node class" id="graph140_28"><a xlink:title="geotrellis.raster.op.focal.FocalOperation3" xlink:href="FocalOperation3.html#inheritance-diagram"><polygon points="2248.87,-212 2082.87,-212 2082.87,-186 2248.87,-186 2248.87,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-207" x="2092.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="2114.87" text-anchor="start">FocalOperation3[A, B, C, T]</text></a></g><!-- node35 --><g class="node class" id="graph140_35"><a xlink:title="geotrellis.raster.op.focal.FocalOp3" xlink:href="FocalOp3.html#inheritance-diagram"><polygon points="2248.87,-150 2112.87,-150 2112.87,-124 2248.87,-124 2248.87,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-145" x="2122.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="2144.87" text-anchor="start">FocalOp3[A, B, C, T]</text></a></g><!-- node28&#45;&gt;node35 --><g class="edge inheritance" id="graph140_28_35"><a xlink:title="FocalOp3[A, B, C, T] is a subtype of FocalOperation3[A, B, C, T]"><path d="M2170.25,-180.918C2172.63,-171.062 2175.53,-159.085 2177.7,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="2168.53,-180.58 2169.05,-185.851 2171.93,-181.403 2168.53,-180.58" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node29 --><g class="node class" id="graph140_29"><a xlink:title="geotrellis.raster.op.focal.FocalOperation2" xlink:href="FocalOperation2.html#inheritance-diagram"><polygon points="2420.87,-212 2266.87,-212 2266.87,-186 2420.87,-186 2420.87,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-207" x="2276.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="2298.87" text-anchor="start">FocalOperation2[A, B, T]</text></a></g><!-- node36 --><g class="node class" id="graph140_36"><a xlink:title="geotrellis.raster.op.focal.FocalOp2" xlink:href="FocalOp2.html#inheritance-diagram"><polygon points="2405.87,-150 2281.87,-150 2281.87,-124 2405.87,-124 2405.87,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-145" x="2291.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="2313.87" text-anchor="start">FocalOp2[A, B, T]</text></a></g><!-- node29&#45;&gt;node36 --><g class="edge inheritance" id="graph140_29_36"><a xlink:title="FocalOp2[A, B, T] is a subtype of FocalOperation2[A, B, T]"><path d="M2343.87,-180.646C2343.87,-170.843 2343.87,-159.003 2343.87,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="2342.12,-180.851 2343.87,-185.851 2345.62,-180.851 2342.12,-180.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node30 --><g class="node class" id="graph140_30"><a xlink:title="geotrellis.raster.op.focal.FocalOperation1" xlink:href="FocalOperation1.html#inheritance-diagram"><polygon points="1618.87,-212 1478.87,-212 1478.87,-186 1618.87,-186 1618.87,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-207" x="1488.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="1510.87" text-anchor="start">FocalOperation1[A, T]</text></a></g><!-- node37 --><g class="node class" id="graph140_37"><a xlink:title="geotrellis.raster.op.focal.FocalOp1" xlink:href="FocalOp1.html#inheritance-diagram"><polygon points="1414.87,-150 1302.87,-150 1302.87,-124 1414.87,-124 1414.87,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-145" x="1312.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1334.87" text-anchor="start">FocalOp1[A, T]</text></a></g><!-- node30&#45;&gt;node37 --><g class="edge inheritance" id="graph140_30_37"><a xlink:title="FocalOp1[A, T] is a subtype of FocalOperation1[A, T]"><path d="M1503.55,-184.212C1471.67,-173.807 1429.39,-160.013 1398.78,-150.023" stroke="#d4d4d4" fill="none"></path><polygon points="1503.28,-185.964 1508.58,-185.851 1504.37,-182.637 1503.28,-185.964" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node31 --><g class="node class" id="graph140_31"><a xlink:title="geotrellis.raster.op.focal.FocalOperation" xlink:href="FocalOperation.html#inheritance-diagram"><polygon points="1868.87,-212 1746.87,-212 1746.87,-186 1868.87,-186 1868.87,-212" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-207" x="1756.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="1778.87" text-anchor="start">FocalOperation[T]</text></a></g><!-- node38 --><g class="node class" id="graph140_38"><a xlink:title="geotrellis.raster.op.focal.FocalOp" xlink:href="FocalOp.html#inheritance-diagram"><polygon points="1854.87,-150 1760.87,-150 1760.87,-124 1854.87,-124 1854.87,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-145" x="1770.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1792.87" text-anchor="start">FocalOp[T]</text></a></g><!-- node31&#45;&gt;node38 --><g class="edge inheritance" id="graph140_31_38"><a xlink:title="FocalOp[T] is a subtype of FocalOperation[T]"><path d="M1807.87,-180.646C1807.87,-170.843 1807.87,-159.003 1807.87,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="1806.12,-180.851 1807.87,-185.851 1809.62,-180.851 1806.12,-180.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node32 --><g class="node trait" id="graph140_32"><a xlink:title="geotrellis.raster.op.focal.FocalOperationBase" xlink:href="FocalOperationBase.html#inheritance-diagram"><polygon points="2042.87,-274 1908.87,-274 1908.87,-248 2042.87,-248 2042.87,-274" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-269" x="1918.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="1940.87" text-anchor="start">FocalOperationBase</text></a></g><!-- node32&#45;&gt;node27 --><g class="edge inheritance" id="graph140_32_27"><a xlink:title="FocalOperation4[A, B, C, D, T] is a subtype of FocalOperationBase"><path d="M1975.87,-242.646C1975.87,-232.843 1975.87,-221.003 1975.87,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="1974.12,-242.851 1975.87,-247.851 1977.62,-242.851 1974.12,-242.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node32&#45;&gt;node28 --><g class="edge inheritance" id="graph140_32_28"><a xlink:title="FocalOperation3[A, B, C, T] is a subtype of FocalOperationBase"><path d="M2021.19,-246.212C2053.08,-235.807 2095.35,-222.013 2125.96,-212.023" stroke="#d4d4d4" fill="none"></path><polygon points="2020.38,-244.637 2016.17,-247.851 2021.46,-247.964 2020.38,-244.637" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node32&#45;&gt;node29 --><g class="edge inheritance" id="graph140_32_29"><a xlink:title="FocalOperation2[A, B, T] is a subtype of FocalOperationBase"><path d="M2048.19,-248.816C2111.21,-238.198 2202.36,-222.842 2266.76,-211.992" stroke="#d4d4d4" fill="none"></path><polygon points="2047.58,-247.144 2042.94,-249.7 2048.16,-250.595 2047.58,-247.144" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node32&#45;&gt;node30 --><g class="edge inheritance" id="graph140_32_30"><a xlink:title="FocalOperation1[A, T] is a subtype of FocalOperationBase"><path d="M1903.53,-250.496C1824.19,-238.977 1697.75,-220.617 1619.22,-209.214" stroke="#d4d4d4" fill="none"></path><polygon points="1903.48,-252.258 1908.68,-251.244 1903.99,-248.794 1903.48,-252.258" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node32&#45;&gt;node31 --><g class="edge inheritance" id="graph140_32_31"><a xlink:title="FocalOperation[T] is a subtype of FocalOperationBase"><path d="M1935.45,-246.083C1907.3,-235.694 1870.12,-221.971 1843.16,-212.023" stroke="#d4d4d4" fill="none"></path><polygon points="1934.95,-247.762 1940.24,-247.851 1936.16,-244.478 1934.95,-247.762" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node33 --><g class="node trait" id="graph140_33"><a xlink:title="geotrellis.raster.op.focal.HasAnalysisArea" xlink:href="HasAnalysisArea.html#inheritance-diagram"><polygon points="1663.87,-150 1513.87,-150 1513.87,-124 1663.87,-124 1663.87,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-145" x="1523.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1545.87" text-anchor="start">HasAnalysisArea[SELF]</text></a></g><!-- node33&#45;&gt;node3 --><g class="edge inheritance" id="graph140_33_3"><a xlink:title="Sum is a subtype of HasAnalysisArea[SELF]"><path d="M1621.69,-121.703C1643.79,-111.398 1672.65,-97.9479 1693.71,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1620.87,-120.153 1617.08,-123.851 1622.35,-123.325 1620.87,-120.153" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node33&#45;&gt;node4 --><g class="edge inheritance" id="graph140_33_4"><a xlink:title="Slope is a subtype of HasAnalysisArea[SELF]"><path d="M1508.52,-124.533C1455.28,-115.714 1384.04,-102.845 1321.87,-88 1319.08,-87.334 1316.21,-86.5983 1313.33,-85.8255" stroke="#d4d4d4" fill="none"></path><polygon points="1508.4,-126.287 1513.62,-125.374 1508.97,-122.833 1508.4,-126.287" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node33&#45;&gt;node16 --><g class="edge inheritance" id="graph140_33_16"><a xlink:title="Mode is a subtype of HasAnalysisArea[SELF]"><path d="M1641.14,-122.576C1675.95,-112.917 1722.69,-99.8483 1763.87,-88 1766.78,-87.1631 1769.8,-86.2882 1772.82,-85.4051" stroke="#d4d4d4" fill="none"></path><polygon points="1640.44,-120.953 1636.09,-123.976 1641.37,-124.326 1640.44,-120.953" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node33&#45;&gt;node17 --><g class="edge inheritance" id="graph140_33_17"><a xlink:title="Min is a subtype of HasAnalysisArea[SELF]"><path d="M1669.03,-125.006C1721.45,-116.442 1791.21,-103.681 1851.87,-88 1854.77,-87.2498 1857.77,-86.3958 1860.76,-85.4923" stroke="#d4d4d4" fill="none"></path><polygon points="1668.66,-123.292 1664.01,-125.822 1669.23,-126.747 1668.66,-123.292" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node33&#45;&gt;node21 --><g class="edge inheritance" id="graph140_33_21"><a xlink:title="Median is a subtype of HasAnalysisArea[SELF]"><path d="M1537.21,-122.44C1497.37,-111.212 1443.16,-95.9343 1407.14,-85.7842" stroke="#d4d4d4" fill="none"></path><polygon points="1537.2,-124.255 1542.48,-123.927 1538.15,-120.886 1537.2,-124.255" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node33&#45;&gt;node24 --><g class="edge inheritance" id="graph140_33_24"><a xlink:title="Mean is a subtype of HasAnalysisArea[SELF]"><path d="M1556.77,-121.573C1535.37,-111.286 1507.53,-97.9068 1487.19,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1556.25,-123.263 1561.51,-123.851 1557.77,-120.108 1556.25,-123.263" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node33&#45;&gt;node25 --><g class="edge inheritance" id="graph140_33_25"><a xlink:title="Max is a subtype of HasAnalysisArea[SELF]"><path d="M1576.61,-119.727C1569.51,-109.724 1560.72,-97.3317 1554.19,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1575.22,-120.787 1579.54,-123.851 1578.07,-118.761 1575.22,-120.787" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node54 --><g class="node class" id="graph140_54"><a xlink:title="geotrellis.raster.op.focal.Aspect" xlink:href="Aspect.html#inheritance-diagram"><polygon points="1670.87,-88 1594.87,-88 1594.87,-62 1670.87,-62 1670.87,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="1604.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="1626.87" text-anchor="start">Aspect</text></a></g><!-- node33&#45;&gt;node54 --><g class="edge inheritance" id="graph140_33_54"><a xlink:title="Aspect is a subtype of HasAnalysisArea[SELF]"><path d="M1601.13,-119.727C1608.23,-109.724 1617.02,-97.3317 1623.55,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1599.67,-118.761 1598.2,-123.851 1602.52,-120.787 1599.67,-118.761" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node35&#45;&gt;node26 --><g class="edge inheritance" id="graph140_35_26"><a xlink:title="DirectHillshade is a subtype of FocalOp3[A, B, C, T]"><path d="M2241.38,-122.735C2285.71,-112.285 2345.41,-98.2105 2388.49,-88.055" stroke="#d4d4d4" fill="none"></path><polygon points="2240.79,-121.077 2236.33,-123.927 2241.59,-124.483 2240.79,-121.077" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node37&#45;&gt;node4 --><g class="edge inheritance" id="graph140_37_4"><a xlink:title="Slope is a subtype of FocalOp1[A, T]"><path d="M1337.69,-120.789C1324.4,-110.613 1307.48,-97.6603 1295.03,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1336.66,-122.202 1341.69,-123.851 1338.79,-119.423 1336.66,-122.202" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node38&#45;&gt;node3 --><g class="edge inheritance" id="graph140_38_3"><a xlink:title="Sum is a subtype of FocalOp[T]"><path d="M1785.39,-120.789C1771.27,-110.613 1753.3,-97.6603 1740.08,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1784.55,-122.347 1789.63,-123.851 1786.6,-119.508 1784.55,-122.347" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node38&#45;&gt;node12 --><g class="edge inheritance" id="graph140_38_12"><a xlink:title="ScalarMoransI is a subtype of FocalOp[T]"><path d="M1860.06,-125.647C1910.74,-114.622 1987.34,-97.9588 2038.68,-86.7888" stroke="#d4d4d4" fill="none"></path><polygon points="1859.45,-123.989 1854.93,-126.762 1860.19,-127.409 1859.45,-123.989" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node38&#45;&gt;node13 --><g class="edge inheritance" id="graph140_38_13"><a xlink:title="RasterMoransI is a subtype of FocalOp[T]"><path d="M1860.07,-128.773C1870.59,-127.156 1881.58,-125.498 1891.87,-124 2009.06,-106.944 2039.15,-107.977 2155.87,-88 2158.73,-87.5102 2161.66,-86.9857 2164.62,-86.4388" stroke="#d4d4d4" fill="none"></path><polygon points="1859.62,-127.071 1854.94,-129.562 1860.15,-130.531 1859.62,-127.071" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node38&#45;&gt;node16 --><g class="edge inheritance" id="graph140_38_16"><a xlink:title="Mode is a subtype of FocalOp[T]"><path d="M1807.87,-118.646C1807.87,-108.843 1807.87,-97.003 1807.87,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1806.12,-118.851 1807.87,-123.851 1809.62,-118.851 1806.12,-118.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node38&#45;&gt;node17 --><g class="edge inheritance" id="graph140_38_17"><a xlink:title="Min is a subtype of FocalOp[T]"><path d="M1829.57,-120.789C1843.2,-110.613 1860.54,-97.6603 1873.3,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1828.43,-119.457 1825.47,-123.851 1830.53,-122.261 1828.43,-119.457" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node38&#45;&gt;node21 --><g class="edge inheritance" id="graph140_38_21"><a xlink:title="Median is a subtype of FocalOp[T]"><path d="M1755.75,-131.439C1664.57,-121.551 1479.74,-100.753 1415.87,-88 1412.97,-87.4197 1409.98,-86.7551 1406.98,-86.0401" stroke="#d4d4d4" fill="none"></path><polygon points="1755.66,-133.189 1760.82,-131.988 1756.04,-129.71 1755.66,-133.189" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node38&#45;&gt;node24 --><g class="edge inheritance" id="graph140_38_24"><a xlink:title="Mean is a subtype of FocalOp[T]"><path d="M1755.61,-130.638C1694.74,-122.752 1591.34,-107.884 1503.87,-88 1501.08,-87.3643 1498.2,-86.6503 1495.31,-85.8926" stroke="#d4d4d4" fill="none"></path><polygon points="1755.46,-132.383 1760.64,-131.286 1755.91,-128.912 1755.46,-132.383" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node38&#45;&gt;node25 --><g class="edge inheritance" id="graph140_38_25"><a xlink:title="Max is a subtype of FocalOp[T]"><path d="M1755.68,-126.859C1710.48,-117.75 1643.5,-103.463 1585.87,-88 1582.99,-87.2259 1580,-86.3764 1577.02,-85.4938" stroke="#d4d4d4" fill="none"></path><polygon points="1755.55,-128.619 1760.8,-127.889 1756.24,-125.188 1755.55,-128.619" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node50 --><g class="node class" id="graph140_50"><a xlink:title="geotrellis.raster.op.focal.Conway" xlink:href="Conway.html#inheritance-diagram"><polygon points="2370.87,-88 2290.87,-88 2290.87,-62 2370.87,-62 2370.87,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="2300.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="2322.87" text-anchor="start">Conway</text></a></g><!-- node38&#45;&gt;node50 --><g class="edge inheritance" id="graph140_38_50"><a xlink:title="Conway is a subtype of FocalOp[T]"><path d="M1860.02,-128.42C1870.55,-126.831 1881.55,-125.274 1891.87,-124 2064.63,-102.679 2110.48,-118.425 2281.87,-88 2284.73,-87.4923 2287.67,-86.8996 2290.61,-86.252" stroke="#d4d4d4" fill="none"></path><polygon points="1859.57,-126.718 1854.89,-129.201 1860.1,-130.178 1859.57,-126.718" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node53 --><g class="node class" id="graph140_53"><a xlink:title="geotrellis.raster.op.focal.Convolve" xlink:href="Convolve.html#inheritance-diagram"><polygon points="2020.87,-88 1938.87,-88 1938.87,-62 2020.87,-62 2020.87,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-83" x="1948.87" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="1970.87" text-anchor="start">Convolve</text></a></g><!-- node38&#45;&gt;node53 --><g class="edge inheritance" id="graph140_38_53"><a xlink:title="Convolve is a subtype of FocalOp[T]"><path d="M1849.25,-122.083C1878.08,-111.694 1916.14,-97.9715 1943.74,-88.0232" stroke="#d4d4d4" fill="none"></path><polygon points="1848.46,-120.509 1844.35,-123.851 1849.65,-123.802 1848.46,-120.509" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node38&#45;&gt;node54 --><g class="edge inheritance" id="graph140_38_54"><a xlink:title="Aspect is a subtype of FocalOp[T]"><path d="M1765.77,-122.083C1736.44,-111.694 1697.71,-97.9715 1669.63,-88.0232" stroke="#d4d4d4" fill="none"></path><polygon points="1765.46,-123.831 1770.76,-123.851 1766.63,-120.532 1765.46,-123.831" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node39 --><g class="node trait" id="graph140_39"><a xlink:title="geotrellis.raster.op.focal.DoubleRasterDataResult" xlink:href="DoubleRasterDataResult.html#inheritance-diagram"><polygon points="1120.87,-150 968.872,-150 968.872,-124 1120.87,-124 1120.87,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-145" x="978.872" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="1000.87" text-anchor="start">DoubleRasterDataResult</text></a></g><!-- node39&#45;&gt;node22 --><g class="edge inheritance" id="graph140_39_22"><a xlink:title="CursorMeanCalc is a subtype of DoubleRasterDataResult"><path d="M1075.23,-121.443C1095.28,-111.173 1121.25,-97.8657 1140.25,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1074.18,-120.014 1070.53,-123.851 1075.78,-123.129 1074.18,-120.014" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node39&#45;&gt;node23 --><g class="edge inheritance" id="graph140_39_23"><a xlink:title="CellwiseMeanCalc is a subtype of DoubleRasterDataResult"><path d="M1039.62,-118.918C1036.76,-109.062 1033.28,-97.0852 1030.68,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="1037.98,-119.538 1041.05,-123.851 1041.34,-118.562 1037.98,-119.538" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node40 --><g class="node trait" id="graph140_40"><a xlink:title="geotrellis.raster.op.focal.FloatRasterDataResult" xlink:href="FloatRasterDataResult.html#inheritance-diagram"><polygon points="1045.87,-212 901.872,-212 901.872,-186 1045.87,-186 1045.87,-212" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-207" x="911.872" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="933.872" text-anchor="start">FloatRasterDataResult</text></a></g><!-- node41 --><g class="node trait" id="graph140_41"><a xlink:title="geotrellis.raster.op.focal.IntRasterDataResult" xlink:href="IntRasterDataResult.html#inheritance-diagram"><polygon points="684.872,-150 552.872,-150 552.872,-124 684.872,-124 684.872,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-145" x="562.872" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="584.872" text-anchor="start">IntRasterDataResult</text></a></g><!-- node41&#45;&gt;node1 --><g class="edge inheritance" id="graph140_41_1"><a xlink:title="CellwiseSumCalc is a subtype of IntRasterDataResult"><path d="M547.672,-124.614C546.395,-124.406 545.128,-124.201 543.872,-124 435.637,-106.638 407.977,-106.151 299.872,-88 296.987,-87.5156 294.036,-87.0077 291.058,-86.4851" stroke="#d4d4d4" fill="none"></path><polygon points="547.417,-126.345 552.634,-125.426 547.982,-122.891 547.417,-126.345" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node41&#45;&gt;node2 --><g class="edge inheritance" id="graph140_41_2"><a xlink:title="CursorSumCalc is a subtype of IntRasterDataResult"><path d="M680.944,-122.799C726.652,-112.342 788.33,-98.2311 832.809,-88.055" stroke="#d4d4d4" fill="none"></path><polygon points="680.497,-121.106 676.013,-123.927 681.278,-124.518 680.497,-121.106" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node41&#45;&gt;node14 --><g class="edge inheritance" id="graph140_41_14"><a xlink:title="CellwiseModeCalc is a subtype of IntRasterDataResult"><path d="M561.559,-122.672C519.783,-112.228 463.632,-98.1899 423.092,-88.055" stroke="#d4d4d4" fill="none"></path><polygon points="561.306,-124.412 566.581,-123.927 562.155,-121.017 561.306,-124.412" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node41&#45;&gt;node15 --><g class="edge inheritance" id="graph140_41_15"><a xlink:title="CursorModeCalc is a subtype of IntRasterDataResult"><path d="M591.294,-121.313C573.27,-111.061 549.999,-97.8246 532.955,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="590.545,-122.9 595.756,-123.851 592.275,-119.858 590.545,-122.9" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node41&#45;&gt;node19 --><g class="edge inheritance" id="graph140_41_19"><a xlink:title="CellwiseMedianCalc is a subtype of IntRasterDataResult"><path d="M547.685,-124.522C546.405,-124.343 545.133,-124.168 543.872,-124 374.844,-101.421 330.901,-110.579 161.872,-88 158.99,-87.6151 156.05,-87.2003 153.083,-86.7636" stroke="#d4d4d4" fill="none"></path><polygon points="547.464,-126.258 552.662,-125.236 547.961,-122.793 547.464,-126.258" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node41&#45;&gt;node20 --><g class="edge inheritance" id="graph140_41_20"><a xlink:title="CursorMedianCalc is a subtype of IntRasterDataResult"><path d="M627.49,-119.189C632.284,-109.282 638.146,-97.1674 642.519,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="625.837,-118.588 625.234,-123.851 628.988,-120.113 625.837,-118.588" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node52 --><g class="node trait" id="graph140_52"><a xlink:title="geotrellis.raster.op.focal.Convolver" xlink:href="Convolver.html#inheritance-diagram"><polygon points="814.872,-88 728.872,-88 728.872,-62 814.872,-62 814.872,-88" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-83" x="738.872" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="760.872" text-anchor="start">Convolver</text></a></g><!-- node41&#45;&gt;node52 --><g class="edge inheritance" id="graph140_41_52"><a xlink:title="Convolver is a subtype of IntRasterDataResult"><path d="M656.001,-121.954C681.601,-111.581 715.286,-97.9304 739.734,-88.0232" stroke="#d4d4d4" fill="none"></path><polygon points="655.296,-120.352 651.32,-123.851 656.611,-123.595 655.296,-120.352" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node42 --><g class="node trait" id="graph140_42"><a xlink:title="geotrellis.raster.op.focal.ShortRasterDataResult" xlink:href="ShortRasterDataResult.html#inheritance-diagram"><polygon points="571.872,-212 427.872,-212 427.872,-186 571.872,-186 571.872,-212" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-207" x="437.872" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="459.872" text-anchor="start">ShortRasterDataResult</text></a></g><!-- node43 --><g class="node trait" id="graph140_43"><a xlink:title="geotrellis.raster.op.focal.ByteRasterDataResult" xlink:href="ByteRasterDataResult.html#inheritance-diagram"><polygon points="731.872,-212 589.872,-212 589.872,-186 731.872,-186 731.872,-212" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-207" x="599.872" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="621.872" text-anchor="start">ByteRasterDataResult</text></a></g><!-- node44 --><g class="node trait" id="graph140_44"><a xlink:title="geotrellis.raster.op.focal.BitRasterDataResult" xlink:href="BitRasterDataResult.html#inheritance-diagram"><polygon points="883.872,-212 749.872,-212 749.872,-186 883.872,-186 883.872,-212" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-207" x="759.872" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="781.872" text-anchor="start">BitRasterDataResult</text></a></g><!-- node45 --><g class="node trait" id="graph140_45"><a xlink:title="geotrellis.raster.op.focal.Initialization" xlink:href="Initialization.html#inheritance-diagram"><polygon points="942.872,-274 846.872,-274 846.872,-248 942.872,-248 942.872,-274" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-269" x="856.872" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="878.872" text-anchor="start">Initialization</text></a></g><!-- node45&#45;&gt;node39 --><g class="edge inheritance" id="graph140_45_39"><a xlink:title="DoubleRasterDataResult is a subtype of Initialization"><path d="M948.309,-254.771C999.312,-247.596 1070.84,-233.896 1087.87,-212 1103.45,-191.978 1079.72,-165.706 1061.79,-150.162" stroke="#d4d4d4" fill="none"></path><polygon points="947.843,-253.069 943.13,-255.487 948.322,-256.536 947.843,-253.069" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node45&#45;&gt;node40 --><g class="edge inheritance" id="graph140_45_40"><a xlink:title="FloatRasterDataResult is a subtype of Initialization"><path d="M915.864,-244.526C928.778,-234.39 945.103,-221.578 957.142,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="914.479,-243.388 911.626,-247.851 916.64,-246.141 914.479,-243.388" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node45&#45;&gt;node41 --><g class="edge inheritance" id="graph140_45_41"><a xlink:title="IntRasterDataResult is a subtype of Initialization"><path d="M948.387,-254.444C1007.48,-245.137 1089.95,-224.746 1054.87,-186 1027.82,-156.116 733.813,-155.446 693.872,-150 690.991,-149.607 688.052,-149.186 685.085,-148.744" stroke="#d4d4d4" fill="none"></path><polygon points="947.779,-252.766 943.103,-255.256 948.311,-256.226 947.779,-252.766" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node45&#45;&gt;node42 --><g class="edge inheritance" id="graph140_45_42"><a xlink:title="ShortRasterDataResult is a subtype of Initialization"><path d="M841.554,-252.752C779.076,-243.07 672.439,-226.492 580.872,-212 578.059,-211.555 575.19,-211.1 572.293,-210.639" stroke="#d4d4d4" fill="none"></path><polygon points="841.508,-254.515 846.717,-253.552 842.044,-251.057 841.508,-254.515" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node45&#45;&gt;node43 --><g class="edge inheritance" id="graph140_45_43"><a xlink:title="ByteRasterDataResult is a subtype of Initialization"><path d="M841.443,-246.843C801.985,-236.389 748.675,-222.264 710.219,-212.075" stroke="#d4d4d4" fill="none"></path><polygon points="841.389,-248.64 846.671,-248.229 842.286,-245.256 841.389,-248.64" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node45&#45;&gt;node44 --><g class="edge inheritance" id="graph140_45_44"><a xlink:title="BitRasterDataResult is a subtype of Initialization"><path d="M874.146,-244.526C861.395,-234.39 845.277,-221.578 833.39,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="873.327,-246.11 878.33,-247.851 875.505,-243.37 873.327,-246.11" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node46 --><g class="node trait" id="graph140_46"><a xlink:title="geotrellis.raster.op.focal.CellwiseCalculation" xlink:href="CellwiseCalculation.html#inheritance-diagram"><polygon points="190.872,-150 50.8721,-150 50.8721,-124 190.872,-124 190.872,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-145" x="60.8721" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="82.8721" text-anchor="start">CellwiseCalculation[T]</text></a></g><!-- node46&#45;&gt;node1 --><g class="edge inheritance" id="graph140_46_1"><a xlink:title="CellwiseSumCalc is a subtype of CellwiseCalculation[T]"><path d="M148.704,-121.313C166.893,-111.061 190.377,-97.8246 207.578,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="147.697,-119.872 144.2,-123.851 149.415,-122.921 147.697,-119.872" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node46&#45;&gt;node14 --><g class="edge inheritance" id="graph140_46_14"><a xlink:title="CellwiseModeCalc is a subtype of CellwiseCalculation[T]"><path d="M178.647,-122.672C220.76,-112.228 277.365,-98.1899 318.231,-88.055" stroke="#d4d4d4" fill="none"></path><polygon points="178.017,-121.025 173.585,-123.927 178.859,-124.422 178.017,-121.025" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node46&#45;&gt;node19 --><g class="edge inheritance" id="graph140_46_19"><a xlink:title="CellwiseMedianCalc is a subtype of CellwiseCalculation[T]"><path d="M111.253,-119.458C105.793,-109.503 99.0735,-97.2495 94.0723,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="109.723,-120.309 113.662,-123.851 112.792,-118.626 109.723,-120.309" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node46&#45;&gt;node23 --><g class="edge inheritance" id="graph140_46_23"><a xlink:title="CellwiseMeanCalc is a subtype of CellwiseCalculation[T]"><path d="M196.033,-124.423C197.322,-124.276 198.602,-124.134 199.872,-124 534.388,-88.6314 621.688,-126.377 955.872,-88 958.736,-87.6712 961.657,-87.2965 964.604,-86.8869" stroke="#d4d4d4" fill="none"></path><polygon points="195.782,-122.691 191.026,-125.024 196.199,-126.166 195.782,-122.691" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node47 --><g class="node trait" id="graph140_47"><a xlink:title="geotrellis.raster.op.focal.CursorCalculation" xlink:href="CursorCalculation.html#inheritance-diagram"><polygon points="834.872,-150 702.872,-150 702.872,-124 834.872,-124 834.872,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-145" x="712.872" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="734.872" text-anchor="start">CursorCalculation[T]</text></a></g><!-- node47&#45;&gt;node2 --><g class="edge inheritance" id="graph140_47_2"><a xlink:title="CursorSumCalc is a subtype of CursorCalculation[T]"><path d="M799.233,-121.443C819.276,-111.173 845.247,-97.8657 864.248,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="798.185,-120.014 794.533,-123.851 799.781,-123.129 798.185,-120.014" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node47&#45;&gt;node15 --><g class="edge inheritance" id="graph140_47_15"><a xlink:title="CursorModeCalc is a subtype of CursorCalculation[T]"><path d="M709.283,-122.735C665.626,-112.285 606.832,-98.2105 564.408,-88.055" stroke="#d4d4d4" fill="none"></path><polygon points="708.991,-124.465 714.261,-123.927 709.806,-121.061 708.991,-124.465" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node47&#45;&gt;node20 --><g class="edge inheritance" id="graph140_47_20"><a xlink:title="CursorMedianCalc is a subtype of CursorCalculation[T]"><path d="M738.762,-121.443C718.885,-111.173 693.128,-97.8657 674.284,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="738.178,-123.111 743.423,-123.851 739.784,-120.001 738.178,-123.111" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node47&#45;&gt;node22 --><g class="edge inheritance" id="graph140_47_22"><a xlink:title="CursorMeanCalc is a subtype of CursorCalculation[T]"><path d="M840.308,-127.223C907.041,-117.885 1009.37,-103.043 1097.87,-88 1100.72,-87.5166 1103.62,-87.0096 1106.56,-86.4876" stroke="#d4d4d4" fill="none"></path><polygon points="839.875,-125.516 835.166,-127.941 840.36,-128.982 839.875,-125.516" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node48 --><g class="node trait" id="graph140_48"><a xlink:title="geotrellis.raster.op.focal.FocalCalculation" xlink:href="FocalCalculation.html#inheritance-diagram"><polygon points="333.872,-212 205.872,-212 205.872,-186 333.872,-186 333.872,-212" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-207" x="215.872" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-196.667" x="237.872" text-anchor="start">FocalCalculation[T]</text></a></g><!-- node48&#45;&gt;node0 --><g class="edge inheritance" id="graph140_48_0"><a xlink:title="SurfacePointCalculation[T] is a subtype of FocalCalculation[T]"><path d="M275.413,-180.918C278.434,-171.062 282.104,-159.085 284.849,-150.13" stroke="#d4d4d4" fill="none"></path><polygon points="273.693,-180.558 273.902,-185.851 277.04,-181.584 273.693,-180.558" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node48&#45;&gt;node46 --><g class="edge inheritance" id="graph140_48_46"><a xlink:title="CellwiseCalculation[T] is a subtype of FocalCalculation[T]"><path d="M233.403,-183.825C208.511,-173.467 175.88,-159.889 152.17,-150.023" stroke="#d4d4d4" fill="none"></path><polygon points="232.984,-185.546 238.273,-185.851 234.329,-182.315 232.984,-185.546" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node48&#45;&gt;node47 --><g class="edge inheritance" id="graph140_48_47"><a xlink:title="CursorCalculation[T] is a subtype of FocalCalculation[T]"><path d="M339.465,-191.176C450.738,-178.633 659.715,-154.93 693.872,-150 696.75,-149.585 699.686,-149.145 702.651,-148.687" stroke="#d4d4d4" fill="none"></path><polygon points="339.014,-189.466 334.241,-191.765 339.406,-192.944 339.014,-189.466" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node51 --><g class="node class" id="graph140_51"><a xlink:title="geotrellis.raster.op.focal.ConvolveCalculation" xlink:href="ConvolveCalculation.html#inheritance-diagram"><polygon points="446.872,-26 316.872,-26 316.872,-1.24345e-14 446.872,-3.55271e-15 446.872,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-21" x="326.872" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="348.872" text-anchor="start">ConvolveCalculation</text></a></g><!-- node48&#45;&gt;node51 --><g class="edge inheritance" id="graph140_48_51"><a xlink:title="ConvolveCalculation is a subtype of FocalCalculation[T]"><path d="M200.544,-190.861C142.796,-182.879 66.2094,-169.12 41.8721,-150 9.37896,-124.473 -15.361,-93.0775 11.8721,-62 31.6232,-39.4608 216.054,-23.9084 316.836,-17.0154" stroke="#d4d4d4" fill="none"></path><polygon points="200.529,-192.625 205.72,-191.568 201.003,-189.157 200.529,-192.625" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node49 --><g class="node trait" id="graph140_49"><a xlink:title="geotrellis.raster.op.focal.Resulting" xlink:href="Resulting.html#inheritance-diagram"><polygon points="547.872,-274 451.872,-274 451.872,-248 547.872,-248 547.872,-274" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-269" x="461.872" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-258.667" x="483.872" text-anchor="start">Resulting[T]</text></a></g><!-- node49&#45;&gt;node39 --><g class="edge inheritance" id="graph140_49_39"><a xlink:title="DoubleRasterDataResult is a subtype of Resulting[T]"><path d="M463.242,-245.698C433.157,-231.042 398.554,-207.971 418.872,-186 423.498,-180.998 802.976,-153.904 968.776,-142.29" stroke="#d4d4d4" fill="none"></path><polygon points="462.756,-247.405 468.022,-247.976 464.262,-244.245 462.756,-247.405" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node49&#45;&gt;node40 --><g class="edge inheritance" id="graph140_49_40"><a xlink:title="FloatRasterDataResult is a subtype of Resulting[T]"><path d="M553.375,-254.932C629.073,-246.21 771.723,-229.269 892.872,-212 895.692,-211.598 898.566,-211.18 901.468,-210.75" stroke="#d4d4d4" fill="none"></path><polygon points="552.808,-253.236 548.041,-255.546 553.208,-256.713 552.808,-253.236" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node49&#45;&gt;node41 --><g class="edge inheritance" id="graph140_49_41"><a xlink:title="IntRasterDataResult is a subtype of Resulting[T]"><path d="M446.967,-247.604C407.244,-234.976 363.278,-213.841 385.872,-186 391.22,-179.41 485.621,-161.106 552.6,-148.831" stroke="#d4d4d4" fill="none"></path><polygon points="446.491,-249.289 451.785,-249.102 447.53,-245.947 446.491,-249.289" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node49&#45;&gt;node42 --><g class="edge inheritance" id="graph140_49_42"><a xlink:title="ShortRasterDataResult is a subtype of Resulting[T]"><path d="M499.872,-242.646C499.872,-232.843 499.872,-221.003 499.872,-212.13" stroke="#d4d4d4" fill="none"></path><polygon points="498.122,-242.851 499.872,-247.851 501.622,-242.851 498.122,-242.851" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node49&#45;&gt;node43 --><g class="edge inheritance" id="graph140_49_43"><a xlink:title="ByteRasterDataResult is a subtype of Resulting[T]"><path d="M538.943,-245.954C565.881,-235.581 601.327,-221.93 627.054,-212.023" stroke="#d4d4d4" fill="none"></path><polygon points="538.053,-244.421 534.016,-247.851 539.311,-247.688 538.053,-244.421" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node49&#45;&gt;node44 --><g class="edge inheritance" id="graph140_49_44"><a xlink:title="BitRasterDataResult is a subtype of Resulting[T]"><path d="M553.173,-250.575C607.432,-239.963 691.68,-223.485 750.296,-212.021" stroke="#d4d4d4" fill="none"></path><polygon points="552.589,-248.906 548.018,-251.584 553.261,-252.341 552.589,-248.906" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node49&#45;&gt;node48 --><g class="edge inheritance" id="graph140_49_48"><a xlink:title="FocalCalculation[T] is a subtype of Resulting[T]"><path d="M446.529,-246.62C407.845,-236.193 355.946,-222.203 318.42,-212.087" stroke="#d4d4d4" fill="none"></path><polygon points="446.373,-248.391 451.657,-248.003 447.284,-245.012 446.373,-248.391" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node52&#45;&gt;node51 --><g class="edge inheritance" id="graph140_52_51"><a xlink:title="ConvolveCalculation is a subtype of Convolver"><path d="M723.748,-62.7873C722.444,-62.5149 721.15,-62.2518 719.872,-62 625.627,-43.4372 515.308,-28.7458 446.999,-20.4596" stroke="#d4d4d4" fill="none"></path><polygon points="723.561,-64.537 728.817,-63.8803 724.298,-61.1156 723.561,-64.537" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="geotrellis.raster.op.focal.AnalysisArea" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AnalysisAreaextendsProductwithSerializable"></a>
+      <a id="AnalysisArea:AnalysisArea"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AnalysisArea.html"><span class="name">AnalysisArea</span></a><span class="params">(<span name="colMin">colMin: <span class="extype" name="scala.Int">Int</span></span>, <span name="rowMin">rowMin: <span class="extype" name="scala.Int">Int</span></span>, <span name="colMax">colMax: <span class="extype" name="scala.Int">Int</span></span>, <span name="rowMax">rowMax: <span class="extype" name="scala.Int">Int</span></span>, <span name="rasterExtent">rasterExtent: <a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.Annulus" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AnnulusextendsNeighborhoodwithProductwithSerializable"></a>
+      <a id="Annulus:Annulus"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Annulus.html"><span class="name">Annulus</span></a><span class="params">(<span name="innerRadius">innerRadius: <span class="extype" name="scala.Double">Double</span></span>, <span name="outerRadius">outerRadius: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result"> extends <a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Annulus neighborhood.</p>
+    </li><li name="geotrellis.raster.op.focal.Aspect" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AspectextendsFocalOp[geotrellis.Raster]withHasAnalysisArea[geotrellis.raster.op.focal.Aspect]withProductwithSerializable"></a>
+      <a id="Aspect:Aspect"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Aspect.html"><span class="name">Aspect</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result"> extends <a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="HasAnalysisArea.html" class="extype" name="geotrellis.raster.op.focal.HasAnalysisArea">HasAnalysisArea</a>[<a href="Aspect.html" class="extype" name="geotrellis.raster.op.focal.Aspect">Aspect</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Calculates the aspect of each cell in a raster.</p>
+    </li><li name="geotrellis.raster.op.focal.AutomaticNormalize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AutomaticNormalizeextendsOp2[geotrellis.Raster,(Int,Int),geotrellis.Raster]withProductwithSerializable"></a>
+      <a id="AutomaticNormalize:AutomaticNormalize"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutomaticNormalize.html"><span class="name">AutomaticNormalize</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>), <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Normalize the values in the given raster so that all values are within the
+specified minimum and maximum value range.</p>
+    </li><li name="geotrellis.raster.op.focal.BitRasterDataResult" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BitRasterDataResultextendsInitializationwithResulting[geotrellis.Raster]"></a>
+      <a id="BitRasterDataResult:BitRasterDataResult"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="BitRasterDataResult.html"><span class="name">BitRasterDataResult</span></a><span class="result"> extends <a href="Initialization.html" class="extype" name="geotrellis.raster.op.focal.Initialization">Initialization</a> with <a href="Resulting.html" class="extype" name="geotrellis.raster.op.focal.Resulting">Resulting</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Defines a focal calculation as returning
+a <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a> with <a href="../../../BitArrayRasterData.html" class="extype" name="geotrellis.BitArrayRasterData">BitArrayRasterData</a>, and defines
+the <a href="Initialization.html" class="extype" name="geotrellis.raster.op.focal.Initialization">Initialization</a>.</p>
+    </li><li name="geotrellis.raster.op.focal.ByteRasterDataResult" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ByteRasterDataResultextendsInitializationwithResulting[geotrellis.Raster]"></a>
+      <a id="ByteRasterDataResult:ByteRasterDataResult"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ByteRasterDataResult.html"><span class="name">ByteRasterDataResult</span></a><span class="result"> extends <a href="Initialization.html" class="extype" name="geotrellis.raster.op.focal.Initialization">Initialization</a> with <a href="Resulting.html" class="extype" name="geotrellis.raster.op.focal.Resulting">Resulting</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Defines a focal calculation as returning
+a <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a> with <a href="../../../ByteArrayRasterData.html" class="extype" name="geotrellis.ByteArrayRasterData">ByteArrayRasterData</a>, and defines
+the <a href="Initialization.html" class="extype" name="geotrellis.raster.op.focal.Initialization">Initialization</a>.</p>
+    </li><li name="geotrellis.raster.op.focal.CellSet" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CellSetextendsObject"></a>
+      <a id="CellSet:CellSet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="CellSet.html"><span class="name">CellSet</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A lighweight wrapper around performing foreach calculations on a set of cell coordinates</p>
+    </li><li name="geotrellis.raster.op.focal.CellwiseCalculation" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CellwiseCalculation[T]extendsFocalCalculation[T]"></a>
+      <a id="CellwiseCalculation[T]:CellwiseCalculation[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="CellwiseCalculation.html"><span class="name">CellwiseCalculation</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="FocalCalculation.html" class="extype" name="geotrellis.raster.op.focal.FocalCalculation">FocalCalculation</a>[<span class="extype" name="geotrellis.raster.op.focal.CellwiseCalculation.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A focal calculation that uses the Cellwise focal strategy
+</p>
+    </li><li name="geotrellis.raster.op.focal.CellwiseMeanCalc" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CellwiseMeanCalcextendsCellwiseCalculation[geotrellis.Raster]withDoubleRasterDataResultwithProductwithSerializable"></a>
+      <a id="CellwiseMeanCalc:CellwiseMeanCalc"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="CellwiseMeanCalc.html"><span class="name">CellwiseMeanCalc</span></a><span class="params">()</span><span class="result"> extends <a href="CellwiseCalculation.html" class="extype" name="geotrellis.raster.op.focal.CellwiseCalculation">CellwiseCalculation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="DoubleRasterDataResult.html" class="extype" name="geotrellis.raster.op.focal.DoubleRasterDataResult">DoubleRasterDataResult</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.CellwiseMedianCalc" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CellwiseMedianCalcextendsCellwiseCalculation[geotrellis.Raster]withIntRasterDataResultwithMedianModeCalculation"></a>
+      <a id="CellwiseMedianCalc:CellwiseMedianCalc"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CellwiseMedianCalc.html"><span class="name">CellwiseMedianCalc</span></a><span class="result"> extends <a href="CellwiseCalculation.html" class="extype" name="geotrellis.raster.op.focal.CellwiseCalculation">CellwiseCalculation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="IntRasterDataResult.html" class="extype" name="geotrellis.raster.op.focal.IntRasterDataResult">IntRasterDataResult</a> with <a href="MedianModeCalculation.html" class="extype" name="geotrellis.raster.op.focal.MedianModeCalculation">MedianModeCalculation</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.CellwiseModeCalc" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CellwiseModeCalcextendsCellwiseCalculation[geotrellis.Raster]withIntRasterDataResultwithMedianModeCalculation"></a>
+      <a id="CellwiseModeCalc:CellwiseModeCalc"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CellwiseModeCalc.html"><span class="name">CellwiseModeCalc</span></a><span class="result"> extends <a href="CellwiseCalculation.html" class="extype" name="geotrellis.raster.op.focal.CellwiseCalculation">CellwiseCalculation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="IntRasterDataResult.html" class="extype" name="geotrellis.raster.op.focal.IntRasterDataResult">IntRasterDataResult</a> with <a href="MedianModeCalculation.html" class="extype" name="geotrellis.raster.op.focal.MedianModeCalculation">MedianModeCalculation</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.CellwiseSumCalc" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CellwiseSumCalcextendsCellwiseCalculation[geotrellis.Raster]withIntRasterDataResult"></a>
+      <a id="CellwiseSumCalc:CellwiseSumCalc"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CellwiseSumCalc.html"><span class="name">CellwiseSumCalc</span></a><span class="result"> extends <a href="CellwiseCalculation.html" class="extype" name="geotrellis.raster.op.focal.CellwiseCalculation">CellwiseCalculation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="IntRasterDataResult.html" class="extype" name="geotrellis.raster.op.focal.IntRasterDataResult">IntRasterDataResult</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.Circle" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CircleextendsNeighborhoodwithProductwithSerializable"></a>
+      <a id="Circle:Circle"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Circle.html"><span class="name">Circle</span></a><span class="params">(<span name="radius">radius: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result"> extends <a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A circle neighborhood.</p>
+    </li><li name="geotrellis.raster.op.focal.Convolve" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ConvolveextendsFocalOp[geotrellis.Raster]withProductwithSerializable"></a>
+      <a id="Convolve:Convolve"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Convolve.html"><span class="name">Convolve</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="k">k: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="Kernel.html" class="extype" name="geotrellis.raster.op.focal.Kernel">Kernel</a>]</span>)</span><span class="result"> extends <a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Computes the convolution of two rasters.</p>
+    </li><li name="geotrellis.raster.op.focal.ConvolveCalculation" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ConvolveCalculationextendsFocalCalculation[geotrellis.Raster]withConvolver"></a>
+      <a id="ConvolveCalculation:ConvolveCalculation"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ConvolveCalculation.html"><span class="name">ConvolveCalculation</span></a><span class="result"> extends <a href="FocalCalculation.html" class="extype" name="geotrellis.raster.op.focal.FocalCalculation">FocalCalculation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="Convolver.html" class="extype" name="geotrellis.raster.op.focal.Convolver">Convolver</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.Convolver" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ConvolverextendsIntRasterDataResult"></a>
+      <a id="Convolver:Convolver"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Convolver.html"><span class="name">Convolver</span></a><span class="result"> extends <a href="IntRasterDataResult.html" class="extype" name="geotrellis.raster.op.focal.IntRasterDataResult">IntRasterDataResult</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Supplies functionaltiy to operations that do convolution.</p>
+    </li><li name="geotrellis.raster.op.focal.Conway" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ConwayextendsFocalOp[geotrellis.Raster]withProductwithSerializable"></a>
+      <a id="Conway:Conway"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Conway.html"><span class="name">Conway</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result"> extends <a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Computes the next step of Conway's Game of Life for a given <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>.</p>
+    </li><li name="geotrellis.raster.op.focal.CostDistance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CostDistanceextendsOp[geotrellis.Raster]withProductwithSerializable"></a>
+      <a id="CostDistance:CostDistance"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="CostDistance.html"><span class="name">CostDistance</span></a><span class="params">(<span name="costOp">costOp: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="pointsOp">pointsOp: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Seq">Seq</span>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]]</span>)</span><span class="result"> extends <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Generate a Cost-Distance raster based on a set of starting points and a cost
+raster
+</p>
+    </li><li name="geotrellis.raster.op.focal.CreateCircleRaster" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CreateCircleRasterextendsOp3[Int,Double,Int,geotrellis.Raster]withProductwithSerializable"></a>
+      <a id="CreateCircleRaster:CreateCircleRaster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="CreateCircleRaster.html"><span class="name">CreateCircleRaster</span></a><span class="params">(<span name="size">size: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="cellWidth">cellWidth: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="rad">rad: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="../../../Op3.html" class="extype" name="geotrellis.Op3">Op3</a>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Creates a Circle raster.</p>
+    </li><li name="geotrellis.raster.op.focal.CreateGaussianRaster" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CreateGaussianRasterextendsOp4[Int,Double,Double,Double,geotrellis.Raster]withProductwithSerializable"></a>
+      <a id="CreateGaussianRaster:CreateGaussianRaster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="CreateGaussianRaster.html"><span class="name">CreateGaussianRaster</span></a><span class="params">(<span name="size">size: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="cellWidth">cellWidth: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="sigma">sigma: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="amp">amp: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result"> extends <a href="../../../Op4.html" class="extype" name="geotrellis.Op4">Op4</a>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Creates a Gaussian raster.</p>
+    </li><li name="geotrellis.raster.op.focal.Cursor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CursorextendsObject"></a>
+      <a id="Cursor:Cursor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Cursor.html"><span class="name">Cursor</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Represents a cursor that can be used to iterate over cells within a focal
+neighborhood.</p>
+    </li><li name="geotrellis.raster.op.focal.CursorCalculation" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CursorCalculation[T]extendsFocalCalculation[T]"></a>
+      <a id="CursorCalculation[T]:CursorCalculation[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="CursorCalculation.html"><span class="name">CursorCalculation</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="FocalCalculation.html" class="extype" name="geotrellis.raster.op.focal.FocalCalculation">FocalCalculation</a>[<span class="extype" name="geotrellis.raster.op.focal.CursorCalculation.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A focal calculation that uses the Cursor focal strategy.</p>
+    </li><li name="geotrellis.raster.op.focal.CursorMask" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CursorMaskextendsObject"></a>
+      <a id="CursorMask:CursorMask"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CursorMask.html"><span class="name">CursorMask</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A mask over a cursor.</p>
+    </li><li name="geotrellis.raster.op.focal.CursorMeanCalc" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CursorMeanCalcextendsCursorCalculation[geotrellis.Raster]withDoubleRasterDataResultwithProductwithSerializable"></a>
+      <a id="CursorMeanCalc:CursorMeanCalc"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="CursorMeanCalc.html"><span class="name">CursorMeanCalc</span></a><span class="params">()</span><span class="result"> extends <a href="CursorCalculation.html" class="extype" name="geotrellis.raster.op.focal.CursorCalculation">CursorCalculation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="DoubleRasterDataResult.html" class="extype" name="geotrellis.raster.op.focal.DoubleRasterDataResult">DoubleRasterDataResult</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.CursorMedianCalc" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CursorMedianCalcextendsCursorCalculation[geotrellis.Raster]withIntRasterDataResultwithMedianModeCalculation"></a>
+      <a id="CursorMedianCalc:CursorMedianCalc"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CursorMedianCalc.html"><span class="name">CursorMedianCalc</span></a><span class="result"> extends <a href="CursorCalculation.html" class="extype" name="geotrellis.raster.op.focal.CursorCalculation">CursorCalculation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="IntRasterDataResult.html" class="extype" name="geotrellis.raster.op.focal.IntRasterDataResult">IntRasterDataResult</a> with <a href="MedianModeCalculation.html" class="extype" name="geotrellis.raster.op.focal.MedianModeCalculation">MedianModeCalculation</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.CursorModeCalc" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CursorModeCalcextendsCursorCalculation[geotrellis.Raster]withIntRasterDataResultwithMedianModeCalculation"></a>
+      <a id="CursorModeCalc:CursorModeCalc"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CursorModeCalc.html"><span class="name">CursorModeCalc</span></a><span class="result"> extends <a href="CursorCalculation.html" class="extype" name="geotrellis.raster.op.focal.CursorCalculation">CursorCalculation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="IntRasterDataResult.html" class="extype" name="geotrellis.raster.op.focal.IntRasterDataResult">IntRasterDataResult</a> with <a href="MedianModeCalculation.html" class="extype" name="geotrellis.raster.op.focal.MedianModeCalculation">MedianModeCalculation</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.CursorSumCalc" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CursorSumCalcextendsCursorCalculation[geotrellis.Raster]withIntRasterDataResult"></a>
+      <a id="CursorSumCalc:CursorSumCalc"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CursorSumCalc.html"><span class="name">CursorSumCalc</span></a><span class="result"> extends <a href="CursorCalculation.html" class="extype" name="geotrellis.raster.op.focal.CursorCalculation">CursorCalculation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="IntRasterDataResult.html" class="extype" name="geotrellis.raster.op.focal.IntRasterDataResult">IntRasterDataResult</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.DirectHillshade" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DirectHillshadeextendsFocalOp3[Double,Double,Double,geotrellis.Raster]withProductwithSerializable"></a>
+      <a id="DirectHillshade:DirectHillshade"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="DirectHillshade.html"><span class="name">DirectHillshade</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="azimuth">azimuth: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="altitude">altitude: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="zFactor">zFactor: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result"> extends <a href="FocalOp3.html" class="extype" name="geotrellis.raster.op.focal.FocalOp3">FocalOp3</a>[<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Direct calculation of hill shading of a raster.</p>
+    </li><li name="geotrellis.raster.op.focal.DoubleRasterDataResult" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DoubleRasterDataResultextendsInitializationwithResulting[geotrellis.Raster]"></a>
+      <a id="DoubleRasterDataResult:DoubleRasterDataResult"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="DoubleRasterDataResult.html"><span class="name">DoubleRasterDataResult</span></a><span class="result"> extends <a href="Initialization.html" class="extype" name="geotrellis.raster.op.focal.Initialization">Initialization</a> with <a href="Resulting.html" class="extype" name="geotrellis.raster.op.focal.Resulting">Resulting</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Defines a focal calculation as returning
+a <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a> with <a href="../../../DoubleArrayRasterData.html" class="extype" name="geotrellis.DoubleArrayRasterData">DoubleArrayRasterData</a>, and defines
+the <a href="Initialization.html" class="extype" name="geotrellis.raster.op.focal.Initialization">Initialization</a>.</p>
+    </li><li name="geotrellis.raster.op.focal.FloatRasterDataResult" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FloatRasterDataResultextendsInitializationwithResulting[geotrellis.Raster]"></a>
+      <a id="FloatRasterDataResult:FloatRasterDataResult"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="FloatRasterDataResult.html"><span class="name">FloatRasterDataResult</span></a><span class="result"> extends <a href="Initialization.html" class="extype" name="geotrellis.raster.op.focal.Initialization">Initialization</a> with <a href="Resulting.html" class="extype" name="geotrellis.raster.op.focal.Resulting">Resulting</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Defines a focal calculation as returning
+a <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a> with <a href="../../../FloatArrayRasterData.html" class="extype" name="geotrellis.FloatArrayRasterData">FloatArrayRasterData</a>, and defines
+the <a href="Initialization.html" class="extype" name="geotrellis.raster.op.focal.Initialization">Initialization</a>.</p>
+    </li><li name="geotrellis.raster.op.focal.FocalCalculation" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FocalCalculation[T]extendsResulting[T]"></a>
+      <a id="FocalCalculation[T]:FocalCalculation[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="FocalCalculation.html"><span class="name">FocalCalculation</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Resulting.html" class="extype" name="geotrellis.raster.op.focal.Resulting">Resulting</a>[<span class="extype" name="geotrellis.raster.op.focal.FocalCalculation.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A calculation that a FocalStrategy uses to complete
+a focal operation.</p>
+    </li><li name="geotrellis.raster.op.focal.FocalOp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FocalOp[T]extendsFocalOperation[T]"></a>
+      <a id="FocalOp[T]:FocalOp[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FocalOp.html"><span class="name">FocalOp</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a>[<span class="extype" name="geotrellis.raster.op.focal.FocalOp.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Focal Operation that takes a raster and a neighborhood.</p>
+    </li><li name="geotrellis.raster.op.focal.FocalOp1" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FocalOp1[A,T]extendsFocalOperation1[A,T]"></a>
+      <a id="FocalOp1[A,T]:FocalOp1[A,T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FocalOp1.html"><span class="name">FocalOp1</span></a><span class="tparams">[<span name="A">A</span>, <span name="T">T</span>]</span><span class="result"> extends <a href="FocalOperation1.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation1">FocalOperation1</a>[<span class="extype" name="geotrellis.raster.op.focal.FocalOp1.A">A</span>, <span class="extype" name="geotrellis.raster.op.focal.FocalOp1.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Focal Operation that takes a raster, a neighborhood, and one other argument.</p>
+    </li><li name="geotrellis.raster.op.focal.FocalOp2" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FocalOp2[A,B,T]extendsFocalOperation2[A,B,T]"></a>
+      <a id="FocalOp2[A,B,T]:FocalOp2[A,B,T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FocalOp2.html"><span class="name">FocalOp2</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="T">T</span>]</span><span class="result"> extends <a href="FocalOperation2.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation2">FocalOperation2</a>[<span class="extype" name="geotrellis.raster.op.focal.FocalOp2.A">A</span>, <span class="extype" name="geotrellis.raster.op.focal.FocalOp2.B">B</span>, <span class="extype" name="geotrellis.raster.op.focal.FocalOp2.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Focal Operation that takes a raster, a neighborhood, and two other arguments.</p>
+    </li><li name="geotrellis.raster.op.focal.FocalOp3" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FocalOp3[A,B,C,T]extendsFocalOperation3[A,B,C,T]"></a>
+      <a id="FocalOp3[A,B,C,T]:FocalOp3[A,B,C,T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FocalOp3.html"><span class="name">FocalOp3</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="T">T</span>]</span><span class="result"> extends <a href="FocalOperation3.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation3">FocalOperation3</a>[<span class="extype" name="geotrellis.raster.op.focal.FocalOp3.A">A</span>, <span class="extype" name="geotrellis.raster.op.focal.FocalOp3.B">B</span>, <span class="extype" name="geotrellis.raster.op.focal.FocalOp3.C">C</span>, <span class="extype" name="geotrellis.raster.op.focal.FocalOp3.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Focal Operation that takes a raster, a neighborhood, and three other arguments.</p>
+    </li><li name="geotrellis.raster.op.focal.FocalOp4" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FocalOp4[A,B,C,D,T]extendsFocalOperation4[A,B,C,D,T]"></a>
+      <a id="FocalOp4[A,B,C,D,T]:FocalOp4[A,B,C,D,T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FocalOp4.html"><span class="name">FocalOp4</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="T">T</span>]</span><span class="result"> extends <a href="FocalOperation4.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation4">FocalOperation4</a>[<span class="extype" name="geotrellis.raster.op.focal.FocalOp4.A">A</span>, <span class="extype" name="geotrellis.raster.op.focal.FocalOp4.B">B</span>, <span class="extype" name="geotrellis.raster.op.focal.FocalOp4.C">C</span>, <span class="extype" name="geotrellis.raster.op.focal.FocalOp4.D">D</span>, <span class="extype" name="geotrellis.raster.op.focal.FocalOp4.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Focal Operation that takes a raster, a neighborhood, and four other arguments.</p>
+    </li><li name="geotrellis.raster.op.focal.FocalOperation" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FocalOperation[T]extendsOperation[T]withFocalOperationBase"></a>
+      <a id="FocalOperation[T]:FocalOperation[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FocalOperation.html"><span class="name">FocalOperation</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.raster.op.focal.FocalOperation.T">T</span>] with <a href="FocalOperationBase.html" class="extype" name="geotrellis.raster.op.focal.FocalOperationBase">FocalOperationBase</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Base class for a focal operation that takes a raster and a neighborhood.</p>
+    </li><li name="geotrellis.raster.op.focal.FocalOperation1" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FocalOperation1[A,T]extendsOperation[T]withFocalOperationBase"></a>
+      <a id="FocalOperation1[A,T]:FocalOperation1[A,T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FocalOperation1.html"><span class="name">FocalOperation1</span></a><span class="tparams">[<span name="A">A</span>, <span name="T">T</span>]</span><span class="result"> extends <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.raster.op.focal.FocalOperation1.T">T</span>] with <a href="FocalOperationBase.html" class="extype" name="geotrellis.raster.op.focal.FocalOperationBase">FocalOperationBase</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Base class for a focal operation that takes a raster, a neighborhood, and one other argument.</p>
+    </li><li name="geotrellis.raster.op.focal.FocalOperation2" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FocalOperation2[A,B,T]extendsOperation[T]withFocalOperationBase"></a>
+      <a id="FocalOperation2[A,B,T]:FocalOperation2[A,B,T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FocalOperation2.html"><span class="name">FocalOperation2</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="T">T</span>]</span><span class="result"> extends <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.raster.op.focal.FocalOperation2.T">T</span>] with <a href="FocalOperationBase.html" class="extype" name="geotrellis.raster.op.focal.FocalOperationBase">FocalOperationBase</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Base class for a focal operation that takes a raster, a neighborhood, and two other argument.</p>
+    </li><li name="geotrellis.raster.op.focal.FocalOperation3" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FocalOperation3[A,B,C,T]extendsOperation[T]withFocalOperationBase"></a>
+      <a id="FocalOperation3[A,B,C,T]:FocalOperation3[A,B,C,T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FocalOperation3.html"><span class="name">FocalOperation3</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="T">T</span>]</span><span class="result"> extends <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.raster.op.focal.FocalOperation3.T">T</span>] with <a href="FocalOperationBase.html" class="extype" name="geotrellis.raster.op.focal.FocalOperationBase">FocalOperationBase</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Base class for a focal operation that takes a raster, a neighborhood, and three other argument.</p>
+    </li><li name="geotrellis.raster.op.focal.FocalOperation4" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FocalOperation4[A,B,C,D,T]extendsOperation[T]withFocalOperationBase"></a>
+      <a id="FocalOperation4[A,B,C,D,T]:FocalOperation4[A,B,C,D,T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FocalOperation4.html"><span class="name">FocalOperation4</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="T">T</span>]</span><span class="result"> extends <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.raster.op.focal.FocalOperation4.T">T</span>] with <a href="FocalOperationBase.html" class="extype" name="geotrellis.raster.op.focal.FocalOperationBase">FocalOperationBase</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Base class for a focal operation that takes a raster, a neighborhood, and four other argument.</p>
+    </li><li name="geotrellis.raster.op.focal.FocalOperationBase" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FocalOperationBaseextendsObject"></a>
+      <a id="FocalOperationBase:FocalOperationBase"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="FocalOperationBase.html"><span class="name">FocalOperationBase</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.HasAnalysisArea" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="HasAnalysisArea[SELF&lt;:geotrellis.raster.op.focal.FocalOperationBase]extendsCloneable"></a>
+      <a id="HasAnalysisArea[SELF&lt;:FocalOperationBase]:HasAnalysisArea[SELF]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="HasAnalysisArea.html"><span class="name">HasAnalysisArea</span></a><span class="tparams">[<span name="SELF">SELF &lt;: <a href="FocalOperationBase.html" class="extype" name="geotrellis.raster.op.focal.FocalOperationBase">FocalOperationBase</a></span>]</span><span class="result"> extends <span class="extype" name="scala.Cloneable">Cloneable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.IndirectHillshade" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IndirectHillshadeextendsOperation[geotrellis.Raster]withProductwithSerializable"></a>
+      <a id="IndirectHillshade:IndirectHillshade"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="IndirectHillshade.html"><span class="name">IndirectHillshade</span></a><span class="params">(<span name="aspect">aspect: <a href="Aspect.html" class="extype" name="geotrellis.raster.op.focal.Aspect">Aspect</a></span>, <span name="slope">slope: <a href="Slope.html" class="extype" name="geotrellis.raster.op.focal.Slope">Slope</a></span>, <span name="azimuth">azimuth: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="altitude">altitude: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result"> extends <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Indirect calculation of hill shading of a raster that uses Aspect and Slope operation results.</p>
+    </li><li name="geotrellis.raster.op.focal.Initialization" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="InitializationextendsObject"></a>
+      <a id="Initialization:Initialization"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Initialization.html"><span class="name">Initialization</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Trait defining the ability to initialize the focal calculation with a raster.</p>
+    </li><li name="geotrellis.raster.op.focal.Initialization1" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Initialization1[A]extendsObject"></a>
+      <a id="Initialization1[A]:Initialization1[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Initialization1.html"><span class="name">Initialization1</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Trait defining the ability to initialize the focal calculation with a raster and one other parameter.</p>
+    </li><li name="geotrellis.raster.op.focal.Initialization2" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Initialization2[A,B]extendsObject"></a>
+      <a id="Initialization2[A,B]:Initialization2[A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Initialization2.html"><span class="name">Initialization2</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Trait defining the ability to initialize the focal calculation with a raster and two other parameters.</p>
+    </li><li name="geotrellis.raster.op.focal.Initialization3" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Initialization3[A,B,C]extendsObject"></a>
+      <a id="Initialization3[A,B,C]:Initialization3[A,B,C]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Initialization3.html"><span class="name">Initialization3</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Trait defining the ability to initialize the focal calculation with a raster and three other parameters.</p>
+    </li><li name="geotrellis.raster.op.focal.Initialization4" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Initialization4[A,B,C,D]extendsObject"></a>
+      <a id="Initialization4[A,B,C,D]:Initialization4[A,B,C,D]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Initialization4.html"><span class="name">Initialization4</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Trait defining the ability to initialize the focal calculation with a raster and four other parameters.</p>
+    </li><li name="geotrellis.raster.op.focal.IntRasterDataResult" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="IntRasterDataResultextendsInitializationwithResulting[geotrellis.Raster]"></a>
+      <a id="IntRasterDataResult:IntRasterDataResult"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="IntRasterDataResult.html"><span class="name">IntRasterDataResult</span></a><span class="result"> extends <a href="Initialization.html" class="extype" name="geotrellis.raster.op.focal.Initialization">Initialization</a> with <a href="Resulting.html" class="extype" name="geotrellis.raster.op.focal.Resulting">Resulting</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Defines a focal calculation as returning
+a <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a> with <a href="../../../IntArrayRasterData.html" class="extype" name="geotrellis.IntArrayRasterData">IntArrayRasterData</a>, and defines
+the <a href="Initialization.html" class="extype" name="geotrellis.raster.op.focal.Initialization">Initialization</a>.</p>
+    </li><li name="geotrellis.raster.op.focal.Kernel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="KernelextendsNeighborhoodwithProductwithSerializable"></a>
+      <a id="Kernel:Kernel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Kernel.html"><span class="name">Kernel</span></a><span class="params">(<span name="raster">raster: <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>)</span><span class="result"> extends <a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Kernel</p>
+    </li><li name="geotrellis.raster.op.focal.KernelDensity" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="KernelDensity[D]extendsOp4[Seq[geotrellis.feature.Point[D]],D=&gt;Int,geotrellis.raster.op.focal.Kernel,geotrellis.RasterExtent,geotrellis.Raster]withProductwithSerializable"></a>
+      <a id="KernelDensity[D]:KernelDensity[D]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="KernelDensity.html"><span class="name">KernelDensity</span></a><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="points">points: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Seq">Seq</span>[<a href="../../../feature/Point.html" class="extype" name="geotrellis.feature.Point">Point</a>[<span class="extype" name="geotrellis.raster.op.focal.KernelDensity.D">D</span>]]]</span>, <span name="transform">transform: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[(<span class="extype" name="geotrellis.raster.op.focal.KernelDensity.D">D</span>) ⇒ <span class="extype" name="scala.Int">Int</span>]</span>, <span name="kernel">kernel: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="Kernel.html" class="extype" name="geotrellis.raster.op.focal.Kernel">Kernel</a>]</span>, <span name="rasterExtent">rasterExtent: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span><span class="result"> extends <a href="../../../Op4.html" class="extype" name="geotrellis.Op4">Op4</a>[<span class="extype" name="scala.Seq">Seq</span>[<a href="../../../feature/Point.html" class="extype" name="geotrellis.feature.Point">Point</a>[<span class="extype" name="geotrellis.raster.op.focal.KernelDensity.D">D</span>]], (<span class="extype" name="geotrellis.raster.op.focal.KernelDensity.D">D</span>) ⇒ <span class="extype" name="scala.Int">Int</span>, <a href="Kernel.html" class="extype" name="geotrellis.raster.op.focal.Kernel">Kernel</a>, <a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Computes the Kernel Density for a raster.</p>
+    </li><li name="geotrellis.raster.op.focal.Max" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MaxextendsFocalOp[geotrellis.Raster]withHasAnalysisArea[geotrellis.raster.op.focal.Max]withProductwithSerializable"></a>
+      <a id="Max:Max"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Max.html"><span class="name">Max</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="n">n: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a>]</span>)</span><span class="result"> extends <a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="HasAnalysisArea.html" class="extype" name="geotrellis.raster.op.focal.HasAnalysisArea">HasAnalysisArea</a>[<a href="Max.html" class="extype" name="geotrellis.raster.op.focal.Max">Max</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Computes the maximum value of a neighborhood for a given raster
+</p>
+    </li><li name="geotrellis.raster.op.focal.Mean" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MeanextendsFocalOp[geotrellis.Raster]withHasAnalysisArea[geotrellis.raster.op.focal.Mean]withProductwithSerializable"></a>
+      <a id="Mean:Mean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Mean.html"><span class="name">Mean</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="n">n: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a>]</span>)</span><span class="result"> extends <a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="HasAnalysisArea.html" class="extype" name="geotrellis.raster.op.focal.HasAnalysisArea">HasAnalysisArea</a>[<a href="Mean.html" class="extype" name="geotrellis.raster.op.focal.Mean">Mean</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Computes the mean value of a neighborhood for a given raster
+</p>
+    </li><li name="geotrellis.raster.op.focal.Median" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MedianextendsFocalOp[geotrellis.Raster]withHasAnalysisArea[geotrellis.raster.op.focal.Median]withProductwithSerializable"></a>
+      <a id="Median:Median"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Median.html"><span class="name">Median</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="n">n: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a>]</span>)</span><span class="result"> extends <a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="HasAnalysisArea.html" class="extype" name="geotrellis.raster.op.focal.HasAnalysisArea">HasAnalysisArea</a>[<a href="Median.html" class="extype" name="geotrellis.raster.op.focal.Median">Median</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Computes the median value of a neighborhood for a given raster
+</p>
+    </li><li name="geotrellis.raster.op.focal.MedianModeCalculation" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MedianModeCalculationextendsObject"></a>
+      <a id="MedianModeCalculation:MedianModeCalculation"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="MedianModeCalculation.html"><span class="name">MedianModeCalculation</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.Min" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MinextendsFocalOp[geotrellis.Raster]withHasAnalysisArea[geotrellis.raster.op.focal.Min]withProductwithSerializable"></a>
+      <a id="Min:Min"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Min.html"><span class="name">Min</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="n">n: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a>]</span>)</span><span class="result"> extends <a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="HasAnalysisArea.html" class="extype" name="geotrellis.raster.op.focal.HasAnalysisArea">HasAnalysisArea</a>[<a href="Min.html" class="extype" name="geotrellis.raster.op.focal.Min">Min</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Computes the minimum value of a neighborhood for a given raster
+</p>
+    </li><li name="geotrellis.raster.op.focal.Mode" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ModeextendsFocalOp[geotrellis.Raster]withHasAnalysisArea[geotrellis.raster.op.focal.Mode]withProductwithSerializable"></a>
+      <a id="Mode:Mode"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Mode.html"><span class="name">Mode</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="n">n: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a>]</span>)</span><span class="result"> extends <a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="HasAnalysisArea.html" class="extype" name="geotrellis.raster.op.focal.HasAnalysisArea">HasAnalysisArea</a>[<a href="Mode.html" class="extype" name="geotrellis.raster.op.focal.Mode">Mode</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Computes the mode of a neighborhood for a given raster
+</p>
+    </li><li name="geotrellis.raster.op.focal.Movement" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MovementextendsObject"></a>
+      <a id="Movement:Movement"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Movement.html"><span class="name">Movement</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.Neighborhood" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="NeighborhoodextendsObject"></a>
+      <a id="Neighborhood:Neighborhood"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Neighborhood.html"><span class="name">Neighborhood</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A definition of the shape and size
+of the neighborhood (or kernel) to be used in a focal operation.</p>
+    </li><li name="geotrellis.raster.op.focal.Nesw" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NeswextendsNeighborhoodwithProductwithSerializable"></a>
+      <a id="Nesw:Nesw"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Nesw.html"><span class="name">Nesw</span></a><span class="params">(<span name="extent">extent: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A neighborhood that includes a column and row intersectin the focus.</p>
+    </li><li name="geotrellis.raster.op.focal.PrecomputedNormalize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PrecomputedNormalizeextendsOp3[geotrellis.Raster,(Int,Int),(Int,Int),geotrellis.Raster]withProductwithSerializable"></a>
+      <a id="PrecomputedNormalize:PrecomputedNormalize"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="PrecomputedNormalize.html"><span class="name">PrecomputedNormalize</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="c">c: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>, <span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>)</span><span class="result"> extends <a href="../../../Op3.html" class="extype" name="geotrellis.Op3">Op3</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>), (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>), <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Normalize the values in the given raster.</p>
+    </li><li name="geotrellis.raster.op.focal.RasterMoransI" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RasterMoransIextendsFocalOp[geotrellis.Raster]withProductwithSerializable"></a>
+      <a id="RasterMoransI:RasterMoransI"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="RasterMoransI.html"><span class="name">RasterMoransI</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="n">n: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a>]</span>)</span><span class="result"> extends <a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Calculates spatial autocorrelation of cells based on the similarity to
+neighboring values.</p>
+    </li><li name="geotrellis.raster.op.focal.Resulting" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Resulting[T]extendsObject"></a>
+      <a id="Resulting[T]:Resulting[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Resulting.html"><span class="name">Resulting</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Declares that implementers have a result
+</p>
+    </li><li name="geotrellis.raster.op.focal.ScalarMoransI" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ScalarMoransIextendsFocalOp[Double]withProductwithSerializable"></a>
+      <a id="ScalarMoransI:ScalarMoransI"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ScalarMoransI.html"><span class="name">ScalarMoransI</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="n">n: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a>]</span>)</span><span class="result"> extends <a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Calculates global spatial autocorrelation of a raster based on the similarity to
+neighboring values.</p>
+    </li><li name="geotrellis.raster.op.focal.ShortRasterDataResult" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ShortRasterDataResultextendsInitializationwithResulting[geotrellis.Raster]"></a>
+      <a id="ShortRasterDataResult:ShortRasterDataResult"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ShortRasterDataResult.html"><span class="name">ShortRasterDataResult</span></a><span class="result"> extends <a href="Initialization.html" class="extype" name="geotrellis.raster.op.focal.Initialization">Initialization</a> with <a href="Resulting.html" class="extype" name="geotrellis.raster.op.focal.Resulting">Resulting</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Defines a focal calculation as returning
+a <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a> with <a href="../../../ShortArrayRasterData.html" class="extype" name="geotrellis.ShortArrayRasterData">ShortArrayRasterData</a>, and defines
+the <a href="Initialization.html" class="extype" name="geotrellis.raster.op.focal.Initialization">Initialization</a>.</p>
+    </li><li name="geotrellis.raster.op.focal.Slope" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SlopeextendsFocalOp1[Double,geotrellis.Raster]withHasAnalysisArea[geotrellis.raster.op.focal.Slope]"></a>
+      <a id="Slope:Slope"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Slope.html"><span class="name">Slope</span></a><span class="result"> extends <a href="FocalOp1.html" class="extype" name="geotrellis.raster.op.focal.FocalOp1">FocalOp1</a>[<span class="extype" name="scala.Double">Double</span>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="HasAnalysisArea.html" class="extype" name="geotrellis.raster.op.focal.HasAnalysisArea">HasAnalysisArea</a>[<a href="Slope.html" class="extype" name="geotrellis.raster.op.focal.Slope">Slope</a>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Calculates the slope of each cell in a raster.</p>
+    </li><li name="geotrellis.raster.op.focal.Square" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SquareextendsNeighborhoodwithProductwithSerializable"></a>
+      <a id="Square:Square"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Square.html"><span class="name">Square</span></a><span class="params">(<span name="extent">extent: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A square neighborhood.</p>
+    </li><li name="geotrellis.raster.op.focal.Sum" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SumextendsFocalOp[geotrellis.Raster]withHasAnalysisArea[geotrellis.raster.op.focal.Sum]withProductwithSerializable"></a>
+      <a id="Sum:Sum"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Sum.html"><span class="name">Sum</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="n">n: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a>]</span>)</span><span class="result"> extends <a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="HasAnalysisArea.html" class="extype" name="geotrellis.raster.op.focal.HasAnalysisArea">HasAnalysisArea</a>[<a href="Sum.html" class="extype" name="geotrellis.raster.op.focal.Sum">Sum</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Computes the sum of values of a neighborhood for a given raster
+</p>
+    </li><li name="geotrellis.raster.op.focal.SurfacePoint" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SurfacePointextendsObject"></a>
+      <a id="SurfacePoint:SurfacePoint"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SurfacePoint.html"><span class="name">SurfacePoint</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A representation of the approximated partial derivatives of a raster cell,
+ and the slope and aspect that can be calculated from those values.</p>
+    </li><li name="geotrellis.raster.op.focal.SurfacePointCalculation" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SurfacePointCalculation[T]extendsFocalCalculation[T]"></a>
+      <a id="SurfacePointCalculation[T]:SurfacePointCalculation[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="SurfacePointCalculation.html"><span class="name">SurfacePointCalculation</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="FocalCalculation.html" class="extype" name="geotrellis.raster.op.focal.FocalCalculation">FocalCalculation</a>[<span class="extype" name="geotrellis.raster.op.focal.SurfacePointCalculation.T">T</span>]</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Calculation used for surface point calculations such as Slope, Aspect, and Hillshade</p>
+    </li><li name="geotrellis.raster.op.focal.TileFocalOp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TileFocalOp[T&lt;:geotrellis.Op[geotrellis.Raster]withgeotrellis.raster.op.focal.FocalOperationBasewithgeotrellis.raster.op.focal.HasAnalysisArea[T]]extendsOp[geotrellis.Raster]withProductwithSerializable"></a>
+      <a id="TileFocalOp[T&lt;:Op[Raster]withFocalOperationBasewithHasAnalysisArea[T]]:TileFocalOp[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="TileFocalOp.html"><span class="name">TileFocalOp</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="FocalOperationBase.html" class="extype" name="geotrellis.raster.op.focal.FocalOperationBase">FocalOperationBase</a> with <a href="HasAnalysisArea.html" class="extype" name="geotrellis.raster.op.focal.HasAnalysisArea">HasAnalysisArea</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]</span>]</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="zonalOp">zonalOp: (<a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]) ⇒ <span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span></span>)</span><span class="result"> extends <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.TraversalStrategy" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TraversalStrategyextendsObject"></a>
+      <a id="TraversalStrategy:TraversalStrategy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="TraversalStrategy.html"><span class="name">TraversalStrategy</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.Wedge" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WedgeextendsNeighborhoodwithProductwithSerializable"></a>
+      <a id="Wedge:Wedge"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Wedge.html"><span class="name">Wedge</span></a><span class="params">(<span name="radius">radius: <span class="extype" name="scala.Double">Double</span></span>, <span name="startAngle">startAngle: <span class="extype" name="scala.Double">Double</span></span>, <span name="endAngle">endAngle: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result"> extends <a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Wedge neighborhood.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="geotrellis.raster.op.focal.Angles" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Angles"></a>
+      <a id="Angles:Angles"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Angles$.html"><span class="name">Angles</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.CellwiseStrategy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CellwiseStrategy"></a>
+      <a id="CellwiseStrategy:CellwiseStrategy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CellwiseStrategy$.html"><span class="name">CellwiseStrategy</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Focal strategy that implements a more strict mechanism that informs the user
+what cells have been added or removed.</p>
+    </li><li name="geotrellis.raster.op.focal.Cursor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Cursor"></a>
+      <a id="Cursor:Cursor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Cursor$.html"><span class="name">Cursor</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.CursorStrategy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CursorStrategy"></a>
+      <a id="CursorStrategy:CursorStrategy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CursorStrategy$.html"><span class="name">CursorStrategy</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Focal strategy which moves a Cursor across the raster,
+allowing a calculation to be done on each cell using the Cursor
+to determine what neighboring cells are inside the focus's
+neighborhood, what cells have been added since the last move, and
+what cells have been removed since the last move.</p>
+    </li><li name="geotrellis.raster.op.focal.FocalOperation" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FocalOperation"></a>
+      <a id="FocalOperation:FocalOperation"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FocalOperation$.html"><span class="name">FocalOperation</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.Hillshade" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Hillshade"></a>
+      <a id="Hillshade:Hillshade"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Hillshade$.html"><span class="name">Hillshade</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Computes Hillshade (shaded relief) from a raster</p>
+    </li><li name="geotrellis.raster.op.focal.Kernel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Kernel"></a>
+      <a id="Kernel:Kernel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Kernel$.html"><span class="name">Kernel</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.Movement" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Movement"></a>
+      <a id="Movement:Movement"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Movement$.html"><span class="name">Movement</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Movements used to move a <a href="Cursor.html" class="extype" name="geotrellis.raster.op.focal.Cursor">Cursor</a> around, and to track it's movements.</p>
+    </li><li name="geotrellis.raster.op.focal.Normalize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Normalize"></a>
+      <a id="Normalize:Normalize"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Normalize$.html"><span class="name">Normalize</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">We'd like to use the normalize name both when we want to automatically
+detect the min/max values, and when we provide them explicitly.</p>
+    </li><li name="geotrellis.raster.op.focal.Rescale" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Rescale"></a>
+      <a id="Rescale:Rescale"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Rescale$.html"><span class="name">Rescale</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.Slope" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Slope"></a>
+      <a id="Slope:Slope"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Slope$.html"><span class="name">Slope</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Creates <a href="Slope.html" class="extype" name="geotrellis.raster.op.focal.Slope">Slope</a> instances.</p>
+    </li><li name="geotrellis.raster.op.focal.TileFocalOp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TileFocalOp"></a>
+      <a id="TileFocalOp:TileFocalOp"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TileFocalOp$.html"><span class="name">TileFocalOp</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.TraversalStrategy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TraversalStrategy"></a>
+      <a id="TraversalStrategy:TraversalStrategy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TraversalStrategy$.html"><span class="name">TraversalStrategy</span></a>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

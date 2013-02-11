@@ -1,0 +1,1238 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>Intersect - geotrellis.feature.op.geometry.Intersect</title>
+          <meta name="description" content="Intersect - geotrellis.feature.op.geometry.Intersect" />
+          <meta name="keywords" content="Intersect geotrellis.feature.op.geometry.Intersect" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'geotrellis.feature.op.geometry.Intersect';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <img src="../../../../lib/class_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.feature">feature</a>.<a href="../package.html" class="extype" name="geotrellis.feature.op">op</a>.<a href="package.html" class="extype" name="geotrellis.feature.op.geometry">geometry</a></p>
+        <h1>Intersect</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Intersect</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]]</span>, <span name="other">other: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>], <a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] { ... /* 2 definitions in type refinement */ }] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Returns the intersection of these geometries.</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>type of feature data
+</p></dd><dt class="param">g</dt><dd class="cmt"><p>first geometry to intersect, whose data is preserved</p></dd><dt class="param">other</dt><dd class="cmt"><p>other geometry to intersect
+</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="http://tsusiatsoftware.net/jts/javadoc/com/vividsolutions/jts/geom/Geometry.html#intersection(com.vividsolutions.jts.geom.Geometry)" target="_blank">&quot;JTS documentation&quot;</a>
+</p></span></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>], <a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] { ... /* 2 definitions in type refinement */ }], <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] { ... /* 2 definitions in type refinement */ }], <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">scala.Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
+                <span class="toggle diagram-link">Type Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph327" viewBox="0.00 0.00 1067.00 128.00" height="128pt" width="1067pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 124)" class="graph" id="graph1"><polygon points="-4,5 -4,-124 1064,-124 1064,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><g class="cluster" id="graph4"></g><!-- node4 --><g class="node implicit-outgoing class" id="graph327_4"><a xlink:title="geotrellis.feature.op.geometry.Intersect can be implicitly converted to Operation[Intersect[A]] by the implicit method implicitLiteral in object geotrellis.Operation" xlink:href="../../../Operation.html#inheritance-diagram"><polygon points="1035,-50 891,-50 891,-24 1035,-24 1035,-50" stroke="#ababab" fill="#e1e1e1"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="901" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#7d7d7d" font-size="10.00" font-family="Arial" y="-34.6667" x="923" text-anchor="start">Operation[Intersect[A]]</text></a></g><!-- node0 --><g class="node this class" id="graph327_0"><a xlink:title="geotrellis.feature.op.geometry.Intersect (this class)" xlink:href="#inheritance-diagram"><polygon points="819,-50 723,-50 723,-24 819,-24 819,-50" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="733" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-34.6667" x="755" text-anchor="start">Intersect[A]</text></a></g><!-- node0&#45;&gt;node4 --><g class="edge implicit-outgoing" id="0_4"><a xlink:title="Intersect[A] can be implicitly converted to Operation[Intersect[A]]"><path d="M826.705,-37C842.797,-37 860.734,-37 878.172,-37" stroke="#d4d4d4" fill="none"></path><polygon points="878.268,-38.7501 883.268,-37 878.268,-35.2501 878.268,-38.7501" stroke="#d4d4d4" fill="#d4d4d4"></polygon></a><text fill="#aaaaaa" font-size="10.00" font-family="Arial" y="-41" x="855" text-anchor="middle">implicitly</text></g><!-- node1 --><g class="node class" id="graph327_1"><a xlink:title="geotrellis.Op2" xlink:href="../../../Op2.html#inheritance-diagram"><polygon points="714,-120 3.41061e-13,-120 0,-94 714,-94 714,-120" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-115" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="32" text-anchor="start">Op2[Geometry[A], Geometry[_], Product with Serializable with Feature[com.vividsolutions.jts.geom.Geometry, A] { ... /* 2 definitions in type refinement */ }]</text></a></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph327_1_0"><a xlink:title="Intersect[A] is a subtype of Op2[Geometry[A], Geometry[_], Product with Serializable with Feature[com.vividsolutions.jts.geom.Geometry, A] { ... /* 2 definitions in type refinement */ }]"><path d="M438.915,-93.1496C523.739,-78.8074 653.399,-56.8842 722.949,-45.1245" stroke="#d4d4d4" fill="none"></path><polygon points="438.538,-91.4384 433.9,-93.9976 439.122,-94.8894 438.538,-91.4384" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph327_2"><a xlink:title="scala.Product"><polygon points="810,-120 732,-120 732,-94 810,-94 810,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="742" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="764" text-anchor="start">Product</text></a></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph327_2_0"><a xlink:title="Intersect[A] is a subtype of Product"><path d="M771,-88.5481C771,-76.457 771,-60.9432 771,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="769.25,-88.8335 771,-93.8335 772.75,-88.8336 769.25,-88.8335" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node trait" id="graph327_3"><a xlink:title="scala.Serializable"><polygon points="924,-120 828,-120 828,-94 924,-94 924,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="838" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="860" text-anchor="start">Serializable</text></a></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph327_3_0"><a xlink:title="Intersect[A] is a subtype of Serializable"><path d="M851.689,-90.7927C833.148,-78.4323 807.94,-61.6266 790.661,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="851.119,-92.5161 856.25,-93.8335 853.061,-89.6039 851.119,-92.5161" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="geotrellis.feature.op.geometry.Intersect"><span>Intersect</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="geotrellis.Op2"><span>Op2</span></li><li class="in" name="geotrellis.Operation"><span>Operation</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+                <span class="filtertype">Implicitly<br />
+                </span>
+                <ol id="implicits"> <li class="in" name="geotrellis.Operation.implicitLiteral" data-hidden="false"><span>by implicitLiteral</span></li><li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.any2stringfmt" data-hidden="true"><span>by any2stringfmt</span></li><li class="in" name="scala.Predef.any2ArrowAssoc" data-hidden="true"><span>by any2ArrowAssoc</span></li><li class="in" name="scala.Predef.any2Ensuring" data-hidden="true"><span>by any2Ensuring</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="geotrellis.feature.op.geometry.Intersect#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(g:geotrellis.Op[geotrellis.feature.Geometry[A]],other:geotrellis.Op[geotrellis.feature.Geometry[_]]):geotrellis.feature.op.geometry.Intersect[A]"></a>
+      <a id="&lt;init&gt;:Intersect[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Intersect</span><span class="params">(<span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]]</span>, <span name="other">other: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">g</dt><dd class="cmt"><p>first geometry to intersect, whose data is preserved</p></dd><dt class="param">other</dt><dd class="cmt"><p>other geometry to intersect
+</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="geotrellis.Operation.Args" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Args=List[Any]"></a>
+      <a id="Args:Args"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Args</span><span class="result"> = <span class="extype" name="scala.collection.immutable.List">List</span>[<span class="extype" name="scala.Any">Any</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.Steps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Steps=PartialFunction[Any,geotrellis.StepOutput[T]]"></a>
+      <a id="Steps:Steps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Steps</span><span class="result"> = <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] { ... /* 2 definitions in type refinement */ }]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:AnyRef):Boolean"></a>
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a>
+      <a id="+(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <span class="extype" name="scala.runtime.StringAdd">StringAdd</span> performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
+    </li><li name="scala.Predef.any2ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a>
+      <a id="-&gt;[B](B):(Intersect[A],B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>], <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method any2ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:AnyRef):Boolean"></a>
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.Op2#_run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_run(context:geotrellis.Context):geotrellis.StepOutput[T]"></a>
+      <a id="_run(Context):StepOutput[ProductwithSerializablewithFeature[com.vividsolutions.jts.geom.Geometry,A]{.../*2definitionsintyperefinement*/}]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_run</span><span class="params">(<span name="context">context: <a href="../../../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] { ... /* 2 definitions in type refinement */ }]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a> → <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.Op2#canEqual" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="canEqual(other:Any):Boolean"></a>
+      <a id="canEqual(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">canEqual</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a> → Equals</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">java.lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="geotrellis.Operation#debug" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="debug:Boolean"></a>
+      <a id="debug:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">debug</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation#dispatch" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dispatch(dispatcher:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
+      <a id="dispatch(ActorRef):DispatchedOperation[ProductwithSerializablewithFeature[com.vividsolutions.jts.geom.Geometry,A]{.../*2definitionsintyperefinement*/}]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dispatch</span><span class="params">(<span name="dispatcher">dispatcher: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../../../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] { ... /* 2 definitions in type refinement */ }]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring((Intersect[A])⇒Boolean,⇒Any):Intersect[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method any2Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a>
+      <a id="ensuring((Intersect[A])⇒Boolean):Intersect[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method any2Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring(Boolean,⇒Any):Intersect[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method any2Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a>
+      <a id="ensuring(Boolean):Intersect[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method any2Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.Operation#filter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="filter(f:T=&gt;Boolean):geotrellis.Operation[T]"></a>
+      <a id="filter((ProductwithSerializablewithFeature[com.vividsolutions.jts.geom.Geometry,A]{.../*2definitionsintyperefinement*/})⇒Boolean):Operation[ProductwithSerializablewithFeature[com.vividsolutions.jts.geom.Geometry,A]{.../*2definitionsintyperefinement*/}]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">filter</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] { ... /* 2 definitions in type refinement */ }) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] { ... /* 2 definitions in type refinement */ }]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">java.lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="geotrellis.Operation#flatMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="flatMap[U](f:T=&gt;geotrellis.Operation[U]):geotrellis.Operation[U]"></a>
+      <a id="flatMap[U]((ProductwithSerializablewithFeature[com.vividsolutions.jts.geom.Geometry,A]{.../*2definitionsintyperefinement*/})⇒Operation[U]):Operation[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">flatMap</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] { ... /* 2 definitions in type refinement */ }) ⇒ <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a new operation with a function that takes the result of this operation
+and returns a new operation.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation with a function that takes the result of this operation
+and returns a new operation.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation#foreach" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="foreach[U](f:T=&gt;U):Unit"></a>
+      <a id="foreach[U]((ProductwithSerializablewithFeature[com.vividsolutions.jts.geom.Geometry,A]{.../*2definitionsintyperefinement*/})⇒U):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreach</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] { ... /* 2 definitions in type refinement */ }) ⇒ <span class="extype" name="geotrellis.Operation.foreach.U">U</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create an operation that applies the function f to the result of this operation,
+but returns nothing.</p><div class="fullcomment"><div class="comment cmt"><p>Create an operation that applies the function f to the result of this operation,
+but returns nothing.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="scala.Predef.any2stringfmt#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a>
+      <a id="formatted(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <span class="extype" name="scala.runtime.StringFormat">StringFormat</span> performed by method any2stringfmt in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="geotrellis.feature.op.geometry.Intersect#g" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="g:geotrellis.Op[geotrellis.feature.Geometry[A]]"></a>
+      <a id="g:Op[Geometry[A]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">g</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">first geometry to intersect, whose data is preserved</p>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.Operation#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="map[U](f:T=&gt;U):geotrellis.Operation[U]"></a>
+      <a id="map[U]((ProductwithSerializablewithFeature[com.vividsolutions.jts.geom.Geometry,A]{.../*2definitionsintyperefinement*/})⇒U):Operation[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">map</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] { ... /* 2 definitions in type refinement */ }) ⇒ <span class="extype" name="geotrellis.Operation.map.U">U</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.map.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a new operation that returns the result of the provided function that
+takes this operation's result as its argument.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation that returns the result of the provided function that
+takes this operation's result as its argument.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation#name" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="name:String"></a>
+      <a id="name:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">name</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Return operation identified (class simple name).</p><div class="fullcomment"><div class="comment cmt"><p>Return operation identified (class simple name).
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.Op2#nextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nextSteps:Op2.this.Steps"></a>
+      <a id="nextSteps:Steps"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nextSteps</span><span class="result">: <a href="#Steps=PartialFunction[Any,geotrellis.StepOutput[T]]" class="extmbr" name="geotrellis.feature.op.geometry.Intersect.Steps">Steps</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a> → <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.feature.op.geometry.Intersect#other" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="other:geotrellis.Op[geotrellis.feature.Geometry[_]]"></a>
+      <a id="other:Op[Geometry[_]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">other</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">other geometry to intersect
+</p>
+    </li><li name="geotrellis.Operation#processNextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="processNextSteps(args:Operation.this.Args):geotrellis.StepOutput[T]"></a>
+      <a id="processNextSteps(Args):StepOutput[ProductwithSerializablewithFeature[com.vividsolutions.jts.geom.Geometry,A]{.../*2definitionsintyperefinement*/}]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">processNextSteps</span><span class="params">(<span name="args">args: <a href="#Args=List[Any]" class="extmbr" name="geotrellis.feature.op.geometry.Intersect.Args">Args</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] { ... /* 2 definitions in type refinement */ }]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Op2#productArity" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="productArity:Int"></a>
+      <a id="productArity:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">productArity</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a> → Product</dd></dl></div>
+    </li><li name="geotrellis.Op2#productElement" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="productElement(n:Int):Any"></a>
+      <a id="productElement(Int):Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">productElement</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a> → Product</dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#productIterator" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="productIterator:Iterator[Any]"></a>
+      <a id="productIterator:Iterator[Any]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">productIterator</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="scala.Any">Any</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] is in scope.
+          </dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#productPrefix" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="productPrefix:String"></a>
+      <a id="productPrefix:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">productPrefix</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] is in scope.
+          </dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
+    </li><li name="geotrellis.Operation#run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="run(context:geotrellis.Context):geotrellis.StepOutput[T]"></a>
+      <a id="run(Context):StepOutput[ProductwithSerializablewithFeature[com.vividsolutions.jts.geom.Geometry,A]{.../*2definitionsintyperefinement*/}]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">run</span><span class="params">(<span name="context">context: <a href="../../../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] { ... /* 2 definitions in type refinement */ }]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Execute this operation and return the result.</p><div class="fullcomment"><div class="comment cmt"><p>Execute this operation and return the result.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation#runAsync" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="runAsync(args:Operation.this.Args):geotrellis.StepOutput[T]"></a>
+      <a id="runAsync(Args):StepOutput[ProductwithSerializablewithFeature[com.vividsolutions.jts.geom.Geometry,A]{.../*2definitionsintyperefinement*/}]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">runAsync</span><span class="params">(<span name="args">args: <a href="#Args=List[Any]" class="extmbr" name="geotrellis.feature.op.geometry.Intersect.Args">Args</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] { ... /* 2 definitions in type refinement */ }]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="geotrellis.Operation#withResult" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withResult[U](f:T=&gt;geotrellis.Operation[U]):geotrellis.Operation[U]"></a>
+      <a id="withResult[U]((ProductwithSerializablewithFeature[com.vividsolutions.jts.geom.Geometry,A]{.../*2definitionsintyperefinement*/})⇒Operation[U]):Operation[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withResult</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] { ... /* 2 definitions in type refinement */ }) ⇒ <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a new operation with a function that takes the result of this operation
+and returns a new operation.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation with a function that takes the result of this operation
+and returns a new operation.</p><p>Same as flatMap.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="scala.Predef.any2ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a>
+      <a id="→[B](B):(Intersect[A],B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>], <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method any2ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Shadowed Implict Value Members</h3>
+              <ol><li name="geotrellis.Operation.implicitLiteral#canEqual" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="canEqual(that:Any):Boolean"></a>
+      <a id="canEqual(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">canEqual</span><span class="params">(<span name="that">that: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] is in scope.
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(intersect: Operation[Intersect[A]]).canEqual(that)</pre></div></dd><dt>Definition Classes</dt><dd>Equals</dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#debug" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="debug:Boolean"></a>
+      <a id="debug:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">debug</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] is in scope.
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(intersect: Operation[Intersect[A]]).debug</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#dispatch" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dispatch(dispatcher:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
+      <a id="dispatch(ActorRef):DispatchedOperation[Intersect[A]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">dispatch</span><span class="params">(<span name="dispatcher">dispatcher: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../../../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] is in scope.
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(intersect: Operation[Intersect[A]]).dispatch(dispatcher)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#filter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="filter(f:T=&gt;Boolean):geotrellis.Operation[T]"></a>
+      <a id="filter((Intersect[A])⇒Boolean):Operation[Intersect[A]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">filter</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] is in scope.
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(intersect: Operation[Intersect[A]]).filter(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#flatMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="flatMap[U](f:T=&gt;geotrellis.Operation[U]):geotrellis.Operation[U]"></a>
+      <a id="flatMap[U]((Intersect[A])⇒Operation[U]):Operation[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">flatMap</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]) ⇒ <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a new operation with a function that takes the result of this operation
+and returns a new operation.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation with a function that takes the result of this operation
+and returns a new operation.
+</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] is in scope.
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(intersect: Operation[Intersect[A]]).flatMap(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#foreach" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="foreach[U](f:T=&gt;U):Unit"></a>
+      <a id="foreach[U]((Intersect[A])⇒U):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">foreach</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]) ⇒ <span class="extype" name="geotrellis.Operation.foreach.U">U</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create an operation that applies the function f to the result of this operation,
+but returns nothing.</p><div class="fullcomment"><div class="comment cmt"><p>Create an operation that applies the function f to the result of this operation,
+but returns nothing.
+</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] is in scope.
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(intersect: Operation[Intersect[A]]).foreach(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="map[U](f:T=&gt;U):geotrellis.Operation[U]"></a>
+      <a id="map[U]((Intersect[A])⇒U):Operation[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">map</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]) ⇒ <span class="extype" name="geotrellis.Operation.map.U">U</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.map.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a new operation that returns the result of the provided function that
+takes this operation's result as its argument.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation that returns the result of the provided function that
+takes this operation's result as its argument.
+</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] is in scope.
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(intersect: Operation[Intersect[A]]).map(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#name" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="name:String"></a>
+      <a id="name:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">name</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Return operation identified (class simple name).</p><div class="fullcomment"><div class="comment cmt"><p>Return operation identified (class simple name).
+</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] is in scope.
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(intersect: Operation[Intersect[A]]).name</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#nextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nextSteps:PartialFunction[Any,geotrellis.StepOutput[T]]"></a>
+      <a id="nextSteps:PartialFunction[Any,StepOutput[Intersect[A]]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">nextSteps</span><span class="result">: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] is in scope.
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(intersect: Operation[Intersect[A]]).nextSteps</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#processNextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="processNextSteps(args:Operation.this.Args):geotrellis.StepOutput[T]"></a>
+      <a id="processNextSteps(List[Any]):StepOutput[Intersect[A]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">processNextSteps</span><span class="params">(<span name="args">args: <span class="extype" name="scala.collection.immutable.List">List</span>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] is in scope.
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(intersect: Operation[Intersect[A]]).processNextSteps(args)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#productArity" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="productArity:Int"></a>
+      <a id="productArity:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">productArity</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] is in scope.
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(intersect: Operation[Intersect[A]]).productArity</pre></div></dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#productElement" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="productElement(n:Int):Any"></a>
+      <a id="productElement(Int):Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">productElement</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] is in scope.
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(intersect: Operation[Intersect[A]]).productElement(n)</pre></div></dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="run(context:geotrellis.Context):geotrellis.StepOutput[T]"></a>
+      <a id="run(Context):StepOutput[Intersect[A]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">run</span><span class="params">(<span name="context">context: <a href="../../../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Execute this operation and return the result.</p><div class="fullcomment"><div class="comment cmt"><p>Execute this operation and return the result.
+</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] is in scope.
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(intersect: Operation[Intersect[A]]).run(context)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#runAsync" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="runAsync(args:Operation.this.Args):geotrellis.StepOutput[T]"></a>
+      <a id="runAsync(List[Any]):StepOutput[Intersect[A]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">runAsync</span><span class="params">(<span name="args">args: <span class="extype" name="scala.collection.immutable.List">List</span>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] is in scope.
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(intersect: Operation[Intersect[A]]).runAsync(args)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:Any"></a>
+      <a id="self:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">self</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <span class="extype" name="scala.runtime.StringAdd">StringAdd</span> performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(intersect: StringAdd).self</pre></div></dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
+    </li><li name="scala.Predef.any2stringfmt#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:Any"></a>
+      <a id="self:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">self</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <span class="extype" name="scala.runtime.StringFormat">StringFormat</span> performed by method any2stringfmt in scala.Predef.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(intersect: StringFormat).self</pre></div></dd><dt>Definition Classes</dt><dd>StringFormat</dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#withResult" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withResult[U](f:T=&gt;geotrellis.Operation[U]):geotrellis.Operation[U]"></a>
+      <a id="withResult[U]((Intersect[A])⇒Operation[U]):Operation[U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">withResult</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]) ⇒ <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a new operation with a function that takes the result of this operation
+and returns a new operation.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation with a function that takes the result of this operation
+and returns a new operation.</p><p>Same as flatMap.
+</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] is in scope.
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(intersect: Operation[Intersect[A]]).withResult(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.Predef.any2ArrowAssoc#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:Intersect[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use leftOfArrow instead">x</span><span class="result">: <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method any2ArrowAssoc in scala.Predef.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(intersect: ArrowAssoc[Intersect[A]]).x</pre></div></dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>leftOfArrow<code> instead</code></u></code></p></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:Intersect[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use resultOfEnsuring instead">x</span><span class="result">: <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]] performed by method any2Ensuring in scala.Predef.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(intersect: Ensuring[Intersect[A]]).x</pre></div></dd><dt>Definition Classes</dt><dd>Ensuring</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>resultOfEnsuring<code> instead</code></u></code></p></dd></dl></div>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="geotrellis.Op2">
+              <h3>Inherited from <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>], <a href="../../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_], <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] { ... /* 2 definitions in type refinement */ }]</h3>
+            </div><div class="parent" name="geotrellis.Operation">
+              <h3>Inherited from <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../../Feature.html" class="extype" name="geotrellis.feature.Feature">Feature</a>[<span class="extype" name="com.vividsolutions.jts.geom.Geometry">com.vividsolutions.jts.geom.Geometry</span>, <span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] { ... /* 2 definitions in type refinement */ }]</h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">scala.Equals</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        <div class="conversion" name="geotrellis.Operation.implicitLiteral">
+              <h3>Inherited by implicit conversion implicitLiteral from
+                <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to <span class="extype" name="scala.runtime.StringAdd">StringAdd</span>
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2stringfmt">
+              <h3>Inherited by implicit conversion any2stringfmt from
+                <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to <span class="extype" name="scala.runtime.StringFormat">StringFormat</span>
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2ArrowAssoc">
+              <h3>Inherited by implicit conversion any2ArrowAssoc from
+                <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2Ensuring">
+              <h3>Inherited by implicit conversion any2Ensuring from
+                <a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>] to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.feature.op.geometry.Intersect">Intersect</a>[<span class="extype" name="geotrellis.feature.op.geometry.Intersect.A">A</span>]]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

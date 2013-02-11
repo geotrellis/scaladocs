@@ -1,0 +1,879 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>LRUCache - geotrellis.process.LRUCache</title>
+          <meta name="description" content="LRUCache - geotrellis.process.LRUCache" />
+          <meta name="keywords" content="LRUCache geotrellis.process.LRUCache" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'geotrellis.process.LRUCache';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <img src="../../lib/class_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="package.html" class="extype" name="geotrellis.process">process</a></p>
+        <h1>LRUCache</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">LRUCache</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="HashBackedCache.html" class="extype" name="geotrellis.process.HashBackedCache">HashBackedCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>] with <a href="OrderedBoundedCache.html" class="extype" name="geotrellis.process.OrderedBoundedCache">OrderedBoundedCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>] with <a href="AtomicCache.html" class="extype" name="geotrellis.process.AtomicCache">AtomicCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>] with <a href="LoggingCache.html" class="extype" name="geotrellis.process.LoggingCache">LoggingCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="LoggingCache.html" class="extype" name="geotrellis.process.LoggingCache">LoggingCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>], <a href="AtomicCache.html" class="extype" name="geotrellis.process.AtomicCache">AtomicCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>], <a href="OrderedBoundedCache.html" class="extype" name="geotrellis.process.OrderedBoundedCache">OrderedBoundedCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>], <a href="BoundedCache.html" class="extype" name="geotrellis.process.BoundedCache">BoundedCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>], <a href="HashBackedCache.html" class="extype" name="geotrellis.process.HashBackedCache">HashBackedCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>], <a href="CacheStrategy.html" class="extype" name="geotrellis.process.CacheStrategy">CacheStrategy</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
+                <span class="toggle diagram-link">Type Hierarchy</span>
+                <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph261" viewBox="0.00 0.00 650.00 120.00" height="120pt" width="650pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 116)" class="graph" id="graph1"><polygon points="-4,5 -4,-116 647,-116 647,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><!-- node0 --><g class="node this class" id="graph261_0"><a xlink:title="geotrellis.process.LRUCache (this class)" xlink:href="#inheritance-diagram"><polygon points="401,-50 283,-50 283,-24 401,-24 401,-50" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-45" x="293" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-34.6667" x="315" text-anchor="start">LRUCache[K, V]</text></a></g><!-- node1 --><g class="node trait" id="graph261_1"><a xlink:title="geotrellis.process.HashBackedCache" xlink:href="HashBackedCache.html#inheritance-diagram"><polygon points="154,-112 8.52651e-14,-112 0,-86 154,-86 154,-112" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-107" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-96.6667" x="32" text-anchor="start">HashBackedCache[K, V]</text></a></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph261_1_0"><a xlink:title="LRUCache[K, V] is a subtype of HashBackedCache[K, V]"><path d="M137.969,-84.7354C182.637,-74.2848 242.794,-60.2105 286.201,-50.055" stroke="#d4d4d4" fill="none"></path><polygon points="137.346,-83.084 132.876,-85.9272 138.143,-86.492 137.346,-83.084" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph261_2"><a xlink:title="geotrellis.process.OrderedBoundedCache" xlink:href="OrderedBoundedCache.html#inheritance-diagram"><polygon points="344,-112 172,-112 172,-86 344,-86 344,-112" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-107" x="182" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-96.6667" x="204" text-anchor="start">OrderedBoundedCache[K, V]</text></a></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph261_2_0"><a xlink:title="LRUCache[K, V] is a subtype of OrderedBoundedCache[K, V]"><path d="M279.963,-82.7893C293.75,-72.6132 311.299,-59.6603 324.211,-50.1297" stroke="#d4d4d4" fill="none"></path><polygon points="278.798,-81.4741 275.814,-85.8514 280.876,-84.2901 278.798,-81.4741" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node trait" id="graph261_3"><a xlink:title="geotrellis.process.AtomicCache" xlink:href="AtomicCache.html#inheritance-diagram"><polygon points="492,-112 362,-112 362,-86 492,-86 492,-112" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-107" x="372" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-96.6667" x="394" text-anchor="start">AtomicCache[K, V]</text></a></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph261_3_0"><a xlink:title="LRUCache[K, V] is a subtype of AtomicCache[K, V]"><path d="M404.776,-82.7893C390.825,-72.6132 373.067,-59.6603 360,-50.1297" stroke="#d4d4d4" fill="none"></path><polygon points="403.903,-84.3187 408.974,-85.8514 405.965,-81.491 403.903,-84.3187" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node4 --><g class="node trait" id="graph261_4"><a xlink:title="geotrellis.process.LoggingCache" xlink:href="LoggingCache.html#inheritance-diagram"><polygon points="642,-112 510,-112 510,-86 642,-86 642,-112" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-107" x="520" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-96.6667" x="542" text-anchor="start">LoggingCache[K, V]</text></a></g><!-- node4&#45;&gt;node0 --><g class="edge inheritance" id="graph261_4_0"><a xlink:title="LRUCache[K, V] is a subtype of LoggingCache[K, V]"><path d="M521.441,-84.5443C482.074,-74.1137 429.368,-60.1487 391.272,-50.055" stroke="#d4d4d4" fill="none"></path><polygon points="521.379,-86.3381 526.661,-85.9272 522.276,-82.9549 521.379,-86.3381" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="geotrellis.process.LRUCache"><span>LRUCache</span></li><li class="in" name="geotrellis.process.LoggingCache"><span>LoggingCache</span></li><li class="in" name="geotrellis.process.AtomicCache"><span>AtomicCache</span></li><li class="in" name="geotrellis.process.OrderedBoundedCache"><span>OrderedBoundedCache</span></li><li class="in" name="geotrellis.process.BoundedCache"><span>BoundedCache</span></li><li class="in" name="geotrellis.process.HashBackedCache"><span>HashBackedCache</span></li><li class="in" name="geotrellis.process.CacheStrategy"><span>CacheStrategy</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+                <span class="filtertype">Implicitly<br />
+                </span>
+                <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.any2stringfmt" data-hidden="true"><span>by any2stringfmt</span></li><li class="in" name="scala.Predef.any2ArrowAssoc" data-hidden="true"><span>by any2ArrowAssoc</span></li><li class="in" name="scala.Predef.any2Ensuring" data-hidden="true"><span>by any2Ensuring</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="geotrellis.process.LRUCache#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(maxSize:Long,sizeOf:V=&gt;Long):geotrellis.process.LRUCache[K,V]"></a>
+      <a id="&lt;init&gt;:LRUCache[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">LRUCache</span><span class="params">(<span name="maxSize">maxSize: <span class="extype" name="scala.Long">Long</span></span>, <span name="sizeOf">sizeOf: (<span class="extype" name="geotrellis.process.LRUCache.V">V</span>) ⇒ <span class="extype" name="scala.Long">Long</span> = <span class="symbol">((v: V) =&gt; 1)</span></span>)</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:AnyRef):Boolean"></a>
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a>
+      <a id="+(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>] to
+            <span class="extype" name="scala.runtime.StringAdd">StringAdd</span> performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
+    </li><li name="scala.Predef.any2ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a>
+      <a id="-&gt;[B](B):(LRUCache[K,V],B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>], <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>] to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]] performed by method any2ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:AnyRef):Boolean"></a>
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.process.AtomicCache#bigLock" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="bigLock:java.util.concurrent.locks.Lock"></a>
+      <a id="bigLock:Lock"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bigLock</span><span class="result">: <span class="extype" name="java.util.concurrent.locks.Lock">Lock</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="AtomicCache.html" class="extype" name="geotrellis.process.AtomicCache">AtomicCache</a></dd></dl></div>
+    </li><li name="geotrellis.process.HashBackedCache#cache" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="cache:scala.collection.mutable.HashMap[K,V]"></a>
+      <a id="cache:HashMap[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cache</span><span class="result">: <span class="extype" name="scala.collection.mutable.HashMap">HashMap</span>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HashBackedCache.html" class="extype" name="geotrellis.process.HashBackedCache">HashBackedCache</a></dd></dl></div>
+    </li><li name="geotrellis.process.OrderedBoundedCache#cacheFree" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="cacheFree(ltgt:Long):Unit"></a>
+      <a id="cacheFree(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cacheFree</span><span class="params">(<span name="ltgt">ltgt: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Attempt to free space in the cache starting with the last accessed element</p><div class="fullcomment"><div class="comment cmt"><p>Attempt to free space in the cache starting with the last accessed element</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OrderedBoundedCache.html" class="extype" name="geotrellis.process.OrderedBoundedCache">OrderedBoundedCache</a> → <a href="BoundedCache.html" class="extype" name="geotrellis.process.BoundedCache">BoundedCache</a></dd></dl></div>
+    </li><li name="geotrellis.process.BoundedCache#canInsert" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="canInsert(v:V):Boolean"></a>
+      <a id="canInsert(V):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">canInsert</span><span class="params">(<span name="v">v: <span class="extype" name="geotrellis.process.LRUCache.V">V</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">returns true iff v can be inserted into the cache without violating the
+size boundary
+</p><div class="fullcomment"><div class="comment cmt"><p>returns true iff v can be inserted into the cache without violating the
+size boundary
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BoundedCache.html" class="extype" name="geotrellis.process.BoundedCache">BoundedCache</a></dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">java.lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="geotrellis.process.BoundedCache#currentSize" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="currentSize:Long"></a>
+      <a id="currentSize:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">currentSize</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BoundedCache.html" class="extype" name="geotrellis.process.BoundedCache">BoundedCache</a></dd></dl></div>
+    </li><li name="geotrellis.process.AtomicCache#currentlyLoading" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="currentlyLoading:scala.collection.mutable.HashMap[K,java.util.concurrent.locks.Lock]"></a>
+      <a id="currentlyLoading:HashMap[K,Lock]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">currentlyLoading</span><span class="result">: <span class="extype" name="scala.collection.mutable.HashMap">HashMap</span>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="java.util.concurrent.locks.Lock">Lock</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="AtomicCache.html" class="extype" name="geotrellis.process.AtomicCache">AtomicCache</a></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring((LRUCache[K,V])⇒Boolean,⇒Any):LRUCache[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]] performed by method any2Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a>
+      <a id="ensuring((LRUCache[K,V])⇒Boolean):LRUCache[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]] performed by method any2Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring(Boolean,⇒Any):LRUCache[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]] performed by method any2Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a>
+      <a id="ensuring(Boolean):LRUCache[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]] performed by method any2Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">java.lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.any2stringfmt#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a>
+      <a id="formatted(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>] to
+            <span class="extype" name="scala.runtime.StringFormat">StringFormat</span> performed by method any2stringfmt in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.process.AtomicCache#getOrInsert" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getOrInsert(k:K,v:=&gt;V):V"></a>
+      <a id="getOrInsert(K,⇒V):V"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getOrInsert</span><span class="params">(<span name="k">k: <span class="extype" name="geotrellis.process.LRUCache.K">K</span></span>, <span name="v">v: ⇒ <span class="extype" name="geotrellis.process.LRUCache.V">V</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.process.LRUCache.V">V</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Lookup the value for key k
+If the value is in the cache, return it.</p><div class="fullcomment"><div class="comment cmt"><p>Lookup the value for key k
+If the value is in the cache, return it.
+Otherwise, insert the value v and return it</p><p>Note: This method does not guarantee that v will be in the cache when it returns
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the cached value keyed to k or the computed value of v
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="AtomicCache.html" class="extype" name="geotrellis.process.AtomicCache">AtomicCache</a> → <a href="CacheStrategy.html" class="extype" name="geotrellis.process.CacheStrategy">CacheStrategy</a></dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.process.AtomicCache#insert" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="insert(k:K,v:V):Boolean"></a>
+      <a id="insert(K,V):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">insert</span><span class="params">(<span name="k">k: <span class="extype" name="geotrellis.process.LRUCache.K">K</span></span>, <span name="v">v: <span class="extype" name="geotrellis.process.LRUCache.V">V</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Insert the value v (keyed by k) into the cache</p><div class="fullcomment"><div class="comment cmt"><p>Insert the value v (keyed by k) into the cache</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>true if the value was inserted into the cache
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="AtomicCache.html" class="extype" name="geotrellis.process.AtomicCache">AtomicCache</a> → <a href="CacheStrategy.html" class="extype" name="geotrellis.process.CacheStrategy">CacheStrategy</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.process.LoggingCache#lookup" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="lookup(k:K):Option[V]"></a>
+      <a id="lookup(K):Option[V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">lookup</span><span class="params">(<span name="k">k: <span class="extype" name="geotrellis.process.LRUCache.K">K</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="geotrellis.process.LRUCache.V">V</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Lookup the value for key k</p><div class="fullcomment"><div class="comment cmt"><p>Lookup the value for key k</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Some(v) if the value was cached, None otherwise
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="LoggingCache.html" class="extype" name="geotrellis.process.LoggingCache">LoggingCache</a> → <a href="CacheStrategy.html" class="extype" name="geotrellis.process.CacheStrategy">CacheStrategy</a></dd></dl></div>
+    </li><li name="geotrellis.process.LRUCache#maxSize" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="maxSize:Long"></a>
+      <a id="maxSize:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">maxSize</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Maximum size of the cache
+</p><div class="fullcomment"><div class="comment cmt"><p>Maximum size of the cache
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a> → <a href="BoundedCache.html" class="extype" name="geotrellis.process.BoundedCache">BoundedCache</a></dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.process.BoundedCache#remove" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="remove(k:K):Option[V]"></a>
+      <a id="remove(K):Option[V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">remove</span><span class="params">(<span name="k">k: <span class="extype" name="geotrellis.process.LRUCache.K">K</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="geotrellis.process.LRUCache.V">V</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Remove k from the cache</p><div class="fullcomment"><div class="comment cmt"><p>Remove k from the cache</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BoundedCache.html" class="extype" name="geotrellis.process.BoundedCache">BoundedCache</a> → <a href="CacheStrategy.html" class="extype" name="geotrellis.process.CacheStrategy">CacheStrategy</a></dd></dl></div>
+    </li><li name="geotrellis.process.LRUCache#removeIdx" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="removeIdx:Seq[K]=&gt;Int"></a>
+      <a id="removeIdx:(Seq[K])⇒Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">removeIdx</span><span class="result">: (<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>]) ⇒ <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Called when attempt to make space in the cache.</p><div class="fullcomment"><div class="comment cmt"><p>Called when attempt to make space in the cache. This function should
+return the index of the item to remove next
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a> → <a href="OrderedBoundedCache.html" class="extype" name="geotrellis.process.OrderedBoundedCache">OrderedBoundedCache</a></dd></dl></div>
+    </li><li name="geotrellis.process.LRUCache#sizeOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sizeOf:V=&gt;Long"></a>
+      <a id="sizeOf:(V)⇒Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sizeOf</span><span class="result">: (<span class="extype" name="geotrellis.process.LRUCache.V">V</span>) ⇒ <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Return the size of a a given cache item
+If items are objects (for example) this might just be: (x) =&gt; 1
+If items are arrays of ints and the maxSize is in bytes this function might be:
+  (x) =&gt; x.</p><div class="fullcomment"><div class="comment cmt"><p>Return the size of a a given cache item
+If items are objects (for example) this might just be: (x) =&gt; 1
+If items are arrays of ints and the maxSize is in bytes this function might be:
+  (x) =&gt; x.length * 4
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a> → <a href="BoundedCache.html" class="extype" name="geotrellis.process.BoundedCache">BoundedCache</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.any2ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a>
+      <a id="→[B](B):(LRUCache[K,V],B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>], <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>] to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]] performed by method any2ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Shadowed Implict Value Members</h3>
+              <ol><li name="scala.Predef.any2stringadd#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:Any"></a>
+      <a id="self:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">self</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>] to
+            <span class="extype" name="scala.runtime.StringAdd">StringAdd</span> performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lRUCache: StringAdd).self</pre></div></dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
+    </li><li name="scala.Predef.any2stringfmt#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:Any"></a>
+      <a id="self:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">self</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>] to
+            <span class="extype" name="scala.runtime.StringFormat">StringFormat</span> performed by method any2stringfmt in scala.Predef.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lRUCache: StringFormat).self</pre></div></dd><dt>Definition Classes</dt><dd>StringFormat</dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.Predef.any2ArrowAssoc#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:LRUCache[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use leftOfArrow instead">x</span><span class="result">: <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>] to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]] performed by method any2ArrowAssoc in scala.Predef.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lRUCache: ArrowAssoc[LRUCache[K, V]]).x</pre></div></dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>leftOfArrow<code> instead</code></u></code></p></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:LRUCache[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use resultOfEnsuring instead">x</span><span class="result">: <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]] performed by method any2Ensuring in scala.Predef.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lRUCache: Ensuring[LRUCache[K, V]]).x</pre></div></dd><dt>Definition Classes</dt><dd>Ensuring</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>resultOfEnsuring<code> instead</code></u></code></p></dd></dl></div>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="geotrellis.process.LoggingCache">
+              <h3>Inherited from <a href="LoggingCache.html" class="extype" name="geotrellis.process.LoggingCache">LoggingCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]</h3>
+            </div><div class="parent" name="geotrellis.process.AtomicCache">
+              <h3>Inherited from <a href="AtomicCache.html" class="extype" name="geotrellis.process.AtomicCache">AtomicCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]</h3>
+            </div><div class="parent" name="geotrellis.process.OrderedBoundedCache">
+              <h3>Inherited from <a href="OrderedBoundedCache.html" class="extype" name="geotrellis.process.OrderedBoundedCache">OrderedBoundedCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]</h3>
+            </div><div class="parent" name="geotrellis.process.BoundedCache">
+              <h3>Inherited from <a href="BoundedCache.html" class="extype" name="geotrellis.process.BoundedCache">BoundedCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]</h3>
+            </div><div class="parent" name="geotrellis.process.HashBackedCache">
+              <h3>Inherited from <a href="HashBackedCache.html" class="extype" name="geotrellis.process.HashBackedCache">HashBackedCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]</h3>
+            </div><div class="parent" name="geotrellis.process.CacheStrategy">
+              <h3>Inherited from <a href="CacheStrategy.html" class="extype" name="geotrellis.process.CacheStrategy">CacheStrategy</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]</h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>] to <span class="extype" name="scala.runtime.StringAdd">StringAdd</span>
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2stringfmt">
+              <h3>Inherited by implicit conversion any2stringfmt from
+                <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>] to <span class="extype" name="scala.runtime.StringFormat">StringFormat</span>
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2ArrowAssoc">
+              <h3>Inherited by implicit conversion any2ArrowAssoc from
+                <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>] to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2Ensuring">
+              <h3>Inherited by implicit conversion any2Ensuring from
+                <a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>] to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.process.LRUCache">LRUCache</a>[<span class="extype" name="geotrellis.process.LRUCache.K">K</span>, <span class="extype" name="geotrellis.process.LRUCache.V">V</span>]]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>
