@@ -1,4 +1,1 @@
-api.doc
-=======
-
-Repository for automatic updating of api documentation.
+This repository is for holding the scaladocs for the [geotrellis project](http://github.com/geotrellis).
