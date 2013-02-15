@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>LessConstant1 - geotrellis.raster.op.local.LessConstant1</title>
-          <meta name="description" content="LessConstant1 - geotrellis.raster.op.local.LessConstant1" />
-          <meta name="keywords" content="LessConstant1 geotrellis.raster.op.local.LessConstant1" />
+          <title>StandardDeviation - geotrellis.raster.op.focal.StandardDeviation</title>
+          <meta name="description" content="StandardDeviation - geotrellis.raster.op.focal.StandardDeviation" />
+          <meta name="keywords" content="StandardDeviation geotrellis.raster.op.focal.StandardDeviation" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -17,7 +17,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../index.html';
-            var hash = 'geotrellis.raster.op.local.LessConstant1';
+            var hash = 'geotrellis.raster.op.focal.StandardDeviation';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -30,8 +30,8 @@
         <body class="type">
       <div id="definition">
         <img src="../../../../lib/class_big.png" />
-        <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.raster">raster</a>.<a href="../package.html" class="extype" name="geotrellis.raster.op">op</a>.<a href="package.html" class="extype" name="geotrellis.raster.op.local">local</a></p>
-        <h1>LessConstant1</h1>
+        <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.raster">raster</a>.<a href="../package.html" class="extype" name="geotrellis.raster.op">op</a>.<a href="package.html" class="extype" name="geotrellis.raster.op.focal">focal</a></p>
+        <h1>StandardDeviation</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -40,19 +40,22 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">LessConstant1</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="c">c: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <span class="extype" name="scala.Int">Int</span>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">StandardDeviation</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="n">n: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a>]</span>)</span><span class="result"> extends <a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="HasAnalysisArea.html" class="extype" name="geotrellis.raster.op.focal.HasAnalysisArea">HasAnalysisArea</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Returns a Raster with TypeBit data that has cell values of 1 if the
-corresponding cell value is less than the input integer.
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Computes the standard deviation of a neighborhood for a given raster. Returns a raster of TypeDouble.
+</p></div><dl class="paramcmts block"><dt class="param">r</dt><dd class="cmt"><p>Raster on which to run the focal operation.</p></dd><dt class="param">n</dt><dd class="cmt"><p>Neighborhood to use for this operation (e.g., <a href="Square.html" class="extype" name="geotrellis.raster.op.focal.Square">Square</a>(1))
+</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>StandardDeviation does not currently support Double raster data inputs.
+                 If you use a Raster with a Double RasterType (TypeFloat,TypeDouble)
+                 the data values will be rounded to integers.
+</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <span class="extype" name="scala.Int">Int</span>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>], <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>], <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="HasAnalysisArea.html" class="extype" name="geotrellis.raster.op.focal.HasAnalysisArea">HasAnalysisArea</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>], <span class="extype" name="scala.Cloneable">Cloneable</span>, <span class="extype" name="java.lang.Cloneable">Cloneable</span>, <a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>], <a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>], <a href="FocalOperationBase.html" class="extype" name="geotrellis.raster.op.focal.FocalOperationBase">FocalOperationBase</a>, <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>], <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
                 <span class="toggle diagram-link">Type Hierarchy</span>
                 <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph104" viewBox="0.00 0.00 522.00 128.00" height="128pt" width="522pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 124)" class="graph" id="graph1"><polygon points="-4,5 -4,-124 519,-124 519,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><g class="cluster" id="graph4"></g><!-- node4 --><g class="node implicit-outgoing class" id="graph104_4"><a xlink:title="geotrellis.raster.op.local.LessConstant1 can be implicitly converted to Operation[LessConstant1] by the implicit method implicitLiteral in object geotrellis.Operation" xlink:href="../../../Operation.html#inheritance-diagram"><polygon points="490,-50 332,-50 332,-24 490,-24 490,-50" stroke="#ababab" fill="#e1e1e1"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="342" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#7d7d7d" font-size="10.00" font-family="Arial" y="-34.6667" x="364" text-anchor="start">Operation[LessConstant1]</text></a></g><!-- node0 --><g class="node this class" id="graph104_0"><a xlink:title="geotrellis.raster.op.local.LessConstant1 (this class)" xlink:href="#inheritance-diagram"><polygon points="260,-50 150,-50 150,-24 260,-24 260,-50" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="160" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-34.6667" x="182" text-anchor="start">LessConstant1</text></a></g><!-- node0&#45;&gt;node4 --><g class="edge implicit-outgoing" id="0_4"><a xlink:title="LessConstant1 can be implicitly converted to Operation[LessConstant1]"><path d="M267.635,-37C283.95,-37 301.871,-37 319.351,-37" stroke="#d4d4d4" fill="none"></path><polygon points="319.415,-38.7501 324.415,-37 319.415,-35.2501 319.415,-38.7501" stroke="#d4d4d4" fill="#d4d4d4"></polygon></a><text fill="#aaaaaa" font-size="10.00" font-family="Arial" y="-41" x="296" text-anchor="middle">implicitly</text></g><!-- node1 --><g class="node class" id="graph104_1"><a xlink:title="geotrellis.Op2" xlink:href="../../../Op2.html#inheritance-diagram"><polygon points="148,-120 7.10543e-14,-120 0,-94 148,-94 148,-120" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-115" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="32" text-anchor="start">Op2[Raster, Int, Raster]</text></a></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph104_1_0"><a xlink:title="LessConstant1 is a subtype of Op2[Raster, Int, Raster]"><path d="M102.849,-91.5843C126.063,-79.18 158.334,-61.9359 180.353,-50.1703" stroke="#d4d4d4" fill="none"></path><polygon points="101.918,-90.0976 98.3331,-93.9976 103.568,-93.1846 101.918,-90.0976" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph104_2"><a xlink:title="scala.Product"><polygon points="244,-120 166,-120 166,-94 244,-94 244,-120" stroke="#37657d" fill="#498aad"></polygon><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="198" text-anchor="start">Product</text><image xlink:href="../../../../lib/trait_diagram.png" width="16px" height="16px" preserveAspectRatio="xMinYMin meet" x="176.0" y="-116.0004" xmlns:xlink="http://www.w3.org/1999/xlink"></image></a></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph104_2_0"><a xlink:title="LessConstant1 is a subtype of Product"><path d="M205,-88.5481C205,-76.457 205,-60.9432 205,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="203.25,-88.8335 205,-93.8335 206.75,-88.8336 203.25,-88.8335" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node trait" id="graph104_3"><a xlink:title="scala.Serializable"><polygon points="358,-120 262,-120 262,-94 358,-94 358,-120" stroke="#37657d" fill="#498aad"></polygon><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="294" text-anchor="start">Serializable</text><image xlink:href="../../../../lib/trait_diagram.png" width="16px" height="16px" preserveAspectRatio="xMinYMin meet" x="272.0" y="-116.0004" xmlns:xlink="http://www.w3.org/1999/xlink"></image></a></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph104_3_0"><a xlink:title="LessConstant1 is a subtype of Serializable"><path d="M285.689,-90.7927C267.148,-78.4323 241.94,-61.6266 224.661,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="285.119,-92.5161 290.25,-93.8335 287.061,-89.6039 285.119,-92.5161" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph149" viewBox="0.00 0.00 653.00 128.00" height="128pt" width="653pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 124)" class="graph" id="graph1"><polygon points="-4,5 -4,-124 650,-124 650,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><g class="cluster" id="graph4"></g><!-- node5 --><g class="node implicit-outgoing class" id="graph149_5"><a xlink:title="geotrellis.raster.op.focal.StandardDeviation can be implicitly converted to Operation[StandardDeviation] by the implicit method implicitLiteral in object geotrellis.Operation" xlink:href="../../../Operation.html#inheritance-diagram"><polygon points="621,-50 449,-50 449,-24 621,-24 621,-50" stroke="#ababab" fill="#e1e1e1"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="459" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#7d7d7d" font-size="10.00" font-family="Arial" y="-34.6667" x="481" text-anchor="start">Operation[StandardDeviation]</text></a></g><!-- node0 --><g class="node this class" id="graph149_0"><a xlink:title="geotrellis.raster.op.focal.StandardDeviation (this class)" xlink:href="#inheritance-diagram"><polygon points="377,-50 253,-50 253,-24 377,-24 377,-50" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="263" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-34.6667" x="285" text-anchor="start">StandardDeviation</text></a></g><!-- node0&#45;&gt;node5 --><g class="edge implicit-outgoing" id="0_5"><a xlink:title="StandardDeviation can be implicitly converted to Operation[StandardDeviation]"><path d="M384.568,-37C400.914,-37 418.643,-37 436.003,-37" stroke="#d4d4d4" fill="none"></path><polygon points="436.081,-38.7501 441.081,-37 436.081,-35.2501 436.081,-38.7501" stroke="#d4d4d4" fill="#d4d4d4"></polygon></a><text fill="#aaaaaa" font-size="10.00" font-family="Arial" y="-41" x="413" text-anchor="middle">implicitly</text></g><!-- node1 --><g class="node class" id="graph149_1"><a xlink:title="geotrellis.raster.op.focal.FocalOp" xlink:href="FocalOp.html#inheritance-diagram"><polygon points="116,-120 5.68434e-14,-120 7.10543e-15,-94 116,-94 116,-120" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-115" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="32" text-anchor="start">FocalOp[Raster]</text></a></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph149_1_0"><a xlink:title="StandardDeviation is a subtype of FocalOp[Raster]"><path d="M110.675,-92.6528C156.594,-80.1456 222.626,-62.1602 267.083,-50.0514" stroke="#d4d4d4" fill="none"></path><polygon points="110.102,-90.995 105.737,-93.9976 111.022,-94.372 110.102,-90.995" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph149_2"><a xlink:title="geotrellis.raster.op.focal.HasAnalysisArea" xlink:href="HasAnalysisArea.html#inheritance-diagram"><polygon points="338,-120 134,-120 134,-94 338,-94 338,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="144" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="166" text-anchor="start">HasAnalysisArea[StandardDeviation]</text></a></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph149_2_0"><a xlink:title="StandardDeviation is a subtype of HasAnalysisArea[StandardDeviation]"><path d="M254.647,-90.4775C268.562,-78.1478 287.317,-61.5289 300.207,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="253.441,-89.2078 250.859,-93.8335 255.762,-91.8274 253.441,-89.2078" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node trait" id="graph149_3"><a xlink:title="scala.Product"><polygon points="434,-120 356,-120 356,-94 434,-94 434,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="366" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="388" text-anchor="start">Product</text></a></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph149_3_0"><a xlink:title="StandardDeviation is a subtype of Product"><path d="M376.117,-90.4775C362.026,-78.1478 343.033,-61.5289 329.98,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="375.037,-91.858 379.953,-93.8335 377.342,-89.224 375.037,-91.858" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node4 --><g class="node trait" id="graph149_4"><a xlink:title="scala.Serializable"><polygon points="548,-120 452,-120 452,-94 548,-94 548,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="462" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="484" text-anchor="start">Serializable</text></a></g><!-- node4&#45;&gt;node0 --><g class="edge inheritance" id="graph149_4_0"><a xlink:title="StandardDeviation is a subtype of Serializable"><path d="M460.872,-92.1946C427.875,-79.7095 381.106,-62.0131 349.493,-50.0514" stroke="#d4d4d4" fill="none"></path><polygon points="460.341,-93.8648 465.636,-93.9976 461.579,-90.5913 460.341,-93.8648" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
               </div></div>
         
 
@@ -70,7 +73,7 @@ corresponding cell value is less than the input integer.
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.raster.op.local.LessConstant1"><span>LessConstant1</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="geotrellis.Op2"><span>Op2</span></li><li class="in" name="geotrellis.Operation"><span>Operation</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.raster.op.focal.StandardDeviation"><span>StandardDeviation</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="geotrellis.raster.op.focal.HasAnalysisArea"><span>HasAnalysisArea</span></li><li class="in" name="scala.Cloneable"><span>Cloneable</span></li><li class="in" name="java.lang.Cloneable"><span>Cloneable</span></li><li class="in" name="geotrellis.raster.op.focal.FocalOp"><span>FocalOp</span></li><li class="in" name="geotrellis.raster.op.focal.FocalOperation"><span>FocalOperation</span></li><li class="in" name="geotrellis.raster.op.focal.FocalOperationBase"><span>FocalOperationBase</span></li><li class="in" name="geotrellis.Operation"><span>Operation</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
                 <span class="filtertype">Implicitly<br />
@@ -95,19 +98,20 @@ corresponding cell value is less than the input integer.
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="geotrellis.raster.op.local.LessConstant1#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(r:geotrellis.Op[geotrellis.Raster],c:geotrellis.Op[Int]):geotrellis.raster.op.local.LessConstant1"></a>
-      <a id="&lt;init&gt;:LessConstant1"></a>
+              <ol><li name="geotrellis.raster.op.focal.StandardDeviation#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(r:geotrellis.Op[geotrellis.Raster],n:geotrellis.Op[geotrellis.raster.op.focal.Neighborhood]):geotrellis.raster.op.focal.StandardDeviation"></a>
+      <a id="&lt;init&gt;:StandardDeviation"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">LessConstant1</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="c">c: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span>
+        <span class="name">StandardDeviation</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="n">n: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a>]</span>)</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">r</dt><dd class="cmt"><p>Raster on which to run the focal operation.</p></dd><dt class="param">n</dt><dd class="cmt"><p>Neighborhood to use for this operation (e.g., <a href="Square.html" class="extype" name="geotrellis.raster.op.focal.Square">Square</a>(1))
+</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -198,25 +202,25 @@ corresponding cell value is less than the input integer.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
             <span class="extype" name="scala.runtime.StringAdd">StringAdd</span> performed by method any2stringadd in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
     </li><li name="scala.Predef.any2ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="-&gt;[B](y:B):(A,B)"></a>
-      <a id="-&gt;[B](B):(LessConstant1,B)"></a>
+      <a id="-&gt;[B](B):(StandardDeviation,B)"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method any2ArrowAssoc in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method any2ArrowAssoc in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
                 <span class="name">@inline</span><span class="args">()</span>
@@ -248,7 +252,7 @@ corresponding cell value is less than the input integer.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.Op2#_run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.raster.op.focal.FocalOperation#_run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_run(context:geotrellis.Context):geotrellis.StepOutput[T]"></a>
       <a id="_run(Context):StepOutput[Raster]"></a>
       <h4 class="signature">
@@ -260,7 +264,20 @@ corresponding cell value is less than the input integer.
         <span class="name">_run</span><span class="params">(<span name="context">context: <a href="../../../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a> → <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a> → <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.focal.FocalOperation#analysisAreaOp" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="analysisAreaOp:geotrellis.Operation[Option[geotrellis.RasterExtent]]"></a>
+      <a id="analysisAreaOp:Operation[Option[RasterExtent]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">analysisAreaOp</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Option">Option</span>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a> → <a href="FocalOperationBase.html" class="extype" name="geotrellis.raster.op.focal.FocalOperationBase">FocalOperationBase</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -274,20 +291,7 @@ corresponding cell value is less than the input integer.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.raster.op.local.LessConstant1#c" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="c:geotrellis.Op[Int]"></a>
-      <a id="c:Op[Int]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">c</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.Op2#canEqual" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.raster.op.focal.FocalOperation#canEqual" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="canEqual(other:Any):Boolean"></a>
       <a id="canEqual(Any):Boolean"></a>
       <h4 class="signature">
@@ -299,7 +303,7 @@ corresponding cell value is less than the input integer.
         <span class="name">canEqual</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a> → Equals</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a> → Equals</dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -344,70 +348,70 @@ corresponding cell value is less than the input integer.
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
-      <a id="ensuring((LessConstant1)⇒Boolean,⇒Any):LessConstant1"></a>
+      <a id="ensuring((StandardDeviation)⇒Boolean,⇒Any):StandardDeviation"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a></span>
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method any2Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method any2Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean):A"></a>
-      <a id="ensuring((LessConstant1)⇒Boolean):LessConstant1"></a>
+      <a id="ensuring((StandardDeviation)⇒Boolean):StandardDeviation"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a></span>
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method any2Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method any2Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
-      <a id="ensuring(Boolean,⇒Any):LessConstant1"></a>
+      <a id="ensuring(Boolean,⇒Any):StandardDeviation"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a></span>
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method any2Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method any2Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:Boolean):A"></a>
-      <a id="ensuring(Boolean):LessConstant1"></a>
+      <a id="ensuring(Boolean):StandardDeviation"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a></span>
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method any2Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method any2Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -497,13 +501,36 @@ but returns nothing.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
             <span class="extype" name="scala.runtime.StringFormat">StringFormat</span> performed by method any2stringfmt in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
                 <span class="name">@inline</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="geotrellis.raster.op.focal.FocalOp#getCalculation" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getCalculation(r:geotrellis.Raster,n:geotrellis.raster.op.focal.Neighborhood):geotrellis.raster.op.focal.FocalCalculation[T]withgeotrellis.raster.op.focal.Initialization"></a>
+      <a id="getCalculation(Raster,Neighborhood):FocalCalculation[Raster]withInitialization"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getCalculation</span><span class="params">(<span name="r">r: <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>, <span name="n">n: <a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a></span>)</span><span class="result">: <a href="FocalCalculation.html" class="extype" name="geotrellis.raster.op.focal.FocalCalculation">FocalCalculation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="Initialization.html" class="extype" name="geotrellis.raster.op.focal.Initialization">Initialization</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Gets a calculation to be used with this focal operation for the given raster
+neighborhood.</p><div class="fullcomment"><div class="comment cmt"><p>Gets a calculation to be used with this focal operation for the given raster
+neighborhood.</p><p>Choosing the calculation based on on the raster and neighborhood allows flexibility
+in what calculation to use; if some calculations are faster
+for some neighborhoods (e.g., using a <a href="CellwiseCalculation.html" class="extype" name="geotrellis.raster.op.focal.CellwiseCalculation">CellwiseCalculation</a>
+for <a href="Square.html" class="extype" name="geotrellis.raster.op.focal.Square">Square</a> neighborhoods and a <a href="CursorCalculation.html" class="extype" name="geotrellis.raster.op.focal.CursorCalculation">CursorCalculation</a> for
+all other neighborhoods), or if you want to change the calculation
+based on the raster's data type, you can do so by returning the
+correct <a href="FocalCalculation.html" class="extype" name="geotrellis.raster.op.focal.FocalCalculation">FocalCalculation</a> from this function.
+</p></div><dl class="paramcmts block"><dt class="param">r</dt><dd class="cmt"><p>Raster that the focal calculation will run against.</p></dd><dt class="param">n</dt><dd class="cmt"><p>Neighborhood that will be used in the focal operation.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a> → <a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -530,6 +557,19 @@ but returns nothing.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.raster.op.focal.HasAnalysisArea#makeClone" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="makeClone():SELF"></a>
+      <a id="makeClone():StandardDeviation"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">makeClone</span><span class="params">()</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HasAnalysisArea.html" class="extype" name="geotrellis.raster.op.focal.HasAnalysisArea">HasAnalysisArea</a></dd></dl></div>
     </li><li name="geotrellis.Operation#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="map[U](f:T=&gt;U):geotrellis.Operation[U]"></a>
       <a id="map[U]((Raster)⇒U):Operation[U]"></a>
@@ -546,6 +586,20 @@ but returns nothing.
 takes this operation's result as its argument.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation that returns the result of the provided function that
 takes this operation's result as its argument.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.focal.StandardDeviation#n" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="n:geotrellis.Op[geotrellis.raster.op.focal.Neighborhood]"></a>
+      <a id="n:Op[Neighborhood]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">n</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Neighborhood to use for this operation (e.</p><div class="fullcomment"><div class="comment cmt"><p>Neighborhood to use for this operation (e.g., <a href="Square.html" class="extype" name="geotrellis.raster.op.focal.Square">Square</a>(1))
+</p></div></div>
     </li><li name="geotrellis.Operation#name" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="name:String"></a>
       <a id="name:String"></a>
@@ -573,19 +627,19 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.Op2#nextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="nextSteps:Op2.this.Steps"></a>
-      <a id="nextSteps:Steps"></a>
+    </li><li name="geotrellis.raster.op.focal.FocalOperation#nextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nextSteps:PartialFunction[Any,geotrellis.StepOutput[T]]"></a>
+      <a id="nextSteps:PartialFunction[Any,StepOutput[Raster]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">nextSteps</span><span class="result">: <a href="#Steps=PartialFunction[Any,geotrellis.StepOutput[T]]" class="extmbr" name="geotrellis.raster.op.local.LessConstant1.Steps">Steps</a></span>
+        <span class="name">nextSteps</span><span class="result">: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a> → <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a> → <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -621,11 +675,11 @@ takes this operation's result as its argument.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">processNextSteps</span><span class="params">(<span name="args">args: <a href="#Args=List[Any]" class="extmbr" name="geotrellis.raster.op.local.LessConstant1.Args">Args</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+        <span class="name">processNextSteps</span><span class="params">(<span name="args">args: <a href="#Args=List[Any]" class="extmbr" name="geotrellis.raster.op.focal.StandardDeviation.Args">Args</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
-    </li><li name="geotrellis.Op2#productArity" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.raster.op.focal.FocalOperation#productArity" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="productArity:Int"></a>
       <a id="productArity:Int"></a>
       <h4 class="signature">
@@ -637,8 +691,8 @@ takes this operation's result as its argument.
         <span class="name">productArity</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a> → Product</dd></dl></div>
-    </li><li name="geotrellis.Op2#productElement" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a> → Product</dd></dl></div>
+    </li><li name="geotrellis.raster.op.focal.FocalOperation#productElement" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="productElement(n:Int):Any"></a>
       <a id="productElement(Int):Any"></a>
       <h4 class="signature">
@@ -650,7 +704,7 @@ takes this operation's result as its argument.
         <span class="name">productElement</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a> → Product</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a> → Product</dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#productIterator" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="productIterator:Iterator[Any]"></a>
       <a id="productIterator:Iterator[Any]"></a>
@@ -664,8 +718,8 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
           </dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#productPrefix" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -681,11 +735,11 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
           </dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
-    </li><li name="geotrellis.raster.op.local.LessConstant1#r" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.raster.op.focal.StandardDeviation#r" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="r:geotrellis.Op[geotrellis.Raster]"></a>
       <a id="r:Op[Raster]"></a>
       <h4 class="signature">
@@ -697,7 +751,7 @@ takes this operation's result as its argument.
         <span class="name">r</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Raster on which to run the focal operation.</p>
     </li><li name="geotrellis.Operation#run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="run(context:geotrellis.Context):geotrellis.StepOutput[T]"></a>
       <a id="run(Context):StepOutput[Raster]"></a>
@@ -721,10 +775,23 @@ takes this operation's result as its argument.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">runAsync</span><span class="params">(<span name="args">args: <a href="#Args=List[Any]" class="extmbr" name="geotrellis.raster.op.local.LessConstant1.Args">Args</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+        <span class="name">runAsync</span><span class="params">(<span name="args">args: <a href="#Args=List[Any]" class="extmbr" name="geotrellis.raster.op.focal.StandardDeviation.Args">Args</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.focal.HasAnalysisArea#setAnalysisArea" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setAnalysisArea(op:geotrellis.Operation[Option[geotrellis.RasterExtent]]):SELF"></a>
+      <a id="setAnalysisArea(Operation[Option[RasterExtent]]):StandardDeviation"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setAnalysisArea</span><span class="params">(<span name="op">op: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Option">Option</span>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]]</span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HasAnalysisArea.html" class="extype" name="geotrellis.raster.op.focal.HasAnalysisArea">HasAnalysisArea</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -804,19 +871,19 @@ and returns a new operation.</p><p>Same as flatMap.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="scala.Predef.any2ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="→[B](y:B):(A,B)"></a>
-      <a id="→[B](B):(LessConstant1,B)"></a>
+      <a id="→[B](B):(StandardDeviation,B)"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method any2ArrowAssoc in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method any2ArrowAssoc in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
     </li></ol>
@@ -837,10 +904,10 @@ and returns a new operation.</p><p>Same as flatMap.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lessConstant1: Operation[LessConstant1]).canEqual(that)</pre></div></dd><dt>Definition Classes</dt><dd>Equals</dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(standardDeviation: Operation[StandardDeviation]).canEqual(that)</pre></div></dd><dt>Definition Classes</dt><dd>Equals</dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#debug" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="debug:Boolean"></a>
       <a id="debug:Boolean"></a>
@@ -854,104 +921,104 @@ and returns a new operation.</p><p>Same as flatMap.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lessConstant1: Operation[LessConstant1]).debug</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(standardDeviation: Operation[StandardDeviation]).debug</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#dispatch" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="dispatch(dispatcher:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
-      <a id="dispatch(ActorRef):DispatchedOperation[LessConstant1]"></a>
+      <a id="dispatch(ActorRef):DispatchedOperation[StandardDeviation]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">dispatch</span><span class="params">(<span name="dispatcher">dispatcher: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../../../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>]</span>
+        <span class="implicit shadowed">dispatch</span><span class="params">(<span name="dispatcher">dispatcher: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../../../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lessConstant1: Operation[LessConstant1]).dispatch(dispatcher)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(standardDeviation: Operation[StandardDeviation]).dispatch(dispatcher)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#filter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="filter(f:T=&gt;Boolean):geotrellis.Operation[T]"></a>
-      <a id="filter((LessConstant1)⇒Boolean):Operation[LessConstant1]"></a>
+      <a id="filter((StandardDeviation)⇒Boolean):Operation[StandardDeviation]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">filter</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>]</span>
+        <span class="implicit shadowed">filter</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lessConstant1: Operation[LessConstant1]).filter(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(standardDeviation: Operation[StandardDeviation]).filter(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#flatMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="flatMap[U](f:T=&gt;geotrellis.Operation[U]):geotrellis.Operation[U]"></a>
-      <a id="flatMap[U]((LessConstant1)⇒Operation[U]):Operation[U]"></a>
+      <a id="flatMap[U]((StandardDeviation)⇒Operation[U]):Operation[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">flatMap</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>) ⇒ <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>
+        <span class="implicit shadowed">flatMap</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>) ⇒ <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a new operation with a function that takes the result of this operation
 and returns a new operation.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation with a function that takes the result of this operation
 and returns a new operation.
 </p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lessConstant1: Operation[LessConstant1]).flatMap(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(standardDeviation: Operation[StandardDeviation]).flatMap(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#foreach" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="foreach[U](f:T=&gt;U):Unit"></a>
-      <a id="foreach[U]((LessConstant1)⇒U):Unit"></a>
+      <a id="foreach[U]((StandardDeviation)⇒U):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">foreach</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>) ⇒ <span class="extype" name="geotrellis.Operation.foreach.U">U</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="implicit shadowed">foreach</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>) ⇒ <span class="extype" name="geotrellis.Operation.foreach.U">U</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create an operation that applies the function f to the result of this operation,
 but returns nothing.</p><div class="fullcomment"><div class="comment cmt"><p>Create an operation that applies the function f to the result of this operation,
 but returns nothing.
 </p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lessConstant1: Operation[LessConstant1]).foreach(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(standardDeviation: Operation[StandardDeviation]).foreach(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="map[U](f:T=&gt;U):geotrellis.Operation[U]"></a>
-      <a id="map[U]((LessConstant1)⇒U):Operation[U]"></a>
+      <a id="map[U]((StandardDeviation)⇒U):Operation[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">map</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>) ⇒ <span class="extype" name="geotrellis.Operation.map.U">U</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.map.U">U</span>]</span>
+        <span class="implicit shadowed">map</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>) ⇒ <span class="extype" name="geotrellis.Operation.map.U">U</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.map.U">U</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a new operation that returns the result of the provided function that
 takes this operation's result as its argument.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation that returns the result of the provided function that
 takes this operation's result as its argument.
 </p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lessConstant1: Operation[LessConstant1]).map(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(standardDeviation: Operation[StandardDeviation]).map(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#name" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="name:String"></a>
       <a id="name:String"></a>
@@ -966,44 +1033,44 @@ takes this operation's result as its argument.
       </h4>
       <p class="shortcomment cmt">Return operation identified (class simple name).</p><div class="fullcomment"><div class="comment cmt"><p>Return operation identified (class simple name).
 </p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lessConstant1: Operation[LessConstant1]).name</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(standardDeviation: Operation[StandardDeviation]).name</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#nextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="nextSteps:PartialFunction[Any,geotrellis.StepOutput[T]]"></a>
-      <a id="nextSteps:PartialFunction[Any,StepOutput[LessConstant1]]"></a>
+      <a id="nextSteps:PartialFunction[Any,StepOutput[StandardDeviation]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">nextSteps</span><span class="result">: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>]]</span>
+        <span class="implicit shadowed">nextSteps</span><span class="result">: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lessConstant1: Operation[LessConstant1]).nextSteps</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(standardDeviation: Operation[StandardDeviation]).nextSteps</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#processNextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="processNextSteps(args:Operation.this.Args):geotrellis.StepOutput[T]"></a>
-      <a id="processNextSteps(List[Any]):StepOutput[LessConstant1]"></a>
+      <a id="processNextSteps(List[Any]):StepOutput[StandardDeviation]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">processNextSteps</span><span class="params">(<span name="args">args: <span class="extype" name="scala.collection.immutable.List">List</span>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>]</span>
+        <span class="implicit shadowed">processNextSteps</span><span class="params">(<span name="args">args: <span class="extype" name="scala.collection.immutable.List">List</span>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lessConstant1: Operation[LessConstant1]).processNextSteps(args)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(standardDeviation: Operation[StandardDeviation]).processNextSteps(args)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#productArity" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="productArity:Int"></a>
       <a id="productArity:Int"></a>
@@ -1017,10 +1084,10 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lessConstant1: Operation[LessConstant1]).productArity</pre></div></dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(standardDeviation: Operation[StandardDeviation]).productArity</pre></div></dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#productElement" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="productElement(n:Int):Any"></a>
       <a id="productElement(Int):Any"></a>
@@ -1034,45 +1101,45 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lessConstant1: Operation[LessConstant1]).productElement(n)</pre></div></dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(standardDeviation: Operation[StandardDeviation]).productElement(n)</pre></div></dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="run(context:geotrellis.Context):geotrellis.StepOutput[T]"></a>
-      <a id="run(Context):StepOutput[LessConstant1]"></a>
+      <a id="run(Context):StepOutput[StandardDeviation]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">run</span><span class="params">(<span name="context">context: <a href="../../../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>]</span>
+        <span class="implicit shadowed">run</span><span class="params">(<span name="context">context: <a href="../../../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Execute this operation and return the result.</p><div class="fullcomment"><div class="comment cmt"><p>Execute this operation and return the result.
 </p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lessConstant1: Operation[LessConstant1]).run(context)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(standardDeviation: Operation[StandardDeviation]).run(context)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#runAsync" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="runAsync(args:Operation.this.Args):geotrellis.StepOutput[T]"></a>
-      <a id="runAsync(List[Any]):StepOutput[LessConstant1]"></a>
+      <a id="runAsync(List[Any]):StepOutput[StandardDeviation]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">runAsync</span><span class="params">(<span name="args">args: <span class="extype" name="scala.collection.immutable.List">List</span>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>]</span>
+        <span class="implicit shadowed">runAsync</span><span class="params">(<span name="args">args: <span class="extype" name="scala.collection.immutable.List">List</span>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lessConstant1: Operation[LessConstant1]).runAsync(args)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(standardDeviation: Operation[StandardDeviation]).runAsync(args)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="scala.Predef.any2stringadd#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="self:Any"></a>
       <a id="self:Any"></a>
@@ -1086,10 +1153,10 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
             <span class="extype" name="scala.runtime.StringAdd">StringAdd</span> performed by method any2stringadd in scala.Predef.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lessConstant1: StringAdd).self</pre></div></dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(standardDeviation: StringAdd).self</pre></div></dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
     </li><li name="scala.Predef.any2stringfmt#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="self:Any"></a>
       <a id="self:Any"></a>
@@ -1103,30 +1170,30 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
             <span class="extype" name="scala.runtime.StringFormat">StringFormat</span> performed by method any2stringfmt in scala.Predef.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lessConstant1: StringFormat).self</pre></div></dd><dt>Definition Classes</dt><dd>StringFormat</dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(standardDeviation: StringFormat).self</pre></div></dd><dt>Definition Classes</dt><dd>StringFormat</dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#withResult" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="withResult[U](f:T=&gt;geotrellis.Operation[U]):geotrellis.Operation[U]"></a>
-      <a id="withResult[U]((LessConstant1)⇒Operation[U]):Operation[U]"></a>
+      <a id="withResult[U]((StandardDeviation)⇒Operation[U]):Operation[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">withResult</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>) ⇒ <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>
+        <span class="implicit shadowed">withResult</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>) ⇒ <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a new operation with a function that takes the result of this operation
 and returns a new operation.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation with a function that takes the result of this operation
 and returns a new operation.</p><p>Same as flatMap.
 </p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lessConstant1: Operation[LessConstant1]).withResult(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(standardDeviation: Operation[StandardDeviation]).withResult(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li></ol>
             </div>
 
@@ -1134,41 +1201,41 @@ and returns a new operation.</p><p>Same as flatMap.
               <h3>Deprecated Value Members</h3>
               <ol><li name="scala.Predef.any2ArrowAssoc#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="x:A"></a>
-      <a id="x:LessConstant1"></a>
+      <a id="x:StandardDeviation"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use leftOfArrow instead">x</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a></span>
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use leftOfArrow instead">x</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method any2ArrowAssoc in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method any2ArrowAssoc in scala.Predef.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lessConstant1: ArrowAssoc[LessConstant1]).x</pre></div></dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(standardDeviation: ArrowAssoc[StandardDeviation]).x</pre></div></dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>leftOfArrow<code> instead</code></u></code></p></dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="x:A"></a>
-      <a id="x:LessConstant1"></a>
+      <a id="x:StandardDeviation"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use resultOfEnsuring instead">x</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a></span>
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use resultOfEnsuring instead">x</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>] performed by method any2Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>] performed by method any2Ensuring in scala.Predef.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(lessConstant1: Ensuring[LessConstant1]).x</pre></div></dd><dt>Definition Classes</dt><dd>Ensuring</dd><dt>Annotations</dt><dd>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(standardDeviation: Ensuring[StandardDeviation]).x</pre></div></dd><dt>Definition Classes</dt><dd>Ensuring</dd><dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>resultOfEnsuring<code> instead</code></u></code></p></dd></dl></div>
@@ -1181,8 +1248,18 @@ and returns a new operation.</p><p>Same as flatMap.
               <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
             </div><div class="parent" name="java.io.Serializable">
               <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
-            </div><div class="parent" name="geotrellis.Op2">
-              <h3>Inherited from <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <span class="extype" name="scala.Int">Int</span>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</h3>
+            </div><div class="parent" name="geotrellis.raster.op.focal.HasAnalysisArea">
+              <h3>Inherited from <a href="HasAnalysisArea.html" class="extype" name="geotrellis.raster.op.focal.HasAnalysisArea">HasAnalysisArea</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>]</h3>
+            </div><div class="parent" name="scala.Cloneable">
+              <h3>Inherited from <span class="extype" name="scala.Cloneable">Cloneable</span></h3>
+            </div><div class="parent" name="java.lang.Cloneable">
+              <h3>Inherited from <span class="extype" name="java.lang.Cloneable">Cloneable</span></h3>
+            </div><div class="parent" name="geotrellis.raster.op.focal.FocalOp">
+              <h3>Inherited from <a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</h3>
+            </div><div class="parent" name="geotrellis.raster.op.focal.FocalOperation">
+              <h3>Inherited from <a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</h3>
+            </div><div class="parent" name="geotrellis.raster.op.focal.FocalOperationBase">
+              <h3>Inherited from <a href="FocalOperationBase.html" class="extype" name="geotrellis.raster.op.focal.FocalOperationBase">FocalOperationBase</a></h3>
             </div><div class="parent" name="geotrellis.Operation">
               <h3>Inherited from <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</h3>
             </div><div class="parent" name="scala.Product">
@@ -1196,23 +1273,23 @@ and returns a new operation.</p><p>Same as flatMap.
             </div>
         <div class="conversion" name="geotrellis.Operation.implicitLiteral">
               <h3>Inherited by implicit conversion implicitLiteral from
-                <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>]
+                <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>]
               </h3>
             </div><div class="conversion" name="scala.Predef.any2stringadd">
               <h3>Inherited by implicit conversion any2stringadd from
-                <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to <span class="extype" name="scala.runtime.StringAdd">StringAdd</span>
+                <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to <span class="extype" name="scala.runtime.StringAdd">StringAdd</span>
               </h3>
             </div><div class="conversion" name="scala.Predef.any2stringfmt">
               <h3>Inherited by implicit conversion any2stringfmt from
-                <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to <span class="extype" name="scala.runtime.StringFormat">StringFormat</span>
+                <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to <span class="extype" name="scala.runtime.StringFormat">StringFormat</span>
               </h3>
             </div><div class="conversion" name="scala.Predef.any2ArrowAssoc">
               <h3>Inherited by implicit conversion any2ArrowAssoc from
-                <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>]
+                <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>]
               </h3>
             </div><div class="conversion" name="scala.Predef.any2Ensuring">
               <h3>Inherited by implicit conversion any2Ensuring from
-                <a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.local.LessConstant1">LessConstant1</a>]
+                <a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.StandardDeviation">StandardDeviation</a>]
               </h3>
             </div>
         </div>

@@ -88,7 +88,7 @@
         <a href="Collect.html"><span class="name">Collect</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="ops">ops: <span class="extype" name="scala.Seq">Seq</span>[<a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.logic.Collect.A">A</span>]]</span>)</span><span class="result"> extends <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="geotrellis.logic.Collect.A">A</span>]] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Takes a sequence of operations, and returns a Sequence of the results of those operations.</p>
     </li><li name="geotrellis.logic.CollectArray" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CollectArray[A]extendsOp[Array[A]]withProductwithSerializable"></a>
       <a id="CollectArray[A]:CollectArray[A]"></a>
@@ -101,7 +101,7 @@
         <a href="CollectArray.html"><span class="name">CollectArray</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="ops">ops: <span class="extype" name="scala.Array">Array</span>[<a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.logic.CollectArray.A">A</span>]]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="evidence$1">evidence$1: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="geotrellis.logic.CollectArray.A">A</span>]</span>)</span><span class="result"> extends <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="geotrellis.logic.CollectArray.A">A</span>]] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Takes a sequence of operations, and returns an Array of the results of those operations.</p>
     </li><li name="geotrellis.logic.Do1" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Do1[A,Z]extendsOp[Z]withProductwithSerializable"></a>
       <a id="Do1[A,Z]:Do1[A,Z]"></a>
@@ -181,7 +181,8 @@ and C's (which should be the same length).</p>
         <a href="If.html"><span class="name">If</span></a><span class="tparams">[<span name="A">A &lt;: <span class="extype" name="geotrellis.logic.If.C">C</span></span>, <span name="B">B &lt;: <span class="extype" name="geotrellis.logic.If.C">C</span></span>, <span name="C">C</span>]</span><span class="params">(<span name="bOp">bOp: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Boolean">Boolean</span>]</span>, <span name="trueOp">trueOp: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.logic.If.A">A</span>]</span>, <span name="falseOp">falseOp: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.logic.If.B">B</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="evidence$1">evidence$1: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="geotrellis.logic.If.C">C</span>]</span>)</span><span class="result"> extends <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.logic.If.C">C</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Conditionally executes one of two operations; if the Boolean Operation evaluates true, the first
+Operation executes, otherwise the second Operation executes.</p>
     </li><li name="geotrellis.logic.Reducer1" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="Reducer1[B,C]extendsOp[C]"></a>
       <a id="Reducer1[B,C]:Reducer1[B,C]"></a>
@@ -194,7 +195,8 @@ and C's (which should be the same length).</p>
         <a href="Reducer1.html"><span class="name">Reducer1</span></a><span class="tparams">[<span name="B">B</span>, <span name="C">C</span>]</span><span class="result"> extends <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.logic.Reducer1.C">C</span>]</span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Base class for operations that use a map and reduce step to allow for
+operations to be distributed over <a href="../raster/TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">geotrellis.raster.TiledRasterData</a>.</p>
     </li><li name="geotrellis.logic.Reducer2" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="Reducer2[A,B,C]extendsOp[C]"></a>
       <a id="Reducer2[A,B,C]:Reducer2[A,B,C]"></a>
@@ -207,7 +209,9 @@ and C's (which should be the same length).</p>
         <a href="Reducer2.html"><span class="name">Reducer2</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>]</span><span class="result"> extends <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.logic.Reducer2.C">C</span>]</span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Base class for operations that take a raster operation and another operation, and use a
+map and reduce step to allow for operations to be distributed over <a href="../raster/TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">geotrellis.raster.TiledRasterData</a>,
+and takes another operation.</p>
     </li><li name="geotrellis.logic.WithResult" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="WithResult[A,Z]extendsOp[Z]withProductwithSerializable"></a>
       <a id="WithResult[A,Z]:WithResult[A,Z]"></a>
