@@ -90,7 +90,7 @@ cropping of an underlying raster data object.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="CroppedTiledRasterData.html"><span class="name">CroppedTiledRasterData</span></a><span class="params">(<span name="underlying">underlying: <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="colOffset">colOffset: <span class="extype" name="scala.Int">Int</span></span>, <span name="rowOffset">rowOffset: <span class="extype" name="scala.Int">Int</span></span>, <span name="_cols">_cols: <span class="extype" name="scala.Int">Int</span></span>, <span name="_rows">_rows: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="CroppedTiledRasterData.html"><span class="name">CroppedTiledRasterData</span></a><span class="params">(<span name="underlying">underlying: <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a></span>, <span name="underlyingRasterExtent">underlyingRasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="colOffset">colOffset: <span class="extype" name="scala.Int">Int</span></span>, <span name="rowOffset">rowOffset: <span class="extype" name="scala.Int">Int</span></span>, <span name="_cols">_cols: <span class="extype" name="scala.Int">Int</span></span>, <span name="_rows">_rows: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">This trait represents a raster data which represents a lazily-applied
@@ -175,15 +175,15 @@ combined with a function.</p>
       </h4>
       <p class="comment cmt">This trait provides some methods in terms of underlying raster data.</p>
     </li><li name="geotrellis.raster.LazyTiledWrapper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="LazyTiledWrapperextendsTiledRasterDatawithProductwithSerializable"></a>
+      <a id="LazyTiledWrapperextendsTiledRasterData"></a>
       <a id="LazyTiledWrapper:LazyTiledWrapper"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">case class</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="LazyTiledWrapper.html"><span class="name">LazyTiledWrapper</span></a><span class="params">(<span name="data">data: <a href="../ArrayRasterData.html" class="extype" name="geotrellis.ArrayRasterData">ArrayRasterData</a></span>, <span name="tileLayout">tileLayout: <a href="TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="result"> extends <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="LazyTiledWrapper.html"><span class="name">LazyTiledWrapper</span></a><span class="result"> extends <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a></span>
       </span>
       </h4>
       <p class="comment cmt">This RasterData warps an existing ArrayRasterData so as to allow operations
@@ -197,7 +197,7 @@ on it to be executed in parallel.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="LazyViewWrapper.html"><span class="name">LazyViewWrapper</span></a><span class="params">(<span name="data">data: <a href="../ArrayRasterData.html" class="extype" name="geotrellis.ArrayRasterData">ArrayRasterData</a></span>, <span name="cols">cols: <span class="extype" name="scala.Int">Int</span></span>, <span name="rows">rows: <span class="extype" name="scala.Int">Int</span></span>, <span name="col1">col1: <span class="extype" name="scala.Int">Int</span></span>, <span name="row1">row1: <span class="extype" name="scala.Int">Int</span></span>, <span name="col2">col2: <span class="extype" name="scala.Int">Int</span></span>, <span name="row2">row2: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="../LazyRasterData.html" class="extype" name="geotrellis.LazyRasterData">LazyRasterData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="LazyViewWrapper.html"><span class="name">LazyViewWrapper</span></a><span class="params">(<span name="data">data: <a href="../ArrayRasterData.html" class="extype" name="geotrellis.ArrayRasterData">ArrayRasterData</a></span>, <span name="parentCols">parentCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="col1">col1: <span class="extype" name="scala.Int">Int</span></span>, <span name="row1">row1: <span class="extype" name="scala.Int">Int</span></span>, <span name="col2">col2: <span class="extype" name="scala.Int">Int</span></span>, <span name="row2">row2: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="../LazyRasterData.html" class="extype" name="geotrellis.LazyRasterData">LazyRasterData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">This RasterData class is used by LazyTiledWrapper to encompass a particular
@@ -293,7 +293,7 @@ cols/rows) and also the size of each tile (in cols/rows of pixels).</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="TileSetRasterData.html"><span class="name">TileSetRasterData</span></a><span class="params">(<span name="basePath">basePath: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="typ">typ: <a href="../RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>, <span name="tileLayout">tileLayout: <a href="TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="server">server: <a href="../process/Server.html" class="extype" name="geotrellis.process.Server">Server</a></span>)</span><span class="result"> extends <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="TileSetRasterData.html"><span class="name">TileSetRasterData</span></a><span class="params">(<span name="basePath">basePath: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="typ">typ: <a href="../RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>, <span name="tileLayout">tileLayout: <a href="TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="server">server: <a href="../process/Server.html" class="extype" name="geotrellis.process.Server">Server</a></span>)</span><span class="result"> extends <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">This RasterData uses no in-memory caching and loads all tile data from disk
@@ -318,20 +318,7 @@ when needed.</p>
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="geotrellis.raster.CroppedArrayRasterData" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="CroppedArrayRasterData"></a>
-      <a id="CroppedArrayRasterData:CroppedArrayRasterData"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="CroppedArrayRasterData$.html"><span class="name">CroppedArrayRasterData</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.raster.CroppedRaster" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.raster.CroppedRaster" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CroppedRaster"></a>
       <a id="CroppedRaster:CroppedRaster"></a>
       <h4 class="signature">
@@ -353,7 +340,7 @@ when needed.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="LazyTiledWrapper$.html"><span class="name">LazyTiledWrapper</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="LazyTiledWrapper$.html"><span class="name">LazyTiledWrapper</span></a>
       </span>
       </h4>
       

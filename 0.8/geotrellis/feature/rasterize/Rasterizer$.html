@@ -242,15 +242,15 @@ a point only covers a single raster cell.
               
         </dd></dl></div>
     </li><li name="geotrellis.feature.rasterize.Rasterizer#foreachCellByFeature" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="foreachCellByFeature[D](feature:geotrellis.feature.Geometry[D],re:geotrellis.RasterExtent)(f:(Int,Int,geotrellis.feature.Geometry[D])=&gt;Unit)(implicitevidence$3:Manifest[D]):Unit"></a>
-      <a id="foreachCellByFeature[D](Geometry[D],RasterExtent)((Int,Int,Geometry[D])⇒Unit)(Manifest[D]):Unit"></a>
+      <a id="foreachCellByFeature[G[_]&lt;:geotrellis.feature.Geometry[_],D](feature:G[D],re:geotrellis.RasterExtent)(f:geotrellis.feature.rasterize.Callback[G,D])(implicitevidence$3:Manifest[D]):Unit"></a>
+      <a id="foreachCellByFeature[G[_]&lt;:Geometry[_],D](G[D],RasterExtent)(Callback[G,D])(Manifest[D]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">foreachCellByFeature</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="feature">feature: <a href="../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByFeature.D">D</span>]</span>, <span name="re">re: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <a href="../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByFeature.D">D</span>]) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByFeature.D">D</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">foreachCellByFeature</span><span class="tparams">[<span name="G">G<span class="tparams">[<span name="_">_</span>]</span> &lt;: <a href="../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[_]</span>, <span name="D">D</span>]</span><span class="params">(<span name="feature">feature: <span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByFeature.G">G</span>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByFeature.D">D</span>]</span>, <span name="re">re: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="params">(<span name="f">f: <a href="Callback.html" class="extype" name="geotrellis.feature.rasterize.Callback">Callback</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByFeature.G">G</span>, <span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByFeature.D">D</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByFeature.D">D</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Perform a zonal summary by invoking a function on each cell under provided features.</p><div class="fullcomment"><div class="comment cmt"><p>Perform a zonal summary by invoking a function on each cell under provided features.</p><p>This function is a closure that returns Unit; all results are a side effect of this function.</p><p>Note: the function f should modify a mutable variable as a side effect.
@@ -259,99 +259,99 @@ Function3 returns a primitive value.
 </p></div><dl class="paramcmts block"><dt class="param">feature</dt><dd class="cmt"><p>Feature for calculation</p></dd><dt class="param">re</dt><dd class="cmt"><p>RasterExtent to use for iterating through cells</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function that takes (col:Int, row:Int, rasterValue:Int, feature:Feature)
 </p></dd></dl></div>
     </li><li name="geotrellis.feature.rasterize.Rasterizer#foreachCellByLineString" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="foreachCellByLineString[D](p:geotrellis.feature.LineString[D],re:geotrellis.RasterExtent)(f:(Int,Int,geotrellis.feature.LineString[D])=&gt;Unit):Unit"></a>
-      <a id="foreachCellByLineString[D](LineString[D],RasterExtent)((Int,Int,LineString[D])⇒Unit):Unit"></a>
+      <a id="foreachCellByLineString[D](p:geotrellis.feature.LineString[D],re:geotrellis.RasterExtent)(f:geotrellis.feature.rasterize.Callback[geotrellis.feature.LineString,D]):Unit"></a>
+      <a id="foreachCellByLineString[D](LineString[D],RasterExtent)(Callback[LineString,D]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">foreachCellByLineString</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../LineString.html" class="extype" name="geotrellis.feature.LineString">LineString</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByLineString.D">D</span>]</span>, <span name="re">re: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <a href="../LineString.html" class="extype" name="geotrellis.feature.LineString">LineString</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByLineString.D">D</span>]) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">foreachCellByLineString</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../LineString.html" class="extype" name="geotrellis.feature.LineString">LineString</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByLineString.D">D</span>]</span>, <span name="re">re: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="params">(<span name="f">f: <a href="Callback.html" class="extype" name="geotrellis.feature.rasterize.Callback">Callback</a>[<a href="../LineString.html" class="extype" name="geotrellis.feature.LineString">LineString</a>, <span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByLineString.D">D</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">lines
 </p>
     </li><li name="geotrellis.feature.rasterize.Rasterizer#foreachCellByMultiLineString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="foreachCellByMultiLineString[D](g:geotrellis.feature.MultiLineString[D],re:geotrellis.RasterExtent)(f:(Int,Int,geotrellis.feature.LineString[D])=&gt;Unit):Unit"></a>
-      <a id="foreachCellByMultiLineString[D](MultiLineString[D],RasterExtent)((Int,Int,LineString[D])⇒Unit):Unit"></a>
+      <a id="foreachCellByMultiLineString[D](g:geotrellis.feature.MultiLineString[D],re:geotrellis.RasterExtent)(f:geotrellis.feature.rasterize.Callback[geotrellis.feature.LineString,D]):Unit"></a>
+      <a id="foreachCellByMultiLineString[D](MultiLineString[D],RasterExtent)(Callback[LineString,D]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">foreachCellByMultiLineString</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="g">g: <a href="../MultiLineString.html" class="extype" name="geotrellis.feature.MultiLineString">MultiLineString</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByMultiLineString.D">D</span>]</span>, <span name="re">re: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <a href="../LineString.html" class="extype" name="geotrellis.feature.LineString">LineString</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByMultiLineString.D">D</span>]) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">foreachCellByMultiLineString</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="g">g: <a href="../MultiLineString.html" class="extype" name="geotrellis.feature.MultiLineString">MultiLineString</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByMultiLineString.D">D</span>]</span>, <span name="re">re: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="params">(<span name="f">f: <a href="Callback.html" class="extype" name="geotrellis.feature.rasterize.Callback">Callback</a>[<a href="../LineString.html" class="extype" name="geotrellis.feature.LineString">LineString</a>, <span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByMultiLineString.D">D</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Apply function f to every cell contained within MultiLineString.</p><div class="fullcomment"><div class="comment cmt"><p>Apply function f to every cell contained within MultiLineString.</p></div><dl class="paramcmts block"><dt class="param">g</dt><dd class="cmt"><p>MultiLineString used to define zone</p></dd><dt class="param">re</dt><dd class="cmt"><p>RasterExtent used to determine cols and rows</p></dd><dt class="param">f</dt><dd class="cmt"><p>Function to apply: f(cols,row,feature)
 </p></dd></dl></div>
     </li><li name="geotrellis.feature.rasterize.Rasterizer#foreachCellByMultiPoint" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="foreachCellByMultiPoint[D](p:geotrellis.feature.MultiPoint[D],re:geotrellis.RasterExtent)(f:(Int,Int,geotrellis.feature.Point[D])=&gt;Unit):Unit"></a>
-      <a id="foreachCellByMultiPoint[D](MultiPoint[D],RasterExtent)((Int,Int,Point[D])⇒Unit):Unit"></a>
+      <a id="foreachCellByMultiPoint[D](p:geotrellis.feature.MultiPoint[D],re:geotrellis.RasterExtent)(f:geotrellis.feature.rasterize.Callback[geotrellis.feature.Point,D]):Unit"></a>
+      <a id="foreachCellByMultiPoint[D](MultiPoint[D],RasterExtent)(Callback[Point,D]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">foreachCellByMultiPoint</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../MultiPoint.html" class="extype" name="geotrellis.feature.MultiPoint">MultiPoint</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByMultiPoint.D">D</span>]</span>, <span name="re">re: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <a href="../Point.html" class="extype" name="geotrellis.feature.Point">Point</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByMultiPoint.D">D</span>]) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">foreachCellByMultiPoint</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../MultiPoint.html" class="extype" name="geotrellis.feature.MultiPoint">MultiPoint</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByMultiPoint.D">D</span>]</span>, <span name="re">re: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="params">(<span name="f">f: <a href="Callback.html" class="extype" name="geotrellis.feature.rasterize.Callback">Callback</a>[<a href="../Point.html" class="extype" name="geotrellis.feature.Point">Point</a>, <span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByMultiPoint.D">D</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       
     </li><li name="geotrellis.feature.rasterize.Rasterizer#foreachCellByMultiPolygon" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="foreachCellByMultiPolygon[D](p:geotrellis.feature.MultiPolygon[D],re:geotrellis.RasterExtent)(f:(Int,Int,geotrellis.feature.Polygon[D])=&gt;Unit):Unit"></a>
-      <a id="foreachCellByMultiPolygon[D](MultiPolygon[D],RasterExtent)((Int,Int,Polygon[D])⇒Unit):Unit"></a>
+      <a id="foreachCellByMultiPolygon[D](p:geotrellis.feature.MultiPolygon[D],re:geotrellis.RasterExtent)(f:geotrellis.feature.rasterize.Callback[geotrellis.feature.Polygon,D]):Unit"></a>
+      <a id="foreachCellByMultiPolygon[D](MultiPolygon[D],RasterExtent)(Callback[Polygon,D]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">foreachCellByMultiPolygon</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../MultiPolygon.html" class="extype" name="geotrellis.feature.MultiPolygon">MultiPolygon</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByMultiPolygon.D">D</span>]</span>, <span name="re">re: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <a href="../Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByMultiPolygon.D">D</span>]) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">foreachCellByMultiPolygon</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../MultiPolygon.html" class="extype" name="geotrellis.feature.MultiPolygon">MultiPolygon</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByMultiPolygon.D">D</span>]</span>, <span name="re">re: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="params">(<span name="f">f: <a href="Callback.html" class="extype" name="geotrellis.feature.rasterize.Callback">Callback</a>[<a href="../Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>, <span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByMultiPolygon.D">D</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Apply function f to every cell contained with MultiPolygon.</p><div class="fullcomment"><div class="comment cmt"><p>Apply function f to every cell contained with MultiPolygon.
 </p></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>MultiPolygon used to define zone</p></dd><dt class="param">re</dt><dd class="cmt"><p>RasterExtent used to determine cols and rows</p></dd><dt class="param">f</dt><dd class="cmt"><p>Function to apply: f(cols,row,feature)
 </p></dd></dl></div>
     </li><li name="geotrellis.feature.rasterize.Rasterizer#foreachCellByPoint" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="foreachCellByPoint[D](p:geotrellis.feature.Point[D],re:geotrellis.RasterExtent)(f:(Int,Int,geotrellis.feature.Point[D])=&gt;Unit):Unit"></a>
-      <a id="foreachCellByPoint[D](Point[D],RasterExtent)((Int,Int,Point[D])⇒Unit):Unit"></a>
+      <a id="foreachCellByPoint[D](p:geotrellis.feature.Point[D],re:geotrellis.RasterExtent)(f:geotrellis.feature.rasterize.Callback[geotrellis.feature.Point,D]):Unit"></a>
+      <a id="foreachCellByPoint[D](Point[D],RasterExtent)(Callback[Point,D]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">foreachCellByPoint</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../Point.html" class="extype" name="geotrellis.feature.Point">Point</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByPoint.D">D</span>]</span>, <span name="re">re: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <a href="../Point.html" class="extype" name="geotrellis.feature.Point">Point</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByPoint.D">D</span>]) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">foreachCellByPoint</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../Point.html" class="extype" name="geotrellis.feature.Point">Point</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByPoint.D">D</span>]</span>, <span name="re">re: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="params">(<span name="f">f: <a href="Callback.html" class="extype" name="geotrellis.feature.rasterize.Callback">Callback</a>[<a href="../Point.html" class="extype" name="geotrellis.feature.Point">Point</a>, <span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByPoint.D">D</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Invoke a function on raster cells under a point feature.</p><div class="fullcomment"><div class="comment cmt"><p>Invoke a function on raster cells under a point feature.</p><p>The function f is a closure that should alter a mutable variable by side
 effect (to avoid boxing).
 </p></div></div>
     </li><li name="geotrellis.feature.rasterize.Rasterizer#foreachCellByPointSeq" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="foreachCellByPointSeq[D](pSet:Seq[geotrellis.feature.Point[D]],re:geotrellis.RasterExtent)(f:(Int,Int,geotrellis.feature.Point[D])=&gt;Unit):Unit"></a>
-      <a id="foreachCellByPointSeq[D](Seq[Point[D]],RasterExtent)((Int,Int,Point[D])⇒Unit):Unit"></a>
+      <a id="foreachCellByPointSeq[D](pSet:Seq[geotrellis.feature.Point[D]],re:geotrellis.RasterExtent)(f:geotrellis.feature.rasterize.Callback[geotrellis.feature.Point,D]):Unit"></a>
+      <a id="foreachCellByPointSeq[D](Seq[Point[D]],RasterExtent)(Callback[Point,D]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">foreachCellByPointSeq</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="pSet">pSet: <span class="extype" name="scala.Seq">Seq</span>[<a href="../Point.html" class="extype" name="geotrellis.feature.Point">Point</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByPointSeq.D">D</span>]]</span>, <span name="re">re: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <a href="../Point.html" class="extype" name="geotrellis.feature.Point">Point</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByPointSeq.D">D</span>]) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">foreachCellByPointSeq</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="pSet">pSet: <span class="extype" name="scala.Seq">Seq</span>[<a href="../Point.html" class="extype" name="geotrellis.feature.Point">Point</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByPointSeq.D">D</span>]]</span>, <span name="re">re: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="params">(<span name="f">f: <a href="Callback.html" class="extype" name="geotrellis.feature.rasterize.Callback">Callback</a>[<a href="../Point.html" class="extype" name="geotrellis.feature.Point">Point</a>, <span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByPointSeq.D">D</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Invoke a function on each point in a sequences of Points.</p>
     </li><li name="geotrellis.feature.rasterize.Rasterizer#foreachCellByPolygon" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="foreachCellByPolygon[D](p:geotrellis.feature.Polygon[D],re:geotrellis.RasterExtent)(f:(Int,Int,geotrellis.feature.Polygon[D])=&gt;Unit):Unit"></a>
-      <a id="foreachCellByPolygon[D](Polygon[D],RasterExtent)((Int,Int,Polygon[D])⇒Unit):Unit"></a>
+      <a id="foreachCellByPolygon[D](p:geotrellis.feature.Polygon[D],re:geotrellis.RasterExtent)(f:geotrellis.feature.rasterize.Callback[geotrellis.feature.Polygon,D]):Unit"></a>
+      <a id="foreachCellByPolygon[D](Polygon[D],RasterExtent)(Callback[Polygon,D]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">foreachCellByPolygon</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByPolygon.D">D</span>]</span>, <span name="re">re: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <a href="../Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByPolygon.D">D</span>]) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">foreachCellByPolygon</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByPolygon.D">D</span>]</span>, <span name="re">re: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="params">(<span name="f">f: <a href="Callback.html" class="extype" name="geotrellis.feature.rasterize.Callback">Callback</a>[<a href="../Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>, <span class="extype" name="geotrellis.feature.rasterize.Rasterizer.foreachCellByPolygon.D">D</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Apply function f(col,row,feature) to every cell contained within polygon.</p><div class="fullcomment"><div class="comment cmt"><p>Apply function f(col,row,feature) to every cell contained within polygon.</p></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>Polygon used to define zone</p></dd><dt class="param">re</dt><dd class="cmt"><p>RasterExtent used to determine cols and rows</p></dd><dt class="param">f</dt><dd class="cmt"><p>Function to apply: f(cols,row,feature)
@@ -435,15 +435,15 @@ effect (to avoid boxing).
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="geotrellis.feature.rasterize.Rasterizer#rasterize" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="rasterize[D](feature:geotrellis.feature.Geometry[D],rasterExtent:geotrellis.RasterExtent)(f:(Int,Int,geotrellis.feature.Geometry[D])=&gt;Int)(implicitevidence$2:Manifest[D]):geotrellis.Raster"></a>
-      <a id="rasterize[D](Geometry[D],RasterExtent)((Int,Int,Geometry[D])⇒Int)(Manifest[D]):Raster"></a>
+      <a id="rasterize[D](feature:geotrellis.feature.Geometry[D],rasterExtent:geotrellis.RasterExtent)(f:geotrellis.feature.rasterize.Transformer[geotrellis.feature.Geometry,D,Int])(implicitevidence$2:Manifest[D]):geotrellis.Raster"></a>
+      <a id="rasterize[D](Geometry[D],RasterExtent)(Transformer[Geometry,D,Int])(Manifest[D]):Raster"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">rasterize</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="feature">feature: <a href="../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.rasterize.D">D</span>]</span>, <span name="rasterExtent">rasterExtent: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <a href="../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.rasterize.D">D</span>]) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.rasterize.D">D</span>]</span>)</span><span class="result">: <a href="../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>
+        <span class="name">rasterize</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="feature">feature: <a href="../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.rasterize.D">D</span>]</span>, <span name="rasterExtent">rasterExtent: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="params">(<span name="f">f: <a href="Transformer.html" class="extype" name="geotrellis.feature.rasterize.Transformer">Transformer</a>[<a href="../package.html#Geometry[D]=geotrellis.feature.Feature[com.vividsolutions.jts.geom.Geometry,D]" class="extmbr" name="geotrellis.feature.Geometry">Geometry</a>, <span class="extype" name="geotrellis.feature.rasterize.Rasterizer.rasterize.D">D</span>, <span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.rasterize.D">D</span>]</span>)</span><span class="result">: <a href="../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a raster from a geometry feature.</p><div class="fullcomment"><div class="comment cmt"><p>Create a raster from a geometry feature.</p></div><dl class="paramcmts block"><dt class="param">feature</dt><dd class="cmt"><p>Feature to rasterize</p></dd><dt class="param">rasterExtent</dt><dd class="cmt"><p>Definition of raster to create</p></dd><dt class="param">f</dt><dd class="cmt"><p>Function that takes col, row, feature and returns value to burn

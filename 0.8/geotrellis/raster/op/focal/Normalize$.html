@@ -46,7 +46,10 @@
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>We'd like to use the normalize name both when we want to automatically
 detect the min/max values, and when we provide them explicitly.
-</p></div><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Normalize does not currently support Double raster data.
+                    If you use a Raster with a Double RasterType (TypeFloat,TypeDouble)
+                    the data values will be rounded to integers.
+</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -157,32 +160,6 @@ detect the min/max values, and when we provide them explicitly.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.raster.op.focal.Normalize#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(r:geotrellis.Op[geotrellis.Raster],c:geotrellis.Op[(Int,Int)],g:geotrellis.Op[(Int,Int)]):geotrellis.raster.op.focal.PrecomputedNormalize"></a>
-      <a id="apply(Op[Raster],Op[(Int,Int)],Op[(Int,Int)]):PrecomputedNormalize"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="c">c: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>, <span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>)</span><span class="result">: <a href="PrecomputedNormalize.html" class="extype" name="geotrellis.raster.op.focal.PrecomputedNormalize">PrecomputedNormalize</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.raster.op.focal.Normalize#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(r:geotrellis.Op[geotrellis.Raster],g:geotrellis.Op[(Int,Int)]):geotrellis.raster.op.focal.AutomaticNormalize"></a>
-      <a id="apply(Op[Raster],Op[(Int,Int)]):AutomaticNormalize"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>)</span><span class="result">: <a href="AutomaticNormalize.html" class="extype" name="geotrellis.raster.op.focal.AutomaticNormalize">AutomaticNormalize</a></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -411,7 +388,42 @@ detect the min/max values, and when we provide them explicitly.
 
         
 
-        
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="geotrellis.raster.op.focal.Normalize#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(r:geotrellis.Op[geotrellis.Raster],c:geotrellis.Op[(Int,Int)],g:geotrellis.Op[(Int,Int)]):geotrellis.raster.op.focal.PrecomputedRescale"></a>
+      <a id="apply(Op[Raster],Op[(Int,Int)],Op[(Int,Int)]):PrecomputedRescale"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 0.8) Use Rescale.">apply</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="c">c: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>, <span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>)</span><span class="result">: <a href="PrecomputedRescale.html" class="extype" name="geotrellis.raster.op.focal.PrecomputedRescale">PrecomputedRescale</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 0.8)</i> Use Rescale.</p></dd></dl></div>
+    </li><li name="geotrellis.raster.op.focal.Normalize#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(r:geotrellis.Op[geotrellis.Raster],g:geotrellis.Op[(Int,Int)]):geotrellis.raster.op.focal.AutomaticRescale"></a>
+      <a id="apply(Op[Raster],Op[(Int,Int)]):AutomaticRescale"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 0.8) Use Rescale.">apply</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="g">g: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>)</span><span class="result">: <a href="AutomaticRescale.html" class="extype" name="geotrellis.raster.op.focal.AutomaticRescale">AutomaticRescale</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 0.8)</i> Use Rescale.</p></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">
