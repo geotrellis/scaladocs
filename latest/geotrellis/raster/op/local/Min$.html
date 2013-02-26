@@ -44,11 +44,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Takes the Min of Ints and integer typed Rasters.
-</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Min does not currently support Double raster data.
-                    If you use a Raster with a Double RasterType (TypeFloat,TypeDouble)
-                    the data values will be rounded to integers.
-</p></span></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Takes the Min of Ints and integer typed Rasters.</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -174,20 +170,50 @@
       <p class="shortcomment cmt">Takes two Rasters and gives a raster with the min values of the two at each cell.</p><div class="fullcomment"><div class="comment cmt"><p>Takes two Rasters and gives a raster with the min values of the two at each cell.
 See <a href="MinRaster.html" class="extype" name="geotrellis.raster.op.local.MinRaster">MinRaster</a></p></div></div>
     </li><li name="geotrellis.raster.op.local.Min#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply(c:geotrellis.Op[Int],r:geotrellis.Op[geotrellis.Raster]):geotrellis.raster.op.local.MinConstant2"></a>
-      <a id="apply(Op[Int],Op[Raster]):MinConstant2"></a>
+      <a id="apply(c:geotrellis.Op[Double],r:geotrellis.Op[geotrellis.Raster])(implicitd:DummyImplicit):geotrellis.raster.op.local.MinDoubleConstant"></a>
+      <a id="apply(Op[Double],Op[Raster])(DummyImplicit):MinDoubleConstant"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="c">c: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result">: <a href="MinConstant2.html" class="extype" name="geotrellis.raster.op.local.MinConstant2">MinConstant2</a></span>
+        <span class="name">apply</span><span class="params">(<span name="c">c: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span></span>)</span><span class="result">: <a href="MinDoubleConstant.html" class="extype" name="geotrellis.raster.op.local.MinDoubleConstant">MinDoubleConstant</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Takes a Raster and an Double, and gives a raster with each cell being
+the min value of the original raster and the integer.</p><div class="fullcomment"><div class="comment cmt"><p>Takes a Raster and an Double, and gives a raster with each cell being
+the min value of the original raster and the integer. See [MinDoubleConstant]]</p></div></div>
+    </li><li name="geotrellis.raster.op.local.Min#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(r:geotrellis.Op[geotrellis.Raster],c:geotrellis.Op[Double]):geotrellis.raster.op.local.MinDoubleConstant"></a>
+      <a id="apply(Op[Raster],Op[Double]):MinDoubleConstant"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="c">c: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="MinDoubleConstant.html" class="extype" name="geotrellis.raster.op.local.MinDoubleConstant">MinDoubleConstant</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Takes a Raster and an Double, and gives a raster with each cell being
+the min value of the original raster and the integer.</p><div class="fullcomment"><div class="comment cmt"><p>Takes a Raster and an Double, and gives a raster with each cell being
+the min value of the original raster and the integer. See [MinDoubleConstant]]</p></div></div>
+    </li><li name="geotrellis.raster.op.local.Min#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(c:geotrellis.Op[Int],r:geotrellis.Op[geotrellis.Raster])(implicitd:DummyImplicit):geotrellis.raster.op.local.MinConstant"></a>
+      <a id="apply(Op[Int],Op[Raster])(DummyImplicit):MinConstant"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="c">c: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span></span>)</span><span class="result">: <a href="MinConstant.html" class="extype" name="geotrellis.raster.op.local.MinConstant">MinConstant</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Takes a Raster and an Int, and gives a raster with each cell being
 the min value of the original raster and the integer.</p><div class="fullcomment"><div class="comment cmt"><p>Takes a Raster and an Int, and gives a raster with each cell being
-the min value of the original raster and the integer. See [MinConstant2]]</p></div></div>
+the min value of the original raster and the integer. See [MinConstant]]</p></div></div>
     </li><li name="geotrellis.raster.op.local.Min#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="apply(r:geotrellis.Op[geotrellis.Raster],c:geotrellis.Op[Int]):geotrellis.raster.op.local.MinConstant"></a>
       <a id="apply(Op[Raster],Op[Int]):MinConstant"></a>
@@ -203,6 +229,19 @@ the min value of the original raster and the integer. See [MinConstant2]]</p></d
       <p class="shortcomment cmt">Takes a Raster and an Int, and gives a raster with each cell being
 the min value of the original raster and the integer.</p><div class="fullcomment"><div class="comment cmt"><p>Takes a Raster and an Int, and gives a raster with each cell being
 the min value of the original raster and the integer. See [MinConstant]]</p></div></div>
+    </li><li name="geotrellis.raster.op.local.Min#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="apply(x:geotrellis.Op[Double],y:geotrellis.Op[Double])(implicitd:DummyImplicit):geotrellis.logic.Do2[Double,Double,Double]"></a>
+      <a id="apply(Op[Double],Op[Double])(DummyImplicit):Do2[Double,Double,Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="x">x: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="y">y: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span></span>)</span><span class="result">: <a href="../../../logic/Do2.html" class="extype" name="geotrellis.logic.Do2">Do2</a>[<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Takes the min value of two Double values</p>
     </li><li name="geotrellis.raster.op.local.Min#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="apply(x:geotrellis.Op[Int],y:geotrellis.Op[Int]):geotrellis.logic.Do2[Int,Int,Int]"></a>
       <a id="apply(Op[Int],Op[Int]):Do2[Int,Int,Int]"></a>
