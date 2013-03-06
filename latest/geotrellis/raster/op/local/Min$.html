@@ -44,7 +44,10 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Takes the Min of Ints and integer typed Rasters.</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Gets minimum values.
+</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Min handles NoData values such that taking the Min
+               between a value and NoData returns the value.
+</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -182,8 +185,8 @@ See <a href="MinRaster.html" class="extype" name="geotrellis.raster.op.local.Min
       </span>
       </h4>
       <p class="shortcomment cmt">Takes a Raster and an Double, and gives a raster with each cell being
-the min value of the original raster and the integer.</p><div class="fullcomment"><div class="comment cmt"><p>Takes a Raster and an Double, and gives a raster with each cell being
-the min value of the original raster and the integer. See [MinDoubleConstant]]</p></div></div>
+the min value of the original raster and the Double.</p><div class="fullcomment"><div class="comment cmt"><p>Takes a Raster and an Double, and gives a raster with each cell being
+the min value of the original raster and the Double. See [MinDoubleConstant]]</p></div></div>
     </li><li name="geotrellis.raster.op.local.Min#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="apply(r:geotrellis.Op[geotrellis.Raster],c:geotrellis.Op[Double]):geotrellis.raster.op.local.MinDoubleConstant"></a>
       <a id="apply(Op[Raster],Op[Double]):MinDoubleConstant"></a>
@@ -197,8 +200,8 @@ the min value of the original raster and the integer. See [MinDoubleConstant]]</
       </span>
       </h4>
       <p class="shortcomment cmt">Takes a Raster and an Double, and gives a raster with each cell being
-the min value of the original raster and the integer.</p><div class="fullcomment"><div class="comment cmt"><p>Takes a Raster and an Double, and gives a raster with each cell being
-the min value of the original raster and the integer. See [MinDoubleConstant]]</p></div></div>
+the min value of the original raster and the Double.</p><div class="fullcomment"><div class="comment cmt"><p>Takes a Raster and an Double, and gives a raster with each cell being
+the min value of the original raster and the Double. See [MinDoubleConstant]]</p></div></div>
     </li><li name="geotrellis.raster.op.local.Min#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="apply(c:geotrellis.Op[Int],r:geotrellis.Op[geotrellis.Raster])(implicitd:DummyImplicit):geotrellis.raster.op.local.MinConstant"></a>
       <a id="apply(Op[Int],Op[Raster])(DummyImplicit):MinConstant"></a>
@@ -229,7 +232,7 @@ the min value of the original raster and the integer. See [MinConstant]]</p></di
       <p class="shortcomment cmt">Takes a Raster and an Int, and gives a raster with each cell being
 the min value of the original raster and the integer.</p><div class="fullcomment"><div class="comment cmt"><p>Takes a Raster and an Int, and gives a raster with each cell being
 the min value of the original raster and the integer. See [MinConstant]]</p></div></div>
-    </li><li name="geotrellis.raster.op.local.Min#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.raster.op.local.Min#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="apply(x:geotrellis.Op[Double],y:geotrellis.Op[Double])(implicitd:DummyImplicit):geotrellis.logic.Do2[Double,Double,Double]"></a>
       <a id="apply(Op[Double],Op[Double])(DummyImplicit):Do2[Double,Double,Double]"></a>
       <h4 class="signature">
@@ -241,8 +244,16 @@ the min value of the original raster and the integer. See [MinConstant]]</p></di
         <span class="name">apply</span><span class="params">(<span name="x">x: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="y">y: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span></span>)</span><span class="result">: <a href="../../../logic/Do2.html" class="extype" name="geotrellis.logic.Do2">Do2</a>[<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Takes the min value of two Double values</p>
-    </li><li name="geotrellis.raster.op.local.Min#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Takes the min value of two Double values.</p><div class="fullcomment"><div class="comment cmt"><p>Takes the min value of two Double values.
+</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>
+Whereas the operations dealing with rasters use the rule that
+the Min of a Double.NaN (the NoData value for Double values)
+and another value v is the latter value v,
+this operation does not differentiate Double.NaN from other Double values
+and will return what scala.math.min(Double.NaN, v) returns (which
+is Double.NaN).
+</p></span></dd></dl></div>
+    </li><li name="geotrellis.raster.op.local.Min#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="apply(x:geotrellis.Op[Int],y:geotrellis.Op[Int]):geotrellis.logic.Do2[Int,Int,Int]"></a>
       <a id="apply(Op[Int],Op[Int]):Do2[Int,Int,Int]"></a>
       <h4 class="signature">
@@ -254,7 +265,14 @@ the min value of the original raster and the integer. See [MinConstant]]</p></di
         <span class="name">apply</span><span class="params">(<span name="x">x: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="y">y: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="../../../logic/Do2.html" class="extype" name="geotrellis.logic.Do2">Do2</a>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Takes the min value of two Int values</p>
+      <p class="shortcomment cmt">Takes the min value of two Int values.</p><div class="fullcomment"><div class="comment cmt"><p>Takes the min value of two Int values.
+</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>
+Whereas the operations dealing with rasters use the rule that
+the Min of a NODATA and another value v is the latter value v,
+this operation does not differentiate NODATA from other integers
+and will return what scala.math.min(NODATA, v) returns (which
+since NODATA = Int.MinValue will be NODATA).
+</p></span></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
