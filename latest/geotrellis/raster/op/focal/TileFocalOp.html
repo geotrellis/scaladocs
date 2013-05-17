@@ -40,12 +40,12 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">TileFocalOp</span><span class="tparams">[<span name="T">T &lt;: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="FocalOperationBase.html" class="extype" name="geotrellis.raster.op.focal.FocalOperationBase">FocalOperationBase</a> with <a href="HasAnalysisArea.html" class="extype" name="geotrellis.raster.op.focal.HasAnalysisArea">HasAnalysisArea</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]</span>]</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="zonalOp">zonalOp: (<a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]) ⇒ <span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span></span>)</span><span class="result"> extends <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">TileFocalOp</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="focalOp">focalOp: <a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result"> extends <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Used to make an operation based off a focal operation that will
-parallelize correctly with tiled raster data.</p><p>Use <a href="TileFocalOp$.html#makeFocalOp[T&lt;:geotrellis.Op[geotrellis.Raster]withgeotrellis.raster.op.focal.FocalOperationBasewithgeotrellis.raster.op.focal.HasAnalysisArea[T]](makeOp:geotrellis.Op[geotrellis.Raster]=&gt;T):(geotrellis.Op[geotrellis.Raster],geotrellis.Op[Option[geotrellis.RasterExtent]])=&gt;T" class="extmbr" name="geotrellis.raster.op.focal.TileFocalOp#makeFocalOp">TileFocalOp.makeFocalOp</a> to create correctly create a TileFocalOp.
+parallelize correctly with tiled raster data.</p><p>Use <a href="TileFocalOp$.html#makeFocalOp(makeOp:geotrellis.Op[geotrellis.Raster]=&gt;geotrellis.raster.op.focal.FocalOperation[geotrellis.Raster]):(geotrellis.Op[geotrellis.Raster],geotrellis.Op[Option[geotrellis.RasterExtent]])=&gt;geotrellis.raster.op.focal.FocalOperation[geotrellis.Raster]#SELF" class="extmbr" name="geotrellis.raster.op.focal.TileFocalOp#makeFocalOp">TileFocalOp.makeFocalOp</a> to create correctly create a TileFocalOp.
 </p></div><dl class="attributes block"> <div class="block">Example:
                <ol><li class="cmt"><p></p><pre><span class="kw">val</span> tileFocalOp = TileFocalOp(tiledRaster, Min(_, Square(<span class="num">1</span>)))</pre></li></ol>
             </div></dl><div class="toggleContainer block">
@@ -54,7 +54,7 @@ parallelize correctly with tiled raster data.</p><p>Use <a href="TileFocalOp$.ht
         </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
                 <span class="toggle diagram-link">Type Hierarchy</span>
                 <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph140" viewBox="0.00 0.00 463.00 128.00" height="128pt" width="463pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 124)" class="graph" id="graph1"><polygon points="-4,5 -4,-124 460,-124 460,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><g class="cluster" id="graph4"></g><!-- node4 --><g class="node implicit-outgoing class" id="graph140_4"><a xlink:title="geotrellis.raster.op.focal.TileFocalOp can be implicitly converted to Operation[TileFocalOp[T]] by the implicit method implicitLiteral in object geotrellis.Operation" xlink:href="../../../Operation.html#inheritance-diagram"><polygon points="431,-50 275,-50 275,-24 431,-24 431,-50" stroke="#ababab" fill="#e1e1e1"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="285" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#7d7d7d" font-size="10.00" font-family="Arial" y="-34.6667" x="307" text-anchor="start">Operation[TileFocalOp[T]]</text></a></g><!-- node0 --><g class="node this class" id="graph140_0"><a xlink:title="geotrellis.raster.op.focal.TileFocalOp (this class)" xlink:href="#inheritance-diagram"><polygon points="203,-50 95,-50 95,-24 203,-24 203,-50" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="105" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-34.6667" x="127" text-anchor="start">TileFocalOp[T]</text></a></g><!-- node0&#45;&gt;node4 --><g class="edge implicit-outgoing" id="0_4"><a xlink:title="TileFocalOp[T] can be implicitly converted to Operation[TileFocalOp[T]]"><path d="M210.542,-37C226.831,-37 244.762,-37 262.247,-37" stroke="#d4d4d4" fill="none"></path><polygon points="262.313,-38.7501 267.313,-37 262.313,-35.2501 262.313,-38.7501" stroke="#d4d4d4" fill="#d4d4d4"></polygon></a><text fill="#aaaaaa" font-size="10.00" font-family="Arial" y="-41" x="239" text-anchor="middle">implicitly</text></g><!-- node1 --><g class="node class" id="graph140_1"><a xlink:title="geotrellis.Operation" xlink:href="../../../Operation.html#inheritance-diagram"><polygon points="92,-120 4.9738e-14,-120 0,-94 92,-94 92,-120" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-115" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="32" text-anchor="start">Op[Raster]</text></a></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph140_1_0"><a xlink:title="TileFocalOp[T] is a subtype of Op[Raster]"><path d="M69.8478,-90.7927C88.0354,-78.4323 112.764,-61.6266 129.713,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="68.5252,-89.5757 65.3735,-93.8335 70.4926,-92.4704 68.5252,-89.5757" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph140_2"><a xlink:title="scala.Product"><polygon points="188,-120 110,-120 110,-94 188,-94 188,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="120" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="142" text-anchor="start">Product</text></a></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph140_2_0"><a xlink:title="TileFocalOp[T] is a subtype of Product"><path d="M149,-88.5481C149,-76.457 149,-60.9432 149,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="147.25,-88.8335 149,-93.8335 150.75,-88.8336 147.25,-88.8335" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node trait" id="graph140_3"><a xlink:title="scala.Serializable"><polygon points="302,-120 206,-120 206,-94 302,-94 302,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="216" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="238" text-anchor="start">Serializable</text></a></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph140_3_0"><a xlink:title="TileFocalOp[T] is a subtype of Serializable"><path d="M229.689,-90.7927C211.148,-78.4323 185.94,-61.6266 168.661,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="229.119,-92.5161 234.25,-93.8335 231.061,-89.6039 229.119,-92.5161" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph140" viewBox="0.00 0.00 445.00 128.00" height="128pt" width="445pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 124)" class="graph" id="graph1"><polygon points="-4,5 -4,-124 442,-124 442,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><g class="cluster" id="graph4"></g><!-- node4 --><g class="node implicit-outgoing class" id="graph140_4"><a xlink:title="geotrellis.raster.op.focal.TileFocalOp can be implicitly converted to Operation[TileFocalOp] by the implicit method implicitLiteral in object geotrellis.Operation" xlink:href="../../../Operation.html#inheritance-diagram"><polygon points="413,-50 269,-50 269,-24 413,-24 413,-50" stroke="#ababab" fill="#e1e1e1"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="279" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#7d7d7d" font-size="10.00" font-family="Arial" y="-34.6667" x="301" text-anchor="start">Operation[TileFocalOp]</text></a></g><!-- node0 --><g class="node this class" id="graph140_0"><a xlink:title="geotrellis.raster.op.focal.TileFocalOp (this class)" xlink:href="#inheritance-diagram"><polygon points="197,-50 101,-50 101,-24 197,-24 197,-50" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="111" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-34.6667" x="133" text-anchor="start">TileFocalOp</text></a></g><!-- node0&#45;&gt;node4 --><g class="edge implicit-outgoing" id="0_4"><a xlink:title="TileFocalOp can be implicitly converted to Operation[TileFocalOp]"><path d="M204.741,-37C220.875,-37 238.862,-37 256.34,-37" stroke="#d4d4d4" fill="none"></path><polygon points="256.402,-38.7501 261.402,-37 256.402,-35.2501 256.402,-38.7501" stroke="#d4d4d4" fill="#d4d4d4"></polygon></a><text fill="#aaaaaa" font-size="10.00" font-family="Arial" y="-41" x="233" text-anchor="middle">implicitly</text></g><!-- node1 --><g class="node class" id="graph140_1"><a xlink:title="geotrellis.Operation" xlink:href="../../../Operation.html#inheritance-diagram"><polygon points="92,-120 4.9738e-14,-120 0,-94 92,-94 92,-120" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-115" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="32" text-anchor="start">Op[Raster]</text></a></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph140_1_0"><a xlink:title="TileFocalOp is a subtype of Op[Raster]"><path d="M69.8478,-90.7927C88.0354,-78.4323 112.764,-61.6266 129.713,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="68.5252,-89.5757 65.3735,-93.8335 70.4926,-92.4704 68.5252,-89.5757" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph140_2"><a xlink:title="scala.Product"><polygon points="188,-120 110,-120 110,-94 188,-94 188,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="120" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="142" text-anchor="start">Product</text></a></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph140_2_0"><a xlink:title="TileFocalOp is a subtype of Product"><path d="M149,-88.5481C149,-76.457 149,-60.9432 149,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="147.25,-88.8335 149,-93.8335 150.75,-88.8336 147.25,-88.8335" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node trait" id="graph140_3"><a xlink:title="scala.Serializable"><polygon points="302,-120 206,-120 206,-94 302,-94 302,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="216" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="238" text-anchor="start">Serializable</text></a></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph140_3_0"><a xlink:title="TileFocalOp is a subtype of Serializable"><path d="M229.689,-90.7927C211.148,-78.4323 185.94,-61.6266 168.661,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="229.119,-92.5161 234.25,-93.8335 231.061,-89.6039 229.119,-92.5161" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
               </div></div>
         
 
@@ -98,15 +98,15 @@ parallelize correctly with tiled raster data.</p><p>Use <a href="TileFocalOp$.ht
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.raster.op.focal.TileFocalOp#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(r:geotrellis.Op[geotrellis.Raster],zonalOp:geotrellis.Op[geotrellis.Raster]=&gt;T):geotrellis.raster.op.focal.TileFocalOp[T]"></a>
-      <a id="&lt;init&gt;:TileFocalOp[T]"></a>
+      <a id="&lt;init&gt;(r:geotrellis.Op[geotrellis.Raster],focalOp:geotrellis.raster.op.focal.FocalOperation[geotrellis.Raster]):geotrellis.raster.op.focal.TileFocalOp"></a>
+      <a id="&lt;init&gt;:TileFocalOp"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">TileFocalOp</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="zonalOp">zonalOp: (<a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]) ⇒ <span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span></span>)</span>
+        <span class="name">TileFocalOp</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="focalOp">focalOp: <a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span>
       </span>
       </h4>
       
@@ -200,25 +200,25 @@ parallelize correctly with tiled raster data.</p><p>Use <a href="TileFocalOp$.ht
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
             <span class="extype" name="scala.runtime.StringAdd">StringAdd</span> performed by method any2stringadd in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
     </li><li name="scala.Predef.any2ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="-&gt;[B](y:B):(A,B)"></a>
-      <a id="-&gt;[B](B):(TileFocalOp[T],B)"></a>
+      <a id="-&gt;[B](B):(TileFocalOp,B)"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>], <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method any2ArrowAssoc in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method any2ArrowAssoc in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
                 <span class="name">@inline</span><span class="args">()</span>
@@ -302,9 +302,9 @@ parallelize correctly with tiled raster data.</p><p>Use <a href="TileFocalOp$.ht
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] is in scope.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
           </dd><dt>Definition Classes</dt><dd>Equals</dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
@@ -350,70 +350,70 @@ parallelize correctly with tiled raster data.</p><p>Use <a href="TileFocalOp$.ht
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
-      <a id="ensuring((TileFocalOp[T])⇒Boolean,⇒Any):TileFocalOp[T]"></a>
+      <a id="ensuring((TileFocalOp)⇒Boolean,⇒Any):TileFocalOp"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]</span>
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method any2Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method any2Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean):A"></a>
-      <a id="ensuring((TileFocalOp[T])⇒Boolean):TileFocalOp[T]"></a>
+      <a id="ensuring((TileFocalOp)⇒Boolean):TileFocalOp"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]</span>
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method any2Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method any2Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
-      <a id="ensuring(Boolean,⇒Any):TileFocalOp[T]"></a>
+      <a id="ensuring(Boolean,⇒Any):TileFocalOp"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]</span>
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method any2Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method any2Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:Boolean):A"></a>
-      <a id="ensuring(Boolean):TileFocalOp[T]"></a>
+      <a id="ensuring(Boolean):TileFocalOp"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]</span>
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method any2Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method any2Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -474,6 +474,19 @@ parallelize correctly with tiled raster data.</p><p>Use <a href="TileFocalOp$.ht
 and returns a new operation.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation with a function that takes the result of this operation
 and returns a new operation.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.focal.TileFocalOp#focalOp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="focalOp:geotrellis.raster.op.focal.FocalOperation[geotrellis.Raster]"></a>
+      <a id="focalOp:FocalOperation[Raster]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">focalOp</span><span class="result">: <a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+      </span>
+      </h4>
+      
     </li><li name="geotrellis.Operation#foreach" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="foreach[U](f:T=&gt;U):Unit"></a>
       <a id="foreach[U]((Raster)⇒U):Unit"></a>
@@ -503,7 +516,7 @@ but returns nothing.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
             <span class="extype" name="scala.runtime.StringFormat">StringFormat</span> performed by method any2stringfmt in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
@@ -671,9 +684,9 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] is in scope.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
           </dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#productElement" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="productElement(n:Int):Any"></a>
@@ -688,9 +701,9 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] is in scope.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
           </dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#productIterator" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="productIterator:Iterator[Any]"></a>
@@ -705,9 +718,9 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] is in scope.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
           </dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#productPrefix" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="productPrefix:String"></a>
@@ -722,9 +735,9 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] is in scope.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
           </dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
     </li><li name="geotrellis.raster.op.focal.TileFocalOp#r" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="r:geotrellis.Op[geotrellis.Raster]"></a>
@@ -780,15 +793,15 @@ takes this operation's result as its argument.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="geotrellis.raster.op.focal.TileFocalOp#tileFocalOp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="tileFocalOp[T](raster:geotrellis.Raster,trd:geotrellis.raster.TiledRasterData,makeFocalOp:(geotrellis.Op[geotrellis.Raster],geotrellis.Op[Option[geotrellis.RasterExtent]])=&gt;geotrellis.Op[geotrellis.Raster]):geotrellis.StepOutput[geotrellis.Raster]"></a>
-      <a id="tileFocalOp[T](Raster,TiledRasterData,(Op[Raster],Op[Option[RasterExtent]])⇒Op[Raster]):StepOutput[Raster]"></a>
+      <a id="tileFocalOp(raster:geotrellis.Raster,trd:geotrellis.raster.TiledRasterData,makeFocalOp:(geotrellis.Op[geotrellis.Raster],geotrellis.Op[Option[geotrellis.RasterExtent]])=&gt;geotrellis.raster.op.focal.FocalOperation[geotrellis.Raster]):geotrellis.StepOutput[geotrellis.Raster]"></a>
+      <a id="tileFocalOp(Raster,TiledRasterData,(Op[Raster],Op[Option[RasterExtent]])⇒FocalOperation[Raster]):StepOutput[Raster]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">tileFocalOp</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="raster">raster: <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>, <span name="trd">trd: <a href="../../TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a></span>, <span name="makeFocalOp">makeFocalOp: (<a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>], <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Option">Option</span>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]]) ⇒ <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+        <span class="name">tileFocalOp</span><span class="params">(<span name="raster">raster: <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>, <span name="trd">trd: <a href="../../TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a></span>, <span name="makeFocalOp">makeFocalOp: (<a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>], <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Option">Option</span>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]]) ⇒ <a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
       
@@ -856,34 +869,21 @@ takes this operation's result as its argument.
 and returns a new operation.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation with a function that takes the result of this operation
 and returns a new operation.</p><p>Same as flatMap.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
-    </li><li name="geotrellis.raster.op.focal.TileFocalOp#zonalOp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="zonalOp:geotrellis.Op[geotrellis.Raster]=&gt;T"></a>
-      <a id="zonalOp:(Op[Raster])⇒T"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">zonalOp</span><span class="result">: (<a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]) ⇒ <span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.Predef.any2ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="→[B](y:B):(A,B)"></a>
-      <a id="→[B](B):(TileFocalOp[T],B)"></a>
+      <a id="→[B](B):(TileFocalOp,B)"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>], <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method any2ArrowAssoc in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method any2ArrowAssoc in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
     </li></ol>
@@ -893,21 +893,21 @@ and returns a new operation.</p><p>Same as flatMap.
               <h3>Shadowed Implict Value Members</h3>
               <ol><li name="geotrellis.Operation.implicitLiteral#andThen" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="andThen[U](f:T=&gt;geotrellis.Op[U]):geotrellis.Operation[U]"></a>
-      <a id="andThen[U]((TileFocalOp[T])⇒Op[U]):Operation[U]"></a>
+      <a id="andThen[U]((TileFocalOp)⇒Op[U]):Operation[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">andThen</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]) ⇒ <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.Operation.andThen.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.andThen.U">U</span>]</span>
+        <span class="implicit shadowed">andThen</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>) ⇒ <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.Operation.andThen.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.andThen.U">U</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] is in scope.
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp[T]]).andThen(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp]).andThen(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#debug" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="debug:Boolean"></a>
       <a id="debug:Boolean"></a>
@@ -921,122 +921,122 @@ and returns a new operation.</p><p>Same as flatMap.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] is in scope.
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp[T]]).debug</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp]).debug</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#dispatch" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="dispatch(dispatcher:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
-      <a id="dispatch(ActorRef):DispatchedOperation[TileFocalOp[T]]"></a>
+      <a id="dispatch(ActorRef):DispatchedOperation[TileFocalOp]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">dispatch</span><span class="params">(<span name="dispatcher">dispatcher: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../../../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]]</span>
+        <span class="implicit shadowed">dispatch</span><span class="params">(<span name="dispatcher">dispatcher: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../../../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] is in scope.
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp[T]]).dispatch(dispatcher)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp]).dispatch(dispatcher)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#filter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="filter(f:T=&gt;Boolean):geotrellis.Operation[T]"></a>
-      <a id="filter((TileFocalOp[T])⇒Boolean):Operation[TileFocalOp[T]]"></a>
+      <a id="filter((TileFocalOp)⇒Boolean):Operation[TileFocalOp]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">filter</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]]</span>
+        <span class="implicit shadowed">filter</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] is in scope.
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp[T]]).filter(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp]).filter(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#flatMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="flatMap[U](f:T=&gt;geotrellis.Operation[U]):geotrellis.Operation[U]"></a>
-      <a id="flatMap[U]((TileFocalOp[T])⇒Operation[U]):Operation[U]"></a>
+      <a id="flatMap[U]((TileFocalOp)⇒Operation[U]):Operation[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">flatMap</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]) ⇒ <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>
+        <span class="implicit shadowed">flatMap</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>) ⇒ <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a new operation with a function that takes the result of this operation
 and returns a new operation.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation with a function that takes the result of this operation
 and returns a new operation.
 </p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] is in scope.
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp[T]]).flatMap(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp]).flatMap(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#foreach" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="foreach[U](f:T=&gt;U):Unit"></a>
-      <a id="foreach[U]((TileFocalOp[T])⇒U):Unit"></a>
+      <a id="foreach[U]((TileFocalOp)⇒U):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">foreach</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]) ⇒ <span class="extype" name="geotrellis.Operation.foreach.U">U</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="implicit shadowed">foreach</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>) ⇒ <span class="extype" name="geotrellis.Operation.foreach.U">U</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create an operation that applies the function f to the result of this operation,
 but returns nothing.</p><div class="fullcomment"><div class="comment cmt"><p>Create an operation that applies the function f to the result of this operation,
 but returns nothing.
 </p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] is in scope.
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp[T]]).foreach(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp]).foreach(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#into" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="into[U](f:geotrellis.Operation[T]=&gt;U):U"></a>
-      <a id="into[U]((Operation[TileFocalOp[T]])⇒U):U"></a>
+      <a id="into[U]((Operation[TileFocalOp])⇒U):U"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">into</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]]) ⇒ <span class="extype" name="geotrellis.Operation.into.U">U</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.Operation.into.U">U</span></span>
+        <span class="implicit shadowed">into</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>]) ⇒ <span class="extype" name="geotrellis.Operation.into.U">U</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.Operation.into.U">U</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Call the given function with this operation as its argument.</p><div class="fullcomment"><div class="comment cmt"><p>Call the given function with this operation as its argument.</p><p>This is primarily useful for code readability.</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] is in scope.
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp[T]]).into(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd><dt>See also</dt><dd><span class="cmt"><p>http://debasishg.blogspot.com/2009/09/thrush-combinator-in-scala.html
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp]).into(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd><dt>See also</dt><dd><span class="cmt"><p>http://debasishg.blogspot.com/2009/09/thrush-combinator-in-scala.html
 </p></span></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="map[U](f:T=&gt;U):geotrellis.Operation[U]"></a>
-      <a id="map[U]((TileFocalOp[T])⇒U):Operation[U]"></a>
+      <a id="map[U]((TileFocalOp)⇒U):Operation[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">map</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]) ⇒ <span class="extype" name="geotrellis.Operation.map.U">U</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.map.U">U</span>]</span>
+        <span class="implicit shadowed">map</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>) ⇒ <span class="extype" name="geotrellis.Operation.map.U">U</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.map.U">U</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a new operation that returns the result of the provided function that
 takes this operation's result as its argument.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation that returns the result of the provided function that
 takes this operation's result as its argument.
 </p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] is in scope.
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp[T]]).map(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp]).map(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#name" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="name:String"></a>
       <a id="name:String"></a>
@@ -1051,79 +1051,79 @@ takes this operation's result as its argument.
       </h4>
       <p class="shortcomment cmt">Return operation identified (class simple name).</p><div class="fullcomment"><div class="comment cmt"><p>Return operation identified (class simple name).
 </p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] is in scope.
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp[T]]).name</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp]).name</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#nextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="nextSteps:PartialFunction[Any,geotrellis.StepOutput[T]]"></a>
-      <a id="nextSteps:PartialFunction[Any,StepOutput[TileFocalOp[T]]]"></a>
+      <a id="nextSteps:PartialFunction[Any,StepOutput[TileFocalOp]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">nextSteps</span><span class="result">: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]]]</span>
+        <span class="implicit shadowed">nextSteps</span><span class="result">: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] is in scope.
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp[T]]).nextSteps</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp]).nextSteps</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#processNextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="processNextSteps(args:Operation.this.Args):geotrellis.StepOutput[T]"></a>
-      <a id="processNextSteps(List[Any]):StepOutput[TileFocalOp[T]]"></a>
+      <a id="processNextSteps(List[Any]):StepOutput[TileFocalOp]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">processNextSteps</span><span class="params">(<span name="args">args: <span class="extype" name="scala.collection.immutable.List">List</span>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]]</span>
+        <span class="implicit shadowed">processNextSteps</span><span class="params">(<span name="args">args: <span class="extype" name="scala.collection.immutable.List">List</span>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] is in scope.
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp[T]]).processNextSteps(args)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp]).processNextSteps(args)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="run(context:geotrellis.Context):geotrellis.StepOutput[T]"></a>
-      <a id="run(Context):StepOutput[TileFocalOp[T]]"></a>
+      <a id="run(Context):StepOutput[TileFocalOp]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">run</span><span class="params">(<span name="context">context: <a href="../../../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]]</span>
+        <span class="implicit shadowed">run</span><span class="params">(<span name="context">context: <a href="../../../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Execute this operation and return the result.</p><div class="fullcomment"><div class="comment cmt"><p>Execute this operation and return the result.
 </p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] is in scope.
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp[T]]).run(context)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp]).run(context)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#runAsync" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="runAsync(args:Operation.this.Args):geotrellis.StepOutput[T]"></a>
-      <a id="runAsync(List[Any]):StepOutput[TileFocalOp[T]]"></a>
+      <a id="runAsync(List[Any]):StepOutput[TileFocalOp]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">runAsync</span><span class="params">(<span name="args">args: <span class="extype" name="scala.collection.immutable.List">List</span>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]]</span>
+        <span class="implicit shadowed">runAsync</span><span class="params">(<span name="args">args: <span class="extype" name="scala.collection.immutable.List">List</span>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] is in scope.
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp[T]]).runAsync(args)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp]).runAsync(args)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="scala.Predef.any2stringadd#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="self:Any"></a>
       <a id="self:Any"></a>
@@ -1137,7 +1137,7 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
             <span class="extype" name="scala.runtime.StringAdd">StringAdd</span> performed by method any2stringadd in scala.Predef.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: StringAdd).self</pre></div></dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
@@ -1154,30 +1154,30 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
             <span class="extype" name="scala.runtime.StringFormat">StringFormat</span> performed by method any2stringfmt in scala.Predef.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: StringFormat).self</pre></div></dd><dt>Definition Classes</dt><dd>StringFormat</dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#withResult" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="withResult[U](f:T=&gt;geotrellis.Operation[U]):geotrellis.Operation[U]"></a>
-      <a id="withResult[U]((TileFocalOp[T])⇒Operation[U]):Operation[U]"></a>
+      <a id="withResult[U]((TileFocalOp)⇒Operation[U]):Operation[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">withResult</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]) ⇒ <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>
+        <span class="implicit shadowed">withResult</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>) ⇒ <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a new operation with a function that takes the result of this operation
 and returns a new operation.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation with a function that takes the result of this operation
 and returns a new operation.</p><p>Same as flatMap.
 </p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            This conversion will take place only if an implicit value of type <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] is in scope.
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp[T]]).withResult(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Operation[TileFocalOp]).withResult(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li></ol>
             </div>
 
@@ -1185,41 +1185,41 @@ and returns a new operation.</p><p>Same as flatMap.
               <h3>Deprecated Value Members</h3>
               <ol><li name="scala.Predef.any2ArrowAssoc#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="x:A"></a>
-      <a id="x:TileFocalOp[T]"></a>
+      <a id="x:TileFocalOp"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use leftOfArrow instead">x</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]</span>
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use leftOfArrow instead">x</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method any2ArrowAssoc in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method any2ArrowAssoc in scala.Predef.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: ArrowAssoc[TileFocalOp[T]]).x</pre></div></dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: ArrowAssoc[TileFocalOp]).x</pre></div></dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>leftOfArrow<code> instead</code></u></code></p></dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="x:A"></a>
-      <a id="x:TileFocalOp[T]"></a>
+      <a id="x:TileFocalOp"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use resultOfEnsuring instead">x</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]</span>
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use resultOfEnsuring instead">x</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]] performed by method any2Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>] performed by method any2Ensuring in scala.Predef.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Ensuring[TileFocalOp[T]]).x</pre></div></dd><dt>Definition Classes</dt><dd>Ensuring</dd><dt>Annotations</dt><dd>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(tileFocalOp: Ensuring[TileFocalOp]).x</pre></div></dd><dt>Definition Classes</dt><dd>Ensuring</dd><dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>resultOfEnsuring<code> instead</code></u></code></p></dd></dl></div>
@@ -1245,23 +1245,23 @@ and returns a new operation.</p><p>Same as flatMap.
             </div>
         <div class="conversion" name="geotrellis.Operation.implicitLiteral">
               <h3>Inherited by implicit conversion implicitLiteral from
-                <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]]
+                <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>]
               </h3>
             </div><div class="conversion" name="scala.Predef.any2stringadd">
               <h3>Inherited by implicit conversion any2stringadd from
-                <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to <span class="extype" name="scala.runtime.StringAdd">StringAdd</span>
+                <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to <span class="extype" name="scala.runtime.StringAdd">StringAdd</span>
               </h3>
             </div><div class="conversion" name="scala.Predef.any2stringfmt">
               <h3>Inherited by implicit conversion any2stringfmt from
-                <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to <span class="extype" name="scala.runtime.StringFormat">StringFormat</span>
+                <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to <span class="extype" name="scala.runtime.StringFormat">StringFormat</span>
               </h3>
             </div><div class="conversion" name="scala.Predef.any2ArrowAssoc">
               <h3>Inherited by implicit conversion any2ArrowAssoc from
-                <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]]
+                <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>]
               </h3>
             </div><div class="conversion" name="scala.Predef.any2Ensuring">
               <h3>Inherited by implicit conversion any2Ensuring from
-                <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>] to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>[<span class="extype" name="geotrellis.raster.op.focal.TileFocalOp.T">T</span>]]
+                <a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.raster.op.focal.TileFocalOp">TileFocalOp</a>]
               </h3>
             </div>
         </div>
