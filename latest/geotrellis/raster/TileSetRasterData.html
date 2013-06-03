@@ -233,20 +233,20 @@ too large to fit in memory.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.TileSetRasterData">TileSetRasterData</a> → <a href="../RasterData.html" class="extype" name="geotrellis.RasterData">RasterData</a></dd></dl></div>
-    </li><li name="geotrellis.raster.TileSetRasterData#asArray" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="asArray:Some[geotrellis.IntArrayRasterData]"></a>
-      <a id="asArray:Some[IntArrayRasterData]"></a>
+    </li><li name="geotrellis.raster.TiledRasterData#asArray" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asArray:Option[geotrellis.ArrayRasterData]"></a>
+      <a id="asArray:Option[ArrayRasterData]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">asArray</span><span class="result">: <span class="extype" name="scala.Some">Some</span>[<a href="../IntArrayRasterData.html" class="extype" name="geotrellis.IntArrayRasterData">IntArrayRasterData</a>]</span>
+        <span class="name">asArray</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../ArrayRasterData.html" class="extype" name="geotrellis.ArrayRasterData">ArrayRasterData</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Return the current RasterData as an array.</p><div class="fullcomment"><div class="comment cmt"><p>Return the current RasterData as an array.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.TileSetRasterData">TileSetRasterData</a> → <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a> → <a href="../RasterData.html" class="extype" name="geotrellis.RasterData">RasterData</a></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a> → <a href="../RasterData.html" class="extype" name="geotrellis.RasterData">RasterData</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -260,6 +260,19 @@ too large to fit in memory.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.raster.TileSetRasterData#asTileArray" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="asTileArray:geotrellis.raster.TileArrayRasterData"></a>
+      <a id="asTileArray:TileArrayRasterData"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asTileArray</span><span class="result">: <a href="TileArrayRasterData.html" class="extype" name="geotrellis.raster.TileArrayRasterData">TileArrayRasterData</a></span>
+      </span>
+      </h4>
+      
     </li><li name="geotrellis.raster.TileSetRasterData#basePath" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="basePath:String"></a>
       <a id="basePath:String"></a>
@@ -597,15 +610,15 @@ to be able to parallelize foreach.
       <p class="shortcomment cmt">Get a RasterData instance for a particular tile.</p><div class="fullcomment"><div class="comment cmt"><p>Get a RasterData instance for a particular tile.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.TileSetRasterData">TileSetRasterData</a> → <a href="TiledRasterData.html" class="extype" name="geotrellis.raster.TiledRasterData">TiledRasterData</a></dd></dl></div>
     </li><li name="geotrellis.raster.TileSetRasterData#getTileOp" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getTileOp(rl:geotrellis.raster.ResolutionLayout,c:Int,r:Int):geotrellis.logic.Do1[geotrellis.Raster,geotrellis.Raster]"></a>
-      <a id="getTileOp(ResolutionLayout,Int,Int):Do1[Raster,Raster]"></a>
+      <a id="getTileOp(rl:geotrellis.raster.ResolutionLayout,c:Int,r:Int):geotrellis.Op[geotrellis.Raster]"></a>
+      <a id="getTileOp(ResolutionLayout,Int,Int):Op[Raster]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getTileOp</span><span class="params">(<span name="rl">rl: <a href="ResolutionLayout.html" class="extype" name="geotrellis.raster.ResolutionLayout">ResolutionLayout</a></span>, <span name="c">c: <span class="extype" name="scala.Int">Int</span></span>, <span name="r">r: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../logic/Do1.html" class="extype" name="geotrellis.logic.Do1">Do1</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+        <span class="name">getTileOp</span><span class="params">(<span name="rl">rl: <a href="ResolutionLayout.html" class="extype" name="geotrellis.raster.ResolutionLayout">ResolutionLayout</a></span>, <span name="c">c: <span class="extype" name="scala.Int">Int</span></span>, <span name="r">r: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Return an operation that when run will yield a particular tile's raster.</p><div class="fullcomment"><div class="comment cmt"><p>Return an operation that when run will yield a particular tile's raster.

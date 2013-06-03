@@ -112,7 +112,10 @@
         <span class="name">assignFromSource</span><span class="params">(<span name="sourceIndex">sourceIndex: <span class="extype" name="scala.Int">Int</span></span>, <span name="dest">dest: <a href="../MutableRasterData.html" class="extype" name="geotrellis.MutableRasterData">MutableRasterData</a></span>, <span name="destIndex">destIndex: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[this] </dd></dl></div>
+      <p class="shortcomment cmt">Assign an indexed source value to the
+destination RasterData at the specified index.</p><div class="fullcomment"><div class="comment cmt"><p>Assign an indexed source value to the
+destination RasterData at the specified index.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[this] </dd></dl></div>
     </li><li name="geotrellis.data.ReadState#getType" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="getType:geotrellis.RasterType"></a>
       <a id="getType:RasterType"></a>
@@ -125,7 +128,7 @@
         <span class="name">getType</span><span class="result">: <a href="../RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Defines the type of Raster this ReadState will read.</p>
     </li><li name="geotrellis.data.ReadState#initSource" visbl="prt" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="initSource(position:Int,size:Int):Unit"></a>
       <a id="initSource(Int,Int):Unit"></a>
@@ -138,7 +141,12 @@
         <span class="name">initSource</span><span class="params">(<span name="position">position: <span class="extype" name="scala.Int">Int</span></span>, <span name="size">size: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[this] </dd></dl></div>
+      <p class="shortcomment cmt">This function is called to initialize the source
+data in preperation for resampling and assigning into
+the destination RasterData.</p><div class="fullcomment"><div class="comment cmt"><p>This function is called to initialize the source
+data in preperation for resampling and assigning into
+the destination RasterData.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[this] </dd></dl></div>
     </li><li name="geotrellis.data.ReadState#rasterExtent" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="rasterExtent:geotrellis.RasterExtent"></a>
       <a id="rasterExtent:RasterExtent"></a>
@@ -313,8 +321,11 @@
         <span class="name">createRaster</span><span class="params">(<span name="data">data: <a href="../MutableRasterData.html" class="extype" name="geotrellis.MutableRasterData">MutableRasterData</a></span>)</span><span class="result">: <a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[this] </dd></dl></div>
-    </li><li name="geotrellis.data.ReadState#createRasterData" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Creates a Raster based on the destination RasterData
+after it has been read in.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a Raster based on the destination RasterData
+after it has been read in.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[this] </dd></dl></div>
+    </li><li name="geotrellis.data.ReadState#createRasterData" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="createRasterData(cols:Int,rows:Int):geotrellis.MutableRasterData"></a>
       <a id="createRasterData(Int,Int):MutableRasterData"></a>
       <h4 class="signature">
@@ -326,7 +337,10 @@
         <span class="name">createRasterData</span><span class="params">(<span name="cols">cols: <span class="extype" name="scala.Int">Int</span></span>, <span name="rows">rows: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../MutableRasterData.html" class="extype" name="geotrellis.MutableRasterData">MutableRasterData</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Creates the RasterData of the resampled Raster.</p><div class="fullcomment"><div class="comment cmt"><p>Creates the RasterData of the resampled Raster.
+By default creates an ArrayRasterData of the
+type defined by getType.
+</p></div></div>
     </li><li name="geotrellis.data.ReadState#destroy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="destroy():Unit"></a>
       <a id="destroy():Unit"></a>
@@ -339,7 +353,7 @@
         <span class="name">destroy</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Called for cleanup after the ReadState is no longer used.</p>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
       <a id="ensuring((ReadState)⇒Boolean,⇒Any):ReadState"></a>
@@ -599,7 +613,10 @@
         <span class="name">translate</span><span class="params">(<span name="data">data: <a href="../MutableRasterData.html" class="extype" name="geotrellis.MutableRasterData">MutableRasterData</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[this] </dd></dl></div>
+      <p class="shortcomment cmt">Overwrite this to translate data from source to destination,
+for example to tranlsate NoData values.</p><div class="fullcomment"><div class="comment cmt"><p>Overwrite this to translate data from source to destination,
+for example to tranlsate NoData values.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[this] </dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>

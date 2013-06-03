@@ -117,15 +117,15 @@
         <div id="values" class="values members">
               <h3>Abstract Value Members</h3>
               <ol><li name="geotrellis.data.FileReader#readStateFromCache" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="readStateFromCache(bytes:Array[Byte],layer:geotrellis.process.RasterLayer,target:geotrellis.RasterExtent):geotrellis.data.ReadState"></a>
-      <a id="readStateFromCache(Array[Byte],RasterLayer,RasterExtent):ReadState"></a>
+      <a id="readStateFromCache(bytes:Array[Byte],rasterType:geotrellis.RasterType,rasterExtent:geotrellis.RasterExtent,targetExtent:geotrellis.RasterExtent):geotrellis.data.ReadState"></a>
+      <a id="readStateFromCache(Array[Byte],RasterType,RasterExtent,RasterExtent):ReadState"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">readStateFromCache</span><span class="params">(<span name="bytes">bytes: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>, <span name="layer">layer: <a href="../process/RasterLayer.html" class="extype" name="geotrellis.process.RasterLayer">RasterLayer</a></span>, <span name="target">target: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="result">: <a href="ReadState.html" class="extype" name="geotrellis.data.ReadState">ReadState</a></span>
+        <span class="name">readStateFromCache</span><span class="params">(<span name="bytes">bytes: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>, <span name="rasterType">rasterType: <a href="../RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="targetExtent">targetExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="result">: <a href="ReadState.html" class="extype" name="geotrellis.data.ReadState">ReadState</a></span>
       </span>
       </h4>
       
@@ -447,19 +447,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.data.FileReader#metadataPath" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="metadataPath:String"></a>
-      <a id="metadataPath:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">metadataPath</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -513,41 +500,28 @@
       </h4>
       
     </li><li name="geotrellis.data.FileReader#readCache" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="readCache(bytes:Array[Byte],layer:geotrellis.process.RasterLayer,targetOpt:Option[geotrellis.RasterExtent]):geotrellis.Raster"></a>
-      <a id="readCache(Array[Byte],RasterLayer,Option[RasterExtent]):Raster"></a>
+      <a id="readCache(bytes:Array[Byte],rasterType:geotrellis.RasterType,rasterExtent:geotrellis.RasterExtent,targetExtent:geotrellis.RasterExtent):geotrellis.Raster"></a>
+      <a id="readCache(Array[Byte],RasterType,RasterExtent,RasterExtent):Raster"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">readCache</span><span class="params">(<span name="bytes">bytes: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>, <span name="layer">layer: <a href="../process/RasterLayer.html" class="extype" name="geotrellis.process.RasterLayer">RasterLayer</a></span>, <span name="targetOpt">targetOpt: <span class="extype" name="scala.Option">Option</span>[<a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span><span class="result">: <a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>
+        <span class="name">readCache</span><span class="params">(<span name="bytes">bytes: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>, <span name="rasterType">rasterType: <a href="../RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="targetExtent">targetExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="result">: <a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>
       </span>
       </h4>
       
-    </li><li name="geotrellis.data.FileReader#readMetadata" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="readMetadata():Option[geotrellis.process.RasterLayer]"></a>
-      <a id="readMetadata():Option[RasterLayer]"></a>
+    </li><li name="geotrellis.data.FileReader#readCache" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="readCache(bytes:Array[Byte],rasterType:geotrellis.RasterType,rasterExtent:geotrellis.RasterExtent,targetExtent:Option[geotrellis.RasterExtent]):geotrellis.Raster"></a>
+      <a id="readCache(Array[Byte],RasterType,RasterExtent,Option[RasterExtent]):Raster"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">readMetadata</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../process/RasterLayer.html" class="extype" name="geotrellis.process.RasterLayer">RasterLayer</a>]</span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.data.FileReader#readPath" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="readPath(layerOpt:Option[geotrellis.process.RasterLayer],targetOpt:Option[geotrellis.RasterExtent]):geotrellis.Raster"></a>
-      <a id="readPath(Option[RasterLayer],Option[RasterExtent]):Raster"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">readPath</span><span class="params">(<span name="layerOpt">layerOpt: <span class="extype" name="scala.Option">Option</span>[<a href="../process/RasterLayer.html" class="extype" name="geotrellis.process.RasterLayer">RasterLayer</a>]</span>, <span name="targetOpt">targetOpt: <span class="extype" name="scala.Option">Option</span>[<a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span><span class="result">: <a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>
+        <span class="name">readCache</span><span class="params">(<span name="bytes">bytes: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>, <span name="rasterType">rasterType: <a href="../RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="targetExtent">targetExtent: <span class="extype" name="scala.Option">Option</span>[<a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span><span class="result">: <a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>
       </span>
       </h4>
       
@@ -561,6 +535,19 @@
       </span>
       <span class="symbol">
         <span class="name">readPath</span><span class="params">(<span name="rasterType">rasterType: <a href="../RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="target">target: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="result">: <a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.data.FileReader#readPath" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="readPath(rasterType:geotrellis.RasterType,rasterExtent:geotrellis.RasterExtent,targetExtent:Option[geotrellis.RasterExtent]):geotrellis.Raster"></a>
+      <a id="readPath(RasterType,RasterExtent,Option[RasterExtent]):Raster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">readPath</span><span class="params">(<span name="rasterType">rasterType: <a href="../RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="targetExtent">targetExtent: <span class="extype" name="scala.Option">Option</span>[<a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span><span class="result">: <a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>
       </span>
       </h4>
       

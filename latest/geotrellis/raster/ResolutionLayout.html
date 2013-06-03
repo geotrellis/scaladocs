@@ -40,7 +40,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">ResolutionLayout</span><span class="params">(<span name="xboundries">xboundries: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="yboundries">yboundries: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="cellwidth">cellwidth: <span class="extype" name="scala.Double">Double</span></span>, <span name="cellheight">cellheight: <span class="extype" name="scala.Double">Double</span></span>, <span name="pixelCols">pixelCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="pixelRows">pixelRows: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">ResolutionLayout</span><span class="params">(<span name="re">re: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="pixelCols">pixelCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="pixelRows">pixelRows: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -96,7 +96,7 @@ geographical boundaries of each tile extent.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.raster.ResolutionLayout#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(xboundries:Array[Double],yboundries:Array[Double],cellwidth:Double,cellheight:Double,pixelCols:Int,pixelRows:Int):geotrellis.raster.ResolutionLayout"></a>
+      <a id="&lt;init&gt;(re:geotrellis.RasterExtent,pixelCols:Int,pixelRows:Int):geotrellis.raster.ResolutionLayout"></a>
       <a id="&lt;init&gt;:ResolutionLayout"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -104,7 +104,7 @@ geographical boundaries of each tile extent.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ResolutionLayout</span><span class="params">(<span name="xboundries">xboundries: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="yboundries">yboundries: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="cellwidth">cellwidth: <span class="extype" name="scala.Double">Double</span></span>, <span name="cellheight">cellheight: <span class="extype" name="scala.Double">Double</span></span>, <span name="pixelCols">pixelCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="pixelRows">pixelRows: <span class="extype" name="scala.Int">Int</span></span>)</span>
+        <span class="name">ResolutionLayout</span><span class="params">(<span name="re">re: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="pixelCols">pixelCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="pixelRows">pixelRows: <span class="extype" name="scala.Int">Int</span></span>)</span>
       </span>
       </h4>
       
@@ -232,32 +232,6 @@ geographical boundaries of each tile extent.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.raster.ResolutionLayout#cellheight" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="cellheight:Double"></a>
-      <a id="cellheight:Double"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">cellheight</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.raster.ResolutionLayout#cellwidth" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="cellwidth:Double"></a>
-      <a id="cellwidth:Double"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">cellwidth</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -430,6 +404,45 @@ geographical boundaries of each tile extent.
       </span>
       </h4>
       
+    </li><li name="geotrellis.raster.ResolutionLayout#getXCoord" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getXCoord(col:Int):Double"></a>
+      <a id="getXCoord(Int):Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getXCoord</span><span class="params">(<span name="col">col: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Given an extent and resolution (RasterExtent), return the geographic
+X-coordinates for each tile boundary in this raster data.</p><div class="fullcomment"><div class="comment cmt"><p>Given an extent and resolution (RasterExtent), return the geographic
+X-coordinates for each tile boundary in this raster data. For example,
+if we have a 2x2 RasterData, with a raster extent whose X coordinates
+span 13.0 - 83.0 (i.e. cellwidth is 35.0), we would return the following
+for the corresponding input:</p><p> Input     Output
+-------   --------
+   0        13.0
+   1        48.0
+   2        83.0</p></div></div>
+    </li><li name="geotrellis.raster.ResolutionLayout#getYCoord" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getYCoord(row:Int):Double"></a>
+      <a id="getYCoord(Int):Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getYCoord</span><span class="params">(<span name="row">row: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">This method is identical to getXCoord except that it functions on the
+Y-axis instead.</p><div class="fullcomment"><div class="comment cmt"><p>This method is identical to getXCoord except that it functions on the
+Y-axis instead.</p><p>Note that the origin tile (0,0) is in the upper left of the extent, so the
+upper left corner of the origin tile is (xmin, ymax).
+</p></div></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -508,6 +521,19 @@ geographical boundaries of each tile extent.
       </span>
       </h4>
       
+    </li><li name="geotrellis.raster.ResolutionLayout#re" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="re:geotrellis.RasterExtent"></a>
+      <a id="re:RasterExtent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">re</span><span class="result">: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -569,32 +595,6 @@ geographical boundaries of each tile extent.
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.raster.ResolutionLayout#xboundries" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="xboundries:Array[Double]"></a>
-      <a id="xboundries:Array[Double]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">xboundries</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.raster.ResolutionLayout#yboundries" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="yboundries:Array[Double]"></a>
-      <a id="yboundries:Array[Double]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">yboundries</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      </h4>
-      
     </li><li name="scala.Predef.any2ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="→[B](y:B):(A,B)"></a>
       <a id="→[B](B):(ResolutionLayout,B)"></a>

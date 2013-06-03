@@ -394,41 +394,6 @@ cols/rows) and also the size of each tile (in cols/rows of pixels).
 entire tiled raster, construct an ResolutionLayout which will manage the
 appropriate geographic boundaries, and resolution information, for each
 tile.</p>
-    </li><li name="geotrellis.raster.TileLayout#getXCoords" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getXCoords(re:geotrellis.RasterExtent):Array[Double]"></a>
-      <a id="getXCoords(RasterExtent):Array[Double]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getXCoords</span><span class="params">(<span name="re">re: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Given an extent and resolution (RasterExtent), return the geographic
-X-coordinates for each tile boundary in this raster data.</p><div class="fullcomment"><div class="comment cmt"><p>Given an extent and resolution (RasterExtent), return the geographic
-X-coordinates for each tile boundary in this raster data. For example,
-if we have a 2x2 RasterData, with a raster extent whose X coordinates
-span 13.0 - 83.0 (i.e. cellwidth is 35.0), we would return:</p><p>  Array(13.0, 48.0, 83.0)</p><p>Notice that if we have N columns of tiles we'll return N+1 Doubles.
-</p></div></div>
-    </li><li name="geotrellis.raster.TileLayout#getYCoords" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getYCoords(re:geotrellis.RasterExtent):Array[Double]"></a>
-      <a id="getYCoords(RasterExtent):Array[Double]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getYCoords</span><span class="params">(<span name="re">re: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">This method is identical to getXCoords except that it functions on the
-Y-axis instead.</p><div class="fullcomment"><div class="comment cmt"><p>This method is identical to getXCoords except that it functions on the
-Y-axis instead.</p><p>Note that the origin tile (0,0) is in the upper left of the extent, so the
-upper left corner of the origin tile is (xmin, ymax).
-</p></div></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
