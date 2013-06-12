@@ -44,7 +44,21 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Represents a Raster Layer that can give detailed information
+about the Raster it represents, cache the raster, and get the
+raster cropped to an extent or at a different resolution.</p><p>This represents a layer in a bound Context, not an abstract
+representation of the Raster. In other words, if you are
+holding one of these objects, then the code that uses it
+should only execute on the machine that the RasterLayer is
+from. If you pass around RasterLayers, you will be passing around
+the cache as well, which is not ideal.</p><p>To implement a new RasterLayer, inherit from this class, implement
+the cache(c:Cache) method for caching the raster layer, and implement
+the getRaster() (for getting a Raster with it's native RasterExtent) and
+getRaster(rasterExtent:RasterExtent) (for getting a Raster at a different
+extent\resolution). Optionally you can override getRaster(extent:Extent),
+which by default just creates a RasterExtent with that extent snapped to
+the raster's native resolution.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
@@ -97,7 +111,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.process.RasterLayer#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(info:geotrellis.process.RasterLayerInfo,c:Option[geotrellis.process.Cache]):geotrellis.process.RasterLayer"></a>
+      <a id="&lt;init&gt;(info:geotrellis.process.RasterLayerInfo):geotrellis.process.RasterLayer"></a>
       <a id="&lt;init&gt;:RasterLayer"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -105,7 +119,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">RasterLayer</span><span class="params">(<span name="info">info: <a href="RasterLayerInfo.html" class="extype" name="geotrellis.process.RasterLayerInfo">RasterLayerInfo</a></span>, <span name="c">c: <span class="extype" name="scala.Option">Option</span>[<a href="Cache.html" class="extype" name="geotrellis.process.Cache">Cache</a>]</span>)</span>
+        <span class="name">RasterLayer</span><span class="params">(<span name="info">info: <a href="RasterLayerInfo.html" class="extype" name="geotrellis.process.RasterLayerInfo">RasterLayerInfo</a></span>)</span>
       </span>
       </h4>
       
@@ -116,19 +130,19 @@
 
         <div id="values" class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="geotrellis.process.RasterLayer#cache" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="cache():Unit"></a>
-      <a id="cache():Unit"></a>
+              <ol><li name="geotrellis.process.RasterLayer#cache" visbl="prt" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="cache(c:geotrellis.process.Cache):Unit"></a>
+      <a id="cache(Cache):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">cache</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">cache</span><span class="params">(<span name="c">c: <a href="Cache.html" class="extype" name="geotrellis.process.Cache">Cache</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li name="geotrellis.process.RasterLayer#getRaster" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="getRaster(targetExtent:Option[geotrellis.RasterExtent]):geotrellis.Raster"></a>
       <a id="getRaster(Option[RasterExtent]):Raster"></a>
@@ -262,6 +276,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.process.RasterLayer#cache" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="cache():Unit"></a>
+      <a id="cache():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cache</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -408,6 +435,19 @@
                 <span class="name">@inline</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="geotrellis.process.RasterLayer#getCache" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getCache:geotrellis.process.Cache"></a>
+      <a id="getCache:Cache"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getCache</span><span class="result">: <a href="Cache.html" class="extype" name="geotrellis.process.Cache">Cache</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -473,6 +513,19 @@
       </span>
       </h4>
       
+    </li><li name="geotrellis.process.RasterLayer#isCached" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isCached:Boolean"></a>
+      <a id="isCached:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isCached</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -525,6 +578,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.process.RasterLayer#setCache" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setCache(c:Option[geotrellis.process.Cache]):Unit"></a>
+      <a id="setCache(Option[Cache]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setCache</span><span class="params">(<span name="c">c: <span class="extype" name="scala.Option">Option</span>[<a href="Cache.html" class="extype" name="geotrellis.process.Cache">Cache</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

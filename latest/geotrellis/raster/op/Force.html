@@ -331,7 +331,7 @@ at specific points in the operation chain.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation#dispatch" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dispatch(dispatcher:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
+      <a id="dispatch(cluster:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
       <a id="dispatch(ActorRef):DispatchedOperation[Raster]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -339,10 +339,12 @@ at specific points in the operation chain.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">dispatch</span><span class="params">(<span name="dispatcher">dispatcher: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<a href="../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+        <span class="name">dispatch</span><span class="params">(<span name="cluster">cluster: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<a href="../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+      <p class="shortcomment cmt">Returns an operation whose children will be executed on a remote cluster.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an operation whose children will be executed on a remote cluster.</p><p> This method will cause the operations executed as a result of this operation
+ (input operations and any operations necessary for this computation) to be
+ dispatched to and executed on a remote cluster.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
       <a id="ensuring((Force)⇒Boolean,⇒Any):Force"></a>
@@ -726,6 +728,22 @@ takes this operation's result as its argument.
       </span>
       </h4>
       
+    </li><li name="geotrellis.Operation#remote" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="remote(cluster:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
+      <a id="remote(ActorRef):DispatchedOperation[Raster]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">remote</span><span class="params">(<span name="cluster">cluster: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<a href="../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an operation that will be executed on a remote cluster.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an operation that will be executed on a remote cluster.</p><p> This method will cause the specified operation to be executed on a remote
+ cluster.</p><p> Note that if you wish to distribute the work of a single operation, you
+ should probably be using dispatch() instead of remote().
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation#run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="run(context:geotrellis.Context):geotrellis.StepOutput[T]"></a>
       <a id="run(Context):StepOutput[Raster]"></a>
@@ -904,7 +922,7 @@ and returns a new operation.</p><p>Same as flatMap.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(force: Operation[Force]).debug</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#dispatch" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dispatch(dispatcher:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
+      <a id="dispatch(cluster:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
       <a id="dispatch(ActorRef):DispatchedOperation[Force]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -912,14 +930,16 @@ and returns a new operation.</p><p>Same as flatMap.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">dispatch</span><span class="params">(<span name="dispatcher">dispatcher: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<a href="" class="extype" name="geotrellis.raster.op.Force">Force</a>]</span>
+        <span class="implicit shadowed">dispatch</span><span class="params">(<span name="cluster">cluster: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<a href="" class="extype" name="geotrellis.raster.op.Force">Force</a>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+      <p class="shortcomment cmt">Returns an operation whose children will be executed on a remote cluster.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an operation whose children will be executed on a remote cluster.</p><p> This method will cause the operations executed as a result of this operation
+ (input operations and any operations necessary for this computation) to be
+ dispatched to and executed on a remote cluster.</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.Force">Force</a> to
             <a href="../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.Force">Force</a>] performed by method implicitLiteral in <a href="../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(force: Operation[Force]).dispatch(dispatcher)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(force: Operation[Force]).dispatch(cluster)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#filter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="filter(f:T=&gt;Boolean):geotrellis.Operation[T]"></a>
       <a id="filter((Force)⇒Boolean):Operation[Force]"></a>
@@ -1101,6 +1121,26 @@ takes this operation's result as its argument.
             <a href="../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.Force">Force</a>] performed by method implicitLiteral in <a href="../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(force: Operation[Force]).productElement(n)</pre></div></dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#remote" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="remote(cluster:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
+      <a id="remote(ActorRef):DispatchedOperation[Force]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">remote</span><span class="params">(<span name="cluster">cluster: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<a href="" class="extype" name="geotrellis.raster.op.Force">Force</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns an operation that will be executed on a remote cluster.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an operation that will be executed on a remote cluster.</p><p> This method will cause the specified operation to be executed on a remote
+ cluster.</p><p> Note that if you wish to distribute the work of a single operation, you
+ should probably be using dispatch() instead of remote().
+</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.Force">Force</a> to
+            <a href="../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.Force">Force</a>] performed by method implicitLiteral in <a href="../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(force: Operation[Force]).remote(cluster)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="run(context:geotrellis.Context):geotrellis.StepOutput[T]"></a>
       <a id="run(Context):StepOutput[Force]"></a>
