@@ -129,7 +129,7 @@
       </h4>
       <p class="comment cmt">Creates a range of colors interpolated from a smaller set of colors.</p>
     </li><li name="geotrellis.statistics.op.stat.GetDoubleHistogram" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="GetDoubleHistogramextendsReducer1[geotrellis.statistics.FastMapHistogram,geotrellis.statistics.Histogram]withProductwithSerializable"></a>
+      <a id="GetDoubleHistogramextendsOp[geotrellis.statistics.Histogram]withTileReducer1[geotrellis.statistics.Histogram]withProductwithSerializable"></a>
       <a id="GetDoubleHistogram:GetDoubleHistogram"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -137,12 +137,12 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="GetDoubleHistogram.html"><span class="name">GetDoubleHistogram</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="significantDigits">significantDigits: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="../../../logic/Reducer1.html" class="extype" name="geotrellis.logic.Reducer1">Reducer1</a>[<a href="../../FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>, <a href="../../Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="GetDoubleHistogram.html"><span class="name">GetDoubleHistogram</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="significantDigits">significantDigits: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>] with <a href="../../../logic/TileReducer1.html" class="extype" name="geotrellis.logic.TileReducer1">TileReducer1</a>[<a href="../../Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Create a histogram from double values in a raster.</p>
     </li><li name="geotrellis.statistics.op.stat.GetHistogramArray" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="GetHistogramArrayextendsReducer2[Int,geotrellis.statistics.ArrayHistogram,geotrellis.statistics.Histogram]withProductwithSerializable"></a>
+      <a id="GetHistogramArrayextendsOp[geotrellis.statistics.Histogram]withTileReducer1[geotrellis.statistics.Histogram]withProductwithSerializable"></a>
       <a id="GetHistogramArray:GetHistogramArray"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -150,7 +150,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="GetHistogramArray.html"><span class="name">GetHistogramArray</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="n">n: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="../../../logic/Reducer2.html" class="extype" name="geotrellis.logic.Reducer2">Reducer2</a>[<span class="extype" name="scala.Int">Int</span>, <a href="../../ArrayHistogram.html" class="extype" name="geotrellis.statistics.ArrayHistogram">ArrayHistogram</a>, <a href="../../Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="GetHistogramArray.html"><span class="name">GetHistogramArray</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>] with <a href="../../../logic/TileReducer1.html" class="extype" name="geotrellis.logic.TileReducer1">TileReducer1</a>[<a href="../../Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Implements a histogram in terms of an array of the given size.</p>
@@ -168,7 +168,7 @@
       </h4>
       <p class="comment cmt">Implements a histogram in terms of a map.</p>
     </li><li name="geotrellis.statistics.op.stat.GetMinMax" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="GetMinMaxextendsOp1[geotrellis.Raster,(Int,Int)]withProductwithSerializable"></a>
+      <a id="GetMinMaxextendsOp[(Int,Int)]withTileReducer1[(Int,Int)]withProductwithSerializable"></a>
       <a id="GetMinMax:GetMinMax"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -176,10 +176,10 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="GetMinMax.html"><span class="name">GetMinMax</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result"> extends <a href="../../../Op1.html" class="extype" name="geotrellis.Op1">Op1</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="GetMinMax.html"><span class="name">GetMinMax</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result"> extends <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)] with <a href="../../../logic/TileReducer1.html" class="extype" name="geotrellis.logic.TileReducer1">TileReducer1</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      <p class="comment cmt">Find the minimum and maximum value of a raster.</p>
+      <p class="comment cmt">Returns a tuple with the minimum and maximum value of a raster.</p>
     </li><li name="geotrellis.statistics.op.stat.GetStandardDeviation" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="GetStandardDeviationextendsOp[geotrellis.Raster]withProductwithSerializable"></a>
       <a id="GetStandardDeviation:GetStandardDeviation"></a>
@@ -232,19 +232,6 @@
       </span>
       </h4>
       
-    </li><li name="geotrellis.statistics.op.stat.MinMax" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MinMaxextendsReducer1[(Int,Int),(Int,Int)]withProductwithSerializable"></a>
-      <a id="MinMax:MinMax"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="MinMax.html"><span class="name">MinMax</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result"> extends <a href="../../../logic/Reducer1.html" class="extype" name="geotrellis.logic.Reducer1">Reducer1</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>), (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Find the minimum and maximum values of a raster.</p>
     </li></ol>
             </div>
 

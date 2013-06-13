@@ -40,21 +40,21 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">GetMinMax</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result"> extends <a href="../../../Op1.html" class="extype" name="geotrellis.Op1">Op1</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">GetMinMax</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result"> extends <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)] with <a href="../../../logic/TileReducer1.html" class="extype" name="geotrellis.logic.TileReducer1">TileReducer1</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Find the minimum and maximum value of a raster.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Returns a tuple with the minimum and maximum value of a raster.
 </p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Currently does not support finding double Min and Max values.
          If used with a raster with a double data type (TypeFloat,TypeDouble),
          will find the integer min and max of the rounded cell values.
 </p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="../../../Op1.html" class="extype" name="geotrellis.Op1">Op1</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)], <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)], <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../../../logic/TileReducer1.html" class="extype" name="geotrellis.logic.TileReducer1">TileReducer1</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)], <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)], <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
                 <span class="toggle diagram-link">Type Hierarchy</span>
                 <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph9" viewBox="0.00 0.00 489.00 128.00" height="128pt" width="489pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 124)" class="graph" id="graph1"><polygon points="-4,5 -4,-124 486,-124 486,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><g class="cluster" id="graph4"></g><!-- node4 --><g class="node implicit-outgoing class" id="graph9_4"><a xlink:title="geotrellis.statistics.op.stat.GetMinMax can be implicitly converted to Operation[GetMinMax] by the implicit method implicitLiteral in object geotrellis.Operation" xlink:href="../../../Operation.html#inheritance-diagram"><polygon points="457,-50 313,-50 313,-24 457,-24 457,-50" stroke="#ababab" fill="#e1e1e1"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="323" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#7d7d7d" font-size="10.00" font-family="Arial" y="-34.6667" x="345" text-anchor="start">Operation[GetMinMax]</text></a></g><!-- node0 --><g class="node this class" id="graph9_0"><a xlink:title="geotrellis.statistics.op.stat.GetMinMax (this class)" xlink:href="#inheritance-diagram"><polygon points="241,-50 145,-50 145,-24 241,-24 241,-50" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="155" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-34.6667" x="177" text-anchor="start">GetMinMax</text></a></g><!-- node0&#45;&gt;node4 --><g class="edge implicit-outgoing" id="0_4"><a xlink:title="GetMinMax can be implicitly converted to Operation[GetMinMax]"><path d="M248.705,-37C264.797,-37 282.734,-37 300.172,-37" stroke="#d4d4d4" fill="none"></path><polygon points="300.268,-38.7501 305.268,-37 300.268,-35.2501 300.268,-38.7501" stroke="#d4d4d4" fill="#d4d4d4"></polygon></a><text fill="#aaaaaa" font-size="10.00" font-family="Arial" y="-41" x="277" text-anchor="middle">implicitly</text></g><!-- node1 --><g class="node class" id="graph9_1"><a xlink:title="geotrellis.Op1" xlink:href="../../../Op1.html#inheritance-diagram"><polygon points="136,-120 7.10543e-14,-120 0,-94 136,-94 136,-120" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-115" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="32" text-anchor="start">Op1[Raster, (Int, Int)]</text></a></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph9_1_0"><a xlink:title="GetMinMax is a subtype of Op1[Raster, (Int, Int)]"><path d="M95.8053,-91.429C117.935,-79.0364 148.559,-61.8869 169.482,-50.1703" stroke="#d4d4d4" fill="none"></path><polygon points="94.7261,-90.0276 91.2186,-93.9976 96.4362,-93.0814 94.7261,-90.0276" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph9_2"><a xlink:title="scala.Product"><polygon points="232,-120 154,-120 154,-94 232,-94 232,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="164" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="186" text-anchor="start">Product</text></a></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph9_2_0"><a xlink:title="GetMinMax is a subtype of Product"><path d="M193,-88.5481C193,-76.457 193,-60.9432 193,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="191.25,-88.8335 193,-93.8335 194.75,-88.8336 191.25,-88.8335" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node trait" id="graph9_3"><a xlink:title="scala.Serializable"><polygon points="346,-120 250,-120 250,-94 346,-94 346,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="260" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="282" text-anchor="start">Serializable</text></a></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph9_3_0"><a xlink:title="GetMinMax is a subtype of Serializable"><path d="M273.689,-90.7927C255.148,-78.4323 229.94,-61.6266 212.661,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="273.119,-92.5161 278.25,-93.8335 275.061,-89.6039 273.119,-92.5161" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph8" viewBox="0.00 0.00 543.00 128.00" height="128pt" width="543pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 124)" class="graph" id="graph1"><polygon points="-4,5 -4,-124 540,-124 540,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><g class="cluster" id="graph4"></g><!-- node5 --><g class="node implicit-outgoing class" id="graph8_5"><a xlink:title="geotrellis.statistics.op.stat.GetMinMax can be implicitly converted to Operation[GetMinMax] by the implicit method implicitLiteral in object geotrellis.Operation" xlink:href="../../../Operation.html#inheritance-diagram"><polygon points="511,-50 367,-50 367,-24 511,-24 511,-50" stroke="#ababab" fill="#e1e1e1"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="377" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#7d7d7d" font-size="10.00" font-family="Arial" y="-34.6667" x="399" text-anchor="start">Operation[GetMinMax]</text></a></g><!-- node0 --><g class="node this class" id="graph8_0"><a xlink:title="geotrellis.statistics.op.stat.GetMinMax (this class)" xlink:href="#inheritance-diagram"><polygon points="295,-50 199,-50 199,-24 295,-24 295,-50" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="209" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-34.6667" x="231" text-anchor="start">GetMinMax</text></a></g><!-- node0&#45;&gt;node5 --><g class="edge implicit-outgoing" id="0_5"><a xlink:title="GetMinMax can be implicitly converted to Operation[GetMinMax]"><path d="M302.705,-37C318.797,-37 336.734,-37 354.172,-37" stroke="#d4d4d4" fill="none"></path><polygon points="354.268,-38.7501 359.268,-37 354.268,-35.2501 354.268,-38.7501" stroke="#d4d4d4" fill="#d4d4d4"></polygon></a><text fill="#aaaaaa" font-size="10.00" font-family="Arial" y="-41" x="331" text-anchor="middle">implicitly</text></g><!-- node1 --><g class="node class" id="graph8_1"><a xlink:title="geotrellis.Operation" xlink:href="../../../Operation.html#inheritance-diagram"><polygon points="96,-120 2.84217e-14,-120 0,-94 96,-94 96,-120" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-115" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="32" text-anchor="start">Op[(Int, Int)]</text></a></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph8_1_0"><a xlink:title="GetMinMax is a subtype of Op[(Int, Int)]"><path d="M90.0895,-92.1946C125.583,-79.7095 175.891,-62.0131 209.897,-50.0514" stroke="#d4d4d4" fill="none"></path><polygon points="89.1,-90.6875 84.964,-93.9976 90.2614,-93.9892 89.1,-90.6875" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph8_2"><a xlink:title="geotrellis.logic.TileReducer1" xlink:href="../../../logic/TileReducer1.html#inheritance-diagram"><polygon points="254,-120 114,-120 114,-94 254,-94 254,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="124" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="146" text-anchor="start">TileReducer1[(Int, Int)]</text></a></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph8_2_0"><a xlink:title="GetMinMax is a subtype of TileReducer1[(Int, Int)]"><path d="M199.443,-89.8415C210.477,-77.5811 225.1,-61.3337 235.203,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="197.894,-88.9463 195.85,-93.8335 200.495,-91.2877 197.894,-88.9463" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node trait" id="graph8_3"><a xlink:title="scala.Product"><polygon points="350,-120 272,-120 272,-94 350,-94 350,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="282" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="304" text-anchor="start">Product</text></a></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph8_3_0"><a xlink:title="GetMinMax is a subtype of Product"><path d="M295.312,-89.8415C284.103,-77.5811 269.248,-61.3337 258.984,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="294.297,-91.3242 298.962,-93.8335 296.88,-88.9625 294.297,-91.3242" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node4 --><g class="node trait" id="graph8_4"><a xlink:title="scala.Serializable"><polygon points="464,-120 368,-120 368,-94 464,-94 464,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="378" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="400" text-anchor="start">Serializable</text></a></g><!-- node4&#45;&gt;node0 --><g class="edge inheritance" id="graph8_4_0"><a xlink:title="GetMinMax is a subtype of Serializable"><path d="M379.884,-92.0409C349.763,-79.5646 307.27,-61.9641 278.51,-50.0514" stroke="#d4d4d4" fill="none"></path><polygon points="379.319,-93.701 384.608,-93.9976 380.659,-90.4674 379.319,-93.701" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
               </div></div>
         
 
@@ -72,7 +72,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.statistics.op.stat.GetMinMax"><span>GetMinMax</span></li><li class="in" name="geotrellis.Op1"><span>Op1</span></li><li class="in" name="geotrellis.Operation"><span>Operation</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.statistics.op.stat.GetMinMax"><span>GetMinMax</span></li><li class="in" name="geotrellis.logic.TileReducer1"><span>TileReducer1</span></li><li class="in" name="geotrellis.Operation"><span>Operation</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
                 <span class="filtertype">Implicitly<br />
@@ -128,6 +128,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.statistics.op.stat.GetMinMax.B" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="B=(Int,Int)"></a>
+      <a id="B:(Int,Int)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">B</span><span class="result"> = (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.statistics.op.stat.GetMinMax">GetMinMax</a> → <a href="../../../logic/TileReducer1.html" class="extype" name="geotrellis.logic.TileReducer1">TileReducer1</a></dd></dl></div>
     </li><li name="geotrellis.Operation.Steps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="Steps=PartialFunction[Any,geotrellis.StepOutput[T]]"></a>
       <a id="Steps:Steps"></a>
@@ -250,8 +263,8 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.Op1#_run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="_run(context:geotrellis.Context):geotrellis.StepOutput[T]"></a>
+    </li><li name="geotrellis.logic.TileReducer1#_run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_run(context:geotrellis.Context):geotrellis.StepOutput[C]"></a>
       <a id="_run(Context):StepOutput[(Int,Int)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -262,7 +275,7 @@
         <span class="name">_run</span><span class="params">(<span name="context">context: <a href="../../../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op1.html" class="extype" name="geotrellis.Op1">Op1</a> → <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../logic/TileReducer1.html" class="extype" name="geotrellis.logic.TileReducer1">TileReducer1</a> → <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation#andThen" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="andThen[U](f:T=&gt;geotrellis.Op[U]):geotrellis.Operation[U]"></a>
       <a id="andThen[U](((Int,Int))⇒Op[U]):Operation[U]"></a>
@@ -289,8 +302,8 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.Op1#canEqual" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="canEqual(other:Any):Boolean"></a>
+    </li><li name="geotrellis.Operation.implicitLiteral#canEqual" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="canEqual(that:Any):Boolean"></a>
       <a id="canEqual(Any):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -298,10 +311,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">canEqual</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="implicit">canEqual</span><span class="params">(<span name="that">that: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op1.html" class="extype" name="geotrellis.Op1">Op1</a> → Equals</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.statistics.op.stat.GetMinMax">GetMinMax</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.statistics.op.stat.GetMinMax">GetMinMax</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt>Definition Classes</dt><dd>Equals</dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -521,6 +538,19 @@ but returns nothing.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.logic.TileReducer1#init" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="init(r:geotrellis.Raster,cropPolygon:Option[geotrellis.feature.Polygon[_]]):geotrellis.StepOutput[C]"></a>
+      <a id="init(Raster,Option[Polygon[_]]):StepOutput[(Int,Int)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">init</span><span class="params">(<span name="r">r: <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>, <span name="cropPolygon">cropPolygon: <span class="extype" name="scala.Option">Option</span>[<a href="../../../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[_]]</span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../logic/TileReducer1.html" class="extype" name="geotrellis.logic.TileReducer1">TileReducer1</a></dd></dl></div>
     </li><li name="geotrellis.Operation#into" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="into[U](f:geotrellis.Operation[T]=&gt;U):U"></a>
       <a id="into[U]((Operation[(Int,Int)])⇒U):U"></a>
@@ -548,6 +578,32 @@ but returns nothing.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.logic.TileReducer1#limit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="limit:Int"></a>
+      <a id="limit:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">limit</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../logic/TileReducer1.html" class="extype" name="geotrellis.logic.TileReducer1">TileReducer1</a></dd></dl></div>
+    </li><li name="geotrellis.logic.TileReducer1#loadTileExtent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="loadTileExtent:Option[geotrellis.Op[geotrellis.feature.Polygon[_]]]"></a>
+      <a id="loadTileExtent:Option[Op[Polygon[_]]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">loadTileExtent</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[_]]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../logic/TileReducer1.html" class="extype" name="geotrellis.logic.TileReducer1">TileReducer1</a></dd></dl></div>
     </li><li name="geotrellis.Operation#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="map[U](f:T=&gt;U):geotrellis.Operation[U]"></a>
       <a id="map[U](((Int,Int))⇒U):Operation[U]"></a>
@@ -564,19 +620,32 @@ but returns nothing.
 takes this operation's result as its argument.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation that returns the result of the provided function that
 takes this operation's result as its argument.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
-    </li><li name="geotrellis.Op1#myNextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="myNextSteps:PartialFunction[Any,geotrellis.StepOutput[T]]"></a>
-      <a id="myNextSteps:PartialFunction[Any,StepOutput[(Int,Int)]]"></a>
+    </li><li name="geotrellis.statistics.op.stat.GetMinMax#mapper" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mapper(r:geotrellis.Op[geotrellis.Raster]):geotrellis.logic.AsList[(Int,Int)]"></a>
+      <a id="mapper(Op[Raster]):AsList[(Int,Int)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mapper</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result">: <a href="../../../logic/AsList.html" class="extype" name="geotrellis.logic.AsList">AsList</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.statistics.op.stat.GetMinMax">GetMinMax</a> → <a href="../../../logic/TileReducer1.html" class="extype" name="geotrellis.logic.TileReducer1">TileReducer1</a></dd></dl></div>
+    </li><li name="geotrellis.statistics.op.stat.GetMinMax#maxOp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="maxOp:geotrellis.package.Op[geotrellis.Raster]=&gt;geotrellis.Op1[geotrellis.Raster,(Int,Int)]"></a>
+      <a id="maxOp:(Op[Raster])⇒Op1[Raster,(Int,Int)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">myNextSteps</span><span class="result">: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]]</span>
+        <span class="name">maxOp</span><span class="result">: (<a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]) ⇒ <a href="../../../Op1.html" class="extype" name="geotrellis.Op1">Op1</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op1.html" class="extype" name="geotrellis.Op1">Op1</a></dd></dl></div>
+      
     </li><li name="geotrellis.Operation#name" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="name:String"></a>
       <a id="name:String"></a>
@@ -604,19 +673,19 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.Op1#nextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="nextSteps:PartialFunction[Any,geotrellis.StepOutput[T]]"></a>
-      <a id="nextSteps:PartialFunction[Any,StepOutput[(Int,Int)]]"></a>
+    </li><li name="geotrellis.logic.TileReducer1#nextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nextSteps:TileReducer1.this.Steps"></a>
+      <a id="nextSteps:Steps"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">nextSteps</span><span class="result">: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]]</span>
+        <span class="name">nextSteps</span><span class="result">: <a href="#Steps=PartialFunction[Any,geotrellis.StepOutput[T]]" class="extmbr" name="geotrellis.statistics.op.stat.GetMinMax.Steps">Steps</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op1.html" class="extype" name="geotrellis.Op1">Op1</a> → <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../logic/TileReducer1.html" class="extype" name="geotrellis.logic.TileReducer1">TileReducer1</a> → <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -656,7 +725,7 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
-    </li><li name="geotrellis.Op1#productArity" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.Operation.implicitLiteral#productArity" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="productArity:Int"></a>
       <a id="productArity:Int"></a>
       <h4 class="signature">
@@ -665,11 +734,15 @@ takes this operation's result as its argument.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">productArity</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="implicit">productArity</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op1.html" class="extype" name="geotrellis.Op1">Op1</a> → Product</dd></dl></div>
-    </li><li name="geotrellis.Op1#productElement" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.statistics.op.stat.GetMinMax">GetMinMax</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.statistics.op.stat.GetMinMax">GetMinMax</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteral#productElement" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="productElement(n:Int):Any"></a>
       <a id="productElement(Int):Any"></a>
       <h4 class="signature">
@@ -678,10 +751,14 @@ takes this operation's result as its argument.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">productElement</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+        <span class="implicit">productElement</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op1.html" class="extype" name="geotrellis.Op1">Op1</a> → Product</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.statistics.op.stat.GetMinMax">GetMinMax</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.statistics.op.stat.GetMinMax">GetMinMax</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#productIterator" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="productIterator:Iterator[Any]"></a>
       <a id="productIterator:Iterator[Any]"></a>
@@ -716,7 +793,7 @@ takes this operation's result as its argument.
             <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.statistics.op.stat.GetMinMax">GetMinMax</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
           </dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
-    </li><li name="geotrellis.statistics.op.stat.GetMinMax#r" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.statistics.op.stat.GetMinMax#r" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="r:geotrellis.Op[geotrellis.Raster]"></a>
       <a id="r:Op[Raster]"></a>
       <h4 class="signature">
@@ -728,7 +805,20 @@ takes this operation's result as its argument.
         <span class="name">r</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.statistics.op.stat.GetMinMax">GetMinMax</a> → <a href="../../../logic/TileReducer1.html" class="extype" name="geotrellis.logic.TileReducer1">TileReducer1</a></dd></dl></div>
+    </li><li name="geotrellis.statistics.op.stat.GetMinMax#reducer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reducer(results:List[(Int,Int)]):(Int,Int)"></a>
+      <a id="reducer(List[(Int,Int)]):(Int,Int)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reducer</span><span class="params">(<span name="results">results: <span class="extype" name="scala.List">List</span>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>)</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.statistics.op.stat.GetMinMax">GetMinMax</a> → <a href="../../../logic/TileReducer1.html" class="extype" name="geotrellis.logic.TileReducer1">TileReducer1</a></dd></dl></div>
     </li><li name="geotrellis.Operation#remote" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="remote(cluster:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
       <a id="remote(ActorRef):DispatchedOperation[(Int,Int)]"></a>
@@ -888,23 +978,6 @@ and returns a new operation.</p><p>Same as flatMap.
             <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.statistics.op.stat.GetMinMax">GetMinMax</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(getMinMax: Operation[GetMinMax]).andThen(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
-    </li><li name="geotrellis.Operation.implicitLiteral#canEqual" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="canEqual(that:Any):Boolean"></a>
-      <a id="canEqual(Any):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="implicit shadowed">canEqual</span><span class="params">(<span name="that">that: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.statistics.op.stat.GetMinMax">GetMinMax</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.statistics.op.stat.GetMinMax">GetMinMax</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(getMinMax: Operation[GetMinMax]).canEqual(that)</pre></div></dd><dt>Definition Classes</dt><dd>Equals</dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#debug" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="debug:Boolean"></a>
       <a id="debug:Boolean"></a>
@@ -1088,40 +1161,6 @@ takes this operation's result as its argument.
             <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.statistics.op.stat.GetMinMax">GetMinMax</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(getMinMax: Operation[GetMinMax]).processNextSteps(args)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
-    </li><li name="geotrellis.Operation.implicitLiteral#productArity" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="productArity:Int"></a>
-      <a id="productArity:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="implicit shadowed">productArity</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.statistics.op.stat.GetMinMax">GetMinMax</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.statistics.op.stat.GetMinMax">GetMinMax</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(getMinMax: Operation[GetMinMax]).productArity</pre></div></dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
-    </li><li name="geotrellis.Operation.implicitLiteral#productElement" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="productElement(n:Int):Any"></a>
-      <a id="productElement(Int):Any"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="implicit shadowed">productElement</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.statistics.op.stat.GetMinMax">GetMinMax</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.statistics.op.stat.GetMinMax">GetMinMax</a>] performed by method implicitLiteral in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(getMinMax: Operation[GetMinMax]).productElement(n)</pre></div></dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#remote" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="remote(cluster:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
       <a id="remote(ActorRef):DispatchedOperation[GetMinMax]"></a>
@@ -1281,8 +1320,8 @@ and returns a new operation.</p><p>Same as flatMap.
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="geotrellis.Op1">
-              <h3>Inherited from <a href="../../../Op1.html" class="extype" name="geotrellis.Op1">Op1</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</h3>
+        <div class="parent" name="geotrellis.logic.TileReducer1">
+              <h3>Inherited from <a href="../../../logic/TileReducer1.html" class="extype" name="geotrellis.logic.TileReducer1">TileReducer1</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</h3>
             </div><div class="parent" name="geotrellis.Operation">
               <h3>Inherited from <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</h3>
             </div><div class="parent" name="scala.Serializable">
