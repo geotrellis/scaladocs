@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>LoadUncachedTileSet - geotrellis.io.LoadUncachedTileSet</title>
-          <meta name="description" content="LoadUncachedTileSet - geotrellis.io.LoadUncachedTileSet" />
-          <meta name="keywords" content="LoadUncachedTileSet geotrellis.io.LoadUncachedTileSet" />
+          <title>LoadRasterTile - geotrellis.io.LoadRasterTile</title>
+          <meta name="description" content="LoadRasterTile - geotrellis.io.LoadRasterTile" />
+          <meta name="keywords" content="LoadRasterTile geotrellis.io.LoadRasterTile" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -17,7 +17,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../index.html';
-            var hash = 'geotrellis.io.LoadUncachedTileSet';
+            var hash = 'geotrellis.io.LoadRasterTile';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -31,7 +31,7 @@
       <div id="definition">
         <img src="../../lib/class_big.png" />
         <p id="owner"><a href="../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="package.html" class="extype" name="geotrellis.io">io</a></p>
-        <h1>LoadUncachedTileSet</h1>
+        <h1>LoadRasterTile</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -40,19 +40,18 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">LoadUncachedTileSet</span><span class="params">(<span name="path">path: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">LoadRasterTile</span><span class="params">(<span name="n">n: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="col">col: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="row">row: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Load a set of tiles from a specified directory, without caching the tiles into memory.</p><p>This directory must contain a layout.json file as well as tiles written
-in the ARG format.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Load a specific tile from a raster at a given row and column.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>], <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
                 <span class="toggle diagram-link">Type Hierarchy</span>
                 <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph329" viewBox="0.00 0.00 511.00 128.00" height="128pt" width="511pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 124)" class="graph" id="graph1"><polygon points="-4,5 -4,-124 508,-124 508,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><g class="cluster" id="graph4"></g><!-- node4 --><g class="node implicit-outgoing class" id="graph329_4"><a xlink:title="geotrellis.io.LoadUncachedTileSet can be implicitly converted to Operation[LoadUncachedTileSet] by the implicit method implicitLiteral in object geotrellis.Operation" xlink:href="../Operation.html#inheritance-diagram"><polygon points="479,-50 291,-50 291,-24 479,-24 479,-50" stroke="#ababab" fill="#e1e1e1"></polygon><image xlink:href="../../lib/class_diagram.png" y="-45" x="301" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#7d7d7d" font-size="10.00" font-family="Arial" y="-34.6667" x="323" text-anchor="start">Operation[LoadUncachedTileSet]</text></a></g><!-- node0 --><g class="node this class" id="graph329_0"><a xlink:title="geotrellis.io.LoadUncachedTileSet (this class)" xlink:href="#inheritance-diagram"><polygon points="219,-50 79,-50 79,-24 219,-24 219,-50" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-45" x="89" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-34.6667" x="111" text-anchor="start">LoadUncachedTileSet</text></a></g><!-- node0&#45;&gt;node4 --><g class="edge implicit-outgoing" id="0_4"><a xlink:title="LoadUncachedTileSet can be implicitly converted to Operation[LoadUncachedTileSet]"><path d="M226.681,-37C243.227,-37 260.975,-37 278.389,-37" stroke="#d4d4d4" fill="none"></path><polygon points="278.483,-38.7501 283.483,-37 278.483,-35.2501 278.483,-38.7501" stroke="#d4d4d4" fill="#d4d4d4"></polygon></a><text fill="#aaaaaa" font-size="10.00" font-family="Arial" y="-41" x="255" text-anchor="middle">implicitly</text></g><!-- node1 --><g class="node class" id="graph329_1"><a xlink:title="geotrellis.Operation" xlink:href="../Operation.html#inheritance-diagram"><polygon points="92,-120 4.9738e-14,-120 0,-94 92,-94 92,-120" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-115" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="32" text-anchor="start">Op[Raster]</text></a></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph329_1_0"><a xlink:title="LoadUncachedTileSet is a subtype of Op[Raster]"><path d="M69.8478,-90.7927C88.0354,-78.4323 112.764,-61.6266 129.713,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="68.5252,-89.5757 65.3735,-93.8335 70.4926,-92.4704 68.5252,-89.5757" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph329_2"><a xlink:title="scala.Product"><polygon points="188,-120 110,-120 110,-94 188,-94 188,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-115" x="120" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="142" text-anchor="start">Product</text></a></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph329_2_0"><a xlink:title="LoadUncachedTileSet is a subtype of Product"><path d="M149,-88.5481C149,-76.457 149,-60.9432 149,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="147.25,-88.8335 149,-93.8335 150.75,-88.8336 147.25,-88.8335" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node trait" id="graph329_3"><a xlink:title="scala.Serializable"><polygon points="302,-120 206,-120 206,-94 302,-94 302,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-115" x="216" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="238" text-anchor="start">Serializable</text></a></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph329_3_0"><a xlink:title="LoadUncachedTileSet is a subtype of Serializable"><path d="M229.689,-90.7927C211.148,-78.4323 185.94,-61.6266 168.661,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="229.119,-92.5161 234.25,-93.8335 231.061,-89.6039 229.119,-92.5161" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph330" viewBox="0.00 0.00 466.00 128.00" height="128pt" width="466pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 124)" class="graph" id="graph1"><polygon points="-4,5 -4,-124 463,-124 463,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><g class="cluster" id="graph4"></g><!-- node4 --><g class="node implicit-outgoing class" id="graph330_4"><a xlink:title="geotrellis.io.LoadRasterTile can be implicitly converted to Operation[LoadRasterTile] by the implicit method implicitLiteral in object geotrellis.Operation" xlink:href="../Operation.html#inheritance-diagram"><polygon points="434,-50 276,-50 276,-24 434,-24 434,-50" stroke="#ababab" fill="#e1e1e1"></polygon><image xlink:href="../../lib/class_diagram.png" y="-45" x="286" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#7d7d7d" font-size="10.00" font-family="Arial" y="-34.6667" x="308" text-anchor="start">Operation[LoadRasterTile]</text></a></g><!-- node0 --><g class="node this class" id="graph330_0"><a xlink:title="geotrellis.io.LoadRasterTile (this class)" xlink:href="#inheritance-diagram"><polygon points="204,-50 94,-50 94,-24 204,-24 204,-50" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-45" x="104" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-34.6667" x="126" text-anchor="start">LoadRasterTile</text></a></g><!-- node0&#45;&gt;node4 --><g class="edge implicit-outgoing" id="0_4"><a xlink:title="LoadRasterTile can be implicitly converted to Operation[LoadRasterTile]"><path d="M211.587,-37C227.917,-37 245.858,-37 263.357,-37" stroke="#d4d4d4" fill="none"></path><polygon points="263.473,-38.7501 268.473,-37 263.473,-35.2501 263.473,-38.7501" stroke="#d4d4d4" fill="#d4d4d4"></polygon></a><text fill="#aaaaaa" font-size="10.00" font-family="Arial" y="-41" x="240" text-anchor="middle">implicitly</text></g><!-- node1 --><g class="node class" id="graph330_1"><a xlink:title="geotrellis.Operation" xlink:href="../Operation.html#inheritance-diagram"><polygon points="92,-120 4.9738e-14,-120 0,-94 92,-94 92,-120" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-115" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="32" text-anchor="start">Op[Raster]</text></a></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph330_1_0"><a xlink:title="LoadRasterTile is a subtype of Op[Raster]"><path d="M69.8478,-90.7927C88.0354,-78.4323 112.764,-61.6266 129.713,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="68.5252,-89.5757 65.3735,-93.8335 70.4926,-92.4704 68.5252,-89.5757" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph330_2"><a xlink:title="scala.Product"><polygon points="188,-120 110,-120 110,-94 188,-94 188,-120" stroke="#37657d" fill="#498aad"></polygon><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="142" text-anchor="start">Product</text><image xlink:href="../../lib/trait_diagram.png" width="16px" height="16px" preserveAspectRatio="xMinYMin meet" x="120.0" y="-116.0004" xmlns:xlink="http://www.w3.org/1999/xlink"></image></a></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph330_2_0"><a xlink:title="LoadRasterTile is a subtype of Product"><path d="M149,-88.5481C149,-76.457 149,-60.9432 149,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="147.25,-88.8335 149,-93.8335 150.75,-88.8336 147.25,-88.8335" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node trait" id="graph330_3"><a xlink:title="scala.Serializable"><polygon points="302,-120 206,-120 206,-94 302,-94 302,-120" stroke="#37657d" fill="#498aad"></polygon><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="238" text-anchor="start">Serializable</text><image xlink:href="../../lib/trait_diagram.png" width="16px" height="16px" preserveAspectRatio="xMinYMin meet" x="216.0" y="-116.0004" xmlns:xlink="http://www.w3.org/1999/xlink"></image></a></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph330_3_0"><a xlink:title="LoadRasterTile is a subtype of Serializable"><path d="M229.689,-90.7927C211.148,-78.4323 185.94,-61.6266 168.661,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="229.119,-92.5161 234.25,-93.8335 231.061,-89.6039 229.119,-92.5161" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
               </div></div>
         
 
@@ -70,7 +69,7 @@ in the ARG format.
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.io.LoadUncachedTileSet"><span>LoadUncachedTileSet</span></li><li class="in" name="geotrellis.Operation"><span>Operation</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.io.LoadRasterTile"><span>LoadRasterTile</span></li><li class="in" name="geotrellis.Operation"><span>Operation</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
                 <span class="filtertype">Implicitly<br />
@@ -95,16 +94,16 @@ in the ARG format.
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="geotrellis.io.LoadUncachedTileSet#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(path:geotrellis.Op[String]):geotrellis.io.LoadUncachedTileSet"></a>
-      <a id="&lt;init&gt;:LoadUncachedTileSet"></a>
+              <ol><li name="geotrellis.io.LoadRasterTile#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(n:geotrellis.Op[String],col:geotrellis.Op[Int],row:geotrellis.Op[Int]):geotrellis.io.LoadRasterTile"></a>
+      <a id="&lt;init&gt;:LoadRasterTile"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">LoadUncachedTileSet</span><span class="params">(<span name="path">path: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span>
+        <span class="name">LoadRasterTile</span><span class="params">(<span name="n">n: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="col">col: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="row">row: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span>
       </span>
       </h4>
       
@@ -198,25 +197,25 @@ in the ARG format.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
             <span class="extype" name="scala.runtime.StringAdd">StringAdd</span> performed by method any2stringadd in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
     </li><li name="scala.Predef.any2ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="-&gt;[B](y:B):(A,B)"></a>
-      <a id="-&gt;[B](B):(LoadUncachedTileSet,B)"></a>
+      <a id="-&gt;[B](B):(LoadRasterTile,B)"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method any2ArrowAssoc in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method any2ArrowAssoc in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
                 <span class="name">@inline</span><span class="args">()</span>
@@ -248,7 +247,7 @@ in the ARG format.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.io.LoadUncachedTileSet#_run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.io.LoadRasterTile#_run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_run(context:geotrellis.Context):geotrellis.StepOutput[geotrellis.Raster]"></a>
       <a id="_run(Context):StepOutput[Raster]"></a>
       <h4 class="signature">
@@ -260,7 +259,7 @@ in the ARG format.
         <span class="name">_run</span><span class="params">(<span name="context">context: <a href="../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> → <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> → <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation#andThen" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="andThen[U](f:T=&gt;geotrellis.Op[U]):geotrellis.Operation[U]"></a>
       <a id="andThen[U]((Raster)⇒Op[U]):Operation[U]"></a>
@@ -300,8 +299,8 @@ in the ARG format.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
           </dd><dt>Definition Classes</dt><dd>Equals</dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -320,6 +319,19 @@ in the ARG format.
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="geotrellis.io.LoadRasterTile#col" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="col:geotrellis.Op[Int]"></a>
+      <a id="col:Op[Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">col</span><span class="result">: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4>
+      
     </li><li name="geotrellis.Operation#debug" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="debug:Boolean"></a>
       <a id="debug:Boolean"></a>
@@ -350,70 +362,70 @@ in the ARG format.
  dispatched to and executed on a remote cluster.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
-      <a id="ensuring((LoadUncachedTileSet)⇒Boolean,⇒Any):LoadUncachedTileSet"></a>
+      <a id="ensuring((LoadRasterTile)⇒Boolean,⇒Any):LoadRasterTile"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a></span>
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method any2Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method any2Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:A=&gt;Boolean):A"></a>
-      <a id="ensuring((LoadUncachedTileSet)⇒Boolean):LoadUncachedTileSet"></a>
+      <a id="ensuring((LoadRasterTile)⇒Boolean):LoadRasterTile"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a></span>
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method any2Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method any2Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
-      <a id="ensuring(Boolean,⇒Any):LoadUncachedTileSet"></a>
+      <a id="ensuring(Boolean,⇒Any):LoadRasterTile"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a></span>
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method any2Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method any2Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensuring(cond:Boolean):A"></a>
-      <a id="ensuring(Boolean):LoadUncachedTileSet"></a>
+      <a id="ensuring(Boolean):LoadRasterTile"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a></span>
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method any2Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method any2Ensuring in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -503,7 +515,7 @@ but returns nothing.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
             <span class="extype" name="scala.runtime.StringFormat">StringFormat</span> performed by method any2stringfmt in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
@@ -523,6 +535,19 @@ but returns nothing.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.io.LoadRasterTile#getTileFromRasterLayer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getTileFromRasterLayer(rasterLayer:geotrellis.process.RasterLayer,col:Int,row:Int):geotrellis.Raster"></a>
+      <a id="getTileFromRasterLayer(RasterLayer,Int,Int):Raster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTileFromRasterLayer</span><span class="params">(<span name="rasterLayer">rasterLayer: <a href="../process/RasterLayer.html" class="extype" name="geotrellis.process.RasterLayer">RasterLayer</a></span>, <span name="col">col: <span class="extype" name="scala.Int">Int</span></span>, <span name="row">row: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>
+      </span>
+      </h4>
+      
     </li><li name="geotrellis.Operation#into" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="into[U](f:geotrellis.Operation[T]=&gt;U):U"></a>
       <a id="into[U]((Operation[Raster])⇒U):U"></a>
@@ -566,6 +591,19 @@ but returns nothing.
 takes this operation's result as its argument.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation that returns the result of the provided function that
 takes this operation's result as its argument.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.io.LoadRasterTile#n" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="n:geotrellis.Op[String]"></a>
+      <a id="n:Op[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">n</span><span class="result">: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4>
+      
     </li><li name="geotrellis.Operation#name" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="name:String"></a>
       <a id="name:String"></a>
@@ -593,8 +631,8 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.io.LoadUncachedTileSet#nextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="nextSteps:LoadUncachedTileSet.this.Steps"></a>
+    </li><li name="geotrellis.io.LoadRasterTile#nextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nextSteps:LoadRasterTile.this.Steps"></a>
       <a id="nextSteps:Steps"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -602,10 +640,10 @@ takes this operation's result as its argument.
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">nextSteps</span><span class="result">: <a href="#Steps=PartialFunction[Any,geotrellis.StepOutput[T]]" class="extmbr" name="geotrellis.io.LoadUncachedTileSet.Steps">Steps</a></span>
+        <span class="name">nextSteps</span><span class="result">: <a href="#Steps=PartialFunction[Any,geotrellis.StepOutput[T]]" class="extmbr" name="geotrellis.io.LoadRasterTile.Steps">Steps</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> → <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> → <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -632,19 +670,6 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.io.LoadUncachedTileSet#path" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="path:geotrellis.Op[String]"></a>
-      <a id="path:Op[String]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">path</span><span class="result">: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      </h4>
-      
     </li><li name="geotrellis.Operation#processNextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="processNextSteps(args:Operation.this.Args):geotrellis.StepOutput[T]"></a>
       <a id="processNextSteps(Args):StepOutput[Raster]"></a>
@@ -654,7 +679,7 @@ takes this operation's result as its argument.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">processNextSteps</span><span class="params">(<span name="args">args: <a href="#Args=List[Any]" class="extmbr" name="geotrellis.io.LoadUncachedTileSet.Args">Args</a></span>)</span><span class="result">: <a href="../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+        <span class="name">processNextSteps</span><span class="params">(<span name="args">args: <a href="#Args=List[Any]" class="extmbr" name="geotrellis.io.LoadRasterTile.Args">Args</a></span>)</span><span class="result">: <a href="../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
@@ -671,8 +696,8 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
           </dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#productElement" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -688,8 +713,8 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
           </dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#productIterator" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -705,8 +730,8 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
           </dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#productPrefix" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -722,8 +747,8 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
           </dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
     </li><li name="geotrellis.Operation#remote" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -742,6 +767,19 @@ takes this operation's result as its argument.
  cluster.</p><p> Note that if you wish to distribute the work of a single operation, you
  should probably be using dispatch() instead of remote().
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.io.LoadRasterTile#row" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="row:geotrellis.Op[Int]"></a>
+      <a id="row:Op[Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">row</span><span class="result">: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4>
+      
     </li><li name="geotrellis.Operation#run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="run(context:geotrellis.Context):geotrellis.StepOutput[T]"></a>
       <a id="run(Context):StepOutput[Raster]"></a>
@@ -765,7 +803,7 @@ takes this operation's result as its argument.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">runAsync</span><span class="params">(<span name="args">args: <a href="#Args=List[Any]" class="extmbr" name="geotrellis.io.LoadUncachedTileSet.Args">Args</a></span>)</span><span class="result">: <a href="../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+        <span class="name">runAsync</span><span class="params">(<span name="args">args: <a href="#Args=List[Any]" class="extmbr" name="geotrellis.io.LoadRasterTile.Args">Args</a></span>)</span><span class="result">: <a href="../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
@@ -848,19 +886,19 @@ and returns a new operation.</p><p>Same as flatMap.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="scala.Predef.any2ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="→[B](y:B):(A,B)"></a>
-      <a id="→[B](B):(LoadUncachedTileSet,B)"></a>
+      <a id="→[B](B):(LoadRasterTile,B)"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method any2ArrowAssoc in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method any2ArrowAssoc in scala.Predef.
             
           </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
     </li></ol>
@@ -870,21 +908,21 @@ and returns a new operation.</p><p>Same as flatMap.
               <h3>Shadowed Implict Value Members</h3>
               <ol><li name="geotrellis.Operation.implicitLiteral#andThen" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="andThen[U](f:T=&gt;geotrellis.Op[U]):geotrellis.Operation[U]"></a>
-      <a id="andThen[U]((LoadUncachedTileSet)⇒Op[U]):Operation[U]"></a>
+      <a id="andThen[U]((LoadRasterTile)⇒Op[U]):Operation[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">andThen</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>) ⇒ <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.Operation.andThen.U">U</span>]</span>)</span><span class="result">: <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.andThen.U">U</span>]</span>
+        <span class="implicit shadowed">andThen</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>) ⇒ <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.Operation.andThen.U">U</span>]</span>)</span><span class="result">: <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.andThen.U">U</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadUncachedTileSet: Operation[LoadUncachedTileSet]).andThen(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadRasterTile: Operation[LoadRasterTile]).andThen(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#debug" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="debug:Boolean"></a>
       <a id="debug:Boolean"></a>
@@ -898,124 +936,124 @@ and returns a new operation.</p><p>Same as flatMap.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadUncachedTileSet: Operation[LoadUncachedTileSet]).debug</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadRasterTile: Operation[LoadRasterTile]).debug</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#dispatch" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="dispatch(cluster:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
-      <a id="dispatch(ActorRef):DispatchedOperation[LoadUncachedTileSet]"></a>
+      <a id="dispatch(ActorRef):DispatchedOperation[LoadRasterTile]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">dispatch</span><span class="params">(<span name="cluster">cluster: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>]</span>
+        <span class="implicit shadowed">dispatch</span><span class="params">(<span name="cluster">cluster: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Returns an operation whose children will be executed on a remote cluster.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an operation whose children will be executed on a remote cluster.</p><p> This method will cause the operations executed as a result of this operation
  (input operations and any operations necessary for this computation) to be
  dispatched to and executed on a remote cluster.</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadUncachedTileSet: Operation[LoadUncachedTileSet]).dispatch(cluster)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadRasterTile: Operation[LoadRasterTile]).dispatch(cluster)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#filter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="filter(f:T=&gt;Boolean):geotrellis.Operation[T]"></a>
-      <a id="filter((LoadUncachedTileSet)⇒Boolean):Operation[LoadUncachedTileSet]"></a>
+      <a id="filter((LoadRasterTile)⇒Boolean):Operation[LoadRasterTile]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">filter</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>]</span>
+        <span class="implicit shadowed">filter</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadUncachedTileSet: Operation[LoadUncachedTileSet]).filter(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadRasterTile: Operation[LoadRasterTile]).filter(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#flatMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="flatMap[U](f:T=&gt;geotrellis.Operation[U]):geotrellis.Operation[U]"></a>
-      <a id="flatMap[U]((LoadUncachedTileSet)⇒Operation[U]):Operation[U]"></a>
+      <a id="flatMap[U]((LoadRasterTile)⇒Operation[U]):Operation[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">flatMap</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>) ⇒ <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>)</span><span class="result">: <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>
+        <span class="implicit shadowed">flatMap</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>) ⇒ <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>)</span><span class="result">: <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a new operation with a function that takes the result of this operation
 and returns a new operation.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation with a function that takes the result of this operation
 and returns a new operation.
 </p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadUncachedTileSet: Operation[LoadUncachedTileSet]).flatMap(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadRasterTile: Operation[LoadRasterTile]).flatMap(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#foreach" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="foreach[U](f:T=&gt;U):Unit"></a>
-      <a id="foreach[U]((LoadUncachedTileSet)⇒U):Unit"></a>
+      <a id="foreach[U]((LoadRasterTile)⇒U):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">foreach</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>) ⇒ <span class="extype" name="geotrellis.Operation.foreach.U">U</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="implicit shadowed">foreach</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>) ⇒ <span class="extype" name="geotrellis.Operation.foreach.U">U</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create an operation that applies the function f to the result of this operation,
 but returns nothing.</p><div class="fullcomment"><div class="comment cmt"><p>Create an operation that applies the function f to the result of this operation,
 but returns nothing.
 </p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadUncachedTileSet: Operation[LoadUncachedTileSet]).foreach(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadRasterTile: Operation[LoadRasterTile]).foreach(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#into" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="into[U](f:geotrellis.Operation[T]=&gt;U):U"></a>
-      <a id="into[U]((Operation[LoadUncachedTileSet])⇒U):U"></a>
+      <a id="into[U]((Operation[LoadRasterTile])⇒U):U"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">into</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>]) ⇒ <span class="extype" name="geotrellis.Operation.into.U">U</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.Operation.into.U">U</span></span>
+        <span class="implicit shadowed">into</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>]) ⇒ <span class="extype" name="geotrellis.Operation.into.U">U</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.Operation.into.U">U</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Call the given function with this operation as its argument.</p><div class="fullcomment"><div class="comment cmt"><p>Call the given function with this operation as its argument.</p><p>This is primarily useful for code readability.</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadUncachedTileSet: Operation[LoadUncachedTileSet]).into(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd><dt>See also</dt><dd><span class="cmt"><p>http://debasishg.blogspot.com/2009/09/thrush-combinator-in-scala.html
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadRasterTile: Operation[LoadRasterTile]).into(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd><dt>See also</dt><dd><span class="cmt"><p>http://debasishg.blogspot.com/2009/09/thrush-combinator-in-scala.html
 </p></span></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="map[U](f:T=&gt;U):geotrellis.Operation[U]"></a>
-      <a id="map[U]((LoadUncachedTileSet)⇒U):Operation[U]"></a>
+      <a id="map[U]((LoadRasterTile)⇒U):Operation[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">map</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>) ⇒ <span class="extype" name="geotrellis.Operation.map.U">U</span></span>)</span><span class="result">: <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.map.U">U</span>]</span>
+        <span class="implicit shadowed">map</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>) ⇒ <span class="extype" name="geotrellis.Operation.map.U">U</span></span>)</span><span class="result">: <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.map.U">U</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a new operation that returns the result of the provided function that
 takes this operation's result as its argument.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation that returns the result of the provided function that
 takes this operation's result as its argument.
 </p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadUncachedTileSet: Operation[LoadUncachedTileSet]).map(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadRasterTile: Operation[LoadRasterTile]).map(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#name" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="name:String"></a>
       <a id="name:String"></a>
@@ -1030,99 +1068,99 @@ takes this operation's result as its argument.
       </h4>
       <p class="shortcomment cmt">Return operation identified (class simple name).</p><div class="fullcomment"><div class="comment cmt"><p>Return operation identified (class simple name).
 </p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadUncachedTileSet: Operation[LoadUncachedTileSet]).name</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadRasterTile: Operation[LoadRasterTile]).name</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#nextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="nextSteps:PartialFunction[Any,geotrellis.StepOutput[T]]"></a>
-      <a id="nextSteps:PartialFunction[Any,StepOutput[LoadUncachedTileSet]]"></a>
+      <a id="nextSteps:PartialFunction[Any,StepOutput[LoadRasterTile]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">nextSteps</span><span class="result">: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <a href="../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>]]</span>
+        <span class="implicit shadowed">nextSteps</span><span class="result">: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <a href="../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadUncachedTileSet: Operation[LoadUncachedTileSet]).nextSteps</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadRasterTile: Operation[LoadRasterTile]).nextSteps</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#processNextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="processNextSteps(args:Operation.this.Args):geotrellis.StepOutput[T]"></a>
-      <a id="processNextSteps(List[Any]):StepOutput[LoadUncachedTileSet]"></a>
+      <a id="processNextSteps(List[Any]):StepOutput[LoadRasterTile]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">processNextSteps</span><span class="params">(<span name="args">args: <span class="extype" name="scala.collection.immutable.List">List</span>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>]</span>
+        <span class="implicit shadowed">processNextSteps</span><span class="params">(<span name="args">args: <span class="extype" name="scala.collection.immutable.List">List</span>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadUncachedTileSet: Operation[LoadUncachedTileSet]).processNextSteps(args)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadRasterTile: Operation[LoadRasterTile]).processNextSteps(args)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#remote" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="remote(cluster:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
-      <a id="remote(ActorRef):DispatchedOperation[LoadUncachedTileSet]"></a>
+      <a id="remote(ActorRef):DispatchedOperation[LoadRasterTile]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">remote</span><span class="params">(<span name="cluster">cluster: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>]</span>
+        <span class="implicit shadowed">remote</span><span class="params">(<span name="cluster">cluster: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Returns an operation that will be executed on a remote cluster.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an operation that will be executed on a remote cluster.</p><p> This method will cause the specified operation to be executed on a remote
  cluster.</p><p> Note that if you wish to distribute the work of a single operation, you
  should probably be using dispatch() instead of remote().
 </p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadUncachedTileSet: Operation[LoadUncachedTileSet]).remote(cluster)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadRasterTile: Operation[LoadRasterTile]).remote(cluster)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="run(context:geotrellis.Context):geotrellis.StepOutput[T]"></a>
-      <a id="run(Context):StepOutput[LoadUncachedTileSet]"></a>
+      <a id="run(Context):StepOutput[LoadRasterTile]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">run</span><span class="params">(<span name="context">context: <a href="../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>]</span>
+        <span class="implicit shadowed">run</span><span class="params">(<span name="context">context: <a href="../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Execute this operation and return the result.</p><div class="fullcomment"><div class="comment cmt"><p>Execute this operation and return the result.
 </p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadUncachedTileSet: Operation[LoadUncachedTileSet]).run(context)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadRasterTile: Operation[LoadRasterTile]).run(context)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#runAsync" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="runAsync(args:Operation.this.Args):geotrellis.StepOutput[T]"></a>
-      <a id="runAsync(List[Any]):StepOutput[LoadUncachedTileSet]"></a>
+      <a id="runAsync(List[Any]):StepOutput[LoadRasterTile]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">runAsync</span><span class="params">(<span name="args">args: <span class="extype" name="scala.collection.immutable.List">List</span>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>]</span>
+        <span class="implicit shadowed">runAsync</span><span class="params">(<span name="args">args: <span class="extype" name="scala.collection.immutable.List">List</span>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <a href="../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadUncachedTileSet: Operation[LoadUncachedTileSet]).runAsync(args)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadRasterTile: Operation[LoadRasterTile]).runAsync(args)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="scala.Predef.any2stringadd#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="self:Any"></a>
       <a id="self:Any"></a>
@@ -1136,10 +1174,10 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
             <span class="extype" name="scala.runtime.StringAdd">StringAdd</span> performed by method any2stringadd in scala.Predef.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadUncachedTileSet: StringAdd).self</pre></div></dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadRasterTile: StringAdd).self</pre></div></dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
     </li><li name="scala.Predef.any2stringfmt#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="self:Any"></a>
       <a id="self:Any"></a>
@@ -1153,30 +1191,30 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
             <span class="extype" name="scala.runtime.StringFormat">StringFormat</span> performed by method any2stringfmt in scala.Predef.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadUncachedTileSet: StringFormat).self</pre></div></dd><dt>Definition Classes</dt><dd>StringFormat</dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadRasterTile: StringFormat).self</pre></div></dd><dt>Definition Classes</dt><dd>StringFormat</dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteral#withResult" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="withResult[U](f:T=&gt;geotrellis.Operation[U]):geotrellis.Operation[U]"></a>
-      <a id="withResult[U]((LoadUncachedTileSet)⇒Operation[U]):Operation[U]"></a>
+      <a id="withResult[U]((LoadRasterTile)⇒Operation[U]):Operation[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed">withResult</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>) ⇒ <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>)</span><span class="result">: <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>
+        <span class="implicit shadowed">withResult</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>) ⇒ <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>)</span><span class="result">: <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a new operation with a function that takes the result of this operation
 and returns a new operation.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation with a function that takes the result of this operation
 and returns a new operation.</p><p>Same as flatMap.
 </p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method implicitLiteral in <a href="../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadUncachedTileSet: Operation[LoadUncachedTileSet]).withResult(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadRasterTile: Operation[LoadRasterTile]).withResult(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li></ol>
             </div>
 
@@ -1184,41 +1222,41 @@ and returns a new operation.</p><p>Same as flatMap.
               <h3>Deprecated Value Members</h3>
               <ol><li name="scala.Predef.any2ArrowAssoc#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="x:A"></a>
-      <a id="x:LoadUncachedTileSet"></a>
+      <a id="x:LoadRasterTile"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use leftOfArrow instead">x</span><span class="result">: <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a></span>
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use leftOfArrow instead">x</span><span class="result">: <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method any2ArrowAssoc in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method any2ArrowAssoc in scala.Predef.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadUncachedTileSet: ArrowAssoc[LoadUncachedTileSet]).x</pre></div></dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadRasterTile: ArrowAssoc[LoadRasterTile]).x</pre></div></dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>leftOfArrow<code> instead</code></u></code></p></dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="x:A"></a>
-      <a id="x:LoadUncachedTileSet"></a>
+      <a id="x:LoadRasterTile"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use resultOfEnsuring instead">x</span><span class="result">: <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a></span>
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use resultOfEnsuring instead">x</span><span class="result">: <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to
-            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>] performed by method any2Ensuring in scala.Predef.
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>] performed by method any2Ensuring in scala.Predef.
             
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadUncachedTileSet: Ensuring[LoadUncachedTileSet]).x</pre></div></dd><dt>Definition Classes</dt><dd>Ensuring</dd><dt>Annotations</dt><dd>
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(loadRasterTile: Ensuring[LoadRasterTile]).x</pre></div></dd><dt>Definition Classes</dt><dd>Ensuring</dd><dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>resultOfEnsuring<code> instead</code></u></code></p></dd></dl></div>
@@ -1244,23 +1282,23 @@ and returns a new operation.</p><p>Same as flatMap.
             </div>
         <div class="conversion" name="geotrellis.Operation.implicitLiteral">
               <h3>Inherited by implicit conversion implicitLiteral from
-                <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>]
+                <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>]
               </h3>
             </div><div class="conversion" name="scala.Predef.any2stringadd">
               <h3>Inherited by implicit conversion any2stringadd from
-                <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to <span class="extype" name="scala.runtime.StringAdd">StringAdd</span>
+                <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to <span class="extype" name="scala.runtime.StringAdd">StringAdd</span>
               </h3>
             </div><div class="conversion" name="scala.Predef.any2stringfmt">
               <h3>Inherited by implicit conversion any2stringfmt from
-                <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to <span class="extype" name="scala.runtime.StringFormat">StringFormat</span>
+                <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to <span class="extype" name="scala.runtime.StringFormat">StringFormat</span>
               </h3>
             </div><div class="conversion" name="scala.Predef.any2ArrowAssoc">
               <h3>Inherited by implicit conversion any2ArrowAssoc from
-                <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>]
+                <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>]
               </h3>
             </div><div class="conversion" name="scala.Predef.any2Ensuring">
               <h3>Inherited by implicit conversion any2Ensuring from
-                <a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.io.LoadUncachedTileSet">LoadUncachedTileSet</a>]
+                <a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="geotrellis.io.LoadRasterTile">LoadRasterTile</a>]
               </h3>
             </div>
         </div>
