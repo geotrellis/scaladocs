@@ -99,25 +99,67 @@ that compose a cell in the resulting raster.</p>
       </span>
       </h4>
       
-    </li><li name="geotrellis.raster.op.transform.ResampleRaster" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ResampleRasterextendsOp3[geotrellis.Raster,Int,Int,geotrellis.Raster]withProductwithSerializable"></a>
-      <a id="ResampleRaster:ResampleRaster"></a>
+    </li><li name="geotrellis.raster.op.transform.Rescale" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RescaleextendsOp2[geotrellis.Raster,Double,geotrellis.Raster]withProductwithSerializable"></a>
+      <a id="Rescale:Rescale"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="ResampleRaster.html"><span class="name">ResampleRaster</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="cols">cols: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="rows">rows: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="../../../Op3.html" class="extype" name="geotrellis.Op3">Op3</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="Rescale.html"><span class="name">Rescale</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="rescalePct">rescalePct: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <span class="extype" name="scala.Double">Double</span>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      <p class="comment cmt">This uses a nearest-neighbor algorithm to resample a raster.</p>
+      <p class="comment cmt">Rescale the size of a raster by a fixed percentage, maintaining the aspect ratio.</p>
+    </li><li name="geotrellis.raster.op.transform.Resize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ResizeextendsOp2[geotrellis.Raster,geotrellis.RasterExtent,geotrellis.Raster]withProductwithSerializable"></a>
+      <a id="Resize:Resize"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Resize.html"><span class="name">Resize</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="rasterExtent">rasterExtent: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Generate a raster with a new extent and resolution.</p>
+    </li><li name="geotrellis.raster.op.transform.ResizeGrid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ResizeGridextendsOp3[geotrellis.Raster,Int,Int,geotrellis.Raster]withProductwithSerializable"></a>
+      <a id="ResizeGrid:ResizeGrid"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ResizeGrid.html"><span class="name">ResizeGrid</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="cols">cols: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="rows">rows: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="../../../Op3.html" class="extype" name="geotrellis.Op3">Op3</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
     </li></ol>
             </div>
 
         
 
-        
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="geotrellis.raster.op.transform.Resize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Resize"></a>
+      <a id="Resize:Resize"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Resize$.html"><span class="name">Resize</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
 
         
 
