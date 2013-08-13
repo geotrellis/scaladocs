@@ -435,7 +435,7 @@ of the neighborhood (or kernel) to be used in a focal operation.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="geotrellis.raster.op.focal.Neighborhood#mask" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="mask(x:Int,y:Int):Boolean"></a>
+      <a id="mask(col:Int,row:Int):Boolean"></a>
       <a id="mask(Int,Int):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -443,10 +443,14 @@ of the neighborhood (or kernel) to be used in a focal operation.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">mask</span><span class="params">(<span name="x">x: <span class="extype" name="scala.Int">Int</span></span>, <span name="y">y: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">mask</span><span class="params">(<span name="col">col: <span class="extype" name="scala.Int">Int</span></span>, <span name="row">row: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Overridden to define the mask of Neighborhoods that have one</p>
+      <p class="shortcomment cmt">Overridden to define the mask of Neighborhoods that have one
+ col and row treat the mask as a raster, that is, (0,0) is the
+ upper left corner, and (extent*2+1,extent*2+1) is the lower
+ right corner
+</p>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -499,7 +503,7 @@ of the neighborhood (or kernel) to be used in a focal operation.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.raster.op.focal.Neighborhood#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>
       <h4 class="signature">
@@ -511,7 +515,7 @@ of the neighborhood (or kernel) to be used in a focal operation.
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a> → AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
