@@ -46,7 +46,7 @@
         </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
                 <span class="toggle diagram-link">Type Hierarchy</span>
                 <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph351" viewBox="0.00 0.00 156.00 120.00" height="120pt" width="156pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 116)" class="graph" id="graph1"><polygon points="-4,5 -4,-116 153,-116 153,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><!-- node0 --><g class="node this class" id="graph351_0"><a xlink:title="geotrellis.network.graph.TransitGraph (this class)" xlink:href="#inheritance-diagram"><polygon points="124,-50 24,-50 24,-24 124,-24 124,-50" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-45" x="34" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-34.6667" x="56" text-anchor="start">TransitGraph</text></a></g><!-- node1 --><g class="node trait" id="graph351_1"><a xlink:title="scala.Serializable"><polygon points="122,-112 26,-112 26,-86 122,-86 122,-112" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-107" x="36" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-96.6667" x="58" text-anchor="start">Serializable</text></a></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph351_1_0"><a xlink:title="TransitGraph is a subtype of Serializable"><path d="M74,-80.6463C74,-70.8429 74,-59.003 74,-50.1297" stroke="#d4d4d4" fill="none"></path><polygon points="72.2501,-80.8514 74,-85.8514 75.7501,-80.8514 72.2501,-80.8514" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph358" viewBox="0.00 0.00 156.00 120.00" height="120pt" width="156pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 116)" class="graph" id="graph1"><polygon points="-4,5 -4,-116 153,-116 153,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><!-- node0 --><g class="node this class" id="graph358_0"><a xlink:title="geotrellis.network.graph.TransitGraph (this class)" xlink:href="#inheritance-diagram"><polygon points="124,-50 24,-50 24,-24 124,-24 124,-50" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-45" x="34" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-34.6667" x="56" text-anchor="start">TransitGraph</text></a></g><!-- node1 --><g class="node trait" id="graph358_1"><a xlink:title="scala.Serializable"><polygon points="122,-112 26,-112 26,-86 122,-86 122,-112" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-107" x="36" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-96.6667" x="58" text-anchor="start">Serializable</text></a></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph358_1_0"><a xlink:title="TransitGraph is a subtype of Serializable"><path d="M74,-80.6463C74,-70.8429 74,-59.003 74,-50.1297" stroke="#d4d4d4" fill="none"></path><polygon points="72.2501,-80.8514 74,-85.8514 75.7501,-80.8514 72.2501,-80.8514" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
               </div></div>
         
 
@@ -90,7 +90,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.network.graph.TransitGraph#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(vertexMap:Array[geotrellis.network.graph.Vertex],locationToVertex:Map[geotrellis.network.Location,Int],walkEdges:geotrellis.network.graph.PackedAnytimeEdges,bikeEdges:geotrellis.network.graph.PackedAnytimeEdges,transitEdges:geotrellis.network.graph.PackedTransitEdges):geotrellis.network.graph.TransitGraph"></a>
+      <a id="&lt;init&gt;(vertexMap:Array[geotrellis.network.graph.Vertex],locationToVertex:Map[geotrellis.network.Location,Int],anytimeEdgeSets:Map[geotrellis.network.TransitMode,geotrellis.network.graph.PackedAnytimeEdges],transitEdgeSets:Map[geotrellis.network.TransitMode,geotrellis.network.graph.PackedTransitEdges]):geotrellis.network.graph.TransitGraph"></a>
       <a id="&lt;init&gt;:TransitGraph"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -98,7 +98,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">TransitGraph</span><span class="params">(<span name="vertexMap">vertexMap: <span class="extype" name="scala.Array">Array</span>[<a href="Vertex.html" class="extype" name="geotrellis.network.graph.Vertex">Vertex</a>]</span>, <span name="locationToVertex">locationToVertex: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../Location.html" class="extype" name="geotrellis.network.Location">Location</a>, <span class="extype" name="scala.Int">Int</span>]</span>, <span name="walkEdges">walkEdges: <a href="PackedAnytimeEdges.html" class="extype" name="geotrellis.network.graph.PackedAnytimeEdges">PackedAnytimeEdges</a></span>, <span name="bikeEdges">bikeEdges: <a href="PackedAnytimeEdges.html" class="extype" name="geotrellis.network.graph.PackedAnytimeEdges">PackedAnytimeEdges</a></span>, <span name="transitEdges">transitEdges: <a href="PackedTransitEdges.html" class="extype" name="geotrellis.network.graph.PackedTransitEdges">PackedTransitEdges</a></span>)</span>
+        <span class="name">TransitGraph</span><span class="params">(<span name="vertexMap">vertexMap: <span class="extype" name="scala.Array">Array</span>[<a href="Vertex.html" class="extype" name="geotrellis.network.graph.Vertex">Vertex</a>]</span>, <span name="locationToVertex">locationToVertex: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../Location.html" class="extype" name="geotrellis.network.Location">Location</a>, <span class="extype" name="scala.Int">Int</span>]</span>, <span name="anytimeEdgeSets">anytimeEdgeSets: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../TransitMode.html" class="extype" name="geotrellis.network.TransitMode">TransitMode</a>, <a href="PackedAnytimeEdges.html" class="extype" name="geotrellis.network.graph.PackedAnytimeEdges">PackedAnytimeEdges</a>]</span>, <span name="transitEdgeSets">transitEdgeSets: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../TransitMode.html" class="extype" name="geotrellis.network.TransitMode">TransitMode</a>, <a href="PackedTransitEdges.html" class="extype" name="geotrellis.network.graph.PackedTransitEdges">PackedTransitEdges</a>]</span>)</span>
       </span>
       </h4>
       
@@ -213,6 +213,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.network.graph.TransitGraph#anytimeEdgeSets" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="anytimeEdgeSets:Map[geotrellis.network.TransitMode,geotrellis.network.graph.PackedAnytimeEdges]"></a>
+      <a id="anytimeEdgeSets:Map[TransitMode,PackedAnytimeEdges]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">anytimeEdgeSets</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../TransitMode.html" class="extype" name="geotrellis.network.TransitMode">TransitMode</a>, <a href="PackedAnytimeEdges.html" class="extype" name="geotrellis.network.graph.PackedAnytimeEdges">PackedAnytimeEdges</a>]</span>
+      </span>
+      </h4>
+      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -226,19 +239,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.network.graph.TransitGraph#bikeEdges" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="bikeEdges:geotrellis.network.graph.PackedAnytimeEdges"></a>
-      <a id="bikeEdges:PackedAnytimeEdges"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">bikeEdges</span><span class="result">: <a href="PackedAnytimeEdges.html" class="extype" name="geotrellis.network.graph.PackedAnytimeEdges">PackedAnytimeEdges</a></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -384,58 +384,6 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.network.graph.TransitGraph#foreachBikeEdge" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="foreachBikeEdge(source:Int)(f:(Int,Int)=&gt;Unit):Unit"></a>
-      <a id="foreachBikeEdge(Int)((Int,Int)⇒Unit):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">foreachBikeEdge</span><span class="params">(<span name="source">source: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.network.graph.TransitGraph#foreachIncomingTransitEdge" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="foreachIncomingTransitEdge(source:Int,time:Int)(f:(Int,Int)=&gt;Unit):Unit"></a>
-      <a id="foreachIncomingTransitEdge(Int,Int)((Int,Int)⇒Unit):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">foreachIncomingTransitEdge</span><span class="params">(<span name="source">source: <span class="extype" name="scala.Int">Int</span></span>, <span name="time">time: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.network.graph.TransitGraph#foreachTransitEdge" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="foreachTransitEdge(source:Int,time:Int)(f:(Int,Int)=&gt;Unit):Unit"></a>
-      <a id="foreachTransitEdge(Int,Int)((Int,Int)⇒Unit):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">foreachTransitEdge</span><span class="params">(<span name="source">source: <span class="extype" name="scala.Int">Int</span></span>, <span name="time">time: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.network.graph.TransitGraph#foreachWalkEdge" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="foreachWalkEdge(source:Int)(f:(Int,Int)=&gt;Unit):Unit"></a>
-      <a id="foreachWalkEdge(Int)((Int,Int)⇒Unit):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">foreachWalkEdge</span><span class="params">(<span name="source">source: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.Predef.any2stringfmt#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="formatted(fmtstr:String):String"></a>
       <a id="formatted(String):String"></a>
@@ -469,6 +417,32 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.network.graph.TransitGraph#getEdgeIterator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getEdgeIterator(transitModes:Seq[geotrellis.network.TransitMode],edgeDirection:geotrellis.network.graph.EdgeDirection):geotrellis.network.graph.EdgeIterator"></a>
+      <a id="getEdgeIterator(Seq[TransitMode],EdgeDirection):EdgeIterator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getEdgeIterator</span><span class="params">(<span name="transitModes">transitModes: <span class="extype" name="scala.Seq">Seq</span>[<a href="../TransitMode.html" class="extype" name="geotrellis.network.TransitMode">TransitMode</a>]</span>, <span name="edgeDirection">edgeDirection: <a href="EdgeDirection.html" class="extype" name="geotrellis.network.graph.EdgeDirection">EdgeDirection</a></span>)</span><span class="result">: <a href="EdgeIterator.html" class="extype" name="geotrellis.network.graph.EdgeIterator">EdgeIterator</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.network.graph.TransitGraph#getEdgeIterator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getEdgeIterator(transitMode:geotrellis.network.TransitMode,edgeDirection:geotrellis.network.graph.EdgeDirection):geotrellis.network.graph.EdgeIterator"></a>
+      <a id="getEdgeIterator(TransitMode,EdgeDirection):EdgeIterator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getEdgeIterator</span><span class="params">(<span name="transitMode">transitMode: <a href="../TransitMode.html" class="extype" name="geotrellis.network.TransitMode">TransitMode</a></span>, <span name="edgeDirection">edgeDirection: <a href="EdgeDirection.html" class="extype" name="geotrellis.network.graph.EdgeDirection">EdgeDirection</a></span>)</span><span class="result">: <a href="EdgeIterator.html" class="extype" name="geotrellis.network.graph.EdgeIterator">EdgeIterator</a></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -573,16 +547,16 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.network.graph.TransitGraph#transitEdges" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="transitEdges:geotrellis.network.graph.PackedTransitEdges"></a>
-      <a id="transitEdges:PackedTransitEdges"></a>
+    </li><li name="geotrellis.network.graph.TransitGraph#transitEdgeSets" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="transitEdgeSets:Map[geotrellis.network.TransitMode,geotrellis.network.graph.PackedTransitEdges]"></a>
+      <a id="transitEdgeSets:Map[TransitMode,PackedTransitEdges]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">transitEdges</span><span class="result">: <a href="PackedTransitEdges.html" class="extype" name="geotrellis.network.graph.PackedTransitEdges">PackedTransitEdges</a></span>
+        <span class="name">transitEdgeSets</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../TransitMode.html" class="extype" name="geotrellis.network.TransitMode">TransitMode</a>, <a href="PackedTransitEdges.html" class="extype" name="geotrellis.network.graph.PackedTransitEdges">PackedTransitEdges</a>]</span>
       </span>
       </h4>
       
@@ -682,19 +656,6 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.network.graph.TransitGraph#walkEdges" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="walkEdges:geotrellis.network.graph.PackedAnytimeEdges"></a>
-      <a id="walkEdges:PackedAnytimeEdges"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">walkEdges</span><span class="result">: <a href="PackedAnytimeEdges.html" class="extype" name="geotrellis.network.graph.PackedAnytimeEdges">PackedAnytimeEdges</a></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.Predef.any2ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="→[B](y:B):(A,B)"></a>
       <a id="→[B](B):(TransitGraph,B)"></a>
