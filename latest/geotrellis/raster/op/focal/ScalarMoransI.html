@@ -24,9 +24,9 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img src="../../../../lib/class_big.png" />
+        <a href="ScalarMoransI$.html" title="Go to companion"><img src="../../../../lib/class_to_object_big.png" /></a>
         <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.raster">raster</a>.<a href="../package.html" class="extype" name="geotrellis.raster.op">op</a>.<a href="package.html" class="extype" name="geotrellis.raster.op.focal">focal</a></p>
-        <h1>ScalarMoransI</h1>
+        <h1><a href="ScalarMoransI$.html" title="Go to companion">ScalarMoransI</a></h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,7 +35,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">ScalarMoransI</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="n">n: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a>]</span>)</span><span class="result"> extends <a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">ScalarMoransI</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="n">n: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a>]</span>, <span name="tns">tns: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../TileNeighbors.html" class="extype" name="geotrellis.raster.TileNeighbors">TileNeighbors</a>]</span>)</span><span class="result"> extends <a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -43,17 +43,17 @@
 neighboring values.</p><p>The resulting statistic is such that the more positive the number, the greater
 the similarity of values in the raster, and the more negative the number,
 the more dissimilar the raster values are.
-</p></div><dl class="paramcmts block"><dt class="param">r</dt><dd class="cmt"><p>Raster to perform the operation on.</p></dd><dt class="param">n</dt><dd class="cmt"><p>Neighborhood to use in this focal operation.
+</p></div><dl class="paramcmts block"><dt class="param">r</dt><dd class="cmt"><p>Raster to perform the operation on.</p></dd><dt class="param">n</dt><dd class="cmt"><p>Neighborhood to use in this focal operation.</p></dd><dt class="param">tns</dt><dd class="cmt"><p>TileNeighbors that describe the neighboring tiles.
 </p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Since mean and standard deviation are based off of an
                        Int based Histogram, those values will come from rounded values
                        of a double typed Raster (TypeFloat,TypeDouble).
 </p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<span class="extype" name="scala.Double">Double</span>], <a href="FocalOperation0.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation0">FocalOperation0</a>[<span class="extype" name="scala.Double">Double</span>], <a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a>[<span class="extype" name="scala.Double">Double</span>], <span class="extype" name="scala.Cloneable">Cloneable</span>, <span class="extype" name="java.lang.Cloneable">Cloneable</span>, <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Double">Double</span>], <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="FocalOp.html" class="extype" name="geotrellis.raster.op.focal.FocalOp">FocalOp</a>[<span class="extype" name="scala.Double">Double</span>], <a href="FocalOperation0.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation0">FocalOperation0</a>[<span class="extype" name="scala.Double">Double</span>], <a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a>[<span class="extype" name="scala.Double">Double</span>], <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Double">Double</span>], <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
                 <span class="toggle diagram-link">Type Hierarchy</span>
                 <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph195" viewBox="0.00 0.00 489.00 128.00" height="128pt" width="489pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 124)" class="graph" id="graph1"><polygon points="-4,5 -4,-124 486,-124 486,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><g class="cluster" id="graph4"></g><!-- node4 --><g class="node implicit-outgoing class" id="graph195_4"><a xlink:title="geotrellis.raster.op.focal.ScalarMoransI can be implicitly converted to Operation[ScalarMoransI] by the implicit method implicitLiteral in object geotrellis.Operation" xlink:href="../../../Operation.html#inheritance-diagram"><polygon points="457,-50 301,-50 301,-24 457,-24 457,-50" stroke="#ababab" fill="#e1e1e1"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="311" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#7d7d7d" font-size="10.00" font-family="Arial" y="-34.6667" x="333" text-anchor="start">Operation[ScalarMoransI]</text></a></g><!-- node0 --><g class="node this class" id="graph195_0"><a xlink:title="geotrellis.raster.op.focal.ScalarMoransI (this class)" xlink:href="#inheritance-diagram"><polygon points="229,-50 121,-50 121,-24 229,-24 229,-50" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="131" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-34.6667" x="153" text-anchor="start">ScalarMoransI</text></a></g><!-- node0&#45;&gt;node4 --><g class="edge implicit-outgoing" id="0_4"><a xlink:title="ScalarMoransI can be implicitly converted to Operation[ScalarMoransI]"><path d="M236.906,-37C253.019,-37 270.719,-37 287.993,-37" stroke="#d4d4d4" fill="none"></path><polygon points="288.089,-38.7501 293.089,-37 288.089,-35.2501 288.089,-38.7501" stroke="#d4d4d4" fill="#d4d4d4"></polygon></a><text fill="#aaaaaa" font-size="10.00" font-family="Arial" y="-41" x="265" text-anchor="middle">implicitly</text></g><!-- node1 --><g class="node class" id="graph195_1"><a xlink:title="geotrellis.raster.op.focal.FocalOp" xlink:href="FocalOp.html#inheritance-diagram"><polygon points="118,-120 4.26326e-14,-120 0,-94 118,-94 118,-120" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-115" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="32" text-anchor="start">FocalOp[Double]</text></a></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph195_1_0"><a xlink:title="ScalarMoransI is a subtype of FocalOp[Double]"><path d="M85.0615,-91.2732C105.577,-78.893 133.84,-61.8379 153.175,-50.1703" stroke="#d4d4d4" fill="none"></path><polygon points="83.9236,-89.9159 80.5469,-93.9976 85.732,-92.9126 83.9236,-89.9159" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph195_2"><a xlink:title="scala.Product"><polygon points="214,-120 136,-120 136,-94 214,-94 214,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="146" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="168" text-anchor="start">Product</text></a></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph195_2_0"><a xlink:title="ScalarMoransI is a subtype of Product"><path d="M175,-88.5481C175,-76.457 175,-60.9432 175,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="173.25,-88.8335 175,-93.8335 176.75,-88.8336 173.25,-88.8335" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node trait" id="graph195_3"><a xlink:title="scala.Serializable"><polygon points="328,-120 232,-120 232,-94 328,-94 328,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="242" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="264" text-anchor="start">Serializable</text></a></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph195_3_0"><a xlink:title="ScalarMoransI is a subtype of Serializable"><path d="M255.689,-90.7927C237.148,-78.4323 211.94,-61.6266 194.661,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="255.119,-92.5161 260.25,-93.8335 257.061,-89.6039 255.119,-92.5161" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph196" viewBox="0.00 0.00 489.00 128.00" height="128pt" width="489pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 124)" class="graph" id="graph1"><polygon points="-4,5 -4,-124 486,-124 486,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><g class="cluster" id="graph4"></g><!-- node4 --><g class="node implicit-outgoing class" id="graph196_4"><a xlink:title="geotrellis.raster.op.focal.ScalarMoransI can be implicitly converted to Operation[ScalarMoransI] by the implicit method implicitLiteral in object geotrellis.Operation" xlink:href="../../../Operation.html#inheritance-diagram"><polygon points="457,-50 301,-50 301,-24 457,-24 457,-50" stroke="#ababab" fill="#e1e1e1"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="311" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#7d7d7d" font-size="10.00" font-family="Arial" y="-34.6667" x="333" text-anchor="start">Operation[ScalarMoransI]</text></a></g><!-- node0 --><g class="node this class" id="graph196_0"><a xlink:title="geotrellis.raster.op.focal.ScalarMoransI (this class)" xlink:href="#inheritance-diagram"><polygon points="229,-50 121,-50 121,-24 229,-24 229,-50" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="131" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-34.6667" x="153" text-anchor="start">ScalarMoransI</text></a></g><!-- node0&#45;&gt;node4 --><g class="edge implicit-outgoing" id="0_4"><a xlink:title="ScalarMoransI can be implicitly converted to Operation[ScalarMoransI]"><path d="M236.906,-37C253.019,-37 270.719,-37 287.993,-37" stroke="#d4d4d4" fill="none"></path><polygon points="288.089,-38.7501 293.089,-37 288.089,-35.2501 288.089,-38.7501" stroke="#d4d4d4" fill="#d4d4d4"></polygon></a><text fill="#aaaaaa" font-size="10.00" font-family="Arial" y="-41" x="265" text-anchor="middle">implicitly</text></g><!-- node1 --><g class="node class" id="graph196_1"><a xlink:title="geotrellis.raster.op.focal.FocalOp" xlink:href="FocalOp.html#inheritance-diagram"><polygon points="118,-120 4.26326e-14,-120 0,-94 118,-94 118,-120" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-115" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="32" text-anchor="start">FocalOp[Double]</text></a></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph196_1_0"><a xlink:title="ScalarMoransI is a subtype of FocalOp[Double]"><path d="M85.0615,-91.2732C105.577,-78.893 133.84,-61.8379 153.175,-50.1703" stroke="#d4d4d4" fill="none"></path><polygon points="83.9236,-89.9159 80.5469,-93.9976 85.732,-92.9126 83.9236,-89.9159" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph196_2"><a xlink:title="scala.Product"><polygon points="214,-120 136,-120 136,-94 214,-94 214,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="146" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="168" text-anchor="start">Product</text></a></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph196_2_0"><a xlink:title="ScalarMoransI is a subtype of Product"><path d="M175,-88.5481C175,-76.457 175,-60.9432 175,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="173.25,-88.8335 175,-93.8335 176.75,-88.8336 173.25,-88.8335" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node trait" id="graph196_3"><a xlink:title="scala.Serializable"><polygon points="328,-120 232,-120 232,-94 328,-94 328,-120" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../../lib/trait_diagram.png" y="-115" x="242" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="264" text-anchor="start">Serializable</text></a></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph196_3_0"><a xlink:title="ScalarMoransI is a subtype of Serializable"><path d="M255.689,-90.7927C237.148,-78.4323 211.94,-61.6266 194.661,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="255.119,-92.5161 260.25,-93.8335 257.061,-89.6039 255.119,-92.5161" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
               </div></div>
         
 
@@ -71,7 +71,7 @@ the more dissimilar the raster values are.
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.raster.op.focal.ScalarMoransI"><span>ScalarMoransI</span></li><li class="in" name="geotrellis.raster.op.focal.FocalOp"><span>FocalOp</span></li><li class="in" name="geotrellis.raster.op.focal.FocalOperation0"><span>FocalOperation0</span></li><li class="in" name="geotrellis.raster.op.focal.FocalOperation"><span>FocalOperation</span></li><li class="in" name="scala.Cloneable"><span>Cloneable</span></li><li class="in" name="java.lang.Cloneable"><span>Cloneable</span></li><li class="in" name="geotrellis.Operation"><span>Operation</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.raster.op.focal.ScalarMoransI"><span>ScalarMoransI</span></li><li class="in" name="geotrellis.raster.op.focal.FocalOp"><span>FocalOp</span></li><li class="in" name="geotrellis.raster.op.focal.FocalOperation0"><span>FocalOperation0</span></li><li class="in" name="geotrellis.raster.op.focal.FocalOperation"><span>FocalOperation</span></li><li class="in" name="geotrellis.Operation"><span>Operation</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
                 <span class="filtertype">Implicitly<br />
@@ -97,7 +97,7 @@ the more dissimilar the raster values are.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.raster.op.focal.ScalarMoransI#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(r:geotrellis.Op[geotrellis.Raster],n:geotrellis.Op[geotrellis.raster.op.focal.Neighborhood]):geotrellis.raster.op.focal.ScalarMoransI"></a>
+      <a id="&lt;init&gt;(r:geotrellis.Op[geotrellis.Raster],n:geotrellis.Op[geotrellis.raster.op.focal.Neighborhood],tns:geotrellis.Op[geotrellis.raster.TileNeighbors]):geotrellis.raster.op.focal.ScalarMoransI"></a>
       <a id="&lt;init&gt;:ScalarMoransI"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -105,10 +105,10 @@ the more dissimilar the raster values are.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ScalarMoransI</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="n">n: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a>]</span>)</span>
+        <span class="name">ScalarMoransI</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="n">n: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="Neighborhood.html" class="extype" name="geotrellis.raster.op.focal.Neighborhood">Neighborhood</a>]</span>, <span name="tns">tns: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../TileNeighbors.html" class="extype" name="geotrellis.raster.TileNeighbors">TileNeighbors</a>]</span>)</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">r</dt><dd class="cmt"><p>Raster to perform the operation on.</p></dd><dt class="param">n</dt><dd class="cmt"><p>Neighborhood to use in this focal operation.
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">r</dt><dd class="cmt"><p>Raster to perform the operation on.</p></dd><dt class="param">n</dt><dd class="cmt"><p>Neighborhood to use in this focal operation.</p></dd><dt class="param">tns</dt><dd class="cmt"><p>TileNeighbors that describe the neighboring tiles.
 </p></dd></dl></div>
     </li></ol>
             </div>
@@ -128,19 +128,6 @@ the more dissimilar the raster values are.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
-    </li><li name="geotrellis.raster.op.focal.FocalOperation.SELF" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="SELF&lt;:geotrellis.raster.op.focal.FocalOperation[T]"></a>
-      <a id="SELF:SELF"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">SELF</span><span class="result"> &lt;: <a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a>[<span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.Steps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="Steps=PartialFunction[Any,geotrellis.StepOutput[T]]"></a>
       <a id="Steps:Steps"></a>
@@ -276,19 +263,6 @@ the more dissimilar the raster values are.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation0.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation0">FocalOperation0</a> → <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
-    </li><li name="geotrellis.raster.op.focal.FocalOperation#analysisAreaOp" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="analysisAreaOp:geotrellis.Operation[Option[geotrellis.RasterExtent]]"></a>
-      <a id="analysisAreaOp:Operation[Option[RasterExtent]]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">analysisAreaOp</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Option">Option</span>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a></dd></dl></div>
     </li><li name="geotrellis.Operation#andThen" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="andThen[U](f:T=&gt;geotrellis.Op[U]):geotrellis.Operation[U]"></a>
       <a id="andThen[U]((Double)⇒Op[U]):Operation[U]"></a>
@@ -603,19 +577,6 @@ correct <a href="FocalCalculation.html" class="extype" name="geotrellis.raster.o
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.raster.op.focal.FocalOperation#makeClone" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="makeClone():FocalOperation.this.SELF"></a>
-      <a id="makeClone():SELF"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">makeClone</span><span class="params">()</span><span class="result">: <a href="#SELF&lt;:geotrellis.raster.op.focal.FocalOperation[T]" class="extmbr" name="geotrellis.raster.op.focal.ScalarMoransI.SELF">SELF</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a></dd></dl></div>
     </li><li name="geotrellis.Operation#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="map[U](f:T=&gt;U):geotrellis.Operation[U]"></a>
       <a id="map[U]((Double)⇒U):Operation[U]"></a>
@@ -751,7 +712,7 @@ takes this operation's result as its argument.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation0.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation0">FocalOperation0</a> → Product</dd></dl></div>
     </li><li name="geotrellis.raster.op.focal.FocalOperation0#productElement" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="productElement(n:Int):Any"></a>
+      <a id="productElement(index:Int):Any"></a>
       <a id="productElement(Int):Any"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -759,7 +720,7 @@ takes this operation's result as its argument.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">productElement</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+        <span class="name">productElement</span><span class="params">(<span name="index">index: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation0.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation0">FocalOperation0</a> → Product</dd></dl></div>
@@ -810,19 +771,6 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <p class="shortcomment cmt">Raster to perform the operation on.</p>
-    </li><li name="geotrellis.raster.op.focal.FocalOperation0#rasterOp" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="rasterOp:geotrellis.Operation[geotrellis.Raster]"></a>
-      <a id="rasterOp:Operation[Raster]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">rasterOp</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation0.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation0">FocalOperation0</a> → <a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a></dd></dl></div>
     </li><li name="geotrellis.Operation#remote" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="remote(cluster:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
       <a id="remote(ActorRef):DispatchedOperation[Double]"></a>
@@ -866,19 +814,6 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
-    </li><li name="geotrellis.raster.op.focal.FocalOperation#setAnalysisArea" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="setAnalysisArea(op:geotrellis.Operation[Option[geotrellis.RasterExtent]]):FocalOperation.this.SELF"></a>
-      <a id="setAnalysisArea(Operation[Option[RasterExtent]]):SELF"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setAnalysisArea</span><span class="params">(<span name="op">op: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Option">Option</span>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]]</span>)</span><span class="result">: <a href="#SELF&lt;:geotrellis.raster.op.focal.FocalOperation[T]" class="extmbr" name="geotrellis.raster.op.focal.ScalarMoransI.SELF">SELF</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -892,19 +827,19 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.raster.op.focal.FocalOperation#tiledOp" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="tiledOp():geotrellis.Operation[T]"></a>
-      <a id="tiledOp():Operation[Double]"></a>
+    </li><li name="geotrellis.raster.op.focal.ScalarMoransI#tns" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="tns:geotrellis.Op[geotrellis.raster.TileNeighbors]"></a>
+      <a id="tns:Op[TileNeighbors]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">tiledOp</span><span class="params">()</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Double">Double</span>]</span>
+        <span class="name">tns</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../TileNeighbors.html" class="extype" name="geotrellis.raster.TileNeighbors">TileNeighbors</a>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a></dd></dl></div>
+      <p class="shortcomment cmt">TileNeighbors that describe the neighboring tiles.</p>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -1433,10 +1368,6 @@ and returns a new operation.</p><p>Same as flatMap.
               <h3>Inherited from <a href="FocalOperation0.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation0">FocalOperation0</a>[<span class="extype" name="scala.Double">Double</span>]</h3>
             </div><div class="parent" name="geotrellis.raster.op.focal.FocalOperation">
               <h3>Inherited from <a href="FocalOperation.html" class="extype" name="geotrellis.raster.op.focal.FocalOperation">FocalOperation</a>[<span class="extype" name="scala.Double">Double</span>]</h3>
-            </div><div class="parent" name="scala.Cloneable">
-              <h3>Inherited from <span class="extype" name="scala.Cloneable">Cloneable</span></h3>
-            </div><div class="parent" name="java.lang.Cloneable">
-              <h3>Inherited from <span class="extype" name="java.lang.Cloneable">Cloneable</span></h3>
             </div><div class="parent" name="geotrellis.Operation">
               <h3>Inherited from <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Double">Double</span>]</h3>
             </div><div class="parent" name="scala.Serializable">

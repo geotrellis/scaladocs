@@ -334,6 +334,46 @@ particular projection).</p>
       </span>
       </h4>
       
+    </li><li name="geotrellis.OpMap2" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="OpMap2[A,B]extendsProductwithSerializable"></a>
+      <a id="OpMap2[A,B]:OpMap2[A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$OpMap2.html"><span class="name">OpMap2</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="a">a: <a href="#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.OpMap2.A">A</span>]</span>, <span name="b">b: <a href="#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.OpMap2.B">B</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Syntax for converting tuples of operations
+into objects that you can call map and flatMap on.</p>
+    </li><li name="geotrellis.OpMap3" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="OpMap3[A,B,C]extendsProductwithSerializable"></a>
+      <a id="OpMap3[A,B,C]:OpMap3[A,B,C]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$OpMap3.html"><span class="name">OpMap3</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>]</span><span class="params">(<span name="a">a: <a href="#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.OpMap3.A">A</span>]</span>, <span name="b">b: <a href="#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.OpMap3.B">B</span>]</span>, <span name="c">c: <a href="#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.OpMap3.C">C</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.OpMap4" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="OpMap4[A,B,C,D]extendsProductwithSerializable"></a>
+      <a id="OpMap4[A,B,C,D]:OpMap4[A,B,C,D]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$OpMap4.html"><span class="name">OpMap4</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>]</span><span class="params">(<span name="a">a: <a href="#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.OpMap4.A">A</span>]</span>, <span name="b">b: <a href="#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.OpMap4.B">B</span>]</span>, <span name="c">c: <a href="#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.OpMap4.C">C</span>]</span>, <span name="d">d: <a href="#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.OpMap4.D">D</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
     </li><li name="geotrellis.Operation" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="Operation[+T]extendsProductwithSerializable"></a>
       <a id="Operation[+T]:Operation[T]"></a>
@@ -915,6 +955,45 @@ particular projection).</p>
       </h4>
       <p class="shortcomment cmt">Create an operation from a 1-arg function that returns StepOutput.</p><div class="fullcomment"><div class="comment cmt"><p>Create an operation from a 1-arg function that returns StepOutput.</p><p>For example:</p><p>val plusOne = op { (i:Int) =&gt; Result(i + 1) }
 </p></div></div>
+    </li><li name="geotrellis.package#opTupleToOpMap2" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="opTupleToOpMap2[A,B](t:(geotrellis.package.Op[A],geotrellis.package.Op[B])):geotrellis.package.OpMap2[A,B]"></a>
+      <a id="opTupleToOpMap2[A,B]((Op[A],Op[B])):OpMap2[A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">opTupleToOpMap2</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="t">t: (<a href="#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.opTupleToOpMap2.A">A</span>], <a href="#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.opTupleToOpMap2.B">B</span>])</span>)</span><span class="result">: <a href="package$$OpMap2.html" class="extype" name="geotrellis.OpMap2">OpMap2</a>[<span class="extype" name="geotrellis.opTupleToOpMap2.A">A</span>, <span class="extype" name="geotrellis.opTupleToOpMap2.B">B</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.package#opTupleToOpMap3" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="opTupleToOpMap3[A,B,C](t:(geotrellis.package.Op[A],geotrellis.package.Op[B],geotrellis.package.Op[C])):geotrellis.package.OpMap3[A,B,C]"></a>
+      <a id="opTupleToOpMap3[A,B,C]((Op[A],Op[B],Op[C])):OpMap3[A,B,C]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">opTupleToOpMap3</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>]</span><span class="params">(<span name="t">t: (<a href="#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.opTupleToOpMap3.A">A</span>], <a href="#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.opTupleToOpMap3.B">B</span>], <a href="#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.opTupleToOpMap3.C">C</span>])</span>)</span><span class="result">: <a href="package$$OpMap3.html" class="extype" name="geotrellis.OpMap3">OpMap3</a>[<span class="extype" name="geotrellis.opTupleToOpMap3.A">A</span>, <span class="extype" name="geotrellis.opTupleToOpMap3.B">B</span>, <span class="extype" name="geotrellis.opTupleToOpMap3.C">C</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.package#opTupleToOpMap4" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="opTupleToOpMap4[A,B,C,D](t:(geotrellis.package.Op[A],geotrellis.package.Op[B],geotrellis.package.Op[C],geotrellis.package.Op[D])):geotrellis.package.OpMap4[A,B,C,D]"></a>
+      <a id="opTupleToOpMap4[A,B,C,D]((Op[A],Op[B],Op[C],Op[D])):OpMap4[A,B,C,D]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">opTupleToOpMap4</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>]</span><span class="params">(<span name="t">t: (<a href="#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.opTupleToOpMap4.A">A</span>], <a href="#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.opTupleToOpMap4.B">B</span>], <a href="#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.opTupleToOpMap4.C">C</span>], <a href="#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.opTupleToOpMap4.D">D</span>])</span>)</span><span class="result">: <a href="package$$OpMap4.html" class="extype" name="geotrellis.OpMap4">OpMap4</a>[<span class="extype" name="geotrellis.opTupleToOpMap4.A">A</span>, <span class="extype" name="geotrellis.opTupleToOpMap4.B">B</span>, <span class="extype" name="geotrellis.opTupleToOpMap4.C">C</span>, <span class="extype" name="geotrellis.opTupleToOpMap4.D">D</span>]</span>
+      </span>
+      </h4>
+      
     </li><li name="geotrellis.process" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="process"></a>
       <a id="process:process"></a>

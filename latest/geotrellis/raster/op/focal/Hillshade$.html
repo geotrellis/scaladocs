@@ -154,7 +154,7 @@ a conversion factor from map units to elevation units.</p><p>Returns a raster of
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.raster.op.focal.Hillshade#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.raster.op.focal.Hillshade#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="apply(r:geotrellis.Op[geotrellis.Raster],azimuth:geotrellis.Op[Double],altitude:geotrellis.Op[Double],zFactor:geotrellis.Op[Double]):geotrellis.raster.op.focal.DirectHillshade"></a>
       <a id="apply(Op[Raster],Op[Double],Op[Double],Op[Double]):DirectHillshade"></a>
       <h4 class="signature">
@@ -166,8 +166,21 @@ a conversion factor from map units to elevation units.</p><p>Returns a raster of
         <span class="name">apply</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="azimuth">azimuth: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="altitude">altitude: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="zFactor">zFactor: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="DirectHillshade.html" class="extype" name="geotrellis.raster.op.focal.DirectHillshade">DirectHillshade</a></span>
       </span>
       </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.Hillshade#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(r:geotrellis.Op[geotrellis.Raster],tns:geotrellis.Op[geotrellis.raster.TileNeighbors],azimuth:geotrellis.Op[Double],altitude:geotrellis.Op[Double],zFactor:geotrellis.Op[Double]):geotrellis.raster.op.focal.DirectHillshade"></a>
+      <a id="apply(Op[Raster],Op[TileNeighbors],Op[Double],Op[Double],Op[Double]):DirectHillshade"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="tns">tns: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../TileNeighbors.html" class="extype" name="geotrellis.raster.TileNeighbors">TileNeighbors</a>]</span>, <span name="azimuth">azimuth: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="altitude">altitude: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="zFactor">zFactor: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="DirectHillshade.html" class="extype" name="geotrellis.raster.op.focal.DirectHillshade">DirectHillshade</a></span>
+      </span>
+      </h4>
       <p class="shortcomment cmt">Creates a hillshade operation directly from azimuth, altitude, and zFactor parameters.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a hillshade operation directly from azimuth, altitude, and zFactor parameters.
-</p></div><dl class="paramcmts block"><dt class="param">azimuth</dt><dd class="cmt"><p>Degrees clockwise from north of light source.</p></dd><dt class="param">altitude</dt><dd class="cmt"><p>Degrees above horizon of the light source.</p></dd><dt class="param">zFactor</dt><dd class="cmt"><p>Factor that convers altitude units to map units.
+</p></div><dl class="paramcmts block"><dt class="param">r</dt><dd class="cmt"><p>Raster to for which to compute the hill shading.</p></dd><dt class="param">tns</dt><dd class="cmt"><p>TileNeighbors that describe the neighboring</p></dd><dt class="param">azimuth</dt><dd class="cmt"><p>Degrees clockwise from north of light source.</p></dd><dt class="param">altitude</dt><dd class="cmt"><p>Degrees above horizon of the light source.</p></dd><dt class="param">zFactor</dt><dd class="cmt"><p>Factor that convers altitude units to map units.
                      (map units per elevation unit)
 </p></dd></dl></div>
     </li><li name="geotrellis.raster.op.focal.Hillshade#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -185,7 +198,7 @@ a conversion factor from map units to elevation units.</p><p>Returns a raster of
       <p class="shortcomment cmt">Creates a hillshade operation using a precomputed slope and aspect.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a hillshade operation using a precomputed slope and aspect.
 </p></div><dl class="paramcmts block"><dt class="param">aspect</dt><dd class="cmt"><p><a href="Aspect.html" class="extype" name="geotrellis.raster.op.focal.Aspect">Aspect</a> operation</p></dd><dt class="param">slope</dt><dd class="cmt"><p><a href="Slope.html" class="extype" name="geotrellis.raster.op.focal.Slope">Slope</a> operation</p></dd><dt class="param">azimuth</dt><dd class="cmt"><p>Degrees clockwise from north of light source.</p></dd><dt class="param">altitude</dt><dd class="cmt"><p>Degrees above horizon of the light source.
 </p></dd></dl></div>
-    </li><li name="geotrellis.raster.op.focal.Hillshade#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.raster.op.focal.Hillshade#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="apply(r:geotrellis.Op[geotrellis.Raster]):geotrellis.raster.op.focal.DirectHillshade"></a>
       <a id="apply(Op[Raster]):DirectHillshade"></a>
       <h4 class="signature">
@@ -197,10 +210,23 @@ a conversion factor from map units to elevation units.</p><p>Returns a raster of
         <span class="name">apply</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result">: <a href="DirectHillshade.html" class="extype" name="geotrellis.raster.op.focal.DirectHillshade">DirectHillshade</a></span>
       </span>
       </h4>
+      
+    </li><li name="geotrellis.raster.op.focal.Hillshade#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(r:geotrellis.Op[geotrellis.Raster],tns:geotrellis.Op[geotrellis.raster.TileNeighbors]):geotrellis.raster.op.focal.DirectHillshade"></a>
+      <a id="apply(Op[Raster],Op[TileNeighbors]):DirectHillshade"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="tns">tns: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../TileNeighbors.html" class="extype" name="geotrellis.raster.TileNeighbors">TileNeighbors</a>]</span>)</span><span class="result">: <a href="DirectHillshade.html" class="extype" name="geotrellis.raster.op.focal.DirectHillshade">DirectHillshade</a></span>
+      </span>
+      </h4>
       <p class="shortcomment cmt">Create a default hillshade raster, using a default azimuth of 315 degrees,
 altitude of 45 degrees, and z factor of 1.</p><div class="fullcomment"><div class="comment cmt"><p>Create a default hillshade raster, using a default azimuth of 315 degrees,
 altitude of 45 degrees, and z factor of 1.0.
-</p></div><dl class="paramcmts block"><dt class="param">r</dt><dd class="cmt"><p>Raster to for which to compute the hill shading.
+</p></div><dl class="paramcmts block"><dt class="param">r</dt><dd class="cmt"><p>Raster to for which to compute the hill shading.</p></dd><dt class="param">tns</dt><dd class="cmt"><p>TileNeighbors that describe the neighboring tiles.
 </p></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
