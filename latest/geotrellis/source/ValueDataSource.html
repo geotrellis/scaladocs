@@ -35,7 +35,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">ValueDataSource</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="ValueDataSourceLike.html" class="extype" name="geotrellis.source.ValueDataSourceLike">ValueDataSourceLike</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>, <a href="" class="extype" name="geotrellis.source.ValueDataSource">ValueDataSource</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>]]</span>
+        <span class="name">ValueDataSource</span><span class="tparams">[<span name="T">+T</span>]</span><span class="result"> extends <a href="ValueDataSourceLike.html" class="extype" name="geotrellis.source.ValueDataSourceLike">ValueDataSourceLike</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>, <a href="" class="extype" name="geotrellis.source.ValueDataSource">ValueDataSource</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>]]</span>
       </span>
       </h4>
       
@@ -89,7 +89,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.source.ValueDataSource#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(elements:geotrellis.Op[Seq[geotrellis.Op[T]]]):geotrellis.source.ValueDataSource[T]"></a>
+      <a id="&lt;init&gt;(element:geotrellis.Op[T]):geotrellis.source.ValueDataSource[T]"></a>
       <a id="&lt;init&gt;:ValueDataSource[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -97,7 +97,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ValueDataSource</span><span class="params">(<span name="elements">elements: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Seq">Seq</span>[<a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>]]]</span>)</span>
+        <span class="name">ValueDataSource</span><span class="params">(<span name="element">element: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>]</span>)</span>
       </span>
       </h4>
       
@@ -261,28 +261,41 @@
               
         </dd></dl></div>
     </li><li name="geotrellis.source.DataSourceLike#converge" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="converge()(implicitmf:Manifest[V]):geotrellis.source.ValueDataSource[V]"></a>
-      <a id="converge()(Manifest[T]):ValueDataSource[T]"></a>
+      <a id="converge():geotrellis.source.ValueDataSource[V]"></a>
+      <a id="converge():ValueDataSource[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">converge</span><span class="params">()</span><span class="params">(<span class="implicit">implicit </span><span name="mf">mf: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>]</span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.source.ValueDataSource">ValueDataSource</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>]</span>
+        <span class="name">converge</span><span class="params">()</span><span class="result">: <a href="" class="extype" name="geotrellis.source.ValueDataSource">ValueDataSource</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DataSourceLike.html" class="extype" name="geotrellis.source.DataSourceLike">DataSourceLike</a></dd></dl></div>
-    </li><li name="geotrellis.source.ValueDataSource#elements" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="elements:geotrellis.Op[Seq[geotrellis.Op[T]]]"></a>
-      <a id="elements:Op[Seq[Op[T]]]"></a>
+    </li><li name="geotrellis.source.ValueDataSource#element" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="element:geotrellis.Op[T]"></a>
+      <a id="element:Op[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">elements</span><span class="result">: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Seq">Seq</span>[<a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>]]]</span>
+        <span class="name">element</span><span class="result">: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.source.ValueDataSource#elements" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="elements:geotrellis.Literal[Seq[geotrellis.Op[T]]]"></a>
+      <a id="elements:Literal[Seq[Op[T]]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">elements</span><span class="result">: <a href="../Literal.html" class="extype" name="geotrellis.Literal">Literal</a>[<span class="extype" name="scala.collection.Seq">Seq</span>[<a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>]]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.source.ValueDataSource">ValueDataSource</a> → <a href="DataSourceLike.html" class="extype" name="geotrellis.source.DataSourceLike">DataSourceLike</a></dd></dl></div>
@@ -420,15 +433,15 @@
               
         </dd></dl></div>
     </li><li name="geotrellis.source.ValueDataSourceLike#get" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="get()(implicitmf:Manifest[T]):geotrellis.Operation[T]"></a>
-      <a id="get()(Manifest[T]):Operation[T]"></a>
+      <a id="get():geotrellis.Op[T]"></a>
+      <a id="get():Op[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">get</span><span class="params">()</span><span class="params">(<span class="implicit">implicit </span><span name="mf">mf: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>]</span>)</span><span class="result">: <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>]</span>
+        <span class="name">get</span><span class="params">()</span><span class="result">: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ValueDataSourceLike.html" class="extype" name="geotrellis.source.ValueDataSourceLike">ValueDataSourceLike</a> → <a href="DataSourceLike.html" class="extype" name="geotrellis.source.DataSourceLike">DataSourceLike</a></dd></dl></div>
@@ -472,28 +485,28 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="geotrellis.source.DataSourceLike#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="map[B,That](f:T=&gt;B)(implicitevidence$1:Manifest[B],implicitbf:geotrellis.source.CanBuildSourceFrom[Repr,B,That]):That"></a>
-      <a id="map[B,That]((T)⇒B)(Manifest[B],CanBuildSourceFrom[ValueDataSource[T],B,That]):That"></a>
+      <a id="map[B,That](f:T=&gt;B)(implicitbf:geotrellis.source.CanBuildSourceFrom[Repr,B,That]):That"></a>
+      <a id="map[B,That]((T)⇒B)(CanBuildSourceFrom[ValueDataSource[T],B,That]):That"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">map</span><span class="tparams">[<span name="B">B</span>, <span name="That">That</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>) ⇒ <span class="extype" name="geotrellis.source.DataSourceLike.map.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="geotrellis.source.DataSourceLike.map.B">B</span>]</span>, <span name="bf">bf: <a href="CanBuildSourceFrom.html" class="extype" name="geotrellis.source.CanBuildSourceFrom">CanBuildSourceFrom</a>[<a href="" class="extype" name="geotrellis.source.ValueDataSource">ValueDataSource</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>], <span class="extype" name="geotrellis.source.DataSourceLike.map.B">B</span>, <span class="extype" name="geotrellis.source.DataSourceLike.map.That">That</span>]</span>)</span><span class="result">: <span class="extype" name="geotrellis.source.DataSourceLike.map.That">That</span></span>
+        <span class="name">map</span><span class="tparams">[<span name="B">B</span>, <span name="That">That</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>) ⇒ <span class="extype" name="geotrellis.source.DataSourceLike.map.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="bf">bf: <a href="CanBuildSourceFrom.html" class="extype" name="geotrellis.source.CanBuildSourceFrom">CanBuildSourceFrom</a>[<a href="" class="extype" name="geotrellis.source.ValueDataSource">ValueDataSource</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>], <span class="extype" name="geotrellis.source.DataSourceLike.map.B">B</span>, <span class="extype" name="geotrellis.source.DataSourceLike.map.That">That</span>]</span>)</span><span class="result">: <span class="extype" name="geotrellis.source.DataSourceLike.map.That">That</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DataSourceLike.html" class="extype" name="geotrellis.source.DataSourceLike">DataSourceLike</a></dd></dl></div>
     </li><li name="geotrellis.source.DataSourceLike#mapOp" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapOp[B,That](f:geotrellis.Op[T]=&gt;geotrellis.Op[B])(implicitevidence$2:Manifest[B],implicitbf:geotrellis.source.CanBuildSourceFrom[Repr,B,That]):That"></a>
-      <a id="mapOp[B,That]((Op[T])⇒Op[B])(Manifest[B],CanBuildSourceFrom[ValueDataSource[T],B,That]):That"></a>
+      <a id="mapOp[B,That](f:geotrellis.Op[T]=&gt;geotrellis.Op[B])(implicitbf:geotrellis.source.CanBuildSourceFrom[Repr,B,That]):That"></a>
+      <a id="mapOp[B,That]((Op[T])⇒Op[B])(CanBuildSourceFrom[ValueDataSource[T],B,That]):That"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">mapOp</span><span class="tparams">[<span name="B">B</span>, <span name="That">That</span>]</span><span class="params">(<span name="f">f: (<a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>]) ⇒ <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.source.DataSourceLike.mapOp.B">B</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="geotrellis.source.DataSourceLike.mapOp.B">B</span>]</span>, <span name="bf">bf: <a href="CanBuildSourceFrom.html" class="extype" name="geotrellis.source.CanBuildSourceFrom">CanBuildSourceFrom</a>[<a href="" class="extype" name="geotrellis.source.ValueDataSource">ValueDataSource</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>], <span class="extype" name="geotrellis.source.DataSourceLike.mapOp.B">B</span>, <span class="extype" name="geotrellis.source.DataSourceLike.mapOp.That">That</span>]</span>)</span><span class="result">: <span class="extype" name="geotrellis.source.DataSourceLike.mapOp.That">That</span></span>
+        <span class="name">mapOp</span><span class="tparams">[<span name="B">B</span>, <span name="That">That</span>]</span><span class="params">(<span name="f">f: (<a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>]) ⇒ <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.source.DataSourceLike.mapOp.B">B</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="bf">bf: <a href="CanBuildSourceFrom.html" class="extype" name="geotrellis.source.CanBuildSourceFrom">CanBuildSourceFrom</a>[<a href="" class="extype" name="geotrellis.source.ValueDataSource">ValueDataSource</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>], <span class="extype" name="geotrellis.source.DataSourceLike.mapOp.B">B</span>, <span class="extype" name="geotrellis.source.DataSourceLike.mapOp.That">That</span>]</span>)</span><span class="result">: <span class="extype" name="geotrellis.source.DataSourceLike.mapOp.That">That</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">apply a function to elements, and return the appropriate datasource *</p><div class="fullcomment"><div class="comment cmt"><p>apply a function to elements, and return the appropriate datasource *</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DataSourceLike.html" class="extype" name="geotrellis.source.DataSourceLike">DataSourceLike</a></dd></dl></div>

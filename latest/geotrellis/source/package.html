@@ -76,15 +76,15 @@
       </h4>
       
     </li><li name="geotrellis.source.DataSource" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="DataSource[+T,V]extendsDataSourceLike[T,V,geotrellis.source.DataSource[T,V]]"></a>
-      <a id="DataSource[+T,V]:DataSource[T,V]"></a>
+      <a id="DataSource[+T,+V]extendsDataSourceLike[T,V,geotrellis.source.DataSource[T,V]]"></a>
+      <a id="DataSource[+T,+V]:DataSource[T,V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="DataSource.html"><span class="name">DataSource</span></a><span class="tparams">[<span name="T">+T</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="DataSourceLike.html" class="extype" name="geotrellis.source.DataSourceLike">DataSourceLike</a>[<span class="extype" name="geotrellis.source.DataSource.T">T</span>, <span class="extype" name="geotrellis.source.DataSource.V">V</span>, <a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<span class="extype" name="geotrellis.source.DataSource.T">T</span>, <span class="extype" name="geotrellis.source.DataSource.V">V</span>]]</span>
+        <a href="DataSource.html"><span class="name">DataSource</span></a><span class="tparams">[<span name="T">+T</span>, <span name="V">+V</span>]</span><span class="result"> extends <a href="DataSourceLike.html" class="extype" name="geotrellis.source.DataSourceLike">DataSourceLike</a>[<span class="extype" name="geotrellis.source.DataSource.T">T</span>, <span class="extype" name="geotrellis.source.DataSource.V">V</span>, <a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<span class="extype" name="geotrellis.source.DataSource.T">T</span>, <span class="extype" name="geotrellis.source.DataSource.V">V</span>]]</span>
       </span>
       </h4>
       <p class="comment cmt">Represents a data source that may be distributed across machines (logical data source)
@@ -103,15 +103,15 @@ or loaded in memory on a specific machine.</p>
       </h4>
       <p class="comment cmt">Bulid a data source with a converging function.</p>
     </li><li name="geotrellis.source.DataSourceLike" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="DataSourceLike[+T,V,+Repr&lt;:geotrellis.source.DataSource[T,V]]extendsAnyRef"></a>
-      <a id="DataSourceLike[+T,V,+Repr&lt;:DataSource[T,V]]:DataSourceLike[T,V,Repr]"></a>
+      <a id="DataSourceLike[+T,+V,+Repr&lt;:geotrellis.source.DataSource[T,V]]extendsAnyRef"></a>
+      <a id="DataSourceLike[+T,+V,+Repr&lt;:DataSource[T,V]]:DataSourceLike[T,V,Repr]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="DataSourceLike.html"><span class="name">DataSourceLike</span></a><span class="tparams">[<span name="T">+T</span>, <span name="V">V</span>, <span name="Repr">+Repr &lt;: <a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<span class="extype" name="geotrellis.source.DataSourceLike.T">T</span>, <span class="extype" name="geotrellis.source.DataSourceLike.V">V</span>]</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="DataSourceLike.html"><span class="name">DataSourceLike</span></a><span class="tparams">[<span name="T">+T</span>, <span name="V">+V</span>, <span name="Repr">+Repr &lt;: <a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<span class="extype" name="geotrellis.source.DataSourceLike.T">T</span>, <span class="extype" name="geotrellis.source.DataSourceLike.V">V</span>]</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
@@ -169,7 +169,7 @@ than builders listed for specific types in CanBuildSourceFrom above.</p>
       </h4>
       
     </li><li name="geotrellis.source.RasterSourceLike" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="RasterSourceLike[+Repr&lt;:geotrellis.source.RasterSource]extendsDataSourceLike[geotrellis.Raster,geotrellis.Raster,Repr]withDataSource[geotrellis.Raster,geotrellis.Raster]withFocalOpMethods[Repr]"></a>
+      <a id="RasterSourceLike[+Repr&lt;:geotrellis.source.RasterSource]extendsDataSourceLike[geotrellis.Raster,geotrellis.Raster,Repr]withDataSource[geotrellis.Raster,geotrellis.Raster]withFocalOpMethods[Repr]withLocalOpMethods[Repr]"></a>
       <a id="RasterSourceLike[+Repr&lt;:RasterSource]:RasterSourceLike[Repr]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -177,7 +177,7 @@ than builders listed for specific types in CanBuildSourceFrom above.</p>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="RasterSourceLike.html"><span class="name">RasterSourceLike</span></a><span class="tparams">[<span name="Repr">+Repr &lt;: <a href="RasterSource.html" class="extype" name="geotrellis.source.RasterSource">RasterSource</a></span>]</span><span class="result"> extends <a href="DataSourceLike.html" class="extype" name="geotrellis.source.DataSourceLike">DataSourceLike</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="RasterSource.html" class="extype" name="geotrellis.source.RasterSource">RasterSource</a>] with <a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="../raster/op/focal/FocalOpMethods.html" class="extype" name="geotrellis.raster.op.focal.FocalOpMethods">FocalOpMethods</a>[<a href="RasterSource.html" class="extype" name="geotrellis.source.RasterSource">RasterSource</a>]</span>
+        <a href="RasterSourceLike.html"><span class="name">RasterSourceLike</span></a><span class="tparams">[<span name="Repr">+Repr &lt;: <a href="RasterSource.html" class="extype" name="geotrellis.source.RasterSource">RasterSource</a></span>]</span><span class="result"> extends <a href="DataSourceLike.html" class="extype" name="geotrellis.source.DataSourceLike">DataSourceLike</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="RasterSource.html" class="extype" name="geotrellis.source.RasterSource">RasterSource</a>] with <a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <a href="../raster/op/focal/FocalOpMethods.html" class="extype" name="geotrellis.raster.op.focal.FocalOpMethods">FocalOpMethods</a>[<a href="RasterSource.html" class="extype" name="geotrellis.source.RasterSource">RasterSource</a>] with <a href="../raster/op/local/LocalOpMethods.html" class="extype" name="geotrellis.raster.op.local.LocalOpMethods">LocalOpMethods</a>[<a href="RasterSource.html" class="extype" name="geotrellis.source.RasterSource">RasterSource</a>]</span>
       </span>
       </h4>
       
@@ -195,15 +195,15 @@ than builders listed for specific types in CanBuildSourceFrom above.</p>
       </h4>
       
     </li><li name="geotrellis.source.ValueDataSource" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ValueDataSource[T]extendsValueDataSourceLike[T,geotrellis.source.ValueDataSource[T]]"></a>
-      <a id="ValueDataSource[T]:ValueDataSource[T]"></a>
+      <a id="ValueDataSource[+T]extendsValueDataSourceLike[T,geotrellis.source.ValueDataSource[T]]"></a>
+      <a id="ValueDataSource[+T]:ValueDataSource[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="ValueDataSource.html"><span class="name">ValueDataSource</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="ValueDataSourceLike.html" class="extype" name="geotrellis.source.ValueDataSourceLike">ValueDataSourceLike</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>, <a href="ValueDataSource.html" class="extype" name="geotrellis.source.ValueDataSource">ValueDataSource</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>]]</span>
+        <a href="ValueDataSource.html"><span class="name">ValueDataSource</span></a><span class="tparams">[<span name="T">+T</span>]</span><span class="result"> extends <a href="ValueDataSourceLike.html" class="extype" name="geotrellis.source.ValueDataSourceLike">ValueDataSourceLike</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>, <a href="ValueDataSource.html" class="extype" name="geotrellis.source.ValueDataSource">ValueDataSource</a>[<span class="extype" name="geotrellis.source.ValueDataSource.T">T</span>]]</span>
       </span>
       </h4>
       
@@ -221,15 +221,15 @@ than builders listed for specific types in CanBuildSourceFrom above.</p>
       </h4>
       <p class="comment cmt">Bulid a data source with a single value.</p>
     </li><li name="geotrellis.source.ValueDataSourceLike" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="ValueDataSourceLike[T,+Repr&lt;:geotrellis.source.ValueDataSource[T]]extendsDataSourceLike[T,T,Repr]withDataSource[T,T]"></a>
-      <a id="ValueDataSourceLike[T,+Repr&lt;:ValueDataSource[T]]:ValueDataSourceLike[T,Repr]"></a>
+      <a id="ValueDataSourceLike[+T,+Repr&lt;:geotrellis.source.ValueDataSource[T]]extendsDataSourceLike[T,T,Repr]withDataSource[T,T]"></a>
+      <a id="ValueDataSourceLike[+T,+Repr&lt;:ValueDataSource[T]]:ValueDataSourceLike[T,Repr]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="ValueDataSourceLike.html"><span class="name">ValueDataSourceLike</span></a><span class="tparams">[<span name="T">T</span>, <span name="Repr">+Repr &lt;: <a href="ValueDataSource.html" class="extype" name="geotrellis.source.ValueDataSource">ValueDataSource</a>[<span class="extype" name="geotrellis.source.ValueDataSourceLike.T">T</span>]</span>]</span><span class="result"> extends <a href="DataSourceLike.html" class="extype" name="geotrellis.source.DataSourceLike">DataSourceLike</a>[<span class="extype" name="geotrellis.source.ValueDataSourceLike.T">T</span>, <span class="extype" name="geotrellis.source.ValueDataSourceLike.T">T</span>, <a href="ValueDataSource.html" class="extype" name="geotrellis.source.ValueDataSource">ValueDataSource</a>[<span class="extype" name="geotrellis.source.ValueDataSourceLike.T">T</span>]] with <a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<span class="extype" name="geotrellis.source.ValueDataSourceLike.T">T</span>, <span class="extype" name="geotrellis.source.ValueDataSourceLike.T">T</span>]</span>
+        <a href="ValueDataSourceLike.html"><span class="name">ValueDataSourceLike</span></a><span class="tparams">[<span name="T">+T</span>, <span name="Repr">+Repr &lt;: <a href="ValueDataSource.html" class="extype" name="geotrellis.source.ValueDataSource">ValueDataSource</a>[<span class="extype" name="geotrellis.source.ValueDataSourceLike.T">T</span>]</span>]</span><span class="result"> extends <a href="DataSourceLike.html" class="extype" name="geotrellis.source.DataSourceLike">DataSourceLike</a>[<span class="extype" name="geotrellis.source.ValueDataSourceLike.T">T</span>, <span class="extype" name="geotrellis.source.ValueDataSourceLike.T">T</span>, <a href="ValueDataSource.html" class="extype" name="geotrellis.source.ValueDataSource">ValueDataSource</a>[<span class="extype" name="geotrellis.source.ValueDataSourceLike.T">T</span>]] with <a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<span class="extype" name="geotrellis.source.ValueDataSourceLike.T">T</span>, <span class="extype" name="geotrellis.source.ValueDataSourceLike.T">T</span>]</span>
       </span>
       </h4>
       
