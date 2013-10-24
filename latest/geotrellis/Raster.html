@@ -24,7 +24,7 @@
         </head>
         <body class="type">
       <div id="definition">
-        <a href="Raster$.html" title="Go to companion"><img src="../lib/class_to_object_big.png" /></a>
+        <a href="Raster$.html" title="Go to companion"><img src="../lib/trait_to_object_big.png" /></a>
         <p id="owner"><a href="package.html" class="extype" name="geotrellis">geotrellis</a></p>
         <h1><a href="Raster$.html" title="Go to companion">Raster</a></h1>
       </div>
@@ -32,20 +32,24 @@
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">case class</span>
+        <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">Raster</span><span class="params">(<span name="data">data: <a href="package.html#RasterData=geotrellis.raster.RasterData" class="extmbr" name="geotrellis.RasterData">RasterData</a></span>, <span name="rasterExtent">rasterExtent: <a href="RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">Raster</span><span class="result"> extends <a href="RasterLike.html" class="extype" name="geotrellis.RasterLike">RasterLike</a></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Base trait for the Raster data type.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="RasterLike.html" class="extype" name="geotrellis.RasterLike">RasterLike</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a href="ArrayRaster.html" class="extype" name="geotrellis.ArrayRaster">ArrayRaster</a>, <a href="CroppedRaster.html" class="extype" name="geotrellis.CroppedRaster">CroppedRaster</a></div>
         </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
                 <span class="toggle diagram-link">Type Hierarchy</span>
                 <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph564" viewBox="0.00 0.00 200.00 120.00" height="120pt" width="200pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 116)" class="graph" id="graph1"><polygon points="-4,5 -4,-116 197,-116 197,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><!-- node0 --><g class="node this class" id="graph564_0"><a xlink:title="geotrellis.Raster (this class)" xlink:href="#inheritance-diagram"><polygon points="128,-50 54,-50 54,-24 128,-24 128,-50" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../lib/class_diagram.png" y="-45" x="64" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-34.6667" x="86" text-anchor="start">Raster</text></a></g><!-- node1 --><g class="node trait" id="graph564_1"><a xlink:title="scala.Product"><polygon points="78,-112 3.55271e-14,-112 0,-86 78,-86 78,-112" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../lib/trait_diagram.png" y="-107" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-96.6667" x="32" text-anchor="start">Product</text></a></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph564_1_0"><a xlink:title="Raster is a subtype of Product"><path d="M53.2628,-81.9943C61.6908,-71.9456 72.2013,-59.4138 79.988,-50.1297" stroke="#d4d4d4" fill="none"></path><polygon points="51.9001,-80.8958 50.0279,-85.8514 54.5818,-83.145 51.9001,-80.8958" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph564_2"><a xlink:title="scala.Serializable"><polygon points="192,-112 96,-112 96,-86 192,-86 192,-112" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../lib/trait_diagram.png" y="-107" x="106" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-96.6667" x="128" text-anchor="start">Serializable</text></a></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph564_2_0"><a xlink:title="Raster is a subtype of Serializable"><path d="M129.463,-81.9943C120.873,-71.9456 110.16,-59.4138 102.224,-50.1297" stroke="#d4d4d4" fill="none"></path><polygon points="128.181,-83.1879 132.76,-85.8514 130.841,-80.9136 128.181,-83.1879" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph451" viewBox="0.00 0.00 232.00 158.00" height="158pt" width="232pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 154)" class="graph" id="graph1"><polygon points="-4,5 -4,-154 229,-154 229,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><!-- node0 --><g class="node this trait" id="graph451_0"><a xlink:title="geotrellis.Raster (this trait)" xlink:href="#inheritance-diagram"><polygon points="145,-88 71,-88 71,-62 145,-62 145,-88" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../lib/trait_diagram.png" y="-83" x="81" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-72.6667" x="103" text-anchor="start">Raster</text></a></g><!-- node1 --><g class="node class" id="graph451_1"><a xlink:title="geotrellis.ArrayRaster" xlink:href="ArrayRaster.html#inheritance-diagram"><polygon points="96,-26 2.84217e-14,-26 0,-1.24345e-14 96,-3.55271e-15 96,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../lib/class_diagram.png" y="-21" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="32" text-anchor="start">ArrayRaster</text></a></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph451_0_1"><a xlink:title="ArrayRaster is a subtype of Raster"><path d="M91.5429,-57.9943C81.8183,-47.9456 69.6908,-35.4138 60.7061,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="90.5408,-59.4754 95.2755,-61.8514 93.056,-57.0414 90.5408,-59.4754" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node class" id="graph451_2"><a xlink:title="geotrellis.CroppedRaster" xlink:href="CroppedRaster.html#inheritance-diagram"><polygon points="224,-26 114,-26 114,-1.24345e-14 224,-3.55271e-15 224,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../lib/class_diagram.png" y="-21" x="124" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-10.6667" x="146" text-anchor="start">CroppedRaster</text></a></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph451_0_2"><a xlink:title="CroppedRaster is a subtype of Raster"><path d="M124.469,-58.2605C134.4,-48.1676 146.867,-35.496 156.082,-26.1297" stroke="#d4d4d4" fill="none"></path><polygon points="123.196,-57.0599 120.937,-61.8514 125.691,-59.5146 123.196,-57.0599" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node trait" id="graph451_3"><a xlink:title="geotrellis.RasterLike" xlink:href="RasterLike.html#inheritance-diagram"><polygon points="154,-150 62,-150 62,-124 154,-124 154,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../lib/trait_diagram.png" y="-145" x="72" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-134.667" x="94" text-anchor="start">RasterLike</text></a></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph451_3_0"><a xlink:title="Raster is a subtype of RasterLike"><path d="M108,-118.646C108,-108.843 108,-97.003 108,-88.1297" stroke="#d4d4d4" fill="none"></path><polygon points="106.25,-118.851 108,-123.851 109.75,-118.851 106.25,-118.851" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
               </div></div>
         
 
@@ -63,7 +67,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.Raster"><span>Raster</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.Raster"><span>Raster</span></li><li class="in" name="geotrellis.RasterLike"><span>RasterLike</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
                 <span class="filtertype">Implicitly<br />
@@ -86,30 +90,205 @@
 
       <div id="template">
         <div id="allMembers">
-        <div id="constructors" class="members">
-              <h3>Instance Constructors</h3>
-              <ol><li name="geotrellis.Raster#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(data:geotrellis.RasterData,rasterExtent:geotrellis.RasterExtent):geotrellis.Raster"></a>
-      <a id="&lt;init&gt;:Raster"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">Raster</span><span class="params">(<span name="data">data: <a href="package.html#RasterData=geotrellis.raster.RasterData" class="extmbr" name="geotrellis.RasterData">RasterData</a></span>, <span name="rasterExtent">rasterExtent: <a href="RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span>
-      </span>
-      </h4>
-      
-    </li></ol>
-            </div>
-
         
 
         
 
         <div id="values" class="values members">
-              <h3>Value Members</h3>
+              <h3>Abstract Value Members</h3>
+              <ol><li name="geotrellis.Raster#combine" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="combine(r2:geotrellis.Raster)(f:(Int,Int)=&gt;Int):geotrellis.Raster"></a>
+      <a id="combine(Raster)((Int,Int)⇒Int):Raster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">combine</span><span class="params">(<span name="r2">r2: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.Raster#combineDouble" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="combineDouble(r2:geotrellis.Raster)(f:(Double,Double)=&gt;Double):geotrellis.Raster"></a>
+      <a id="combineDouble(Raster)((Double,Double)⇒Double):Raster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">combineDouble</span><span class="params">(<span name="r2">r2: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>) ⇒ <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.Raster#convert" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="convert(typ:geotrellis.RasterType):geotrellis.Raster"></a>
+      <a id="convert(RasterType):Raster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">convert</span><span class="params">(<span name="typ">typ: <a href="RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.Raster#copy" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="copy():geotrellis.Raster"></a>
+      <a id="copy():Raster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">copy</span><span class="params">()</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Clone this raster.</p>
+    </li><li name="geotrellis.Raster#force" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="force():geotrellis.Raster"></a>
+      <a id="force():Raster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">force</span><span class="params">()</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">This function will force any deferred operations to happen
+ at the time it is called.</p><div class="fullcomment"><div class="comment cmt"><p>This function will force any deferred operations to happen
+ at the time it is called. This is necessary so that lazy maps
+ don't get passed between machines.
+</p></div></div>
+    </li><li name="geotrellis.RasterLike#get" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="get(col:Int,row:Int):Int"></a>
+      <a id="get(Int,Int):Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">get</span><span class="params">(<span name="col">col: <span class="extype" name="scala.Int">Int</span></span>, <span name="row">row: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Get value at given coordinates.</p><div class="fullcomment"><div class="comment cmt"><p>Get value at given coordinates.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterLike.html" class="extype" name="geotrellis.RasterLike">RasterLike</a></dd></dl></div>
+    </li><li name="geotrellis.RasterLike#getDouble" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="getDouble(col:Int,row:Int):Double"></a>
+      <a id="getDouble(Int,Int):Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getDouble</span><span class="params">(<span name="col">col: <span class="extype" name="scala.Int">Int</span></span>, <span name="row">row: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Get value at given coordinates.</p><div class="fullcomment"><div class="comment cmt"><p>Get value at given coordinates.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterLike.html" class="extype" name="geotrellis.RasterLike">RasterLike</a></dd></dl></div>
+    </li><li name="geotrellis.Raster#map" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="map(f:Int=&gt;Int):geotrellis.Raster"></a>
+      <a id="map((Int)⇒Int):Raster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">map</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.Raster#mapDouble" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="mapDouble(f:Double=&gt;Double):geotrellis.Raster"></a>
+      <a id="mapDouble((Double)⇒Double):Raster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mapDouble</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Double">Double</span>) ⇒ <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.RasterLike#rasterExtent" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="rasterExtent:geotrellis.RasterExtent"></a>
+      <a id="rasterExtent:RasterExtent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rasterExtent</span><span class="result">: <a href="RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterLike.html" class="extype" name="geotrellis.RasterLike">RasterLike</a></dd></dl></div>
+    </li><li name="geotrellis.RasterLike#rasterType" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="rasterType:geotrellis.RasterType"></a>
+      <a id="rasterType:RasterType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rasterType</span><span class="result">: <a href="RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterLike.html" class="extype" name="geotrellis.RasterLike">RasterLike</a></dd></dl></div>
+    </li><li name="geotrellis.Raster#toArray" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="toArray:Array[Int]"></a>
+      <a id="toArray:Array[Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toArray</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.Raster#toArrayDouble" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="toArrayDouble:Array[Double]"></a>
+      <a id="toArrayDouble:Array[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toArrayDouble</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.RasterLike#toArrayRaster" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="toArrayRaster:geotrellis.ArrayRaster"></a>
+      <a id="toArrayRaster:ArrayRaster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toArrayRaster</span><span class="result">: <a href="ArrayRaster.html" class="extype" name="geotrellis.ArrayRaster">ArrayRaster</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterLike.html" class="extype" name="geotrellis.RasterLike">RasterLike</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Concrete Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:AnyRef):Boolean"></a>
       <a id="!=(AnyRef):Boolean"></a>
@@ -225,7 +404,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.Raster#asciiDraw" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.RasterLike#asciiDraw" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asciiDraw():String"></a>
       <a id="asciiDraw():String"></a>
       <h4 class="signature">
@@ -237,8 +416,9 @@
         <span class="name">asciiDraw</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Return ascii art of this raster.</p>
-    </li><li name="geotrellis.Raster#asciiDrawRange" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Return ascii art of this raster.</p><div class="fullcomment"><div class="comment cmt"><p>Return ascii art of this raster.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterLike.html" class="extype" name="geotrellis.RasterLike">RasterLike</a></dd></dl></div>
+    </li><li name="geotrellis.RasterLike#asciiDrawRange" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asciiDrawRange(colMin:Int,colMax:Int,rowMin:Int,rowMax:Int):String"></a>
       <a id="asciiDrawRange(Int,Int,Int,Int):String"></a>
       <h4 class="signature">
@@ -250,7 +430,8 @@
         <span class="name">asciiDrawRange</span><span class="params">(<span name="colMin">colMin: <span class="extype" name="scala.Int">Int</span></span>, <span name="colMax">colMax: <span class="extype" name="scala.Int">Int</span></span>, <span name="rowMin">rowMin: <span class="extype" name="scala.Int">Int</span></span>, <span name="rowMax">rowMax: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Return ascii art of a range from this raster.</p>
+      <p class="shortcomment cmt">Return ascii art of a range from this raster.</p><div class="fullcomment"><div class="comment cmt"><p>Return ascii art of a range from this raster.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterLike.html" class="extype" name="geotrellis.RasterLike">RasterLike</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -270,42 +451,68 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.Raster#cols" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.RasterLike#cols" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="cols:Int"></a>
       <a id="cols:Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
         <span class="name">cols</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterLike.html" class="extype" name="geotrellis.RasterLike">RasterLike</a></dd></dl></div>
     </li><li name="geotrellis.Raster#combine" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="combine(r2:geotrellis.Raster)(f:(Int,Int)=&gt;Int):geotrellis.Raster"></a>
-      <a id="combine(Raster)((Int,Int)⇒Int):Raster"></a>
+      <a id="combine(rs:geotrellis.Raster*)(f:Seq[Int]=&gt;Int)(implicitd:geotrellis.DI):geotrellis.Raster"></a>
+      <a id="combine(Raster*)((Seq[Int])⇒Int)(DI):Raster"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">combine</span><span class="params">(<span name="r2">r2: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
+        <span class="name">combine</span><span class="params">(<span name="rs">rs: <a href="" class="extype" name="geotrellis.Raster">Raster</a>*</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>]) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <a href="package.html#DI=DummyImplicit" class="extmbr" name="geotrellis.DI">DI</a></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.Raster#combine" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="combine(rs:Seq[geotrellis.Raster])(f:Seq[Int]=&gt;Int):geotrellis.Raster"></a>
+      <a id="combine(Seq[Raster])((Seq[Int])⇒Int):Raster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">combine</span><span class="params">(<span name="rs">rs: <span class="extype" name="scala.Seq">Seq</span>[<a href="" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>]) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
       </span>
       </h4>
       
     </li><li name="geotrellis.Raster#combineDouble" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="combineDouble(r2:geotrellis.Raster)(f:(Double,Double)=&gt;Double):geotrellis.Raster"></a>
-      <a id="combineDouble(Raster)((Double,Double)⇒Double):Raster"></a>
+      <a id="combineDouble(rs:geotrellis.Raster*)(f:Seq[Double]=&gt;Double)(implicitd:geotrellis.DI):geotrellis.Raster"></a>
+      <a id="combineDouble(Raster*)((Seq[Double])⇒Double)(DI):Raster"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">combineDouble</span><span class="params">(<span name="r2">r2: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>) ⇒ <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
+        <span class="name">combineDouble</span><span class="params">(<span name="rs">rs: <a href="" class="extype" name="geotrellis.Raster">Raster</a>*</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Double">Double</span>]) ⇒ <span class="extype" name="scala.Double">Double</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <a href="package.html#DI=DummyImplicit" class="extmbr" name="geotrellis.DI">DI</a></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.Raster#combineDouble" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="combineDouble(rs:Seq[geotrellis.Raster])(f:Seq[Double]=&gt;Double):geotrellis.Raster"></a>
+      <a id="combineDouble(Seq[Raster])((Seq[Double])⇒Double):Raster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">combineDouble</span><span class="params">(<span name="rs">rs: <span class="extype" name="scala.Seq">Seq</span>[<a href="" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Double">Double</span>]) ⇒ <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
       </span>
       </h4>
       
@@ -323,55 +530,16 @@
       </h4>
       <p class="shortcomment cmt">Test <a href="RasterExtent.html" class="extype" name="geotrellis.RasterExtent">geotrellis.RasterExtent</a> of other raster w/ our own geographic
 attributes.</p>
-    </li><li name="geotrellis.Raster#convert" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="convert(typ:geotrellis.RasterType):geotrellis.Raster"></a>
-      <a id="convert(RasterType):Raster"></a>
+    </li><li name="geotrellis.Raster#dualCombine" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="dualCombine(rs:Seq[geotrellis.Raster])(f:Seq[Int]=&gt;Int)(g:Seq[Double]=&gt;Double):geotrellis.Raster"></a>
+      <a id="dualCombine(Seq[Raster])((Seq[Int])⇒Int)((Seq[Double])⇒Double):Raster"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">convert</span><span class="params">(<span name="typ">typ: <a href="RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.Raster#copy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="copy():geotrellis.Raster"></a>
-      <a id="copy():Raster"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">copy</span><span class="params">()</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Clone this raster.</p>
-    </li><li name="geotrellis.Raster#data" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="data:geotrellis.RasterData"></a>
-      <a id="data:RasterData"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">data</span><span class="result">: <a href="package.html#RasterData=geotrellis.raster.RasterData" class="extmbr" name="geotrellis.RasterData">RasterData</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.Raster#defer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="defer():geotrellis.Raster"></a>
-      <a id="defer():Raster"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">defer</span><span class="params">()</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
+        <span class="name">dualCombine</span><span class="params">(<span name="rs">rs: <span class="extype" name="scala.Seq">Seq</span>[<a href="" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>]) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span name="g">g: (<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Double">Double</span>]) ⇒ <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
       </span>
       </h4>
       
@@ -388,7 +556,7 @@ attributes.</p>
       </span>
       </h4>
       
-    </li><li name="geotrellis.Raster#dualForeach" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.RasterLike#dualForeach" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="dualForeach(f:Int=&gt;Unit)(g:Double=&gt;Unit):Unit"></a>
       <a id="dualForeach((Int)⇒Unit)((Double)⇒Unit):Unit"></a>
       <h4 class="signature">
@@ -400,7 +568,7 @@ attributes.</p>
         <span class="name">dualForeach</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="params">(<span name="g">g: (<span class="extype" name="scala.Double">Double</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterLike.html" class="extype" name="geotrellis.RasterLike">RasterLike</a></dd></dl></div>
     </li><li name="geotrellis.Raster#dualMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="dualMap(f:Int=&gt;Int)(g:Double=&gt;Double):geotrellis.Raster"></a>
       <a id="dualMap((Int)⇒Int)((Double)⇒Double):Raster"></a>
@@ -424,6 +592,19 @@ attributes.</p>
       </span>
       <span class="symbol">
         <span class="name">dualMapIfSet</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span name="g">g: (<span class="extype" name="scala.Double">Double</span>) ⇒ <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.Raster#dualReduce" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="dualReduce(rs:Seq[geotrellis.Raster])(f:(Int,Int)=&gt;Int)(g:(Double,Double)=&gt;Double):geotrellis.Raster"></a>
+      <a id="dualReduce(Seq[Raster])((Int,Int)⇒Int)((Double,Double)⇒Double):Raster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dualReduce</span><span class="params">(<span name="rs">rs: <span class="extype" name="scala.Seq">Seq</span>[<a href="" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span name="g">g: (<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>) ⇒ <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
       </span>
       </h4>
       
@@ -508,6 +689,19 @@ attributes.</p>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -527,7 +721,7 @@ attributes.</p>
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.Raster#findMinMax" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.RasterLike#findMinMax" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="findMinMax:(Int,Int)"></a>
       <a id="findMinMax:(Int,Int)"></a>
       <h4 class="signature">
@@ -540,12 +734,12 @@ attributes.</p>
       </span>
       </h4>
       <p class="shortcomment cmt">Return tuple of highest and lowest value in raster.</p><div class="fullcomment"><div class="comment cmt"><p>Return tuple of highest and lowest value in raster.
-</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Currently does not support double valued raster data types
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterLike.html" class="extype" name="geotrellis.RasterLike">RasterLike</a></dd><dt>Note</dt><dd><span class="cmt"><p>Currently does not support double valued raster data types
         (TypeFloat,TypeDouble). Calling findMinMax on rasters of those
         types will give the integer min and max of the rounded values of
         their cells.
 </p></span></dd></dl></div>
-    </li><li name="geotrellis.Raster#findMinMaxDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.RasterLike#findMinMaxDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="findMinMaxDouble:(Double,Double)"></a>
       <a id="findMinMaxDouble:(Double,Double)"></a>
       <h4 class="signature">
@@ -558,25 +752,8 @@ attributes.</p>
       </span>
       </h4>
       <p class="shortcomment cmt">Return tuple of highest and lowest value in raster.</p><div class="fullcomment"><div class="comment cmt"><p>Return tuple of highest and lowest value in raster.
-</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Currently does not support double valued raster data types
-        (TypeFloat,TypeDouble). Calling findMinMax on rasters of those
-        types will give the integer min and max of the rounded values of
-        their cells.
-</p></span></dd></dl></div>
-    </li><li name="geotrellis.Raster#force" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="force():geotrellis.Raster"></a>
-      <a id="force():Raster"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">force</span><span class="params">()</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.Raster#foreach" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterLike.html" class="extype" name="geotrellis.RasterLike">RasterLike</a></dd></dl></div>
+    </li><li name="geotrellis.RasterLike#foreach" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="foreach(f:Int=&gt;Unit):Unit"></a>
       <a id="foreach((Int)⇒Unit):Unit"></a>
       <h4 class="signature">
@@ -588,8 +765,8 @@ attributes.</p>
         <span class="name">foreach</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      
-    </li><li name="geotrellis.Raster#foreachDouble" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterLike.html" class="extype" name="geotrellis.RasterLike">RasterLike</a></dd></dl></div>
+    </li><li name="geotrellis.RasterLike#foreachDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="foreachDouble(f:Double=&gt;Unit):Unit"></a>
       <a id="foreachDouble((Double)⇒Unit):Unit"></a>
       <h4 class="signature">
@@ -601,7 +778,7 @@ attributes.</p>
         <span class="name">foreachDouble</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Double">Double</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterLike.html" class="extype" name="geotrellis.RasterLike">RasterLike</a></dd></dl></div>
     </li><li name="scala.Predef.any2stringfmt#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="formatted(fmtstr:String):String"></a>
       <a id="formatted(String):String"></a>
@@ -622,19 +799,6 @@ attributes.</p>
                 <span class="name">@inline</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.Raster#get" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="get(col:Int,row:Int):Int"></a>
-      <a id="get(Int,Int):Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">get</span><span class="params">(<span name="col">col: <span class="extype" name="scala.Int">Int</span></span>, <span name="row">row: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Get value at given coordinates.</p>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -648,59 +812,20 @@ attributes.</p>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.Raster#getDouble" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getDouble(col:Int,row:Int):Double"></a>
-      <a id="getDouble(Int,Int):Double"></a>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getDouble</span><span class="params">(<span name="col">col: <span class="extype" name="scala.Int">Int</span></span>, <span name="row">row: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Get value at given coordinates.</p>
-    </li><li name="geotrellis.Raster#getTileOpList" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getTileOpList(clipExtent:geotrellis.feature.Polygon[_]):List[geotrellis.Op[geotrellis.Raster]]"></a>
-      <a id="getTileOpList(Polygon[_]):List[Op[Raster]]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getTileOpList</span><span class="params">(<span name="clipExtent">clipExtent: <a href="feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[_]</span>)</span><span class="result">: <span class="extype" name="scala.List">List</span>[<a href="package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="" class="extype" name="geotrellis.Raster">Raster</a>]]</span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.Raster#getTileOpList" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getTileOpList():List[geotrellis.Op[geotrellis.Raster]]"></a>
-      <a id="getTileOpList():List[Op[Raster]]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getTileOpList</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.List">List</span>[<a href="package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="" class="extype" name="geotrellis.Raster">Raster</a>]]</span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.Raster#getTiles" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getTiles():List[geotrellis.Raster]"></a>
-      <a id="getTiles():List[Raster]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getTiles</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.List">List</span>[<a href="" class="extype" name="geotrellis.Raster">Raster</a>]</span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.Raster#isFloat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.RasterLike#isFloat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isFloat:Boolean"></a>
       <a id="isFloat:Boolean"></a>
       <h4 class="signature">
@@ -712,7 +837,7 @@ attributes.</p>
         <span class="name">isFloat</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterLike.html" class="extype" name="geotrellis.RasterLike">RasterLike</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -726,71 +851,6 @@ attributes.</p>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.Raster#isLazy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="isLazy:Boolean"></a>
-      <a id="isLazy:Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isLazy</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Returns true if the underlying data is being lazily evaluated.</p>
-    </li><li name="geotrellis.Raster#isTiled" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="isTiled:Boolean"></a>
-      <a id="isTiled:Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isTiled</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Returns true if the underlying data is tiled.</p>
-    </li><li name="geotrellis.Raster#length" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="length:Int"></a>
-      <a id="length:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">length</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.Raster#map" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="map(f:Int=&gt;Int):geotrellis.Raster"></a>
-      <a id="map((Int)⇒Int):Raster"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">map</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.Raster#mapDouble" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="mapDouble(f:Double=&gt;Double):geotrellis.Raster"></a>
-      <a id="mapDouble((Double)⇒Double):Raster"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">mapDouble</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Double">Double</span>) ⇒ <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
-      </span>
-      </h4>
-      
     </li><li name="geotrellis.Raster#mapIfSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="mapIfSet(f:Int=&gt;Int):geotrellis.Raster"></a>
       <a id="mapIfSet((Int)⇒Int):Raster"></a>
@@ -869,32 +929,45 @@ attributes.</p>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.Raster#rasterExtent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="rasterExtent:geotrellis.RasterExtent"></a>
-      <a id="rasterExtent:RasterExtent"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">rasterExtent</span><span class="result">: <a href="RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.Raster#rows" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="rows:Int"></a>
-      <a id="rows:Int"></a>
+    </li><li name="geotrellis.Raster#reduce" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="reduce(rs:Seq[geotrellis.Raster])(f:(Int,Int)=&gt;Int):geotrellis.Raster"></a>
+      <a id="reduce(Seq[Raster])((Int,Int)⇒Int):Raster"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">rows</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">reduce</span><span class="params">(<span name="rs">rs: <span class="extype" name="scala.Seq">Seq</span>[<a href="" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
       </span>
       </h4>
       
+    </li><li name="geotrellis.Raster#reduceDouble" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="reduceDouble(rs:Seq[geotrellis.Raster])(f:(Double,Double)=&gt;Double):geotrellis.Raster"></a>
+      <a id="reduceDouble(Seq[Raster])((Double,Double)⇒Double):Raster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reduceDouble</span><span class="params">(<span name="rs">rs: <span class="extype" name="scala.Seq">Seq</span>[<a href="" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>) ⇒ <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.Raster">Raster</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.RasterLike#rows" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="rows:Int"></a>
+      <a id="rows:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rows</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterLike.html" class="extype" name="geotrellis.RasterLike">RasterLike</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -908,32 +981,19 @@ attributes.</p>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.Raster#toArray" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="toArray:Array[Int]"></a>
-      <a id="toArray:Array[Int]"></a>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toArray</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4>
-      
-    </li><li name="geotrellis.Raster#toArrayDouble" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="toArrayDouble:Array[Double]"></a>
-      <a id="toArrayDouble:Array[Double]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toArrayDouble</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      </h4>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -1097,14 +1157,8 @@ attributes.</p>
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.Serializable">
-              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
-            </div><div class="parent" name="java.io.Serializable">
-              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
-            </div><div class="parent" name="scala.Product">
-              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
-            </div><div class="parent" name="scala.Equals">
-              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+        <div class="parent" name="geotrellis.RasterLike">
+              <h3>Inherited from <a href="RasterLike.html" class="extype" name="geotrellis.RasterLike">RasterLike</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">

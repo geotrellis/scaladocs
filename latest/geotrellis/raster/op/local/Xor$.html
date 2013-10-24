@@ -35,16 +35,17 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">Xor</span>
+        <span class="name">Xor</span><span class="result"> extends <a href="LocalRasterBinaryOp.html" class="extype" name="geotrellis.raster.op.local.LocalRasterBinaryOp">LocalRasterBinaryOp</a></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Xor's cell values of rasters or Int values.
-</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>NoData values will cause the results of this operation
-             to be NODATA.
-</p></span></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>If used with Double typed rasters, the values
+             will be rounded to Ints.
+</p></span>, <span class="cmt"><p>NoData values will cause the results of this operation
+             to be NODATA.</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="LocalRasterBinaryOp.html" class="extype" name="geotrellis.raster.op.local.LocalRasterBinaryOp">LocalRasterBinaryOp</a>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -62,7 +63,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.raster.op.local.Xor"><span>Xor</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.raster.op.local.Xor"><span>Xor</span></li><li class="in" name="geotrellis.raster.op.local.LocalRasterBinaryOp"><span>LocalRasterBinaryOp</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -153,63 +154,110 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.raster.op.local.Xor#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply(r1:geotrellis.Op[geotrellis.Raster],r2:geotrellis.Op[geotrellis.Raster]):geotrellis.raster.op.local.XorRaster"></a>
-      <a id="apply(Op[Raster],Op[Raster]):XorRaster"></a>
+    </li><li name="geotrellis.raster.op.local.Xor#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="apply(r:geotrellis.Op[geotrellis.Raster],c:geotrellis.Op[Int]):geotrellis.Op[geotrellis.Raster]"></a>
+      <a id="apply(Op[Raster],Op[Int]):Op[Raster]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="r1">r1: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="r2">r2: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result">: <a href="XorRaster.html" class="extype" name="geotrellis.raster.op.local.XorRaster">XorRaster</a></span>
+        <span class="name">apply</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="c">c: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Xor's the cell values of the two rasters.</p><div class="fullcomment"><div class="comment cmt"><p>Xor's the cell values of the two rasters. See <a href="XorRaster.html" class="extype" name="geotrellis.raster.op.local.XorRaster">XorRaster</a></p></div></div>
-    </li><li name="geotrellis.raster.op.local.Xor#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply(c:geotrellis.Op[Int],r:geotrellis.Op[geotrellis.Raster])(implicitd:DummyImplicit):geotrellis.raster.op.local.XorConstant"></a>
-      <a id="apply(Op[Int],Op[Raster])(DummyImplicit):XorConstant"></a>
+      <p class="shortcomment cmt">Xor's an integer value with each cell of the raster.</p>
+    </li><li name="geotrellis.raster.op.local.LocalRasterBinaryOp#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(rs:geotrellis.Op[geotrellis.Raster]*)(implicitd:geotrellis.DI,implicitd2:geotrellis.DI,implicitd3:geotrellis.DI):geotrellis.Op[geotrellis.Raster]"></a>
+      <a id="apply(Op[Raster]*)(DI,DI,DI):Op[Raster]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="c">c: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span></span>)</span><span class="result">: <a href="XorConstant.html" class="extype" name="geotrellis.raster.op.local.XorConstant">XorConstant</a></span>
+        <span class="name">apply</span><span class="params">(<span name="rs">rs: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <a href="../../../package.html#DI=DummyImplicit" class="extmbr" name="geotrellis.DI">DI</a></span>, <span name="d2">d2: <a href="../../../package.html#DI=DummyImplicit" class="extmbr" name="geotrellis.DI">DI</a></span>, <span name="d3">d3: <a href="../../../package.html#DI=DummyImplicit" class="extmbr" name="geotrellis.DI">DI</a></span>)</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Xor's an integer value with each cell of the raster.</p><div class="fullcomment"><div class="comment cmt"><p>Xor's an integer value with each cell of the raster. See <a href="XorConstant.html" class="extype" name="geotrellis.raster.op.local.XorConstant">XorConstant</a></p></div></div>
-    </li><li name="geotrellis.raster.op.local.Xor#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply(r:geotrellis.Op[geotrellis.Raster],c:geotrellis.Op[Int]):geotrellis.raster.op.local.XorConstant"></a>
-      <a id="apply(Op[Raster],Op[Int]):XorConstant"></a>
+      <p class="shortcomment cmt">Apply this operation to the values of each cell in each raster.</p><div class="fullcomment"><div class="comment cmt"><p>Apply this operation to the values of each cell in each raster.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="LocalRasterBinaryOp.html" class="extype" name="geotrellis.raster.op.local.LocalRasterBinaryOp">LocalRasterBinaryOp</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.local.LocalRasterBinaryOp#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(rs:geotrellis.Op[Seq[geotrellis.Op[geotrellis.Raster]]])(implicitd:geotrellis.DI,implicitd2:geotrellis.DI):geotrellis.Op[geotrellis.Raster]"></a>
+      <a id="apply(Op[Seq[Op[Raster]]])(DI,DI):Op[Raster]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="c">c: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="XorConstant.html" class="extype" name="geotrellis.raster.op.local.XorConstant">XorConstant</a></span>
+        <span class="name">apply</span><span class="params">(<span name="rs">rs: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Seq">Seq</span>[<a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]]]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <a href="../../../package.html#DI=DummyImplicit" class="extmbr" name="geotrellis.DI">DI</a></span>, <span name="d2">d2: <a href="../../../package.html#DI=DummyImplicit" class="extmbr" name="geotrellis.DI">DI</a></span>)</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Xor's an integer value with each cell of the raster.</p><div class="fullcomment"><div class="comment cmt"><p>Xor's an integer value with each cell of the raster. See <a href="XorConstant.html" class="extype" name="geotrellis.raster.op.local.XorConstant">XorConstant</a></p></div></div>
-    </li><li name="geotrellis.raster.op.local.Xor#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply(x:geotrellis.Op[Int],y:geotrellis.Op[Int]):geotrellis.logic.Do2[Int,Int,Int]"></a>
-      <a id="apply(Op[Int],Op[Int]):Do2[Int,Int,Int]"></a>
+      <p class="shortcomment cmt">Apply this operation to the values of each cell in each raster.</p><div class="fullcomment"><div class="comment cmt"><p>Apply this operation to the values of each cell in each raster.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="LocalRasterBinaryOp.html" class="extype" name="geotrellis.raster.op.local.LocalRasterBinaryOp">LocalRasterBinaryOp</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.local.LocalRasterBinaryOp#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(rs:geotrellis.Op[Array[geotrellis.Raster]])(implicitd:geotrellis.DI):geotrellis.Op[geotrellis.Raster]"></a>
+      <a id="apply(Op[Array[Raster]])(DI):Op[Raster]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="x">x: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="y">y: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="../../../logic/Do2.html" class="extype" name="geotrellis.logic.Do2">Do2</a>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>
+        <span class="name">apply</span><span class="params">(<span name="rs">rs: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Array">Array</span>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <a href="../../../package.html#DI=DummyImplicit" class="extmbr" name="geotrellis.DI">DI</a></span>)</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Xor's two integer values together.</p><div class="fullcomment"><div class="comment cmt"><p>Xor's two integer values together.
-</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Whereas the other versions of this operation treat
-           NODATA specially, the Xor'ing of two integers does
-           not cause a NODATA value to fall through; NODATA
-           in this case is treated like Int.MinValue.
-</p></span></dd></dl></div>
+      <p class="shortcomment cmt">Apply this operation to the values of each cell in each raster.</p><div class="fullcomment"><div class="comment cmt"><p>Apply this operation to the values of each cell in each raster.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="LocalRasterBinaryOp.html" class="extype" name="geotrellis.raster.op.local.LocalRasterBinaryOp">LocalRasterBinaryOp</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.local.LocalRasterBinaryOp#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(rs:geotrellis.Op[Seq[geotrellis.Raster]]):geotrellis.Op[geotrellis.Raster]"></a>
+      <a id="apply(Op[Seq[Raster]]):Op[Raster]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="rs">rs: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Seq">Seq</span>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]]</span>)</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Apply this operation to the values of each cell in each raster.</p><div class="fullcomment"><div class="comment cmt"><p>Apply this operation to the values of each cell in each raster.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="LocalRasterBinaryOp.html" class="extype" name="geotrellis.raster.op.local.LocalRasterBinaryOp">LocalRasterBinaryOp</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.local.LocalRasterBinaryOp#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(rs:Array[geotrellis.Op[geotrellis.Raster]]):geotrellis.Op[geotrellis.Raster]"></a>
+      <a id="apply(Array[Op[Raster]]):Op[Raster]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="rs">rs: <span class="extype" name="scala.Array">Array</span>[<a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]]</span>)</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Apply this operation to the values of each cell in each raster.</p><div class="fullcomment"><div class="comment cmt"><p>Apply this operation to the values of each cell in each raster.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="LocalRasterBinaryOp.html" class="extype" name="geotrellis.raster.op.local.LocalRasterBinaryOp">LocalRasterBinaryOp</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.local.LocalRasterBinaryOp#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(rs:Seq[geotrellis.Op[geotrellis.Raster]]):geotrellis.Op[geotrellis.Raster]"></a>
+      <a id="apply(Seq[Op[Raster]]):Op[Raster]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="rs">rs: <span class="extype" name="scala.Seq">Seq</span>[<a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]]</span>)</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Apply this operation to the values of each cell in each raster.</p><div class="fullcomment"><div class="comment cmt"><p>Apply this operation to the values of each cell in each raster.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="LocalRasterBinaryOp.html" class="extype" name="geotrellis.raster.op.local.LocalRasterBinaryOp">LocalRasterBinaryOp</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.local.LocalRasterBinaryOp#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(r1:geotrellis.Op[geotrellis.Raster],r2:geotrellis.Op[geotrellis.Raster])(implicitd:geotrellis.DI,implicitd2:geotrellis.DI):geotrellis.Op[geotrellis.Raster]"></a>
+      <a id="apply(Op[Raster],Op[Raster])(DI,DI):Op[Raster]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="r1">r1: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="r2">r2: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <a href="../../../package.html#DI=DummyImplicit" class="extmbr" name="geotrellis.DI">DI</a></span>, <span name="d2">d2: <a href="../../../package.html#DI=DummyImplicit" class="extmbr" name="geotrellis.DI">DI</a></span>)</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Apply this operation to the values of each cell in each raster.</p><div class="fullcomment"><div class="comment cmt"><p>Apply this operation to the values of each cell in each raster.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="LocalRasterBinaryOp.html" class="extype" name="geotrellis.raster.op.local.LocalRasterBinaryOp">LocalRasterBinaryOp</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -242,6 +290,19 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="geotrellis.raster.op.local.Xor#doRasters" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="doRasters(r1:geotrellis.Raster,r2:geotrellis.Raster):geotrellis.Raster"></a>
+      <a id="doRasters(Raster,Raster):Raster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">doRasters</span><span class="params">(<span name="r1">r1: <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>, <span name="r2">r2: <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>)</span><span class="result">: <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.op.local.Xor">Xor</a> → <a href="LocalRasterBinaryOp.html" class="extype" name="geotrellis.raster.op.local.LocalRasterBinaryOp">LocalRasterBinaryOp</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -326,6 +387,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.raster.op.local.LocalRasterBinaryOp#name" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="name:String"></a>
+      <a id="name:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">name</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="LocalRasterBinaryOp.html" class="extype" name="geotrellis.raster.op.local.LocalRasterBinaryOp">LocalRasterBinaryOp</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -457,7 +531,13 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="geotrellis.raster.op.local.LocalRasterBinaryOp">
+              <h3>Inherited from <a href="LocalRasterBinaryOp.html" class="extype" name="geotrellis.raster.op.local.LocalRasterBinaryOp">LocalRasterBinaryOp</a></h3>
+            </div><div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>

@@ -24,9 +24,9 @@
         </head>
         <body class="value">
       <div id="definition">
-        <a href="IfCell.html" title="Go to companion"><img src="../../../../lib/object_to_class_big.png" /></a>
+        <img src="../../../../lib/object_big.png" />
         <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.raster">raster</a>.<a href="../package.html" class="extype" name="geotrellis.raster.op">op</a>.<a href="package.html" class="extype" name="geotrellis.raster.op.local">local</a></p>
-        <h1><a href="IfCell.html" title="Go to companion">IfCell</a></h1>
+        <h1>IfCell</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -39,7 +39,8 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Maps all cells matching <code>cond</code> to Int <code>trueValue</code>.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -151,106 +152,119 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="geotrellis.raster.op.local.IfCell#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(r1:geotrellis.Op[geotrellis.Raster],r2:geotrellis.Op[geotrellis.Raster],cond:(Double,Double)=&gt;Boolean,trueValue:Double,falseValue:Double):geotrellis.raster.op.local.BinaryIfElseDoubleCell"></a>
-      <a id="apply(Op[Raster],Op[Raster],(Double,Double)⇒Boolean,Double,Double):BinaryIfElseDoubleCell"></a>
+      <a id="apply(r1:geotrellis.Op[geotrellis.Raster],r2:geotrellis.Op[geotrellis.Raster],cond:(Double,Double)=&gt;Boolean,trueValue:Double,falseValue:Double):geotrellis.Operation[geotrellis.Raster]"></a>
+      <a id="apply(Op[Raster],Op[Raster],(Double,Double)⇒Boolean,Double,Double):Operation[Raster]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="r1">r1: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="r2">r2: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="cond">cond: (<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="trueValue">trueValue: <span class="extype" name="scala.Double">Double</span></span>, <span name="falseValue">falseValue: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="BinaryIfElseDoubleCell.html" class="extype" name="geotrellis.raster.op.local.BinaryIfElseDoubleCell">BinaryIfElseDoubleCell</a></span>
+        <span class="name">apply</span><span class="params">(<span name="r1">r1: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="r2">r2: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="cond">cond: (<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="trueValue">trueValue: <span class="extype" name="scala.Double">Double</span></span>, <span name="falseValue">falseValue: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Given a Double condition over two rasters, set the value of each cell in the output
 to a specified true or false value after testing the specified condition on
 the corresponding values in each of the two input rasters.</p>
     </li><li name="geotrellis.raster.op.local.IfCell#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(r1:geotrellis.Op[geotrellis.Raster],r2:geotrellis.Op[geotrellis.Raster],cond:(Int,Int)=&gt;Boolean,trueValue:Int,falseValue:Int):geotrellis.raster.op.local.BinaryIfElseCell"></a>
-      <a id="apply(Op[Raster],Op[Raster],(Int,Int)⇒Boolean,Int,Int):BinaryIfElseCell"></a>
+      <a id="apply(r1:geotrellis.Op[geotrellis.Raster],r2:geotrellis.Op[geotrellis.Raster],cond:(Int,Int)=&gt;Boolean,trueValue:Int,falseValue:Int):geotrellis.Operation[geotrellis.Raster]"></a>
+      <a id="apply(Op[Raster],Op[Raster],(Int,Int)⇒Boolean,Int,Int):Operation[Raster]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="r1">r1: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="r2">r2: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="cond">cond: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="trueValue">trueValue: <span class="extype" name="scala.Int">Int</span></span>, <span name="falseValue">falseValue: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="BinaryIfElseCell.html" class="extype" name="geotrellis.raster.op.local.BinaryIfElseCell">BinaryIfElseCell</a></span>
+        <span class="name">apply</span><span class="params">(<span name="r1">r1: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="r2">r2: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="cond">cond: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="trueValue">trueValue: <span class="extype" name="scala.Int">Int</span></span>, <span name="falseValue">falseValue: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Given a condition over two rasters, set the value of each cell in the output
 to a specified true or false value after testing the specified condition on
 the corresponding values in each of the two input rasters.</p>
     </li><li name="geotrellis.raster.op.local.IfCell#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(r1:geotrellis.Op[geotrellis.Raster],r2:geotrellis.Op[geotrellis.Raster],cond:(Double,Double)=&gt;Boolean,trueValue:Double):geotrellis.raster.op.local.BinaryIfDoubleCell"></a>
-      <a id="apply(Op[Raster],Op[Raster],(Double,Double)⇒Boolean,Double):BinaryIfDoubleCell"></a>
+      <a id="apply(r1:geotrellis.Op[geotrellis.Raster],r2:geotrellis.Op[geotrellis.Raster],cond:(Double,Double)=&gt;Boolean,trueValue:Double):geotrellis.Operation[geotrellis.Raster]"></a>
+      <a id="apply(Op[Raster],Op[Raster],(Double,Double)⇒Boolean,Double):Operation[Raster]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="r1">r1: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="r2">r2: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="cond">cond: (<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="trueValue">trueValue: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="BinaryIfDoubleCell.html" class="extype" name="geotrellis.raster.op.local.BinaryIfDoubleCell">BinaryIfDoubleCell</a></span>
+        <span class="name">apply</span><span class="params">(<span name="r1">r1: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="r2">r2: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="cond">cond: (<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="trueValue">trueValue: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Given a Double condition over two rasters, set the value of each cell in the output
 to a specified value if the condition is true given the corresponding values in
 each of the two input rasters.</p>
     </li><li name="geotrellis.raster.op.local.IfCell#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(r1:geotrellis.Op[geotrellis.Raster],r2:geotrellis.Op[geotrellis.Raster],cond:(Int,Int)=&gt;Boolean,trueValue:Int):geotrellis.raster.op.local.BinaryIfCell"></a>
-      <a id="apply(Op[Raster],Op[Raster],(Int,Int)⇒Boolean,Int):BinaryIfCell"></a>
+      <a id="apply(r1:geotrellis.Op[geotrellis.Raster],r2:geotrellis.Op[geotrellis.Raster],cond:(Int,Int)=&gt;Boolean,trueValue:Int):geotrellis.Operation[geotrellis.Raster]"></a>
+      <a id="apply(Op[Raster],Op[Raster],(Int,Int)⇒Boolean,Int):Operation[Raster]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="r1">r1: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="r2">r2: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="cond">cond: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="trueValue">trueValue: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="BinaryIfCell.html" class="extype" name="geotrellis.raster.op.local.BinaryIfCell">BinaryIfCell</a></span>
+        <span class="name">apply</span><span class="params">(<span name="r1">r1: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="r2">r2: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="cond">cond: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="trueValue">trueValue: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Given a condition over two rasters, set the value of each cell in the output
 to a specified value if the condition is true given the corresponding values in
 each of the two input rasters.</p>
     </li><li name="geotrellis.raster.op.local.IfCell#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(r:geotrellis.Op[geotrellis.Raster],cond:Double=&gt;Boolean,trueValue:Double,falseValue:Double):geotrellis.raster.op.local.IfElseDoubleCell"></a>
-      <a id="apply(Op[Raster],(Double)⇒Boolean,Double,Double):IfElseDoubleCell"></a>
+      <a id="apply(r:geotrellis.Op[geotrellis.Raster],cond:Double=&gt;Boolean,trueValue:Double,falseValue:Double):geotrellis.Operation[geotrellis.Raster]"></a>
+      <a id="apply(Op[Raster],(Double)⇒Boolean,Double,Double):Operation[Raster]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="cond">cond: (<span class="extype" name="scala.Double">Double</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="trueValue">trueValue: <span class="extype" name="scala.Double">Double</span></span>, <span name="falseValue">falseValue: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="IfElseDoubleCell.html" class="extype" name="geotrellis.raster.op.local.IfElseDoubleCell">IfElseDoubleCell</a></span>
+        <span class="name">apply</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="cond">cond: (<span class="extype" name="scala.Double">Double</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="trueValue">trueValue: <span class="extype" name="scala.Double">Double</span></span>, <span name="falseValue">falseValue: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Set all values of output raster to one value or another based on whether a
 condition is true or false for Double values.</p>
     </li><li name="geotrellis.raster.op.local.IfCell#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(r:geotrellis.Op[geotrellis.Raster],cond:Int=&gt;Boolean,trueValue:Int,falseValue:Int):geotrellis.raster.op.local.IfElseCell"></a>
-      <a id="apply(Op[Raster],(Int)⇒Boolean,Int,Int):IfElseCell"></a>
+      <a id="apply(r:geotrellis.Op[geotrellis.Raster],cond:Int=&gt;Boolean,trueValue:Int,falseValue:Int):geotrellis.Operation[geotrellis.Raster]"></a>
+      <a id="apply(Op[Raster],(Int)⇒Boolean,Int,Int):Operation[Raster]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="cond">cond: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="trueValue">trueValue: <span class="extype" name="scala.Int">Int</span></span>, <span name="falseValue">falseValue: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="IfElseCell.html" class="extype" name="geotrellis.raster.op.local.IfElseCell">IfElseCell</a></span>
+        <span class="name">apply</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="cond">cond: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="trueValue">trueValue: <span class="extype" name="scala.Int">Int</span></span>, <span name="falseValue">falseValue: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Set all values of output raster to one value or another based on whether a
 condition is true or false.</p>
     </li><li name="geotrellis.raster.op.local.IfCell#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(r:geotrellis.Op[geotrellis.Raster],cond:Double=&gt;Boolean,trueValue:Double):geotrellis.raster.op.local.IfDoubleCell"></a>
-      <a id="apply(Op[Raster],(Double)⇒Boolean,Double):IfDoubleCell"></a>
+      <a id="apply(r:geotrellis.Op[geotrellis.Raster],cond:Double=&gt;Boolean,trueValue:Double):geotrellis.Operation[geotrellis.Raster]"></a>
+      <a id="apply(Op[Raster],(Double)⇒Boolean,Double):Operation[Raster]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="cond">cond: (<span class="extype" name="scala.Double">Double</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="trueValue">trueValue: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="IfDoubleCell.html" class="extype" name="geotrellis.raster.op.local.IfDoubleCell">IfDoubleCell</a></span>
+        <span class="name">apply</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="cond">cond: (<span class="extype" name="scala.Double">Double</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="trueValue">trueValue: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Maps all cells matching <code>cond</code> to Double <code>trueValue</code>.</p>
+    </li><li name="geotrellis.raster.op.local.IfCell#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="apply(r:geotrellis.Op[geotrellis.Raster],cond:Int=&gt;Boolean,trueValue:Int):geotrellis.Operation[geotrellis.Raster]"></a>
+      <a id="apply(Op[Raster],(Int)⇒Boolean,Int):Operation[Raster]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="cond">cond: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="trueValue">trueValue: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Maps all cells matching <code>cond</code> to Int <code>trueValue</code>.</p>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
