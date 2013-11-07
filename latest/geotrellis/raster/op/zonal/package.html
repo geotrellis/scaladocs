@@ -58,26 +58,8 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="geotrellis.raster.op.zonal.ZonalClassification" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ZonalClassificationextendsOp3[geotrellis.Raster,geotrellis.Raster,Int=&gt;Int,geotrellis.Raster]withProductwithSerializable"></a>
-      <a id="ZonalClassification:ZonalClassification"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="ZonalClassification.html"><span class="name">ZonalClassification</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="zones">zones: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="params">(<span name="zoneMap">zoneMap: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="../../../Op3.html" class="extype" name="geotrellis.Op3">Op3</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Given a raster, a raster representing it's zones, and a map
-between Zone values and a reclassification value, sets all
-pixels within each zone to whatever new value, if any, has been
-explicitly chosen for the particular combination of existing
-values in that zone (regardless of the number of pixels
-holding each existing value).</p>
-    </li><li name="geotrellis.raster.op.zonal.ZonalHistogram" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ZonalHistogramextendsOp4[geotrellis.Raster,geotrellis.Raster,Int,Int,Array[geotrellis.statistics.Histogram]]withProductwithSerializable"></a>
+              <ol><li name="geotrellis.raster.op.zonal.ZonalHistogram" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ZonalHistogramextendsOp2[geotrellis.Raster,geotrellis.Raster,scala.collection.immutable.Map[Int,geotrellis.statistics.FastMapHistogram]]withProductwithSerializable"></a>
       <a id="ZonalHistogram:ZonalHistogram"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -85,10 +67,23 @@ holding each existing value).</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="ZonalHistogram.html"><span class="name">ZonalHistogram</span></a><span class="params">(<span name="data">data: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="zones">zones: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="zonesArraySize">zonesArraySize: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="histArraySize">histArraySize: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="../../../Op4.html" class="extype" name="geotrellis.Op4">Op4</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="ZonalHistogram.html"><span class="name">ZonalHistogram</span></a><span class="params">(<span name="data">data: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="zones">zones: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Given a raster, return a histogram summary of the cells within each zone.</p>
+    </li><li name="geotrellis.raster.op.zonal.ZonalOpMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ZonalOpMethods[+Repr&lt;:geotrellis.source.RasterSource]extendsAnyRef"></a>
+      <a id="ZonalOpMethods[+Repr&lt;:RasterSource]:ZonalOpMethods[Repr]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ZonalOpMethods.html"><span class="name">ZonalOpMethods</span></a><span class="tparams">[<span name="Repr">+Repr &lt;: <a href="../../../source/RasterSource.html" class="extype" name="geotrellis.source.RasterSource">RasterSource</a></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
     </li><li name="geotrellis.raster.op.zonal.ZonalPercentage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ZonalPercentageextendsOp2[geotrellis.Raster,geotrellis.Raster,geotrellis.Raster]withProductwithSerializable"></a>
       <a id="ZonalPercentage:ZonalPercentage"></a>

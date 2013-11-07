@@ -35,21 +35,21 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">ZonalHistogram</span><span class="params">(<span name="data">data: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="zones">zones: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="zonesArraySize">zonesArraySize: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="histArraySize">histArraySize: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="../../../Op4.html" class="extype" name="geotrellis.Op4">Op4</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">ZonalHistogram</span><span class="params">(<span name="data">data: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="zones">zones: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Given a raster, return a histogram summary of the cells within each zone.
-</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>ZonalHistorgram does not currently support Double raster data.
+</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>ZonalHistogram does not currently support Double raster data.
          If you use a Raster with a Double RasterType (TypeFloat,TypeDouble)
          the data values will be rounded to integers.
 </p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="../../../Op4.html" class="extype" name="geotrellis.Op4">Op4</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]], <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]], <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]], <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]], <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
                 <span class="toggle diagram-link">Type Hierarchy</span>
                 <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#diagrams" target="_blank" class="diagram-help">Learn more about scaladoc diagrams</a>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph54" viewBox="0.00 0.00 619.00 128.00" height="128pt" width="619pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 124)" class="graph" id="graph1"><polygon points="-4,5 -4,-124 616,-124 616,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><g class="cluster" id="graph4"></g><!-- node4 --><g class="node implicit-outgoing class" id="graph54_4"><a xlink:title="geotrellis.raster.op.zonal.ZonalHistogram can be implicitly converted to Operation[ZonalHistogram] by the implicit method implicitLiteralRef in object geotrellis.Operation" xlink:href="../../../Operation.html#inheritance-diagram"><polygon points="587,-50 427,-50 427,-24 587,-24 587,-50" stroke="#ababab" fill="#e1e1e1"></polygon><text fill="#7d7d7d" font-size="10.00" font-family="Arial" y="-34.6667" x="459" text-anchor="start">Operation[ZonalHistogram]</text><image xlink:href="../../../../lib/class_diagram.png" width="16px" height="16px" preserveAspectRatio="xMinYMin meet" x="437.0" y="-46.000099999999996" xmlns:xlink="http://www.w3.org/1999/xlink"></image></a></g><!-- node0 --><g class="node this class" id="graph54_0"><a xlink:title="geotrellis.raster.op.zonal.ZonalHistogram (this class)" xlink:href="#inheritance-diagram"><polygon points="355,-50 243,-50 243,-24 355,-24 355,-50" stroke="#115f3b" fill="#0a955b"></polygon><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-34.6667" x="275" text-anchor="start">ZonalHistogram</text><image xlink:href="../../../../lib/class_diagram.png" width="16px" height="16px" preserveAspectRatio="xMinYMin meet" x="253.0" y="-46.000099999999996" xmlns:xlink="http://www.w3.org/1999/xlink"></image></a></g><!-- node0&#45;&gt;node4 --><g class="edge implicit-outgoing" id="0_4"><a xlink:title="ZonalHistogram can be implicitly converted to Operation[ZonalHistogram]"><path d="M362.887,-37C379.079,-37 396.804,-37 414.113,-37" stroke="#d4d4d4" fill="none"></path><polygon points="414.174,-38.7501 419.174,-37 414.174,-35.2501 414.174,-38.7501" stroke="#d4d4d4" fill="#d4d4d4"></polygon></a><text fill="#aaaaaa" font-size="10.00" font-family="Arial" y="-41" x="391" text-anchor="middle">implicitly</text></g><!-- node1 --><g class="node class" id="graph54_1"><a xlink:title="geotrellis.Op4" xlink:href="../../../Op4.html#inheritance-diagram"><polygon points="242,-120 9.9476e-14,-120 0,-94 242,-94 242,-120" stroke="#115f3b" fill="#0a955b"></polygon><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="32" text-anchor="start">Op4[Raster, Raster, Int, Int, Array[Histogram]]</text><image xlink:href="../../../../lib/class_diagram.png" width="16px" height="16px" preserveAspectRatio="xMinYMin meet" x="10.0" y="-116.0004" xmlns:xlink="http://www.w3.org/1999/xlink"></image></a></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph54_1_0"><a xlink:title="ZonalHistogram is a subtype of Op4[Raster, Raster, Int, Int, Array[Histogram]]"><path d="M159.039,-92.0409C190.764,-79.5646 235.52,-61.9641 265.812,-50.0514" stroke="#d4d4d4" fill="none"></path><polygon points="158.076,-90.5391 154.063,-93.9976 159.357,-93.7962 158.076,-90.5391" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph54_2"><a xlink:title="scala.Product"><polygon points="338,-120 260,-120 260,-94 338,-94 338,-120" stroke="#37657d" fill="#498aad"></polygon><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="292" text-anchor="start">Product</text><image xlink:href="../../../../lib/trait_diagram.png" width="16px" height="16px" preserveAspectRatio="xMinYMin meet" x="270.0" y="-116.0004" xmlns:xlink="http://www.w3.org/1999/xlink"></image></a></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph54_2_0"><a xlink:title="ZonalHistogram is a subtype of Product"><path d="M299,-88.5481C299,-76.457 299,-60.9432 299,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="297.25,-88.8335 299,-93.8335 300.75,-88.8336 297.25,-88.8335" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node trait" id="graph54_3"><a xlink:title="scala.Serializable"><polygon points="452,-120 356,-120 356,-94 452,-94 452,-120" stroke="#37657d" fill="#498aad"></polygon><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="388" text-anchor="start">Serializable</text><image xlink:href="../../../../lib/trait_diagram.png" width="16px" height="16px" preserveAspectRatio="xMinYMin meet" x="366.0" y="-116.0004" xmlns:xlink="http://www.w3.org/1999/xlink"></image></a></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph54_3_0"><a xlink:title="ZonalHistogram is a subtype of Serializable"><path d="M379.689,-90.7927C361.148,-78.4323 335.94,-61.6266 318.661,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="379.119,-92.5161 384.25,-93.8335 381.061,-89.6039 379.119,-92.5161" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph55" viewBox="0.00 0.00 637.00 128.00" height="128pt" width="637pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 124)" class="graph" id="graph1"><polygon points="-4,5 -4,-124 634,-124 634,5 -4,5" stroke="white" fill="white"></polygon><g class="cluster" id="graph2"></g><g class="cluster" id="graph3"></g><g class="cluster" id="graph4"></g><!-- node4 --><g class="node implicit-outgoing class" id="graph55_4"><a xlink:title="geotrellis.raster.op.zonal.ZonalHistogram can be implicitly converted to Operation[ZonalHistogram] by the implicit method implicitLiteralRef in object geotrellis.Operation" xlink:href="../../../Operation.html#inheritance-diagram"><polygon points="605,-50 445,-50 445,-24 605,-24 605,-50" stroke="#ababab" fill="#e1e1e1"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="455" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#7d7d7d" font-size="10.00" font-family="Arial" y="-34.6667" x="477" text-anchor="start">Operation[ZonalHistogram]</text></a></g><!-- node0 --><g class="node this class" id="graph55_0"><a xlink:title="geotrellis.raster.op.zonal.ZonalHistogram (this class)" xlink:href="#inheritance-diagram"><polygon points="373,-50 261,-50 261,-24 373,-24 373,-50" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-45" x="271" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-34.6667" x="293" text-anchor="start">ZonalHistogram</text></a></g><!-- node0&#45;&gt;node4 --><g class="edge implicit-outgoing" id="0_4"><a xlink:title="ZonalHistogram can be implicitly converted to Operation[ZonalHistogram]"><path d="M380.887,-37C397.079,-37 414.804,-37 432.113,-37" stroke="#d4d4d4" fill="none"></path><polygon points="432.174,-38.7501 437.174,-37 432.174,-35.2501 432.174,-38.7501" stroke="#d4d4d4" fill="#d4d4d4"></polygon></a><text fill="#aaaaaa" font-size="10.00" font-family="Arial" y="-41" x="409" text-anchor="middle">implicitly</text></g><!-- node1 --><g class="node class" id="graph55_1"><a xlink:title="geotrellis.Op2" xlink:href="../../../Op2.html#inheritance-diagram"><polygon points="260,-120 1.13687e-13,-120 0,-94 260,-94 260,-120" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../../lib/class_diagram.png" y="-115" x="10" preserveAspectRatio="xMinYMin meet" height="16px" width="16px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="32" text-anchor="start">Op2[Raster, Raster, Map[Int, FastMapHistogram]]</text></a></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph55_1_0"><a xlink:title="ZonalHistogram is a subtype of Op2[Raster, Raster, Map[Int, FastMapHistogram]]"><path d="M169.551,-92.1946C202.905,-79.7095 250.179,-62.0131 282.134,-50.0514" stroke="#d4d4d4" fill="none"></path><polygon points="168.804,-90.6057 164.735,-93.9976 170.031,-93.8836 168.804,-90.6057" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node2 --><g class="node trait" id="graph55_2"><a xlink:title="scala.Product"><polygon points="356,-120 278,-120 278,-94 356,-94 356,-120" stroke="#37657d" fill="#498aad"></polygon><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="310" text-anchor="start">Product</text><image xlink:href="../../../../lib/trait_diagram.png" width="16px" height="16px" preserveAspectRatio="xMinYMin meet" x="288.0" y="-116.0004" xmlns:xlink="http://www.w3.org/1999/xlink"></image></a></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph55_2_0"><a xlink:title="ZonalHistogram is a subtype of Product"><path d="M317,-88.5481C317,-76.457 317,-60.9432 317,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="315.25,-88.8335 317,-93.8335 318.75,-88.8336 315.25,-88.8335" stroke="#d4d4d4" fill="none"></polygon></a></g><!-- node3 --><g class="node trait" id="graph55_3"><a xlink:title="scala.Serializable"><polygon points="470,-120 374,-120 374,-94 470,-94 470,-120" stroke="#37657d" fill="#498aad"></polygon><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-104.667" x="406" text-anchor="start">Serializable</text><image xlink:href="../../../../lib/trait_diagram.png" width="16px" height="16px" preserveAspectRatio="xMinYMin meet" x="384.0" y="-116.0004" xmlns:xlink="http://www.w3.org/1999/xlink"></image></a></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph55_3_0"><a xlink:title="ZonalHistogram is a subtype of Serializable"><path d="M397.689,-90.7927C379.148,-78.4323 353.94,-61.6266 336.661,-50.1074" stroke="#d4d4d4" fill="none"></path><polygon points="397.119,-92.5161 402.25,-93.8335 399.061,-89.6039 397.119,-92.5161" stroke="#d4d4d4" fill="none"></polygon></a></g></g></svg></div>
               </div></div>
         
 
@@ -67,7 +67,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.raster.op.zonal.ZonalHistogram"><span>ZonalHistogram</span></li><li class="in" name="geotrellis.Op4"><span>Op4</span></li><li class="in" name="geotrellis.Operation"><span>Operation</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.raster.op.zonal.ZonalHistogram"><span>ZonalHistogram</span></li><li class="in" name="geotrellis.Op2"><span>Op2</span></li><li class="in" name="geotrellis.Operation"><span>Operation</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
                 <span class="filtertype">Implicitly<br />
@@ -93,7 +93,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.raster.op.zonal.ZonalHistogram#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(data:geotrellis.Op[geotrellis.Raster],zones:geotrellis.Op[geotrellis.Raster],zonesArraySize:geotrellis.Op[Int],histArraySize:geotrellis.Op[Int]):geotrellis.raster.op.zonal.ZonalHistogram"></a>
+      <a id="&lt;init&gt;(data:geotrellis.Op[geotrellis.Raster],zones:geotrellis.Op[geotrellis.Raster]):geotrellis.raster.op.zonal.ZonalHistogram"></a>
       <a id="&lt;init&gt;:ZonalHistogram"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -101,7 +101,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ZonalHistogram</span><span class="params">(<span name="data">data: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="zones">zones: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="zonesArraySize">zonesArraySize: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="histArraySize">histArraySize: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span>
+        <span class="name">ZonalHistogram</span><span class="params">(<span name="data">data: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="zones">zones: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span>
       </span>
       </h4>
       
@@ -132,7 +132,7 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Steps</span><span class="result"> = <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]]]</span>
+        <span class="name">Steps</span><span class="result"> = <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
@@ -245,29 +245,29 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.Op4#_run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.Op2#_run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_run(context:geotrellis.Context):geotrellis.StepOutput[T]"></a>
-      <a id="_run(Context):StepOutput[Array[Histogram]]"></a>
+      <a id="_run(Context):StepOutput[Map[Int,FastMapHistogram]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">_run</span><span class="params">(<span name="context">context: <a href="../../../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]]</span>
+        <span class="name">_run</span><span class="params">(<span name="context">context: <a href="../../../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op4.html" class="extype" name="geotrellis.Op4">Op4</a> → <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a> → <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation#andThen" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="andThen[U](f:T=&gt;geotrellis.Op[U]):geotrellis.Operation[U]"></a>
-      <a id="andThen[U]((Array[Histogram])⇒Op[U]):Operation[U]"></a>
+      <a id="andThen[U]((Map[Int,FastMapHistogram])⇒Op[U]):Operation[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">andThen</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]) ⇒ <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.Operation.andThen.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.andThen.U">U</span>]</span>
+        <span class="name">andThen</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]) ⇒ <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.Operation.andThen.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.andThen.U">U</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
@@ -284,7 +284,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.Op4#canEqual" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.Op2#canEqual" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="canEqual(other:Any):Boolean"></a>
       <a id="canEqual(Any):Boolean"></a>
       <h4 class="signature">
@@ -296,7 +296,7 @@
         <span class="name">canEqual</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op4.html" class="extype" name="geotrellis.Op4">Op4</a> → Equals</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a> → Equals</dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -344,14 +344,14 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation#dispatch" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="dispatch(cluster:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
-      <a id="dispatch(ActorRef):DispatchedOperation[Array[Histogram]]"></a>
+      <a id="dispatch(ActorRef):DispatchedOperation[Map[Int,FastMapHistogram]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">dispatch</span><span class="params">(<span name="cluster">cluster: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../../../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]]</span>
+        <span class="name">dispatch</span><span class="params">(<span name="cluster">cluster: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../../../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Returns an operation whose children will be executed on a remote cluster.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an operation whose children will be executed on a remote cluster.</p><p> This method will cause the operations executed as a result of this operation
@@ -440,14 +440,14 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="geotrellis.Operation#filter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="filter(f:T=&gt;Boolean):geotrellis.Operation[T]"></a>
-      <a id="filter((Array[Histogram])⇒Boolean):Operation[Array[Histogram]]"></a>
+      <a id="filter((Map[Int,FastMapHistogram])⇒Boolean):Operation[Map[Int,FastMapHistogram]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">filter</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]]</span>
+        <span class="name">filter</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
@@ -472,14 +472,14 @@
         </dd></dl></div>
     </li><li name="geotrellis.Operation#flatMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="flatMap[U](f:T=&gt;geotrellis.Operation[U]):geotrellis.Operation[U]"></a>
-      <a id="flatMap[U]((Array[Histogram])⇒Operation[U]):Operation[U]"></a>
+      <a id="flatMap[U]((Map[Int,FastMapHistogram])⇒Operation[U]):Operation[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">flatMap</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]) ⇒ <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>
+        <span class="name">flatMap</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]) ⇒ <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.flatMap.U">U</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a new operation with a function that takes the result of this operation
@@ -488,14 +488,14 @@ and returns a new operation.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation#foreach" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="foreach[U](f:T=&gt;U):Unit"></a>
-      <a id="foreach[U]((Array[Histogram])⇒U):Unit"></a>
+      <a id="foreach[U]((Map[Int,FastMapHistogram])⇒U):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">foreach</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]) ⇒ <span class="extype" name="geotrellis.Operation.foreach.U">U</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">foreach</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]) ⇒ <span class="extype" name="geotrellis.Operation.foreach.U">U</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create an operation that applies the function f to the result of this operation,
@@ -535,29 +535,16 @@ but returns nothing.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.raster.op.zonal.ZonalHistogram#histArraySize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="histArraySize:geotrellis.Op[Int]"></a>
-      <a id="histArraySize:Op[Int]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">histArraySize</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>
-      </span>
-      </h4>
-      
     </li><li name="geotrellis.Operation#into" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="into[U](f:geotrellis.Operation[T]=&gt;U):U"></a>
-      <a id="into[U]((Operation[Array[Histogram]])⇒U):U"></a>
+      <a id="into[U]((Operation[Map[Int,FastMapHistogram]])⇒U):U"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">into</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]]) ⇒ <span class="extype" name="geotrellis.Operation.into.U">U</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.Operation.into.U">U</span></span>
+        <span class="name">into</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]]) ⇒ <span class="extype" name="geotrellis.Operation.into.U">U</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.Operation.into.U">U</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Call the given function with this operation as its argument.</p><div class="fullcomment"><div class="comment cmt"><p>Call the given function with this operation as its argument.</p><p>This is primarily useful for code readability.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd><dt>See also</dt><dd><span class="cmt"><p>http://debasishg.blogspot.com/2009/09/thrush-combinator-in-scala.html
@@ -577,14 +564,14 @@ but returns nothing.
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="geotrellis.Operation#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="map[U](f:T=&gt;U):geotrellis.Operation[U]"></a>
-      <a id="map[U]((Array[Histogram])⇒U):Operation[U]"></a>
+      <a id="map[U]((Map[Int,FastMapHistogram])⇒U):Operation[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">map</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]) ⇒ <span class="extype" name="geotrellis.Operation.map.U">U</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.map.U">U</span>]</span>
+        <span class="name">map</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]) ⇒ <span class="extype" name="geotrellis.Operation.map.U">U</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.map.U">U</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a new operation that returns the result of the provided function that
@@ -617,8 +604,8 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.Op4#nextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="nextSteps:Op4.this.Steps"></a>
+    </li><li name="geotrellis.Op2#nextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nextSteps:Op2.this.Steps"></a>
       <a id="nextSteps:Steps"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -629,7 +616,7 @@ takes this operation's result as its argument.
         <span class="name">nextSteps</span><span class="result">: <a href="#Steps=PartialFunction[Any,geotrellis.StepOutput[T]]" class="extmbr" name="geotrellis.raster.op.zonal.ZonalHistogram.Steps">Steps</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op4.html" class="extype" name="geotrellis.Op4">Op4</a> → <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a> → <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -671,18 +658,18 @@ takes this operation's result as its argument.
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation#processNextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="processNextSteps(args:Operation.this.Args):geotrellis.StepOutput[T]"></a>
-      <a id="processNextSteps(Args):StepOutput[Array[Histogram]]"></a>
+      <a id="processNextSteps(Args):StepOutput[Map[Int,FastMapHistogram]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">processNextSteps</span><span class="params">(<span name="args">args: <a href="#Args=List[Any]" class="extmbr" name="geotrellis.raster.op.zonal.ZonalHistogram.Args">Args</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]]</span>
+        <span class="name">processNextSteps</span><span class="params">(<span name="args">args: <a href="#Args=List[Any]" class="extmbr" name="geotrellis.raster.op.zonal.ZonalHistogram.Args">Args</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
-    </li><li name="geotrellis.Op4#productArity" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.Op2#productArity" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="productArity:Int"></a>
       <a id="productArity:Int"></a>
       <h4 class="signature">
@@ -694,8 +681,8 @@ takes this operation's result as its argument.
         <span class="name">productArity</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op4.html" class="extype" name="geotrellis.Op4">Op4</a> → Product</dd></dl></div>
-    </li><li name="geotrellis.Op4#productElement" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a> → Product</dd></dl></div>
+    </li><li name="geotrellis.Op2#productElement" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="productElement(n:Int):Any"></a>
       <a id="productElement(Int):Any"></a>
       <h4 class="signature">
@@ -707,7 +694,7 @@ takes this operation's result as its argument.
         <span class="name">productElement</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op4.html" class="extype" name="geotrellis.Op4">Op4</a> → Product</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a> → Product</dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteralRef#productIterator" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="productIterator:Iterator[Any]"></a>
       <a id="productIterator:Iterator[Any]"></a>
@@ -744,14 +731,14 @@ takes this operation's result as its argument.
           </dd><dt>Definition Classes</dt><dd>Product</dd></dl></div>
     </li><li name="geotrellis.Operation#remote" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="remote(cluster:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
-      <a id="remote(ActorRef):DispatchedOperation[Array[Histogram]]"></a>
+      <a id="remote(ActorRef):DispatchedOperation[Map[Int,FastMapHistogram]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">remote</span><span class="params">(<span name="cluster">cluster: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../../../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]]</span>
+        <span class="name">remote</span><span class="params">(<span name="cluster">cluster: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../../../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Returns an operation that will be executed on a remote cluster.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an operation that will be executed on a remote cluster.</p><p> This method will cause the specified operation to be executed on a remote
@@ -760,28 +747,28 @@ takes this operation's result as its argument.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation#run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="run(context:geotrellis.Context):geotrellis.StepOutput[T]"></a>
-      <a id="run(Context):StepOutput[Array[Histogram]]"></a>
+      <a id="run(Context):StepOutput[Map[Int,FastMapHistogram]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">run</span><span class="params">(<span name="context">context: <a href="../../../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]]</span>
+        <span class="name">run</span><span class="params">(<span name="context">context: <a href="../../../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Execute this operation and return the result.</p><div class="fullcomment"><div class="comment cmt"><p>Execute this operation and return the result.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation#runAsync" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="runAsync(args:Operation.this.Args):geotrellis.StepOutput[T]"></a>
-      <a id="runAsync(Args):StepOutput[Array[Histogram]]"></a>
+      <a id="runAsync(Args):StepOutput[Map[Int,FastMapHistogram]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">runAsync</span><span class="params">(<span name="args">args: <a href="#Args=List[Any]" class="extmbr" name="geotrellis.raster.op.zonal.ZonalHistogram.Args">Args</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]]</span>
+        <span class="name">runAsync</span><span class="params">(<span name="args">args: <a href="#Args=List[Any]" class="extmbr" name="geotrellis.raster.op.zonal.ZonalHistogram.Args">Args</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
@@ -857,27 +844,27 @@ takes this operation's result as its argument.
         </dd></dl></div>
     </li><li name="geotrellis.Operation#withName" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="withName(n:String):geotrellis.Operation[T]"></a>
-      <a id="withName(String):Operation[Array[Histogram]]"></a>
+      <a id="withName(String):Operation[Map[Int,FastMapHistogram]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">withName</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]]</span>
+        <span class="name">withName</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation#withResult" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="withResult[U](f:T=&gt;geotrellis.Operation[U]):geotrellis.Operation[U]"></a>
-      <a id="withResult[U]((Array[Histogram])⇒Operation[U]):Operation[U]"></a>
+      <a id="withResult[U]((Map[Int,FastMapHistogram])⇒Operation[U]):Operation[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">withResult</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]) ⇒ <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>
+        <span class="name">withResult</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]) ⇒ <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="geotrellis.Operation.withResult.U">U</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a new operation with a function that takes the result of this operation
@@ -894,19 +881,6 @@ and returns a new operation.</p><p>Same as flatMap.
       </span>
       <span class="symbol">
         <span class="name">zones</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.raster.op.zonal.ZonalHistogram#zonesArraySize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="zonesArraySize:geotrellis.Op[Int]"></a>
-      <a id="zonesArraySize:Op[Int]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">zonesArraySize</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       </h4>
       
@@ -1375,10 +1349,10 @@ and returns a new operation.</p><p>Same as flatMap.
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="geotrellis.Op4">
-              <h3>Inherited from <a href="../../../Op4.html" class="extype" name="geotrellis.Op4">Op4</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]]</h3>
+        <div class="parent" name="geotrellis.Op2">
+              <h3>Inherited from <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]]</h3>
             </div><div class="parent" name="geotrellis.Operation">
-              <h3>Inherited from <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Array">Array</span>[<a href="../../../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]]</h3>
+              <h3>Inherited from <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="../../../statistics/FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>]]</h3>
             </div><div class="parent" name="scala.Serializable">
               <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
             </div><div class="parent" name="java.io.Serializable">
