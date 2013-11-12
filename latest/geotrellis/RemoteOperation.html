@@ -35,7 +35,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">RemoteOperation</span><span class="tparams">[<span name="T">+T</span>]</span><span class="params">(<span name="op">op: <a href="package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.RemoteOperation.T">T</span>]</span>, <span name="cluster">cluster: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result"> extends <a href="OperationWrapper.html" class="extype" name="geotrellis.OperationWrapper">OperationWrapper</a>[<span class="extype" name="geotrellis.RemoteOperation.T">T</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">RemoteOperation</span><span class="tparams">[<span name="T">+T</span>]</span><span class="params">(<span name="op">op: <a href="package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.RemoteOperation.T">T</span>]</span>, <span name="cluster">cluster: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="akka.actor.ActorRef">ActorRef</span>]</span>)</span><span class="result"> extends <a href="OperationWrapper.html" class="extype" name="geotrellis.OperationWrapper">OperationWrapper</a>[<span class="extype" name="geotrellis.RemoteOperation.T">T</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -89,7 +89,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.RemoteOperation#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(op:geotrellis.Op[T],cluster:akka.actor.ActorRef):geotrellis.RemoteOperation[T]"></a>
+      <a id="&lt;init&gt;(op:geotrellis.Op[T],cluster:Option[akka.actor.ActorRef]):geotrellis.RemoteOperation[T]"></a>
       <a id="&lt;init&gt;:RemoteOperation[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -97,7 +97,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">RemoteOperation</span><span class="params">(<span name="op">op: <a href="package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.RemoteOperation.T">T</span>]</span>, <span name="cluster">cluster: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span>
+        <span class="name">RemoteOperation</span><span class="params">(<span name="op">op: <a href="package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.RemoteOperation.T">T</span>]</span>, <span name="cluster">cluster: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="akka.actor.ActorRef">ActorRef</span>]</span>)</span>
       </span>
       </h4>
       
@@ -317,15 +317,15 @@
               
         </dd></dl></div>
     </li><li name="geotrellis.RemoteOperation#cluster" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="cluster:akka.actor.ActorRef"></a>
-      <a id="cluster:ActorRef"></a>
+      <a id="cluster:Option[akka.actor.ActorRef]"></a>
+      <a id="cluster:Option[ActorRef]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">cluster</span><span class="result">: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>
+        <span class="name">cluster</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="akka.actor.ActorRef">ActorRef</span>]</span>
       </span>
       </h4>
       
