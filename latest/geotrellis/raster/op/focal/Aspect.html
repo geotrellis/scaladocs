@@ -345,7 +345,8 @@ The expression for aspect is:</p><pre><span class="kw">val</span> aspect = <span
         <span class="name">dispatch</span><span class="params">(<span name="cluster">cluster: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../../../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns an operation whose children will be executed on a remote cluster.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an operation whose children will be executed on a remote cluster.</p><p> This method will cause the operations executed as a result of this operation
+      <p class="shortcomment cmt"> Returns an operation whose children will be executed on a remote cluster.</p><div class="fullcomment"><div class="comment cmt"><p> Returns an operation whose children will be executed on a remote cluster.
+ This method will cause the operations executed as a result of this operation
  (input operations and any operations necessary for this computation) to be
  dispatched to and executed on a remote cluster.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -592,19 +593,6 @@ correct <a href="FocalCalculation.html" class="extype" name="geotrellis.raster.o
 takes this operation's result as its argument.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation that returns the result of the provided function that
 takes this operation's result as its argument.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
-    </li><li name="geotrellis.Operation#name" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="name:String"></a>
-      <a id="name:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">name</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -670,6 +658,19 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.Operation#opId" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="opId:String"></a>
+      <a id="opId:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">opId</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation#prettyString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="prettyString:String"></a>
       <a id="prettyString:String"></a>
@@ -996,7 +997,8 @@ and returns a new operation.</p><p>Same as flatMap.
         <span class="implicit shadowed">dispatch</span><span class="params">(<span name="cluster">cluster: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../../../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Aspect">Aspect</a>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns an operation whose children will be executed on a remote cluster.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an operation whose children will be executed on a remote cluster.</p><p> This method will cause the operations executed as a result of this operation
+      <p class="shortcomment cmt"> Returns an operation whose children will be executed on a remote cluster.</p><div class="fullcomment"><div class="comment cmt"><p> Returns an operation whose children will be executed on a remote cluster.
+ This method will cause the operations executed as a result of this operation
  (input operations and any operations necessary for this computation) to be
  dispatched to and executed on a remote cluster.</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
             This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Aspect">Aspect</a> to
@@ -1098,23 +1100,6 @@ takes this operation's result as its argument.
             <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Aspect">Aspect</a>] performed by method implicitLiteralRef in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(aspect: Operation[Aspect]).map(f)</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
-    </li><li name="geotrellis.Operation.implicitLiteralRef#name" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="name:String"></a>
-      <a id="name:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="implicit shadowed">name</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
-            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Aspect">Aspect</a> to
-            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Aspect">Aspect</a>] performed by method implicitLiteralRef in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
-            
-          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(aspect: Operation[Aspect]).name</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteralRef#nextSteps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="nextSteps:PartialFunction[Any,geotrellis.StepOutput[T]]"></a>
       <a id="nextSteps:PartialFunction[Any,StepOutput[Aspect]]"></a>
@@ -1132,6 +1117,23 @@ takes this operation's result as its argument.
             <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Aspect">Aspect</a>] performed by method implicitLiteralRef in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
             
           </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(aspect: Operation[Aspect]).nextSteps</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.Operation.implicitLiteralRef#opId" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="opId:String"></a>
+      <a id="opId:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">opId</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="geotrellis.raster.op.focal.Aspect">Aspect</a> to
+            <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="" class="extype" name="geotrellis.raster.op.focal.Aspect">Aspect</a>] performed by method implicitLiteralRef in <a href="../../../Operation$.html" class="extype" name="geotrellis.Operation">geotrellis.Operation</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(aspect: Operation[Aspect]).opId</pre></div></dd><dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation.implicitLiteralRef#prettyString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="prettyString:String"></a>
       <a id="prettyString:String"></a>
