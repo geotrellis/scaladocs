@@ -86,6 +86,19 @@ of the format: String,String,Int
       </span>
       </h4>
       
+    </li><li name="geotrellis.io.IoOpMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="IoOpMethods[+Repr&lt;:geotrellis.source.RasterSource]extendsAnyRef"></a>
+      <a id="IoOpMethods[+Repr&lt;:RasterSource]:IoOpMethods[Repr]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="IoOpMethods.html"><span class="name">IoOpMethods</span></a><span class="tparams">[<span name="Repr">+Repr &lt;: <a href="../source/RasterSource.html" class="extype" name="geotrellis.source.RasterSource">RasterSource</a></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
     </li><li name="geotrellis.io.LoadFile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="LoadFileextendsOperation[geotrellis.Raster]withProductwithSerializable"></a>
       <a id="LoadFile:LoadFile"></a>
@@ -150,7 +163,9 @@ of the format: String,String,Int
         <a href="LoadRaster.html"><span class="name">LoadRaster</span></a><span class="params">(<span name="n">n: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="r">r: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span><span class="result"> extends <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      <p class="comment cmt">Load the raster data for a particular extent/resolution from the specified file.</p>
+      <p class="comment cmt">Load the raster data for a particular extent/resolution for the
+raster layer in the catalog with name 'n'
+</p>
     </li><li name="geotrellis.io.LoadRasterDefinition" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="LoadRasterDefinitionextendsOp[geotrellis.source.RasterDefinition]withProductwithSerializable"></a>
       <a id="LoadRasterDefinition:LoadRasterDefinition"></a>
@@ -190,6 +205,32 @@ of the format: String,String,Int
       </span>
       </h4>
       <p class="comment cmt">Load the <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a> from the raster in the specified file.</p>
+    </li><li name="geotrellis.io.LoadRasterLayer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LoadRasterLayerextendsOp[geotrellis.process.RasterLayer]withProductwithSerializable"></a>
+      <a id="LoadRasterLayer:LoadRasterLayer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="LoadRasterLayer.html"><span class="name">LoadRasterLayer</span></a><span class="params">(<span name="n">n: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../process/RasterLayer.html" class="extype" name="geotrellis.process.RasterLayer">RasterLayer</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Load the <span class="extype" name="RasterLayer">RasterLayer</span> from the raster layer with the specified name.</p>
+    </li><li name="geotrellis.io.LoadRasterLayerFromPath" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LoadRasterLayerFromPathextendsOp[geotrellis.process.RasterLayer]withProductwithSerializable"></a>
+      <a id="LoadRasterLayerFromPath:LoadRasterLayerFromPath"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="LoadRasterLayerFromPath.html"><span class="name">LoadRasterLayerFromPath</span></a><span class="params">(<span name="path">path: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../process/RasterLayer.html" class="extype" name="geotrellis.process.RasterLayer">RasterLayer</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Load the <span class="extype" name="RasterLayer">RasterLayer</span> from the raster layer at the specified path.</p>
     </li><li name="geotrellis.io.LoadRasterLayerInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="LoadRasterLayerInfoextendsOp[geotrellis.process.RasterLayerInfo]withProductwithSerializable"></a>
       <a id="LoadRasterLayerInfo:LoadRasterLayerInfo"></a>
@@ -230,19 +271,6 @@ of the format: String,String,Int
       </h4>
       <p class="comment cmt">Load the <a href="../process/RasterLayer.html" class="extype" name="geotrellis.process.RasterLayer">geotrellis.process.RasterLayer</a>, a representation of the raster metadata,
 from the raster in the specified file.</p>
-    </li><li name="geotrellis.io.LoadRasterTile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="LoadRasterTileextendsOp[geotrellis.Raster]withProductwithSerializable"></a>
-      <a id="LoadRasterTile:LoadRasterTile"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="LoadRasterTile.html"><span class="name">LoadRasterTile</span></a><span class="params">(<span name="n">n: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="col">col: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="row">row: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Load a specific tile from a raster at a given row and column.</p>
     </li><li name="geotrellis.io.LoadRasterUrl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="LoadRasterUrlextendsOperation[geotrellis.Raster]withProductwithSerializable"></a>
       <a id="LoadRasterUrl:LoadRasterUrl"></a>
@@ -297,7 +325,7 @@ from the raster in the specified file.</p>
       </h4>
       <p class="comment cmt">Render a raster as a GeoTiff.</p>
     </li><li name="geotrellis.io.RenderPng" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="RenderPngextendsOp4[geotrellis.Raster,geotrellis.data.ColorBreaks,geotrellis.statistics.Histogram,Int,Array[Byte]]withProductwithSerializable"></a>
+      <a id="RenderPngextendsOp3[geotrellis.Raster,geotrellis.data.ColorBreaks,Int,Array[Byte]]withProductwithSerializable"></a>
       <a id="RenderPng:RenderPng"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -305,7 +333,7 @@ from the raster in the specified file.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="RenderPng.html"><span class="name">RenderPng</span></a><span class="params">(<span name="r">r: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="colorBreaks">colorBreaks: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../data/ColorBreaks.html" class="extype" name="geotrellis.data.ColorBreaks">ColorBreaks</a>]</span>, <span name="h">h: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]</span>, <span name="noDataColor">noDataColor: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="../Op4.html" class="extype" name="geotrellis.Op4">Op4</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="../data/ColorBreaks.html" class="extype" name="geotrellis.data.ColorBreaks">ColorBreaks</a>, <a href="../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="RenderPng.html"><span class="name">RenderPng</span></a><span class="params">(<span name="r">r: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="colorBreaks">colorBreaks: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../data/ColorBreaks.html" class="extype" name="geotrellis.data.ColorBreaks">ColorBreaks</a>]</span>, <span name="noDataColor">noDataColor: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="../Op3.html" class="extype" name="geotrellis.Op3">Op3</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="../data/ColorBreaks.html" class="extype" name="geotrellis.data.ColorBreaks">ColorBreaks</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Generate a PNG image from a raster.</p>
@@ -322,19 +350,6 @@ from the raster in the specified file.</p>
       </span>
       </h4>
       <p class="comment cmt">Generate a PNG from a raster of RGBA integer values.</p>
-    </li><li name="geotrellis.io.SimpleRenderPng" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="SimpleRenderPngextendsOp[Array[Byte]]withProductwithSerializable"></a>
-      <a id="SimpleRenderPng:SimpleRenderPng"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="SimpleRenderPng.html"><span class="name">SimpleRenderPng</span></a><span class="params">(<span name="r">r: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="colorRamp">colorRamp: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../data/ColorRamp.html" class="extype" name="geotrellis.data.ColorRamp">ColorRamp</a>] = <span class="defval" name="geotrellis.this.Operation.implicitLiteralRef[geotrellis.data.ColorRamp](geotrellis.data.ColorRamps.HeatmapBlueToYellowToRedSpectrum)">...</span></span>)</span><span class="result"> extends <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Generate a PNG image from a data raster.</p>
     </li><li name="geotrellis.io.ToGeoJson" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ToGeoJson[T]extendsOp1[geotrellis.feature.Geometry[T],String]withProductwithSerializable"></a>
       <a id="ToGeoJson[T]:ToGeoJson[T]"></a>
@@ -349,7 +364,7 @@ from the raster in the specified file.</p>
       </h4>
       
     </li><li name="geotrellis.io.WritePng" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="WritePngextendsOp5[geotrellis.Raster,String,geotrellis.data.ColorBreaks,geotrellis.statistics.Histogram,Int,Unit]withProductwithSerializable"></a>
+      <a id="WritePngextendsOp4[geotrellis.Raster,String,geotrellis.data.ColorBreaks,Int,Unit]withProductwithSerializable"></a>
       <a id="WritePng:WritePng"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -357,7 +372,7 @@ from the raster in the specified file.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="WritePng.html"><span class="name">WritePng</span></a><span class="params">(<span name="r">r: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="path">path: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="colorBreaks">colorBreaks: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../data/ColorBreaks.html" class="extype" name="geotrellis.data.ColorBreaks">ColorBreaks</a>]</span>, <span name="h">h: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]</span>, <span name="noDataColor">noDataColor: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="../Op5.html" class="extype" name="geotrellis.Op5">Op5</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <span class="extype" name="scala.Predef.String">String</span>, <a href="../data/ColorBreaks.html" class="extype" name="geotrellis.data.ColorBreaks">ColorBreaks</a>, <a href="../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Unit">Unit</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="WritePng.html"><span class="name">WritePng</span></a><span class="params">(<span name="r">r: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="path">path: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="colorBreaks">colorBreaks: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../data/ColorBreaks.html" class="extype" name="geotrellis.data.ColorBreaks">ColorBreaks</a>]</span>, <span name="noDataColor">noDataColor: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="../Op4.html" class="extype" name="geotrellis.Op4">Op4</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <span class="extype" name="scala.Predef.String">String</span>, <a href="../data/ColorBreaks.html" class="extype" name="geotrellis.data.ColorBreaks">ColorBreaks</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Unit">Unit</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Write out a PNG graphic file to the file system at the specified path.</p>
@@ -434,6 +449,19 @@ from the raster in the specified file.</p>
       </span>
       </h4>
       
+    </li><li name="geotrellis.io.SimpleRenderPng" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SimpleRenderPng"></a>
+      <a id="SimpleRenderPng:SimpleRenderPng"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SimpleRenderPng$.html"><span class="name">SimpleRenderPng</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Generate a PNG image from a data raster.</p>
     </li><li name="geotrellis.io.ToGeoJson" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ToGeoJson"></a>
       <a id="ToGeoJson:ToGeoJson"></a>
