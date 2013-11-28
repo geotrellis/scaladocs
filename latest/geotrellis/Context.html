@@ -256,59 +256,32 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.Context#getRasterByName" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getRasterByName(name:String,reOpt:Option[geotrellis.RasterExtent]):geotrellis.StepOutput[geotrellis.Raster]"></a>
-      <a id="getRasterByName(String,Option[RasterExtent]):StepOutput[Raster]"></a>
+    </li><li name="geotrellis.Context#getRasterLayer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getRasterLayer(dataStore:Option[String],name:String):geotrellis.process.RasterLayer"></a>
+      <a id="getRasterLayer(Option[String],String):RasterLayer"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getRasterByName</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="reOpt">reOpt: <span class="extype" name="scala.Option">Option</span>[<a href="RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span><span class="result">: <a href="StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+        <span class="name">getRasterLayer</span><span class="params">(<span name="dataStore">dataStore: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="process/RasterLayer.html" class="extype" name="geotrellis.process.RasterLayer">RasterLayer</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Read a raster from a layer in the catalog.</p>
-    </li><li name="geotrellis.Context#getRasterByName" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getRasterByName(name:String,re:geotrellis.RasterExtent):geotrellis.StepOutput[geotrellis.Raster]"></a>
-      <a id="getRasterByName(String,RasterExtent):StepOutput[Raster]"></a>
+      <p class="shortcomment cmt">Load RasterLayer from the catalog.</p>
+    </li><li name="geotrellis.Context#getRasterLayer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getRasterLayer(dataStore:String,name:String):geotrellis.process.RasterLayer"></a>
+      <a id="getRasterLayer(String,String):RasterLayer"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getRasterByName</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="re">re: <a href="RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="result">: <a href="StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+        <span class="name">getRasterLayer</span><span class="params">(<span name="dataStore">dataStore: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="process/RasterLayer.html" class="extype" name="geotrellis.process.RasterLayer">RasterLayer</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Read a raster from a layer in the catalog with a specific extent.</p>
-    </li><li name="geotrellis.Context#getRasterByName" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getRasterByName(name:String):geotrellis.StepOutput[geotrellis.Raster]"></a>
-      <a id="getRasterByName(String):StepOutput[Raster]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getRasterByName</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Read a raster from a layer in the catalog.</p>
-    </li><li name="geotrellis.Context#getRasterExtentByName" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getRasterExtentByName(name:String):geotrellis.RasterExtent"></a>
-      <a id="getRasterExtentByName(String):RasterExtent"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getRasterExtentByName</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Read a raster extent from a layer in the catalog
-</p>
+      <p class="shortcomment cmt">Load RasterLayer from the catalog by data store name and layer name.</p>
     </li><li name="geotrellis.Context#getRasterLayer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="getRasterLayer(name:String):geotrellis.process.RasterLayer"></a>
       <a id="getRasterLayer(String):RasterLayer"></a>
@@ -335,55 +308,16 @@
       </span>
       </h4>
       <p class="shortcomment cmt">Load RasterLayer from the catalog from a path.</p>
-    </li><li name="geotrellis.Context#getRasterLayerInfo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getRasterLayerInfo(name:String):geotrellis.process.RasterLayerInfo"></a>
-      <a id="getRasterLayerInfo(String):RasterLayerInfo"></a>
+    </li><li name="geotrellis.Context#getRasterLayerFromUrl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getRasterLayerFromUrl(url:String):geotrellis.process.RasterLayer"></a>
+      <a id="getRasterLayerFromUrl(String):RasterLayer"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getRasterLayerInfo</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="process/RasterLayerInfo.html" class="extype" name="geotrellis.process.RasterLayerInfo">RasterLayerInfo</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.Context#getRasterLayerInfoFromPath" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getRasterLayerInfoFromPath(path:String):geotrellis.process.RasterLayerInfo"></a>
-      <a id="getRasterLayerInfoFromPath(String):RasterLayerInfo"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getRasterLayerInfoFromPath</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="process/RasterLayerInfo.html" class="extype" name="geotrellis.process.RasterLayerInfo">RasterLayerInfo</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.Context#getRasterStepOutput" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getRasterStepOutput(path:String,reOpt:Option[geotrellis.RasterExtent]):geotrellis.StepOutput[geotrellis.Raster]"></a>
-      <a id="getRasterStepOutput(String,Option[RasterExtent]):StepOutput[Raster]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getRasterStepOutput</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="reOpt">reOpt: <span class="extype" name="scala.Option">Option</span>[<a href="RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span><span class="result">: <a href="StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.Context#getRasterUrl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getRasterUrl(url:String,re:Option[geotrellis.RasterExtent]):geotrellis.Raster"></a>
-      <a id="getRasterUrl(String,Option[RasterExtent]):Raster"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getRasterUrl</span><span class="params">(<span name="url">url: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="re">re: <span class="extype" name="scala.Option">Option</span>[<a href="RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span><span class="result">: <a href="Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>
+        <span class="name">getRasterLayerFromUrl</span><span class="params">(<span name="url">url: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="process/RasterLayer.html" class="extype" name="geotrellis.process.RasterLayer">RasterLayer</a></span>
       </span>
       </h4>
       
@@ -413,58 +347,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.Context#loadRaster" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="loadRaster(path:String,reOpt:Option[geotrellis.RasterExtent]):geotrellis.Raster"></a>
-      <a id="loadRaster(String,Option[RasterExtent]):Raster"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">loadRaster</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="reOpt">reOpt: <span class="extype" name="scala.Option">Option</span>[<a href="RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span><span class="result">: <a href="Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.Context#loadRaster" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="loadRaster(path:String,re:geotrellis.RasterExtent):geotrellis.Raster"></a>
-      <a id="loadRaster(String,RasterExtent):Raster"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">loadRaster</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="re">re: <a href="RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="result">: <a href="Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.Context#loadRaster" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="loadRaster(path:String):geotrellis.Raster"></a>
-      <a id="loadRaster(String):Raster"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">loadRaster</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.Context#loadUncachedTileSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="loadUncachedTileSet(path:String):geotrellis.Raster"></a>
-      <a id="loadUncachedTileSet(String):Raster"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">loadUncachedTileSet</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>

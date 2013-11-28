@@ -35,7 +35,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">LoadRaster</span><span class="params">(<span name="n">n: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="r">r: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span><span class="result"> extends <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">LoadRaster</span><span class="params">(<span name="ds">ds: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>, <span name="n">n: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="r">r: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Option">Option</span>[<a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]]</span>)</span><span class="result"> extends <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -82,7 +82,7 @@ raster layer in the catalog with name 'n'
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.io.LoadRaster#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(n:geotrellis.Op[String],r:geotrellis.Op[geotrellis.RasterExtent]):geotrellis.io.LoadRaster"></a>
+      <a id="&lt;init&gt;(ds:geotrellis.Op[Option[String]],n:geotrellis.Op[String],r:geotrellis.Op[Option[geotrellis.RasterExtent]]):geotrellis.io.LoadRaster"></a>
       <a id="&lt;init&gt;:LoadRaster"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -90,7 +90,7 @@ raster layer in the catalog with name 'n'
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">LoadRaster</span><span class="params">(<span name="n">n: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="r">r: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span>
+        <span class="name">LoadRaster</span><span class="params">(<span name="ds">ds: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>, <span name="n">n: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="r">r: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Option">Option</span>[<a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]]</span>)</span>
       </span>
       </h4>
       
@@ -284,6 +284,19 @@ raster layer in the catalog with name 'n'
  This method will cause the operations executed as a result of this operation
  (input operations and any operations necessary for this computation) to be
  dispatched to and executed on a remote cluster.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.io.LoadRaster#ds" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ds:geotrellis.Op[Option[String]]"></a>
+      <a id="ds:Op[Option[String]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ds</span><span class="result">: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -535,15 +548,15 @@ takes this operation's result as its argument.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.io.LoadRaster#r" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="r:geotrellis.Op[geotrellis.RasterExtent]"></a>
-      <a id="r:Op[RasterExtent]"></a>
+      <a id="r:geotrellis.Op[Option[geotrellis.RasterExtent]]"></a>
+      <a id="r:Op[Option[RasterExtent]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">r</span><span class="result">: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>
+        <span class="name">r</span><span class="result">: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Option">Option</span>[<a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]]</span>
       </span>
       </h4>
       
