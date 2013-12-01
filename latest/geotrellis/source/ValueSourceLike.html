@@ -279,6 +279,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DataSourceLike.html" class="extype" name="geotrellis.source.DataSourceLike">DataSourceLike</a></dd></dl></div>
+    </li><li name="geotrellis.source.ValueSourceLike#convergeOp" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="convergeOp():geotrellis.Op[T]"></a>
+      <a id="convergeOp():Op[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">convergeOp</span><span class="params">()</span><span class="result">: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.source.ValueSourceLike.T">T</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.source.ValueSourceLike">ValueSourceLike</a> → <a href="DataSourceLike.html" class="extype" name="geotrellis.source.DataSourceLike">DataSourceLike</a></dd></dl></div>
     </li><li name="geotrellis.source.DataSourceLike#distribute" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="distribute[T1&gt;:T,That](cluster:akka.actor.ActorRef)(implicitbf:geotrellis.source.CanBuildSourceFrom[Repr,T1,That]):That"></a>
       <a id="distribute[T1&gt;:T,That](ActorRef)(CanBuildSourceFrom[ValueSource[T],T1,That]):That"></a>
@@ -376,19 +389,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DataSourceLike.html" class="extype" name="geotrellis.source.DataSourceLike">DataSourceLike</a></dd></dl></div>
-    </li><li name="geotrellis.source.ValueSourceLike#get" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="get():geotrellis.Op[T]"></a>
-      <a id="get():Op[T]"></a>
+    </li><li name="geotrellis.source.DataSourceLike#get" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="get(implicitserver:geotrellis.process.Server):V"></a>
+      <a id="get(Server):T"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">get</span><span class="params">()</span><span class="result">: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.source.ValueSourceLike.T">T</span>]</span>
+        <span class="name">get</span><span class="params">(<span class="implicit">implicit </span><span name="server">server: <a href="../process/Server.html" class="extype" name="geotrellis.process.Server">Server</a></span>)</span><span class="result">: <span class="extype" name="geotrellis.source.ValueSourceLike.T">T</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.source.ValueSourceLike">ValueSourceLike</a> → <a href="DataSourceLike.html" class="extype" name="geotrellis.source.DataSourceLike">DataSourceLike</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DataSourceLike.html" class="extype" name="geotrellis.source.DataSourceLike">DataSourceLike</a></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -529,6 +542,19 @@
       </span>
       <span class="symbol">
         <span class="name">reduceRight</span><span class="tparams">[<span name="T1">T1 &gt;: <span class="extype" name="geotrellis.source.ValueSourceLike.T">T</span></span>]</span><span class="params">(<span name="reducer">reducer: (<span class="extype" name="geotrellis.source.ValueSourceLike.T">T</span>, <span class="extype" name="geotrellis.source.DataSourceLike.reduceRight.T1">T1</span>) ⇒ <span class="extype" name="geotrellis.source.DataSourceLike.reduceRight.T1">T1</span></span>)</span><span class="result">: <a href="ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<span class="extype" name="geotrellis.source.DataSourceLike.reduceRight.T1">T1</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DataSourceLike.html" class="extype" name="geotrellis.source.DataSourceLike">DataSourceLike</a></dd></dl></div>
+    </li><li name="geotrellis.source.DataSourceLike#run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="run(implicitserver:geotrellis.process.Server):geotrellis.process.OperationResult[V]"></a>
+      <a id="run(Server):OperationResult[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">run</span><span class="params">(<span class="implicit">implicit </span><span name="server">server: <a href="../process/Server.html" class="extype" name="geotrellis.process.Server">Server</a></span>)</span><span class="result">: <a href="../process/OperationResult.html" class="extype" name="geotrellis.process.OperationResult">OperationResult</a>[<span class="extype" name="geotrellis.source.ValueSourceLike.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DataSourceLike.html" class="extype" name="geotrellis.source.DataSourceLike">DataSourceLike</a></dd></dl></div>

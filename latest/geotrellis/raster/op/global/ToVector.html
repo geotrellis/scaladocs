@@ -35,7 +35,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">ToVector</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result"> extends <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.List">List</span>[<a href="../../../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="scala.Int">Int</span>]]] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">ToVector</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="regionConnectivity">regionConnectivity: <a href="Connectivity.html" class="extype" name="geotrellis.raster.op.global.Connectivity">Connectivity</a> = <span class="defval" name="RegionGroupOptions.default.connectivity">...</span></span>)</span><span class="result"> extends <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.List">List</span>[<a href="../../../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="scala.Int">Int</span>]]] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -80,7 +80,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.raster.op.global.ToVector#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(r:geotrellis.Op[geotrellis.Raster]):geotrellis.raster.op.global.ToVector"></a>
+      <a id="&lt;init&gt;(r:geotrellis.Op[geotrellis.Raster],regionConnectivity:geotrellis.raster.op.global.Connectivity):geotrellis.raster.op.global.ToVector"></a>
       <a id="&lt;init&gt;:ToVector"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -88,7 +88,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ToVector</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span>
+        <span class="name">ToVector</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="regionConnectivity">regionConnectivity: <a href="Connectivity.html" class="extype" name="geotrellis.raster.op.global.Connectivity">Connectivity</a> = <span class="defval" name="RegionGroupOptions.default.connectivity">...</span></span>)</span>
       </span>
       </h4>
       
@@ -209,15 +209,15 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="geotrellis.raster.op.global.ToVector#_run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="_run(context:geotrellis.Context):geotrellis.StepOutput[List[geotrellis.feature.Polygon[Int]]]"></a>
-      <a id="_run(Context):StepOutput[List[Polygon[Int]]]"></a>
+      <a id="_run():geotrellis.StepOutput[List[geotrellis.feature.Polygon[Int]]]"></a>
+      <a id="_run():StepOutput[List[Polygon[Int]]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">_run</span><span class="params">(<span name="context">context: <a href="../../../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<span class="extype" name="scala.List">List</span>[<a href="../../../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="scala.Int">Int</span>]]]</span>
+        <span class="name">_run</span><span class="params">()</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<span class="extype" name="scala.List">List</span>[<a href="../../../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="scala.Int">Int</span>]]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.op.global.ToVector">ToVector</a> → <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
@@ -545,6 +545,19 @@ takes this operation's result as its argument.
       </span>
       </h4>
       
+    </li><li name="geotrellis.raster.op.global.ToVector#regionConnectivity" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="regionConnectivity:geotrellis.raster.op.global.Connectivity"></a>
+      <a id="regionConnectivity:Connectivity"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">regionConnectivity</span><span class="result">: <a href="Connectivity.html" class="extype" name="geotrellis.raster.op.global.Connectivity">Connectivity</a></span>
+      </span>
+      </h4>
+      
     </li><li name="geotrellis.Operation#remote" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="remote(cluster:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
       <a id="remote(ActorRef):DispatchedOperation[List[Polygon[Int]]]"></a>
@@ -562,15 +575,15 @@ takes this operation's result as its argument.
  should probably be using dispatch() instead of remote().
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation#run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="run(context:geotrellis.Context):geotrellis.StepOutput[T]"></a>
-      <a id="run(Context):StepOutput[List[Polygon[Int]]]"></a>
+      <a id="run():geotrellis.StepOutput[T]"></a>
+      <a id="run():StepOutput[List[Polygon[Int]]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">run</span><span class="params">(<span name="context">context: <a href="../../../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<span class="extype" name="scala.List">List</span>[<a href="../../../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="scala.Int">Int</span>]]]</span>
+        <span class="name">run</span><span class="params">()</span><span class="result">: <a href="../../../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<span class="extype" name="scala.List">List</span>[<a href="../../../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="scala.Int">Int</span>]]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Execute this operation and return the result.</p><div class="fullcomment"><div class="comment cmt"><p>Execute this operation and return the result.

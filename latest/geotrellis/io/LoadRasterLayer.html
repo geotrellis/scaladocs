@@ -35,7 +35,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">LoadRasterLayer</span><span class="params">(<span name="ds">ds: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>, <span name="n">n: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../process/RasterLayer.html" class="extype" name="geotrellis.process.RasterLayer">RasterLayer</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">LoadRasterLayer</span><span class="params">(<span name="layerId">layerId: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../process/LayerId.html" class="extype" name="geotrellis.process.LayerId">LayerId</a>]</span>)</span><span class="result"> extends <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../process/RasterLayer.html" class="extype" name="geotrellis.process.RasterLayer">RasterLayer</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -81,7 +81,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.io.LoadRasterLayer#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(ds:geotrellis.Op[Option[String]],n:geotrellis.Op[String]):geotrellis.io.LoadRasterLayer"></a>
+      <a id="&lt;init&gt;(layerId:geotrellis.Op[geotrellis.process.LayerId]):geotrellis.io.LoadRasterLayer"></a>
       <a id="&lt;init&gt;:LoadRasterLayer"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -89,7 +89,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">LoadRasterLayer</span><span class="params">(<span name="ds">ds: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>, <span name="n">n: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span>
+        <span class="name">LoadRasterLayer</span><span class="params">(<span name="layerId">layerId: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../process/LayerId.html" class="extype" name="geotrellis.process.LayerId">LayerId</a>]</span>)</span>
       </span>
       </h4>
       
@@ -197,15 +197,15 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="geotrellis.io.LoadRasterLayer#_run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="_run(context:geotrellis.Context):geotrellis.StepOutput[geotrellis.process.RasterLayer]"></a>
-      <a id="_run(Context):StepOutput[RasterLayer]"></a>
+      <a id="_run():geotrellis.StepOutput[geotrellis.process.RasterLayer]"></a>
+      <a id="_run():StepOutput[RasterLayer]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">_run</span><span class="params">(<span name="context">context: <a href="../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../process/RasterLayer.html" class="extype" name="geotrellis.process.RasterLayer">RasterLayer</a>]</span>
+        <span class="name">_run</span><span class="params">()</span><span class="result">: <a href="../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../process/RasterLayer.html" class="extype" name="geotrellis.process.RasterLayer">RasterLayer</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.io.LoadRasterLayer">LoadRasterLayer</a> → <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
@@ -283,19 +283,6 @@
  This method will cause the operations executed as a result of this operation
  (input operations and any operations necessary for this computation) to be
  dispatched to and executed on a remote cluster.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
-    </li><li name="geotrellis.io.LoadRasterLayer#ds" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ds:geotrellis.Op[Option[String]]"></a>
-      <a id="ds:Op[Option[String]]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">ds</span><span class="result">: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -426,6 +413,19 @@ but returns nothing.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.io.LoadRasterLayer#layerId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="layerId:geotrellis.Op[geotrellis.process.LayerId]"></a>
+      <a id="layerId:Op[LayerId]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">layerId</span><span class="result">: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../process/LayerId.html" class="extype" name="geotrellis.process.LayerId">LayerId</a>]</span>
+      </span>
+      </h4>
+      
     </li><li name="geotrellis.Operation#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="map[U](f:T=&gt;U):geotrellis.Operation[U]"></a>
       <a id="map[U]((RasterLayer)⇒U):Operation[U]"></a>
@@ -442,19 +442,6 @@ but returns nothing.
 takes this operation's result as its argument.</p><div class="fullcomment"><div class="comment cmt"><p>Create a new operation that returns the result of the provided function that
 takes this operation's result as its argument.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
-    </li><li name="geotrellis.io.LoadRasterLayer#n" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="n:geotrellis.Op[String]"></a>
-      <a id="n:Op[String]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">n</span><span class="result">: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -563,15 +550,15 @@ takes this operation's result as its argument.
  should probably be using dispatch() instead of remote().
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation#run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="run(context:geotrellis.Context):geotrellis.StepOutput[T]"></a>
-      <a id="run(Context):StepOutput[RasterLayer]"></a>
+      <a id="run():geotrellis.StepOutput[T]"></a>
+      <a id="run():StepOutput[RasterLayer]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">run</span><span class="params">(<span name="context">context: <a href="../Context.html" class="extype" name="geotrellis.Context">Context</a></span>)</span><span class="result">: <a href="../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../process/RasterLayer.html" class="extype" name="geotrellis.process.RasterLayer">RasterLayer</a>]</span>
+        <span class="name">run</span><span class="params">()</span><span class="result">: <a href="../StepOutput.html" class="extype" name="geotrellis.StepOutput">StepOutput</a>[<a href="../process/RasterLayer.html" class="extype" name="geotrellis.process.RasterLayer">RasterLayer</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Execute this operation and return the result.</p><div class="fullcomment"><div class="comment cmt"><p>Execute this operation and return the result.

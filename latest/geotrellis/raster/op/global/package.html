@@ -98,6 +98,19 @@
       </h4>
       <p class="comment cmt">Normalize the values in the given raster so that all values are within the
 specified minimum and maximum value range.</p>
+    </li><li name="geotrellis.raster.op.global.Connectivity" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ConnectivityextendsAnyRef"></a>
+      <a id="Connectivity:Connectivity"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Connectivity.html"><span class="name">Connectivity</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
     </li><li name="geotrellis.raster.op.global.Convolve" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ConvolveextendsOp2[geotrellis.Raster,geotrellis.raster.Kernel,geotrellis.Raster]withProductwithSerializable"></a>
       <a id="Convolve:Convolve"></a>
@@ -174,7 +187,7 @@ raster
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="RegionGroup.html"><span class="name">RegionGroup</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="options">options: <a href="RegionGroupOptions.html" class="extype" name="geotrellis.raster.op.global.RegionGroupOptions">RegionGroupOptions</a> = <span class="symbol">RegionGroupOptions.Default</span></span>)</span><span class="result"> extends <a href="../../../Op1.html" class="extype" name="geotrellis.Op1">Op1</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="RegionGroupResult.html" class="extype" name="geotrellis.raster.op.global.RegionGroupResult">RegionGroupResult</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="RegionGroup.html"><span class="name">RegionGroup</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="options">options: <a href="RegionGroupOptions.html" class="extype" name="geotrellis.raster.op.global.RegionGroupOptions">RegionGroupOptions</a> = <span class="symbol">RegionGroupOptions.default</span></span>)</span><span class="result"> extends <a href="../../../Op1.html" class="extype" name="geotrellis.Op1">Op1</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>, <a href="RegionGroupResult.html" class="extype" name="geotrellis.raster.op.global.RegionGroupResult">RegionGroupResult</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -187,7 +200,7 @@ raster
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="RegionGroupOptions.html"><span class="name">RegionGroupOptions</span></a><span class="params">(<span name="ignoreNoData">ignoreNoData: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="RegionGroupOptions.html"><span class="name">RegionGroupOptions</span></a><span class="params">(<span name="connectivity">connectivity: <a href="Connectivity.html" class="extype" name="geotrellis.raster.op.global.Connectivity">Connectivity</a> = <span class="symbol">FourNeighbors</span></span>, <span name="ignoreNoData">ignoreNoData: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -226,7 +239,7 @@ raster
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="ToVector.html"><span class="name">ToVector</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>)</span><span class="result"> extends <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.List">List</span>[<a href="../../../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="scala.Int">Int</span>]]] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="ToVector.html"><span class="name">ToVector</span></a><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="regionConnectivity">regionConnectivity: <a href="Connectivity.html" class="extype" name="geotrellis.raster.op.global.Connectivity">Connectivity</a> = <span class="defval" name="RegionGroupOptions.default.connectivity">...</span></span>)</span><span class="result"> extends <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.List">List</span>[<a href="../../../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="scala.Int">Int</span>]]] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -250,7 +263,33 @@ raster
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="geotrellis.raster.op.global.Normalize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.raster.op.global.EightNeighbors" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EightNeighbors"></a>
+      <a id="EightNeighbors:EightNeighbors"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="EightNeighbors$.html"><span class="name">EightNeighbors</span></a><span class="result"> extends <a href="Connectivity.html" class="extype" name="geotrellis.raster.op.global.Connectivity">Connectivity</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.global.FourNeighbors" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FourNeighbors"></a>
+      <a id="FourNeighbors:FourNeighbors"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FourNeighbors$.html"><span class="name">FourNeighbors</span></a><span class="result"> extends <a href="Connectivity.html" class="extype" name="geotrellis.raster.op.global.Connectivity">Connectivity</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.raster.op.global.Normalize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Normalize"></a>
       <a id="Normalize:Normalize"></a>
       <h4 class="signature">

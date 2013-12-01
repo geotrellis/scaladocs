@@ -35,11 +35,11 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">Cache</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">Cache</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Trait for a string-keyed, any valued cache.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Trait for a T-keyed, any valued cache.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -88,43 +88,43 @@
         <div id="values" class="values members">
               <h3>Abstract Value Members</h3>
               <ol><li name="geotrellis.process.Cache#insert" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="insert[V](k:String,v:V):Boolean"></a>
-      <a id="insert[V](String,V):Boolean"></a>
+      <a id="insert[V](k:T,v:V):Boolean"></a>
+      <a id="insert[V](T,V):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">insert</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="k">k: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="v">v: <span class="extype" name="geotrellis.process.Cache.insert.V">V</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">insert</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="k">k: <span class="extype" name="geotrellis.process.Cache.T">T</span></span>, <span name="v">v: <span class="extype" name="geotrellis.process.Cache.insert.V">V</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Insert the value v (keyed by k) into the cache</p><div class="fullcomment"><div class="comment cmt"><p>Insert the value v (keyed by k) into the cache</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>true if the value was inserted into the cache
 </p></dd></dl></div>
     </li><li name="geotrellis.process.Cache#lookup" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="lookup[V](k:String):Option[V]"></a>
-      <a id="lookup[V](String):Option[V]"></a>
+      <a id="lookup[V](k:T):Option[V]"></a>
+      <a id="lookup[V](T):Option[V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">lookup</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="k">k: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="geotrellis.process.Cache.lookup.V">V</span>]</span>
+        <span class="name">lookup</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="k">k: <span class="extype" name="geotrellis.process.Cache.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="geotrellis.process.Cache.lookup.V">V</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Lookup the value for key k</p><div class="fullcomment"><div class="comment cmt"><p>Lookup the value for key k</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Some(v) if the value was cached, None otherwise
 </p></dd></dl></div>
     </li><li name="geotrellis.process.Cache#remove" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="remove[V](k:String):Option[V]"></a>
-      <a id="remove[V](String):Option[V]"></a>
+      <a id="remove[V](k:T):Option[V]"></a>
+      <a id="remove[V](T):Option[V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">remove</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="k">k: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="geotrellis.process.Cache.remove.V">V</span>]</span>
+        <span class="name">remove</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="k">k: <span class="extype" name="geotrellis.process.Cache.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="geotrellis.process.Cache.remove.V">V</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Remove k from the cache</p>
@@ -289,15 +289,15 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="geotrellis.process.Cache#getOrInsert" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getOrInsert[V](k:String,vv:=&gt;V):V"></a>
-      <a id="getOrInsert[V](String,⇒V):V"></a>
+      <a id="getOrInsert[V](k:T,vv:=&gt;V):V"></a>
+      <a id="getOrInsert[V](T,⇒V):V"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getOrInsert</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="k">k: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="vv">vv: ⇒ <span class="extype" name="geotrellis.process.Cache.getOrInsert.V">V</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.process.Cache.getOrInsert.V">V</span></span>
+        <span class="name">getOrInsert</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="k">k: <span class="extype" name="geotrellis.process.Cache.T">T</span></span>, <span name="vv">vv: ⇒ <span class="extype" name="geotrellis.process.Cache.getOrInsert.V">V</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.process.Cache.getOrInsert.V">V</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Lookup the value for key k

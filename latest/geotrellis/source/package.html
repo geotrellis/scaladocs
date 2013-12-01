@@ -124,20 +124,6 @@ or loaded in memory on a specific machine.</p>
       </span>
       </h4>
       
-    </li><li name="geotrellis.source.LowerPriorityImplicits" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="LowerPriorityImplicitsextendsAnyRef"></a>
-      <a id="LowerPriorityImplicits:LowerPriorityImplicits"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="LowerPriorityImplicits.html"><span class="name">LowerPriorityImplicits</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
-      </span>
-      </h4>
-      <p class="comment cmt">This trait is necessary to make the implicit builder for Seq[A] lower priority
-than builders listed for specific types in CanBuildSourceFrom above.</p>
     </li><li name="geotrellis.source.PartialTileIntersection" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="PartialTileIntersection[D]extendsTileIntersectionwithProductwithSerializable"></a>
       <a id="PartialTileIntersection[D]:PartialTileIntersection[D]"></a>
@@ -151,6 +137,32 @@ than builders listed for specific types in CanBuildSourceFrom above.</p>
       </span>
       </h4>
       
+    </li><li name="geotrellis.source.Priority1Implicits" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Priority1ImplicitsextendsPriority2Implicits"></a>
+      <a id="Priority1Implicits:Priority1Implicits"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Priority1Implicits.html"><span class="name">Priority1Implicits</span></a><span class="result"> extends <a href="Priority2Implicits.html" class="extype" name="geotrellis.source.Priority2Implicits">Priority2Implicits</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.source.Priority2Implicits" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Priority2ImplicitsextendsAnyRef"></a>
+      <a id="Priority2Implicits:Priority2Implicits"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Priority2Implicits.html"><span class="name">Priority2Implicits</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
     </li><li name="geotrellis.source.RasterDefinition" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="RasterDefinitionextendsProductwithSerializable"></a>
       <a id="RasterDefinition:RasterDefinition"></a>
@@ -160,7 +172,7 @@ than builders listed for specific types in CanBuildSourceFrom above.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="RasterDefinition.html"><span class="name">RasterDefinition</span></a><span class="params">(<span name="layerName">layerName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="re">re: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="tileLayout">tileLayout: <a href="../raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="RasterDefinition.html"><span class="name">RasterDefinition</span></a><span class="params">(<span name="layerId">layerId: <a href="../process/LayerId.html" class="extype" name="geotrellis.process.LayerId">LayerId</a></span>, <span name="re">re: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="tileLayout">tileLayout: <a href="../raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -284,7 +296,7 @@ than builders listed for specific types in CanBuildSourceFrom above.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="CanBuildSourceFrom$.html"><span class="name">CanBuildSourceFrom</span></a><span class="result"> extends <a href="LowerPriorityImplicits.html" class="extype" name="geotrellis.source.LowerPriorityImplicits">LowerPriorityImplicits</a></span>
+        <a href="CanBuildSourceFrom$.html"><span class="name">CanBuildSourceFrom</span></a><span class="result"> extends <a href="Priority1Implicits.html" class="extype" name="geotrellis.source.Priority1Implicits">Priority1Implicits</a></span>
       </span>
       </h4>
       

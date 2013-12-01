@@ -151,18 +151,18 @@ This cache assumes that (k,v) pair is immutable
 Operations on this cache may required O(N) time to execute (N = size of cache)
 </p>
     </li><li name="geotrellis.process.Cache" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="CacheextendsSerializable"></a>
-      <a id="Cache:Cache"></a>
+      <a id="Cache[T]extendsSerializable"></a>
+      <a id="Cache[T]:Cache[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="Cache.html"><span class="name">Cache</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="Cache.html"><span class="name">Cache</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      <p class="comment cmt">Trait for a string-keyed, any valued cache.</p>
+      <p class="comment cmt">Trait for a T-keyed, any valued cache.</p>
     </li><li name="geotrellis.process.CacheStrategy" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="CacheStrategy[K,V]extendsAnyRef"></a>
       <a id="CacheStrategy[K,V]:CacheStrategy[K,V]"></a>
@@ -189,19 +189,6 @@ Operations on this cache may required O(N) time to execute (N = size of cache)
       </span>
       </h4>
       
-    </li><li name="geotrellis.process.CalculationResult" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="CalculationResult[+T]extendsAnyRef"></a>
-      <a id="CalculationResult[+T]:CalculationResult[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">sealed </span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="CalculationResult.html"><span class="name">CalculationResult</span></a><span class="tparams">[<span name="T">+T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
-      </span>
-      </h4>
-      <p class="comment cmt">CalculationResult contains an operation's results.</p>
     </li><li name="geotrellis.process.Callback" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Callback[+T]=List[Any]=&gt;geotrellis.StepOutput[T]"></a>
       <a id="Callback[+T]:(List[Any])⇒StepOutput[T]"></a>
@@ -229,7 +216,7 @@ Operations on this cache may required O(N) time to execute (N = size of cache)
       </h4>
       <p class="comment cmt">Represents a named collection of data stores.</p>
     </li><li name="geotrellis.process.Complete" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Complete[T]extendsCalculationResult[T]withInternalCalculationResult[T]withProductwithSerializable"></a>
+      <a id="Complete[T]extendsOperationResult[T]withInternalOperationResult[T]withProductwithSerializable"></a>
       <a id="Complete[T]:Complete[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -237,10 +224,10 @@ Operations on this cache may required O(N) time to execute (N = size of cache)
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Complete.html"><span class="name">Complete</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="value">value: <span class="extype" name="geotrellis.process.Complete.T">T</span></span>, <span name="history">history: <a href="History.html" class="extype" name="geotrellis.process.History">History</a></span>)</span><span class="result"> extends <a href="CalculationResult.html" class="extype" name="geotrellis.process.CalculationResult">CalculationResult</a>[<span class="extype" name="geotrellis.process.Complete.T">T</span>] with <span class="extype" name="geotrellis.process.InternalCalculationResult">InternalCalculationResult</span>[<span class="extype" name="geotrellis.process.Complete.T">T</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="Complete.html"><span class="name">Complete</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="value">value: <span class="extype" name="geotrellis.process.Complete.T">T</span></span>, <span name="history">history: <a href="History.html" class="extype" name="geotrellis.process.History">History</a></span>)</span><span class="result"> extends <a href="OperationResult.html" class="extype" name="geotrellis.process.OperationResult">OperationResult</a>[<span class="extype" name="geotrellis.process.Complete.T">T</span>] with <span class="extype" name="geotrellis.process.InternalOperationResult">InternalOperationResult</span>[<span class="extype" name="geotrellis.process.Complete.T">T</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      <p class="comment cmt">CalculationResult for a successful operation.</p>
+      <p class="comment cmt">OperationResult for a successful operation.</p>
     </li><li name="geotrellis.process.DataStore" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DataStoreextendsProductwithSerializable"></a>
       <a id="DataStore:DataStore"></a>
@@ -281,7 +268,7 @@ Operations on this cache may required O(N) time to execute (N = size of cache)
       </h4>
       
     </li><li name="geotrellis.process.Error" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ErrorextendsCalculationResult[Nothing]withInternalCalculationResult[Nothing]withProductwithSerializable"></a>
+      <a id="ErrorextendsOperationResult[Nothing]withInternalOperationResult[Nothing]withProductwithSerializable"></a>
       <a id="Error:Error"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -289,10 +276,10 @@ Operations on this cache may required O(N) time to execute (N = size of cache)
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Error.html"><span class="name">Error</span></a><span class="params">(<span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="history">history: <a href="History.html" class="extype" name="geotrellis.process.History">History</a></span>)</span><span class="result"> extends <a href="CalculationResult.html" class="extype" name="geotrellis.process.CalculationResult">CalculationResult</a>[<span class="extype" name="scala.Nothing">Nothing</span>] with <span class="extype" name="geotrellis.process.InternalCalculationResult">InternalCalculationResult</span>[<span class="extype" name="scala.Nothing">Nothing</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="Error.html"><span class="name">Error</span></a><span class="params">(<span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="history">history: <a href="History.html" class="extype" name="geotrellis.process.History">History</a></span>)</span><span class="result"> extends <a href="OperationResult.html" class="extype" name="geotrellis.process.OperationResult">OperationResult</a>[<span class="extype" name="scala.Nothing">Nothing</span>] with <span class="extype" name="geotrellis.process.InternalOperationResult">InternalOperationResult</span>[<span class="extype" name="scala.Nothing">Nothing</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
-      <p class="comment cmt">CalculationResult for a failed operation.</p>
+      <p class="comment cmt">OperationResult for a failed operation.</p>
     </li><li name="geotrellis.process.Failure" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="FailureextendsHistoryResultwithProductwithSerializable"></a>
       <a id="Failure:Failure"></a>
@@ -322,15 +309,15 @@ Operations on this cache may required O(N) time to execute (N = size of cache)
 Operations on this cache execute in O(1) time
 </p>
     </li><li name="geotrellis.process.HashCache" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="HashCacheextendsCache"></a>
-      <a id="HashCache:HashCache"></a>
+      <a id="HashCache[T]extendsCache[T]"></a>
+      <a id="HashCache[T]:HashCache[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="HashCache.html"><span class="name">HashCache</span></a><span class="result"> extends <a href="Cache.html" class="extype" name="geotrellis.process.Cache">Cache</a></span>
+        <a href="HashCache.html"><span class="name">HashCache</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="Cache.html" class="extype" name="geotrellis.process.Cache">Cache</a>[<span class="extype" name="geotrellis.process.HashCache.T">T</span>]</span>
       </span>
       </h4>
       <p class="comment cmt">Simple HashMap backed cache keyed by String and can hold any type.</p>
@@ -386,6 +373,34 @@ Operations on this cache execute in O(1) time
       </span>
       </h4>
       
+    </li><li name="geotrellis.process.LayerId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LayerIdextendsProductwithSerializable"></a>
+      <a id="LayerId:LayerId"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="LayerId.html"><span class="name">LayerId</span></a><span class="params">(<span name="store">store: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A LayerId describes a layer in the catalog.</p>
+    </li><li name="geotrellis.process.LayerLoader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LayerLoaderextendsAnyRef"></a>
+      <a id="LayerLoader:LayerLoader"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="LayerLoader.html"><span class="name">LayerLoader</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">LayerLoader will be passed into Operation[T]'s that
+mix in the LayerOp trait right before 'run' is called
+on the operation step and cleared afterwards.</p>
     </li><li name="geotrellis.process.LoggingCache" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="LoggingCache[K,V]extendsCacheStrategy[K,V]"></a>
       <a id="LoggingCache[K,V]:LoggingCache[K,V]"></a>
@@ -427,6 +442,19 @@ Operations on this cache execute in O(1) time
       <p class="comment cmt">A Cache Strategy that completely ignores caching and always returns the input object
 Operations on this cache execute in O(1) time
 </p>
+    </li><li name="geotrellis.process.OperationResult" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="OperationResult[+T]extendsAnyRef"></a>
+      <a id="OperationResult[+T]:OperationResult[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="OperationResult.html"><span class="name">OperationResult</span></a><span class="tparams">[<span name="T">+T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">OperationResult contains an operation's results.</p>
     </li><li name="geotrellis.process.OrderedBoundedCache" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="OrderedBoundedCache[K,V]extendsBoundedCache[K,V]"></a>
       <a id="OrderedBoundedCache[K,V]:OrderedBoundedCache[K,V]"></a>
@@ -478,7 +506,7 @@ to GeoTrellis.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="RasterLayerInfo.html"><span class="name">RasterLayerInfo</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="rasterType">rasterType: <a href="../RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="epsg">epsg: <span class="extype" name="scala.Int">Int</span></span>, <span name="xskew">xskew: <span class="extype" name="scala.Double">Double</span></span>, <span name="yskew">yskew: <span class="extype" name="scala.Double">Double</span></span>, <span name="tileLayout">tileLayout: <a href="../raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="shouldCache">shouldCache: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="RasterLayerInfo.html"><span class="name">RasterLayerInfo</span></a><span class="params">(<span name="id">id: <a href="LayerId.html" class="extype" name="geotrellis.process.LayerId">LayerId</a></span>, <span name="rasterType">rasterType: <a href="../RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="epsg">epsg: <span class="extype" name="scala.Int">Int</span></span>, <span name="xskew">xskew: <span class="extype" name="scala.Double">Double</span></span>, <span name="yskew">yskew: <span class="extype" name="scala.Double">Double</span></span>, <span name="tileLayout">tileLayout: <a href="../raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="shouldCache">shouldCache: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -681,6 +709,19 @@ to GeoTrellis.</p>
       </span>
       <span class="symbol">
         <a href="History$.html"><span class="name">History</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.process.LayerId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LayerId"></a>
+      <a id="LayerId:LayerId"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LayerId$.html"><span class="name">LayerId</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       

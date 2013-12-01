@@ -35,7 +35,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">RasterLayerInfo</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="rasterType">rasterType: <a href="../RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="epsg">epsg: <span class="extype" name="scala.Int">Int</span></span>, <span name="xskew">xskew: <span class="extype" name="scala.Double">Double</span></span>, <span name="yskew">yskew: <span class="extype" name="scala.Double">Double</span></span>, <span name="tileLayout">tileLayout: <a href="../raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="shouldCache">shouldCache: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">RasterLayerInfo</span><span class="params">(<span name="id">id: <a href="LayerId.html" class="extype" name="geotrellis.process.LayerId">LayerId</a></span>, <span name="rasterType">rasterType: <a href="../RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="epsg">epsg: <span class="extype" name="scala.Int">Int</span></span>, <span name="xskew">xskew: <span class="extype" name="scala.Double">Double</span></span>, <span name="yskew">yskew: <span class="extype" name="scala.Double">Double</span></span>, <span name="tileLayout">tileLayout: <a href="../raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="shouldCache">shouldCache: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -80,7 +80,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.process.RasterLayerInfo#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(name:String,rasterType:geotrellis.RasterType,rasterExtent:geotrellis.RasterExtent,epsg:Int,xskew:Double,yskew:Double,tileLayout:geotrellis.raster.TileLayout,shouldCache:Boolean):geotrellis.process.RasterLayerInfo"></a>
+      <a id="&lt;init&gt;(id:geotrellis.process.LayerId,rasterType:geotrellis.RasterType,rasterExtent:geotrellis.RasterExtent,epsg:Int,xskew:Double,yskew:Double,tileLayout:geotrellis.raster.TileLayout,shouldCache:Boolean):geotrellis.process.RasterLayerInfo"></a>
       <a id="&lt;init&gt;:RasterLayerInfo"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -88,7 +88,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">RasterLayerInfo</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="rasterType">rasterType: <a href="../RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="epsg">epsg: <span class="extype" name="scala.Int">Int</span></span>, <span name="xskew">xskew: <span class="extype" name="scala.Double">Double</span></span>, <span name="yskew">yskew: <span class="extype" name="scala.Double">Double</span></span>, <span name="tileLayout">tileLayout: <a href="../raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="shouldCache">shouldCache: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span>
+        <span class="name">RasterLayerInfo</span><span class="params">(<span name="id">id: <a href="LayerId.html" class="extype" name="geotrellis.process.LayerId">LayerId</a></span>, <span name="rasterType">rasterType: <a href="../RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="epsg">epsg: <span class="extype" name="scala.Int">Int</span></span>, <span name="xskew">xskew: <span class="extype" name="scala.Double">Double</span></span>, <span name="yskew">yskew: <span class="extype" name="scala.Double">Double</span></span>, <span name="tileLayout">tileLayout: <a href="../raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="shouldCache">shouldCache: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span>
       </span>
       </h4>
       
@@ -269,6 +269,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.process.RasterLayerInfo#id" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="id:geotrellis.process.LayerId"></a>
+      <a id="id:LayerId"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">id</span><span class="result">: <a href="LayerId.html" class="extype" name="geotrellis.process.LayerId">LayerId</a></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -282,19 +295,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.process.RasterLayerInfo#name" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="name:String"></a>
-      <a id="name:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">name</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
