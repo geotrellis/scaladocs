@@ -282,22 +282,6 @@ JSON clause, the feature data will be Some(JsonNode).
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
-    </li><li name="geotrellis.Operation#dispatch" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dispatch(cluster:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
-      <a id="dispatch(ActorRef):DispatchedOperation[Array[Geometry[Option[JsonNode]]]]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dispatch</span><span class="params">(<span name="cluster">cluster: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<span class="extype" name="scala.Array">Array</span>[<a href="../feature/Geometry.html" class="extype" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.codehaus.jackson.JsonNode">JsonNode</span>]]]]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt"> Returns an operation whose children will be executed on a remote cluster.</p><div class="fullcomment"><div class="comment cmt"><p> Returns an operation whose children will be executed on a remote cluster.
- This method will cause the operations executed as a result of this operation
- (input operations and any operations necessary for this computation) to be
- dispatched to and executed on a remote cluster.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -587,22 +571,6 @@ takes this operation's result as its argument.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Op1.html" class="extype" name="geotrellis.Op1">Op1</a> → Product</dd></dl></div>
-    </li><li name="geotrellis.Operation#remote" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="remote(cluster:akka.actor.ActorRef):geotrellis.DispatchedOperation[T]"></a>
-      <a id="remote(ActorRef):DispatchedOperation[Array[Geometry[Option[JsonNode]]]]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">remote</span><span class="params">(<span name="cluster">cluster: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <a href="../DispatchedOperation.html" class="extype" name="geotrellis.DispatchedOperation">DispatchedOperation</a>[<span class="extype" name="scala.Array">Array</span>[<a href="../feature/Geometry.html" class="extype" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.codehaus.jackson.JsonNode">JsonNode</span>]]]]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Returns an operation that will be executed on a remote cluster.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an operation that will be executed on a remote cluster.</p><p> This method will cause the specified operation to be executed on a remote
- cluster.</p><p> Note that if you wish to distribute the work of a single operation, you
- should probably be using dispatch() instead of remote().
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation#run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="run():geotrellis.StepOutput[T]"></a>
       <a id="run():StepOutput[Array[Geometry[Option[JsonNode]]]]"></a>
@@ -700,6 +668,19 @@ takes this operation's result as its argument.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="geotrellis.Operation#withFilter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withFilter(f:T=&gt;Boolean):geotrellis.Operation[T]"></a>
+      <a id="withFilter((Array[Geometry[Option[JsonNode]]])⇒Boolean):Operation[Array[Geometry[Option[JsonNode]]]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withFilter</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Array">Array</span>[<a href="../feature/Geometry.html" class="extype" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.codehaus.jackson.JsonNode">JsonNode</span>]]]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Array">Array</span>[<a href="../feature/Geometry.html" class="extype" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.codehaus.jackson.JsonNode">JsonNode</span>]]]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
     </li><li name="geotrellis.Operation#withName" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="withName(n:String):geotrellis.Operation[T]"></a>
       <a id="withName(String):Operation[Array[Geometry[Option[JsonNode]]]]"></a>

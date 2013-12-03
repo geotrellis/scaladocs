@@ -59,7 +59,7 @@
         <div id="types" class="types members">
               <h3>Type Members</h3>
               <ol><li name="geotrellis.statistics.ArrayHistogram" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ArrayHistogramextendsHistogram"></a>
+      <a id="ArrayHistogramextendsMutableHistogram"></a>
       <a id="ArrayHistogram:ArrayHistogram"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -67,7 +67,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="ArrayHistogram.html"><span class="name">ArrayHistogram</span></a><span class="result"> extends <a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></span>
+        <a href="ArrayHistogram.html"><span class="name">ArrayHistogram</span></a><span class="result"> extends <a href="MutableHistogram.html" class="extype" name="geotrellis.statistics.MutableHistogram">MutableHistogram</a></span>
       </span>
       </h4>
       <p class="comment cmt">Data object representing a histogram that uses an array for internal storage.</p>
@@ -86,8 +86,21 @@
       <p class="comment cmt">Data object representing a histogram using an array for internal storage,
 which requires an initial minimum and maximum val and a specified number of 'breaks' which
 are used to group values together into ranges.</p>
+    </li><li name="geotrellis.statistics.ConstantHistogram" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ConstantHistogramextendsHistogramwithProductwithSerializable"></a>
+      <a id="ConstantHistogram:ConstantHistogram"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ConstantHistogram.html"><span class="name">ConstantHistogram</span></a><span class="params">(<span name="value">value: <span class="extype" name="scala.Int">Int</span></span>, <span name="size">size: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
     </li><li name="geotrellis.statistics.FastMapHistogram" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="FastMapHistogramextendsHistogram"></a>
+      <a id="FastMapHistogramextendsMutableHistogram"></a>
       <a id="FastMapHistogram:FastMapHistogram"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -95,7 +108,7 @@ are used to group values together into ranges.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="FastMapHistogram.html"><span class="name">FastMapHistogram</span></a><span class="result"> extends <a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></span>
+        <a href="FastMapHistogram.html"><span class="name">FastMapHistogram</span></a><span class="result"> extends <a href="MutableHistogram.html" class="extype" name="geotrellis.statistics.MutableHistogram">MutableHistogram</a></span>
       </span>
       </h4>
       
@@ -113,7 +126,7 @@ are used to group values together into ranges.</p>
       </h4>
       <p class="comment cmt">Data object representing a histogram of values.</p>
     </li><li name="geotrellis.statistics.MapHistogram" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MapHistogramextendsHistogram"></a>
+      <a id="MapHistogramextendsMutableHistogram"></a>
       <a id="MapHistogram:MapHistogram"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -121,10 +134,23 @@ are used to group values together into ranges.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="MapHistogram.html"><span class="name">MapHistogram</span></a><span class="result"> extends <a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></span>
+        <a href="MapHistogram.html"><span class="name">MapHistogram</span></a><span class="result"> extends <a href="MutableHistogram.html" class="extype" name="geotrellis.statistics.MutableHistogram">MutableHistogram</a></span>
       </span>
       </h4>
       <p class="comment cmt">Data object representing a histogram that uses a Map (as in hashtable map/dictionary) for internal storage.</p>
+    </li><li name="geotrellis.statistics.MutableHistogram" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MutableHistogramextendsHistogram"></a>
+      <a id="MutableHistogram:MutableHistogram"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MutableHistogram.html"><span class="name">MutableHistogram</span></a><span class="result"> extends <a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></span>
+      </span>
+      </h4>
+      
     </li><li name="geotrellis.statistics.Statistics" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="StatisticsextendsProductwithSerializable"></a>
       <a id="Statistics:Statistics"></a>

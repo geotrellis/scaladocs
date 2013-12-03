@@ -40,9 +40,8 @@
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Actor responsible for dispatching and executing operations.</p><p>This is a long-running actor which expects to receive two kinds of messages:</p><ol class="decimal"><li>Requests made by the outside world to run operations.
- 2. Requests made by other actors to asynchronously evaluate arguments.</li></ol><p>In the first case, we dispatch the message to Dispatcher (who is expected to
-send the message to a workers). In the second case we will spin up a
-Calculation actor who will handle the message.
+ 2. Requests made by other actors to asynchronously evaluate arguments.</li></ol><p>In the first case, we dispatch the message to a pool of workers). In the second
+case we will spin up a Step Aggregator actor who will handle the message.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="akka.actor.Actor">Actor</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -231,19 +230,6 @@ Calculation actor who will handle the message.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
-    </li><li name="geotrellis.process.actors.ServerActor#dispatcher" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="dispatcher:akka.actor.ActorRef"></a>
-      <a id="dispatcher:ActorRef"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dispatcher</span><span class="result">: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -257,6 +243,19 @@ Calculation actor who will handle the message.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.process.actors.ServerActor#externalId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="externalId:String"></a>
+      <a id="externalId:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">externalId</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -276,6 +275,19 @@ Calculation actor who will handle the message.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="geotrellis.process.actors.ServerActor#fullExternalId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="fullExternalId:String"></a>
+      <a id="fullExternalId:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fullExternalId</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -469,6 +481,19 @@ Calculation actor who will handle the message.
       </span>
       </h4>
       
+    </li><li name="geotrellis.process.actors.ServerActor#serverContext" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="serverContext:geotrellis.process.actors.ServerContext"></a>
+      <a id="serverContext:ServerContext"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">serverContext</span><span class="result">: <a href="ServerContext.html" class="extype" name="geotrellis.process.actors.ServerContext">ServerContext</a></span>
+      </span>
+      </h4>
+      
     </li><li name="akka.actor.Actor#supervisorStrategy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="supervisorStrategy:akka.actor.SupervisorStrategy"></a>
       <a id="supervisorStrategy:SupervisorStrategy"></a>
@@ -565,6 +590,19 @@ Calculation actor who will handle the message.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="geotrellis.process.actors.ServerActor#workerPool" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="workerPool:akka.actor.ActorRef"></a>
+      <a id="workerPool:ActorRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">workerPool</span><span class="result">: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>
+      </span>
+      </h4>
+      
     </li></ol>
             </div>
 

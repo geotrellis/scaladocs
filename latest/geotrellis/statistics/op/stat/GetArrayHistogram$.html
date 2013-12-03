@@ -2,17 +2,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ArrayHistogram - geotrellis.statistics.ArrayHistogram</title>
-          <meta name="description" content="ArrayHistogram - geotrellis.statistics.ArrayHistogram" />
-          <meta name="keywords" content="ArrayHistogram geotrellis.statistics.ArrayHistogram" />
+          <title>GetArrayHistogram - geotrellis.statistics.op.stat.GetArrayHistogram</title>
+          <meta name="description" content="GetArrayHistogram - geotrellis.statistics.op.stat.GetArrayHistogram" />
+          <meta name="keywords" content="GetArrayHistogram geotrellis.statistics.op.stat.GetArrayHistogram" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
-      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
       <script type="text/javascript">
          if(top === self) {
-            var url = '../../index.html';
-            var hash = 'geotrellis.statistics.ArrayHistogram$';
+            var url = '../../../../index.html';
+            var hash = 'geotrellis.statistics.op.stat.GetArrayHistogram$';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,9 +24,9 @@
         </head>
         <body class="value">
       <div id="definition">
-        <a href="ArrayHistogram.html" title="Go to companion"><img src="../../lib/object_to_class_big.png" /></a>
-        <p id="owner"><a href="../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="package.html" class="extype" name="geotrellis.statistics">statistics</a></p>
-        <h1><a href="ArrayHistogram.html" title="Go to companion">ArrayHistogram</a></h1>
+        <img src="../../../../lib/object_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.statistics">statistics</a>.<a href="../package.html" class="extype" name="geotrellis.statistics.op">op</a>.<a href="package.html" class="extype" name="geotrellis.statistics.op.stat">stat</a></p>
+        <h1>GetArrayHistogram</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,13 +35,18 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">ArrayHistogram</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">GetArrayHistogram</span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Implements a histogram in terms of an array of the given size.
+The size provided must be less than or equal to the number of distinct
+values in the Raster.
+</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Rasters with a double type (TypeFloat,TypeDouble) will have their values
+          rounded to integers when making the Histogram.
+</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -59,7 +64,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.statistics.ArrayHistogram"><span>ArrayHistogram</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.statistics.op.stat.GetArrayHistogram"><span>GetArrayHistogram</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -150,29 +155,16 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.statistics.ArrayHistogram#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(counts:Array[Int],total:Int):geotrellis.statistics.ArrayHistogram"></a>
-      <a id="apply(Array[Int],Int):ArrayHistogram"></a>
+    </li><li name="geotrellis.statistics.op.stat.GetArrayHistogram#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="apply(r:geotrellis.Op[geotrellis.Raster],size:Int):geotrellis.Operation[geotrellis.statistics.ArrayHistogram]"></a>
+      <a id="apply(Op[Raster],Int):Operation[ArrayHistogram]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="counts">counts: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="total">total: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="ArrayHistogram.html" class="extype" name="geotrellis.statistics.ArrayHistogram">ArrayHistogram</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.statistics.ArrayHistogram#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(size:Int):geotrellis.statistics.ArrayHistogram"></a>
-      <a id="apply(Int):ArrayHistogram"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="size">size: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="ArrayHistogram.html" class="extype" name="geotrellis.statistics.ArrayHistogram">ArrayHistogram</a></span>
+        <span class="name">apply</span><span class="params">(<span name="r">r: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>, <span name="size">size: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../../ArrayHistogram.html" class="extype" name="geotrellis.statistics.ArrayHistogram">ArrayHistogram</a>]</span>
       </span>
       </h4>
       
@@ -201,7 +193,7 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
@@ -246,39 +238,13 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.statistics.ArrayHistogram#fromHistograms" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="fromHistograms(hs:List[geotrellis.statistics.Histogram],n:Int):geotrellis.statistics.ArrayHistogram"></a>
-      <a id="fromHistograms(List[Histogram],Int):ArrayHistogram"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">fromHistograms</span><span class="params">(<span name="hs">hs: <span class="extype" name="scala.List">List</span>[<a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]</span>, <span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="ArrayHistogram.html" class="extype" name="geotrellis.statistics.ArrayHistogram">ArrayHistogram</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.statistics.ArrayHistogram#fromRaster" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="fromRaster(r:geotrellis.Raster,n:Int):geotrellis.statistics.ArrayHistogram"></a>
-      <a id="fromRaster(Raster,Int):ArrayHistogram"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">fromRaster</span><span class="params">(<span name="r">r: <a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>, <span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="ArrayHistogram.html" class="extype" name="geotrellis.statistics.ArrayHistogram">ArrayHistogram</a></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -449,11 +415,7 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.Serializable">
-              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
-            </div><div class="parent" name="java.io.Serializable">
-              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
-            </div><div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
@@ -473,6 +435,6 @@
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../lib/template.js"></script>
     </body>
       </html>

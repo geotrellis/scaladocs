@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>RunDispatched - geotrellis.process.actors.RunDispatched</title>
-          <meta name="description" content="RunDispatched - geotrellis.process.actors.RunDispatched" />
-          <meta name="keywords" content="RunDispatched geotrellis.process.actors.RunDispatched" />
+          <title>ServerContext - geotrellis.process.actors.ServerContext</title>
+          <meta name="description" content="ServerContext - geotrellis.process.actors.ServerContext" />
+          <meta name="keywords" content="ServerContext geotrellis.process.actors.ServerContext" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../index.html';
-            var hash = 'geotrellis.process.actors.RunDispatched';
+            var hash = 'geotrellis.process.actors.ServerContext';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -26,7 +26,7 @@
       <div id="definition">
         <img src="../../../lib/class_big.png" />
         <p id="owner"><a href="../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../package.html" class="extype" name="geotrellis.process">process</a>.<a href="package.html" class="extype" name="geotrellis.process.actors">actors</a></p>
-        <h1>RunDispatched</h1>
+        <h1>ServerContext</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,13 +35,11 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">RunDispatched</span><span class="params">(<span name="op">op: <a href="../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[_]</span>, <span name="dispatcher">dispatcher: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">ServerContext</span><span class="params">(<span name="externalId">externalId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="layerLoader">layerLoader: <a href="../LayerLoader.html" class="extype" name="geotrellis.process.LayerLoader">LayerLoader</a></span>, <span name="serverRef">serverRef: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>External message to compute the given operation and return result to sender.
-Dispatch child operations with provided dispatcher.
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -61,7 +59,7 @@ Dispatch child operations with provided dispatcher.
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.process.actors.RunDispatched"><span>RunDispatched</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.process.actors.ServerContext"><span>ServerContext</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -81,16 +79,16 @@ Dispatch child operations with provided dispatcher.
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="geotrellis.process.actors.RunDispatched#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(op:geotrellis.Operation[_],dispatcher:akka.actor.ActorRef):geotrellis.process.actors.RunDispatched"></a>
-      <a id="&lt;init&gt;:RunDispatched"></a>
+              <ol><li name="geotrellis.process.actors.ServerContext#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(externalId:String,layerLoader:geotrellis.process.LayerLoader,serverRef:akka.actor.ActorRef):geotrellis.process.actors.ServerContext"></a>
+      <a id="&lt;init&gt;:ServerContext"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">RunDispatched</span><span class="params">(<span name="op">op: <a href="../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[_]</span>, <span name="dispatcher">dispatcher: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span>
+        <span class="name">ServerContext</span><span class="params">(<span name="externalId">externalId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="layerLoader">layerLoader: <a href="../LayerLoader.html" class="extype" name="geotrellis.process.LayerLoader">LayerLoader</a></span>, <span name="serverRef">serverRef: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span>
       </span>
       </h4>
       
@@ -200,19 +198,6 @@ Dispatch child operations with provided dispatcher.
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.process.actors.RunDispatched#dispatcher" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="dispatcher:akka.actor.ActorRef"></a>
-      <a id="dispatcher:ActorRef"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dispatcher</span><span class="result">: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -226,6 +211,19 @@ Dispatch child operations with provided dispatcher.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.process.actors.ServerContext#externalId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="externalId:String"></a>
+      <a id="externalId:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">externalId</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -271,6 +269,19 @@ Dispatch child operations with provided dispatcher.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.process.actors.ServerContext#layerLoader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="layerLoader:geotrellis.process.LayerLoader"></a>
+      <a id="layerLoader:LayerLoader"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">layerLoader</span><span class="result">: <a href="../LayerLoader.html" class="extype" name="geotrellis.process.LayerLoader">LayerLoader</a></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -310,16 +321,16 @@ Dispatch child operations with provided dispatcher.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.process.actors.RunDispatched#op" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="op:geotrellis.Operation[_]"></a>
-      <a id="op:Operation[_]"></a>
+    </li><li name="geotrellis.process.actors.ServerContext#serverRef" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="serverRef:akka.actor.ActorRef"></a>
+      <a id="serverRef:ActorRef"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">op</span><span class="result">: <a href="../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[_]</span>
+        <span class="name">serverRef</span><span class="result">: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>
       </span>
       </h4>
       

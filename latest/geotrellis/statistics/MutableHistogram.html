@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ArrayHistogram - geotrellis.statistics.ArrayHistogram</title>
-          <meta name="description" content="ArrayHistogram - geotrellis.statistics.ArrayHistogram" />
-          <meta name="keywords" content="ArrayHistogram geotrellis.statistics.ArrayHistogram" />
+          <title>MutableHistogram - geotrellis.statistics.MutableHistogram</title>
+          <meta name="description" content="MutableHistogram - geotrellis.statistics.MutableHistogram" />
+          <meta name="keywords" content="MutableHistogram geotrellis.statistics.MutableHistogram" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../index.html';
-            var hash = 'geotrellis.statistics.ArrayHistogram';
+            var hash = 'geotrellis.statistics.MutableHistogram';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,28 +24,27 @@
         </head>
         <body class="type">
       <div id="definition">
-        <a href="ArrayHistogram$.html" title="Go to companion"><img src="../../lib/class_to_object_big.png" /></a>
+        <img src="../../lib/class_big.png" />
         <p id="owner"><a href="../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="package.html" class="extype" name="geotrellis.statistics">statistics</a></p>
-        <h1><a href="ArrayHistogram$.html" title="Go to companion">ArrayHistogram</a></h1>
+        <h1>MutableHistogram</h1>
       </div>
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">ArrayHistogram</span><span class="result"> extends <a href="MutableHistogram.html" class="extype" name="geotrellis.statistics.MutableHistogram">MutableHistogram</a></span>
+        <span class="name">MutableHistogram</span><span class="result"> extends <a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Data object representing a histogram that uses an array for internal storage.
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="MutableHistogram.html" class="extype" name="geotrellis.statistics.MutableHistogram">MutableHistogram</a>, <a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a href="CompressedArrayHistogram.html" class="extype" name="geotrellis.statistics.CompressedArrayHistogram">CompressedArrayHistogram</a></div>
+          <div class="subClasses hiddenContent"><a href="ArrayHistogram.html" class="extype" name="geotrellis.statistics.ArrayHistogram">ArrayHistogram</a>, <a href="CompressedArrayHistogram.html" class="extype" name="geotrellis.statistics.CompressedArrayHistogram">CompressedArrayHistogram</a>, <a href="FastMapHistogram.html" class="extype" name="geotrellis.statistics.FastMapHistogram">FastMapHistogram</a>, <a href="MapHistogram.html" class="extype" name="geotrellis.statistics.MapHistogram">MapHistogram</a></div>
         </div></div>
         
 
@@ -63,7 +62,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.statistics.ArrayHistogram"><span>ArrayHistogram</span></li><li class="in" name="geotrellis.statistics.MutableHistogram"><span>MutableHistogram</span></li><li class="in" name="geotrellis.statistics.Histogram"><span>Histogram</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.statistics.MutableHistogram"><span>MutableHistogram</span></li><li class="in" name="geotrellis.statistics.Histogram"><span>Histogram</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -83,16 +82,16 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="geotrellis.statistics.ArrayHistogram#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(counts:Array[Int],total:Int):geotrellis.statistics.ArrayHistogram"></a>
-      <a id="&lt;init&gt;:ArrayHistogram"></a>
+              <ol><li name="geotrellis.statistics.MutableHistogram#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;():geotrellis.statistics.MutableHistogram"></a>
+      <a id="&lt;init&gt;:MutableHistogram"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ArrayHistogram</span><span class="params">(<span name="counts">counts: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="total">total: <span class="extype" name="scala.Int">Int</span></span>)</span>
+        <span class="name">MutableHistogram</span><span class="params">()</span>
       </span>
       </h4>
       
@@ -101,10 +100,164 @@
 
         
 
-        
+        <div id="values" class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="geotrellis.statistics.MutableHistogram#countItem" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="countItem(item:Int,count:Int):Unit"></a>
+      <a id="countItem(Int,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">countItem</span><span class="params">(<span name="item">item: <span class="extype" name="scala.Int">Int</span></span>, <span name="count">count: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">1</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Note the occurance of 'item'.</p><div class="fullcomment"><div class="comment cmt"><p>Note the occurance of 'item'.</p><p>The optional parameter 'count' allows histograms to be built more
+efficiently. Negative counts can be used to remove a particular number
+of occurances of 'item'.
+</p></div></div>
+    </li><li name="geotrellis.statistics.Histogram#foreachValue" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="foreachValue(f:Int=&gt;Unit):Unit"></a>
+      <a id="foreachValue((Int)⇒Unit):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreachValue</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></dd></dl></div>
+    </li><li name="geotrellis.statistics.Histogram#getItemCount" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="getItemCount(item:Int):Int"></a>
+      <a id="getItemCount(Int):Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getItemCount</span><span class="params">(<span name="item">item: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Return the number of occurances for 'item'.</p><div class="fullcomment"><div class="comment cmt"><p>Return the number of occurances for 'item'.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></dd></dl></div>
+    </li><li name="geotrellis.statistics.Histogram#getMaxValue" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="getMaxValue():Int"></a>
+      <a id="getMaxValue():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getMaxValue</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Return the largest item seen.</p><div class="fullcomment"><div class="comment cmt"><p>Return the largest item seen.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></dd></dl></div>
+    </li><li name="geotrellis.statistics.Histogram#getMinValue" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="getMinValue():Int"></a>
+      <a id="getMinValue():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getMinValue</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Return the smallest item seen.</p><div class="fullcomment"><div class="comment cmt"><p>Return the smallest item seen.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></dd></dl></div>
+    </li><li name="geotrellis.statistics.Histogram#getTotalCount" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="getTotalCount():Int"></a>
+      <a id="getTotalCount():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTotalCount</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Return the total number of occurances for all items.</p><div class="fullcomment"><div class="comment cmt"><p>Return the total number of occurances for all items.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></dd></dl></div>
+    </li><li name="geotrellis.statistics.Histogram#getValues" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="getValues():Array[Int]"></a>
+      <a id="getValues():Array[Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getValues</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></dd></dl></div>
+    </li><li name="geotrellis.statistics.Histogram#mutable" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="mutable():geotrellis.statistics.MutableHistogram"></a>
+      <a id="mutable():MutableHistogram"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mutable</span><span class="params">()</span><span class="result">: <a href="" class="extype" name="geotrellis.statistics.MutableHistogram">MutableHistogram</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Return a mutable copy of this histogram.</p><div class="fullcomment"><div class="comment cmt"><p>Return a mutable copy of this histogram.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></dd></dl></div>
+    </li><li name="geotrellis.statistics.Histogram#rawValues" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="rawValues():Array[Int]"></a>
+      <a id="rawValues():Array[Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rawValues</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></dd></dl></div>
+    </li><li name="geotrellis.statistics.MutableHistogram#setItem" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="setItem(item:Int,count:Int):Unit"></a>
+      <a id="setItem(Int,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setItem</span><span class="params">(<span name="item">item: <span class="extype" name="scala.Int">Int</span></span>, <span name="count">count: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Sets the item to the given count.</p>
+    </li><li name="geotrellis.statistics.MutableHistogram#uncountItem" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="uncountItem(item:Int):Unit"></a>
+      <a id="uncountItem(Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">uncountItem</span><span class="params">(<span name="item">item: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Forget all occurances of 'item'.</p>
+    </li></ol>
+            </div>
 
         <div id="values" class="values members">
-              <h3>Value Members</h3>
+              <h3>Concrete Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:AnyRef):Boolean"></a>
       <a id="!=(AnyRef):Boolean"></a>
@@ -202,35 +355,6 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.statistics.ArrayHistogram#countItem" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="countItem(i:Int,count:Int):Unit"></a>
-      <a id="countItem(Int,Int):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">countItem</span><span class="params">(<span name="i">i: <span class="extype" name="scala.Int">Int</span></span>, <span name="count">count: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">1</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Note the occurance of 'item'.</p><div class="fullcomment"><div class="comment cmt"><p>Note the occurance of 'item'.</p><p>The optional parameter 'count' allows histograms to be built more
-efficiently. Negative counts can be used to remove a particular number
-of occurances of 'item'.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.statistics.ArrayHistogram">ArrayHistogram</a> → <a href="MutableHistogram.html" class="extype" name="geotrellis.statistics.MutableHistogram">MutableHistogram</a></dd></dl></div>
-    </li><li name="geotrellis.statistics.ArrayHistogram#counts" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="counts:Array[Int]"></a>
-      <a id="counts:Array[Int]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">counts</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -289,19 +413,6 @@ of occurances of 'item'.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.statistics.ArrayHistogram#foreachValue" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="foreachValue(f:Int=&gt;Unit):Unit"></a>
-      <a id="foreachValue((Int)⇒Unit):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">foreachValue</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.statistics.ArrayHistogram">ArrayHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></dd></dl></div>
     </li><li name="geotrellis.statistics.Histogram#generateStatistics" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="generateStatistics():geotrellis.statistics.Statistics"></a>
       <a id="generateStatistics():Statistics"></a>
@@ -328,34 +439,6 @@ of occurances of 'item'.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.statistics.ArrayHistogram#getItemCount" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getItemCount(i:Int):Int"></a>
-      <a id="getItemCount(Int):Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getItemCount</span><span class="params">(<span name="i">i: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Return the number of occurances for 'item'.</p><div class="fullcomment"><div class="comment cmt"><p>Return the number of occurances for 'item'.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.statistics.ArrayHistogram">ArrayHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.statistics.ArrayHistogram#getMaxValue" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getMaxValue():Int"></a>
-      <a id="getMaxValue():Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getMaxValue</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Return the largest item seen.</p><div class="fullcomment"><div class="comment cmt"><p>Return the largest item seen.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.statistics.ArrayHistogram">ArrayHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></dd></dl></div>
     </li><li name="geotrellis.statistics.Histogram#getMean" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getMean():Double"></a>
       <a id="getMean():Double"></a>
@@ -396,20 +479,6 @@ of occurances of 'item'.
       </h4>
       <p class="shortcomment cmt">Return the smallest and largest items seen as a tuple.</p><div class="fullcomment"><div class="comment cmt"><p>Return the smallest and largest items seen as a tuple.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.statistics.ArrayHistogram#getMinValue" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getMinValue():Int"></a>
-      <a id="getMinValue():Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getMinValue</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Return the smallest item seen.</p><div class="fullcomment"><div class="comment cmt"><p>Return the smallest item seen.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.statistics.ArrayHistogram">ArrayHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></dd></dl></div>
     </li><li name="geotrellis.statistics.Histogram#getMode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getMode():Int"></a>
       <a id="getMode():Int"></a>
@@ -435,34 +504,7 @@ of occurances of 'item'.
         <span class="name">getQuantileBreaks</span><span class="params">(<span name="num">num: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="MutableHistogram.html" class="extype" name="geotrellis.statistics.MutableHistogram">MutableHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.statistics.ArrayHistogram#getTotalCount" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getTotalCount():Int"></a>
-      <a id="getTotalCount():Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getTotalCount</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Return the total number of occurances for all items.</p><div class="fullcomment"><div class="comment cmt"><p>Return the total number of occurances for all items.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.statistics.ArrayHistogram">ArrayHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.statistics.ArrayHistogram#getValues" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getValues():Array[Int]"></a>
-      <a id="getValues():Array[Int]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getValues</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.statistics.ArrayHistogram">ArrayHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.statistics.MutableHistogram">MutableHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -489,20 +531,6 @@ of occurances of 'item'.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.statistics.ArrayHistogram#mutable" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mutable():geotrellis.statistics.ArrayHistogram"></a>
-      <a id="mutable():ArrayHistogram"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">mutable</span><span class="params">()</span><span class="result">: <a href="" class="extype" name="geotrellis.statistics.ArrayHistogram">ArrayHistogram</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Return a mutable copy of this histogram.</p><div class="fullcomment"><div class="comment cmt"><p>Return a mutable copy of this histogram.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.statistics.ArrayHistogram">ArrayHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -542,46 +570,6 @@ of occurances of 'item'.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.statistics.ArrayHistogram#rawValues" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="rawValues():Array[Int]"></a>
-      <a id="rawValues():Array[Int]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">rawValues</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.statistics.ArrayHistogram">ArrayHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.statistics.ArrayHistogram#setItem" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="setItem(i:Int,count:Int):Unit"></a>
-      <a id="setItem(Int,Int):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setItem</span><span class="params">(<span name="i">i: <span class="extype" name="scala.Int">Int</span></span>, <span name="count">count: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Sets the item to the given count.</p><div class="fullcomment"><div class="comment cmt"><p>Sets the item to the given count.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.statistics.ArrayHistogram">ArrayHistogram</a> → <a href="MutableHistogram.html" class="extype" name="geotrellis.statistics.MutableHistogram">MutableHistogram</a></dd></dl></div>
-    </li><li name="geotrellis.statistics.ArrayHistogram#size" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="size:Int"></a>
-      <a id="size:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">size</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -621,34 +609,7 @@ of occurances of 'item'.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.statistics.ArrayHistogram#total" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="total:Int"></a>
-      <a id="total:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">total</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.statistics.ArrayHistogram#uncountItem" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="uncountItem(i:Int):Unit"></a>
-      <a id="uncountItem(Int):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">uncountItem</span><span class="params">(<span name="i">i: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Forget all occurances of 'item'.</p><div class="fullcomment"><div class="comment cmt"><p>Forget all occurances of 'item'.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.statistics.ArrayHistogram">ArrayHistogram</a> → <a href="MutableHistogram.html" class="extype" name="geotrellis.statistics.MutableHistogram">MutableHistogram</a></dd></dl></div>
-    </li><li name="geotrellis.statistics.MutableHistogram#update" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.statistics.MutableHistogram#update" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="update(other:geotrellis.statistics.Histogram):Unit"></a>
       <a id="update(Histogram):Unit"></a>
       <h4 class="signature">
@@ -660,7 +621,7 @@ of occurances of 'item'.
         <span class="name">update</span><span class="params">(<span name="other">other: <a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="MutableHistogram.html" class="extype" name="geotrellis.statistics.MutableHistogram">MutableHistogram</a></dd></dl></div>
+      
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -727,9 +688,7 @@ of occurances of 'item'.
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="geotrellis.statistics.MutableHistogram">
-              <h3>Inherited from <a href="MutableHistogram.html" class="extype" name="geotrellis.statistics.MutableHistogram">MutableHistogram</a></h3>
-            </div><div class="parent" name="geotrellis.statistics.Histogram">
+        <div class="parent" name="geotrellis.statistics.Histogram">
               <h3>Inherited from <a href="Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></h3>
             </div><div class="parent" name="scala.Serializable">
               <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
