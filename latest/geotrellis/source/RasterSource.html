@@ -1314,6 +1314,19 @@ integer, else 0.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.source.DataSourceLike#cached" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="cached[R1&gt;:Repr,T1&gt;:T](implicitserver:geotrellis.process.Server,implicitbf:geotrellis.source.CanBuildSourceFrom[Repr,T1,R1]):R1"></a>
+      <a id="cached[R1&gt;:RasterSource,T1&gt;:Raster](Server,CanBuildSourceFrom[RasterSource,T1,R1]):R1"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cached</span><span class="tparams">[<span name="R1">R1 &gt;: <a href="" class="extype" name="geotrellis.source.RasterSource">RasterSource</a></span>, <span name="T1">T1 &gt;: <a href="../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="server">server: <a href="../process/Server.html" class="extype" name="geotrellis.process.Server">Server</a></span>, <span name="bf">bf: <a href="CanBuildSourceFrom.html" class="extype" name="geotrellis.source.CanBuildSourceFrom">CanBuildSourceFrom</a>[<a href="" class="extype" name="geotrellis.source.RasterSource">RasterSource</a>, <span class="extype" name="geotrellis.source.DataSourceLike.cached.T1">T1</span>, <span class="extype" name="geotrellis.source.DataSourceLike.cached.R1">R1</span>]</span>)</span><span class="result">: <span class="extype" name="geotrellis.source.DataSourceLike.cached.R1">R1</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DataSourceLike.html" class="extype" name="geotrellis.source.DataSourceLike">DataSourceLike</a></dd></dl></div>
     </li><li name="geotrellis.statistics.op.stat.StatOpMethods#classBreaks" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="classBreaks(numBreaks:Int):geotrellis.source.ValueSource[Array[Int]]"></a>
       <a id="classBreaks(Int):ValueSource[Array[Int]]"></a>
@@ -1593,19 +1606,6 @@ integer, else 0.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.source.RasterSourceLike#filterTiles" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="filterTiles(p:geotrellis.Op[geotrellis.feature.Polygon[_]]):geotrellis.Op[Seq[geotrellis.Op[geotrellis.source.TileIntersection]]]"></a>
-      <a id="filterTiles(Op[Polygon[_]]):Op[Seq[Op[TileIntersection]]]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">filterTiles</span><span class="params">(<span name="p">p: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[_]]</span>)</span><span class="result">: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.Seq">Seq</span>[<a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="TileIntersection.html" class="extype" name="geotrellis.source.TileIntersection">TileIntersection</a>]]]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterSourceLike.html" class="extype" name="geotrellis.source.RasterSourceLike">RasterSourceLike</a></dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -3443,19 +3443,19 @@ integer, else 0.
       </span>
       </h4>
       <p class="shortcomment cmt">apply a function to elements, and return the appropriate datasource *</p><div class="fullcomment"><div class="comment cmt"><p>apply a function to elements, and return the appropriate datasource *</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DataSourceLike.html" class="extype" name="geotrellis.source.DataSourceLike">DataSourceLike</a></dd></dl></div>
-    </li><li name="geotrellis.source.RasterSourceLike#mapIntersecting" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapIntersecting[B,That,D](p:geotrellis.Op[geotrellis.feature.Polygon[D]])(handleTileIntersection:geotrellis.source.TileIntersection=&gt;B)(implicitbf:geotrellis.source.CanBuildSourceFrom[Repr,B,That]):That"></a>
-      <a id="mapIntersecting[B,That,D](Op[Polygon[D]])((TileIntersection)⇒B)(CanBuildSourceFrom[RasterSource,B,That]):That"></a>
+    </li><li name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods#mapIntersecting" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mapIntersecting[B,That,D](p:geotrellis.Op[geotrellis.feature.Polygon[D]],fullTileResults:Option[geotrellis.source.DataSource[B,_]])(handleTileIntersection:geotrellis.raster.op.zonal.summary.TileIntersection=&gt;B)(implicitbf:geotrellis.source.CanBuildSourceFrom[Repr,B,That]):That"></a>
+      <a id="mapIntersecting[B,That,D](Op[Polygon[D]],Option[DataSource[B,_]])((TileIntersection)⇒B)(CanBuildSourceFrom[RasterSource,B,That]):That"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">mapIntersecting</span><span class="tparams">[<span name="B">B</span>, <span name="That">That</span>, <span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.source.RasterSourceLike.mapIntersecting.D">D</span>]]</span>)</span><span class="params">(<span name="handleTileIntersection">handleTileIntersection: (<a href="TileIntersection.html" class="extype" name="geotrellis.source.TileIntersection">TileIntersection</a>) ⇒ <span class="extype" name="geotrellis.source.RasterSourceLike.mapIntersecting.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="bf">bf: <a href="CanBuildSourceFrom.html" class="extype" name="geotrellis.source.CanBuildSourceFrom">CanBuildSourceFrom</a>[<a href="" class="extype" name="geotrellis.source.RasterSource">RasterSource</a>, <span class="extype" name="geotrellis.source.RasterSourceLike.mapIntersecting.B">B</span>, <span class="extype" name="geotrellis.source.RasterSourceLike.mapIntersecting.That">That</span>]</span>)</span><span class="result">: <span class="extype" name="geotrellis.source.RasterSourceLike.mapIntersecting.That">That</span></span>
+        <span class="name">mapIntersecting</span><span class="tparams">[<span name="B">B</span>, <span name="That">That</span>, <span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods.mapIntersecting.D">D</span>]]</span>, <span name="fullTileResults">fullTileResults: <span class="extype" name="scala.Option">Option</span>[<a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<span class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods.mapIntersecting.B">B</span>, _]]</span>)</span><span class="params">(<span name="handleTileIntersection">handleTileIntersection: (<a href="../raster/op/zonal/summary/TileIntersection.html" class="extype" name="geotrellis.raster.op.zonal.summary.TileIntersection">TileIntersection</a>) ⇒ <span class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods.mapIntersecting.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="bf">bf: <a href="CanBuildSourceFrom.html" class="extype" name="geotrellis.source.CanBuildSourceFrom">CanBuildSourceFrom</a>[<a href="" class="extype" name="geotrellis.source.RasterSource">RasterSource</a>, <span class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods.mapIntersecting.B">B</span>, <span class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods.mapIntersecting.That">That</span>]</span>)</span><span class="result">: <span class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods.mapIntersecting.That">That</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterSourceLike.html" class="extype" name="geotrellis.source.RasterSourceLike">RasterSourceLike</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../raster/op/zonal/summary/ZonalSummaryOpMethods.html" class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods">ZonalSummaryOpMethods</a></dd></dl></div>
     </li><li name="geotrellis.source.DataSourceLike#mapOp" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mapOp[B,That](f:geotrellis.Op[T]=&gt;geotrellis.Op[B])(implicitbf:geotrellis.source.CanBuildSourceFrom[Repr,B,That]):That"></a>
       <a id="mapOp[B,That]((Op[Raster])⇒Op[B])(CanBuildSourceFrom[RasterSource,B,That]):That"></a>
@@ -3917,6 +3917,19 @@ integer, else 0.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../raster/op/focal/FocalOpMethods.html" class="extype" name="geotrellis.raster.op.focal.FocalOpMethods">FocalOpMethods</a></dd></dl></div>
     </li><li name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods#zonalHistogram" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="zonalHistogram[D](p:geotrellis.Op[geotrellis.feature.Polygon[D]],cached:geotrellis.source.DataSource[geotrellis.statistics.Histogram,_]):geotrellis.source.ValueSource[geotrellis.statistics.Histogram]"></a>
+      <a id="zonalHistogram[D](Op[Polygon[D]],DataSource[Histogram,_]):ValueSource[Histogram]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zonalHistogram</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods.zonalHistogram.D">D</span>]]</span>, <span name="cached">cached: <a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<a href="../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>, _]</span>)</span><span class="result">: <a href="ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<a href="../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../raster/op/zonal/summary/ZonalSummaryOpMethods.html" class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods">ZonalSummaryOpMethods</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods#zonalHistogram" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="zonalHistogram[D](p:geotrellis.Op[geotrellis.feature.Polygon[D]]):geotrellis.source.ValueSource[geotrellis.statistics.Histogram]"></a>
       <a id="zonalHistogram[D](Op[Polygon[D]]):ValueSource[Histogram]"></a>
       <h4 class="signature">
@@ -3947,6 +3960,19 @@ integer, else 0.
          the data values will be rounded to integers.
 </p></span></dd></dl></div>
     </li><li name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods#zonalMax" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="zonalMax[D](p:geotrellis.Op[geotrellis.feature.Polygon[D]],cached:geotrellis.source.DataSource[Int,_]):geotrellis.source.ValueSource[Int]"></a>
+      <a id="zonalMax[D](Op[Polygon[D]],DataSource[Int,_]):ValueSource[Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zonalMax</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods.zonalMax.D">D</span>]]</span>, <span name="cached">cached: <a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<span class="extype" name="scala.Int">Int</span>, _]</span>)</span><span class="result">: <a href="ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../raster/op/zonal/summary/ZonalSummaryOpMethods.html" class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods">ZonalSummaryOpMethods</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods#zonalMax" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="zonalMax[D](p:geotrellis.Op[geotrellis.feature.Polygon[D]]):geotrellis.source.ValueSource[Int]"></a>
       <a id="zonalMax[D](Op[Polygon[D]]):ValueSource[Int]"></a>
       <h4 class="signature">
@@ -3956,6 +3982,19 @@ integer, else 0.
       </span>
       <span class="symbol">
         <span class="name">zonalMax</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods.zonalMax.D">D</span>]]</span>)</span><span class="result">: <a href="ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../raster/op/zonal/summary/ZonalSummaryOpMethods.html" class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods">ZonalSummaryOpMethods</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods#zonalMaxDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="zonalMaxDouble[D](p:geotrellis.Op[geotrellis.feature.Polygon[D]],cached:geotrellis.source.DataSource[Double,_]):geotrellis.source.ValueSource[Double]"></a>
+      <a id="zonalMaxDouble[D](Op[Polygon[D]],DataSource[Double,_]):ValueSource[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zonalMaxDouble</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods.zonalMaxDouble.D">D</span>]]</span>, <span name="cached">cached: <a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<span class="extype" name="scala.Double">Double</span>, _]</span>)</span><span class="result">: <a href="ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../raster/op/zonal/summary/ZonalSummaryOpMethods.html" class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods">ZonalSummaryOpMethods</a></dd></dl></div>
@@ -3973,6 +4012,19 @@ integer, else 0.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../raster/op/zonal/summary/ZonalSummaryOpMethods.html" class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods">ZonalSummaryOpMethods</a></dd></dl></div>
     </li><li name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods#zonalMean" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="zonalMean[D](p:geotrellis.Op[geotrellis.feature.Polygon[D]],cached:geotrellis.source.DataSource[geotrellis.raster.op.zonal.summary.MeanResult,_]):geotrellis.source.ValueSource[Double]"></a>
+      <a id="zonalMean[D](Op[Polygon[D]],DataSource[MeanResult,_]):ValueSource[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zonalMean</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods.zonalMean.D">D</span>]]</span>, <span name="cached">cached: <a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<a href="../raster/op/zonal/summary/MeanResult.html" class="extype" name="geotrellis.raster.op.zonal.summary.MeanResult">MeanResult</a>, _]</span>)</span><span class="result">: <a href="ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../raster/op/zonal/summary/ZonalSummaryOpMethods.html" class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods">ZonalSummaryOpMethods</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods#zonalMean" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="zonalMean[D](p:geotrellis.Op[geotrellis.feature.Polygon[D]]):geotrellis.source.ValueSource[Double]"></a>
       <a id="zonalMean[D](Op[Polygon[D]]):ValueSource[Double]"></a>
       <h4 class="signature">
@@ -3982,6 +4034,19 @@ integer, else 0.
       </span>
       <span class="symbol">
         <span class="name">zonalMean</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods.zonalMean.D">D</span>]]</span>)</span><span class="result">: <a href="ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../raster/op/zonal/summary/ZonalSummaryOpMethods.html" class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods">ZonalSummaryOpMethods</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods#zonalMeanDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="zonalMeanDouble[D](p:geotrellis.Op[geotrellis.feature.Polygon[D]],cached:geotrellis.source.DataSource[geotrellis.raster.op.zonal.summary.MeanResult,_]):geotrellis.source.ValueSource[Double]"></a>
+      <a id="zonalMeanDouble[D](Op[Polygon[D]],DataSource[MeanResult,_]):ValueSource[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zonalMeanDouble</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods.zonalMeanDouble.D">D</span>]]</span>, <span name="cached">cached: <a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<a href="../raster/op/zonal/summary/MeanResult.html" class="extype" name="geotrellis.raster.op.zonal.summary.MeanResult">MeanResult</a>, _]</span>)</span><span class="result">: <a href="ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../raster/op/zonal/summary/ZonalSummaryOpMethods.html" class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods">ZonalSummaryOpMethods</a></dd></dl></div>
@@ -3999,6 +4064,19 @@ integer, else 0.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../raster/op/zonal/summary/ZonalSummaryOpMethods.html" class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods">ZonalSummaryOpMethods</a></dd></dl></div>
     </li><li name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods#zonalMin" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="zonalMin[D](p:geotrellis.Op[geotrellis.feature.Polygon[D]],cached:geotrellis.source.DataSource[Int,_]):geotrellis.source.ValueSource[Int]"></a>
+      <a id="zonalMin[D](Op[Polygon[D]],DataSource[Int,_]):ValueSource[Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zonalMin</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods.zonalMin.D">D</span>]]</span>, <span name="cached">cached: <a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<span class="extype" name="scala.Int">Int</span>, _]</span>)</span><span class="result">: <a href="ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../raster/op/zonal/summary/ZonalSummaryOpMethods.html" class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods">ZonalSummaryOpMethods</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods#zonalMin" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="zonalMin[D](p:geotrellis.Op[geotrellis.feature.Polygon[D]]):geotrellis.source.ValueSource[Int]"></a>
       <a id="zonalMin[D](Op[Polygon[D]]):ValueSource[Int]"></a>
       <h4 class="signature">
@@ -4008,6 +4086,19 @@ integer, else 0.
       </span>
       <span class="symbol">
         <span class="name">zonalMin</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods.zonalMin.D">D</span>]]</span>)</span><span class="result">: <a href="ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../raster/op/zonal/summary/ZonalSummaryOpMethods.html" class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods">ZonalSummaryOpMethods</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods#zonalMinDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="zonalMinDouble[D](p:geotrellis.Op[geotrellis.feature.Polygon[D]],cached:geotrellis.source.DataSource[Double,_]):geotrellis.source.ValueSource[Double]"></a>
+      <a id="zonalMinDouble[D](Op[Polygon[D]],DataSource[Double,_]):ValueSource[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zonalMinDouble</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods.zonalMinDouble.D">D</span>]]</span>, <span name="cached">cached: <a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<span class="extype" name="scala.Double">Double</span>, _]</span>)</span><span class="result">: <a href="ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../raster/op/zonal/summary/ZonalSummaryOpMethods.html" class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods">ZonalSummaryOpMethods</a></dd></dl></div>
@@ -4046,6 +4137,19 @@ to that of the given pixel.</p><p>Percentages are integer values from 0 - 100.
          the data values will be rounded to integers.
 </p></span></dd></dl></div>
     </li><li name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods#zonalSum" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="zonalSum[D](p:geotrellis.Op[geotrellis.feature.Polygon[D]],cached:geotrellis.source.DataSource[Long,_]):geotrellis.source.ValueSource[Long]"></a>
+      <a id="zonalSum[D](Op[Polygon[D]],DataSource[Long,_]):ValueSource[Long]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zonalSum</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods.zonalSum.D">D</span>]]</span>, <span name="cached">cached: <a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<span class="extype" name="scala.Long">Long</span>, _]</span>)</span><span class="result">: <a href="ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<span class="extype" name="scala.Long">Long</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../raster/op/zonal/summary/ZonalSummaryOpMethods.html" class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods">ZonalSummaryOpMethods</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods#zonalSum" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="zonalSum[D](p:geotrellis.Op[geotrellis.feature.Polygon[D]]):geotrellis.source.ValueSource[Long]"></a>
       <a id="zonalSum[D](Op[Polygon[D]]):ValueSource[Long]"></a>
       <h4 class="signature">
@@ -4055,6 +4159,19 @@ to that of the given pixel.</p><p>Percentages are integer values from 0 - 100.
       </span>
       <span class="symbol">
         <span class="name">zonalSum</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods.zonalSum.D">D</span>]]</span>)</span><span class="result">: <a href="ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<span class="extype" name="scala.Long">Long</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../raster/op/zonal/summary/ZonalSummaryOpMethods.html" class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods">ZonalSummaryOpMethods</a></dd></dl></div>
+    </li><li name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods#zonalSumDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="zonalSumDouble[D](p:geotrellis.Op[geotrellis.feature.Polygon[D]],cached:geotrellis.source.DataSource[Double,_]):geotrellis.source.ValueSource[Double]"></a>
+      <a id="zonalSumDouble[D](Op[Polygon[D]],DataSource[Double,_]):ValueSource[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zonalSumDouble</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="p">p: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../feature/Polygon.html" class="extype" name="geotrellis.feature.Polygon">Polygon</a>[<span class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods.zonalSumDouble.D">D</span>]]</span>, <span name="cached">cached: <a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<span class="extype" name="scala.Double">Double</span>, _]</span>)</span><span class="result">: <a href="ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../raster/op/zonal/summary/ZonalSummaryOpMethods.html" class="extype" name="geotrellis.raster.op.zonal.summary.ZonalSummaryOpMethods">ZonalSummaryOpMethods</a></dd></dl></div>
