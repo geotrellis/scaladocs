@@ -44,7 +44,7 @@
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a href="DoubleColorMap.html" class="extype" name="geotrellis.render.DoubleColorMap">DoubleColorMap</a>, <a href="IntColorMap.html" class="extype" name="geotrellis.render.IntColorMap">IntColorMap</a></div>
+          <div class="subClasses hiddenContent"><a href="CachedColorMap.html" class="extype" name="geotrellis.render.CachedColorMap">CachedColorMap</a>, <a href="DoubleColorMap.html" class="extype" name="geotrellis.render.DoubleColorMap">DoubleColorMap</a>, <a href="IntColorMap.html" class="extype" name="geotrellis.render.IntColorMap">IntColorMap</a></div>
         </div></div>
         
 
@@ -86,16 +86,29 @@
 
         <div id="values" class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="geotrellis.render.ColorMap#colors" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="colors:Seq[Int]"></a>
-      <a id="colors:Seq[Int]"></a>
+              <ol><li name="geotrellis.render.ColorMap#cache" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="cache(h:geotrellis.statistics.Histogram):geotrellis.render.ColorMap"></a>
+      <a id="cache(Histogram):ColorMap"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">colors</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+        <span class="name">cache</span><span class="params">(<span name="h">h: <a href="../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.render.ColorMap">ColorMap</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.render.ColorMap#colors" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="colors:Array[Int]"></a>
+      <a id="colors:Array[Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">colors</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       </h4>
       
@@ -195,45 +208,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.render.ColorMap#_colorsChecked" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="_colorsChecked:Boolean"></a>
-      <a id="_colorsChecked:Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">_colorsChecked</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.render.ColorMap#_grey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="_grey:Boolean"></a>
-      <a id="_grey:Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">_grey</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.render.ColorMap#_opaque" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="_opaque:Boolean"></a>
-      <a id="_opaque:Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">_opaque</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>

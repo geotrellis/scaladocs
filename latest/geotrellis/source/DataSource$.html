@@ -151,15 +151,15 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="geotrellis.source.DataSource#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[T](elements:geotrellis.Op[Seq[geotrellis.Op[T]]]):geotrellis.source.DataSource[T,Seq[T]]"></a>
-      <a id="apply[T](Op[Seq[Op[T]]]):DataSource[T,Seq[T]]"></a>
+      <a id="apply[T](elements:geotrellis.Op[Seq[geotrellis.Op[T]]]):geotrellis.source.SeqSource[T]"></a>
+      <a id="apply[T](Op[Seq[Op[T]]]):SeqSource[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="elements">elements: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.collection.Seq">Seq</span>[<a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.source.DataSource.apply.T">T</span>]]]</span>)</span><span class="result">: <a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<span class="extype" name="geotrellis.source.DataSource.apply.T">T</span>, <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="geotrellis.source.DataSource.apply.T">T</span>]]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="elements">elements: <a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="scala.collection.Seq">Seq</span>[<a href="../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.source.DataSource.apply.T">T</span>]]]</span>)</span><span class="result">: <a href="package.html#SeqSource[+T]=geotrellis.source.DataSource[T,Seq[T]]" class="extmbr" name="geotrellis.source.SeqSource">SeqSource</a>[<span class="extype" name="geotrellis.source.DataSource.apply.T">T</span>]</span>
       </span>
       </h4>
       
@@ -253,29 +253,42 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.source.DataSource#fromValues" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="fromValues[T](elements:Seq[T])(implicitd:geotrellis.DI):geotrellis.source.DataSource[T,Seq[T]]"></a>
-      <a id="fromValues[T](Seq[T])(DI):DataSource[T,Seq[T]]"></a>
+    </li><li name="geotrellis.source.DataSource#fromSources" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="fromSources[T](sources:Seq[geotrellis.source.DataSource[_,T]]):geotrellis.source.SeqSource[T]"></a>
+      <a id="fromSources[T](Seq[DataSource[_,T]]):SeqSource[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromValues</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="elements">elements: <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="geotrellis.source.DataSource.fromValues.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <a href="../package.html#DI=DummyImplicit" class="extmbr" name="geotrellis.DI">DI</a></span>)</span><span class="result">: <a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<span class="extype" name="geotrellis.source.DataSource.fromValues.T">T</span>, <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="geotrellis.source.DataSource.fromValues.T">T</span>]]</span>
+        <span class="name">fromSources</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="sources">sources: <span class="extype" name="scala.collection.Seq">Seq</span>[<a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[_, <span class="extype" name="geotrellis.source.DataSource.fromSources.T">T</span>]]</span>)</span><span class="result">: <a href="package.html#SeqSource[+T]=geotrellis.source.DataSource[T,Seq[T]]" class="extmbr" name="geotrellis.source.SeqSource">SeqSource</a>[<span class="extype" name="geotrellis.source.DataSource.fromSources.T">T</span>]</span>
       </span>
       </h4>
       
     </li><li name="geotrellis.source.DataSource#fromValues" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="fromValues[T](elements:T*):geotrellis.source.DataSource[T,Seq[T]]"></a>
-      <a id="fromValues[T](T*):DataSource[T,Seq[T]]"></a>
+      <a id="fromValues[T](elements:Seq[T])(implicitd:geotrellis.DI):geotrellis.source.SeqSource[T]"></a>
+      <a id="fromValues[T](Seq[T])(DI):SeqSource[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromValues</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="elements">elements: <span class="extype" name="geotrellis.source.DataSource.fromValues.T">T</span>*</span>)</span><span class="result">: <a href="DataSource.html" class="extype" name="geotrellis.source.DataSource">DataSource</a>[<span class="extype" name="geotrellis.source.DataSource.fromValues.T">T</span>, <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="geotrellis.source.DataSource.fromValues.T">T</span>]]</span>
+        <span class="name">fromValues</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="elements">elements: <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="geotrellis.source.DataSource.fromValues.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <a href="../package.html#DI=DummyImplicit" class="extmbr" name="geotrellis.DI">DI</a></span>)</span><span class="result">: <a href="package.html#SeqSource[+T]=geotrellis.source.DataSource[T,Seq[T]]" class="extmbr" name="geotrellis.source.SeqSource">SeqSource</a>[<span class="extype" name="geotrellis.source.DataSource.fromValues.T">T</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.source.DataSource#fromValues" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="fromValues[T](elements:T*):geotrellis.source.SeqSource[T]"></a>
+      <a id="fromValues[T](T*):SeqSource[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fromValues</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="elements">elements: <span class="extype" name="geotrellis.source.DataSource.fromValues.T">T</span>*</span>)</span><span class="result">: <a href="package.html#SeqSource[+T]=geotrellis.source.DataSource[T,Seq[T]]" class="extmbr" name="geotrellis.source.SeqSource">SeqSource</a>[<span class="extype" name="geotrellis.source.DataSource.fromValues.T">T</span>]</span>
       </span>
       </h4>
       

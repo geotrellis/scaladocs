@@ -58,7 +58,20 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="geotrellis.render.ColorBreaks" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.render.CachedColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CachedColorMapextendsColorMapwithInt=&gt;IntwithProductwithSerializable"></a>
+      <a id="CachedColorMap:CachedColorMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="CachedColorMap.html"><span class="name">CachedColorMap</span></a><span class="params">(<span name="colors">colors: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="options">options: <a href="ColorMapOptions.html" class="extype" name="geotrellis.render.ColorMapOptions">ColorMapOptions</a></span>, <span name="h">h: <a href="../statistics/Histogram.html" class="extype" name="geotrellis.statistics.Histogram">Histogram</a></span>)</span><span class="result"> extends <a href="ColorMap.html" class="extype" name="geotrellis.render.ColorMap">ColorMap</a> with (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.render.ColorBreaks" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ColorBreaksextendsProductwithSerializable"></a>
       <a id="ColorBreaks:ColorBreaks"></a>
       <h4 class="signature">
@@ -71,19 +84,6 @@
       </span>
       </h4>
       <p class="comment cmt">ColorBreaks describes a way to render a raster into a colored image.</p>
-    </li><li name="geotrellis.render.ColorChooser" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="ColorChooserextendsAnyRef"></a>
-      <a id="ColorChooser:ColorChooser"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="ColorChooser.html"><span class="name">ColorChooser</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Abstract class for generating colors for class breaks.</p>
     </li><li name="geotrellis.render.ColorMap" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="ColorMapextendsAnyRef"></a>
       <a id="ColorMap:ColorMap"></a>
@@ -123,20 +123,6 @@
       </span>
       </h4>
       
-    </li><li name="geotrellis.render.ColorMapper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ColorMapperextendsInt=&gt;IntwithProductwithSerializable"></a>
-      <a id="ColorMapper:ColorMapper"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="ColorMapper.html"><span class="name">ColorMapper</span></a><span class="params">(<span name="cb">cb: <a href="ColorBreaks.html" class="extype" name="geotrellis.render.ColorBreaks">ColorBreaks</a></span>, <span name="nodataColor">nodataColor: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Mapper which wraps color breaks and nodataColor
-</p>
     </li><li name="geotrellis.render.ColorRamp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ColorRampextendsAnyRef"></a>
       <a id="ColorRamp:ColorRamp"></a>
@@ -151,34 +137,8 @@
       </h4>
       <p class="comment cmt">*
 List of colors for rendering a raster.</p>
-    </li><li name="geotrellis.render.ColorRangeChooser" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="ColorRangeChooserextendsColorChooser"></a>
-      <a id="ColorRangeChooser:ColorRangeChooser"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="ColorRangeChooser.html"><span class="name">ColorRangeChooser</span></a><span class="result"> extends <a href="ColorChooser.html" class="extype" name="geotrellis.render.ColorChooser">ColorChooser</a></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Abstract class for generating a range of colors.</p>
-    </li><li name="geotrellis.render.Colors" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="ColorsextendsAnyRef"></a>
-      <a id="Colors:Colors"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">sealed </span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="Colors.html"><span class="name">Colors</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
-      </span>
-      </h4>
-      
     </li><li name="geotrellis.render.DoubleColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="DoubleColorMapextendsColorMapwithDouble=&gt;IntwithProductwithSerializable"></a>
+      <a id="DoubleColorMapextendsColorMapwithProductwithSerializable"></a>
       <a id="DoubleColorMap:DoubleColorMap"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -186,12 +146,12 @@ List of colors for rendering a raster.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="DoubleColorMap.html"><span class="name">DoubleColorMap</span></a><span class="params">(<span name="breaksToColors">breaksToColors: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>]</span>, <span name="options">options: <a href="ColorMapOptions.html" class="extype" name="geotrellis.render.ColorMapOptions">ColorMapOptions</a> = <span class="symbol">ColorMapOptions.Default</span></span>)</span><span class="result"> extends <a href="ColorMap.html" class="extype" name="geotrellis.render.ColorMap">ColorMap</a> with (<span class="extype" name="scala.Double">Double</span>) ⇒ <span class="extype" name="scala.Int">Int</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="DoubleColorMap.html"><span class="name">DoubleColorMap</span></a><span class="params">(<span name="breaksToColors">breaksToColors: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>]</span>, <span name="options">options: <a href="ColorMapOptions.html" class="extype" name="geotrellis.render.ColorMapOptions">ColorMapOptions</a> = <span class="symbol">ColorMapOptions.Default</span></span>)</span><span class="result"> extends <a href="ColorMap.html" class="extype" name="geotrellis.render.ColorMap">ColorMap</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
     </li><li name="geotrellis.render.IntColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="IntColorMapextendsColorMapwithInt=&gt;IntwithProductwithSerializable"></a>
+      <a id="IntColorMapextendsColorMapwithProductwithSerializable"></a>
       <a id="IntColorMap:IntColorMap"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -199,59 +159,7 @@ List of colors for rendering a raster.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="IntColorMap.html"><span class="name">IntColorMap</span></a><span class="params">(<span name="breaksToColors">breaksToColors: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>, <span name="options">options: <a href="ColorMapOptions.html" class="extype" name="geotrellis.render.ColorMapOptions">ColorMapOptions</a> = <span class="symbol">ColorMapOptions.Default</span></span>)</span><span class="result"> extends <a href="ColorMap.html" class="extype" name="geotrellis.render.ColorMap">ColorMap</a> with (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.render.LinearColorRangeChooser" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="LinearColorRangeChooserextendsColorRangeChooserwithProductwithSerializable"></a>
-      <a id="LinearColorRangeChooser:LinearColorRangeChooser"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="LinearColorRangeChooser.html"><span class="name">LinearColorRangeChooser</span></a><span class="params">(<span name="color1">color1: <span class="extype" name="scala.Int">Int</span></span>, <span name="color2">color2: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="ColorRangeChooser.html" class="extype" name="geotrellis.render.ColorRangeChooser">ColorRangeChooser</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Generates colors on a gradient between an initial color and an end color.</p>
-    </li><li name="geotrellis.render.MultiColorRangeChooser" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MultiColorRangeChooserextendsColorRangeChooserwithProductwithSerializable"></a>
-      <a id="MultiColorRangeChooser:MultiColorRangeChooser"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="MultiColorRangeChooser.html"><span class="name">MultiColorRangeChooser</span></a><span class="params">(<span name="colors">colors: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="ColorRangeChooser.html" class="extype" name="geotrellis.render.ColorRangeChooser">ColorRangeChooser</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Generates a range of colors from an array of initial colors.</p>
-    </li><li name="geotrellis.render.RgbaColors" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="RgbaColorsextendsColorswithProductwithSerializable"></a>
-      <a id="RgbaColors:RgbaColors"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="RgbaColors.html"><span class="name">RgbaColors</span></a><span class="params">(<span name="cs">cs: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="Colors.html" class="extype" name="geotrellis.render.Colors">Colors</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.render.RgbaPalette" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="RgbaPaletteextendsColorswithProductwithSerializable"></a>
-      <a id="RgbaPalette:RgbaPalette"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="RgbaPalette.html"><span class="name">RgbaPalette</span></a><span class="params">(<span name="cs">cs: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="Colors.html" class="extype" name="geotrellis.render.Colors">Colors</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="IntColorMap.html"><span class="name">IntColorMap</span></a><span class="params">(<span name="breaksToColors">breaksToColors: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>, <span name="options">options: <a href="ColorMapOptions.html" class="extype" name="geotrellis.render.ColorMapOptions">ColorMapOptions</a> = <span class="symbol">ColorMapOptions.Default</span></span>)</span><span class="result"> extends <a href="ColorMap.html" class="extype" name="geotrellis.render.ColorMap">ColorMap</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -262,20 +170,7 @@ List of colors for rendering a raster.</p>
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="geotrellis.render.Blender" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Blender"></a>
-      <a id="Blender:Blender"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Blender$.html"><span class="name">Blender</span></a>
-      </span>
-      </h4>
-      <p class="comment cmt">Color blender used for generating symbology for class breaks.</p>
-    </li><li name="geotrellis.render.Color" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.render.Color" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Color"></a>
       <a id="Color:Color"></a>
       <h4 class="signature">

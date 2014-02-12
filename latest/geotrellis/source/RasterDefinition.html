@@ -24,9 +24,9 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img src="../../lib/class_big.png" />
+        <a href="RasterDefinition$.html" title="Go to companion"><img src="../../lib/class_to_object_big.png" /></a>
         <p id="owner"><a href="../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="package.html" class="extype" name="geotrellis.source">source</a></p>
-        <h1>RasterDefinition</h1>
+        <h1><a href="RasterDefinition$.html" title="Go to companion">RasterDefinition</a></h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,7 +35,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">RasterDefinition</span><span class="params">(<span name="layerId">layerId: <a href="../process/LayerId.html" class="extype" name="geotrellis.process.LayerId">LayerId</a></span>, <span name="re">re: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="tileLayout">tileLayout: <a href="../raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">RasterDefinition</span><span class="params">(<span name="layerId">layerId: <a href="../process/LayerId.html" class="extype" name="geotrellis.process.LayerId">LayerId</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="tileLayout">tileLayout: <a href="../raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="rasterType">rasterType: <a href="../RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>, <span name="catalogued">catalogued: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -80,7 +80,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.source.RasterDefinition#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(layerId:geotrellis.process.LayerId,re:geotrellis.RasterExtent,tileLayout:geotrellis.raster.TileLayout):geotrellis.source.RasterDefinition"></a>
+      <a id="&lt;init&gt;(layerId:geotrellis.process.LayerId,rasterExtent:geotrellis.RasterExtent,tileLayout:geotrellis.raster.TileLayout,rasterType:geotrellis.RasterType,catalogued:Boolean):geotrellis.source.RasterDefinition"></a>
       <a id="&lt;init&gt;:RasterDefinition"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -88,7 +88,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">RasterDefinition</span><span class="params">(<span name="layerId">layerId: <a href="../process/LayerId.html" class="extype" name="geotrellis.process.LayerId">LayerId</a></span>, <span name="re">re: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="tileLayout">tileLayout: <a href="../raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>)</span>
+        <span class="name">RasterDefinition</span><span class="params">(<span name="layerId">layerId: <a href="../process/LayerId.html" class="extype" name="geotrellis.process.LayerId">LayerId</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="tileLayout">tileLayout: <a href="../raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="rasterType">rasterType: <a href="../RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>, <span name="catalogued">catalogued: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span>
       </span>
       </h4>
       
@@ -179,6 +179,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.source.RasterDefinition#catalogued" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="catalogued:Boolean"></a>
+      <a id="catalogued:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">catalogued</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -321,16 +334,29 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.source.RasterDefinition#re" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="re:geotrellis.RasterExtent"></a>
-      <a id="re:RasterExtent"></a>
+    </li><li name="geotrellis.source.RasterDefinition#rasterExtent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="rasterExtent:geotrellis.RasterExtent"></a>
+      <a id="rasterExtent:RasterExtent"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">re</span><span class="result">: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>
+        <span class="name">rasterExtent</span><span class="result">: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.source.RasterDefinition#rasterType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="rasterType:geotrellis.RasterType"></a>
+      <a id="rasterType:RasterType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rasterType</span><span class="result">: <a href="../RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>
       </span>
       </h4>
       
@@ -417,6 +443,19 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="geotrellis.source.RasterDefinition#withType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withType(newType:geotrellis.RasterType):geotrellis.source.RasterDefinition"></a>
+      <a id="withType(RasterType):RasterDefinition"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withType</span><span class="params">(<span name="newType">newType: <a href="../RasterType.html" class="extype" name="geotrellis.RasterType">RasterType</a></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.source.RasterDefinition">RasterDefinition</a></span>
+      </span>
+      </h4>
+      
     </li></ol>
             </div>
 

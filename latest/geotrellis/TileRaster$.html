@@ -318,19 +318,25 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.TileRaster#split" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="split(r:geotrellis.Raster,tileLayout:geotrellis.raster.TileLayout):Seq[geotrellis.Raster]"></a>
-      <a id="split(Raster,TileLayout):Seq[Raster]"></a>
+    </li><li name="geotrellis.TileRaster#split" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="split(r:geotrellis.Raster,tileLayout:geotrellis.raster.TileLayout,cropped:Boolean):Seq[geotrellis.Raster]"></a>
+      <a id="split(Raster,TileLayout,Boolean):Seq[Raster]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">split</span><span class="params">(<span name="r">r: <a href="Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>, <span name="tileLayout">tileLayout: <a href="raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
+        <span class="name">split</span><span class="params">(<span name="r">r: <a href="Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>, <span name="tileLayout">tileLayout: <a href="raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="cropped">cropped: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Splits a raster into a TileRaster into tiles.</p><div class="fullcomment"><div class="comment cmt"><p>Splits a raster into a TileRaster into tiles.
+</p></div><dl class="paramcmts block"><dt class="param">r</dt><dd class="cmt"><p>Raster to split.</p></dd><dt class="param">tileLayout</dt><dd class="cmt"><p>TileLayout defining the tiles to be
+                             generated.</p></dd><dt class="param">cropped</dt><dd class="cmt"><p>Set this flag to false if you
+                             want the tiles to be ArrayRasters,
+                             otherwise they will be CroppedRasters
+                             with the raster 'r' as the backing raster.
+</p></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -414,19 +420,25 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.TileRaster#wrap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="wrap(r:geotrellis.Raster,tileLayout:geotrellis.raster.TileLayout):geotrellis.TileRaster"></a>
-      <a id="wrap(Raster,TileLayout):TileRaster"></a>
+    </li><li name="geotrellis.TileRaster#wrap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wrap(r:geotrellis.Raster,tileLayout:geotrellis.raster.TileLayout,cropped:Boolean):geotrellis.TileRaster"></a>
+      <a id="wrap(Raster,TileLayout,Boolean):TileRaster"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wrap</span><span class="params">(<span name="r">r: <a href="Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>, <span name="tileLayout">tileLayout: <a href="raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>)</span><span class="result">: <a href="TileRaster.html" class="extype" name="geotrellis.TileRaster">TileRaster</a></span>
+        <span class="name">wrap</span><span class="params">(<span name="r">r: <a href="Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>, <span name="tileLayout">tileLayout: <a href="raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="cropped">cropped: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result">: <a href="TileRaster.html" class="extype" name="geotrellis.TileRaster">TileRaster</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Converts a raster into a TileRaster with the given tileLayout.</p><div class="fullcomment"><div class="comment cmt"><p>Converts a raster into a TileRaster with the given tileLayout.
+</p></div><dl class="paramcmts block"><dt class="param">r</dt><dd class="cmt"><p>Raster to wrap.</p></dd><dt class="param">tileLayout</dt><dd class="cmt"><p>TileLayout of the resulting
+                             TileRaster.</p></dd><dt class="param">cropped</dt><dd class="cmt"><p>Set this flag to false if you
+                             want the tiles to be ArrayRasters,
+                             otherwise they will be CroppedRasters
+                             with the raster 'r' as the backing raster.
+</p></dd></dl></div>
     </li></ol>
             </div>
 

@@ -35,7 +35,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Settings</span><span class="params">(<span name="size">size: <a href="SampleSize.html" class="extype" name="geotrellis.data.geotiff.SampleSize">SampleSize</a></span>, <span name="format">format: <a href="SampleFormat.html" class="extype" name="geotrellis.data.geotiff.SampleFormat">SampleFormat</a></span>, <span name="esriCompat">esriCompat: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="compression">compression: <a href="Compression.html" class="extype" name="geotrellis.data.geotiff.Compression">Compression</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">Settings</span><span class="params">(<span name="size">size: <a href="SampleSize.html" class="extype" name="geotrellis.data.geotiff.SampleSize">SampleSize</a></span>, <span name="format">format: <a href="SampleFormat.html" class="extype" name="geotrellis.data.geotiff.SampleFormat">SampleFormat</a></span>, <span name="esriCompat">esriCompat: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="compression">compression: <a href="Compression.html" class="extype" name="geotrellis.data.geotiff.Compression">Compression</a></span>, <span name="nodata">nodata: <span class="extype" name="geotrellis.data.geotiff.Nodata">Nodata</span> = <span class="symbol">Nodata.Default</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -85,7 +85,7 @@ is set to true, we instead write out a &quot;user-defined&quot; projected CS.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.data.geotiff.Settings#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(size:geotrellis.data.geotiff.SampleSize,format:geotrellis.data.geotiff.SampleFormat,esriCompat:Boolean,compression:geotrellis.data.geotiff.Compression):geotrellis.data.geotiff.Settings"></a>
+      <a id="&lt;init&gt;(size:geotrellis.data.geotiff.SampleSize,format:geotrellis.data.geotiff.SampleFormat,esriCompat:Boolean,compression:geotrellis.data.geotiff.Compression,nodata:geotrellis.data.geotiff.Nodata):geotrellis.data.geotiff.Settings"></a>
       <a id="&lt;init&gt;:Settings"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -93,7 +93,7 @@ is set to true, we instead write out a &quot;user-defined&quot; projected CS.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Settings</span><span class="params">(<span name="size">size: <a href="SampleSize.html" class="extype" name="geotrellis.data.geotiff.SampleSize">SampleSize</a></span>, <span name="format">format: <a href="SampleFormat.html" class="extype" name="geotrellis.data.geotiff.SampleFormat">SampleFormat</a></span>, <span name="esriCompat">esriCompat: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="compression">compression: <a href="Compression.html" class="extype" name="geotrellis.data.geotiff.Compression">Compression</a></span>)</span>
+        <span class="name">Settings</span><span class="params">(<span name="size">size: <a href="SampleSize.html" class="extype" name="geotrellis.data.geotiff.SampleSize">SampleSize</a></span>, <span name="format">format: <a href="SampleFormat.html" class="extype" name="geotrellis.data.geotiff.SampleFormat">SampleFormat</a></span>, <span name="esriCompat">esriCompat: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="compression">compression: <a href="Compression.html" class="extype" name="geotrellis.data.geotiff.Compression">Compression</a></span>, <span name="nodata">nodata: <span class="extype" name="geotrellis.data.geotiff.Nodata">Nodata</span> = <span class="symbol">Nodata.Default</span></span>)</span>
       </span>
       </h4>
       
@@ -313,6 +313,45 @@ is set to true, we instead write out a &quot;user-defined&quot; projected CS.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.data.geotiff.Settings#nodata" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="nodata:geotrellis.data.geotiff.Nodata"></a>
+      <a id="nodata:Nodata"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nodata</span><span class="result">: <span class="extype" name="geotrellis.data.geotiff.Nodata">Nodata</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.data.geotiff.Settings#nodataInt" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="nodataInt:Int"></a>
+      <a id="nodataInt:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nodataInt</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.data.geotiff.Settings#nodataString" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="nodataString:String"></a>
+      <a id="nodataString:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nodataString</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -375,6 +414,19 @@ is set to true, we instead write out a &quot;user-defined&quot; projected CS.
       </span>
       <span class="symbol">
         <span class="name">setFormat</span><span class="params">(<span name="s">s: <a href="SampleFormat.html" class="extype" name="geotrellis.data.geotiff.SampleFormat">SampleFormat</a></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.data.geotiff.Settings">Settings</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.data.geotiff.Settings#setNodata" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setNodata(d:Double):geotrellis.data.geotiff.Settings"></a>
+      <a id="setNodata(Double):Settings"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setNodata</span><span class="params">(<span name="d">d: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.data.geotiff.Settings">Settings</a></span>
       </span>
       </h4>
       

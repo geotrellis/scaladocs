@@ -182,6 +182,22 @@ considered to be part of the RasterExtent.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.RasterExtent#adjustTo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="adjustTo(tileLayout:geotrellis.raster.TileLayout):geotrellis.RasterExtent"></a>
+      <a id="adjustTo(TileLayout):RasterExtent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">adjustTo</span><span class="params">(<span name="tileLayout">tileLayout: <a href="raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Adjusts a raster extent so that in can encompass the tile layout.</p><div class="fullcomment"><div class="comment cmt"><p>Adjusts a raster extent so that in can encompass the tile layout.
+Will warp the extent, but keep the resolution, and preserve north and
+west borders
+</p></div></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -408,7 +424,7 @@ See <a href="" class="extype" name="geotrellis.RasterExtent">RasterExtent</a> fo
       <a id="gridColToMap(Int):Double"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
@@ -421,7 +437,7 @@ See <a href="" class="extype" name="geotrellis.RasterExtent">RasterExtent</a> fo
       <a id="gridRowToMap(Int):Double"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
@@ -434,7 +450,7 @@ See <a href="" class="extype" name="geotrellis.RasterExtent">RasterExtent</a> fo
       <a id="gridToMap(Int,Int):(Double,Double)"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
@@ -473,7 +489,7 @@ See <a href="" class="extype" name="geotrellis.RasterExtent">RasterExtent</a> fo
       <a id="mapToGrid((Double,Double)):(Int,Int)"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
@@ -486,7 +502,7 @@ See <a href="" class="extype" name="geotrellis.RasterExtent">RasterExtent</a> fo
       <a id="mapToGrid(Double,Double):(Int,Int)"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
@@ -499,7 +515,7 @@ See <a href="" class="extype" name="geotrellis.RasterExtent">RasterExtent</a> fo
       <a id="mapXToGrid(Double):Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
@@ -512,7 +528,7 @@ See <a href="" class="extype" name="geotrellis.RasterExtent">RasterExtent</a> fo
       <a id="mapXToGridDouble(Double):Double"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
@@ -525,7 +541,7 @@ See <a href="" class="extype" name="geotrellis.RasterExtent">RasterExtent</a> fo
       <a id="mapYToGrid(Double):Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
@@ -538,7 +554,7 @@ See <a href="" class="extype" name="geotrellis.RasterExtent">RasterExtent</a> fo
       <a id="mapYToGridDouble(Double):Double"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
@@ -695,6 +711,20 @@ See <a href="" class="extype" name="geotrellis.RasterExtent">RasterExtent</a> fo
       </span>
       </h4>
       
+    </li><li name="geotrellis.RasterExtent#withDimensions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withDimensions(targetCols:Int,targetRows:Int):geotrellis.RasterExtent"></a>
+      <a id="withDimensions(Int,Int):RasterExtent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withDimensions</span><span class="params">(<span name="targetCols">targetCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="targetRows">targetRows: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns a RasterExtent with the same extent and the
+given number of columns and rows.</p>
     </li><li name="geotrellis.RasterExtent#withResolution" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="withResolution(targetCellWidth:Double,targetCellHeight:Double):geotrellis.RasterExtent"></a>
       <a id="withResolution(Double,Double):RasterExtent"></a>

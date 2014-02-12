@@ -35,7 +35,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">DataStore</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="params">params: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="catalogPath">catalogPath: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">DataStore</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="hasCacheAll">hasCacheAll: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -82,7 +82,7 @@ postgis, a web service, etc).
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.process.DataStore#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(name:String,params:Map[String,String],catalogPath:String):geotrellis.process.DataStore"></a>
+      <a id="&lt;init&gt;(name:String,path:String,hasCacheAll:Boolean):geotrellis.process.DataStore"></a>
       <a id="&lt;init&gt;:DataStore"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -90,7 +90,7 @@ postgis, a web service, etc).
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">DataStore</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="params">params: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="catalogPath">catalogPath: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
+        <span class="name">DataStore</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="hasCacheAll">hasCacheAll: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span>
       </span>
       </h4>
       
@@ -191,19 +191,6 @@ postgis, a web service, etc).
       </span>
       <span class="symbol">
         <span class="name">cacheAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.collection.Iterable">Iterable</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.process.DataStore#catalogPath" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="catalogPath:String"></a>
-      <a id="catalogPath:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">catalogPath</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
       
@@ -316,7 +303,7 @@ postgis, a web service, etc).
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">hasCacheAll</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
@@ -388,16 +375,16 @@ postgis, a web service, etc).
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.process.DataStore#params" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="params:Map[String,String]"></a>
-      <a id="params:Map[String,String]"></a>
+    </li><li name="geotrellis.process.DataStore#path" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="path:String"></a>
+      <a id="path:String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">params</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">path</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
       

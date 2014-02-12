@@ -456,18 +456,18 @@ Only calls on cell coordinates within raster extent.
       <p class="shortcomment cmt">Create a raster from a geometry feature.</p><div class="fullcomment"><div class="comment cmt"><p>Create a raster from a geometry feature.</p></div><dl class="paramcmts block"><dt class="param">feature</dt><dd class="cmt"><p>Feature to rasterize</p></dd><dt class="param">rasterExtent</dt><dd class="cmt"><p>Definition of raster to create</p></dd><dt class="param">f</dt><dd class="cmt"><p>Function that takes col, row, feature and returns value to burn
 </p></dd></dl></div>
     </li><li name="geotrellis.feature.rasterize.Rasterizer#rasterizeWithValue" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="rasterizeWithValue[D](feature:geotrellis.feature.Geometry[D],rasterExtent:geotrellis.RasterExtent)(f:D=&gt;Int):geotrellis.Raster"></a>
-      <a id="rasterizeWithValue[D](Geometry[D],RasterExtent)((D)⇒Int):Raster"></a>
+      <a id="rasterizeWithValue[D](feature:geotrellis.feature.Geometry[D],rasterExtent:geotrellis.RasterExtent,value:Int):geotrellis.Raster"></a>
+      <a id="rasterizeWithValue[D](Geometry[D],RasterExtent,Int):Raster"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">rasterizeWithValue</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="feature">feature: <a href="../Geometry.html" class="extype" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.rasterizeWithValue.D">D</span>]</span>, <span name="rasterExtent">rasterExtent: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.rasterizeWithValue.D">D</span>) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>
+        <span class="name">rasterizeWithValue</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="feature">feature: <a href="../Geometry.html" class="extype" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.rasterizeWithValue.D">D</span>]</span>, <span name="rasterExtent">rasterExtent: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="value">value: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Create a raster from a geometry feature.</p><div class="fullcomment"><div class="comment cmt"><p>Create a raster from a geometry feature.</p></div><dl class="paramcmts block"><dt class="param">feature</dt><dd class="cmt"><p>Feature to rasterize</p></dd><dt class="param">rasterExtent</dt><dd class="cmt"><p>Definition of raster to create</p></dd><dt class="param">f</dt><dd class="cmt"><p>Function that returns single value to burn
+      <p class="shortcomment cmt">Create a raster from a geometry feature.</p><div class="fullcomment"><div class="comment cmt"><p>Create a raster from a geometry feature.</p></div><dl class="paramcmts block"><dt class="param">feature</dt><dd class="cmt"><p>Feature to rasterize</p></dd><dt class="param">rasterExtent</dt><dd class="cmt"><p>Definition of raster to create</p></dd><dt class="param">value</dt><dd class="cmt"><p>Single value to burn
 </p></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
@@ -557,7 +557,27 @@ Only calls on cell coordinates within raster extent.
 
         
 
-        
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="geotrellis.feature.rasterize.Rasterizer#rasterizeWithValue" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="rasterizeWithValue[D](feature:geotrellis.feature.Geometry[D],rasterExtent:geotrellis.RasterExtent)(f:D=&gt;Int):geotrellis.Raster"></a>
+      <a id="rasterizeWithValue[D](Geometry[D],RasterExtent)((D)⇒Int):Raster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 0.9.0) Use rasterizeWithValue(feature, rasterExtent, value)">rasterizeWithValue</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="feature">feature: <a href="../Geometry.html" class="extype" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.rasterizeWithValue.D">D</span>]</span>, <span name="rasterExtent">rasterExtent: <a href="../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="geotrellis.feature.rasterize.Rasterizer.rasterizeWithValue.D">D</span>) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a raster from a geometry feature.</p><div class="fullcomment"><div class="comment cmt"><p>Create a raster from a geometry feature.</p></div><dl class="paramcmts block"><dt class="param">feature</dt><dd class="cmt"><p>Feature to rasterize</p></dd><dt class="param">rasterExtent</dt><dd class="cmt"><p>Definition of raster to create</p></dd><dt class="param">f</dt><dd class="cmt"><p>Function that returns single value to burn
+</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 0.9.0)</i> Use rasterizeWithValue(feature, rasterExtent, value)</p></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">

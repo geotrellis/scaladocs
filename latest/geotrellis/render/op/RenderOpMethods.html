@@ -35,7 +35,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">RenderOpMethods</span><span class="tparams">[<span name="Repr">+Repr &lt;: <a href="../../package.html#RasterDS=geotrellis.source.RasterSource" class="extmbr" name="geotrellis.RasterDS">RasterDS</a></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">RenderOpMethods</span><span class="tparams">[<span name="Repr">+Repr &lt;: <a href="../../source/RasterSource.html" class="extype" name="geotrellis.source.RasterSource">RasterSource</a></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
@@ -361,70 +361,101 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="geotrellis.render.op.RenderOpMethods#renderPng" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="renderPng(ramp:geotrellis.render.ColorRamp,breaks:Array[Int]):geotrellis.source.ValueSource[Array[Byte]]"></a>
-      <a id="renderPng(ColorRamp,Array[Int]):ValueSource[Array[Byte]]"></a>
+      <a id="renderPng(colors:Array[Int],numColors:Int):geotrellis.source.ValueSource[geotrellis.Png]"></a>
+      <a id="renderPng(Array[Int],Int):ValueSource[Png]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">renderPng</span><span class="params">(<span name="ramp">ramp: <a href="../ColorRamp.html" class="extype" name="geotrellis.render.ColorRamp">ColorRamp</a></span>, <span name="breaks">breaks: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="../../source/ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>
+        <span class="name">renderPng</span><span class="params">(<span name="colors">colors: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="numColors">numColors: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../../source/ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<a href="../../package.html#Png=Array[Byte]" class="extmbr" name="geotrellis.Png">Png</a>]</span>
       </span>
       </h4>
       
     </li><li name="geotrellis.render.op.RenderOpMethods#renderPng" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="renderPng(colorBreaks:geotrellis.render.ColorBreaks,noDataColor:Int):geotrellis.source.ValueSource[Array[Byte]]"></a>
-      <a id="renderPng(ColorBreaks,Int):ValueSource[Array[Byte]]"></a>
+      <a id="renderPng(colors:Array[Int]):geotrellis.source.ValueSource[geotrellis.Png]"></a>
+      <a id="renderPng(Array[Int]):ValueSource[Png]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">renderPng</span><span class="params">(<span name="colorBreaks">colorBreaks: <a href="../ColorBreaks.html" class="extype" name="geotrellis.render.ColorBreaks">ColorBreaks</a></span>, <span name="noDataColor">noDataColor: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../../source/ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>
+        <span class="name">renderPng</span><span class="params">(<span name="colors">colors: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="../../source/ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<a href="../../package.html#Png=Array[Byte]" class="extmbr" name="geotrellis.Png">Png</a>]</span>
       </span>
       </h4>
       
     </li><li name="geotrellis.render.op.RenderOpMethods#renderPng" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="renderPng(colorBreaks:geotrellis.render.ColorBreaks):geotrellis.source.ValueSource[Array[Byte]]"></a>
-      <a id="renderPng(ColorBreaks):ValueSource[Array[Byte]]"></a>
+      <a id="renderPng(ramp:geotrellis.render.ColorRamp,breaks:Array[Int]):geotrellis.source.ValueSource[geotrellis.Png]"></a>
+      <a id="renderPng(ColorRamp,Array[Int]):ValueSource[Png]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">renderPng</span><span class="params">(<span name="colorBreaks">colorBreaks: <a href="../ColorBreaks.html" class="extype" name="geotrellis.render.ColorBreaks">ColorBreaks</a></span>)</span><span class="result">: <a href="../../source/ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>
+        <span class="name">renderPng</span><span class="params">(<span name="ramp">ramp: <a href="../ColorRamp.html" class="extype" name="geotrellis.render.ColorRamp">ColorRamp</a></span>, <span name="breaks">breaks: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="../../source/ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<a href="../../package.html#Png=Array[Byte]" class="extmbr" name="geotrellis.Png">Png</a>]</span>
       </span>
       </h4>
       
     </li><li name="geotrellis.render.op.RenderOpMethods#renderPng" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="renderPng(colorRamp:geotrellis.render.ColorRamp):geotrellis.source.ValueSource[Array[Byte]]"></a>
-      <a id="renderPng(ColorRamp):ValueSource[Array[Byte]]"></a>
+      <a id="renderPng(colorBreaks:geotrellis.render.ColorBreaks,noDataColor:Int):geotrellis.source.ValueSource[geotrellis.Png]"></a>
+      <a id="renderPng(ColorBreaks,Int):ValueSource[Png]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">renderPng</span><span class="params">(<span name="colorRamp">colorRamp: <a href="../ColorRamp.html" class="extype" name="geotrellis.render.ColorRamp">ColorRamp</a></span>)</span><span class="result">: <a href="../../source/ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>
+        <span class="name">renderPng</span><span class="params">(<span name="colorBreaks">colorBreaks: <a href="../ColorBreaks.html" class="extype" name="geotrellis.render.ColorBreaks">ColorBreaks</a></span>, <span name="noDataColor">noDataColor: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../../source/ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<a href="../../package.html#Png=Array[Byte]" class="extmbr" name="geotrellis.Png">Png</a>]</span>
       </span>
       </h4>
       
     </li><li name="geotrellis.render.op.RenderOpMethods#renderPng" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="renderPng():geotrellis.source.ValueSource[Array[Byte]]"></a>
-      <a id="renderPng():ValueSource[Array[Byte]]"></a>
+      <a id="renderPng(colorBreaks:geotrellis.render.ColorBreaks):geotrellis.source.ValueSource[geotrellis.Png]"></a>
+      <a id="renderPng(ColorBreaks):ValueSource[Png]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">renderPng</span><span class="params">()</span><span class="result">: <a href="../../source/ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>
+        <span class="name">renderPng</span><span class="params">(<span name="colorBreaks">colorBreaks: <a href="../ColorBreaks.html" class="extype" name="geotrellis.render.ColorBreaks">ColorBreaks</a></span>)</span><span class="result">: <a href="../../source/ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<a href="../../package.html#Png=Array[Byte]" class="extmbr" name="geotrellis.Png">Png</a>]</span>
       </span>
       </h4>
       
+    </li><li name="geotrellis.render.op.RenderOpMethods#renderPng" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="renderPng(colorRamp:geotrellis.render.ColorRamp):geotrellis.source.ValueSource[geotrellis.Png]"></a>
+      <a id="renderPng(ColorRamp):ValueSource[Png]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renderPng</span><span class="params">(<span name="colorRamp">colorRamp: <a href="../ColorRamp.html" class="extype" name="geotrellis.render.ColorRamp">ColorRamp</a></span>)</span><span class="result">: <a href="../../source/ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<a href="../../package.html#Png=Array[Byte]" class="extmbr" name="geotrellis.Png">Png</a>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="geotrellis.render.op.RenderOpMethods#renderPng" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="renderPng():geotrellis.source.ValueSource[geotrellis.Png]"></a>
+      <a id="renderPng():ValueSource[Png]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">renderPng</span><span class="params">()</span><span class="result">: <a href="../../source/ValueSource.html" class="extype" name="geotrellis.source.ValueSource">ValueSource</a>[<a href="../../package.html#Png=Array[Byte]" class="extmbr" name="geotrellis.Png">Png</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Generate a PNG from a raster of RGBA integer values.</p><div class="fullcomment"><div class="comment cmt"><p>Generate a PNG from a raster of RGBA integer values.</p><p>Use this operation when you have created a raster whose values are already
+RGBA color values that you wish to render into a PNG. If you have a raster
+with data that you wish to render, you should use RenderPng instead.</p><p>An RGBA value is a 32 bit integer with 8 bits used for each component:
+the first 8 bits are the red value (between 0 and 255), then green, blue,
+and alpha (with 0 being transparent and 255 being opaque).
+</p></div></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
