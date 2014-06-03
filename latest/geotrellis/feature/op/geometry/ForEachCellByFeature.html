@@ -35,18 +35,18 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">ForEachCellByFeature</span><span class="tparams">[<span name="G">G<span class="tparams">[<span name="_">_</span>]</span> &lt;: <a href="../../Geometry.html" class="extype" name="geotrellis.feature.Geometry">Geometry</a>[_]</span>, <span name="D">D</span>]</span><span class="params">(<span name="feature">feature: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.G">G</span>[<span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.D">D</span>]]</span>, <span name="re">re: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span><span class="params">(<span name="f">f: <a href="../../rasterize/Callback.html" class="extype" name="geotrellis.feature.rasterize.Callback">Callback</a>[<span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.G">G</span>, <span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.D">D</span>]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.G">G</span>[<span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.D">D</span>], <a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <span class="extype" name="scala.Unit">Unit</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">ForEachCellByFeature</span><span class="tparams">[<span name="G">G &lt;: <span class="extype" name="geotrellis.feature.Geometry">Geometry</span></span>]</span><span class="params">(<span name="geom">geom: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.G">G</span>]</span>, <span name="re">re: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span><span class="params">(<span name="f">f: <a href="../../rasterize/Callback.html" class="extype" name="geotrellis.feature.rasterize.Callback">Callback</a></span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.G">G</span>, <a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <span class="extype" name="scala.Unit">Unit</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Invoke a function on each cell under provided features.</p><p>This function is a closure that returns Unit; all results are a side effect of this function.
-</p></div><dl class="paramcmts block"><dt class="param">feature</dt><dd class="cmt"><p>Feature for calculation</p></dd><dt class="param">re</dt><dd class="cmt"><p>RasterExtent to use for iterating through cells</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function that takes (col:Int, row:Int, rasterValue:Int, feature:Feature)
+</p></div><dl class="paramcmts block"><dt class="param">geom</dt><dd class="cmt"><p>Feature for calculation</p></dd><dt class="param">re</dt><dd class="cmt"><p>RasterExtent to use for iterating through cells</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function that takes (col:Int, row:Int, rasterValue:Int, feature:Feature)
 </p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>The function f should modify a mutable variable as a side effect.
                          While not ideal, this avoids the unavoidable boxing that occurs when a
                          Function3 returns a primitive value.
 </p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.G">G</span>[<span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.D">D</span>], <a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <span class="extype" name="scala.Unit">Unit</span>], <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Unit">Unit</span>], <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">scala.Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.G">G</span>, <a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <span class="extype" name="scala.Unit">Unit</span>], <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Unit">Unit</span>], <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -85,18 +85,18 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.feature.op.geometry.ForEachCellByFeature#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(feature:geotrellis.Op[G[D]],re:geotrellis.Op[geotrellis.RasterExtent])(f:geotrellis.feature.rasterize.Callback[G,D]):geotrellis.feature.op.geometry.ForEachCellByFeature[G,D]"></a>
-      <a id="&lt;init&gt;:ForEachCellByFeature[G,D]"></a>
+      <a id="&lt;init&gt;(geom:geotrellis.Op[G],re:geotrellis.Op[geotrellis.RasterExtent])(f:geotrellis.feature.rasterize.Callback):geotrellis.feature.op.geometry.ForEachCellByFeature[G]"></a>
+      <a id="&lt;init&gt;:ForEachCellByFeature[G]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ForEachCellByFeature</span><span class="params">(<span name="feature">feature: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.G">G</span>[<span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.D">D</span>]]</span>, <span name="re">re: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span><span class="params">(<span name="f">f: <a href="../../rasterize/Callback.html" class="extype" name="geotrellis.feature.rasterize.Callback">Callback</a>[<span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.G">G</span>, <span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.D">D</span>]</span>)</span>
+        <span class="name">ForEachCellByFeature</span><span class="params">(<span name="geom">geom: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.G">G</span>]</span>, <span name="re">re: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span><span class="params">(<span name="f">f: <a href="../../rasterize/Callback.html" class="extype" name="geotrellis.feature.rasterize.Callback">Callback</a></span>)</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">feature</dt><dd class="cmt"><p>Feature for calculation</p></dd><dt class="param">re</dt><dd class="cmt"><p>RasterExtent to use for iterating through cells</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function that takes (col:Int, row:Int, rasterValue:Int, feature:Feature)
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">geom</dt><dd class="cmt"><p>Feature for calculation</p></dd><dt class="param">re</dt><dd class="cmt"><p>RasterExtent to use for iterating through cells</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function that takes (col:Int, row:Int, rasterValue:Int, feature:Feature)
 </p></dd></dl></div>
     </li></ol>
             </div>
@@ -298,19 +298,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.feature.op.geometry.ForEachCellByFeature#feature" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="feature:geotrellis.Op[G[D]]"></a>
-      <a id="feature:Op[G[D]]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">feature</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.G">G</span>[<span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.D">D</span>]]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Feature for calculation</p>
     </li><li name="geotrellis.Operation#filter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="filter(f:T=&gt;Boolean):geotrellis.Operation[T]"></a>
       <a id="filter((Unit)⇒Boolean):Operation[Unit]"></a>
@@ -388,6 +375,19 @@ and returns a new operation.
 but returns nothing.</p><div class="fullcomment"><div class="comment cmt"><p>Create an operation that applies the function f to the result of this operation,
 but returns nothing.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.feature.op.geometry.ForEachCellByFeature#geom" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="geom:geotrellis.Op[G]"></a>
+      <a id="geom:Op[G]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">geom</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.G">G</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Feature for calculation</p>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -723,7 +723,7 @@ and returns a new operation.</p><p>Same as flatMap.
 
         <div id="inheritedMembers">
         <div class="parent" name="geotrellis.Op2">
-              <h3>Inherited from <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.G">G</span>[<span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.D">D</span>], <a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <span class="extype" name="scala.Unit">Unit</span>]</h3>
+              <h3>Inherited from <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<span class="extype" name="geotrellis.feature.op.geometry.ForEachCellByFeature.G">G</span>, <a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <span class="extype" name="scala.Unit">Unit</span>]</h3>
             </div><div class="parent" name="geotrellis.Operation">
               <h3>Inherited from <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<span class="extype" name="scala.Unit">Unit</span>]</h3>
             </div><div class="parent" name="scala.Serializable">
@@ -733,7 +733,7 @@ and returns a new operation.</p><p>Same as flatMap.
             </div><div class="parent" name="scala.Product">
               <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
             </div><div class="parent" name="scala.Equals">
-              <h3>Inherited from <span class="extype" name="scala.Equals">scala.Equals</span></h3>
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
