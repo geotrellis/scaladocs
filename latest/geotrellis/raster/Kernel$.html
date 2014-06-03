@@ -260,6 +260,23 @@
                          the resulting raster.
 </p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Raster will be TypeInt
 </p></span></dd></dl></div>
+    </li><li name="geotrellis.raster.Kernel#gaussian" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="gaussian(rasterExtent:geotrellis.RasterExtent,size:Double,sigma:Double,amp:Double):geotrellis.raster.Kernel"></a>
+      <a id="gaussian(RasterExtent,Double,Double,Double):Kernel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">gaussian</span><span class="params">(<span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>, <span name="size">size: <span class="extype" name="scala.Double">Double</span></span>, <span name="sigma">sigma: <span class="extype" name="scala.Double">Double</span></span>, <span name="amp">amp: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="Kernel.html" class="extype" name="geotrellis.raster.Kernel">Kernel</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates a Gaussian kernel, with parameters in map units.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a Gaussian kernel, with parameters in map units.</p><p>Can be used with the <span class="extype" name="Convolve">Convolve</span> or <span class="extype" name="KernelDensity">KernelDensity</span> operations.
+</p></div><dl class="paramcmts block"><dt class="param">rasterExtent</dt><dd class="cmt"><p>RasterExtent of target raster</p></dd><dt class="param">size</dt><dd class="cmt"><p>Size of kernel in map units</p></dd><dt class="param">sigma</dt><dd class="cmt"><p>Sigma parameter for Gaussian in map units (spread)</p></dd><dt class="param">amp</dt><dd class="cmt"><p>Amplitude for Gaussian.  Will be the value at the center of the
+						resulting raster.
+</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>cellwidth is used to convert size and sigma
+</p></span>, <span class="cmt"><p>Raster will be TypeInt</p></span></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>

@@ -80,7 +80,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.feature.SpatialIndex#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(measure:geotrellis.feature.Measure)(f:T=&gt;(Double,Double)):geotrellis.feature.SpatialIndex[T]"></a>
+      <a id="&lt;init&gt;(measure:geotrellis.feature.Measure):geotrellis.feature.SpatialIndex[T]"></a>
       <a id="&lt;init&gt;:SpatialIndex[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -88,7 +88,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">SpatialIndex</span><span class="params">(<span name="measure">measure: <a href="Measure.html" class="extype" name="geotrellis.feature.Measure">Measure</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="geotrellis.feature.SpatialIndex.T">T</span>) ⇒ (<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>)</span>)</span>
+        <span class="name">SpatialIndex</span><span class="params">(<span name="measure">measure: <a href="Measure.html" class="extype" name="geotrellis.feature.Measure">Measure</a></span>)</span>
       </span>
       </h4>
       
@@ -270,15 +270,15 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="geotrellis.feature.SpatialIndex#insert" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="insert(v:T):Boolean"></a>
-      <a id="insert(T):Boolean"></a>
+      <a id="insert(v:T,x:Double,y:Double):Boolean"></a>
+      <a id="insert(T,Double,Double):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">insert</span><span class="params">(<span name="v">v: <span class="extype" name="geotrellis.feature.SpatialIndex.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">insert</span><span class="params">(<span name="v">v: <span class="extype" name="geotrellis.feature.SpatialIndex.T">T</span></span>, <span name="x">x: <span class="extype" name="scala.Double">Double</span></span>, <span name="y">y: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
       
@@ -305,19 +305,6 @@
       </span>
       <span class="symbol">
         <span class="name">measure</span><span class="result">: <a href="Measure.html" class="extype" name="geotrellis.feature.Measure">Measure</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.feature.SpatialIndex#mergeIn" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="mergeIn(other:geotrellis.feature.SpatialIndex[T]):geotrellis.feature.SpatialIndex[T]"></a>
-      <a id="mergeIn(SpatialIndex[T]):SpatialIndex[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">mergeIn</span><span class="params">(<span name="other">other: <a href="" class="extype" name="geotrellis.feature.SpatialIndex">SpatialIndex</a>[<span class="extype" name="geotrellis.feature.SpatialIndex.T">T</span>]</span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.feature.SpatialIndex">SpatialIndex</a>[<span class="extype" name="geotrellis.feature.SpatialIndex.T">T</span>]</span>
       </span>
       </h4>
       
@@ -357,19 +344,6 @@
       </span>
       <span class="symbol">
         <span class="name">nearest</span><span class="params">(<span name="x">x: <span class="extype" name="scala.Double">Double</span></span>, <span name="y">y: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.feature.SpatialIndex.T">T</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.feature.SpatialIndex#nearestInExtent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="nearestInExtent(extent:geotrellis.Extent,pt:(Double,Double)):Option[T]"></a>
-      <a id="nearestInExtent(Extent,(Double,Double)):Option[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">nearestInExtent</span><span class="params">(<span name="extent">extent: <a href="../Extent.html" class="extype" name="geotrellis.Extent">Extent</a></span>, <span name="pt">pt: (<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>)</span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="geotrellis.feature.SpatialIndex.T">T</span>]</span>
       </span>
       </h4>
       

@@ -35,13 +35,13 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Rasterize</span><span class="tparams">[<span name="D">D</span>]</span><span class="params">(<span name="feature">feature: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../Geometry.html" class="extype" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Rasterize.D">D</span>]]</span>, <span name="re">re: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span><span class="params">(<span name="f">f: <a href="../../rasterize/Transformer.html" class="extype" name="geotrellis.feature.rasterize.Transformer">Transformer</a>[<a href="../../Geometry.html" class="extype" name="geotrellis.feature.Geometry">Geometry</a>, <span class="extype" name="geotrellis.feature.op.geometry.Rasterize.D">D</span>, <span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../Geometry.html" class="extype" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Rasterize.D">D</span>], <a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">Rasterize</span><span class="tparams">[<span name="G">G &lt;: <span class="extype" name="geotrellis.feature.Geometry">Geometry</span></span>]</span><span class="params">(<span name="geom">geom: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.feature.op.geometry.Rasterize.G">G</span>]</span>, <span name="re">re: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span><span class="params">(<span name="f">f: <a href="../../rasterize/Transformer.html" class="extype" name="geotrellis.feature.rasterize.Transformer">Transformer</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<span class="extype" name="geotrellis.feature.op.geometry.Rasterize.G">G</span>, <a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../Geometry.html" class="extype" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Rasterize.D">D</span>], <a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>], <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>], <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">scala.Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<span class="extype" name="geotrellis.feature.op.geometry.Rasterize.G">G</span>, <a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>], <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>], <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -80,15 +80,15 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.feature.op.geometry.Rasterize#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(feature:geotrellis.Op[geotrellis.feature.Geometry[D]],re:geotrellis.Op[geotrellis.RasterExtent])(f:geotrellis.feature.rasterize.Transformer[geotrellis.feature.Geometry,D,Int]):geotrellis.feature.op.geometry.Rasterize[D]"></a>
-      <a id="&lt;init&gt;:Rasterize[D]"></a>
+      <a id="&lt;init&gt;(geom:geotrellis.Op[G],re:geotrellis.Op[geotrellis.RasterExtent])(f:geotrellis.feature.rasterize.Transformer[Int]):geotrellis.feature.op.geometry.Rasterize[G]"></a>
+      <a id="&lt;init&gt;:Rasterize[G]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Rasterize</span><span class="params">(<span name="feature">feature: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../Geometry.html" class="extype" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Rasterize.D">D</span>]]</span>, <span name="re">re: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span><span class="params">(<span name="f">f: <a href="../../rasterize/Transformer.html" class="extype" name="geotrellis.feature.rasterize.Transformer">Transformer</a>[<a href="../../Geometry.html" class="extype" name="geotrellis.feature.Geometry">Geometry</a>, <span class="extype" name="geotrellis.feature.op.geometry.Rasterize.D">D</span>, <span class="extype" name="scala.Int">Int</span>]</span>)</span>
+        <span class="name">Rasterize</span><span class="params">(<span name="geom">geom: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.feature.op.geometry.Rasterize.G">G</span>]</span>, <span name="re">re: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>]</span>)</span><span class="params">(<span name="f">f: <a href="../../rasterize/Transformer.html" class="extype" name="geotrellis.feature.rasterize.Transformer">Transformer</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span>
       </span>
       </h4>
       
@@ -292,19 +292,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.feature.op.geometry.Rasterize#feature" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="feature:geotrellis.Op[geotrellis.feature.Geometry[D]]"></a>
-      <a id="feature:Op[Geometry[D]]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">feature</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<a href="../../Geometry.html" class="extype" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Rasterize.D">D</span>]]</span>
-      </span>
-      </h4>
-      
     </li><li name="geotrellis.Operation#filter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="filter(f:T=&gt;Boolean):geotrellis.Operation[T]"></a>
       <a id="filter((Raster)⇒Boolean):Operation[Raster]"></a>
@@ -382,6 +369,19 @@ and returns a new operation.
 but returns nothing.</p><div class="fullcomment"><div class="comment cmt"><p>Create an operation that applies the function f to the result of this operation,
 but returns nothing.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a></dd></dl></div>
+    </li><li name="geotrellis.feature.op.geometry.Rasterize#geom" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="geom:geotrellis.Op[G]"></a>
+      <a id="geom:Op[G]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">geom</span><span class="result">: <a href="../../../package.html#Op[+A]=geotrellis.Operation[A]" class="extmbr" name="geotrellis.Op">Op</a>[<span class="extype" name="geotrellis.feature.op.geometry.Rasterize.G">G</span>]</span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -717,7 +717,7 @@ and returns a new operation.</p><p>Same as flatMap.
 
         <div id="inheritedMembers">
         <div class="parent" name="geotrellis.Op2">
-              <h3>Inherited from <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<a href="../../Geometry.html" class="extype" name="geotrellis.feature.Geometry">Geometry</a>[<span class="extype" name="geotrellis.feature.op.geometry.Rasterize.D">D</span>], <a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</h3>
+              <h3>Inherited from <a href="../../../Op2.html" class="extype" name="geotrellis.Op2">Op2</a>[<span class="extype" name="geotrellis.feature.op.geometry.Rasterize.G">G</span>, <a href="../../../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a>, <a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</h3>
             </div><div class="parent" name="geotrellis.Operation">
               <h3>Inherited from <a href="../../../Operation.html" class="extype" name="geotrellis.Operation">Operation</a>[<a href="../../../Raster.html" class="extype" name="geotrellis.Raster">Raster</a>]</h3>
             </div><div class="parent" name="scala.Serializable">
@@ -727,7 +727,7 @@ and returns a new operation.</p><p>Same as flatMap.
             </div><div class="parent" name="scala.Product">
               <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
             </div><div class="parent" name="scala.Equals">
-              <h3>Inherited from <span class="extype" name="scala.Equals">scala.Equals</span></h3>
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
