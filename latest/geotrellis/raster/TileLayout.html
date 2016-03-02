@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html >
 <html>
         <head>
           <title>TileLayout - geotrellis.raster.TileLayout</title>
@@ -9,6 +8,11 @@
           
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../index.html';
@@ -26,7 +30,15 @@
       <div id="definition">
         <a href="TileLayout$.html" title="Go to companion"><img src="../../lib/class_to_object_big.png" /></a>
         <p id="owner"><a href="../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="package.html" class="extype" name="geotrellis.raster">raster</a></p>
-        <h1><a href="TileLayout$.html" title="Go to companion">TileLayout</a></h1>
+        <h1><a href="TileLayout$.html" title="Go to companion">TileLayout</a></h1><h3><span class="morelinks"><div>
+            Related Docs:
+            <a href="TileLayout$.html" title="See companion">object TileLayout</a>
+            | <a href="package.html" class="extype" name="geotrellis.raster">package raster</a>
+          </div></span></h3><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,13 +47,12 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">TileLayout</span><span class="params">(<span name="tileCols">tileCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="tileRows">tileRows: <span class="extype" name="scala.Int">Int</span></span>, <span name="pixelCols">pixelCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="pixelRows">pixelRows: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">TileLayout</span><span class="params">(<span name="layoutCols">layoutCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="layoutRows">layoutRows: <span class="extype" name="scala.Int">Int</span></span>, <span name="tileCols">tileCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="tileRows">tileRows: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This class stores the layout of a tiled raster: the number of tiles (in
-cols/rows) and also the size of each tile (in cols/rows of pixels).
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">layoutCols</dt><dd class="cmt"><p>number of columns in the layout, East to West</p></dd><dt class="param">layoutRows</dt><dd class="cmt"><p>number of rows in the layout grid, North to South</p></dd><dt class="param">tileCols</dt><dd class="cmt"><p>number of pixel columns in each tile, East to West</p></dd><dt class="param">tileRows</dt><dd class="cmt"><p>number of pixel rows in each tile, North to South
+</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -81,8 +92,8 @@ cols/rows) and also the size of each tile (in cols/rows of pixels).
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="geotrellis.raster.TileLayout#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(tileCols:Int,tileRows:Int,pixelCols:Int,pixelRows:Int):geotrellis.raster.TileLayout"></a>
+              <ol><li name="geotrellis.raster.TileLayout#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(layoutCols:Int,layoutRows:Int,tileCols:Int,tileRows:Int):geotrellis.raster.TileLayout"></a>
       <a id="&lt;init&gt;:TileLayout"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -90,10 +101,15 @@ cols/rows) and also the size of each tile (in cols/rows of pixels).
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">TileLayout</span><span class="params">(<span name="tileCols">tileCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="tileRows">tileRows: <span class="extype" name="scala.Int">Int</span></span>, <span name="pixelCols">pixelCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="pixelRows">pixelRows: <span class="extype" name="scala.Int">Int</span></span>)</span>
+        <span class="name">TileLayout</span><span class="params">(<span name="layoutCols">layoutCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="layoutRows">layoutRows: <span class="extype" name="scala.Int">Int</span></span>, <span name="tileCols">tileCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="tileRows">tileRows: <span class="extype" name="scala.Int">Int</span></span>)</span>
       </span>
-      </h4>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@&lt;init&gt;(layoutCols:Int,layoutRows:Int,tileCols:Int,tileRows:Int):geotrellis.raster.TileLayout" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">layoutCols</dt><dd class="cmt"><p>number of columns in the layout, East to West</p></dd><dt class="param">layoutRows</dt><dd class="cmt"><p>number of rows in the layout grid, North to South</p></dd><dt class="param">tileCols</dt><dd class="cmt"><p>number of pixel columns in each tile, East to West</p></dd><dt class="param">tileRows</dt><dd class="cmt"><p>number of pixel rows in each tile, North to South
+</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -104,19 +120,6 @@ cols/rows) and also the size of each tile (in cols/rows of pixels).
         <div id="values" class="values members">
               <h3>Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="!=(x$1:AnyRef):Boolean"></a>
-      <a id="!=(AnyRef):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a>
       <a id="!=(Any):Boolean"></a>
       <h4 class="signature">
@@ -127,8 +130,12 @@ cols/rows) and also the size of each tile (in cols/rows of pixels).
       <span class="symbol">
         <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <a id="##():Int"></a>
@@ -140,22 +147,13 @@ cols/rows) and also the size of each tile (in cols/rows of pixels).
       <span class="symbol">
         <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@##():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="==(x$1:AnyRef):Boolean"></a>
-      <a id="==(AnyRef):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a>
       <a id="==(Any):Boolean"></a>
       <h4 class="signature">
@@ -166,8 +164,12 @@ cols/rows) and also the size of each tile (in cols/rows of pixels).
       <span class="symbol">
         <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -179,8 +181,29 @@ cols/rows) and also the size of each tile (in cols/rows of pixels).
       <span class="symbol">
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.raster.TileLayout#cellSize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="cellSize(extent:geotrellis.vector.Extent):geotrellis.raster.CellSize"></a>
+      <a id="cellSize(Extent):CellSize"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cellSize</span><span class="params">(<span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span><span class="result">: <a href="CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@cellSize(extent:geotrellis.vector.Extent):geotrellis.raster.CellSize" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -192,7 +215,11 @@ cols/rows) and also the size of each tile (in cols/rows of pixels).
       <span class="symbol">
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@clone():Object" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -200,6 +227,23 @@ cols/rows) and also the size of each tile (in cols/rows of pixels).
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="geotrellis.raster.TileLayout#combine" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="combine(other:geotrellis.raster.TileLayout):geotrellis.raster.TileLayout"></a>
+      <a id="combine(TileLayout):TileLayout"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">combine</span><span class="params">(<span name="other">other: <a href="" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@combine(other:geotrellis.raster.TileLayout):geotrellis.raster.TileLayout" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -211,7 +255,11 @@ cols/rows) and also the size of each tile (in cols/rows of pixels).
       <span class="symbol">
         <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
@@ -224,7 +272,11 @@ cols/rows) and also the size of each tile (in cols/rows of pixels).
       <span class="symbol">
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -243,50 +295,12 @@ cols/rows) and also the size of each tile (in cols/rows of pixels).
       <span class="symbol">
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.raster.TileLayout#getResolutionLayout" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getResolutionLayout(re:geotrellis.RasterExtent):geotrellis.raster.ResolutionLayout"></a>
-      <a id="getResolutionLayout(RasterExtent):ResolutionLayout"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getResolutionLayout</span><span class="params">(<span name="re">re: <a href="../RasterExtent.html" class="extype" name="geotrellis.RasterExtent">RasterExtent</a></span>)</span><span class="result">: <a href="ResolutionLayout.html" class="extype" name="geotrellis.raster.ResolutionLayout">ResolutionLayout</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Given a particular RasterExtent (geographic area plus resolution) for the
-entire tiled raster, construct an ResolutionLayout which will manage the
-appropriate geographic boundaries, and resolution information, for each
-tile.</p>
-    </li><li name="geotrellis.raster.TileLayout#getTileIndex" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getTileIndex(col:Int,row:Int):Int"></a>
-      <a id="getTileIndex(Int,Int):Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getTileIndex</span><span class="params">(<span name="col">col: <span class="extype" name="scala.Int">Int</span></span>, <span name="row">row: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Gets the index of a tile at col, row.</p>
-    </li><li name="geotrellis.raster.TileLayout#getXY" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getXY(tileIndex:Int):(Int,Int)"></a>
-      <a id="getXY(Int):(Int,Int)"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getXY</span><span class="params">(<span name="tileIndex">tileIndex: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>
-      </span>
-      </h4>
-      
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -298,7 +312,11 @@ tile.</p>
       <span class="symbol">
         <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="geotrellis.raster.TileLayout#isTiled" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="isTiled:Boolean"></a>
@@ -311,8 +329,63 @@ tile.</p>
       <span class="symbol">
         <span class="name">isTiled</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@isTiled:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       
+    </li><li name="geotrellis.raster.TileLayout#layoutCols" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="layoutCols:Int"></a>
+      <a id="layoutCols:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">layoutCols</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@layoutCols:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">number of columns in the layout, East to West</p>
+    </li><li name="geotrellis.raster.TileLayout#layoutDimensions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="layoutDimensions:(Int,Int)"></a>
+      <a id="layoutDimensions:(Int,Int)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">layoutDimensions</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@layoutDimensions:(Int,Int)" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.TileLayout#layoutRows" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="layoutRows:Int"></a>
+      <a id="layoutRows:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">layoutRows</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@layoutRows:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">number of rows in the layout grid, North to South</p>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -324,7 +397,11 @@ tile.</p>
       <span class="symbol">
         <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
@@ -337,7 +414,11 @@ tile.</p>
       <span class="symbol">
         <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@notify():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
@@ -350,34 +431,12 @@ tile.</p>
       <span class="symbol">
         <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.raster.TileLayout#pixelCols" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="pixelCols:Int"></a>
-      <a id="pixelCols:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">pixelCols</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="geotrellis.raster.TileLayout#pixelRows" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="pixelRows:Int"></a>
-      <a id="pixelRows:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">pixelRows</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -389,7 +448,11 @@ tile.</p>
       <span class="symbol">
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="geotrellis.raster.TileLayout#tileCols" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="tileCols:Int"></a>
@@ -402,7 +465,28 @@ tile.</p>
       <span class="symbol">
         <span class="name">tileCols</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@tileCols:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">number of pixel columns in each tile, East to West</p>
+    </li><li name="geotrellis.raster.TileLayout#tileDimensions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="tileDimensions:(Int,Int)"></a>
+      <a id="tileDimensions:(Int,Int)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tileDimensions</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@tileDimensions:(Int,Int)" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="geotrellis.raster.TileLayout#tileRows" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="tileRows:Int"></a>
@@ -415,33 +499,63 @@ tile.</p>
       <span class="symbol">
         <span class="name">tileRows</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@tileRows:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">number of pixel rows in each tile, North to South
+</p>
+    </li><li name="geotrellis.raster.TileLayout#tileSize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="tileSize:Int"></a>
+      <a id="tileSize:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tileSize</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@tileSize:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="geotrellis.raster.TileLayout#totalCols" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="totalCols:Int"></a>
-      <a id="totalCols:Int"></a>
+      <a id="totalCols:Long"></a>
+      <a id="totalCols:Long"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">totalCols</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">totalCols</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@totalCols:Long" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <p class="shortcomment cmt">Return the total number of columns across all the tiles.</p>
     </li><li name="geotrellis.raster.TileLayout#totalRows" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="totalRows:Int"></a>
-      <a id="totalRows:Int"></a>
+      <a id="totalRows:Long"></a>
+      <a id="totalRows:Long"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">totalRows</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">totalRows</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@totalRows:Long" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <p class="shortcomment cmt">Return the total number of rows across all the tiles.</p>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
@@ -454,7 +568,11 @@ tile.</p>
       <span class="symbol">
         <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@wait():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -473,7 +591,11 @@ tile.</p>
       <span class="symbol">
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -492,7 +614,11 @@ tile.</p>
       <span class="symbol">
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.TileLayout@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -537,6 +663,7 @@ tile.</p>
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script>
+
+
     </body>
       </html>

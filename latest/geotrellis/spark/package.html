@@ -1,0 +1,1844 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>spark - geotrellis.spark</title>
+          <meta name="description" content="spark - geotrellis.spark" />
+          <meta name="keywords" content="spark geotrellis.spark" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'geotrellis.spark.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="geotrellis">geotrellis</a></p>
+        <h1>spark</h1><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">spark</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="partitioner/Implicits.html" class="extype" name="geotrellis.spark.partitioner.Implicits">Implicits</a>, <a href="mapalgebra/focal/hillshade/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.focal.hillshade.Implicits">Implicits</a>, <a href="summary/Implicits.html" class="extype" name="geotrellis.spark.summary.Implicits">Implicits</a>, <a href="summary/polygonal/Implicits.html" class="extype" name="geotrellis.spark.summary.polygonal.Implicits">Implicits</a>, <a href="mapalgebra/zonal/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.zonal.Implicits">Implicits</a>, <a href="mapalgebra/focal/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.focal.Implicits">Implicits</a>, <a href="mapalgebra/local/temporal/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.local.temporal.Implicits">Implicits</a>, <a href="mapalgebra/local/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.local.Implicits">Implicits</a>, <a href="mapalgebra/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.Implicits">Implicits</a>, <a href="stitch/Implicits.html" class="extype" name="geotrellis.spark.stitch.Implicits">Implicits</a>, <a href="tiling/Implicits.html" class="extype" name="geotrellis.spark.tiling.Implicits">Implicits</a>, <a href="reproject/Implicits.html" class="extype" name="geotrellis.spark.reproject.Implicits">Implicits</a>, <a href="merge/Implicits.html" class="extype" name="geotrellis.spark.merge.Implicits">Implicits</a>, <a href="mask/Implicits.html" class="extype" name="geotrellis.spark.mask.Implicits">Implicits</a>, <a href="buffer/Implicits.html" class="extype" name="geotrellis.spark.buffer.Implicits">Implicits</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="geotrellis.spark"><span>spark</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="geotrellis.spark.partitioner.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.spark.mapalgebra.focal.hillshade.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.spark.summary.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.spark.summary.polygonal.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.spark.mapalgebra.zonal.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.spark.mapalgebra.focal.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.spark.mapalgebra.local.temporal.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.spark.mapalgebra.local.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.spark.mapalgebra.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.spark.stitch.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.spark.tiling.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.spark.reproject.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.spark.merge.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.spark.mask.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.spark.buffer.Implicits"><span>Implicits</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="geotrellis.spark.Boundable" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Boundable[K]extendsSerializable"></a>
+      <a id="Boundable[K]:Boundable[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Boundable.html"><span class="name">Boundable</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@Boundable[K]extendsSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This type class marks K as point that can be bounded in space.</p><div class="fullcomment"><div class="comment cmt"><p>This type class marks K as point that can be bounded in space.
+It is used to construct bounding hypercube for a set of Ks.</p><p>The bounds must be calculated by taking min/max of each component dimension of K.
+Consequently the result may be neither a nor b, but a new value.
+</p></div></div>
+    </li><li name="geotrellis.spark.Bounds" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Bounds[+A]extendsProductwithSerializable"></a>
+      <a id="Bounds[+A]:Bounds[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Bounds.html"><span class="name">Bounds</span></a><span class="tparams">[<span name="A">+A</span>]</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@Bounds[+A]extendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.ComponentLens" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ComponentLens[K,C]=monocle.PLens[K,K,C,C]"></a>
+      <a id="ComponentLens[K,C]:ComponentLens[K,C]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ComponentLens</span><span class="tparams">[<span name="K">K</span>, <span name="C">C</span>]</span><span class="result"> = <span class="extype" name="monocle.PLens">PLens</span>[<span class="extype" name="geotrellis.spark.ComponentLens.K">K</span>, <span class="extype" name="geotrellis.spark.ComponentLens.K">K</span>, <span class="extype" name="geotrellis.spark.ComponentLens.C">C</span>, <span class="extype" name="geotrellis.spark.ComponentLens.C">C</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@ComponentLens[K,C]=monocle.PLens[K,K,C,C]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.ContextRDD" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ContextRDD[K,V,M]extendsRDD[(K,V)]withMetadata[M]"></a>
+      <a id="ContextRDD[K,V,M]:ContextRDD[K,V,M]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ContextRDD.html"><span class="name">ContextRDD</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="M">M</span>]</span><span class="result"> extends <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.ContextRDD.K">K</span>, <span class="extype" name="geotrellis.spark.ContextRDD.V">V</span>)] with <a href="Metadata.html" class="extype" name="geotrellis.spark.Metadata">Metadata</a>[<span class="extype" name="geotrellis.spark.ContextRDD.M">M</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@ContextRDD[K,V,M]extendsRDD[(K,V)]withMetadata[M]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.ContextRDDMethods" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ContextRDDMethods[K,V,M]extendsSerializable"></a>
+      <a id="ContextRDDMethods[K,V,M]:ContextRDDMethods[K,V,M]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ContextRDDMethods.html"><span class="name">ContextRDDMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="M">M</span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@ContextRDDMethods[K,V,M]extendsSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.IdentityComponent" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="IdentityComponent[K]extendsKeyComponent[K,K]"></a>
+      <a id="IdentityComponent[K]:IdentityComponent[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="IdentityComponent.html"><span class="name">IdentityComponent</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="KeyComponent.html" class="extype" name="geotrellis.spark.KeyComponent">KeyComponent</a>[<span class="extype" name="geotrellis.spark.IdentityComponent.K">K</span>, <span class="extype" name="geotrellis.spark.IdentityComponent.K">K</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@IdentityComponent[K]extendsKeyComponent[K,K]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.KeyBounds" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="KeyBounds[+K]extendsBounds[K]withProductwithSerializable"></a>
+      <a id="KeyBounds[+K]:KeyBounds[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="KeyBounds.html"><span class="name">KeyBounds</span></a><span class="tparams">[<span name="K">+K</span>]</span><span class="params">(<span name="minKey">minKey: <span class="extype" name="geotrellis.spark.KeyBounds.K">K</span></span>, <span name="maxKey">maxKey: <span class="extype" name="geotrellis.spark.KeyBounds.K">K</span></span>)</span><span class="result"> extends <a href="Bounds.html" class="extype" name="geotrellis.spark.Bounds">Bounds</a>[<span class="extype" name="geotrellis.spark.KeyBounds.K">K</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@KeyBounds[+K]extendsBounds[K]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.KeyComponent" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="KeyComponent[K,C]extendsSerializable"></a>
+      <a id="KeyComponent[K,C]:KeyComponent[K,C]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="KeyComponent.html"><span class="name">KeyComponent</span></a><span class="tparams">[<span name="K">K</span>, <span name="C">C</span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@KeyComponent[K,C]extendsSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.LayerId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LayerIdextendsProductwithSerializable"></a>
+      <a id="LayerId:LayerId"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="LayerId.html"><span class="name">LayerId</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="zoom">zoom: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@LayerIdextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Identifies a Layer by it's name and zoom level</p>
+    </li><li name="geotrellis.spark.Metadata" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Metadata[M]extendsAnyRef"></a>
+      <a id="Metadata[M]:Metadata[M]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Metadata.html"><span class="name">Metadata</span></a><span class="tparams">[<span name="M">M</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@Metadata[M]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.MultiBandRasterRDD" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MultiBandRasterRDD[K]=org.apache.spark.rdd.RDD[(K,geotrellis.raster.MultiBandTile)]withgeotrellis.spark.Metadata[geotrellis.spark.RasterMetaData]"></a>
+      <a id="MultiBandRasterRDD[K]:MultiBandRasterRDD[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MultiBandRasterRDD</span><span class="tparams">[<span name="K">K</span>]</span><span class="result"> = <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.MultiBandRasterRDD.K">K</span>, <a href="../raster/MultiBandTile.html" class="extype" name="geotrellis.raster.MultiBandTile">MultiBandTile</a>)] with <a href="Metadata.html" class="extype" name="geotrellis.spark.Metadata">Metadata</a>[<a href="RasterMetaData.html" class="extype" name="geotrellis.spark.RasterMetaData">RasterMetaData</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@MultiBandRasterRDD[K]=org.apache.spark.rdd.RDD[(K,geotrellis.raster.MultiBandTile)]withgeotrellis.spark.Metadata[geotrellis.spark.RasterMetaData]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.MultiBandRasterRDDMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MultiBandRasterRDDMethods[K]extendsMethodExtensions[geotrellis.spark.MultiBandRasterRDD[K]]"></a>
+      <a id="MultiBandRasterRDDMethods[K]:MultiBandRasterRDDMethods[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MultiBandRasterRDDMethods.html"><span class="name">MultiBandRasterRDDMethods</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<a href="#MultiBandRasterRDD[K]=org.apache.spark.rdd.RDD[(K,geotrellis.raster.MultiBandTile)]withgeotrellis.spark.Metadata[geotrellis.spark.RasterMetaData]" class="extmbr" name="geotrellis.spark.MultiBandRasterRDD">MultiBandRasterRDD</a>[<span class="extype" name="geotrellis.spark.MultiBandRasterRDDMethods.K">K</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@MultiBandRasterRDDMethods[K]extendsMethodExtensions[geotrellis.spark.MultiBandRasterRDD[K]]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.RasterMetaData" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RasterMetaDataextendsProductwithSerializable"></a>
+      <a id="RasterMetaData:RasterMetaData"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="RasterMetaData.html"><span class="name">RasterMetaData</span></a><span class="params">(<span name="cellType">cellType: <a href="../raster/package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>, <span name="layout">layout: <a href="tiling/LayoutDefinition.html" class="extype" name="geotrellis.spark.tiling.LayoutDefinition">LayoutDefinition</a></span>, <span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="crs">crs: <a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@RasterMetaDataextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">cellType</dt><dd class="cmt"><p>value type of each cell</p></dd><dt class="param">layout</dt><dd class="cmt"><p>definition of the tiled raster layout</p></dd><dt class="param">extent</dt><dd class="cmt"><p>Extent covering the source data</p></dd><dt class="param">crs</dt><dd class="cmt"><p>CRS of the raster projection
+</p></dd></dl></div>
+    </li><li name="geotrellis.spark.RasterRDD" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RasterRDD[K]=org.apache.spark.rdd.RDD[(K,geotrellis.raster.Tile)]withgeotrellis.spark.Metadata[geotrellis.spark.RasterMetaData]"></a>
+      <a id="RasterRDD[K]:RasterRDD[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RasterRDD</span><span class="tparams">[<span name="K">K</span>]</span><span class="result"> = <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.RasterRDD.K">K</span>, <a href="../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>)] with <a href="Metadata.html" class="extype" name="geotrellis.spark.Metadata">Metadata</a>[<a href="RasterMetaData.html" class="extype" name="geotrellis.spark.RasterMetaData">RasterMetaData</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@RasterRDD[K]=org.apache.spark.rdd.RDD[(K,geotrellis.raster.Tile)]withgeotrellis.spark.Metadata[geotrellis.spark.RasterMetaData]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.RasterRDDMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RasterRDDMethods[K]extendsMethodExtensions[geotrellis.spark.RasterRDD[K]]"></a>
+      <a id="RasterRDDMethods[K]:RasterRDDMethods[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RasterRDDMethods.html"><span class="name">RasterRDDMethods</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<a href="#RasterRDD[K]=org.apache.spark.rdd.RDD[(K,geotrellis.raster.Tile)]withgeotrellis.spark.Metadata[geotrellis.spark.RasterMetaData]" class="extmbr" name="geotrellis.spark.RasterRDD">RasterRDD</a>[<span class="extype" name="geotrellis.spark.RasterRDDMethods.K">K</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@RasterRDDMethods[K]extendsMethodExtensions[geotrellis.spark.RasterRDD[K]]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.RasterRDDSeqMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RasterRDDSeqMethods[K]extendsMethodExtensions[Traversable[org.apache.spark.rdd.RDD[(K,geotrellis.raster.Tile)]]]"></a>
+      <a id="RasterRDDSeqMethods[K]:RasterRDDSeqMethods[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="RasterRDDSeqMethods.html"><span class="name">RasterRDDSeqMethods</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="scala.Traversable">Traversable</span>[<span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.RasterRDDSeqMethods.K">K</span>, <a href="../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>)]]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@RasterRDDSeqMethods[K]extendsMethodExtensions[Traversable[org.apache.spark.rdd.RDD[(K,geotrellis.raster.Tile)]]]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.SpaceTimeKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SpaceTimeKeyextendsProductwithSerializable"></a>
+      <a id="SpaceTimeKey:SpaceTimeKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="SpaceTimeKey.html"><span class="name">SpaceTimeKey</span></a><span class="params">(<span name="col">col: <span class="extype" name="scala.Int">Int</span></span>, <span name="row">row: <span class="extype" name="scala.Int">Int</span></span>, <span name="instant">instant: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@SpaceTimeKeyextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.SpatialComponent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SpatialComponent[K]=geotrellis.spark.KeyComponent[K,geotrellis.spark.SpatialKey]"></a>
+      <a id="SpatialComponent[K]:SpatialComponent[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SpatialComponent</span><span class="tparams">[<span name="K">K</span>]</span><span class="result"> = <a href="KeyComponent.html" class="extype" name="geotrellis.spark.KeyComponent">KeyComponent</a>[<span class="extype" name="geotrellis.spark.SpatialComponent.K">K</span>, <a href="SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@SpatialComponent[K]=geotrellis.spark.KeyComponent[K,geotrellis.spark.SpatialKey]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.SpatialComponentWrapper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SpatialComponentWrapper[K]extendsAnyRef"></a>
+      <a id="SpatialComponentWrapper[K]:SpatialComponentWrapper[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$SpatialComponentWrapper.html"><span class="name">SpatialComponentWrapper</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@SpatialComponentWrapper[K]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.SpatialKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SpatialKeyextendsProduct2[Int,Int]withProductwithSerializable"></a>
+      <a id="SpatialKey:SpatialKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="SpatialKey.html"><span class="name">SpatialKey</span></a><span class="params">(<span name="col">col: <span class="extype" name="scala.Int">Int</span></span>, <span name="row">row: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product2">Product2</span>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@SpatialKeyextendsProduct2[Int,Int]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A SpatialKey designates the spatial positioning of a layer's tile.</p>
+    </li><li name="geotrellis.spark.TemporalCompenentWrapper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TemporalCompenentWrapper[K]extendsAnyRef"></a>
+      <a id="TemporalCompenentWrapper[K]:TemporalCompenentWrapper[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$TemporalCompenentWrapper.html"><span class="name">TemporalCompenentWrapper</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@TemporalCompenentWrapper[K]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.TemporalComponent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TemporalComponent[K]=geotrellis.spark.KeyComponent[K,geotrellis.spark.TemporalKey]"></a>
+      <a id="TemporalComponent[K]:TemporalComponent[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TemporalComponent</span><span class="tparams">[<span name="K">K</span>]</span><span class="result"> = <a href="KeyComponent.html" class="extype" name="geotrellis.spark.KeyComponent">KeyComponent</a>[<span class="extype" name="geotrellis.spark.TemporalComponent.K">K</span>, <a href="TemporalKey.html" class="extype" name="geotrellis.spark.TemporalKey">TemporalKey</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@TemporalComponent[K]=geotrellis.spark.KeyComponent[K,geotrellis.spark.TemporalKey]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.TemporalKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TemporalKeyextendsProductwithSerializable"></a>
+      <a id="TemporalKey:TemporalKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="TemporalKey.html"><span class="name">TemporalKey</span></a><span class="params">(<span name="instant">instant: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@TemporalKeyextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A TemporalKey designates the temporal positioning of a layer's tile.</p>
+    </li><li name="geotrellis.spark.TemporalProjectedExtent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TemporalProjectedExtentextendsProductwithSerializable"></a>
+      <a id="TemporalProjectedExtent:TemporalProjectedExtent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="TemporalProjectedExtent.html"><span class="name">TemporalProjectedExtent</span></a><span class="params">(<span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="crs">crs: <a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="time">time: <span class="extype" name="com.github.nscala_time.time.TypeImports.DateTime">com.github.nscala_time.time.Imports.DateTime</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@TemporalProjectedExtentextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A key for a Tile with temporal as well as spatial dimension</p>
+    </li><li name="geotrellis.spark.mapalgebra.local.temporal.Implicits.TemporalWindow" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TemporalWindow[K]extendsAnyRef"></a>
+      <a id="TemporalWindow[K]:TemporalWindow[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="mapalgebra/local/temporal/Implicits$TemporalWindow.html"><span class="name">TemporalWindow</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#geotrellis.spark.mapalgebra.local.temporal.Implicits@TemporalWindow[K]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="mapalgebra/local/temporal/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.local.temporal.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.TileBounds" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TileBounds=geotrellis.raster.GridBounds"></a>
+      <a id="TileBounds:TileBounds"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TileBounds</span><span class="result"> = <a href="../raster/GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@TileBounds=geotrellis.raster.GridBounds" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.TileTuple" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TileTuple[K]extendsAnyRef"></a>
+      <a id="TileTuple[K]:TileTuple[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$TileTuple.html"><span class="name">TileTuple</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@TileTuple[K]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Keeps with the convention while still using simple tups, nice</p>
+    </li><li name="geotrellis.spark.WithContextWrapper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WithContextWrapper[K,V,M]extendsAnyRef"></a>
+      <a id="WithContextWrapper[K,V,M]:WithContextWrapper[K,V,M]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$WithContextWrapper.html"><span class="name">WithContextWrapper</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="M">M</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@WithContextWrapper[K,V,M]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.buffer.Implicits.withBufferTilesMethodsWrapper" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withBufferTilesMethodsWrapper[K,V&lt;:geotrellis.raster.CellGrid]extendsBufferTilesMethods[K,V]"></a>
+      <a id="withBufferTilesMethodsWrapper[K,V&lt;:CellGrid]:withBufferTilesMethodsWrapper[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="buffer/Implicits$withBufferTilesMethodsWrapper.html"><span class="name">withBufferTilesMethodsWrapper</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V &lt;: <a href="../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></span>]</span><span class="result"> extends <a href="buffer/BufferTilesMethods.html" class="extype" name="geotrellis.spark.buffer.BufferTilesMethods">BufferTilesMethods</a>[<span class="extype" name="geotrellis.spark.buffer.Implicits.withBufferTilesMethodsWrapper.K">K</span>, <span class="extype" name="geotrellis.spark.buffer.Implicits.withBufferTilesMethodsWrapper.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.buffer.Implicits@withBufferTilesMethodsWrapper[K,V&lt;:geotrellis.raster.CellGrid]extendsBufferTilesMethods[K,V]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="buffer/Implicits.html" class="extype" name="geotrellis.spark.buffer.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.mapalgebra.Implicits.withCombineMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withCombineMethods[K,V]extendsCombineMethods[K,V]"></a>
+      <a id="withCombineMethods[K,V]:withCombineMethods[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="mapalgebra/Implicits$withCombineMethods.html"><span class="name">withCombineMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="mapalgebra/CombineMethods.html" class="extype" name="geotrellis.spark.mapalgebra.CombineMethods">CombineMethods</a>[<span class="extype" name="geotrellis.spark.mapalgebra.Implicits.withCombineMethods.K">K</span>, <span class="extype" name="geotrellis.spark.mapalgebra.Implicits.withCombineMethods.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.mapalgebra.Implicits@withCombineMethods[K,V]extendsCombineMethods[K,V]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="mapalgebra/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.mapalgebra.Implicits.withCombineTraversableMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withCombineTraversableMethods[K,V]extendsAnyRef"></a>
+      <a id="withCombineTraversableMethods[K,V]:withCombineTraversableMethods[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="mapalgebra/Implicits$withCombineTraversableMethods.html"><span class="name">withCombineTraversableMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.mapalgebra.Implicits@withCombineTraversableMethods[K,V]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="mapalgebra/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.withContextRDDMethods" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withContextRDDMethods[K,V,M]extendsContextRDDMethods[K,V,M]"></a>
+      <a id="withContextRDDMethods[K,V,M]:withContextRDDMethods[K,V,M]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$withContextRDDMethods.html"><span class="name">withContextRDDMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="M">M</span>]</span><span class="result"> extends <a href="ContextRDDMethods.html" class="extype" name="geotrellis.spark.ContextRDDMethods">ContextRDDMethods</a>[<span class="extype" name="geotrellis.spark.withContextRDDMethods.K">K</span>, <span class="extype" name="geotrellis.spark.withContextRDDMethods.V">V</span>, <span class="extype" name="geotrellis.spark.withContextRDDMethods.M">M</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@withContextRDDMethods[K,V,M]extendsContextRDDMethods[K,V,M]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.mapalgebra.focal.hillshade.Implicits.withElevationRasterRDDMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withElevationRasterRDDMethods[K]extendsFocalOperation[K]withHillshadeRasterRDDMethods[K]withSerializable"></a>
+      <a id="withElevationRasterRDDMethods[K]:withElevationRasterRDDMethods[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="mapalgebra/focal/hillshade/Implicits$withElevationRasterRDDMethods.html"><span class="name">withElevationRasterRDDMethods</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="mapalgebra/focal/FocalOperation.html" class="extype" name="geotrellis.spark.mapalgebra.focal.FocalOperation">FocalOperation</a>[<span class="extype" name="geotrellis.spark.mapalgebra.focal.hillshade.Implicits.withElevationRasterRDDMethods.K">K</span>] with <a href="mapalgebra/focal/hillshade/HillshadeRasterRDDMethods.html" class="extype" name="geotrellis.spark.mapalgebra.focal.hillshade.HillshadeRasterRDDMethods">HillshadeRasterRDDMethods</a>[<span class="extype" name="geotrellis.spark.mapalgebra.focal.hillshade.Implicits.withElevationRasterRDDMethods.K">K</span>] with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#geotrellis.spark.mapalgebra.focal.hillshade.Implicits@withElevationRasterRDDMethods[K]extendsFocalOperation[K]withHillshadeRasterRDDMethods[K]withSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="mapalgebra/focal/hillshade/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.focal.hillshade.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.mapalgebra.focal.Implicits.withFocalRasterRDDMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withFocalRasterRDDMethods[K]extendsFocalOperation[K]withFocalRasterRDDMethods[K]"></a>
+      <a id="withFocalRasterRDDMethods[K]:withFocalRasterRDDMethods[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="mapalgebra/focal/Implicits$withFocalRasterRDDMethods.html"><span class="name">withFocalRasterRDDMethods</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="mapalgebra/focal/FocalOperation.html" class="extype" name="geotrellis.spark.mapalgebra.focal.FocalOperation">FocalOperation</a>[<span class="extype" name="geotrellis.spark.mapalgebra.focal.Implicits.withFocalRasterRDDMethods.K">K</span>] with <a href="mapalgebra/focal/FocalRasterRDDMethods.html" class="extype" name="geotrellis.spark.mapalgebra.focal.FocalRasterRDDMethods">FocalRasterRDDMethods</a>[<span class="extype" name="geotrellis.spark.mapalgebra.focal.Implicits.withFocalRasterRDDMethods.K">K</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.mapalgebra.focal.Implicits@withFocalRasterRDDMethods[K]extendsFocalOperation[K]withFocalRasterRDDMethods[K]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="mapalgebra/focal/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.focal.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.mapalgebra.local.temporal.Implicits.withLocalTemporalTileRDDMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withLocalTemporalTileRDDMethods[K]extendsLocalTemporalTileRDDMethods[K]"></a>
+      <a id="withLocalTemporalTileRDDMethods[K]:withLocalTemporalTileRDDMethods[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="mapalgebra/local/temporal/Implicits$withLocalTemporalTileRDDMethods.html"><span class="name">withLocalTemporalTileRDDMethods</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="mapalgebra/local/temporal/LocalTemporalTileRDDMethods.html" class="extype" name="geotrellis.spark.mapalgebra.local.temporal.LocalTemporalTileRDDMethods">LocalTemporalTileRDDMethods</a>[<span class="extype" name="geotrellis.spark.mapalgebra.local.temporal.Implicits.withLocalTemporalTileRDDMethods.K">K</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#geotrellis.spark.mapalgebra.local.temporal.Implicits@withLocalTemporalTileRDDMethods[K]extendsLocalTemporalTileRDDMethods[K]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="mapalgebra/local/temporal/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.local.temporal.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.mapalgebra.local.Implicits.withLocalTileRDDMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withLocalTileRDDMethods[K]extendsLocalTileRDDMethods[K]"></a>
+      <a id="withLocalTileRDDMethods[K]:withLocalTileRDDMethods[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="mapalgebra/local/Implicits$withLocalTileRDDMethods.html"><span class="name">withLocalTileRDDMethods</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="mapalgebra/local/LocalTileRDDMethods.html" class="extype" name="geotrellis.spark.mapalgebra.local.LocalTileRDDMethods">LocalTileRDDMethods</a>[<span class="extype" name="geotrellis.spark.mapalgebra.local.Implicits.withLocalTileRDDMethods.K">K</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.mapalgebra.local.Implicits@withLocalTileRDDMethods[K]extendsLocalTileRDDMethods[K]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="mapalgebra/local/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.local.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.mapalgebra.local.Implicits.withLocalTileRDDSeqMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withLocalTileRDDSeqMethods[K]extendsLocalTileRDDSeqMethods[K]"></a>
+      <a id="withLocalTileRDDSeqMethods[K]:withLocalTileRDDSeqMethods[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="mapalgebra/local/Implicits$withLocalTileRDDSeqMethods.html"><span class="name">withLocalTileRDDSeqMethods</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="mapalgebra/local/LocalTileRDDSeqMethods.html" class="extype" name="geotrellis.spark.mapalgebra.local.LocalTileRDDSeqMethods">LocalTileRDDSeqMethods</a>[<span class="extype" name="geotrellis.spark.mapalgebra.local.Implicits.withLocalTileRDDSeqMethods.K">K</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.mapalgebra.local.Implicits@withLocalTileRDDSeqMethods[K]extendsLocalTileRDDSeqMethods[K]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="mapalgebra/local/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.local.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.mapalgebra.Implicits.withMapValuesOptionMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withMapValuesOptionMethods[K,V]extendsMethodExtensions[org.apache.spark.rdd.RDD[(K,(V,Option[V]))]]"></a>
+      <a id="withMapValuesOptionMethods[K,V]:withMapValuesOptionMethods[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="mapalgebra/Implicits$withMapValuesOptionMethods.html"><span class="name">withMapValuesOptionMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.mapalgebra.Implicits.withMapValuesOptionMethods.K">K</span>, (<span class="extype" name="geotrellis.spark.mapalgebra.Implicits.withMapValuesOptionMethods.V">V</span>, <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="geotrellis.spark.mapalgebra.Implicits.withMapValuesOptionMethods.V">V</span>]))]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.mapalgebra.Implicits@withMapValuesOptionMethods[K,V]extendsMethodExtensions[org.apache.spark.rdd.RDD[(K,(V,Option[V]))]]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="mapalgebra/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.mapalgebra.Implicits.withMapValuesTupleMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withMapValuesTupleMethods[K,V]extendsMethodExtensions[org.apache.spark.rdd.RDD[(K,(V,V))]]"></a>
+      <a id="withMapValuesTupleMethods[K,V]:withMapValuesTupleMethods[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="mapalgebra/Implicits$withMapValuesTupleMethods.html"><span class="name">withMapValuesTupleMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.mapalgebra.Implicits.withMapValuesTupleMethods.K">K</span>, (<span class="extype" name="geotrellis.spark.mapalgebra.Implicits.withMapValuesTupleMethods.V">V</span>, <span class="extype" name="geotrellis.spark.mapalgebra.Implicits.withMapValuesTupleMethods.V">V</span>))]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.mapalgebra.Implicits@withMapValuesTupleMethods[K,V]extendsMethodExtensions[org.apache.spark.rdd.RDD[(K,(V,V))]]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="mapalgebra/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.withMultiBandRasterRDDMethods" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withMultiBandRasterRDDMethods[K]extendsMultiBandRasterRDDMethods[K]"></a>
+      <a id="withMultiBandRasterRDDMethods[K]:withMultiBandRasterRDDMethods[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$withMultiBandRasterRDDMethods.html"><span class="name">withMultiBandRasterRDDMethods</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="MultiBandRasterRDDMethods.html" class="extype" name="geotrellis.spark.MultiBandRasterRDDMethods">MultiBandRasterRDDMethods</a>[<span class="extype" name="geotrellis.spark.withMultiBandRasterRDDMethods.K">K</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@withMultiBandRasterRDDMethods[K]extendsMultiBandRasterRDDMethods[K]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.withProjectedExtentRDDMethods" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withProjectedExtentRDDMethods[K,V&lt;:geotrellis.raster.CellGrid]extendsAnyRef"></a>
+      <a id="withProjectedExtentRDDMethods[K,V&lt;:CellGrid]:withProjectedExtentRDDMethods[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$withProjectedExtentRDDMethods.html"><span class="name">withProjectedExtentRDDMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V &lt;: <a href="../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@withProjectedExtentRDDMethods[K,V&lt;:geotrellis.raster.CellGrid]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.reproject.Implicits.withProjectedExtentReprojectMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withProjectedExtentReprojectMethods[K,V&lt;:geotrellis.raster.CellGrid]extendsProjectedExtentComponentReprojectMethods[K,V]"></a>
+      <a id="withProjectedExtentReprojectMethods[K,V&lt;:CellGrid]:withProjectedExtentReprojectMethods[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="reproject/Implicits$withProjectedExtentReprojectMethods.html"><span class="name">withProjectedExtentReprojectMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V &lt;: <a href="../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></span>]</span><span class="result"> extends <a href="reproject/ProjectedExtentComponentReprojectMethods.html" class="extype" name="geotrellis.spark.reproject.ProjectedExtentComponentReprojectMethods">ProjectedExtentComponentReprojectMethods</a>[<span class="extype" name="geotrellis.spark.reproject.Implicits.withProjectedExtentReprojectMethods.K">K</span>, <span class="extype" name="geotrellis.spark.reproject.Implicits.withProjectedExtentReprojectMethods.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.reproject.Implicits@withProjectedExtentReprojectMethods[K,V&lt;:geotrellis.raster.CellGrid]extendsProjectedExtentComponentReprojectMethods[K,V]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="reproject/Implicits.html" class="extype" name="geotrellis.spark.reproject.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.withProjectedExtentTemporalTilerKeyMethods" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withProjectedExtentTemporalTilerKeyMethods[K]extendsTilerKeyMethods[K,geotrellis.spark.SpaceTimeKey]"></a>
+      <a id="withProjectedExtentTemporalTilerKeyMethods[K]:withProjectedExtentTemporalTilerKeyMethods[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$withProjectedExtentTemporalTilerKeyMethods.html"><span class="name">withProjectedExtentTemporalTilerKeyMethods</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="tiling/TilerKeyMethods.html" class="extype" name="geotrellis.spark.tiling.TilerKeyMethods">TilerKeyMethods</a>[<span class="extype" name="geotrellis.spark.withProjectedExtentTemporalTilerKeyMethods.K">K</span>, <a href="SpaceTimeKey.html" class="extype" name="geotrellis.spark.SpaceTimeKey">SpaceTimeKey</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@withProjectedExtentTemporalTilerKeyMethods[K]extendsTilerKeyMethods[K,geotrellis.spark.SpaceTimeKey]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.withProjectedExtentTilerKeyMethods" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withProjectedExtentTilerKeyMethods[K]extendsTilerKeyMethods[K,geotrellis.spark.SpatialKey]"></a>
+      <a id="withProjectedExtentTilerKeyMethods[K]:withProjectedExtentTilerKeyMethods[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$withProjectedExtentTilerKeyMethods.html"><span class="name">withProjectedExtentTilerKeyMethods</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="tiling/TilerKeyMethods.html" class="extype" name="geotrellis.spark.tiling.TilerKeyMethods">TilerKeyMethods</a>[<span class="extype" name="geotrellis.spark.withProjectedExtentTilerKeyMethods.K">K</span>, <a href="SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@withProjectedExtentTilerKeyMethods[K]extendsTilerKeyMethods[K,geotrellis.spark.SpatialKey]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.merge.Implicits.withRDDLayoutMergeMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withRDDLayoutMergeMethods[K,V&lt;:geotrellis.raster.CellGrid,M]extendsRDDLayoutMergeMethods[K,V,M]"></a>
+      <a id="withRDDLayoutMergeMethods[K,V&lt;:CellGrid,M]:withRDDLayoutMergeMethods[K,V,M]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="merge/Implicits$withRDDLayoutMergeMethods.html"><span class="name">withRDDLayoutMergeMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V &lt;: <a href="../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></span>, <span name="M">M</span>]</span><span class="result"> extends <a href="merge/RDDLayoutMergeMethods.html" class="extype" name="geotrellis.spark.merge.RDDLayoutMergeMethods">RDDLayoutMergeMethods</a>[<span class="extype" name="geotrellis.spark.merge.Implicits.withRDDLayoutMergeMethods.K">K</span>, <span class="extype" name="geotrellis.spark.merge.Implicits.withRDDLayoutMergeMethods.V">V</span>, <span class="extype" name="geotrellis.spark.merge.Implicits.withRDDLayoutMergeMethods.M">M</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.merge.Implicits@withRDDLayoutMergeMethods[K,V&lt;:geotrellis.raster.CellGrid,M]extendsRDDLayoutMergeMethods[K,V,M]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="merge/Implicits.html" class="extype" name="geotrellis.spark.merge.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.mask.Implicits.withRDDMaskMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withRDDMaskMethods[K]extendsRasterRDDMaskMethods[K]"></a>
+      <a id="withRDDMaskMethods[K]:withRDDMaskMethods[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="mask/Implicits$withRDDMaskMethods.html"><span class="name">withRDDMaskMethods</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="mask/RasterRDDMaskMethods.html" class="extype" name="geotrellis.spark.mask.RasterRDDMaskMethods">RasterRDDMaskMethods</a>[<span class="extype" name="geotrellis.spark.mask.Implicits.withRDDMaskMethods.K">K</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.mask.Implicits@withRDDMaskMethods[K]extendsRasterRDDMaskMethods[K]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="mask/Implicits.html" class="extype" name="geotrellis.spark.mask.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.withRasterRDDMaskMethods" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withRasterRDDMaskMethods[K]extendsRasterRDDMaskMethods[K]"></a>
+      <a id="withRasterRDDMaskMethods[K]:withRasterRDDMaskMethods[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$withRasterRDDMaskMethods.html"><span class="name">withRasterRDDMaskMethods</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="mask/RasterRDDMaskMethods.html" class="extype" name="geotrellis.spark.mask.RasterRDDMaskMethods">RasterRDDMaskMethods</a>[<span class="extype" name="geotrellis.spark.withRasterRDDMaskMethods.K">K</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@withRasterRDDMaskMethods[K]extendsRasterRDDMaskMethods[K]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.withRasterRDDMethods" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withRasterRDDMethods[K]extendsRasterRDDMethods[K]"></a>
+      <a id="withRasterRDDMethods[K]:withRasterRDDMethods[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$withRasterRDDMethods.html"><span class="name">withRasterRDDMethods</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="RasterRDDMethods.html" class="extype" name="geotrellis.spark.RasterRDDMethods">RasterRDDMethods</a>[<span class="extype" name="geotrellis.spark.withRasterRDDMethods.K">K</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@withRasterRDDMethods[K]extendsRasterRDDMethods[K]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.partitioner.Implicits.withSpatialJoinMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withSpatialJoinMethods[K,V,M]extendsSpatialJoinMethods[K,V,M]"></a>
+      <a id="withSpatialJoinMethods[K,V,M]:withSpatialJoinMethods[K,V,M]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="partitioner/Implicits$withSpatialJoinMethods.html"><span class="name">withSpatialJoinMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="M">M</span>]</span><span class="result"> extends <a href="partitioner/SpatialJoinMethods.html" class="extype" name="geotrellis.spark.partitioner.SpatialJoinMethods">SpatialJoinMethods</a>[<span class="extype" name="geotrellis.spark.partitioner.Implicits.withSpatialJoinMethods.K">K</span>, <span class="extype" name="geotrellis.spark.partitioner.Implicits.withSpatialJoinMethods.V">V</span>, <span class="extype" name="geotrellis.spark.partitioner.Implicits.withSpatialJoinMethods.M">M</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.partitioner.Implicits@withSpatialJoinMethods[K,V,M]extendsSpatialJoinMethods[K,V,M]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="partitioner/Implicits.html" class="extype" name="geotrellis.spark.partitioner.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.stitch.Implicits.withSpatialTileLayoutRDDMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withSpatialTileLayoutRDDMethods[V&lt;:geotrellis.raster.CellGrid,M]extendsSpatialTileLayoutRDDMethods[V,M]"></a>
+      <a id="withSpatialTileLayoutRDDMethods[V&lt;:CellGrid,M]:withSpatialTileLayoutRDDMethods[V,M]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="stitch/Implicits$withSpatialTileLayoutRDDMethods.html"><span class="name">withSpatialTileLayoutRDDMethods</span></a><span class="tparams">[<span name="V">V &lt;: <a href="../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></span>, <span name="M">M</span>]</span><span class="result"> extends <a href="stitch/SpatialTileLayoutRDDMethods.html" class="extype" name="geotrellis.spark.stitch.SpatialTileLayoutRDDMethods">SpatialTileLayoutRDDMethods</a>[<span class="extype" name="geotrellis.spark.stitch.Implicits.withSpatialTileLayoutRDDMethods.V">V</span>, <span class="extype" name="geotrellis.spark.stitch.Implicits.withSpatialTileLayoutRDDMethods.M">M</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.stitch.Implicits@withSpatialTileLayoutRDDMethods[V&lt;:geotrellis.raster.CellGrid,M]extendsSpatialTileLayoutRDDMethods[V,M]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="stitch/Implicits.html" class="extype" name="geotrellis.spark.stitch.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.stitch.Implicits.withSpatialTileRDDMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withSpatialTileRDDMethods[V&lt;:geotrellis.raster.CellGrid]extendsSpatialTileRDDMethods[V]"></a>
+      <a id="withSpatialTileRDDMethods[V&lt;:CellGrid]:withSpatialTileRDDMethods[V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="stitch/Implicits$withSpatialTileRDDMethods.html"><span class="name">withSpatialTileRDDMethods</span></a><span class="tparams">[<span name="V">V &lt;: <a href="../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></span>]</span><span class="result"> extends <a href="stitch/SpatialTileRDDMethods.html" class="extype" name="geotrellis.spark.stitch.SpatialTileRDDMethods">SpatialTileRDDMethods</a>[<span class="extype" name="geotrellis.spark.stitch.Implicits.withSpatialTileRDDMethods.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.stitch.Implicits@withSpatialTileRDDMethods[V&lt;:geotrellis.raster.CellGrid]extendsSpatialTileRDDMethods[V]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="stitch/Implicits.html" class="extype" name="geotrellis.spark.stitch.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.summary.Implicits.withStatsTileRDDMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withStatsTileRDDMethods[K]extendsStatsTileRDDMethods[K]"></a>
+      <a id="withStatsTileRDDMethods[K]:withStatsTileRDDMethods[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="summary/Implicits$withStatsTileRDDMethods.html"><span class="name">withStatsTileRDDMethods</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="summary/StatsTileRDDMethods.html" class="extype" name="geotrellis.spark.summary.StatsTileRDDMethods">StatsTileRDDMethods</a>[<span class="extype" name="geotrellis.spark.summary.Implicits.withStatsTileRDDMethods.K">K</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.summary.Implicits@withStatsTileRDDMethods[K]extendsStatsTileRDDMethods[K]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="summary/Implicits.html" class="extype" name="geotrellis.spark.summary.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.merge.Implicits.withTileRDDMergeMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withTileRDDMergeMethods[K,V]extendsTileRDDMergeMethods[K,V]"></a>
+      <a id="withTileRDDMergeMethods[K,V]:withTileRDDMergeMethods[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="merge/Implicits$withTileRDDMergeMethods.html"><span class="name">withTileRDDMergeMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="merge/TileRDDMergeMethods.html" class="extype" name="geotrellis.spark.merge.TileRDDMergeMethods">TileRDDMergeMethods</a>[<span class="extype" name="geotrellis.spark.merge.Implicits.withTileRDDMergeMethods.K">K</span>, <span class="extype" name="geotrellis.spark.merge.Implicits.withTileRDDMergeMethods.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.merge.Implicits@withTileRDDMergeMethods[K,V]extendsTileRDDMergeMethods[K,V]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="merge/Implicits.html" class="extype" name="geotrellis.spark.merge.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.reproject.Implicits.withTileRDDReprojectMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withTileRDDReprojectMethods[K,V&lt;:geotrellis.raster.CellGrid]extendsTileRDDReprojectMethods[K,V]"></a>
+      <a id="withTileRDDReprojectMethods[K,V&lt;:CellGrid]:withTileRDDReprojectMethods[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="reproject/Implicits$withTileRDDReprojectMethods.html"><span class="name">withTileRDDReprojectMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V &lt;: <a href="../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></span>]</span><span class="result"> extends <a href="reproject/TileRDDReprojectMethods.html" class="extype" name="geotrellis.spark.reproject.TileRDDReprojectMethods">TileRDDReprojectMethods</a>[<span class="extype" name="geotrellis.spark.reproject.Implicits.withTileRDDReprojectMethods.K">K</span>, <span class="extype" name="geotrellis.spark.reproject.Implicits.withTileRDDReprojectMethods.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.reproject.Implicits@withTileRDDReprojectMethods[K,V&lt;:geotrellis.raster.CellGrid]extendsTileRDDReprojectMethods[K,V]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="reproject/Implicits.html" class="extype" name="geotrellis.spark.reproject.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.tiling.Implicits.withTilerMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withTilerMethods[K,V&lt;:geotrellis.raster.CellGrid]extendsTilerMethods[K,V]"></a>
+      <a id="withTilerMethods[K,V&lt;:CellGrid]:withTilerMethods[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="tiling/Implicits$withTilerMethods.html"><span class="name">withTilerMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V &lt;: <a href="../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></span>]</span><span class="result"> extends <a href="tiling/TilerMethods.html" class="extype" name="geotrellis.spark.tiling.TilerMethods">TilerMethods</a>[<span class="extype" name="geotrellis.spark.tiling.Implicits.withTilerMethods.K">K</span>, <span class="extype" name="geotrellis.spark.tiling.Implicits.withTilerMethods.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.tiling.Implicits@withTilerMethods[K,V&lt;:geotrellis.raster.CellGrid]extendsTilerMethods[K,V]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="tiling/Implicits.html" class="extype" name="geotrellis.spark.tiling.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.tiling.Implicits.withTupleTilerKeyMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withTupleTilerKeyMethods[K]extendsTilerKeyMethods[(K,geotrellis.vector.Extent),K]"></a>
+      <a id="withTupleTilerKeyMethods[K]:withTupleTilerKeyMethods[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="tiling/Implicits$withTupleTilerKeyMethods.html"><span class="name">withTupleTilerKeyMethods</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="tiling/TilerKeyMethods.html" class="extype" name="geotrellis.spark.tiling.TilerKeyMethods">TilerKeyMethods</a>[(<span class="extype" name="geotrellis.spark.tiling.Implicits.withTupleTilerKeyMethods.K">K</span>, <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>), <span class="extype" name="geotrellis.spark.tiling.Implicits.withTupleTilerKeyMethods.K">K</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.tiling.Implicits@withTupleTilerKeyMethods[K]extendsTilerKeyMethods[(K,geotrellis.vector.Extent),K]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="tiling/Implicits.html" class="extype" name="geotrellis.spark.tiling.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.summary.polygonal.Implicits.withZonalSummaryFeatureRDDMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withZonalSummaryFeatureRDDMethods[G&lt;:geotrellis.vector.Geometry,D]extendsPolygonalSummaryFeatureRDDMethods[G,D]"></a>
+      <a id="withZonalSummaryFeatureRDDMethods[G&lt;:Geometry,D]:withZonalSummaryFeatureRDDMethods[G,D]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="summary/polygonal/Implicits$withZonalSummaryFeatureRDDMethods.html"><span class="name">withZonalSummaryFeatureRDDMethods</span></a><span class="tparams">[<span name="G">G &lt;: <a href="../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>, <span name="D">D</span>]</span><span class="result"> extends <a href="summary/polygonal/PolygonalSummaryFeatureRDDMethods.html" class="extype" name="geotrellis.spark.summary.polygonal.PolygonalSummaryFeatureRDDMethods">PolygonalSummaryFeatureRDDMethods</a>[<span class="extype" name="geotrellis.spark.summary.polygonal.Implicits.withZonalSummaryFeatureRDDMethods.G">G</span>, <span class="extype" name="geotrellis.spark.summary.polygonal.Implicits.withZonalSummaryFeatureRDDMethods.D">D</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.summary.polygonal.Implicits@withZonalSummaryFeatureRDDMethods[G&lt;:geotrellis.vector.Geometry,D]extendsPolygonalSummaryFeatureRDDMethods[G,D]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="summary/polygonal/Implicits.html" class="extype" name="geotrellis.spark.summary.polygonal.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.summary.polygonal.Implicits.withZonalSummaryKeyedFeatureRDDMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withZonalSummaryKeyedFeatureRDDMethods[K,G&lt;:geotrellis.vector.Geometry,D]extendsPolygonalSummaryKeyedFeatureRDDMethods[K,G,D]"></a>
+      <a id="withZonalSummaryKeyedFeatureRDDMethods[K,G&lt;:Geometry,D]:withZonalSummaryKeyedFeatureRDDMethods[K,G,D]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="summary/polygonal/Implicits$withZonalSummaryKeyedFeatureRDDMethods.html"><span class="name">withZonalSummaryKeyedFeatureRDDMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="G">G &lt;: <a href="../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>, <span name="D">D</span>]</span><span class="result"> extends <a href="summary/polygonal/PolygonalSummaryKeyedFeatureRDDMethods.html" class="extype" name="geotrellis.spark.summary.polygonal.PolygonalSummaryKeyedFeatureRDDMethods">PolygonalSummaryKeyedFeatureRDDMethods</a>[<span class="extype" name="geotrellis.spark.summary.polygonal.Implicits.withZonalSummaryKeyedFeatureRDDMethods.K">K</span>, <span class="extype" name="geotrellis.spark.summary.polygonal.Implicits.withZonalSummaryKeyedFeatureRDDMethods.G">G</span>, <span class="extype" name="geotrellis.spark.summary.polygonal.Implicits.withZonalSummaryKeyedFeatureRDDMethods.D">D</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.summary.polygonal.Implicits@withZonalSummaryKeyedFeatureRDDMethods[K,G&lt;:geotrellis.vector.Geometry,D]extendsPolygonalSummaryKeyedFeatureRDDMethods[K,G,D]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="summary/polygonal/Implicits.html" class="extype" name="geotrellis.spark.summary.polygonal.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.summary.polygonal.Implicits.withZonalSummaryRasterRDDMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withZonalSummaryRasterRDDMethods[K]extendsPolygonalSummaryRasterRDDMethods[K]withSerializable"></a>
+      <a id="withZonalSummaryRasterRDDMethods[K]:withZonalSummaryRasterRDDMethods[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="summary/polygonal/Implicits$withZonalSummaryRasterRDDMethods.html"><span class="name">withZonalSummaryRasterRDDMethods</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="summary/polygonal/PolygonalSummaryRasterRDDMethods.html" class="extype" name="geotrellis.spark.summary.polygonal.PolygonalSummaryRasterRDDMethods">PolygonalSummaryRasterRDDMethods</a>[<span class="extype" name="geotrellis.spark.summary.polygonal.Implicits.withZonalSummaryRasterRDDMethods.K">K</span>] with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.summary.polygonal.Implicits@withZonalSummaryRasterRDDMethods[K]extendsPolygonalSummaryRasterRDDMethods[K]withSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="summary/polygonal/Implicits.html" class="extype" name="geotrellis.spark.summary.polygonal.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.mapalgebra.zonal.Implicits.withZonalTileRDDMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withZonalTileRDDMethods[K]extendsZonalTileRDDMethods[K]"></a>
+      <a id="withZonalTileRDDMethods[K]:withZonalTileRDDMethods[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="mapalgebra/zonal/Implicits$withZonalTileRDDMethods.html"><span class="name">withZonalTileRDDMethods</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="mapalgebra/zonal/ZonalTileRDDMethods.html" class="extype" name="geotrellis.spark.mapalgebra.zonal.ZonalTileRDDMethods">ZonalTileRDDMethods</a>[<span class="extype" name="geotrellis.spark.mapalgebra.zonal.Implicits.withZonalTileRDDMethods.K">K</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.mapalgebra.zonal.Implicits@withZonalTileRDDMethods[K]extendsZonalTileRDDMethods[K]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="mapalgebra/zonal/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.zonal.Implicits">Implicits</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="scala.Any#getClass" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Concrete Value Members</h3>
+              <ol><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.Any###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@##():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.spark.Bounds" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Bounds"></a>
+      <a id="Bounds:Bounds"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Bounds$.html"><span class="name">Bounds</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@Bounds" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.ContextRDD" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ContextRDD"></a>
+      <a id="ContextRDD:ContextRDD"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ContextRDD$.html"><span class="name">ContextRDD</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@ContextRDD" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.EmptyBounds" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EmptyBounds"></a>
+      <a id="EmptyBounds:EmptyBounds"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="EmptyBounds$.html"><span class="name">EmptyBounds</span></a><span class="result"> extends <a href="Bounds.html" class="extype" name="geotrellis.spark.Bounds">Bounds</a>[<span class="extype" name="scala.Nothing">Nothing</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@EmptyBounds" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.KeyBounds" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="KeyBounds"></a>
+      <a id="KeyBounds:KeyBounds"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="KeyBounds$.html"><span class="name">KeyBounds</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@KeyBounds" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.LayerId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LayerId"></a>
+      <a id="LayerId:LayerId"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LayerId$.html"><span class="name">LayerId</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@LayerId" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.MultiBandRasterRDD" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MultiBandRasterRDD"></a>
+      <a id="MultiBandRasterRDD:MultiBandRasterRDD"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$MultiBandRasterRDD$.html"><span class="name">MultiBandRasterRDD</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@MultiBandRasterRDD" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.RasterMetaData" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RasterMetaData"></a>
+      <a id="RasterMetaData:RasterMetaData"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RasterMetaData$.html"><span class="name">RasterMetaData</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@RasterMetaData" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.RasterRDD" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RasterRDD"></a>
+      <a id="RasterRDD:RasterRDD"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$RasterRDD$.html"><span class="name">RasterRDD</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@RasterRDD" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.SpaceTimeKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SpaceTimeKey"></a>
+      <a id="SpaceTimeKey:SpaceTimeKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SpaceTimeKey$.html"><span class="name">SpaceTimeKey</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@SpaceTimeKey" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.SpatialKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SpatialKey"></a>
+      <a id="SpatialKey:SpatialKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SpatialKey$.html"><span class="name">SpatialKey</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@SpatialKey" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.TemporalKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TemporalKey"></a>
+      <a id="TemporalKey:TemporalKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TemporalKey$.html"><span class="name">TemporalKey</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@TemporalKey" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.TemporalProjectedExtent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TemporalProjectedExtent"></a>
+      <a id="TemporalProjectedExtent:TemporalProjectedExtent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TemporalProjectedExtent$.html"><span class="name">TemporalProjectedExtent</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@TemporalProjectedExtent" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.spark.buffer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="buffer"></a>
+      <a id="buffer:buffer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="buffer/package.html"><span class="name">buffer</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@buffer" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.Any#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.spark.etl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="etl"></a>
+      <a id="etl:etl"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="etl/package.html"><span class="name">etl</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@etl" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.Any#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.spark.ingest" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ingest"></a>
+      <a id="ingest:ingest"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="ingest/package.html"><span class="name">ingest</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@ingest" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="io"></a>
+      <a id="io:io"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="io/package.html"><span class="name">io</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@io" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.spark.mapalgebra" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mapalgebra"></a>
+      <a id="mapalgebra:mapalgebra"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="mapalgebra/package.html"><span class="name">mapalgebra</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@mapalgebra" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.mask" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mask"></a>
+      <a id="mask:mask"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="mask/package.html"><span class="name">mask</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@mask" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.merge" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="merge"></a>
+      <a id="merge:merge"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="merge/package.html"><span class="name">merge</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@merge" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.partitioner" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="partitioner"></a>
+      <a id="partitioner:partitioner"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="partitioner/package.html"><span class="name">partitioner</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@partitioner" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark#partitionerToOption" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="partitionerToOption(partitioner:org.apache.spark.Partitioner):Option[org.apache.spark.Partitioner]"></a>
+      <a id="partitionerToOption(Partitioner):Option[Partitioner]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">partitionerToOption</span><span class="params">(<span name="partitioner">partitioner: <span class="extype" name="org.apache.spark.Partitioner">Partitioner</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.apache.spark.Partitioner">Partitioner</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@partitionerToOption(partitioner:org.apache.spark.Partitioner):Option[org.apache.spark.Partitioner]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Auto wrap a partitioner when something is requestion an Option[Partitioner];
+useful for Options that take an Option[Partitioner]
+</p>
+    </li><li name="geotrellis.spark.render" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="render"></a>
+      <a id="render:render"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="render/package.html"><span class="name">render</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@render" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.reproject" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="reproject"></a>
+      <a id="reproject:reproject"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="reproject/package.html"><span class="name">reproject</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@reproject" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.stitch" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="stitch"></a>
+      <a id="stitch:stitch"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="stitch/package.html"><span class="name">stitch</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@stitch" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.summary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="summary"></a>
+      <a id="summary:summary"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="summary/package.html"><span class="name">summary</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@summary" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.testkit" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="testkit"></a>
+      <a id="testkit:testkit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="testkit/package.html"><span class="name">testkit</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@testkit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.tiling" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tiling"></a>
+      <a id="tiling:tiling"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="tiling/package.html"><span class="name">tiling</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@tiling" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This package is concerned with translation of coordinates or extents between:</p><div class="fullcomment"><div class="comment cmt"><p>This package is concerned with translation of coordinates or extents between:</p><ul><li>geographic extents</li><li>arbitrary tiling scheme, which defines origin and and axis</li><li>arbitrary indexing scheme which linearize two dimensional tiling space</li></ul><p> In order to facilitate these transformations each of the above spaces maps to
+ a &quot;Grid Space&quot; which is a special case of a tiling scheme with the origin
+ defined as upper left and (x, y) coordinate representing (col, row), Java array order.
+</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><span class="extype" name="geotrellis.spark.tiling.SpatialKeyGridTransform">geotrellis.spark.tiling.SpatialKeyGridTransform</span>
+</p></span><span class="cmt"><p><span class="extype" name="geotrellis.spark.tiling.TileGridTransform">geotrellis.spark.tiling.TileGridTransform</span></p></span><span class="cmt"><p><span class="extype" name="geotrellis.spark.tiling.MapGridTransform">geotrellis.spark.tiling.MapGridTransform</span></p></span></dd></dl></div>
+    </li><li name="scala.Any#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@toString():String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.spark#tupleToRDDWithMetadata" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="tupleToRDDWithMetadata[K,V,M](tup:(org.apache.spark.rdd.RDD[(K,V)],M)):org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M]"></a>
+      <a id="tupleToRDDWithMetadata[K,V,M]((RDD[(K,V)],M)):RDD[(K,V)]withMetadata[M]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tupleToRDDWithMetadata</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="M">M</span>]</span><span class="params">(<span name="tup">tup: (<span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.tupleToRDDWithMetadata.K">K</span>, <span class="extype" name="geotrellis.spark.tupleToRDDWithMetadata.V">V</span>)], <span class="extype" name="geotrellis.spark.tupleToRDDWithMetadata.M">M</span>)</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.tupleToRDDWithMetadata.K">K</span>, <span class="extype" name="geotrellis.spark.tupleToRDDWithMetadata.V">V</span>)] with <a href="Metadata.html" class="extype" name="geotrellis.spark.Metadata">Metadata</a>[<span class="extype" name="geotrellis.spark.tupleToRDDWithMetadata.M">M</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@tupleToRDDWithMetadata[K,V,M](tup:(org.apache.spark.rdd.RDD[(K,V)],M)):org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.utils" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="utils"></a>
+      <a id="utils:utils"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="utils/package.html"><span class="name">utils</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@utils" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="geotrellis.spark.partitioner.Implicits">
+              <h3>Inherited from <a href="partitioner/Implicits.html" class="extype" name="geotrellis.spark.partitioner.Implicits">Implicits</a></h3>
+            </div><div class="parent" name="geotrellis.spark.mapalgebra.focal.hillshade.Implicits">
+              <h3>Inherited from <a href="mapalgebra/focal/hillshade/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.focal.hillshade.Implicits">Implicits</a></h3>
+            </div><div class="parent" name="geotrellis.spark.summary.Implicits">
+              <h3>Inherited from <a href="summary/Implicits.html" class="extype" name="geotrellis.spark.summary.Implicits">Implicits</a></h3>
+            </div><div class="parent" name="geotrellis.spark.summary.polygonal.Implicits">
+              <h3>Inherited from <a href="summary/polygonal/Implicits.html" class="extype" name="geotrellis.spark.summary.polygonal.Implicits">Implicits</a></h3>
+            </div><div class="parent" name="geotrellis.spark.mapalgebra.zonal.Implicits">
+              <h3>Inherited from <a href="mapalgebra/zonal/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.zonal.Implicits">Implicits</a></h3>
+            </div><div class="parent" name="geotrellis.spark.mapalgebra.focal.Implicits">
+              <h3>Inherited from <a href="mapalgebra/focal/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.focal.Implicits">Implicits</a></h3>
+            </div><div class="parent" name="geotrellis.spark.mapalgebra.local.temporal.Implicits">
+              <h3>Inherited from <a href="mapalgebra/local/temporal/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.local.temporal.Implicits">Implicits</a></h3>
+            </div><div class="parent" name="geotrellis.spark.mapalgebra.local.Implicits">
+              <h3>Inherited from <a href="mapalgebra/local/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.local.Implicits">Implicits</a></h3>
+            </div><div class="parent" name="geotrellis.spark.mapalgebra.Implicits">
+              <h3>Inherited from <a href="mapalgebra/Implicits.html" class="extype" name="geotrellis.spark.mapalgebra.Implicits">Implicits</a></h3>
+            </div><div class="parent" name="geotrellis.spark.stitch.Implicits">
+              <h3>Inherited from <a href="stitch/Implicits.html" class="extype" name="geotrellis.spark.stitch.Implicits">Implicits</a></h3>
+            </div><div class="parent" name="geotrellis.spark.tiling.Implicits">
+              <h3>Inherited from <a href="tiling/Implicits.html" class="extype" name="geotrellis.spark.tiling.Implicits">Implicits</a></h3>
+            </div><div class="parent" name="geotrellis.spark.reproject.Implicits">
+              <h3>Inherited from <a href="reproject/Implicits.html" class="extype" name="geotrellis.spark.reproject.Implicits">Implicits</a></h3>
+            </div><div class="parent" name="geotrellis.spark.merge.Implicits">
+              <h3>Inherited from <a href="merge/Implicits.html" class="extype" name="geotrellis.spark.merge.Implicits">Implicits</a></h3>
+            </div><div class="parent" name="geotrellis.spark.mask.Implicits">
+              <h3>Inherited from <a href="mask/Implicits.html" class="extype" name="geotrellis.spark.mask.Implicits">Implicits</a></h3>
+            </div><div class="parent" name="geotrellis.spark.buffer.Implicits">
+              <h3>Inherited from <a href="buffer/Implicits.html" class="extype" name="geotrellis.spark.buffer.Implicits">Implicits</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>
