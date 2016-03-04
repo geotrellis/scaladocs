@@ -191,6 +191,23 @@
       </a>
     </span>
       
+    </li><li name="geotrellis.spark.etl.ReprojectMethod" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ReprojectMethodextendsAnyRef"></a>
+      <a id="ReprojectMethod:ReprojectMethod"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ReprojectMethod.html"><span class="name">ReprojectMethod</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.etl.package@ReprojectMethodextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.spark.etl.TypedModule" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="TypedModuleextendsAnyRef"></a>
       <a id="TypedModule:TypedModule"></a>
@@ -215,7 +232,28 @@
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="geotrellis.spark.etl.Etl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.spark.etl.BufferedReproject" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BufferedReproject"></a>
+      <a id="BufferedReproject:BufferedReproject"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BufferedReproject$.html"><span class="name">BufferedReproject</span></a><span class="result"> extends <a href="ReprojectMethod.html" class="extype" name="geotrellis.spark.etl.ReprojectMethod">ReprojectMethod</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.etl.package@BufferedReproject" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">BufferedReproject method will perform reproject still after the tiling step.</p><div class="fullcomment"><div class="comment cmt"><p>BufferedReproject method will perform reproject still after the tiling step.
+Because tiling step creates keys with SpatialComponent this method of reprojection is able to sample pixels past the
+tile boundaries by performing a spatial neighborhood join. This method is the default and produces the best results.
+Note that method of reprojection requires that all of the source tiles share the same CRS.
+</p></div></div>
+    </li><li name="geotrellis.spark.etl.Etl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Etl"></a>
       <a id="Etl:Etl"></a>
       <h4 class="signature">
@@ -266,6 +304,28 @@
       </a>
     </span>
       
+    </li><li name="geotrellis.spark.etl.PerTileReproject" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PerTileReproject"></a>
+      <a id="PerTileReproject:PerTileReproject"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PerTileReproject$.html"><span class="name">PerTileReproject</span></a><span class="result"> extends <a href="ReprojectMethod.html" class="extype" name="geotrellis.spark.etl.ReprojectMethod">ReprojectMethod</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.etl.package@PerTileReproject" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">PerTileReproject method will perform reproject step before the tiling step.</p><div class="fullcomment"><div class="comment cmt"><p>PerTileReproject method will perform reproject step before the tiling step.
+This method of reprojection can not consider pixels past the individual tile boundaries,
+even if they exist elsewhere in the dataset, and will read them as NODATA when interpolating.
+However this restriction allows for source tiles to have projections that differ per tile.
+The projections will be unified before the tiling step, which requires all extents to be in the same projection.
+</p></div></div>
     </li><li name="geotrellis.spark.etl.SinglebandIngest" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="SinglebandIngest"></a>
       <a id="SinglebandIngest:SinglebandIngest"></a>

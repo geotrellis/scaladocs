@@ -212,18 +212,18 @@ TemporalGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quot;YYYY:MM
               
         </dd></dl></div>
     </li><li name="geotrellis.spark.io.s3.TemporalGeoTiffS3InputFormat#createRecordReader" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="createRecordReader(split:org.apache.hadoop.mapreduce.InputSplit,context:org.apache.hadoop.mapreduce.TaskAttemptContext):geotrellis.spark.io.s3.S3RecordReader[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.Tile]"></a>
-      <a id="createRecordReader(InputSplit,TaskAttemptContext):S3RecordReader[TemporalProjectedExtent,Tile]"></a>
+      <a id="createRecordReader(split:org.apache.hadoop.mapreduce.InputSplit,context:org.apache.hadoop.mapreduce.TaskAttemptContext):geotrellis.spark.io.s3.TemporalGeoTiffS3RecordReader"></a>
+      <a id="createRecordReader(InputSplit,TaskAttemptContext):TemporalGeoTiffS3RecordReader"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">createRecordReader</span><span class="params">(<span name="split">split: <span class="extype" name="org.apache.hadoop.mapreduce.InputSplit">InputSplit</span></span>, <span name="context">context: <span class="extype" name="org.apache.hadoop.mapreduce.TaskAttemptContext">TaskAttemptContext</span></span>)</span><span class="result">: <a href="S3RecordReader.html" class="extype" name="geotrellis.spark.io.s3.S3RecordReader">S3RecordReader</a>[<a href="../../TemporalProjectedExtent.html" class="extype" name="geotrellis.spark.TemporalProjectedExtent">TemporalProjectedExtent</a>, <a href="../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</span>
+        <span class="name">createRecordReader</span><span class="params">(<span name="split">split: <span class="extype" name="org.apache.hadoop.mapreduce.InputSplit">InputSplit</span></span>, <span name="context">context: <span class="extype" name="org.apache.hadoop.mapreduce.TaskAttemptContext">TaskAttemptContext</span></span>)</span><span class="result">: <a href="TemporalGeoTiffS3RecordReader.html" class="extype" name="geotrellis.spark.io.s3.TemporalGeoTiffS3RecordReader">TemporalGeoTiffS3RecordReader</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.TemporalGeoTiffS3InputFormat@createRecordReader(split:org.apache.hadoop.mapreduce.InputSplit,context:org.apache.hadoop.mapreduce.TaskAttemptContext):geotrellis.spark.io.s3.S3RecordReader[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.Tile]" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.TemporalGeoTiffS3InputFormat@createRecordReader(split:org.apache.hadoop.mapreduce.InputSplit,context:org.apache.hadoop.mapreduce.TaskAttemptContext):geotrellis.spark.io.s3.TemporalGeoTiffS3RecordReader" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -302,6 +302,23 @@ TemporalGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quot;YYYY:MM
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.spark.io.s3.S3InputFormat#getS3Client" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getS3Client(credentials:com.amazonaws.auth.AWSCredentials):geotrellis.spark.io.s3.S3Client"></a>
+      <a id="getS3Client(AWSCredentials):S3Client"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getS3Client</span><span class="params">(<span name="credentials">credentials: <span class="extype" name="com.amazonaws.auth.AWSCredentials">AWSCredentials</span></span>)</span><span class="result">: <a href="S3Client.html" class="extype" name="geotrellis.spark.io.s3.S3Client">S3Client</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.TemporalGeoTiffS3InputFormat@getS3Client(credentials:com.amazonaws.auth.AWSCredentials):geotrellis.spark.io.s3.S3Client" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="S3InputFormat.html" class="extype" name="geotrellis.spark.io.s3.S3InputFormat">S3InputFormat</a></dd></dl></div>
     </li><li name="geotrellis.spark.io.s3.S3InputFormat#getSplits" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getSplits(context:org.apache.hadoop.mapreduce.JobContext):java.util.List[org.apache.hadoop.mapreduce.InputSplit]"></a>
       <a id="getSplits(JobContext):List[InputSplit]"></a>
