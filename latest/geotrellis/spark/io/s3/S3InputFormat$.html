@@ -216,19 +216,53 @@
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.io.s3.S3InputFormat#MAX_KEYS" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MAX_KEYS:String(&quot;s3.region&quot;)"></a>
-      <a id="MAX_KEYS:String(&quot;s3.region&quot;)"></a>
+    </li><li name="geotrellis.spark.io.s3.S3InputFormat#DEFAULT_PARTITION_BYTES" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DEFAULT_PARTITION_BYTES:Int"></a>
+      <a id="DEFAULT_PARTITION_BYTES:Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">MAX_KEYS</span><span class="result">: String(&quot;s3.region&quot;)</span>
+        <span class="name">DEFAULT_PARTITION_BYTES</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.S3InputFormat$@MAX_KEYS:String(&quot;s3.region&quot;)" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3InputFormat$@DEFAULT_PARTITION_BYTES:Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.s3.S3InputFormat#PARTITION_BYTES" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PARTITION_BYTES:String(&quot;S3.partitionBytes&quot;)"></a>
+      <a id="PARTITION_BYTES:String(&quot;S3.partitionBytes&quot;)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">PARTITION_BYTES</span><span class="result">: String(&quot;S3.partitionBytes&quot;)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3InputFormat$@PARTITION_BYTES:String(&quot;S3.partitionBytes&quot;)" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.s3.S3InputFormat#PARTITION_COUNT" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PARTITION_COUNT:String(&quot;s3.partitionCount&quot;)"></a>
+      <a id="PARTITION_COUNT:String(&quot;s3.partitionCount&quot;)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">PARTITION_COUNT</span><span class="result">: String(&quot;s3.partitionCount&quot;)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3InputFormat$@PARTITION_COUNT:String(&quot;s3.partitionCount&quot;)" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -251,18 +285,18 @@
     </span>
       
     </li><li name="geotrellis.spark.io.s3.S3InputFormat#REGION" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="REGION:String(&quot;s3.maxKeys&quot;)"></a>
-      <a id="REGION:String(&quot;s3.maxKeys&quot;)"></a>
+      <a id="REGION:String(&quot;s3.region&quot;)"></a>
+      <a id="REGION:String(&quot;s3.region&quot;)"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">REGION</span><span class="result">: String(&quot;s3.maxKeys&quot;)</span>
+        <span class="name">REGION</span><span class="result">: String(&quot;s3.region&quot;)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.S3InputFormat$@REGION:String(&quot;s3.maxKeys&quot;)" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3InputFormat$@REGION:String(&quot;s3.region&quot;)" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -551,40 +585,74 @@
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.io.s3.S3InputFormat#setMaxKeys" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setMaxKeys(conf:org.apache.hadoop.conf.Configuration,limit:Int):Unit"></a>
-      <a id="setMaxKeys(Configuration,Int):Unit"></a>
+    </li><li name="geotrellis.spark.io.s3.S3InputFormat#setPartitionBytes" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setPartitionBytes(conf:org.apache.hadoop.conf.Configuration,bytes:Long):Unit"></a>
+      <a id="setPartitionBytes(Configuration,Long):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setMaxKeys</span><span class="params">(<span name="conf">conf: <span class="extype" name="org.apache.hadoop.conf.Configuration">Configuration</span></span>, <span name="limit">limit: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">setPartitionBytes</span><span class="params">(<span name="conf">conf: <span class="extype" name="org.apache.hadoop.conf.Configuration">Configuration</span></span>, <span name="bytes">bytes: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.S3InputFormat$@setMaxKeys(conf:org.apache.hadoop.conf.Configuration,limit:Int):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3InputFormat$@setPartitionBytes(conf:org.apache.hadoop.conf.Configuration,bytes:Long):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
-      
-    </li><li name="geotrellis.spark.io.s3.S3InputFormat#setMaxKeys" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setMaxKeys(job:org.apache.hadoop.mapreduce.Job,limit:Int):Unit"></a>
-      <a id="setMaxKeys(Job,Int):Unit"></a>
+      <p class="shortcomment cmt">Set desired partition size in bytes, at least one item per partition will be assigned</p>
+    </li><li name="geotrellis.spark.io.s3.S3InputFormat#setPartitionBytes" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setPartitionBytes(job:org.apache.hadoop.mapreduce.Job,bytes:Long):Unit"></a>
+      <a id="setPartitionBytes(Job,Long):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setMaxKeys</span><span class="params">(<span name="job">job: <span class="extype" name="org.apache.hadoop.mapreduce.Job">Job</span></span>, <span name="limit">limit: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">setPartitionBytes</span><span class="params">(<span name="job">job: <span class="extype" name="org.apache.hadoop.mapreduce.Job">Job</span></span>, <span name="bytes">bytes: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.S3InputFormat$@setMaxKeys(job:org.apache.hadoop.mapreduce.Job,limit:Int):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3InputFormat$@setPartitionBytes(job:org.apache.hadoop.mapreduce.Job,bytes:Long):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Set maximum number of keys per split, less may be returned</p>
+      <p class="shortcomment cmt">Set desired partition size in bytes, at least one item per partition will be assigned</p>
+    </li><li name="geotrellis.spark.io.s3.S3InputFormat#setPartitionCount" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setPartitionCount(conf:org.apache.hadoop.conf.Configuration,limit:Int):Unit"></a>
+      <a id="setPartitionCount(Configuration,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setPartitionCount</span><span class="params">(<span name="conf">conf: <span class="extype" name="org.apache.hadoop.conf.Configuration">Configuration</span></span>, <span name="limit">limit: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3InputFormat$@setPartitionCount(conf:org.apache.hadoop.conf.Configuration,limit:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Set desired partition count</p>
+    </li><li name="geotrellis.spark.io.s3.S3InputFormat#setPartitionCount" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="setPartitionCount(job:org.apache.hadoop.mapreduce.Job,limit:Int):Unit"></a>
+      <a id="setPartitionCount(Job,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setPartitionCount</span><span class="params">(<span name="job">job: <span class="extype" name="org.apache.hadoop.mapreduce.Job">Job</span></span>, <span name="limit">limit: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3InputFormat$@setPartitionCount(job:org.apache.hadoop.mapreduce.Job,limit:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Set desired partition count</p>
     </li><li name="geotrellis.spark.io.s3.S3InputFormat#setPrefix" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="setPrefix(conf:org.apache.hadoop.conf.Configuration,prefix:String):Unit"></a>
       <a id="setPrefix(Configuration,String):Unit"></a>
