@@ -1,0 +1,281 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>cache - geotrellis.spark.util.cache</title>
+          <meta name="description" content="cache - geotrellis.spark.util.cache" />
+          <meta name="keywords" content="cache geotrellis.spark.util.cache" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'geotrellis.spark.util.cache.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.spark">spark</a>.<a href="../package.html" class="extype" name="geotrellis.spark.util">util</a></p>
+        <h1>cache</h1><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.util.cache.package" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cache</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="geotrellis.spark.util.cache.AtomicCache" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AtomicCache[K,V]extendsCache[K,V]"></a>
+      <a id="AtomicCache[K,V]:AtomicCache[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomicCache.html"><span class="name">AtomicCache</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="Cache.html" class="extype" name="geotrellis.spark.util.cache.Cache">Cache</a>[<span class="extype" name="geotrellis.spark.util.cache.AtomicCache.K">K</span>, <span class="extype" name="geotrellis.spark.util.cache.AtomicCache.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.util.cache.package@AtomicCache[K,V]extendsCache[K,V]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Atomic cache provides an atomic getOrInsert(k,v) method
+This cache assumes that (k,v) pair is immutable
+</p>
+    </li><li name="geotrellis.spark.util.cache.BoundedCache" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BoundedCache[K,V]extendsCache[K,V]"></a>
+      <a id="BoundedCache[K,V]:BoundedCache[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="BoundedCache.html"><span class="name">BoundedCache</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="Cache.html" class="extype" name="geotrellis.spark.util.cache.Cache">Cache</a>[<span class="extype" name="geotrellis.spark.util.cache.BoundedCache.K">K</span>, <span class="extype" name="geotrellis.spark.util.cache.BoundedCache.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.util.cache.package@BoundedCache[K,V]extendsCache[K,V]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A hash backed cache with a size boundary
+Operations on this cache may required O(N) time to execute (N = size of cache)
+</p>
+    </li><li name="geotrellis.spark.util.cache.Cache" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Cache[K,V]extendsSerializable"></a>
+      <a id="Cache[K,V]:Cache[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Cache.html"><span class="name">Cache</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.util.cache.package@Cache[K,V]extendsSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Base trait for a caching strategy</p><div class="fullcomment"><div class="comment cmt"><p>Base trait for a caching strategy</p><p>K is the cache key
+V is the cache value
+</p></div></div>
+    </li><li name="geotrellis.spark.util.cache.FileCache" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FileCacheextendsCache[Long,Array[Byte]]"></a>
+      <a id="FileCache:FileCache"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FileCache.html"><span class="name">FileCache</span></a><span class="result"> extends <a href="Cache.html" class="extype" name="geotrellis.spark.util.cache.Cache">Cache</a>[<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.util.cache.package@FileCacheextendsCache[Long,Array[Byte]]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.util.cache.HashBackedCache" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="HashBackedCache[K,V]extendsCache[K,V]"></a>
+      <a id="HashBackedCache[K,V]:HashBackedCache[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="HashBackedCache.html"><span class="name">HashBackedCache</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="Cache.html" class="extype" name="geotrellis.spark.util.cache.Cache">Cache</a>[<span class="extype" name="geotrellis.spark.util.cache.HashBackedCache.K">K</span>, <span class="extype" name="geotrellis.spark.util.cache.HashBackedCache.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.util.cache.package@HashBackedCache[K,V]extendsCache[K,V]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An unbounded hash-backed cache
+Operations on this cache execute in O(1) time
+</p>
+    </li><li name="geotrellis.spark.util.cache.LRUCache" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LRUCache[K,V]extendsHashBackedCache[K,V]withOrderedBoundedCache[K,V]withAtomicCache[K,V]withLoggingCache[K,V]"></a>
+      <a id="LRUCache[K,V]:LRUCache[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="LRUCache.html"><span class="name">LRUCache</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="HashBackedCache.html" class="extype" name="geotrellis.spark.util.cache.HashBackedCache">HashBackedCache</a>[<span class="extype" name="geotrellis.spark.util.cache.LRUCache.K">K</span>, <span class="extype" name="geotrellis.spark.util.cache.LRUCache.V">V</span>] with <a href="OrderedBoundedCache.html" class="extype" name="geotrellis.spark.util.cache.OrderedBoundedCache">OrderedBoundedCache</a>[<span class="extype" name="geotrellis.spark.util.cache.LRUCache.K">K</span>, <span class="extype" name="geotrellis.spark.util.cache.LRUCache.V">V</span>] with <a href="AtomicCache.html" class="extype" name="geotrellis.spark.util.cache.AtomicCache">AtomicCache</a>[<span class="extype" name="geotrellis.spark.util.cache.LRUCache.K">K</span>, <span class="extype" name="geotrellis.spark.util.cache.LRUCache.V">V</span>] with <a href="LoggingCache.html" class="extype" name="geotrellis.spark.util.cache.LoggingCache">LoggingCache</a>[<span class="extype" name="geotrellis.spark.util.cache.LRUCache.K">K</span>, <span class="extype" name="geotrellis.spark.util.cache.LRUCache.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.util.cache.package@LRUCache[K,V]extendsHashBackedCache[K,V]withOrderedBoundedCache[K,V]withAtomicCache[K,V]withLoggingCache[K,V]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.util.cache.LoggingCache" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="LoggingCache[K,V]extendsCache[K,V]"></a>
+      <a id="LoggingCache[K,V]:LoggingCache[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="LoggingCache.html"><span class="name">LoggingCache</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="Cache.html" class="extype" name="geotrellis.spark.util.cache.Cache">Cache</a>[<span class="extype" name="geotrellis.spark.util.cache.LoggingCache.K">K</span>, <span class="extype" name="geotrellis.spark.util.cache.LoggingCache.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.util.cache.package@LoggingCache[K,V]extendsCache[K,V]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.util.cache.MRUCache" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MRUCache[K,V]extendsHashBackedCache[K,V]withOrderedBoundedCache[K,V]withAtomicCache[K,V]withLoggingCache[K,V]"></a>
+      <a id="MRUCache[K,V]:MRUCache[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MRUCache.html"><span class="name">MRUCache</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="HashBackedCache.html" class="extype" name="geotrellis.spark.util.cache.HashBackedCache">HashBackedCache</a>[<span class="extype" name="geotrellis.spark.util.cache.MRUCache.K">K</span>, <span class="extype" name="geotrellis.spark.util.cache.MRUCache.V">V</span>] with <a href="OrderedBoundedCache.html" class="extype" name="geotrellis.spark.util.cache.OrderedBoundedCache">OrderedBoundedCache</a>[<span class="extype" name="geotrellis.spark.util.cache.MRUCache.K">K</span>, <span class="extype" name="geotrellis.spark.util.cache.MRUCache.V">V</span>] with <a href="AtomicCache.html" class="extype" name="geotrellis.spark.util.cache.AtomicCache">AtomicCache</a>[<span class="extype" name="geotrellis.spark.util.cache.MRUCache.K">K</span>, <span class="extype" name="geotrellis.spark.util.cache.MRUCache.V">V</span>] with <a href="LoggingCache.html" class="extype" name="geotrellis.spark.util.cache.LoggingCache">LoggingCache</a>[<span class="extype" name="geotrellis.spark.util.cache.MRUCache.K">K</span>, <span class="extype" name="geotrellis.spark.util.cache.MRUCache.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.util.cache.package@MRUCache[K,V]extendsHashBackedCache[K,V]withOrderedBoundedCache[K,V]withAtomicCache[K,V]withLoggingCache[K,V]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.util.cache.NoCache" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NoCache[K,V]extendsCache[K,V]"></a>
+      <a id="NoCache[K,V]:NoCache[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NoCache.html"><span class="name">NoCache</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="Cache.html" class="extype" name="geotrellis.spark.util.cache.Cache">Cache</a>[<span class="extype" name="geotrellis.spark.util.cache.NoCache.K">K</span>, <span class="extype" name="geotrellis.spark.util.cache.NoCache.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.util.cache.package@NoCache[K,V]extendsCache[K,V]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A Cache Strategy that completely ignores caching and always returns the input object
+Operations on this cache execute in O(1) time
+</p>
+    </li><li name="geotrellis.spark.util.cache.OrderedBoundedCache" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="OrderedBoundedCache[K,V]extendsBoundedCache[K,V]"></a>
+      <a id="OrderedBoundedCache[K,V]:OrderedBoundedCache[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="OrderedBoundedCache.html"><span class="name">OrderedBoundedCache</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="BoundedCache.html" class="extype" name="geotrellis.spark.util.cache.BoundedCache">BoundedCache</a>[<span class="extype" name="geotrellis.spark.util.cache.OrderedBoundedCache.K">K</span>, <span class="extype" name="geotrellis.spark.util.cache.OrderedBoundedCache.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.util.cache.package@OrderedBoundedCache[K,V]extendsBoundedCache[K,V]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>
