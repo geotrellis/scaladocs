@@ -279,23 +279,6 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.FastMapHistogram#fromHistograms" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="fromHistograms(hs:TraversableOnce[geotrellis.raster.histogram.Histogram[Int]]):geotrellis.raster.histogram.FastMapHistogram"></a>
-      <a id="fromHistograms(TraversableOnce[Histogram[Int]]):FastMapHistogram"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">fromHistograms</span><span class="params">(<span name="hs">hs: <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="scala.Int">Int</span>]]</span>)</span><span class="result">: <a href="FastMapHistogram.html" class="extype" name="geotrellis.raster.histogram.FastMapHistogram">FastMapHistogram</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.FastMapHistogram$@fromHistograms(hs:TraversableOnce[geotrellis.raster.histogram.Histogram[Int]]):geotrellis.raster.histogram.FastMapHistogram" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      
     </li><li name="geotrellis.raster.histogram.FastMapHistogram#fromTile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="fromTile(r:geotrellis.raster.Tile):geotrellis.raster.histogram.FastMapHistogram"></a>
       <a id="fromTile(Tile):FastMapHistogram"></a>
@@ -313,28 +296,6 @@
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.histogram.FastMapHistogram#fromTileDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fromTileDouble(r:geotrellis.raster.Tile,significantDigits:Int):geotrellis.raster.histogram.FastMapHistogram"></a>
-      <a id="fromTileDouble(Tile,Int):FastMapHistogram"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">fromTileDouble</span><span class="params">(<span name="r">r: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>, <span name="significantDigits">significantDigits: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="FastMapHistogram.html" class="extype" name="geotrellis.raster.histogram.FastMapHistogram">FastMapHistogram</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.FastMapHistogram$@fromTileDouble(r:geotrellis.raster.Tile,significantDigits:Int):geotrellis.raster.histogram.FastMapHistogram" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Create a histogram from double values in a raster.</p><div class="fullcomment"><div class="comment cmt"><p>Create a histogram from double values in a raster.</p><p>FastMapHistogram only works with integer values, which is good for performance
-but means that, in order to use FastMapHistogram with double values, each value
-must be multiplied by a power of ten to preserve significant fractional digits.</p><p>For example, if you want to save one significant digit (2.1 from 2.123), set
-sigificantDigits to 1, and the histogram will save 2.1 as &quot;21&quot;.</p><p>Important: Be sure that the maximum value in the rater multiplied by
-           10 ^ significantDigits does not overflow Int.MaxValue (2, 147, 483, 647).
-</p></div></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>

@@ -95,7 +95,7 @@ tree algorithm.&quot;  The Journal of Machine Learning Research 11
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.raster.histogram.StreamingHistogram#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(m:Int,startingBuckets:Option[java.util.TreeMap[Double,Int]],startingDeltas:Option[java.util.TreeMap[geotrellis.raster.histogram.StreamingHistogram.DeltaType,Unit]]):geotrellis.raster.histogram.StreamingHistogram"></a>
+      <a id="&lt;init&gt;(m:Int,startingBuckets:Option[java.util.TreeMap[Double,Int]],startingDeltas:Option[java.util.TreeMap[geotrellis.raster.histogram.StreamingHistogram.DeltaType,Unit]],minimum:Double,maximum:Double):geotrellis.raster.histogram.StreamingHistogram"></a>
       <a id="&lt;init&gt;:StreamingHistogram"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -103,10 +103,10 @@ tree algorithm.&quot;  The Journal of Machine Learning Research 11
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">StreamingHistogram</span><span class="params">(<span name="m">m: <span class="extype" name="scala.Int">Int</span></span>, <span name="startingBuckets">startingBuckets: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="java.util.TreeMap">TreeMap</span>[<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>]]</span>, <span name="startingDeltas">startingDeltas: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="java.util.TreeMap">TreeMap</span>[<span class="extype" name="geotrellis.raster.histogram.StreamingHistogram.DeltaType">DeltaType</span>, <span class="extype" name="scala.Unit">Unit</span>]]</span>)</span>
+        <span class="name">StreamingHistogram</span><span class="params">(<span name="m">m: <span class="extype" name="scala.Int">Int</span></span>, <span name="startingBuckets">startingBuckets: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="java.util.TreeMap">TreeMap</span>[<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>]]</span>, <span name="startingDeltas">startingDeltas: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="java.util.TreeMap">TreeMap</span>[<span class="extype" name="geotrellis.raster.histogram.StreamingHistogram.DeltaType">DeltaType</span>, <span class="extype" name="scala.Unit">Unit</span>]]</span>, <span name="minimum">minimum: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">Double.PositiveInfinity</span></span>, <span name="maximum">maximum: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">Double.NegativeInfinity</span></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@&lt;init&gt;(m:Int,startingBuckets:Option[java.util.TreeMap[Double,Int]],startingDeltas:Option[java.util.TreeMap[geotrellis.raster.histogram.StreamingHistogram.DeltaType,Unit]]):geotrellis.raster.histogram.StreamingHistogram" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@&lt;init&gt;(m:Int,startingBuckets:Option[java.util.TreeMap[Double,Int]],startingDeltas:Option[java.util.TreeMap[geotrellis.raster.histogram.StreamingHistogram.DeltaType,Unit]],minimum:Double,maximum:Double):geotrellis.raster.histogram.StreamingHistogram" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
@@ -117,7 +117,7 @@ tree algorithm.&quot;  The Journal of Machine Learning Research 11
         <div id="types" class="types members">
               <h3>Type Members</h3>
               <ol><li name="geotrellis.raster.histogram.StreamingHistogram.DeltaCompare" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="DeltaCompareextendsComparator[(Double,(Double,Int),(Double,Int))]"></a>
+      <a id="DeltaCompareextendsComparator[(Double,(Double,Int),(Double,Int))]withSerializable"></a>
       <a id="DeltaCompare:DeltaCompare"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -125,10 +125,10 @@ tree algorithm.&quot;  The Journal of Machine Learning Research 11
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="StreamingHistogram$DeltaCompare.html"><span class="name">DeltaCompare</span></a><span class="result"> extends <span class="extype" name="java.util.Comparator">Comparator</span>[(<span class="extype" name="scala.Double">Double</span>, (<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>), (<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>))]</span>
+        <a href="StreamingHistogram$DeltaCompare.html"><span class="name">DeltaCompare</span></a><span class="result"> extends <span class="extype" name="java.util.Comparator">Comparator</span>[(<span class="extype" name="scala.Double">Double</span>, (<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>), (<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>))] with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@DeltaCompareextendsComparator[(Double,(Double,Int),(Double,Int))]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@DeltaCompareextendsComparator[(Double,(Double,Int),(Double,Int))]withSerializable" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
@@ -190,8 +190,8 @@ tree algorithm.&quot;  The Journal of Machine Learning Research 11
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Combine operator: create a new histogram from this one and
-another without altering either.</p>
+      <p class="shortcomment cmt">Create a new histogram from this one and another without
+altering either.</p>
     </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a>
       <a id="==(Any):Boolean"></a>
@@ -209,6 +209,23 @@ another without altering either.</p>
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.raster.histogram.StreamingHistogram#areaUnderCurve" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="areaUnderCurve():Double"></a>
+      <a id="areaUnderCurve():Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">areaUnderCurve</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@areaUnderCurve():Double" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Return the area under the curve.</p>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -226,6 +243,40 @@ another without altering either.</p>
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.raster.histogram.StreamingHistogram#bucketCount" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="bucketCount():Int"></a>
+      <a id="bucketCount():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bucketCount</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@bucketCount():Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+    </li><li name="geotrellis.raster.histogram.StreamingHistogram#buckets" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="buckets():List[geotrellis.raster.histogram.StreamingHistogram.BucketType]"></a>
+      <a id="buckets():List[BucketType]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">buckets</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="geotrellis.raster.histogram.StreamingHistogram.BucketType">BucketType</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@buckets():List[geotrellis.raster.histogram.StreamingHistogram.BucketType]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -314,6 +365,23 @@ another without altering either.</p>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@countItems(items:Seq[geotrellis.raster.histogram.StreamingHistogram.BucketType]):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.histogram.StreamingHistogram#deltas" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="deltas():List[geotrellis.raster.histogram.StreamingHistogram.DeltaType]"></a>
+      <a id="deltas():List[DeltaType]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">deltas</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="geotrellis.raster.histogram.StreamingHistogram.DeltaType">DeltaType</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@deltas():List[geotrellis.raster.histogram.StreamingHistogram.DeltaType]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
@@ -411,58 +479,6 @@ another without altering either.</p>
     </span>
       <p class="shortcomment cmt">For each bucket label ...</p><div class="fullcomment"><div class="comment cmt"><p>For each bucket label ...
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.StreamingHistogram#generateStatistics" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="generateStatistics():geotrellis.raster.summary.Statistics[Double]"></a>
-      <a id="generateStatistics():Statistics[Double]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">generateStatistics</span><span class="params">()</span><span class="result">: <a href="../summary/Statistics.html" class="extype" name="geotrellis.raster.summary.Statistics">Statistics</a>[<span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@generateStatistics():geotrellis.raster.summary.Statistics[Double]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Generate Statistics.</p><div class="fullcomment"><div class="comment cmt"><p>Generate Statistics.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.StreamingHistogram#getAreaUnderCurve" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getAreaUnderCurve():Double"></a>
-      <a id="getAreaUnderCurve():Double"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getAreaUnderCurve</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@getAreaUnderCurve():Double" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Return the area under the curve.</p>
-    </li><li name="geotrellis.raster.histogram.StreamingHistogram#getBuckets" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getBuckets():List[geotrellis.raster.histogram.StreamingHistogram.BucketType]"></a>
-      <a id="getBuckets():List[BucketType]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getBuckets</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="geotrellis.raster.histogram.StreamingHistogram.BucketType">BucketType</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@getBuckets():List[geotrellis.raster.histogram.StreamingHistogram.BucketType]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -480,257 +496,6 @@ another without altering either.</p>
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.StreamingHistogram#getDeltas" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getDeltas():List[geotrellis.raster.histogram.StreamingHistogram.DeltaType]"></a>
-      <a id="getDeltas():List[DeltaType]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getDeltas</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="geotrellis.raster.histogram.StreamingHistogram.DeltaType">DeltaType</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@getDeltas():List[geotrellis.raster.histogram.StreamingHistogram.DeltaType]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.histogram.StreamingHistogram#getItemCount" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getItemCount(item:Double):Int"></a>
-      <a id="getItemCount(Double):Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getItemCount</span><span class="params">(<span name="item">item: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@getItemCount(item:Double):Int" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Get the (approximate) number of occurances of an item.</p><div class="fullcomment"><div class="comment cmt"><p>Get the (approximate) number of occurances of an item.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.StreamingHistogram#getMaxValue" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getMaxValue():Double"></a>
-      <a id="getMaxValue():Double"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getMaxValue</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@getMaxValue():Double" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Get the (approximate) max value.</p><div class="fullcomment"><div class="comment cmt"><p>Get the (approximate) max value.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.StreamingHistogram#getMean" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getMean():Double"></a>
-      <a id="getMean():Double"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getMean</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@getMean():Double" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt"> Mean.</p><div class="fullcomment"><div class="comment cmt"><p> Mean.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.StreamingHistogram#getMedian" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getMedian():Double"></a>
-      <a id="getMedian():Double"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getMedian</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@getMedian():Double" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Median.</p><div class="fullcomment"><div class="comment cmt"><p>Median.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.Histogram#getMinMaxValues" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getMinMaxValues():(T,T)"></a>
-      <a id="getMinMaxValues():(Double,Double)"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getMinMaxValues</span><span class="params">()</span><span class="result">: (<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>)</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@getMinMaxValues():(T,T)" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Return the smallest and largest items seen as a tuple.</p><div class="fullcomment"><div class="comment cmt"><p>Return the smallest and largest items seen as a tuple.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.StreamingHistogram#getMinValue" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getMinValue():Double"></a>
-      <a id="getMinValue():Double"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getMinValue</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@getMinValue():Double" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Get the (approximate) min value.</p><div class="fullcomment"><div class="comment cmt"><p>Get the (approximate) min value.  This is only approximate
-because the lowest bucket may be a composite one.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.StreamingHistogram#getMode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getMode():Double"></a>
-      <a id="getMode():Double"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getMode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@getMode():Double" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Return the approximate mode of the distribution.</p><div class="fullcomment"><div class="comment cmt"><p>Return the approximate mode of the distribution.  This is done
-by simply returning the label of most populous bucket (so this
-answer could be really bad).
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.StreamingHistogram#getPercentile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getPercentile(q:Double):Double"></a>
-      <a id="getPercentile(Double):Double"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getPercentile</span><span class="params">(<span name="q">q: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@getPercentile(q:Double):Double" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.histogram.StreamingHistogram#getPercentileBreaks" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getPercentileBreaks(qs:Seq[Double]):Seq[Double]"></a>
-      <a id="getPercentileBreaks(Seq[Double]):Seq[Double]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getPercentileBreaks</span><span class="params">(<span name="qs">qs: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@getPercentileBreaks(qs:Seq[Double]):Seq[Double]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">For each q in qs, all between 0 and 1, find a number
-(approximately) at the qth percentile.</p>
-    </li><li name="geotrellis.raster.histogram.StreamingHistogram#getPercentileRanking" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getPercentileRanking(item:Double):Double"></a>
-      <a id="getPercentileRanking(Double):Double"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getPercentileRanking</span><span class="params">(<span name="item">item: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@getPercentileRanking(item:Double):Double" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Get the (approximate) percentile of this item.</p>
-    </li><li name="geotrellis.raster.histogram.StreamingHistogram#getQuantileBreaks" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getQuantileBreaks(num:Int):Array[Double]"></a>
-      <a id="getQuantileBreaks(Int):Array[Double]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getQuantileBreaks</span><span class="params">(<span name="num">num: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@getQuantileBreaks(num:Int):Array[Double]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="MutableHistogram.html" class="extype" name="geotrellis.raster.histogram.MutableHistogram">MutableHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.StreamingHistogram#getTotalCount" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getTotalCount():Int"></a>
-      <a id="getTotalCount():Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getTotalCount</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@getTotalCount():Int" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Total number of samples used to build this histogram.</p><div class="fullcomment"><div class="comment cmt"><p>Total number of samples used to build this histogram.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.StreamingHistogram#getValues" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getValues():Array[Double]"></a>
-      <a id="getValues():Array[Double]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getValues</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@getValues():Array[Double]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Return an array of bucket values.</p><div class="fullcomment"><div class="comment cmt"><p>Return an array of bucket values.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -765,6 +530,152 @@ answer could be really bad).
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.raster.histogram.StreamingHistogram#itemCount" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="itemCount(item:Double):Int"></a>
+      <a id="itemCount(Double):Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">itemCount</span><span class="params">(<span name="item">item: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@itemCount(item:Double):Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Get the (approximate) number of occurances of an item.</p><div class="fullcomment"><div class="comment cmt"><p>Get the (approximate) number of occurances of an item.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+    </li><li name="geotrellis.raster.histogram.StreamingHistogram#maxValue" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="maxValue():Option[Double]"></a>
+      <a id="maxValue():Option[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">maxValue</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@maxValue():Option[Double]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Get the (approximate) max value.</p><div class="fullcomment"><div class="comment cmt"><p>Get the (approximate) max value.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+    </li><li name="geotrellis.raster.histogram.StreamingHistogram#mean" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mean():Option[Double]"></a>
+      <a id="mean():Option[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mean</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@mean():Option[Double]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"> Mean.</p><div class="fullcomment"><div class="comment cmt"><p> Mean.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+    </li><li name="geotrellis.raster.histogram.StreamingHistogram#median" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="median():Option[Double]"></a>
+      <a id="median():Option[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">median</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@median():Option[Double]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Median.</p><div class="fullcomment"><div class="comment cmt"><p>Median.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+    </li><li name="geotrellis.raster.histogram.StreamingHistogram#merge" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="merge(histogram:geotrellis.raster.histogram.Histogram[Double]):geotrellis.raster.histogram.Histogram[Double]"></a>
+      <a id="merge(Histogram[Double]):Histogram[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">merge</span><span class="params">(<span name="histogram">histogram: <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@merge(histogram:geotrellis.raster.histogram.Histogram[Double]):geotrellis.raster.histogram.Histogram[Double]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+    </li><li name="geotrellis.raster.histogram.Histogram#minMaxValues" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="minMaxValues():Option[(T,T)]"></a>
+      <a id="minMaxValues():Option[(Double,Double)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">minMaxValues</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[(<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@minMaxValues():Option[(T,T)]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Return the smallest and largest items seen as a tuple.</p><div class="fullcomment"><div class="comment cmt"><p>Return the smallest and largest items seen as a tuple.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+    </li><li name="geotrellis.raster.histogram.StreamingHistogram#minValue" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="minValue():Option[Double]"></a>
+      <a id="minValue():Option[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">minValue</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@minValue():Option[Double]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Get the (approximate) min value.</p><div class="fullcomment"><div class="comment cmt"><p>Get the (approximate) min value.  This is only approximate
+because the lowest bucket may be a combined one.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+    </li><li name="geotrellis.raster.histogram.StreamingHistogram#mode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mode():Option[Double]"></a>
+      <a id="mode():Option[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@mode():Option[Double]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Return the approximate mode of the distribution.</p><div class="fullcomment"><div class="comment cmt"><p>Return the approximate mode of the distribution.  This is done
+by simply returning the label of most populous bucket (so this
+answer could be really bad).
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="geotrellis.raster.histogram.StreamingHistogram#mutable" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mutable():geotrellis.raster.histogram.StreamingHistogram"></a>
       <a id="mutable():StreamingHistogram"></a>
@@ -834,6 +745,81 @@ answer could be really bad).
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.raster.histogram.StreamingHistogram#percentile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="percentile(q:Double):Double"></a>
+      <a id="percentile(Double):Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">percentile</span><span class="params">(<span name="q">q: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@percentile(q:Double):Double" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.histogram.StreamingHistogram#percentileBreaks" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="percentileBreaks(qs:Seq[Double]):Seq[Double]"></a>
+      <a id="percentileBreaks(Seq[Double]):Seq[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">percentileBreaks</span><span class="params">(<span name="qs">qs: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@percentileBreaks(qs:Seq[Double]):Seq[Double]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">For each q in qs, all between 0 and 1, find a number
+(approximately) at the qth percentile.</p>
+    </li><li name="geotrellis.raster.histogram.StreamingHistogram#percentileRanking" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="percentileRanking(item:Double):Double"></a>
+      <a id="percentileRanking(Double):Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">percentileRanking</span><span class="params">(<span name="item">item: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@percentileRanking(item:Double):Double" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Get the (approximate) percentile of this item.</p>
+    </li><li name="geotrellis.raster.histogram.StreamingHistogram#quantileBreaks" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="quantileBreaks(num:Int):Array[Double]"></a>
+      <a id="quantileBreaks(Int):Array[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">quantileBreaks</span><span class="params">(<span name="num">num: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@quantileBreaks(num:Int):Array[Double]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This method return the (approximate) quantile breaks of the
+distribution of points that the histogram has seen so far.</p><div class="fullcomment"><div class="comment cmt"><p>This method return the (approximate) quantile breaks of the
+distribution of points that the histogram has seen so far.  It
+is guranteed that no value in the returned array will be outside
+the range minimum-maximum range of values seen.
+</p></div><dl class="paramcmts block"><dt class="param">num</dt><dd class="cmt"><p>The number of breaks desired
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="MutableHistogram.html" class="extype" name="geotrellis.raster.histogram.MutableHistogram">MutableHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="geotrellis.raster.histogram.StreamingHistogram#rawValues" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="rawValues():Array[Double]"></a>
       <a id="rawValues():Array[Double]"></a>
@@ -869,8 +855,26 @@ answer could be really bad).
     </span>
       <p class="shortcomment cmt">Make a change to the distribution to approximate changing the
 value of a particular item.</p><div class="fullcomment"><div class="comment cmt"><p>Make a change to the distribution to approximate changing the
-value of a particular item.
+value of a particular item.</p><p>Note: _min and _max are not changed by this.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="MutableHistogram.html" class="extype" name="geotrellis.raster.histogram.MutableHistogram">MutableHistogram</a></dd></dl></div>
+    </li><li name="geotrellis.raster.histogram.StreamingHistogram#statistics" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="statistics():Option[geotrellis.raster.summary.Statistics[Double]]"></a>
+      <a id="statistics():Option[Statistics[Double]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">statistics</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../summary/Statistics.html" class="extype" name="geotrellis.raster.summary.Statistics">Statistics</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@statistics():Option[geotrellis.raster.summary.Statistics[Double]]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Generate Statistics.</p><div class="fullcomment"><div class="comment cmt"><p>Generate Statistics.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -888,23 +892,6 @@ value of a particular item.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.Histogram#toJSON" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toJSON:String"></a>
-      <a id="toJSON:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toJSON</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@toJSON:String" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>
@@ -922,6 +909,24 @@ value of a particular item.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.raster.histogram.StreamingHistogram#totalCount" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="totalCount():Int"></a>
+      <a id="totalCount():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">totalCount</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@totalCount():Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Total number of samples used to build this histogram.</p><div class="fullcomment"><div class="comment cmt"><p>Total number of samples used to build this histogram.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="geotrellis.raster.histogram.StreamingHistogram#uncountItem" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="uncountItem(item:Double):Unit"></a>
       <a id="uncountItem(Double):Unit"></a>
@@ -938,7 +943,7 @@ value of a particular item.
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Uncount item.</p><div class="fullcomment"><div class="comment cmt"><p>Uncount item.
+      <p class="shortcomment cmt">Uncount item.</p><div class="fullcomment"><div class="comment cmt"><p>Uncount item.</p><p>Note: _min and _max are not changed by this.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="MutableHistogram.html" class="extype" name="geotrellis.raster.histogram.MutableHistogram">MutableHistogram</a></dd></dl></div>
     </li><li name="geotrellis.raster.histogram.StreamingHistogram#update" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="update(other:geotrellis.raster.histogram.Histogram[Double]):Unit"></a>
@@ -958,6 +963,24 @@ value of a particular item.
     </span>
       <p class="shortcomment cmt">Update this histogram with the entries from another.</p><div class="fullcomment"><div class="comment cmt"><p>Update this histogram with the entries from another.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="MutableHistogram.html" class="extype" name="geotrellis.raster.histogram.MutableHistogram">MutableHistogram</a></dd></dl></div>
+    </li><li name="geotrellis.raster.histogram.StreamingHistogram#values" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="values():Array[Double]"></a>
+      <a id="values():Array[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">values</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.StreamingHistogram@values():Array[Double]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Return an array of bucket values.</p><div class="fullcomment"><div class="comment cmt"><p>Return an array of bucket values.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>

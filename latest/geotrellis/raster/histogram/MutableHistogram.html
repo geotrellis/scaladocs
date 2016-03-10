@@ -54,7 +54,7 @@
           <div class="superTypes hiddenContent"><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span>], <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
             <span class="toggle">Known Subclasses</span>
-            <div class="subClasses hiddenContent"><a href="ArrayHistogram.html" class="extype" name="geotrellis.raster.histogram.ArrayHistogram">ArrayHistogram</a>, <a href="CompressedArrayHistogram.html" class="extype" name="geotrellis.raster.histogram.CompressedArrayHistogram">CompressedArrayHistogram</a>, <a href="FastMapHistogram.html" class="extype" name="geotrellis.raster.histogram.FastMapHistogram">FastMapHistogram</a>, <a href="MapHistogram.html" class="extype" name="geotrellis.raster.histogram.MapHistogram">MapHistogram</a>, <a href="MutableHistogramInt.html" class="extype" name="geotrellis.raster.histogram.MutableHistogramInt">MutableHistogramInt</a>, <a href="StreamingHistogram.html" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a></div>
+            <div class="subClasses hiddenContent"><a href="FastMapHistogram.html" class="extype" name="geotrellis.raster.histogram.FastMapHistogram">FastMapHistogram</a>, <a href="MutableIntHistogram.html" class="extype" name="geotrellis.raster.histogram.MutableIntHistogram">MutableIntHistogram</a>, <a href="StreamingHistogram.html" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a></div>
           </div></div>
         
 
@@ -116,7 +116,24 @@
 
         <div id="values" class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="geotrellis.raster.histogram.MutableHistogram#countItem" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+              <ol><li name="geotrellis.raster.histogram.Histogram#bucketCount" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="bucketCount():Int"></a>
+      <a id="bucketCount():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bucketCount</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@bucketCount():Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+    </li><li name="geotrellis.raster.histogram.MutableHistogram#countItem" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="countItem(item:T,count:Int):Unit"></a>
       <a id="countItem(T,Int):Unit"></a>
       <h4 class="signature">
@@ -187,176 +204,124 @@ of occurances of 'item'.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.Histogram#generateStatistics" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="generateStatistics():geotrellis.raster.summary.Statistics[T]"></a>
-      <a id="generateStatistics():Statistics[T]"></a>
+    </li><li name="geotrellis.raster.histogram.Histogram#itemCount" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="itemCount(item:T):Int"></a>
+      <a id="itemCount(T):Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">generateStatistics</span><span class="params">()</span><span class="result">: <a href="../summary/Statistics.html" class="extype" name="geotrellis.raster.summary.Statistics">Statistics</a>[<span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span>]</span>
+        <span class="name">itemCount</span><span class="params">(<span name="item">item: <span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@generateStatistics():geotrellis.raster.summary.Statistics[T]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.Histogram#getItemCount" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="getItemCount(item:T):Int"></a>
-      <a id="getItemCount(T):Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getItemCount</span><span class="params">(<span name="item">item: <span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@getItemCount(item:T):Int" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@itemCount(item:T):Int" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
       <p class="shortcomment cmt">Return the number of occurances for 'item'.</p><div class="fullcomment"><div class="comment cmt"><p>Return the number of occurances for 'item'.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.Histogram#getMaxValue" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="getMaxValue():T"></a>
-      <a id="getMaxValue():T"></a>
+    </li><li name="geotrellis.raster.histogram.Histogram#maxValue" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="maxValue():Option[T]"></a>
+      <a id="maxValue():Option[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getMaxValue</span><span class="params">()</span><span class="result">: <span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span></span>
+        <span class="name">maxValue</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@getMaxValue():T" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@maxValue():Option[T]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
       <p class="shortcomment cmt">Return the largest item seen.</p><div class="fullcomment"><div class="comment cmt"><p>Return the largest item seen.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.Histogram#getMean" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="getMean():Double"></a>
-      <a id="getMean():Double"></a>
+    </li><li name="geotrellis.raster.histogram.Histogram#mean" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="mean():Option[Double]"></a>
+      <a id="mean():Option[Double]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getMean</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+        <span class="name">mean</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@getMean():Double" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@mean():Option[Double]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.Histogram#getMedian" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="getMedian():T"></a>
-      <a id="getMedian():T"></a>
+    </li><li name="geotrellis.raster.histogram.Histogram#median" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="median():Option[T]"></a>
+      <a id="median():Option[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getMedian</span><span class="params">()</span><span class="result">: <span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span></span>
+        <span class="name">median</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@getMedian():T" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@median():Option[T]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.Histogram#getMinValue" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="getMinValue():T"></a>
-      <a id="getMinValue():T"></a>
+    </li><li name="geotrellis.raster.histogram.Histogram#merge" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="merge(histogram:geotrellis.raster.histogram.Histogram[T]):geotrellis.raster.histogram.Histogram[T]"></a>
+      <a id="merge(Histogram[T]):Histogram[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getMinValue</span><span class="params">()</span><span class="result">: <span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span></span>
+        <span class="name">merge</span><span class="params">(<span name="histogram">histogram: <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span>]</span>)</span><span class="result">: <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@getMinValue():T" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@merge(histogram:geotrellis.raster.histogram.Histogram[T]):geotrellis.raster.histogram.Histogram[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+    </li><li name="geotrellis.raster.histogram.Histogram#minValue" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="minValue():Option[T]"></a>
+      <a id="minValue():Option[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">minValue</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@minValue():Option[T]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
       <p class="shortcomment cmt">Return the smallest item seen.</p><div class="fullcomment"><div class="comment cmt"><p>Return the smallest item seen.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.Histogram#getMode" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="getMode():T"></a>
-      <a id="getMode():T"></a>
+    </li><li name="geotrellis.raster.histogram.Histogram#mode" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="mode():Option[T]"></a>
+      <a id="mode():Option[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getMode</span><span class="params">()</span><span class="result">: <span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span></span>
+        <span class="name">mode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@getMode():T" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.MutableHistogram#getQuantileBreaks" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="getQuantileBreaks(num:Int):Array[T]"></a>
-      <a id="getQuantileBreaks(Int):Array[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getQuantileBreaks</span><span class="params">(<span name="num">num: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@getQuantileBreaks(num:Int):Array[T]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.MutableHistogram">MutableHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.Histogram#getTotalCount" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="getTotalCount():Int"></a>
-      <a id="getTotalCount():Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getTotalCount</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@getTotalCount():Int" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Return the total number of occurances for all items.</p><div class="fullcomment"><div class="comment cmt"><p>Return the total number of occurances for all items.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.Histogram#getValues" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="getValues():Array[T]"></a>
-      <a id="getValues():Array[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getValues</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@getValues():Array[T]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@mode():Option[T]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" />
       </a>
     </span>
@@ -379,6 +344,23 @@ of occurances of 'item'.
     </span>
       <p class="shortcomment cmt">Return a mutable copy of this histogram.</p><div class="fullcomment"><div class="comment cmt"><p>Return a mutable copy of this histogram.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+    </li><li name="geotrellis.raster.histogram.MutableHistogram#quantileBreaks" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="quantileBreaks(num:Int):Array[T]"></a>
+      <a id="quantileBreaks(Int):Array[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">quantileBreaks</span><span class="params">(<span name="num">num: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@quantileBreaks(num:Int):Array[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.MutableHistogram">MutableHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="geotrellis.raster.histogram.Histogram#rawValues" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="rawValues():Array[T]"></a>
       <a id="rawValues():Array[T]"></a>
@@ -413,6 +395,41 @@ of occurances of 'item'.
       </a>
     </span>
       <p class="shortcomment cmt">Sets the item to the given count.</p>
+    </li><li name="geotrellis.raster.histogram.Histogram#statistics" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="statistics():Option[geotrellis.raster.summary.Statistics[T]]"></a>
+      <a id="statistics():Option[Statistics[T]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">statistics</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../summary/Statistics.html" class="extype" name="geotrellis.raster.summary.Statistics">Statistics</a>[<span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@statistics():Option[geotrellis.raster.summary.Statistics[T]]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+    </li><li name="geotrellis.raster.histogram.Histogram#totalCount" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="totalCount():Int"></a>
+      <a id="totalCount():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">totalCount</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@totalCount():Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Return the total number of occurances for all items.</p><div class="fullcomment"><div class="comment cmt"><p>Return the total number of occurances for all items.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="geotrellis.raster.histogram.MutableHistogram#uncountItem" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="uncountItem(item:T):Unit"></a>
       <a id="uncountItem(T):Unit"></a>
@@ -447,6 +464,23 @@ of occurances of 'item'.
       </a>
     </span>
       
+    </li><li name="geotrellis.raster.histogram.Histogram#values" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="values():Array[T]"></a>
+      <a id="values():Array[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">values</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@values():Array[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li></ol>
             </div>
 
@@ -617,24 +651,6 @@ of occurances of 'item'.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.Histogram#getMinMaxValues" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getMinMaxValues():(T,T)"></a>
-      <a id="getMinMaxValues():(T,T)"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getMinMaxValues</span><span class="params">()</span><span class="result">: (<span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span>, <span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span>)</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@getMinMaxValues():(T,T)" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Return the smallest and largest items seen as a tuple.</p><div class="fullcomment"><div class="comment cmt"><p>Return the smallest and largest items seen as a tuple.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -669,6 +685,24 @@ of occurances of 'item'.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.raster.histogram.Histogram#minMaxValues" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="minMaxValues():Option[(T,T)]"></a>
+      <a id="minMaxValues():Option[(T,T)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">minMaxValues</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[(<span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span>, <span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@minMaxValues():Option[(T,T)]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Return the smallest and largest items seen as a tuple.</p><div class="fullcomment"><div class="comment cmt"><p>Return the smallest and largest items seen as a tuple.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -737,23 +771,6 @@ of occurances of 'item'.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.raster.histogram.Histogram#toJSON" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toJSON:String"></a>
-      <a id="toJSON:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toJSON</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.histogram.MutableHistogram@toJSON:String" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>

@@ -1373,28 +1373,6 @@ integer, else 0.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="hydrology/HydrologyMethods.html" class="extype" name="geotrellis.raster.hydrology.HydrologyMethods">HydrologyMethods</a></dd></dl></div>
-    </li><li name="geotrellis.raster.summary.SummaryMethods#arrayHistogram" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="arrayHistogram(size:Int):geotrellis.raster.histogram.ArrayHistogram"></a>
-      <a id="arrayHistogram(Int):ArrayHistogram"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">arrayHistogram</span><span class="params">(<span name="size">size: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="histogram/ArrayHistogram.html" class="extype" name="geotrellis.raster.histogram.ArrayHistogram">ArrayHistogram</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package$$withTileMethods@arrayHistogram(size:Int):geotrellis.raster.histogram.ArrayHistogram" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Implements a histogram in terms of an array of the given size.</p><div class="fullcomment"><div class="comment cmt"><p>Implements a histogram in terms of an array of the given size.
-The size provided must be less than or equal to the number of distinct
-values in the Tile.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="summary/SummaryMethods.html" class="extype" name="geotrellis.raster.summary.SummaryMethods">SummaryMethods</a></dd><dt>Note</dt><dd><span class="cmt"><p>Tiles with a double type (FloatConstantNoDataCellType, DoubleConstantNoDataCellType) will have their values
-          rounded to integers when making the Histogram.
-</p></span></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -1443,6 +1421,24 @@ values in the Tile.
       </span>
       </h4><span class="permalink">
       <a href="../../index.html#geotrellis.raster.package$$withTileMethods@classBreaks(numBreaks:Int):Array[Int]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Generate quantile class breaks for a given raster.</p><div class="fullcomment"><div class="comment cmt"><p>Generate quantile class breaks for a given raster.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="summary/SummaryMethods.html" class="extype" name="geotrellis.raster.summary.SummaryMethods">SummaryMethods</a></dd></dl></div>
+    </li><li name="geotrellis.raster.summary.SummaryMethods#classBreaksDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="classBreaksDouble(numBreaks:Int):Array[Double]"></a>
+      <a id="classBreaksDouble(Int):Array[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">classBreaksDouble</span><span class="params">(<span name="numBreaks">numBreaks: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package$$withTileMethods@classBreaksDouble(numBreaks:Int):Array[Double]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" />
       </a>
     </span>
@@ -1676,30 +1672,23 @@ values in the Tile.
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="crop/CropMethods.html" class="extype" name="geotrellis.raster.crop.CropMethods">CropMethods</a></dd></dl></div>
     </li><li name="geotrellis.raster.summary.SummaryMethods#doubleHistogram" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="doubleHistogram(significantDigits:Int):geotrellis.raster.histogram.Histogram[Int]"></a>
-      <a id="doubleHistogram(Int):Histogram[Int]"></a>
+      <a id="doubleHistogram:geotrellis.raster.histogram.Histogram[Double]"></a>
+      <a id="doubleHistogram:Histogram[Double]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">doubleHistogram</span><span class="params">(<span name="significantDigits">significantDigits: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="histogram/Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+        <span class="name">doubleHistogram</span><span class="result">: <a href="histogram/Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package$$withTileMethods@doubleHistogram(significantDigits:Int):geotrellis.raster.histogram.Histogram[Int]" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.package$$withTileMethods@doubleHistogram:geotrellis.raster.histogram.Histogram[Double]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Create a histogram from double values in a raster.</p><div class="fullcomment"><div class="comment cmt"><p>Create a histogram from double values in a raster.</p><p>FastMapHistogram only works with integer values, which is great for performance
-but means that, in order to use FastMapHistogram with double values, each value
-must be multiplied by a power of ten to preserve significant fractional digits.</p><p>For example, if you want to save one significant digit (2.1 from 2.123), set
-sigificantDigits to 1, and the histogram will save 2.1 as &quot;21&quot; by multiplying
-each value by 10.  The multiplier is 10 raised to the power of significant digits
-(e.g. 1 digit: 10, 2 digits: 100, and so on).</p><p>Important: Be sure that the maximum value in the rater multiplied by
-           10 ^ significantDigits does not overflow Int.MaxValue (2, 147, 483, 647).
-</p></div><dl class="paramcmts block"><dt class="param">significantDigits</dt><dd class="cmt"><p>Number of significant digits to preserve by multiplying
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="summary/SummaryMethods.html" class="extype" name="geotrellis.raster.summary.SummaryMethods">SummaryMethods</a></dd></dl></div>
+      <p class="shortcomment cmt">Create a histogram from double values in a raster.</p><div class="fullcomment"><div class="comment cmt"><p>Create a histogram from double values in a raster.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="summary/SummaryMethods.html" class="extype" name="geotrellis.raster.summary.SummaryMethods">SummaryMethods</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -4198,6 +4187,40 @@ integer, else 0.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="summary/polygonal/PolygonalSummaryMethods.html" class="extype" name="geotrellis.raster.summary.polygonal.PolygonalSummaryMethods">PolygonalSummaryMethods</a></dd></dl></div>
+    </li><li name="geotrellis.raster.summary.polygonal.PolygonalSummaryMethods#polygonalHistogramDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="polygonalHistogramDouble(extent:geotrellis.vector.Extent,geom:geotrellis.vector.MultiPolygon):geotrellis.raster.histogram.Histogram[Double]"></a>
+      <a id="polygonalHistogramDouble(Extent,MultiPolygon):Histogram[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">polygonalHistogramDouble</span><span class="params">(<span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="geom">geom: <a href="../vector/MultiPolygon.html" class="extype" name="geotrellis.vector.MultiPolygon">MultiPolygon</a></span>)</span><span class="result">: <a href="histogram/Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package$$withTileMethods@polygonalHistogramDouble(extent:geotrellis.vector.Extent,geom:geotrellis.vector.MultiPolygon):geotrellis.raster.histogram.Histogram[Double]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="summary/polygonal/PolygonalSummaryMethods.html" class="extype" name="geotrellis.raster.summary.polygonal.PolygonalSummaryMethods">PolygonalSummaryMethods</a></dd></dl></div>
+    </li><li name="geotrellis.raster.summary.polygonal.PolygonalSummaryMethods#polygonalHistogramDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="polygonalHistogramDouble(extent:geotrellis.vector.Extent,geom:geotrellis.vector.Polygon):geotrellis.raster.histogram.Histogram[Double]"></a>
+      <a id="polygonalHistogramDouble(Extent,Polygon):Histogram[Double]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">polygonalHistogramDouble</span><span class="params">(<span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="geom">geom: <a href="../vector/Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a></span>)</span><span class="result">: <a href="histogram/Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package$$withTileMethods@polygonalHistogramDouble(extent:geotrellis.vector.Extent,geom:geotrellis.vector.Polygon):geotrellis.raster.histogram.Histogram[Double]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="summary/polygonal/PolygonalSummaryMethods.html" class="extype" name="geotrellis.raster.summary.polygonal.PolygonalSummaryMethods">PolygonalSummaryMethods</a></dd></dl></div>
     </li><li name="geotrellis.raster.summary.polygonal.PolygonalSummaryMethods#polygonalMax" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="polygonalMax(extent:geotrellis.vector.Extent,geom:geotrellis.vector.MultiPolygon):Int"></a>
       <a id="polygonalMax(Extent,MultiPolygon):Int"></a>
@@ -5011,18 +5034,36 @@ and alpha (with 0 being transparent and 255 being opaque).
                Ints.
 </p></span></dd></dl></div>
     </li><li name="geotrellis.raster.summary.SummaryMethods#statistics" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="statistics:geotrellis.raster.summary.Statistics[Int]"></a>
-      <a id="statistics:Statistics[Int]"></a>
+      <a id="statistics:Option[geotrellis.raster.summary.Statistics[Int]]"></a>
+      <a id="statistics:Option[Statistics[Int]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">statistics</span><span class="result">: <a href="summary/Statistics.html" class="extype" name="geotrellis.raster.summary.Statistics">Statistics</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+        <span class="name">statistics</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="summary/Statistics.html" class="extype" name="geotrellis.raster.summary.Statistics">Statistics</a>[<span class="extype" name="scala.Int">Int</span>]]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package$$withTileMethods@statistics:geotrellis.raster.summary.Statistics[Int]" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.package$$withTileMethods@statistics:Option[geotrellis.raster.summary.Statistics[Int]]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Determine statistical data for the given histogram.</p><div class="fullcomment"><div class="comment cmt"><p>Determine statistical data for the given histogram.</p><p>This includes mean, median, mode, stddev, and min and max values.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="summary/SummaryMethods.html" class="extype" name="geotrellis.raster.summary.SummaryMethods">SummaryMethods</a></dd></dl></div>
+    </li><li name="geotrellis.raster.summary.SummaryMethods#statisticsDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="statisticsDouble:Option[geotrellis.raster.summary.Statistics[Double]]"></a>
+      <a id="statisticsDouble:Option[Statistics[Double]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">statisticsDouble</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="summary/Statistics.html" class="extype" name="geotrellis.raster.summary.Statistics">Statistics</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package$$withTileMethods@statisticsDouble:Option[geotrellis.raster.summary.Statistics[Double]]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" />
       </a>
     </span>
