@@ -90,7 +90,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.osgeo.proj4j.datum.Datum#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(code:String,transform:Array[Double],ellipsoid:org.osgeo.proj4j.datum.Ellipsoid,name:String):org.osgeo.proj4j.datum.Datum"></a>
+      <a id="&lt;init&gt;(code:String,transform:Array[Double],grids:java.util.List[org.osgeo.proj4j.datum.Grid],ellipsoid:org.osgeo.proj4j.datum.Ellipsoid,name:String):org.osgeo.proj4j.datum.Datum"></a>
       <a id="&lt;init&gt;:Datum"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -98,10 +98,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Datum</span><span class="params">(<span name="code">code: <span class="extype" name="java.lang.String">String</span></span>, <span name="transform">transform: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="ellipsoid">ellipsoid: <a href="Ellipsoid.html" class="extype" name="org.osgeo.proj4j.datum.Ellipsoid">Ellipsoid</a></span>, <span name="name">name: <span class="extype" name="java.lang.String">String</span></span>)</span>
+        <span class="name">Datum</span><span class="params">(<span name="code">code: <span class="extype" name="java.lang.String">String</span></span>, <span name="transform">transform: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="grids">grids: <span class="extype" name="java.util.List">List</span>[<a href="Grid.html" class="extype" name="org.osgeo.proj4j.datum.Grid">Grid</a>]</span>, <span name="ellipsoid">ellipsoid: <a href="Ellipsoid.html" class="extype" name="org.osgeo.proj4j.datum.Ellipsoid">Ellipsoid</a></span>, <span name="name">name: <span class="extype" name="java.lang.String">String</span></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#org.osgeo.proj4j.datum.Datum@&lt;init&gt;(code:String,transform:Array[Double],ellipsoid:org.osgeo.proj4j.datum.Ellipsoid,name:String):org.osgeo.proj4j.datum.Datum" title="Permalink" target="_top">
+      <a href="../../../../index.html#org.osgeo.proj4j.datum.Datum@&lt;init&gt;(code:String,transform:Array[Double],grids:java.util.List[org.osgeo.proj4j.datum.Grid],ellipsoid:org.osgeo.proj4j.datum.Ellipsoid,name:String):org.osgeo.proj4j.datum.Datum" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -450,6 +450,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.osgeo.proj4j.datum.Datum#inverseShift" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="inverseShift(xy:org.osgeo.proj4j.ProjCoordinate):Unit"></a>
+      <a id="inverseShift(ProjCoordinate):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inverseShift</span><span class="params">(<span name="xy">xy: <a href="../ProjCoordinate.html" class="extype" name="org.osgeo.proj4j.ProjCoordinate">ProjCoordinate</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.osgeo.proj4j.datum.Datum@inverseShift(xy:org.osgeo.proj4j.ProjCoordinate):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      
     </li><li name="org.osgeo.proj4j.datum.Datum#isEqual" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="isEqual(datum:org.osgeo.proj4j.datum.Datum):Boolean"></a>
       <a id="isEqual(Datum):Boolean"></a>
@@ -535,6 +552,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.osgeo.proj4j.datum.Datum#shift" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="shift(xy:org.osgeo.proj4j.ProjCoordinate):Unit"></a>
+      <a id="shift(ProjCoordinate):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">shift</span><span class="params">(<span name="xy">xy: <a href="../ProjCoordinate.html" class="extype" name="org.osgeo.proj4j.ProjCoordinate">ProjCoordinate</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.osgeo.proj4j.datum.Datum@shift(xy:org.osgeo.proj4j.ProjCoordinate):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
