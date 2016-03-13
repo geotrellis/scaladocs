@@ -44,16 +44,16 @@
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">class</span>
+        <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">MultiBandGeoTiff</span><span class="result"> extends <a href="GeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiff">GeoTiff</a>[<a href="../../MultiBandTile.html" class="extype" name="geotrellis.raster.MultiBandTile">MultiBandTile</a>]</span>
+        <span class="name">MultiBandGeoTiff</span><span class="params">(<span name="tile">tile: <a href="../../MultiBandTile.html" class="extype" name="geotrellis.raster.MultiBandTile">MultiBandTile</a></span>, <span name="extent">extent: <a href="../../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="crs">crs: <a href="../../../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="tags">tags: <a href="Tags.html" class="extype" name="geotrellis.raster.io.geotiff.Tags">Tags</a></span>, <span name="options">options: <a href="GeoTiffOptions.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffOptions">GeoTiffOptions</a></span>)</span><span class="result"> extends <a href="GeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiff">GeoTiff</a>[<a href="../../MultiBandTile.html" class="extype" name="geotrellis.raster.MultiBandTile">MultiBandTile</a>] with <a href="../../SimpleMultiBandTile.html" class="extype" name="geotrellis.raster.SimpleMultiBandTile">SimpleMultiBandTile</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="GeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiff">GeoTiff</a>[<a href="../../MultiBandTile.html" class="extype" name="geotrellis.raster.MultiBandTile">MultiBandTile</a>], <a href="GeoTiffData.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffData">GeoTiffData</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="../../SimpleMultiBandTile.html" class="extype" name="geotrellis.raster.SimpleMultiBandTile">SimpleMultiBandTile</a>, <a href="GeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiff">GeoTiff</a>[<a href="../../MultiBandTile.html" class="extype" name="geotrellis.raster.MultiBandTile">MultiBandTile</a>], <a href="GeoTiffData.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffData">GeoTiffData</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -71,7 +71,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.raster.io.geotiff.MultiBandGeoTiff"><span>MultiBandGeoTiff</span></li><li class="in" name="geotrellis.raster.io.geotiff.GeoTiff"><span>GeoTiff</span></li><li class="in" name="geotrellis.raster.io.geotiff.GeoTiffData"><span>GeoTiffData</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.raster.io.geotiff.MultiBandGeoTiff"><span>MultiBandGeoTiff</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="geotrellis.raster.SimpleMultiBandTile"><span>SimpleMultiBandTile</span></li><li class="in" name="geotrellis.raster.io.geotiff.GeoTiff"><span>GeoTiff</span></li><li class="in" name="geotrellis.raster.io.geotiff.GeoTiffData"><span>GeoTiffData</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -185,6 +185,40 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.MultiBandGeoTiff#bands" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="bands(bandSequence:Int*)(implicitd:DummyImplicit):geotrellis.raster.ArrayMultiBandTile"></a>
+      <a id="bands(Int*)(DummyImplicit):ArrayMultiBandTile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bands</span><span class="params">(<span name="bandSequence">bandSequence: <span class="extype" name="scala.Int">Int</span>*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span></span>)</span><span class="result">: <a href="../../ArrayMultiBandTile.html" class="extype" name="geotrellis.raster.ArrayMultiBandTile">ArrayMultiBandTile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.MultiBandGeoTiff@bands(bandSequence:Int*)(implicitd:DummyImplicit):geotrellis.raster.ArrayMultiBandTile" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.io.geotiff.MultiBandGeoTiff">MultiBandGeoTiff</a> → <a href="../../SimpleMultiBandTile.html" class="extype" name="geotrellis.raster.SimpleMultiBandTile">SimpleMultiBandTile</a></dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.MultiBandGeoTiff#bands" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="bands(bandSequence:Seq[Int]):geotrellis.raster.ArrayMultiBandTile"></a>
+      <a id="bands(Seq[Int]):ArrayMultiBandTile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bands</span><span class="params">(<span name="bandSequence">bandSequence: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="../../ArrayMultiBandTile.html" class="extype" name="geotrellis.raster.ArrayMultiBandTile">ArrayMultiBandTile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.MultiBandGeoTiff@bands(bandSequence:Seq[Int]):geotrellis.raster.ArrayMultiBandTile" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.io.geotiff.MultiBandGeoTiff">MultiBandGeoTiff</a> → <a href="../../SimpleMultiBandTile.html" class="extype" name="geotrellis.raster.SimpleMultiBandTile">SimpleMultiBandTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.MultiBandGeoTiff#cellType" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="cellType:geotrellis.raster.CellType"></a>
       <a id="cellType:CellType"></a>
@@ -259,23 +293,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(x$1:Any):Boolean"></a>
-      <a id="equals(Any):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.MultiBandGeoTiff@equals(x$1:Any):Boolean" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.MultiBandGeoTiff#extent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="extent:geotrellis.vector.Extent"></a>
       <a id="extent:Extent"></a>
@@ -329,23 +346,6 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.io.geotiff.MultiBandGeoTiff@getClass():Class[_]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="hashCode():Int"></a>
-      <a id="hashCode():Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.MultiBandGeoTiff@hashCode():Int" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -452,6 +452,40 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.MultiBandGeoTiff#options" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="options:geotrellis.raster.io.geotiff.GeoTiffOptions"></a>
+      <a id="options:GeoTiffOptions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">options</span><span class="result">: <a href="GeoTiffOptions.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffOptions">GeoTiffOptions</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.MultiBandGeoTiff@options:geotrellis.raster.io.geotiff.GeoTiffOptions" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.io.geotiff.GeoTiffData#pixelSampleType" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="pixelSampleType:Option[geotrellis.raster.PixelSampleType]"></a>
+      <a id="pixelSampleType:Option[PixelSampleType]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pixelSampleType</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../../PixelSampleType.html" class="extype" name="geotrellis.raster.PixelSampleType">PixelSampleType</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.MultiBandGeoTiff@pixelSampleType:Option[geotrellis.raster.PixelSampleType]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffData.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffData">GeoTiffData</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiff#projectedRaster" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="projectedRaster:geotrellis.raster.ProjectedRaster[T]"></a>
       <a id="projectedRaster:ProjectedRaster[MultiBandTile]"></a>
@@ -503,40 +537,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiff">GeoTiff</a></dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.MultiBandGeoTiff#subset" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="subset(bands:Int*)(implicitd:DummyImplicit):geotrellis.raster.ArrayMultiBandTile"></a>
-      <a id="subset(Int*)(DummyImplicit):ArrayMultiBandTile"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">subset</span><span class="params">(<span name="bands">bands: <span class="extype" name="scala.Int">Int</span>*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span></span>)</span><span class="result">: <a href="../../ArrayMultiBandTile.html" class="extype" name="geotrellis.raster.ArrayMultiBandTile">ArrayMultiBandTile</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.MultiBandGeoTiff@subset(bands:Int*)(implicitd:DummyImplicit):geotrellis.raster.ArrayMultiBandTile" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.io.geotiff.MultiBandGeoTiff#subset" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="subset(bands:Seq[Int]):geotrellis.raster.ArrayMultiBandTile"></a>
-      <a id="subset(Seq[Int]):ArrayMultiBandTile"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">subset</span><span class="params">(<span name="bands">bands: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="../../ArrayMultiBandTile.html" class="extype" name="geotrellis.raster.ArrayMultiBandTile">ArrayMultiBandTile</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.MultiBandGeoTiff@subset(bands:Seq[Int]):geotrellis.raster.ArrayMultiBandTile" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -605,23 +605,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiff">GeoTiff</a></dd></dl></div>
-    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toString():String"></a>
-      <a id="toString():String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.MultiBandGeoTiff@toString():String" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -717,7 +700,17 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="geotrellis.raster.io.geotiff.GeoTiff">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="geotrellis.raster.SimpleMultiBandTile">
+              <h3>Inherited from <a href="../../SimpleMultiBandTile.html" class="extype" name="geotrellis.raster.SimpleMultiBandTile">SimpleMultiBandTile</a></h3>
+            </div><div class="parent" name="geotrellis.raster.io.geotiff.GeoTiff">
               <h3>Inherited from <a href="GeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiff">GeoTiff</a>[<a href="../../MultiBandTile.html" class="extype" name="geotrellis.raster.MultiBandTile">MultiBandTile</a>]</h3>
             </div><div class="parent" name="geotrellis.raster.io.geotiff.GeoTiffData">
               <h3>Inherited from <a href="GeoTiffData.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffData">GeoTiffData</a></h3>

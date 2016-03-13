@@ -47,13 +47,13 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">SingleBandGeoTiff</span>
+        <span class="name">SingleBandGeoTiff</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -71,7 +71,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.raster.io.geotiff.SingleBandGeoTiff"><span>SingleBandGeoTiff</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.raster.io.geotiff.SingleBandGeoTiff"><span>SingleBandGeoTiff</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -224,23 +224,6 @@ If decompress = true, the GeoTIFF will be fully decompressed and held in memory.
       <p class="shortcomment cmt">Read a single-band GeoTIFF file from a byte array.</p><div class="fullcomment"><div class="comment cmt"><p>Read a single-band GeoTIFF file from a byte array.
 The GeoTIFF will be fully decompressed and held in memory.
 </p></div></div>
-    </li><li name="geotrellis.raster.io.geotiff.SingleBandGeoTiff#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(tile:geotrellis.raster.Tile,extent:geotrellis.vector.Extent,crs:geotrellis.proj4.CRS,tags:geotrellis.raster.io.geotiff.Tags,options:geotrellis.raster.io.geotiff.GeoTiffOptions):geotrellis.raster.io.geotiff.SingleBandGeoTiff"></a>
-      <a id="apply(Tile,Extent,CRS,Tags,GeoTiffOptions):SingleBandGeoTiff"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="tile">tile: <a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>, <span name="extent">extent: <a href="../../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="crs">crs: <a href="../../../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="tags">tags: <a href="Tags.html" class="extype" name="geotrellis.raster.io.geotiff.Tags">Tags</a></span>, <span name="options">options: <a href="GeoTiffOptions.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffOptions">GeoTiffOptions</a></span>)</span><span class="result">: <a href="SingleBandGeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.SingleBandGeoTiff">SingleBandGeoTiff</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.SingleBandGeoTiff$@apply(tile:geotrellis.raster.Tile,extent:geotrellis.vector.Extent,crs:geotrellis.proj4.CRS,tags:geotrellis.raster.io.geotiff.Tags,options:geotrellis.raster.io.geotiff.GeoTiffOptions):geotrellis.raster.io.geotiff.SingleBandGeoTiff" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
-      </a>
-    </span>
-      
     </li><li name="geotrellis.raster.io.geotiff.SingleBandGeoTiff#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="apply(tile:geotrellis.raster.Tile,extent:geotrellis.vector.Extent,crs:geotrellis.proj4.CRS):geotrellis.raster.io.geotiff.SingleBandGeoTiff"></a>
       <a id="apply(Tile,Extent,CRS):SingleBandGeoTiff"></a>
@@ -580,23 +563,6 @@ The tile data will remain tiled/striped and compressed in the TIFF format.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.SingleBandGeoTiff#unapply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="unapply(sbg:geotrellis.raster.io.geotiff.SingleBandGeoTiff):Option[(geotrellis.raster.Tile,geotrellis.vector.Extent,geotrellis.proj4.CRS,geotrellis.raster.io.geotiff.Tags)]"></a>
-      <a id="unapply(SingleBandGeoTiff):Option[(Tile,Extent,CRS,Tags)]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">unapply</span><span class="params">(<span name="sbg">sbg: <a href="SingleBandGeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.SingleBandGeoTiff">SingleBandGeoTiff</a></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[(<a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>, <a href="../../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>, <a href="../../../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a>, <a href="Tags.html" class="extype" name="geotrellis.raster.io.geotiff.Tags">Tags</a>)]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.SingleBandGeoTiff$@unapply(sbg:geotrellis.raster.io.geotiff.SingleBandGeoTiff):Option[(geotrellis.raster.Tile,geotrellis.vector.Extent,geotrellis.proj4.CRS,geotrellis.raster.io.geotiff.Tags)]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -675,7 +641,11 @@ The tile data will remain tiled/striped and compressed in the TIFF format.
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
