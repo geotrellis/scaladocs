@@ -28,13 +28,13 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img src="../../../lib/trait_big.png" />
+        <img alt="Trait" src="../../../lib/trait_big.png" />
         <p id="owner"><a href="../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../package.html" class="extype" name="geotrellis.spark">spark</a>.<a href="package.html" class="extype" name="geotrellis.spark.io">io</a></p>
         <h1>LayerReader</h1><h3><span class="morelinks"><div>Related Doc:
             <a href="package.html" class="extype" name="geotrellis.spark.io">package io</a>
           </div></span></h3><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       </div>
@@ -45,13 +45,13 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">LayerReader</span><span class="tparams">[<span name="ID">ID</span>, <span name="ReturnType">ReturnType</span>]</span><span class="result"> extends <a href="Reader.html" class="extype" name="geotrellis.spark.io.Reader">Reader</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.ID">ID</span>, <span class="extype" name="geotrellis.spark.io.LayerReader.ReturnType">ReturnType</span>]</span>
+        <span class="name">LayerReader</span><span class="tparams">[<span name="ID">ID</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="Reader.html" class="extype" name="geotrellis.spark.io.Reader">Reader</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.ID">ID</span>, <span class="extype" name="geotrellis.spark.io.LayerReader.ReturnType">ReturnType</span>], (<span class="extype" name="geotrellis.spark.io.LayerReader.ID">ID</span>) ⇒ <span class="extype" name="geotrellis.spark.io.LayerReader.ReturnType">ReturnType</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
             <span class="toggle">Known Subclasses</span>
             <div class="subClasses hiddenContent"><a href="accumulo/AccumuloLayerReader.html" class="extype" name="geotrellis.spark.io.accumulo.AccumuloLayerReader">AccumuloLayerReader</a>, <a href="file/FileLayerReader.html" class="extype" name="geotrellis.spark.io.file.FileLayerReader">FileLayerReader</a>, <a href="FilteringLayerReader.html" class="extype" name="geotrellis.spark.io.FilteringLayerReader">FilteringLayerReader</a>, <a href="hadoop/HadoopLayerReader.html" class="extype" name="geotrellis.spark.io.hadoop.HadoopLayerReader">HadoopLayerReader</a>, <a href="s3/S3LayerReader.html" class="extype" name="geotrellis.spark.io.s3.S3LayerReader">S3LayerReader</a></div>
@@ -65,22 +65,21 @@
               <ol>
                 
                 <li class="alpha in"><span>Alphabetic</span></li>
-                <li class="inherit out"><span>By inheritance</span></li>
+                <li class="inherit out"><span>By Inheritance</span></li>
               </ol>
             </div>
         <div id="ancestors">
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.spark.io.LayerReader"><span>LayerReader</span></li><li class="in" name="geotrellis.spark.io.Reader"><span>Reader</span></li><li class="in" name="scala.Function1"><span>Function1</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.spark.io.LayerReader"><span>LayerReader</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
             <ol>
               <li class="hideall out"><span>Hide All</span></li>
-              <li class="showall in"><span>Show all</span></li>
+              <li class="showall in"><span>Show All</span></li>
             </ol>
-            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
           </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -102,31 +101,31 @@
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
         <span class="name">defaultNumPartitions</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader@defaultNumPartitions:Int" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
     </li><li name="geotrellis.spark.io.LayerReader#read" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="read(id:ID,numPartitions:Int):ReturnType"></a>
-      <a id="read(ID,Int):ReturnType"></a>
+      <a id="read[K,V,M](id:ID,numPartitions:Int)(implicitevidence$1:geotrellis.spark.io.avro.AvroRecordCodec[K],implicitevidence$2:geotrellis.spark.Boundable[K],implicitevidence$3:spray.json.JsonFormat[K],implicitevidence$4:scala.reflect.ClassTag[K],implicitevidence$5:geotrellis.spark.io.avro.AvroRecordCodec[V],implicitevidence$6:scala.reflect.ClassTag[V],implicitevidence$7:spray.json.JsonFormat[M],implicitevidence$8:monocle.PLens[M,M,geotrellis.spark.Bounds[K],geotrellis.spark.Bounds[K]]):org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M]"></a>
+      <a id="read[K,V,M](ID,Int)(AvroRecordCodec[K],Boundable[K],JsonFormat[K],ClassTag[K],AvroRecordCodec[V],ClassTag[V],JsonFormat[M],PLens[M,M,Bounds[K],Bounds[K]]):RDD[(K,V)]withMetadata[M]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">read</span><span class="params">(<span name="id">id: <span class="extype" name="geotrellis.spark.io.LayerReader.ID">ID</span></span>, <span name="numPartitions">numPartitions: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.spark.io.LayerReader.ReturnType">ReturnType</span></span>
+        <span class="name">read</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="M">M</span>]</span><span class="params">(<span name="id">id: <span class="extype" name="geotrellis.spark.io.LayerReader.ID">ID</span></span>, <span name="numPartitions">numPartitions: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="avro/AvroRecordCodec.html" class="extype" name="geotrellis.spark.io.avro.AvroRecordCodec">AvroRecordCodec</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.K">K</span>]</span>, <span name="arg1">arg1: <a href="../Boundable.html" class="extype" name="geotrellis.spark.Boundable">Boundable</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.K">K</span>]</span>, <span name="arg2">arg2: <span class="extype" name="spray.json.JsonFormat">JsonFormat</span>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.K">K</span>]</span>, <span name="arg3">arg3: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.K">K</span>]</span>, <span name="arg4">arg4: <a href="avro/AvroRecordCodec.html" class="extype" name="geotrellis.spark.io.avro.AvroRecordCodec">AvroRecordCodec</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.V">V</span>]</span>, <span name="arg5">arg5: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.V">V</span>]</span>, <span name="arg6">arg6: <span class="extype" name="spray.json.JsonFormat">JsonFormat</span>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.M">M</span>]</span>, <span name="arg7">arg7: <span class="extype" name="monocle.PLens">PLens</span>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.M">M</span>, <span class="extype" name="geotrellis.spark.io.LayerReader.read.M">M</span>, <a href="../Bounds.html" class="extype" name="geotrellis.spark.Bounds">Bounds</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.K">K</span>], <a href="../Bounds.html" class="extype" name="geotrellis.spark.Bounds">Bounds</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.K">K</span>]]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.io.LayerReader.read.K">K</span>, <span class="extype" name="geotrellis.spark.io.LayerReader.read.V">V</span>)] with <a href="../Metadata.html" class="extype" name="geotrellis.spark.Metadata">Metadata</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.M">M</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.io.LayerReader@read(id:ID,numPartitions:Int):ReturnType" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+      <a href="../../../index.html#geotrellis.spark.io.LayerReader@read[K,V,M](id:ID,numPartitions:Int)(implicitevidence$1:geotrellis.spark.io.avro.AvroRecordCodec[K],implicitevidence$2:geotrellis.spark.Boundable[K],implicitevidence$3:spray.json.JsonFormat[K],implicitevidence$4:scala.reflect.ClassTag[K],implicitevidence$5:geotrellis.spark.io.avro.AvroRecordCodec[V],implicitevidence$6:scala.reflect.ClassTag[V],implicitevidence$7:spray.json.JsonFormat[M],implicitevidence$8:monocle.PLens[M,M,geotrellis.spark.Bounds[K],geotrellis.spark.Bounds[K]]):org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
@@ -148,7 +147,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader@!=(x$1:Any):Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -165,7 +164,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader@##():Int" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -182,47 +181,10 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader@==(x$1:Any):Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.Function1#andThen" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="andThen[A](g:R=&gt;A):T1=&gt;A"></a>
-      <a id="andThen[A]((ReturnType)⇒A):(ID)⇒A"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">andThen</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: (<span class="extype" name="geotrellis.spark.io.LayerReader.ReturnType">ReturnType</span>) ⇒ <span class="extype" name="scala.Function1.andThen.A">A</span></span>)</span><span class="result">: (<span class="extype" name="geotrellis.spark.io.LayerReader.ID">ID</span>) ⇒ <span class="extype" name="scala.Function1.andThen.A">A</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.io.LayerReader@andThen[A](g:R=&gt;A):T1=&gt;A" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Function1</dd><dt>Annotations</dt><dd>
-                <span class="name">@unspecialized</span><span class="args">()</span>
-              
-        </dd></dl></div>
-    </li><li name="geotrellis.spark.io.Reader#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply(key:K):V"></a>
-      <a id="apply(ID):ReturnType"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="key">key: <span class="extype" name="geotrellis.spark.io.LayerReader.ID">ID</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.spark.io.LayerReader.ReturnType">ReturnType</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.io.LayerReader@apply(key:K):V" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Reader.html" class="extype" name="geotrellis.spark.io.Reader">Reader</a> → Function1</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -236,7 +198,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader@asInstanceOf[T0]:T0" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
@@ -253,7 +215,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader@clone():Object" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -261,26 +223,6 @@
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
-              
-        </dd></dl></div>
-    </li><li name="scala.Function1#compose" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="compose[A](g:A=&gt;T1):A=&gt;R"></a>
-      <a id="compose[A]((A)⇒ID):(A)⇒ReturnType"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">compose</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="g">g: (<span class="extype" name="scala.Function1.compose.A">A</span>) ⇒ <span class="extype" name="geotrellis.spark.io.LayerReader.ID">ID</span></span>)</span><span class="result">: (<span class="extype" name="scala.Function1.compose.A">A</span>) ⇒ <span class="extype" name="geotrellis.spark.io.LayerReader.ReturnType">ReturnType</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.io.LayerReader@compose[A](g:A=&gt;T1):A=&gt;R" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Function1</dd><dt>Annotations</dt><dd>
-                <span class="name">@unspecialized</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -296,7 +238,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -313,7 +255,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader@equals(x$1:Any):Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -330,7 +272,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader@finalize():Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -353,7 +295,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader@getClass():Class[_]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -370,7 +312,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader@hashCode():Int" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -387,7 +329,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
@@ -404,7 +346,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -421,7 +363,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader@notify():Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -438,27 +380,44 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader@notifyAll():Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.spark.io.LayerReader#read" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="read(id:ID):ReturnType"></a>
-      <a id="read(ID):ReturnType"></a>
+    </li><li name="geotrellis.spark.io.LayerReader#read" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="read[K,V,M](id:ID)(implicitevidence$9:geotrellis.spark.io.avro.AvroRecordCodec[K],implicitevidence$10:geotrellis.spark.Boundable[K],implicitevidence$11:spray.json.JsonFormat[K],implicitevidence$12:scala.reflect.ClassTag[K],implicitevidence$13:geotrellis.spark.io.avro.AvroRecordCodec[V],implicitevidence$14:scala.reflect.ClassTag[V],implicitevidence$15:spray.json.JsonFormat[M],implicitevidence$16:monocle.PLens[M,M,geotrellis.spark.Bounds[K],geotrellis.spark.Bounds[K]]):org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M]"></a>
+      <a id="read[K,V,M](ID)(AvroRecordCodec[K],Boundable[K],JsonFormat[K],ClassTag[K],AvroRecordCodec[V],ClassTag[V],JsonFormat[M],PLens[M,M,Bounds[K],Bounds[K]]):RDD[(K,V)]withMetadata[M]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">read</span><span class="params">(<span name="id">id: <span class="extype" name="geotrellis.spark.io.LayerReader.ID">ID</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.spark.io.LayerReader.ReturnType">ReturnType</span></span>
+        <span class="name">read</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="M">M</span>]</span><span class="params">(<span name="id">id: <span class="extype" name="geotrellis.spark.io.LayerReader.ID">ID</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="avro/AvroRecordCodec.html" class="extype" name="geotrellis.spark.io.avro.AvroRecordCodec">AvroRecordCodec</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.K">K</span>]</span>, <span name="arg1">arg1: <a href="../Boundable.html" class="extype" name="geotrellis.spark.Boundable">Boundable</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.K">K</span>]</span>, <span name="arg2">arg2: <span class="extype" name="spray.json.JsonFormat">JsonFormat</span>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.K">K</span>]</span>, <span name="arg3">arg3: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.K">K</span>]</span>, <span name="arg4">arg4: <a href="avro/AvroRecordCodec.html" class="extype" name="geotrellis.spark.io.avro.AvroRecordCodec">AvroRecordCodec</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.V">V</span>]</span>, <span name="arg5">arg5: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.V">V</span>]</span>, <span name="arg6">arg6: <span class="extype" name="spray.json.JsonFormat">JsonFormat</span>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.M">M</span>]</span>, <span name="arg7">arg7: <span class="extype" name="monocle.PLens">PLens</span>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.M">M</span>, <span class="extype" name="geotrellis.spark.io.LayerReader.read.M">M</span>, <a href="../Bounds.html" class="extype" name="geotrellis.spark.Bounds">Bounds</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.K">K</span>], <a href="../Bounds.html" class="extype" name="geotrellis.spark.Bounds">Bounds</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.K">K</span>]]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.io.LayerReader.read.K">K</span>, <span class="extype" name="geotrellis.spark.io.LayerReader.read.V">V</span>)] with <a href="../Metadata.html" class="extype" name="geotrellis.spark.Metadata">Metadata</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.read.M">M</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.io.LayerReader@read(id:ID):ReturnType" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+      <a href="../../../index.html#geotrellis.spark.io.LayerReader@read[K,V,M](id:ID)(implicitevidence$9:geotrellis.spark.io.avro.AvroRecordCodec[K],implicitevidence$10:geotrellis.spark.Boundable[K],implicitevidence$11:spray.json.JsonFormat[K],implicitevidence$12:scala.reflect.ClassTag[K],implicitevidence$13:geotrellis.spark.io.avro.AvroRecordCodec[V],implicitevidence$14:scala.reflect.ClassTag[V],implicitevidence$15:spray.json.JsonFormat[M],implicitevidence$16:monocle.PLens[M,M,geotrellis.spark.Bounds[K],geotrellis.spark.Bounds[K]]):org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.io.LayerReader">LayerReader</a> → <a href="Reader.html" class="extype" name="geotrellis.spark.io.Reader">Reader</a></dd></dl></div>
+      
+    </li><li name="geotrellis.spark.io.LayerReader#reader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="reader[K,V,M](implicitevidence$17:geotrellis.spark.io.avro.AvroRecordCodec[K],implicitevidence$18:geotrellis.spark.Boundable[K],implicitevidence$19:spray.json.JsonFormat[K],implicitevidence$20:scala.reflect.ClassTag[K],implicitevidence$21:geotrellis.spark.io.avro.AvroRecordCodec[V],implicitevidence$22:scala.reflect.ClassTag[V],implicitevidence$23:spray.json.JsonFormat[M],implicitevidence$24:monocle.PLens[M,M,geotrellis.spark.Bounds[K],geotrellis.spark.Bounds[K]]):geotrellis.spark.io.Reader[ID,org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M]]"></a>
+      <a id="reader[K,V,M](AvroRecordCodec[K],Boundable[K],JsonFormat[K],ClassTag[K],AvroRecordCodec[V],ClassTag[V],JsonFormat[M],PLens[M,M,Bounds[K],Bounds[K]]):Reader[ID,RDD[(K,V)]withMetadata[M]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reader</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="M">M</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="avro/AvroRecordCodec.html" class="extype" name="geotrellis.spark.io.avro.AvroRecordCodec">AvroRecordCodec</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.reader.K">K</span>]</span>, <span name="arg1">arg1: <a href="../Boundable.html" class="extype" name="geotrellis.spark.Boundable">Boundable</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.reader.K">K</span>]</span>, <span name="arg2">arg2: <span class="extype" name="spray.json.JsonFormat">JsonFormat</span>[<span class="extype" name="geotrellis.spark.io.LayerReader.reader.K">K</span>]</span>, <span name="arg3">arg3: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.io.LayerReader.reader.K">K</span>]</span>, <span name="arg4">arg4: <a href="avro/AvroRecordCodec.html" class="extype" name="geotrellis.spark.io.avro.AvroRecordCodec">AvroRecordCodec</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.reader.V">V</span>]</span>, <span name="arg5">arg5: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.io.LayerReader.reader.V">V</span>]</span>, <span name="arg6">arg6: <span class="extype" name="spray.json.JsonFormat">JsonFormat</span>[<span class="extype" name="geotrellis.spark.io.LayerReader.reader.M">M</span>]</span>, <span name="arg7">arg7: <span class="extype" name="monocle.PLens">PLens</span>[<span class="extype" name="geotrellis.spark.io.LayerReader.reader.M">M</span>, <span class="extype" name="geotrellis.spark.io.LayerReader.reader.M">M</span>, <a href="../Bounds.html" class="extype" name="geotrellis.spark.Bounds">Bounds</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.reader.K">K</span>], <a href="../Bounds.html" class="extype" name="geotrellis.spark.Bounds">Bounds</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.reader.K">K</span>]]</span>)</span><span class="result">: <a href="Reader.html" class="extype" name="geotrellis.spark.io.Reader">Reader</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.ID">ID</span>, <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.io.LayerReader.reader.K">K</span>, <span class="extype" name="geotrellis.spark.io.LayerReader.reader.V">V</span>)] with <a href="../Metadata.html" class="extype" name="geotrellis.spark.Metadata">Metadata</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.reader.M">M</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.io.LayerReader@reader[K,V,M](implicitevidence$17:geotrellis.spark.io.avro.AvroRecordCodec[K],implicitevidence$18:geotrellis.spark.Boundable[K],implicitevidence$19:spray.json.JsonFormat[K],implicitevidence$20:scala.reflect.ClassTag[K],implicitevidence$21:geotrellis.spark.io.avro.AvroRecordCodec[V],implicitevidence$22:scala.reflect.ClassTag[V],implicitevidence$23:spray.json.JsonFormat[M],implicitevidence$24:monocle.PLens[M,M,geotrellis.spark.Bounds[K],geotrellis.spark.Bounds[K]]):geotrellis.spark.io.Reader[ID,org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M]]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -472,11 +431,11 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.Function1#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>
       <h4 class="signature">
@@ -489,10 +448,10 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader@toString():String" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Function1 → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -506,7 +465,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader@wait():Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -529,7 +488,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -552,7 +511,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.io.LayerReader@wait(x$1:Long):Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" />
+        <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -571,11 +530,7 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="geotrellis.spark.io.Reader">
-              <h3>Inherited from <a href="Reader.html" class="extype" name="geotrellis.spark.io.Reader">Reader</a>[<span class="extype" name="geotrellis.spark.io.LayerReader.ID">ID</span>, <span class="extype" name="geotrellis.spark.io.LayerReader.ReturnType">ReturnType</span>]</h3>
-            </div><div class="parent" name="scala.Function1">
-              <h3>Inherited from (<span class="extype" name="geotrellis.spark.io.LayerReader.ID">ID</span>) ⇒ <span class="extype" name="geotrellis.spark.io.LayerReader.ReturnType">ReturnType</span></h3>
-            </div><div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>

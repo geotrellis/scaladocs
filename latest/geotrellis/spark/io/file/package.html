@@ -28,11 +28,11 @@
         </head>
         <body class="value">
       <div id="definition">
-        <img src="../../../../lib/package_big.png" />
+        <img alt="Package" src="../../../../lib/package_big.png" />
         <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.spark">spark</a>.<a href="../package.html" class="extype" name="geotrellis.spark.io">io</a></p>
         <h1>file</h1><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.file.package" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       </div>
@@ -67,7 +67,7 @@
         <div id="types" class="types members">
               <h3>Type Members</h3>
               <ol><li name="geotrellis.spark.io.file.FileAttributeStore" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="FileAttributeStoreextendsAttributeStore[spray.json.JsonFormat]"></a>
+      <a id="FileAttributeStoreextendsBlobLayerAttributeStore"></a>
       <a id="FileAttributeStore:FileAttributeStore"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -75,16 +75,16 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="FileAttributeStore.html"><span class="name">FileAttributeStore</span></a><span class="result"> extends <a href="../AttributeStore.html" class="extype" name="geotrellis.spark.io.AttributeStore">AttributeStore</a>[<span class="extype" name="spray.json.JsonFormat">JsonFormat</span>]</span>
+        <a href="FileAttributeStore.html"><span class="name">FileAttributeStore</span></a><span class="result"> extends <a href="../BlobLayerAttributeStore.html" class="extype" name="geotrellis.spark.io.BlobLayerAttributeStore">BlobLayerAttributeStore</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.file.package@FileAttributeStoreextendsAttributeStore[spray.json.JsonFormat]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
+      <a href="../../../../index.html#geotrellis.spark.io.file.package@FileAttributeStoreextendsBlobLayerAttributeStore" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">Stores and retrieves layer attributes from the file system.</p>
     </li><li name="geotrellis.spark.io.file.FileLayerHeader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="FileLayerHeaderextendsProductwithSerializable"></a>
+      <a id="FileLayerHeaderextendsLayerHeaderwithProductwithSerializable"></a>
       <a id="FileLayerHeader:FileLayerHeader"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -92,86 +92,82 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="FileLayerHeader.html"><span class="name">FileLayerHeader</span></a><span class="params">(<span name="keyClass">keyClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="valueClass">valueClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="FileLayerHeader.html"><span class="name">FileLayerHeader</span></a><span class="params">(<span name="keyClass">keyClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="valueClass">valueClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="../LayerHeader.html" class="extype" name="geotrellis.spark.io.LayerHeader">LayerHeader</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.file.package@FileLayerHeaderextendsProductwithSerializable" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
+      <a href="../../../../index.html#geotrellis.spark.io.file.package@FileLayerHeaderextendsLayerHeaderwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.io.file.FileLayerReader" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="FileLayerReader[K,V,M]extendsFilteringLayerReader[geotrellis.spark.LayerId,K,M,org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M]]withLazyLogging"></a>
-      <a id="FileLayerReader[K,V,M]:FileLayerReader[K,V,M]"></a>
+    </li><li name="geotrellis.spark.io.file.FileLayerManager" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FileLayerManagerextendsLayerManager[geotrellis.spark.LayerId]"></a>
+      <a id="FileLayerManager:FileLayerManager"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="FileLayerReader.html"><span class="name">FileLayerReader</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="M">M</span>]</span><span class="result"> extends <a href="../FilteringLayerReader.html" class="extype" name="geotrellis.spark.io.FilteringLayerReader">FilteringLayerReader</a>[<a href="../../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a>, <span class="extype" name="geotrellis.spark.io.file.FileLayerReader.K">K</span>, <span class="extype" name="geotrellis.spark.io.file.FileLayerReader.M">M</span>, <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.io.file.FileLayerReader.K">K</span>, <span class="extype" name="geotrellis.spark.io.file.FileLayerReader.V">V</span>)] with <a href="../../Metadata.html" class="extype" name="geotrellis.spark.Metadata">Metadata</a>[<span class="extype" name="geotrellis.spark.io.file.FileLayerReader.M">M</span>]] with <span class="extype" name="com.typesafe.scalalogging.slf4j.LazyLogging">LazyLogging</span></span>
+        <a href="FileLayerManager.html"><span class="name">FileLayerManager</span></a><span class="result"> extends <a href="../LayerManager.html" class="extype" name="geotrellis.spark.io.LayerManager">LayerManager</a>[<a href="../../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.file.package@FileLayerReader[K,V,M]extendsFilteringLayerReader[geotrellis.spark.LayerId,K,M,org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M]]withLazyLogging" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Handles reading raster RDDs and their metadata from a filesystem.</p><div class="fullcomment"><div class="comment cmt"><p>Handles reading raster RDDs and their metadata from a filesystem.
-</p></div><dl class="paramcmts block"><dt class="tparam">K</dt><dd class="cmt"><p>Type of RDD Key (ex: SpatialKey)</p></dd><dt class="tparam">V</dt><dd class="cmt"><p>Type of RDD Value (ex: Tile or MultiBandTile )</p></dd><dt class="tparam">M</dt><dd class="cmt"><p>Type of Metadata associated with the RDD[(K,V)]
-</p></dd></dl></div>
-    </li><li name="geotrellis.spark.io.file.FileLayerWriter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="FileLayerWriter[K,V,M]extendsWriter[geotrellis.spark.LayerId,org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M]]withLazyLogging"></a>
-      <a id="FileLayerWriter[K,V,M]:FileLayerWriter[K,V,M]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="FileLayerWriter.html"><span class="name">FileLayerWriter</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="M">M</span>]</span><span class="result"> extends <a href="../Writer.html" class="extype" name="geotrellis.spark.io.Writer">Writer</a>[<a href="../../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a>, <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.io.file.FileLayerWriter.K">K</span>, <span class="extype" name="geotrellis.spark.io.file.FileLayerWriter.V">V</span>)] with <a href="../../Metadata.html" class="extype" name="geotrellis.spark.Metadata">Metadata</a>[<span class="extype" name="geotrellis.spark.io.file.FileLayerWriter.M">M</span>]] with <span class="extype" name="com.typesafe.scalalogging.slf4j.LazyLogging">LazyLogging</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.file.package@FileLayerWriter[K,V,M]extendsWriter[geotrellis.spark.LayerId,org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M]]withLazyLogging" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Handles writing Raster RDDs and their metadata to a filesystem.</p><div class="fullcomment"><div class="comment cmt"><p>Handles writing Raster RDDs and their metadata to a filesystem.
-</p></div><dl class="paramcmts block"><dt class="tparam">K</dt><dd class="cmt"><p>Type of RDD Key (ex: SpatialKey)</p></dd><dt class="tparam">V</dt><dd class="cmt"><p>Type of RDD Value (ex: Tile or MultiBandTile )</p></dd><dt class="tparam">M</dt><dd class="cmt"><p>Type of Metadata associated with the RDD[(K,V)]
-</p></dd></dl></div>
-    </li><li name="geotrellis.spark.io.file.FileRDDReader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="FileRDDReader[K,V]extendsAnyRef"></a>
-      <a id="FileRDDReader[K,V]:FileRDDReader[K,V]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="FileRDDReader.html"><span class="name">FileRDDReader</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.file.package@FileRDDReader[K,V]extendsAnyRef" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
+      <a href="../../../../index.html#geotrellis.spark.io.file.package@FileLayerManagerextendsLayerManager[geotrellis.spark.LayerId]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.io.file.FileRDDWriter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="FileRDDWriter[K,V]extendsAnyRef"></a>
-      <a id="FileRDDWriter[K,V]:FileRDDWriter[K,V]"></a>
+    </li><li name="geotrellis.spark.io.file.FileLayerReader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FileLayerReaderextendsFilteringLayerReader[geotrellis.spark.LayerId]withLazyLogging"></a>
+      <a id="FileLayerReader:FileLayerReader"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="FileRDDWriter.html"><span class="name">FileRDDWriter</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="FileLayerReader.html"><span class="name">FileLayerReader</span></a><span class="result"> extends <a href="../FilteringLayerReader.html" class="extype" name="geotrellis.spark.io.FilteringLayerReader">FilteringLayerReader</a>[<a href="../../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a>] with <span class="extype" name="com.typesafe.scalalogging.slf4j.LazyLogging">LazyLogging</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.file.package@FileRDDWriter[K,V]extendsAnyRef" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
+      <a href="../../../../index.html#geotrellis.spark.io.file.package@FileLayerReaderextendsFilteringLayerReader[geotrellis.spark.LayerId]withLazyLogging" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Handles reading raster RDDs and their metadata from a filesystem.</p>
+    </li><li name="geotrellis.spark.io.file.FileLayerUpdater" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FileLayerUpdaterextendsLayerUpdater[geotrellis.spark.LayerId]withLazyLogging"></a>
+      <a id="FileLayerUpdater:FileLayerUpdater"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FileLayerUpdater.html"><span class="name">FileLayerUpdater</span></a><span class="result"> extends <a href="../LayerUpdater.html" class="extype" name="geotrellis.spark.io.LayerUpdater">LayerUpdater</a>[<a href="../../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a>] with <span class="extype" name="com.typesafe.scalalogging.slf4j.LazyLogging">LazyLogging</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.file.package@FileLayerUpdaterextendsLayerUpdater[geotrellis.spark.LayerId]withLazyLogging" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
+    </li><li name="geotrellis.spark.io.file.FileLayerWriter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FileLayerWriterextendsLayerWriter[geotrellis.spark.LayerId]withLazyLogging"></a>
+      <a id="FileLayerWriter:FileLayerWriter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FileLayerWriter.html"><span class="name">FileLayerWriter</span></a><span class="result"> extends <a href="../LayerWriter.html" class="extype" name="geotrellis.spark.io.LayerWriter">LayerWriter</a>[<a href="../../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a>] with <span class="extype" name="com.typesafe.scalalogging.slf4j.LazyLogging">LazyLogging</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.file.package@FileLayerWriterextendsLayerWriter[geotrellis.spark.LayerId]withLazyLogging" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Handles writing Raster RDDs and their metadata to a filesystem.</p>
     </li><li name="geotrellis.spark.io.file.FileTileReader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="FileTileReader[K,V]extendsReader[geotrellis.spark.LayerId,geotrellis.spark.io.Reader[K,V]]"></a>
       <a id="FileTileReader[K,V]:FileTileReader[K,V]"></a>
@@ -185,24 +181,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.file.package@FileTileReader[K,V]extendsReader[geotrellis.spark.LayerId,geotrellis.spark.io.Reader[K,V]]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.spark.io.file.S3LayerManager" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="S3LayerManagerextendsAnyRef"></a>
-      <a id="S3LayerManager:S3LayerManager"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="S3LayerManager.html"><span class="name">S3LayerManager</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.file.package@S3LayerManagerextendsAnyRef" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
@@ -226,7 +205,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.file.package@FileAttributeStore" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
@@ -243,7 +222,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.file.package@FileLayerCopier" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
@@ -260,7 +239,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.file.package@FileLayerDeleter" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
@@ -277,7 +256,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.file.package@FileLayerHeader" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
@@ -294,7 +273,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.file.package@FileLayerMover" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
@@ -311,7 +290,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.file.package@FileLayerReader" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
@@ -328,7 +307,24 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.file.package@FileLayerReindexer" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.file.FileLayerUpdater" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FileLayerUpdater"></a>
+      <a id="FileLayerUpdater:FileLayerUpdater"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FileLayerUpdater$.html"><span class="name">FileLayerUpdater</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.file.package@FileLayerUpdater" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
@@ -345,7 +341,41 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.file.package@FileLayerWriter" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.file.FileRDDReader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FileRDDReader"></a>
+      <a id="FileRDDReader:FileRDDReader"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FileRDDReader$.html"><span class="name">FileRDDReader</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.file.package@FileRDDReader" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.file.FileRDDWriter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FileRDDWriter"></a>
+      <a id="FileRDDWriter:FileRDDWriter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FileRDDWriter$.html"><span class="name">FileRDDWriter</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.file.package@FileRDDWriter" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
@@ -362,7 +392,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.file.package@FileTileReader" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
@@ -379,7 +409,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.file.package@KeyPathGenerator" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
@@ -396,7 +426,7 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.file.package@LayerPath" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
