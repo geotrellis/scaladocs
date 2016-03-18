@@ -47,16 +47,16 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">ColorMap</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">ColorMap</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
             <span class="toggle">Known Subclasses</span>
-            <div class="subClasses hiddenContent"><a href="CachedColorMap.html" class="extype" name="geotrellis.raster.render.CachedColorMap">CachedColorMap</a>, <a href="DoubleColorMap.html" class="extype" name="geotrellis.raster.render.DoubleColorMap">DoubleColorMap</a>, <a href="IntColorMap.html" class="extype" name="geotrellis.raster.render.IntColorMap">IntColorMap</a></div>
+            <div class="subClasses hiddenContent"><a href="DoubleColorMap.html" class="extype" name="geotrellis.raster.render.DoubleColorMap">DoubleColorMap</a>, <a href="IntCachedColorMap.html" class="extype" name="geotrellis.raster.render.IntCachedColorMap">IntCachedColorMap</a>, <a href="IntColorMap.html" class="extype" name="geotrellis.raster.render.IntColorMap">IntColorMap</a></div>
           </div></div>
         
 
@@ -74,7 +74,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.raster.render.ColorMap"><span>ColorMap</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.raster.render.ColorMap"><span>ColorMap</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -97,70 +97,155 @@
 
         <div id="values" class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="geotrellis.raster.render.ColorMap#cache" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="cache(h:geotrellis.raster.histogram.Histogram[Int]):geotrellis.raster.render.ColorMap"></a>
-      <a id="cache(Histogram[Int]):ColorMap"></a>
+              <ol><li name="geotrellis.raster.render.ColorMap#colors" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="colors:Vector[Int]"></a>
+      <a id="colors:Vector[Int]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">cache</span><span class="params">(<span name="h">h: <a href="../histogram/Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.render.ColorMap">ColorMap</a></span>
+        <span class="name">colors</span><span class="result">: <span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.ColorMap@cache(h:geotrellis.raster.histogram.Histogram[Int]):geotrellis.raster.render.ColorMap" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.render.ColorMap@colors:Vector[Int]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.render.ColorMap#colors" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="colors:Array[Int]"></a>
-      <a id="colors:Array[Int]"></a>
+    </li><li name="geotrellis.raster.render.ColorMap#map" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="map(v:Int):Int"></a>
+      <a id="map(Int):Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">colors</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+        <span class="name">map</span><span class="params">(<span name="v">v: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.ColorMap@colors:Array[Int]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.render.ColorMap@map(v:Int):Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.render.ColorMap#mapColors" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="mapColors(f:Int=&gt;Int):geotrellis.raster.render.ColorMap"></a>
+      <a id="mapColors((Int)⇒Int):ColorMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mapColors</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.render.ColorMap">ColorMap</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.ColorMap@mapColors(f:Int=&gt;Int):geotrellis.raster.render.ColorMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.render.ColorMap#mapColorsToIndex" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="mapColorsToIndex():geotrellis.raster.render.ColorMap"></a>
+      <a id="mapColorsToIndex():ColorMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mapColorsToIndex</span><span class="params">()</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.render.ColorMap">ColorMap</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.ColorMap@mapColorsToIndex():geotrellis.raster.render.ColorMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.render.ColorMap#mapDouble" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="mapDouble(v:Double):Int"></a>
+      <a id="mapDouble(Double):Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mapDouble</span><span class="params">(<span name="v">v: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.ColorMap@mapDouble(v:Double):Int" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
     </li><li name="geotrellis.raster.render.ColorMap#options" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="options:geotrellis.raster.render.ColorMapOptions"></a>
-      <a id="options:ColorMapOptions"></a>
+      <a id="options:geotrellis.raster.render.ColorMap.Options"></a>
+      <a id="options:Options"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">options</span><span class="result">: <a href="ColorMapOptions.html" class="extype" name="geotrellis.raster.render.ColorMapOptions">ColorMapOptions</a></span>
+        <span class="name">options</span><span class="result">: <a href="ColorMap$$Options.html" class="extype" name="geotrellis.raster.render.ColorMap.Options">Options</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.ColorMap@options:geotrellis.raster.render.ColorMapOptions" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.render.ColorMap@options:geotrellis.raster.render.ColorMap.Options" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.render.ColorMap#render" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="render(r:geotrellis.raster.Tile):geotrellis.raster.Tile"></a>
-      <a id="render(Tile):Tile"></a>
+    </li><li name="geotrellis.raster.render.ColorMap#withBoundaryType" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="withBoundaryType(classBoundaryType:geotrellis.raster.render.ClassBoundaryType):geotrellis.raster.render.ColorMap"></a>
+      <a id="withBoundaryType(ClassBoundaryType):ColorMap"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">render</span><span class="params">(<span name="r">r: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>)</span><span class="result">: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
+        <span class="name">withBoundaryType</span><span class="params">(<span name="classBoundaryType">classBoundaryType: <a href="ClassBoundaryType.html" class="extype" name="geotrellis.raster.render.ClassBoundaryType">ClassBoundaryType</a></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.render.ColorMap">ColorMap</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.ColorMap@render(r:geotrellis.raster.Tile):geotrellis.raster.Tile" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.render.ColorMap@withBoundaryType(classBoundaryType:geotrellis.raster.render.ClassBoundaryType):geotrellis.raster.render.ColorMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.render.ColorMap#withFallbackColor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="withFallbackColor(color:Int):geotrellis.raster.render.ColorMap"></a>
+      <a id="withFallbackColor(Int):ColorMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withFallbackColor</span><span class="params">(<span name="color">color: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.render.ColorMap">ColorMap</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.ColorMap@withFallbackColor(color:Int):geotrellis.raster.render.ColorMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.render.ColorMap#withNoDataColor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="withNoDataColor(color:Int):geotrellis.raster.render.ColorMap"></a>
+      <a id="withNoDataColor(Int):ColorMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withNoDataColor</span><span class="params">(<span name="color">color: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.render.ColorMap">ColorMap</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.ColorMap@withNoDataColor(color:Int):geotrellis.raster.render.ColorMap" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -341,7 +426,7 @@
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
         <span class="name">grey</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
@@ -443,13 +528,30 @@
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
         <span class="name">opaque</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.raster.render.ColorMap@opaque:Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.render.ColorMap#render" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="render(r:geotrellis.raster.Tile):geotrellis.raster.Tile"></a>
+      <a id="render(Tile):Tile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">render</span><span class="params">(<span name="r">r: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>)</span><span class="result">: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.ColorMap@render(r:geotrellis.raster.Tile):geotrellis.raster.Tile" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -566,7 +668,11 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>

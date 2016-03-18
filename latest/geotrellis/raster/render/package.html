@@ -88,89 +88,7 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="geotrellis.raster.render.BlendingColorClassifier" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="BlendingColorClassifier[T]extendsColorClassifier[T]"></a>
-      <a id="BlendingColorClassifier[T]:BlendingColorClassifier[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="BlendingColorClassifier.html"><span class="name">BlendingColorClassifier</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="ColorClassifier.html" class="extype" name="geotrellis.raster.render.ColorClassifier">ColorClassifier</a>[<span class="extype" name="geotrellis.raster.render.BlendingColorClassifier.T">T</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.package@BlendingColorClassifier[T]extendsColorClassifier[T]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">An abstract class for automatically (through color interpolation) classifying a raster's values
- in terms of color for rendering
-</p><div class="fullcomment"><div class="comment cmt"><p>An abstract class for automatically (through color interpolation) classifying a raster's values
- in terms of color for rendering
-</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>The underlying datatype being classified (implementations for Int and Double)</p></dd></dl></div>
-    </li><li name="geotrellis.raster.render.BlendingDoubleColorClassifier" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="BlendingDoubleColorClassifierextendsBlendingColorClassifier[Double]withProductwithSerializable"></a>
-      <a id="BlendingDoubleColorClassifier:BlendingDoubleColorClassifier"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="BlendingDoubleColorClassifier.html"><span class="name">BlendingDoubleColorClassifier</span></a><span class="params">(<span name="classificationType">classificationType: <a href="ClassBoundaryType.html" class="extype" name="geotrellis.raster.render.ClassBoundaryType">ClassBoundaryType</a> = <span class="symbol"><span class="name"><a href="LessThan$.html">LessThan</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctag">ctag: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result"> extends <a href="BlendingColorClassifier.html" class="extype" name="geotrellis.raster.render.BlendingColorClassifier">BlendingColorClassifier</a>[<span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.package@BlendingDoubleColorClassifierextendsBlendingColorClassifier[Double]withProductwithSerializable" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">A concrete class for automatic (interpolating to generate breaks' corresponding colors)
-color classification of double-based tiles
-</p><div class="fullcomment"><div class="comment cmt"><p>A concrete class for automatic (interpolating to generate breaks' corresponding colors)
-color classification of double-based tiles
-</p></div><dl class="paramcmts block"><dt class="param">classificationType</dt><dd class="cmt"><p>The ClassBoundaryType which specifies the sort of boundary used in
-                          color classification</p></dd></dl></div>
-    </li><li name="geotrellis.raster.render.BlendingIntColorClassifier" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="BlendingIntColorClassifierextendsBlendingColorClassifier[Int]withProductwithSerializable"></a>
-      <a id="BlendingIntColorClassifier:BlendingIntColorClassifier"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="BlendingIntColorClassifier.html"><span class="name">BlendingIntColorClassifier</span></a><span class="params">(<span name="classificationType">classificationType: <a href="ClassBoundaryType.html" class="extype" name="geotrellis.raster.render.ClassBoundaryType">ClassBoundaryType</a> = <span class="symbol"><span class="name"><a href="LessThan$.html">LessThan</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctag">ctag: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="BlendingColorClassifier.html" class="extype" name="geotrellis.raster.render.BlendingColorClassifier">BlendingColorClassifier</a>[<span class="extype" name="scala.Int">Int</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.package@BlendingIntColorClassifierextendsBlendingColorClassifier[Int]withProductwithSerializable" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">A concrete class for automatic (interpolating to generate breaks' corresponding colors)
-color classification of int-based tiles
-</p><div class="fullcomment"><div class="comment cmt"><p>A concrete class for automatic (interpolating to generate breaks' corresponding colors)
-color classification of int-based tiles
-</p></div><dl class="paramcmts block"><dt class="param">classificationType</dt><dd class="cmt"><p>The ClassBoundaryType which specifies the sort of boundary used in
-                          color classification</p></dd></dl></div>
-    </li><li name="geotrellis.raster.render.CachedColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="CachedColorMapextendsColorMapwithInt=&gt;IntwithProductwithSerializable"></a>
-      <a id="CachedColorMap:CachedColorMap"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="CachedColorMap.html"><span class="name">CachedColorMap</span></a><span class="params">(<span name="colors">colors: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="options">options: <a href="ColorMapOptions.html" class="extype" name="geotrellis.raster.render.ColorMapOptions">ColorMapOptions</a></span>, <span name="h">h: <a href="../histogram/Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="ColorMap.html" class="extype" name="geotrellis.raster.render.ColorMap">ColorMap</a> with (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.package@CachedColorMapextendsColorMapwithInt=&gt;IntwithProductwithSerializable" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.render.ClassBoundaryType" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.raster.render.ClassBoundaryType" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="ClassBoundaryTypeextendsAnyRef"></a>
       <a id="ClassBoundaryType:ClassBoundaryType"></a>
       <h4 class="signature">
@@ -187,27 +105,8 @@ color classification of int-based tiles
       </a>
     </span>
       <p class="shortcomment cmt">Root element in hierarchy for specifying the type of boundary when classifying colors</p>
-    </li><li name="geotrellis.raster.render.ColorClassifier" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="ColorClassifier[T]extendsSerializable"></a>
-      <a id="ColorClassifier[T]:ColorClassifier[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="ColorClassifier.html"><span class="name">ColorClassifier</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.package@ColorClassifier[T]extendsSerializable" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">An abstract class for classifying a raster's values in terms of color for rendering
-</p><div class="fullcomment"><div class="comment cmt"><p>An abstract class for classifying a raster's values in terms of color for rendering
-</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>The underlying datatype being classified (implementations for Int and Double)</p></dd></dl></div>
     </li><li name="geotrellis.raster.render.ColorMap" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="ColorMapextendsAnyRef"></a>
+      <a id="ColorMapextendsSerializable"></a>
       <a id="ColorMap:ColorMap"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -215,27 +114,10 @@ color classification of int-based tiles
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="ColorMap.html"><span class="name">ColorMap</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="ColorMap.html"><span class="name">ColorMap</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.package@ColorMapextendsAnyRef" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.render.ColorMapOptions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ColorMapOptionsextendsProductwithSerializable"></a>
-      <a id="ColorMapOptions:ColorMapOptions"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="ColorMapOptions.html"><span class="name">ColorMapOptions</span></a><span class="params">(<span name="colorMapType">colorMapType: <a href="ClassBoundaryType.html" class="extype" name="geotrellis.raster.render.ClassBoundaryType">ClassBoundaryType</a></span>, <span name="noDataColor">noDataColor: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">0x00000000</span></span>, <span name="noMapColor">noMapColor: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">0x00000000</span></span>, <span name="strict">strict: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.package@ColorMapOptionsextendsProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.render.package@ColorMapextendsSerializable" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -257,19 +139,36 @@ color classification of int-based tiles
       </a>
     </span>
       
+    </li><li name="geotrellis.raster.render.ColorRamp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ColorRampextendsSerializable"></a>
+      <a id="ColorRamp:ColorRamp"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ColorRamp.html"><span class="name">ColorRamp</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.package@ColorRampextendsSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A ColorRamp represents a sequence of RGBA color values</p>
     </li><li name="geotrellis.raster.render.DoubleColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="DoubleColorMapextendsColorMapwithProductwithSerializable"></a>
+      <a id="DoubleColorMapextendsColorMap"></a>
       <a id="DoubleColorMap:DoubleColorMap"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">case class</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="DoubleColorMap.html"><span class="name">DoubleColorMap</span></a><span class="params">(<span name="breaksToColors">breaksToColors: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>]</span>, <span name="options">options: <a href="ColorMapOptions.html" class="extype" name="geotrellis.raster.render.ColorMapOptions">ColorMapOptions</a> = <span class="symbol"><span class="name"><a href="ColorMapOptions$.html">ColorMapOptions.Default</a></span></span></span>)</span><span class="result"> extends <a href="ColorMap.html" class="extype" name="geotrellis.raster.render.ColorMap">ColorMap</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="DoubleColorMap.html"><span class="name">DoubleColorMap</span></a><span class="result"> extends <a href="ColorMap.html" class="extype" name="geotrellis.raster.render.ColorMap">ColorMap</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.package@DoubleColorMapextendsColorMapwithProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.render.package@DoubleColorMapextendsColorMap" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -291,19 +190,39 @@ color classification of int-based tiles
       </a>
     </span>
       
+    </li><li name="geotrellis.raster.render.IntCachedColorMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="IntCachedColorMapextendsColorMap"></a>
+      <a id="IntCachedColorMap:IntCachedColorMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="IntCachedColorMap.html"><span class="name">IntCachedColorMap</span></a><span class="result"> extends <a href="ColorMap.html" class="extype" name="geotrellis.raster.render.ColorMap">ColorMap</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.package@IntCachedColorMapextendsColorMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Caches a color ramp based on a histogram of values.</p><div class="fullcomment"><div class="comment cmt"><p>Caches a color ramp based on a histogram of values. This is an optimization, since
+often times we create a histogram while classifying, and can reuse that computed
+information in the color mapping.
+</p></div></div>
     </li><li name="geotrellis.raster.render.IntColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="IntColorMapextendsColorMapwithProductwithSerializable"></a>
+      <a id="IntColorMapextendsColorMap"></a>
       <a id="IntColorMap:IntColorMap"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">case class</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="IntColorMap.html"><span class="name">IntColorMap</span></a><span class="params">(<span name="breaksToColors">breaksToColors: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>, <span name="options">options: <a href="ColorMapOptions.html" class="extype" name="geotrellis.raster.render.ColorMapOptions">ColorMapOptions</a> = <span class="symbol"><span class="name"><a href="ColorMapOptions$.html">ColorMapOptions.Default</a></span></span></span>)</span><span class="result"> extends <a href="ColorMap.html" class="extype" name="geotrellis.raster.render.ColorMap">ColorMap</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="IntColorMap.html"><span class="name">IntColorMap</span></a><span class="result"> extends <a href="ColorMap.html" class="extype" name="geotrellis.raster.render.ColorMap">ColorMap</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.package@IntColorMapextendsColorMapwithProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.render.package@IntColorMapextendsColorMap" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -342,8 +261,25 @@ color classification of int-based tiles
       </a>
     </span>
       
+    </li><li name="geotrellis.raster.render.MultibandColorMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MultibandColorMethodsextendsMethodExtensions[geotrellis.raster.MultibandTile]"></a>
+      <a id="MultibandColorMethods:MultibandColorMethods"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="MultibandColorMethods.html"><span class="name">MultibandColorMethods</span></a><span class="result"> extends <a href="../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.package@MultibandColorMethodsextendsMethodExtensions[geotrellis.raster.MultibandTile]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.raster.render.MultibandJpgRenderMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="MultibandJpgRenderMethodsextendsAnyRef"></a>
+      <a id="MultibandJpgRenderMethodsextendsMethodExtensions[geotrellis.raster.MultibandTile]"></a>
       <a id="MultibandJpgRenderMethods:MultibandJpgRenderMethods"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -351,16 +287,16 @@ color classification of int-based tiles
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="MultibandJpgRenderMethods.html"><span class="name">MultibandJpgRenderMethods</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="MultibandJpgRenderMethods.html"><span class="name">MultibandJpgRenderMethods</span></a><span class="result"> extends <a href="../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.package@MultibandJpgRenderMethodsextendsAnyRef" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.render.package@MultibandJpgRenderMethodsextendsMethodExtensions[geotrellis.raster.MultibandTile]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
     </li><li name="geotrellis.raster.render.MultibandPngRenderMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="MultibandPngRenderMethodsextendsAnyRef"></a>
+      <a id="MultibandPngRenderMethodsextendsMethodExtensions[geotrellis.raster.MultibandTile]"></a>
       <a id="MultibandPngRenderMethods:MultibandPngRenderMethods"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -368,27 +304,10 @@ color classification of int-based tiles
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="MultibandPngRenderMethods.html"><span class="name">MultibandPngRenderMethods</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="MultibandPngRenderMethods.html"><span class="name">MultibandPngRenderMethods</span></a><span class="result"> extends <a href="../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.package@MultibandPngRenderMethodsextendsAnyRef" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.render.MultibandRenderMethodExtensions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MultibandRenderMethodExtensionsextendsMultibandPngRenderMethods"></a>
-      <a id="MultibandRenderMethodExtensions:MultibandRenderMethodExtensions"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$MultibandRenderMethodExtensions.html"><span class="name">MultibandRenderMethodExtensions</span></a><span class="result"> extends <a href="MultibandPngRenderMethods.html" class="extype" name="geotrellis.raster.render.MultibandPngRenderMethods">MultibandPngRenderMethods</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.package@MultibandRenderMethodExtensionsextendsMultibandPngRenderMethods" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.render.package@MultibandPngRenderMethodsextendsMethodExtensions[geotrellis.raster.MultibandTile]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -432,11 +351,11 @@ color classification of int-based tiles
       <a id="RGBA:RGBA"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">final </span>
+        <span class="modifier">implicit final </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="RGBA.html"><span class="name">RGBA</span></a><span class="result"> extends <span class="extype" name="scala.AnyVal">AnyVal</span></span>
+        <a href="package$$RGBA.html"><span class="name">RGBA</span></a><span class="result"> extends <span class="extype" name="scala.AnyVal">AnyVal</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.raster.render.package@RGBAextendsAnyVal" title="Permalink" target="_top">
@@ -444,67 +363,6 @@ color classification of int-based tiles
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.render.StrictColorClassifier" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="StrictColorClassifier[T]extendsColorClassifier[T]"></a>
-      <a id="StrictColorClassifier[T]:StrictColorClassifier[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="StrictColorClassifier.html"><span class="name">StrictColorClassifier</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="ColorClassifier.html" class="extype" name="geotrellis.raster.render.ColorClassifier">ColorClassifier</a>[<span class="extype" name="geotrellis.raster.render.StrictColorClassifier.T">T</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.package@StrictColorClassifier[T]extendsColorClassifier[T]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">An abstract class for strictly (explicitly) classifying a raster's values in terms of color
-for rendering
-</p><div class="fullcomment"><div class="comment cmt"><p>An abstract class for strictly (explicitly) classifying a raster's values in terms of color
-for rendering
-</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>The underlying datatype being classified (implementations for Int and Double)</p></dd></dl></div>
-    </li><li name="geotrellis.raster.render.StrictDoubleColorClassifier" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="StrictDoubleColorClassifierextendsStrictColorClassifier[Double]withProductwithSerializable"></a>
-      <a id="StrictDoubleColorClassifier:StrictDoubleColorClassifier"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="StrictDoubleColorClassifier.html"><span class="name">StrictDoubleColorClassifier</span></a><span class="params">(<span name="classificationType">classificationType: <a href="ClassBoundaryType.html" class="extype" name="geotrellis.raster.render.ClassBoundaryType">ClassBoundaryType</a> = <span class="symbol"><span class="name"><a href="LessThan$.html">LessThan</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctag">ctag: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result"> extends <a href="StrictColorClassifier.html" class="extype" name="geotrellis.raster.render.StrictColorClassifier">StrictColorClassifier</a>[<span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.package@StrictDoubleColorClassifierextendsStrictColorClassifier[Double]withProductwithSerializable" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">A concrete class for strict (fully explicit) color classification of double-based tiles
-</p><div class="fullcomment"><div class="comment cmt"><p>A concrete class for strict (fully explicit) color classification of double-based tiles
-</p></div><dl class="paramcmts block"><dt class="param">classificationType</dt><dd class="cmt"><p>The ClassBoundaryType which specifies the sort of boundary used in
-                          color classification</p></dd></dl></div>
-    </li><li name="geotrellis.raster.render.StrictIntColorClassifier" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="StrictIntColorClassifierextendsStrictColorClassifier[Int]withProductwithSerializable"></a>
-      <a id="StrictIntColorClassifier:StrictIntColorClassifier"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="StrictIntColorClassifier.html"><span class="name">StrictIntColorClassifier</span></a><span class="params">(<span name="classificationType">classificationType: <a href="ClassBoundaryType.html" class="extype" name="geotrellis.raster.render.ClassBoundaryType">ClassBoundaryType</a> = <span class="symbol"><span class="name"><a href="LessThan$.html">LessThan</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctag">ctag: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result"> extends <a href="StrictColorClassifier.html" class="extype" name="geotrellis.raster.render.StrictColorClassifier">StrictColorClassifier</a>[<span class="extype" name="scala.Int">Int</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.package@StrictIntColorClassifierextendsStrictColorClassifier[Int]withProductwithSerializable" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">A concrete class for strict (fully explicit) color classification of int-based tiles
-</p><div class="fullcomment"><div class="comment cmt"><p>A concrete class for strict (fully explicit) color classification of int-based tiles
-</p></div><dl class="paramcmts block"><dt class="param">classificationType</dt><dd class="cmt"><p>The ClassBoundaryType which specifies the sort of boundary used in
-                          color classification</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -512,24 +370,7 @@ for rendering
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="geotrellis.raster.render.BlendingColorClassifier" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="BlendingColorClassifier"></a>
-      <a id="BlendingColorClassifier:BlendingColorClassifier"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="BlendingColorClassifier$.html"><span class="name">BlendingColorClassifier</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.package@BlendingColorClassifier" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.render.ColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.raster.render.ColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ColorMap"></a>
       <a id="ColorMap:ColorMap"></a>
       <h4 class="signature">
@@ -538,7 +379,7 @@ for rendering
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ColorMap$.html"><span class="name">ColorMap</span></a>
+        <a href="ColorMap$.html"><span class="name">ColorMap</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.raster.render.package@ColorMap" title="Permalink" target="_top">
@@ -546,19 +387,19 @@ for rendering
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.render.ColorMapOptions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ColorMapOptions"></a>
-      <a id="ColorMapOptions:ColorMapOptions"></a>
+    </li><li name="geotrellis.raster.render.ColorRamp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ColorRamp"></a>
+      <a id="ColorRamp:ColorRamp"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ColorMapOptions$.html"><span class="name">ColorMapOptions</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="ColorRamp$.html"><span class="name">ColorRamp</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.package@ColorMapOptions" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.render.package@ColorRamp" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -708,7 +549,7 @@ for rendering
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="RGB$.html"><span class="name">RGB</span></a>
+        <a href="package$$RGB$.html"><span class="name">RGB</span></a>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.raster.render.package@RGB" title="Permalink" target="_top">
@@ -718,34 +559,17 @@ for rendering
       
     </li><li name="geotrellis.raster.render.RGBA" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="RGBA"></a>
-      <a id="RGBA:RGBA"></a>
+      <a id="RGBA:render.RGBA"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="RGBA$.html"><span class="name">RGBA</span></a>
+        <a href="package$$RGBA$.html"><span class="name">RGBA</span></a>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.raster.render.package@RGBA" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.render.StrictColorClassifier" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="StrictColorClassifier"></a>
-      <a id="StrictColorClassifier:StrictColorClassifier"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="StrictColorClassifier$.html"><span class="name">StrictColorClassifier</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.package@StrictColorClassifier" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
