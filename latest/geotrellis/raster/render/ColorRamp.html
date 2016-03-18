@@ -167,26 +167,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.raster.render.ColorRamp#alphaGradient" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="alphaGradient(start:Int,stop:Int):geotrellis.raster.render.ColorRamp"></a>
-      <a id="alphaGradient(Int,Int):ColorRamp"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">alphaGradient</span><span class="params">(<span name="start">start: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">0</span></span>, <span name="stop">stop: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">0xFF</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.render.ColorRamp">ColorRamp</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.render.ColorRamp@alphaGradient(start:Int,stop:Int):geotrellis.raster.render.ColorRamp" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Transform this instances colors such that the transformed colors sit along an alpha gradient.</p><div class="fullcomment"><div class="comment cmt"><p>Transform this instances colors such that the transformed colors sit along an alpha gradient.
-</p></div><dl class="paramcmts block"><dt class="param">start</dt><dd class="cmt"><p>An integer whose last two bytes are the alpha value at the start of the
-             gradient (default 0)</p></dd><dt class="param">stop</dt><dd class="cmt"><p>An integer whose last two bytes are the alpha value at the end of the
-             gradient (default 255)</p></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -454,6 +434,26 @@
       </a>
     </span>
       <p class="shortcomment cmt">Set a uniform alpha value for all contained colors</p>
+    </li><li name="geotrellis.raster.render.ColorRamp#setAlphaGradient" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setAlphaGradient(start:Int,stop:Int):geotrellis.raster.render.ColorRamp"></a>
+      <a id="setAlphaGradient(Int,Int):ColorRamp"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setAlphaGradient</span><span class="params">(<span name="start">start: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">0</span></span>, <span name="stop">stop: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">0xFF</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.render.ColorRamp">ColorRamp</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.ColorRamp@setAlphaGradient(start:Int,stop:Int):geotrellis.raster.render.ColorRamp" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Transform this instances colors such that the transformed colors sit along an alpha gradient.</p><div class="fullcomment"><div class="comment cmt"><p>Transform this instances colors such that the transformed colors sit along an alpha gradient.
+</p></div><dl class="paramcmts block"><dt class="param">start</dt><dd class="cmt"><p>An integer whose last two bytes are the alpha value at the start of the
+             gradient (default 0)</p></dd><dt class="param">stop</dt><dd class="cmt"><p>An integer whose last two bytes are the alpha value at the end of the
+             gradient (default 255)</p></dd></dl></div>
     </li><li name="geotrellis.raster.render.ColorRamp#stops" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="stops(requestedNumStops:Int):geotrellis.raster.render.ColorRamp"></a>
       <a id="stops(Int):ColorRamp"></a>
@@ -488,6 +488,212 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.raster.render.ColorRamp#toColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toColorMap(histogram:geotrellis.raster.histogram.Histogram[Double],options:geotrellis.raster.render.ColorMap.Options):geotrellis.raster.render.DoubleColorMap"></a>
+      <a id="toColorMap(Histogram[Double],Options):DoubleColorMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toColorMap</span><span class="params">(<span name="histogram">histogram: <a href="../histogram/Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="options">options: <a href="ColorMap$$Options.html" class="extype" name="geotrellis.raster.render.ColorMap.Options">Options</a></span>)</span><span class="result">: <a href="DoubleColorMap.html" class="extype" name="geotrellis.raster.render.DoubleColorMap">DoubleColorMap</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.ColorRamp@toColorMap(histogram:geotrellis.raster.histogram.Histogram[Double],options:geotrellis.raster.render.ColorMap.Options):geotrellis.raster.render.DoubleColorMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.render.ColorRamp#toColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toColorMap(histogram:geotrellis.raster.histogram.Histogram[Double]):geotrellis.raster.render.DoubleColorMap"></a>
+      <a id="toColorMap(Histogram[Double]):DoubleColorMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toColorMap</span><span class="params">(<span name="histogram">histogram: <a href="../histogram/Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="DoubleColorMap.html" class="extype" name="geotrellis.raster.render.DoubleColorMap">DoubleColorMap</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.ColorRamp@toColorMap(histogram:geotrellis.raster.histogram.Histogram[Double]):geotrellis.raster.render.DoubleColorMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.render.ColorRamp#toColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toColorMap(histogram:geotrellis.raster.histogram.Histogram[Int],options:geotrellis.raster.render.ColorMap.Options):geotrellis.raster.render.IntColorMap"></a>
+      <a id="toColorMap(Histogram[Int],Options):IntColorMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toColorMap</span><span class="params">(<span name="histogram">histogram: <a href="../histogram/Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="options">options: <a href="ColorMap$$Options.html" class="extype" name="geotrellis.raster.render.ColorMap.Options">Options</a></span>)</span><span class="result">: <a href="IntColorMap.html" class="extype" name="geotrellis.raster.render.IntColorMap">IntColorMap</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.ColorRamp@toColorMap(histogram:geotrellis.raster.histogram.Histogram[Int],options:geotrellis.raster.render.ColorMap.Options):geotrellis.raster.render.IntColorMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.render.ColorRamp#toColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toColorMap(histogram:geotrellis.raster.histogram.Histogram[Int]):geotrellis.raster.render.IntColorMap"></a>
+      <a id="toColorMap(Histogram[Int]):IntColorMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toColorMap</span><span class="params">(<span name="histogram">histogram: <a href="../histogram/Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="IntColorMap.html" class="extype" name="geotrellis.raster.render.IntColorMap">IntColorMap</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.ColorRamp@toColorMap(histogram:geotrellis.raster.histogram.Histogram[Int]):geotrellis.raster.render.IntColorMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.render.ColorRamp#toColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toColorMap(breaks:Vector[Double],options:geotrellis.raster.render.ColorMap.Options):geotrellis.raster.render.DoubleColorMap"></a>
+      <a id="toColorMap(Vector[Double],Options):DoubleColorMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toColorMap</span><span class="params">(<span name="breaks">breaks: <span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="options">options: <a href="ColorMap$$Options.html" class="extype" name="geotrellis.raster.render.ColorMap.Options">Options</a></span>)</span><span class="result">: <a href="DoubleColorMap.html" class="extype" name="geotrellis.raster.render.DoubleColorMap">DoubleColorMap</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.ColorRamp@toColorMap(breaks:Vector[Double],options:geotrellis.raster.render.ColorMap.Options):geotrellis.raster.render.DoubleColorMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.render.ColorRamp#toColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toColorMap(breaks:Vector[Double]):geotrellis.raster.render.DoubleColorMap"></a>
+      <a id="toColorMap(Vector[Double]):DoubleColorMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toColorMap</span><span class="params">(<span name="breaks">breaks: <span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="DoubleColorMap.html" class="extype" name="geotrellis.raster.render.DoubleColorMap">DoubleColorMap</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.ColorRamp@toColorMap(breaks:Vector[Double]):geotrellis.raster.render.DoubleColorMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.render.ColorRamp#toColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toColorMap(breaks:Array[Double],options:geotrellis.raster.render.ColorMap.Options):geotrellis.raster.render.DoubleColorMap"></a>
+      <a id="toColorMap(Array[Double],Options):DoubleColorMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toColorMap</span><span class="params">(<span name="breaks">breaks: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="options">options: <a href="ColorMap$$Options.html" class="extype" name="geotrellis.raster.render.ColorMap.Options">Options</a></span>)</span><span class="result">: <a href="DoubleColorMap.html" class="extype" name="geotrellis.raster.render.DoubleColorMap">DoubleColorMap</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.ColorRamp@toColorMap(breaks:Array[Double],options:geotrellis.raster.render.ColorMap.Options):geotrellis.raster.render.DoubleColorMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.render.ColorRamp#toColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toColorMap(breaks:Array[Double]):geotrellis.raster.render.DoubleColorMap"></a>
+      <a id="toColorMap(Array[Double]):DoubleColorMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toColorMap</span><span class="params">(<span name="breaks">breaks: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="DoubleColorMap.html" class="extype" name="geotrellis.raster.render.DoubleColorMap">DoubleColorMap</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.ColorRamp@toColorMap(breaks:Array[Double]):geotrellis.raster.render.DoubleColorMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.render.ColorRamp#toColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toColorMap(breaks:Vector[Int],options:geotrellis.raster.render.ColorMap.Options):geotrellis.raster.render.IntColorMap"></a>
+      <a id="toColorMap(Vector[Int],Options):IntColorMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toColorMap</span><span class="params">(<span name="breaks">breaks: <span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="options">options: <a href="ColorMap$$Options.html" class="extype" name="geotrellis.raster.render.ColorMap.Options">Options</a></span>)</span><span class="result">: <a href="IntColorMap.html" class="extype" name="geotrellis.raster.render.IntColorMap">IntColorMap</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.ColorRamp@toColorMap(breaks:Vector[Int],options:geotrellis.raster.render.ColorMap.Options):geotrellis.raster.render.IntColorMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.render.ColorRamp#toColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toColorMap(breaks:Vector[Int]):geotrellis.raster.render.IntColorMap"></a>
+      <a id="toColorMap(Vector[Int]):IntColorMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toColorMap</span><span class="params">(<span name="breaks">breaks: <span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="IntColorMap.html" class="extype" name="geotrellis.raster.render.IntColorMap">IntColorMap</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.ColorRamp@toColorMap(breaks:Vector[Int]):geotrellis.raster.render.IntColorMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.render.ColorRamp#toColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toColorMap(breaks:Array[Int],options:geotrellis.raster.render.ColorMap.Options):geotrellis.raster.render.IntColorMap"></a>
+      <a id="toColorMap(Array[Int],Options):IntColorMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toColorMap</span><span class="params">(<span name="breaks">breaks: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="options">options: <a href="ColorMap$$Options.html" class="extype" name="geotrellis.raster.render.ColorMap.Options">Options</a></span>)</span><span class="result">: <a href="IntColorMap.html" class="extype" name="geotrellis.raster.render.IntColorMap">IntColorMap</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.ColorRamp@toColorMap(breaks:Array[Int],options:geotrellis.raster.render.ColorMap.Options):geotrellis.raster.render.IntColorMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.render.ColorRamp#toColorMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toColorMap(breaks:Array[Int]):geotrellis.raster.render.IntColorMap"></a>
+      <a id="toColorMap(Array[Int]):IntColorMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toColorMap</span><span class="params">(<span name="breaks">breaks: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="IntColorMap.html" class="extype" name="geotrellis.raster.render.IntColorMap">IntColorMap</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.ColorRamp@toColorMap(breaks:Array[Int]):geotrellis.raster.render.IntColorMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Overloads for creating a ColorMap from a color ramp, for convenience.</p><div class="fullcomment"><div class="comment cmt"><p>Overloads for creating a ColorMap from a color ramp, for convenience.
+Try to keep parity with ColorMap object creations
+</p></div></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>
