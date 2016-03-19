@@ -230,7 +230,7 @@ number of significant digits to be printed.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">asciiDrawRange</span><span class="params">(<span name="colMin">colMin: <span class="extype" name="scala.Int">Int</span></span>, <span name="colMax">colMax: <span class="extype" name="scala.Int">Int</span></span>, <span name="rowMin">rowMin: <span class="extype" name="scala.Int">Int</span></span>, <span name="rowMax">rowMax: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">asciiDrawRange</span><span class="params">(<span name="colMin">colMin: <span class="extype" name="scala.Int">Int</span></span>, <span name="colMax">colMax: <span class="extype" name="scala.Int">Int</span></span>, <span name="rowMin">rowMin: <span class="extype" name="scala.Int">Int</span></span>, <span name="rowMax">rowMax: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../index.html#geotrellis.raster.CompositeTile@asciiDrawRange(colMin:Int,colMax:Int,rowMin:Int,rowMax:Int):String" title="Permalink" target="_top">
@@ -331,7 +331,7 @@ number of significant digits to be printed.
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.CompositeTile">CompositeTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
     </li><li name="geotrellis.raster.CompositeTile#convert" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="convert(cellType:geotrellis.raster.CellType):geotrellis.raster.Tile"></a>
+      <a id="convert(targetCellType:geotrellis.raster.CellType):geotrellis.raster.Tile"></a>
       <a id="convert(CellType):Tile"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -339,14 +339,16 @@ number of significant digits to be printed.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">convert</span><span class="params">(<span name="cellType">cellType: <a href="package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
+        <span class="name">convert</span><span class="params">(<span name="targetCellType">targetCellType: <a href="package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.CompositeTile@convert(cellType:geotrellis.raster.CellType):geotrellis.raster.Tile" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.CompositeTile@convert(targetCellType:geotrellis.raster.CellType):geotrellis.raster.Tile" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.CompositeTile">CompositeTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
+      <p class="shortcomment cmt">Converts the cell type of the tile.</p><div class="fullcomment"><div class="comment cmt"><p>Converts the cell type of the tile.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.CompositeTile">CompositeTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd><dt>Note</dt><dd><span class="cmt"><p>This will immediately iterate over the tile and allocate a new
+         copy of data; this should be a performance consideration.</p></span></dd></dl></div>
     </li><li name="geotrellis.raster.CellGrid#dimensions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="dimensions:(Int,Int)"></a>
       <a id="dimensions:(Int,Int)"></a>
@@ -870,6 +872,23 @@ number of significant digits to be printed.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.CompositeTile">CompositeTile</a> → <a href="../macros/MacroMappableTile.html" class="extype" name="geotrellis.macros.MacroMappableTile">MacroMappableTile</a></dd></dl></div>
+    </li><li name="geotrellis.raster.CompositeTile#mutable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mutable(targetCellType:geotrellis.raster.CellType):geotrellis.raster.MutableArrayTile"></a>
+      <a id="mutable(CellType):MutableArrayTile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mutable</span><span class="params">(<span name="targetCellType">targetCellType: <a href="package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>)</span><span class="result">: <a href="MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.CompositeTile@mutable(targetCellType:geotrellis.raster.CellType):geotrellis.raster.MutableArrayTile" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.raster.CompositeTile#mutable" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mutable():geotrellis.raster.MutableArrayTile"></a>
       <a id="mutable():MutableArrayTile"></a>

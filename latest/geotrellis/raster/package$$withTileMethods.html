@@ -4056,7 +4056,15 @@ integer, else 0.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="merge/SinglebandTileMergeMethods.html" class="extype" name="geotrellis.raster.merge.SinglebandTileMergeMethods">SinglebandTileMergeMethods</a> → <a href="merge/TileMergeMethods.html" class="extype" name="geotrellis.raster.merge.TileMergeMethods">TileMergeMethods</a></dd></dl></div>
+      <p class="shortcomment cmt">Merges this tile with another tile, given the extents both tiles.</p><div class="fullcomment"><div class="comment cmt"><p>Merges this tile with another tile, given the extents both tiles.</p><p>This method will replace the values of these cells with a resampled value
+taken from the tile's cells, if the source cell is of the transparent value.
+The transparent value is determined by the tile's cell type;
+if the cell type has a NoData value, then that is considered the transparent value.
+If there is no NoData value associated with the cell type, then a 0 value is considered
+the transparent value. If this is not the desired effect, the caller is required to change
+the cell type before using this method to an appropriate cell type that has the desired NoData
+value.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="merge/SinglebandTileMergeMethods.html" class="extype" name="geotrellis.raster.merge.SinglebandTileMergeMethods">SinglebandTileMergeMethods</a> → <a href="merge/TileMergeMethods.html" class="extype" name="geotrellis.raster.merge.TileMergeMethods">TileMergeMethods</a></dd></dl></div>
     </li><li name="geotrellis.raster.merge.SinglebandTileMergeMethods#merge" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="merge(other:geotrellis.raster.Tile):geotrellis.raster.Tile"></a>
       <a id="merge(Tile):Tile"></a>
@@ -4073,7 +4081,16 @@ integer, else 0.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="merge/SinglebandTileMergeMethods.html" class="extype" name="geotrellis.raster.merge.SinglebandTileMergeMethods">SinglebandTileMergeMethods</a> → <a href="merge/TileMergeMethods.html" class="extype" name="geotrellis.raster.merge.TileMergeMethods">TileMergeMethods</a></dd></dl></div>
+      <p class="shortcomment cmt">Merges this tile with another tile.</p><div class="fullcomment"><div class="comment cmt"><p>Merges this tile with another tile.</p><p>This method will replace the values of these cells with the values of the
+other tile's corresponding cells, if the source cell is of the transparent value.
+The transparent value is determined by the tile's cell type;
+if the cell type has a NoData value, then that is considered the transparent value.
+If there is no NoData value associated with the cell type, then a 0 value is considered
+the transparent value. If this is not the desired effect, the caller is required to change
+the cell type before using this method to an appropriate cell type that has the desired NoData
+value.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="merge/SinglebandTileMergeMethods.html" class="extype" name="geotrellis.raster.merge.SinglebandTileMergeMethods">SinglebandTileMergeMethods</a> → <a href="merge/TileMergeMethods.html" class="extype" name="geotrellis.raster.merge.TileMergeMethods">TileMergeMethods</a></dd><dt>Note</dt><dd><span class="cmt"><p>This method requires that the dimensions be the same between the tiles, and assumes
+                              equal extents.</p></span></dd></dl></div>
     </li><li name="geotrellis.raster.merge.TileMergeMethods#merge" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="merge(extent:geotrellis.vector.Extent,otherExtent:geotrellis.vector.Extent,other:T):T"></a>
       <a id="merge(Extent,Extent,Tile):Tile"></a>
