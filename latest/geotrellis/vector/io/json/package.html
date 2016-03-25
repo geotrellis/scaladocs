@@ -82,7 +82,7 @@
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Abstract trait for various implementations of Coordinate Reference System values</p>
     </li><li name="geotrellis.vector.io.json.CrsFormats" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="CrsFormatsextendsAnyRef"></a>
       <a id="CrsFormats:CrsFormats"></a>
@@ -99,7 +99,7 @@
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt"></p>
+      <p class="shortcomment cmt">A trait specifying CRS/JSON conversion</p>
     </li><li name="geotrellis.vector.io.json.FeatureFormats" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="FeatureFormatsextendsAnyRef"></a>
       <a id="FeatureFormats:FeatureFormats"></a>
@@ -116,7 +116,7 @@
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">A trait for providing the Spray.json formats necessary to serialize <a href="../../Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a> instances</p>
     </li><li name="geotrellis.vector.io.json.GeoJsonSupport" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="GeoJsonSupportextendsGeometryFormatswithFeatureFormatswithCrsFormats"></a>
       <a id="GeoJsonSupport:GeoJsonSupport"></a>
@@ -133,9 +133,8 @@
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">A trait providing automatic to and from JSON marshalling/unmarshalling using spray-json implicits.</p><div class="fullcomment"><div class="comment cmt"><p>A trait providing automatic to and from JSON marshalling/unmarshalling using spray-json implicits.
-parameter for writing json and will attempt to attach it to Feature/Geometry json representations.
-</p></div></div>
+      <p class="shortcomment cmt">A trait providing automatic to and from JSON marshalling/unmarshalling using spray-json implicits.</p><div class="fullcomment"><div class="comment cmt"><p>A trait providing automatic to and from JSON marshalling/unmarshalling using spray-json implicits.</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>parameter for writing json and will attempt to attach it to
+      Feature/Geometry json representations.</p></span></dd></dl></div>
     </li><li name="geotrellis.vector.io.json.GeometryFormats" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="GeometryFormatsextendsAnyRef"></a>
       <a id="GeometryFormats:GeometryFormats"></a>
@@ -152,9 +151,7 @@ parameter for writing json and will attempt to attach it to Feature/Geometry jso
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Implements Spray JsonFormats for Geometry objects.</p><div class="fullcomment"><div class="comment cmt"><p>Implements Spray JsonFormats for Geometry objects.
-Import or extend this object directly to use them with default spray-json (un)marshaller
-</p></div></div>
+      <p class="shortcomment cmt">A trait that implements Spray JsonFormats for Geometry objects.</p><div class="fullcomment"><div class="comment cmt"><p>A trait that implements Spray JsonFormats for Geometry objects.</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Import or extend this object directly to use them with default spray-json (un)marshaller</p></span></dd></dl></div>
     </li><li name="geotrellis.vector.io.json.Implicits" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="ImplicitsextendsGeoJsonSupport"></a>
       <a id="Implicits:Implicits"></a>
@@ -232,10 +229,9 @@ It may be queried using .getAll[F &lt;: Feature[_] ] method.</p><p>It aggregates
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">A CRS object may link to CRS parameters on the Web.</p><div class="fullcomment"><div class="comment cmt"><p>A CRS object may link to CRS parameters on the Web.
+      <p class="shortcomment cmt">A CRS object with a link to CRS parameters on the Web.</p><div class="fullcomment"><div class="comment cmt"><p>A CRS object with a link to CRS parameters on the Web.
 </p></div><dl class="paramcmts block"><dt class="param">href</dt><dd class="cmt"><p>must be a dereferenceable URI.</p></dd><dt class="param">crsType</dt><dd class="cmt"><p>must be a string that hints at the format
-   used to represent CRS parameters at the provided URI.
-   Suggested values are: &quot;proj4&quot;, &quot;ogcwkt&quot;, &quot;esriwkt&quot;, others can be used:</p></dd></dl></div>
+       used to represent CRS parameters at the provided URI.</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Suggested values are: &quot;proj4&quot;, &quot;ogcwkt&quot;, &quot;esriwkt&quot;, others can be used:</p></span></dd></dl></div>
     </li><li name="geotrellis.vector.io.json.NamedCRS" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="NamedCRSextendsCRSwithProductwithSerializable"></a>
       <a id="NamedCRS:NamedCRS"></a>
@@ -252,9 +248,9 @@ It may be queried using .getAll[F &lt;: Feature[_] ] method.</p><p>It aggregates
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">A CRS object may indicate a coordinate reference system by name.</p><div class="fullcomment"><div class="comment cmt"><p>A CRS object may indicate a coordinate reference system by name.
-</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>must be a string identifying a coordinate reference system.
- OGC CRS URNs such as &quot;urn:ogc:def:crs:OGC:1.3:CRS84&quot; shall be preferred over legacy identifiers such as &quot;EPSG:4326&quot;</p></dd></dl></div>
+      <p class="shortcomment cmt">A CRS object which indicates a coordinate reference system by name.</p><div class="fullcomment"><div class="comment cmt"><p>A CRS object which indicates a coordinate reference system by name.
+</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>must be a string identifying a coordinate reference system.</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>OGC CRS URNs such as &quot;urn:ogc:def:crs:OGC:1.3:CRS84&quot; shall be
+      preferred over legacy identifiers such as &quot;EPSG:4326&quot;</p></span></dd></dl></div>
     </li><li name="geotrellis.vector.io.json.Style" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="StyleextendsProductwithSerializable"></a>
       <a id="Style:Style"></a>
@@ -288,8 +284,7 @@ It may be queried using .getAll[F &lt;: Feature[_] ] method.</p><p>It aggregates
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Used as a named tuple to extract and insert CRS field in GeoJSON objects
-</p>
+      <p class="shortcomment cmt">Used as a named tuple to extract and insert CRS field in GeoJSON objects</p>
     </li></ol>
             </div>
 
@@ -313,8 +308,7 @@ It may be queried using .getAll[F &lt;: Feature[_] ] method.</p><p>It aggregates
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">No crs field will be associated with GeoJSON object
-</p>
+      <p class="shortcomment cmt">A blank CRS field (will not be associated with GeoJSON object)</p>
     </li><li name="geotrellis.vector.io.json.CrsFormats" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CrsFormats"></a>
       <a id="CrsFormats:CrsFormats"></a>
@@ -365,7 +359,7 @@ It may be queried using .getAll[F &lt;: Feature[_] ] method.</p><p>It aggregates
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">An object whose methods parse string representations as GeoJson</p>
     </li><li name="geotrellis.vector.io.json.GeoJsonSupport" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="GeoJsonSupport"></a>
       <a id="GeoJsonSupport:GeoJsonSupport"></a>

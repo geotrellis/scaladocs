@@ -51,7 +51,14 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This trait provides the scaffolding necessary to generate aggregations
+which depend on <a href="../../Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a> and <a href="../../MultiPolygon.html" class="extype" name="geotrellis.vector.MultiPolygon">MultiPolygon</a> instances.
+</p></div><dl class="paramcmts block"><dt class="tparam">G</dt><dd class="cmt"><p>the <a href="../../Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a> type against which containment and intersection checks are
+           carried out to determine the flow of aggregation logic</p></dd><dt class="tparam">D</dt><dd class="cmt"><p>the type of any data expected to be associated with G in <a href="../../Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a> instances</p></dd><dt class="tparam">T</dt><dd class="cmt"><p>the type being aggregated to through summary mergeOp calls</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>This trait specifies the type of operation to be carried out but *NOT* the &quot;zero
+       element&quot; which determines the beginning value for a chain of operations (like the
+       starting element in a fold) and *NOT* the <a href="../../Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a> or <a href="../../MultiPolygon.html" class="extype" name="geotrellis.vector.MultiPolygon">MultiPolygon</a> to be
+       used during a summary. Instead, those are specified in a call to mergeOp which
+       returns the function used in an actual summarization.</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
@@ -368,7 +375,9 @@
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Given a polygon and a zerovalue, this function returns a function
+which can be used to compute aggregations
+</p>
     </li><li name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler#mergeOp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="mergeOp(polygon:geotrellis.vector.Polygon,zeroValue:T):(T,geotrellis.vector.Feature[G,D])=&gt;T"></a>
       <a id="mergeOp(Polygon,T):(T,Feature[G,D])⇒T"></a>
@@ -385,7 +394,9 @@
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Given a polygon and a zerovalue, this function returns a function
+which can be used to compute aggregations
+</p>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>

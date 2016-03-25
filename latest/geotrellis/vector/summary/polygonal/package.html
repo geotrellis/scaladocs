@@ -66,7 +66,7 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="PolygonalSummaryHandler[G&lt;:geotrellis.vector.Geometry,D,T]extendsSerializable"></a>
       <a id="PolygonalSummaryHandler[G&lt;:Geometry,D,T]:PolygonalSummaryHandler[G,D,T]"></a>
       <h4 class="signature">
@@ -82,7 +82,15 @@
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">This trait provides the scaffolding necessary to generate aggregations
+which depend on <a href="../../Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a> and <a href="../../MultiPolygon.html" class="extype" name="geotrellis.vector.MultiPolygon">MultiPolygon</a> instances.</p><div class="fullcomment"><div class="comment cmt"><p>This trait provides the scaffolding necessary to generate aggregations
+which depend on <a href="../../Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a> and <a href="../../MultiPolygon.html" class="extype" name="geotrellis.vector.MultiPolygon">MultiPolygon</a> instances.
+</p></div><dl class="paramcmts block"><dt class="tparam">G</dt><dd class="cmt"><p>the <a href="../../Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a> type against which containment and intersection checks are
+           carried out to determine the flow of aggregation logic</p></dd><dt class="tparam">D</dt><dd class="cmt"><p>the type of any data expected to be associated with G in <a href="../../Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a> instances</p></dd><dt class="tparam">T</dt><dd class="cmt"><p>the type being aggregated to through summary mergeOp calls</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>This trait specifies the type of operation to be carried out but *NOT* the &quot;zero
+       element&quot; which determines the beginning value for a chain of operations (like the
+       starting element in a fold) and *NOT* the <a href="../../Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a> or <a href="../../MultiPolygon.html" class="extype" name="geotrellis.vector.MultiPolygon">MultiPolygon</a> to be
+       used during a summary. Instead, those are specified in a call to mergeOp which
+       returns the function used in an actual summarization.</p></span></dd></dl></div>
     </li></ol>
             </div>
 
@@ -106,7 +114,7 @@
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Companion object to <a href="PolygonalSummaryHandler.html" class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler">PolygonalSummaryHandler</a></p>
     </li></ol>
             </div>
 

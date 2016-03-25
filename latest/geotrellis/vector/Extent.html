@@ -51,9 +51,8 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>An Extent represents a rectangular region of geographic space (with a
-particular projection). It is expressed in map coordinates.
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A rectangular region of geographic space
+</p></div><dl class="paramcmts block"><dt class="param">xmin</dt><dd class="cmt"><p>The minimum x coordinate</p></dd><dt class="param">ymin</dt><dd class="cmt"><p>The minimum y coordinate</p></dd><dt class="param">xmax</dt><dd class="cmt"><p>The maximum x coordinate</p></dd><dt class="param">ymax</dt><dd class="cmt"><p>The maximum y coordinate</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -92,7 +91,7 @@ particular projection). It is expressed in map coordinates.
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="geotrellis.vector.Extent#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.vector.Extent#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="&lt;init&gt;(xmin:Double,ymin:Double,xmax:Double,ymax:Double):geotrellis.vector.Extent"></a>
       <a id="&lt;init&gt;:Extent"></a>
       <h4 class="signature">
@@ -108,7 +107,7 @@ particular projection). It is expressed in map coordinates.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">xmin</dt><dd class="cmt"><p>The minimum x coordinate</p></dd><dt class="param">ymin</dt><dd class="cmt"><p>The minimum y coordinate</p></dd><dt class="param">xmax</dt><dd class="cmt"><p>The maximum x coordinate</p></dd><dt class="param">ymax</dt><dd class="cmt"><p>The maximum y coordinate</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -168,7 +167,7 @@ particular projection). It is expressed in map coordinates.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Create an optional extent which represents the intersection with a provided extent</p>
     </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a>
       <a id="==(Any):Boolean"></a>
@@ -202,7 +201,7 @@ particular projection). It is expressed in map coordinates.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">The area of this extent</p>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -236,7 +235,7 @@ particular projection). It is expressed in map coordinates.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Create a new extent using a buffer around this extent</p>
     </li><li name="geotrellis.vector.Extent#center" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="center:geotrellis.vector.Point"></a>
       <a id="center:Point"></a>
@@ -253,7 +252,7 @@ particular projection). It is expressed in map coordinates.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">The centroid of this extent</p>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -277,7 +276,7 @@ particular projection). It is expressed in map coordinates.
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.vector.Extent#combine" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.vector.Extent#combine" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="combine(other:geotrellis.vector.Extent):geotrellis.vector.Extent"></a>
       <a id="combine(Extent):Extent"></a>
       <h4 class="signature">
@@ -293,10 +292,7 @@ particular projection). It is expressed in map coordinates.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Return a the smallest extent that contains this extent and the provided
-extent.</p><div class="fullcomment"><div class="comment cmt"><p>Return a the smallest extent that contains this extent and the provided
-extent. This is provides a union of the two extents.
-</p></div></div>
+      <p class="shortcomment cmt">Return the smallest extent that contains this extent and the provided extent.</p>
     </li><li name="geotrellis.vector.Extent#compare" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="compare(other:geotrellis.vector.Extent):Int"></a>
       <a id="compare(Extent):Int"></a>
@@ -337,7 +333,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
       </a>
     </span>
       <p class="shortcomment cmt">Tests if the given point lies in or on the envelope.</p><div class="fullcomment"><div class="comment cmt"><p>Tests if the given point lies in or on the envelope.
-</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Note that this is the same definition as the SFS <tt>contains</tt>,
+</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>This is the same definition as the SFS <tt>contains</tt>,
       which is unlike the JTS Envelope.contains, which would include the
       envelope boundary.</p></span></dd></dl></div>
     </li><li name="geotrellis.vector.Extent#contains" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -357,7 +353,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
       </a>
     </span>
       <p class="shortcomment cmt">Tests if the given point lies in or on the envelope.</p><div class="fullcomment"><div class="comment cmt"><p>Tests if the given point lies in or on the envelope.
-</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Note that this is the same definition as the SFS <tt>contains</tt>,
+</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>This is the same definition as the SFS <tt>contains</tt>,
       which is unlike the JTS Envelope.contains, which would include the
       envelope boundary.</p></span></dd></dl></div>
     </li><li name="geotrellis.vector.Extent#contains" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
@@ -393,7 +389,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Predicate for whether this extent covers a point</p>
     </li><li name="geotrellis.vector.Extent#covers" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="covers(p:geotrellis.vector.Point):Boolean"></a>
       <a id="covers(Point):Boolean"></a>
@@ -410,7 +406,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Predicate for whether this extent covers a point</p>
     </li><li name="geotrellis.vector.Extent#covers" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="covers(other:geotrellis.vector.Extent):Boolean"></a>
       <a id="covers(Extent):Boolean"></a>
@@ -427,7 +423,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Predicate for whether this extent covers another</p>
     </li><li name="geotrellis.vector.Extent#distance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="distance(other:geotrellis.vector.Extent):Double"></a>
       <a id="distance(Extent):Double"></a>
@@ -444,7 +440,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Distance from another extent</p>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -478,7 +474,9 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.vector.Extent">Extent</a> → Equals → AnyRef → Any</dd></dl></div>
+      <p class="shortcomment cmt">Equality check against this extent
+</p><div class="fullcomment"><div class="comment cmt"><p>Equality check against this extent
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.vector.Extent">Extent</a> → Equals → AnyRef → Any</dd><dt>Note</dt><dd><span class="cmt"><p>only returns true given another extent</p></span></dd></dl></div>
     </li><li name="geotrellis.vector.Extent#expandBy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="expandBy(deltaX:Double,deltaY:Double):geotrellis.vector.Extent"></a>
       <a id="expandBy(Double,Double):Extent"></a>
@@ -495,7 +493,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Return an extent of this extent expanded by the provided x and y distances</p>
     </li><li name="geotrellis.vector.Extent#expandBy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="expandBy(distance:Double):geotrellis.vector.Extent"></a>
       <a id="expandBy(Double):Extent"></a>
@@ -512,7 +510,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Return an extent of this extent expanded by the provided distance on all sides</p>
     </li><li name="geotrellis.vector.Extent#expandToInclude" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="expandToInclude(x:Double,y:Double):geotrellis.vector.Extent"></a>
       <a id="expandToInclude(Double,Double):Extent"></a>
@@ -529,7 +527,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Return the smallest extent that contains this extent and the provided point.</p>
     </li><li name="geotrellis.vector.Extent#expandToInclude" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="expandToInclude(p:geotrellis.vector.Point):geotrellis.vector.Extent"></a>
       <a id="expandToInclude(Point):Extent"></a>
@@ -546,7 +544,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Return the smallest extent that contains this extent and the provided point.</p>
     </li><li name="geotrellis.vector.Extent#expandToInclude" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="expandToInclude(other:geotrellis.vector.Extent):geotrellis.vector.Extent"></a>
       <a id="expandToInclude(Extent):Extent"></a>
@@ -563,7 +561,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Return the smallest extent that contains this extent and the provided extent.</p>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -654,7 +652,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Predicate for whether this extent intersects the interior of another</p>
     </li><li name="geotrellis.vector.Extent#intersection" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="intersection(other:geotrellis.vector.Extent):Option[geotrellis.vector.Extent]"></a>
       <a id="intersection(Extent):Option[Extent]"></a>
@@ -671,7 +669,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Create an optional extent which represents the intersection with a provided extent</p>
     </li><li name="geotrellis.vector.Extent#intersects" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="intersects(x:Double,y:Double):Boolean"></a>
       <a id="intersects(Double,Double):Boolean"></a>
@@ -688,7 +686,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Predicate for whether this extent intersects the specified point</p>
     </li><li name="geotrellis.vector.Extent#intersects" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="intersects(p:geotrellis.vector.Point):Boolean"></a>
       <a id="intersects(Point):Boolean"></a>
@@ -705,7 +703,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Predicate for whether this extent intersects another</p>
     </li><li name="geotrellis.vector.Extent#intersects" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="intersects(other:geotrellis.vector.Extent):Boolean"></a>
       <a id="intersects(Extent):Boolean"></a>
@@ -722,7 +720,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Predicate for whether this extent intersects another</p>
     </li><li name="geotrellis.vector.Extent#isEmpty" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="isEmpty:Boolean"></a>
       <a id="isEmpty:Boolean"></a>
@@ -739,7 +737,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Predicate for whether this extent has 0 area</p>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -807,7 +805,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">The maximum between the height and width of this extent</p>
     </li><li name="geotrellis.vector.Extent#min" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="min:geotrellis.vector.Point"></a>
       <a id="min:Point"></a>
@@ -841,7 +839,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">The minimum between the height and width of this extent</p>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -994,7 +992,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Return this extent as a polygon</p>
     </li><li name="geotrellis.vector.Extent#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>
@@ -1028,7 +1026,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Return this extent moved x and y amounts</p>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -1131,7 +1129,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">The maximum x coordinate</p>
     </li><li name="geotrellis.vector.Extent#xmin" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="xmin:Double"></a>
       <a id="xmin:Double"></a>
@@ -1148,7 +1146,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">The minimum x coordinate</p>
     </li><li name="geotrellis.vector.Extent#ymax" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ymax:Double"></a>
       <a id="ymax:Double"></a>
@@ -1165,7 +1163,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">The maximum y coordinate</p>
     </li><li name="geotrellis.vector.Extent#ymin" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ymin:Double"></a>
       <a id="ymin:Double"></a>
@@ -1182,7 +1180,7 @@ extents are equal.</p><p>Return type signals:</p><p>  -1 this bounding box comes
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">The minimum y coordinate</p>
     </li></ol>
             </div>
 
