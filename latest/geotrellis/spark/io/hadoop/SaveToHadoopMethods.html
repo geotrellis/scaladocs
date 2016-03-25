@@ -28,12 +28,10 @@
         </head>
         <body class="type">
       <div id="definition">
-        <a href="SaveToHadoopMethods$.html" title="See companion object"><img alt="Class/Object" src="../../../../lib/class_to_object_big.png" /></a>
+        <img alt="Class" src="../../../../lib/class_big.png" />
         <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.spark">spark</a>.<a href="../package.html" class="extype" name="geotrellis.spark.io">io</a>.<a href="package.html" class="extype" name="geotrellis.spark.io.hadoop">hadoop</a></p>
-        <h1><a href="SaveToHadoopMethods$.html" title="See companion object">SaveToHadoopMethods</a></h1><h3><span class="morelinks"><div>
-            Related Docs:
-            <a href="SaveToHadoopMethods$.html" title="See companion object">object SaveToHadoopMethods</a>
-            | <a href="package.html" class="extype" name="geotrellis.spark.io.hadoop">package hadoop</a>
+        <h1>SaveToHadoopMethods</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="package.html" class="extype" name="geotrellis.spark.io.hadoop">package hadoop</a>
           </div></span></h3><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.hadoop.SaveToHadoopMethods" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
@@ -370,57 +368,41 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="geotrellis.spark.io.hadoop.SaveToHadoopMethods#saveToHadoop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="saveToHadoop(scheme:String,keyToPath:K=&gt;String,rdd:org.apache.spark.rdd.RDD[(K,Array[Byte])]):Unit"></a>
-      <a id="saveToHadoop(String,(K)⇒String,RDD[(K,Array[Byte])]):Unit"></a>
+      <a id="saveToHadoop(keyToUri:K=&gt;String):Long"></a>
+      <a id="saveToHadoop((K)⇒String):Long"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">saveToHadoop</span><span class="params">(<span name="scheme">scheme: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="keyToPath">keyToPath: (<span class="extype" name="geotrellis.spark.io.hadoop.SaveToHadoopMethods.K">K</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.io.hadoop.SaveToHadoopMethods.K">K</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>])]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">saveToHadoop</span><span class="params">(<span name="keyToUri">keyToUri: (<span class="extype" name="geotrellis.spark.io.hadoop.SaveToHadoopMethods.K">K</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.hadoop.SaveToHadoopMethods@saveToHadoop(scheme:String,keyToPath:K=&gt;String,rdd:org.apache.spark.rdd.RDD[(K,Array[Byte])]):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.SaveToHadoopMethods@saveToHadoop(keyToUri:K=&gt;String):Long" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">scheme</dt><dd class="cmt"><p>URI scheme, used to get a hadoop FileSystem object</p></dd><dt class="param">keyToPath</dt><dd class="cmt"><p>A function from K (a key) to a Hadoop URI</p></dd><dt class="param">rdd</dt><dd class="cmt"><p>An RDD of key, image pairs</p></dd></dl></div>
-    </li><li name="geotrellis.spark.io.hadoop.SaveToHadoopMethods#saveToHadoop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="saveToHadoop(keyToPath:K=&gt;String):Unit"></a>
-      <a id="saveToHadoop((K)⇒String):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">saveToHadoop</span><span class="params">(<span name="keyToPath">keyToPath: (<span class="extype" name="geotrellis.spark.io.hadoop.SaveToHadoopMethods.K">K</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.hadoop.SaveToHadoopMethods@saveToHadoop(keyToPath:K=&gt;String):Unit" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">keyToPath</dt><dd class="cmt"><p>A function from K (a key) to a Hadoop URI</p></dd></dl></div>
+      <p class="shortcomment cmt">Saves to Hadoop FileSystem, returns a count of records saved.</p><div class="fullcomment"><div class="comment cmt"><p>Saves to Hadoop FileSystem, returns a count of records saved.
+</p></div><dl class="paramcmts block"><dt class="param">keyToUri</dt><dd class="cmt"><p>A function from K (a key) to a Hadoop URI</p></dd></dl></div>
     </li><li name="geotrellis.spark.io.hadoop.SaveToHadoopMethods#setupSaveToHadoop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="setupSaveToHadoop(scheme:String,keyToPath:K=&gt;String):org.apache.spark.rdd.RDD[(K,Array[Byte])]"></a>
-      <a id="setupSaveToHadoop(String,(K)⇒String):RDD[(K,Array[Byte])]"></a>
+      <a id="setupSaveToHadoop(keyToUri:K=&gt;String):org.apache.spark.rdd.RDD[(K,Array[Byte])]"></a>
+      <a id="setupSaveToHadoop((K)⇒String):RDD[(K,Array[Byte])]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setupSaveToHadoop</span><span class="params">(<span name="scheme">scheme: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="keyToPath">keyToPath: (<span class="extype" name="geotrellis.spark.io.hadoop.SaveToHadoopMethods.K">K</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.io.hadoop.SaveToHadoopMethods.K">K</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>])]</span>
+        <span class="name">setupSaveToHadoop</span><span class="params">(<span name="keyToUri">keyToUri: (<span class="extype" name="geotrellis.spark.io.hadoop.SaveToHadoopMethods.K">K</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.io.hadoop.SaveToHadoopMethods.K">K</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>])]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.hadoop.SaveToHadoopMethods@setupSaveToHadoop(scheme:String,keyToPath:K=&gt;String):org.apache.spark.rdd.RDD[(K,Array[Byte])]" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.SaveToHadoopMethods@setupSaveToHadoop(keyToUri:K=&gt;String):org.apache.spark.rdd.RDD[(K,Array[Byte])]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">Sets up saving to Hadoop, but returns an RDD so that writes can be chained.</p><div class="fullcomment"><div class="comment cmt"><p>Sets up saving to Hadoop, but returns an RDD so that writes can be chained.
-</p></div><dl class="paramcmts block"><dt class="param">scheme</dt><dd class="cmt"><p>URI scheme, used to get a hadoop FileSystem object</p></dd><dt class="param">keyToPath</dt><dd class="cmt"><p>A function from K (a key) to a Hadoop URI</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">keyToUri</dt><dd class="cmt"><p>A function from K (a key) to a Hadoop URI</p></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

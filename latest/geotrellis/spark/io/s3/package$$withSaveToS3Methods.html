@@ -51,7 +51,7 @@
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="SaveToS3Methods.html" class="extype" name="geotrellis.spark.io.s3.SaveToS3Methods">SaveToS3Methods</a>[<span class="extype" name="geotrellis.spark.io.s3.withSaveToS3Methods.K">K</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="SaveToS3Methods.html" class="extype" name="geotrellis.spark.io.s3.SaveToS3Methods">SaveToS3Methods</a>[<span class="extype" name="geotrellis.spark.io.s3.withSaveToS3Methods.K">K</span>], <a href="../../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.io.s3.withSaveToS3Methods.K">K</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>])]], <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -69,7 +69,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.spark.io.s3.withSaveToS3Methods"><span>withSaveToS3Methods</span></li><li class="in" name="geotrellis.spark.io.s3.SaveToS3Methods"><span>SaveToS3Methods</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.spark.io.s3.withSaveToS3Methods"><span>withSaveToS3Methods</span></li><li class="in" name="geotrellis.spark.io.s3.SaveToS3Methods"><span>SaveToS3Methods</span></li><li class="in" name="geotrellis.util.MethodExtensions"><span>MethodExtensions</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -365,7 +365,7 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="geotrellis.spark.io.s3.SaveToS3Methods#saveToS3" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="saveToS3(keyToPath:K=&gt;String):Unit"></a>
+      <a id="saveToS3(keyToUri:K=&gt;String):Unit"></a>
       <a id="saveToS3((K)⇒String):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -373,14 +373,32 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">saveToS3</span><span class="params">(<span name="keyToPath">keyToPath: (<span class="extype" name="geotrellis.spark.io.s3.withSaveToS3Methods.K">K</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">saveToS3</span><span class="params">(<span name="keyToUri">keyToUri: (<span class="extype" name="geotrellis.spark.io.s3.withSaveToS3Methods.K">K</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.package$$withSaveToS3Methods@saveToS3(keyToPath:K=&gt;String):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.package$$withSaveToS3Methods@saveToS3(keyToUri:K=&gt;String):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">keyToPath</dt><dd class="cmt"><p>A function from K (a key) to an S3 URI</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="SaveToS3Methods.html" class="extype" name="geotrellis.spark.io.s3.SaveToS3Methods">SaveToS3Methods</a></dd></dl></div>
+      <p class="shortcomment cmt">Saves each RDD value to an S3 key.</p><div class="fullcomment"><div class="comment cmt"><p>Saves each RDD value to an S3 key.
+</p></div><dl class="paramcmts block"><dt class="param">keyToUri</dt><dd class="cmt"><p>A function from K (a key) to an S3 URI</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="SaveToS3Methods.html" class="extype" name="geotrellis.spark.io.s3.SaveToS3Methods">SaveToS3Methods</a></dd></dl></div>
+    </li><li name="geotrellis.spark.io.s3.SaveToS3Methods#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:org.apache.spark.rdd.RDD[(K,Array[Byte])]"></a>
+      <a id="self:RDD[(K,Array[Byte])]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">self</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.io.s3.withSaveToS3Methods.K">K</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>])]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.package$$withSaveToS3Methods@self:org.apache.spark.rdd.RDD[(K,Array[Byte])]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="SaveToS3Methods.html" class="extype" name="geotrellis.spark.io.s3.SaveToS3Methods">SaveToS3Methods</a> → <a href="../../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -495,6 +513,12 @@
         <div id="inheritedMembers">
         <div class="parent" name="geotrellis.spark.io.s3.SaveToS3Methods">
               <h3>Inherited from <a href="SaveToS3Methods.html" class="extype" name="geotrellis.spark.io.s3.SaveToS3Methods">SaveToS3Methods</a>[<span class="extype" name="geotrellis.spark.io.s3.withSaveToS3Methods.K">K</span>]</h3>
+            </div><div class="parent" name="geotrellis.util.MethodExtensions">
+              <h3>Inherited from <a href="../../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.io.s3.withSaveToS3Methods.K">K</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>])]]</h3>
+            </div><div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">

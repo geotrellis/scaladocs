@@ -367,24 +367,42 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.spark.io.hadoop.MoreSaveToHadoopMethods#setupSaveToHadoop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="setupSaveToHadoop(scheme:String,path:K=&gt;String,getBytes:(K,V)=&gt;Array[Byte]):org.apache.spark.rdd.RDD[(K,V)]"></a>
-      <a id="setupSaveToHadoop(String,(K)⇒String,(K,V)⇒Array[Byte]):RDD[(K,V)]"></a>
+    </li><li name="geotrellis.spark.io.hadoop.MoreSaveToHadoopMethods#saveToHadoop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="saveToHadoop(keyToUri:K=&gt;String)(getBytes:(K,V)=&gt;Array[Byte]):Long"></a>
+      <a id="saveToHadoop((K)⇒String)((K,V)⇒Array[Byte]):Long"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setupSaveToHadoop</span><span class="params">(<span name="scheme">scheme: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: (<span class="extype" name="geotrellis.spark.io.hadoop.MoreSaveToHadoopMethods.K">K</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="getBytes">getBytes: (<span class="extype" name="geotrellis.spark.io.hadoop.MoreSaveToHadoopMethods.K">K</span>, <span class="extype" name="geotrellis.spark.io.hadoop.MoreSaveToHadoopMethods.V">V</span>) ⇒ <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.io.hadoop.MoreSaveToHadoopMethods.K">K</span>, <span class="extype" name="geotrellis.spark.io.hadoop.MoreSaveToHadoopMethods.V">V</span>)]</span>
+        <span class="name">saveToHadoop</span><span class="params">(<span name="keyToUri">keyToUri: (<span class="extype" name="geotrellis.spark.io.hadoop.MoreSaveToHadoopMethods.K">K</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span name="getBytes">getBytes: (<span class="extype" name="geotrellis.spark.io.hadoop.MoreSaveToHadoopMethods.K">K</span>, <span class="extype" name="geotrellis.spark.io.hadoop.MoreSaveToHadoopMethods.V">V</span>) ⇒ <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.hadoop.MoreSaveToHadoopMethods@setupSaveToHadoop(scheme:String,path:K=&gt;String,getBytes:(K,V)=&gt;Array[Byte]):org.apache.spark.rdd.RDD[(K,V)]" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.MoreSaveToHadoopMethods@saveToHadoop(keyToUri:K=&gt;String)(getBytes:(K,V)=&gt;Array[Byte]):Long" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Saves to Hadoop, but returns a count of records saved.</p><div class="fullcomment"><div class="comment cmt"><p>Saves to Hadoop, but returns a count of records saved.
+</p></div><dl class="paramcmts block"><dt class="param">keyToUri</dt><dd class="cmt"><p>maps each key to full hadoop supported path</p></dd><dt class="param">getBytes</dt><dd class="cmt"><p>K and V both provided in case K contains required information, like extent.</p></dd></dl></div>
+    </li><li name="geotrellis.spark.io.hadoop.MoreSaveToHadoopMethods#setupSaveToHadoop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setupSaveToHadoop(keyToUri:K=&gt;String)(getBytes:(K,V)=&gt;Array[Byte]):org.apache.spark.rdd.RDD[(K,V)]"></a>
+      <a id="setupSaveToHadoop((K)⇒String)((K,V)⇒Array[Byte]):RDD[(K,V)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setupSaveToHadoop</span><span class="params">(<span name="keyToUri">keyToUri: (<span class="extype" name="geotrellis.spark.io.hadoop.MoreSaveToHadoopMethods.K">K</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span name="getBytes">getBytes: (<span class="extype" name="geotrellis.spark.io.hadoop.MoreSaveToHadoopMethods.K">K</span>, <span class="extype" name="geotrellis.spark.io.hadoop.MoreSaveToHadoopMethods.V">V</span>) ⇒ <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.io.hadoop.MoreSaveToHadoopMethods.K">K</span>, <span class="extype" name="geotrellis.spark.io.hadoop.MoreSaveToHadoopMethods.V">V</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.MoreSaveToHadoopMethods@setupSaveToHadoop(keyToUri:K=&gt;String)(getBytes:(K,V)=&gt;Array[Byte]):org.apache.spark.rdd.RDD[(K,V)]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">Sets up saving to Hadoop, but returns an RDD so that writes can be chained.</p><div class="fullcomment"><div class="comment cmt"><p>Sets up saving to Hadoop, but returns an RDD so that writes can be chained.
-</p></div><dl class="paramcmts block"><dt class="param">scheme</dt><dd class="cmt"><p>URI scheme, used to get a hadoop FileSystem object</p></dd><dt class="param">path</dt><dd class="cmt"><p>maps each key to full hadoop supported path</p></dd><dt class="param">getBytes</dt><dd class="cmt"><p>K and V both provided in case K contains required information, like extent.</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">keyToUri</dt><dd class="cmt"><p>maps each key to full hadoop supported path</p></dd><dt class="param">getBytes</dt><dd class="cmt"><p>K and V both provided in case K contains required information, like extent.</p></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
