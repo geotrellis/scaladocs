@@ -51,7 +51,8 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The Stitcher base trait.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
@@ -97,7 +98,7 @@
 
         <div id="values" class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="geotrellis.raster.stitch.Stitcher#stitch" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.raster.stitch.Stitcher#stitch" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="stitch(pieces:Iterable[(T,(Int,Int))],cols:Int,rows:Int):T"></a>
       <a id="stitch(Iterable[(T,(Int,Int))],Int,Int):T"></a>
       <h4 class="signature">
@@ -113,7 +114,13 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Stitch an <span class="extype" name="Iterable">Iterable</span> of tile, corner pairs into a new tile
+with the given number of columns and rows.</p><div class="fullcomment"><div class="comment cmt"><p>Stitch an <span class="extype" name="Iterable">Iterable</span> of tile, corner pairs into a new tile
+with the given number of columns and rows.</p><p>The parameter 'pieces' is an iterable of (T, (Int, Int)) tuples,
+were the first item in the tuple is a tile and the second one is
+the position that the tile should occupy (given by smallest
+column and smallest row).
+</p></div><dl class="paramcmts block"><dt class="param">pieces</dt><dd class="cmt"><p>An iterable of tile, corner pairs</p></dd><dt class="param">cols</dt><dd class="cmt"><p>The number of columns in the result tile</p></dd><dt class="param">rows</dt><dd class="cmt"><p>The number of rows in the result tile</p></dd><dt>returns</dt><dd class="cmt"><p>The result tile</p></dd></dl></div>
     </li></ol>
             </div>
 

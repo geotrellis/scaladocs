@@ -51,16 +51,15 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This tuples Geometry with an SRID. It is up to the application developer to
-ensure that the SRID parameter stays semantically consistent.</p><p>Concretely this class exists because PostGIS requires an SRID to be stored
-with the Geometry and the decision has been made not to encapsulate SRID
-semantics in the Geometry hierarchy for the moment.</p><p>Sample Usage: <code>
-import geotrellis.proj4._
-
-val projected = Point(1,1).withSRID(4326)  // LatLng, trust me
-val projected = projected.reproject(LatLng, WebMercator)(3857)
-</code>
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A case class which represents Geometry with an SRID.
+</p></div><dl class="attributes block"> <div class="block">Example:
+               <ol><li class="cmt"><p></p><pre><span class="kw">import</span> geotrellis.proj4._
+<span class="kw">val</span> projected = Point(<span class="num">1</span>,<span class="num">1</span>).withSRID(<span class="num">4326</span>)  <span class="cmt">// LatLng, trust me</span>
+<span class="kw">val</span> projected = projected.reproject(LatLng, WebMercator)(<span class="num">3857</span>)</pre></li></ol>
+            </div><dt>Note</dt><dd><span class="cmt"><p>This exists because PostGIS requires an SRID to be stored
+      with the Geometry and the decision has been made not to encapsulate
+      SRID semantics in the Geometry hierarchy for the moment.</p></span>, <span class="cmt"><p>It is up to the application developer to ensure that
+      the SRID parameter stays semantically consistent.</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>

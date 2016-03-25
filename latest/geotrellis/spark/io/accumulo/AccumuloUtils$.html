@@ -145,6 +145,26 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.spark.io.accumulo.AccumuloUtils#addSplits" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addSplits[K](tableName:String,accumuloInstance:geotrellis.spark.io.accumulo.AccumuloInstance,keyBounds:geotrellis.spark.KeyBounds[K],keyIndexer:geotrellis.spark.io.index.KeyIndex[K],count:Int):Unit"></a>
+      <a id="addSplits[K](String,AccumuloInstance,KeyBounds[K],KeyIndex[K],Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addSplits</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="tableName">tableName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="accumuloInstance">accumuloInstance: <a href="AccumuloInstance.html" class="extype" name="geotrellis.spark.io.accumulo.AccumuloInstance">AccumuloInstance</a></span>, <span name="keyBounds">keyBounds: <a href="../../KeyBounds.html" class="extype" name="geotrellis.spark.KeyBounds">KeyBounds</a>[<span class="extype" name="geotrellis.spark.io.accumulo.AccumuloUtils.addSplits.K">K</span>]</span>, <span name="keyIndexer">keyIndexer: <a href="../index/KeyIndex.html" class="extype" name="geotrellis.spark.io.index.KeyIndex">KeyIndex</a>[<span class="extype" name="geotrellis.spark.io.accumulo.AccumuloUtils.addSplits.K">K</span>]</span>, <span name="count">count: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.accumulo.AccumuloUtils$@addSplits[K](tableName:String,accumuloInstance:geotrellis.spark.io.accumulo.AccumuloInstance,keyBounds:geotrellis.spark.KeyBounds[K],keyIndexer:geotrellis.spark.io.index.KeyIndex[K],count:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Split the given Accumulo table into the given number of tablets.</p><div class="fullcomment"><div class="comment cmt"><p>Split the given Accumulo table into the given number of tablets.
+This should improve the ingest performance, as it will allow
+more than one tablet server to participate in the ingestion.
+</p></div><dl class="paramcmts block"><dt class="param">tableName</dt><dd class="cmt"><p>The name of the table to be split</p></dd><dt class="param">keyBounds</dt><dd class="cmt"><p>The <a href="../../KeyBounds.html" class="extype" name="geotrellis.spark.KeyBounds">KeyBounds</a> of the RDD that is being stored in the table</p></dd><dt class="param">keyIndexer</dt><dd class="cmt"><p>The indexing scheme used to turn keys K into Accumulo keys</p></dd><dt class="param">count</dt><dd class="cmt"><p>The number of tablets to split the table into</p></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>

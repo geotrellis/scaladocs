@@ -47,7 +47,13 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Implicit conversion for <a href="../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">geotrellis.vector.Geometry</a> instances
+</p></div><dl class="attributes block"> <div class="block">Example:
+               <ol><li class="cmt"><p></p><pre><span class="kw">import</span> geotrellis.vector._
+<span class="kw">import</span> geotrellis.slick._
+<span class="cmt">// create a web mercator projected point with the ExtendGeometry implicit class</span>
+<span class="kw">val</span> projectedPoint = Point(<span class="num">1.0</span>, <span class="num">2.0</span>).withSRID(<span class="num">3274</span>)</pre></li></ol>
+            </div></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -105,7 +111,7 @@
       </a>
     </span>
       
-    </li><li name="geotrellis.slick.PostGisExtensions" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.slick.PostGisExtensions" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="PostGisExtensionsextendsAnyRef"></a>
       <a id="PostGisExtensions:PostGisExtensions"></a>
       <h4 class="signature">
@@ -121,7 +127,7 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">based on <a href="" class="extype" name="geotrellis.slick">com.github.tminglei.slickpg.PgPostGISExtensions</a></p>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="" class="extype" name="geotrellis.slick">com.github.tminglei.slickpg.PgPostGISExtensions</a></p></span></dd></dl></div>
     </li><li name="geotrellis.slick.PostGisProjectionSupport" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="PostGisProjectionSupportextendsPostGisExtensions"></a>
       <a id="PostGisProjectionSupport:PostGisProjectionSupport"></a>
@@ -138,21 +144,17 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">This class provides column types and extension methods to work with Geometry columns
- associated with an SRID in PostGIS.</p><div class="fullcomment"><div class="comment cmt"><p>This class provides column types and extension methods to work with Geometry columns
- associated with an SRID in PostGIS.</p><p>Sample Usage:
-<code>
-val PostGIS = new PostGisProjectionSupport(PostgresDriver)
-import PostGIS._
-
-class City(tag: Tag) extends Table[(Int,String,Projected[Point])](tag, "cities") {
-  def id = column[Int]("id", O.PrimaryKey, O.AutoInc)
-  def name = column[String]("name")
-  def geom = column[Projected[Point]]("geom")
-  def * = (id, name, geom)
-}
-</code></p><p>based on <a href="" class="extype" name="geotrellis.slick">com.github.tminglei.slickpg.PgPostGISSupport</a>
-</p></div></div>
+      <p class="shortcomment cmt">This class provides column types and extension methods to work with Geometry columns associated with an SRID in PostGIS.</p><div class="fullcomment"><div class="comment cmt"><p>This class provides column types and extension methods to work with Geometry columns associated with an SRID in PostGIS.
+</p></div><dl class="attributes block"> <div class="block">Example:
+               <ol><li class="cmt"><p></p><pre><span class="kw">val</span> PostGIS = <span class="kw">new</span> PostGisProjectionSupport(PostgresDriver)
+<span class="kw">import</span> PostGIS._
+<span class="kw">class</span> City(tag: Tag) <span class="kw">extends</span> Table[(<span class="std">Int</span>,<span class="std">String</span>,Projected[Point])](tag, <span class="lit">"cities"</span>) {
+  <span class="kw">def</span> id = column[<span class="std">Int</span>](<span class="lit">"id"</span>, O.PrimaryKey, O.AutoInc)
+  <span class="kw">def</span> name = column[<span class="std">String</span>](<span class="lit">"name"</span>)
+  <span class="kw">def</span> geom = column[Projected[Point]](<span class="lit">"geom"</span>)
+  <span class="kw">def</span> * = (id, name, geom)
+}</pre></li></ol>
+            </div><dt>See also</dt><dd><span class="cmt"><p><a href="" class="extype" name="geotrellis.slick">com.github.tminglei.slickpg.PgPostGISSupport</a></p></span></dd></dl></div>
     </li><li name="geotrellis.slick.PostGisSupport" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="PostGisSupportextendsPostGisExtensions"></a>
       <a id="PostGisSupport:PostGisSupport"></a>
@@ -169,19 +171,17 @@ class City(tag: Tag) extends Table[(Int,String,Projected[Point])](tag, "cities")
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">This class provides column types and extension methods to work with Geometry columns in PostGIS.</p><div class="fullcomment"><div class="comment cmt"><p>This class provides column types and extension methods to work with Geometry columns in PostGIS.</p><p>Sample Usage:
-<code>
-val PostGIS = new PostGisSupport(PostgresDriver)
-import PostGIS._
-
-class City(tag: Tag) extends Table[(Int,String,Point)](tag, "cities") {
-  def id = column[Int]("id", O.PrimaryKey, O.AutoInc)
-  def name = column[String]("name")
-  def geom = column[Point]("geom")
-  def * = (id, name, geom)
-}
-</code></p><p>based on <a href="" class="extype" name="geotrellis.slick">com.github.tminglei.slickpg.PgPostGISSupport</a>
-</p></div></div>
+      <p class="shortcomment cmt">A class which provides column types and extension methods for working with Geometry columns in PostGIS.</p><div class="fullcomment"><div class="comment cmt"><p>A class which provides column types and extension methods for working with Geometry columns in PostGIS.
+</p></div><dl class="attributes block"> <div class="block">Example:
+               <ol><li class="cmt"><p></p><pre><span class="kw">val</span> PostGIS = <span class="kw">new</span> PostGisSupport(PostgresDriver)
+<span class="kw">import</span> PostGIS._
+<span class="kw">class</span> City(tag: Tag) <span class="kw">extends</span> Table[(<span class="std">Int</span>,<span class="std">String</span>,Point)](tag, <span class="lit">"cities"</span>) {
+  <span class="kw">def</span> id = column[<span class="std">Int</span>](<span class="lit">"id"</span>, O.PrimaryKey, O.AutoInc)
+  <span class="kw">def</span> name = column[<span class="std">String</span>](<span class="lit">"name"</span>)
+  <span class="kw">def</span> geom = column[Point](<span class="lit">"geom"</span>)
+  <span class="kw">def</span> * = (id, name, geom)
+}</pre></li></ol>
+            </div><dt>See also</dt><dd><span class="cmt"><p><a href="" class="extype" name="geotrellis.slick">com.github.tminglei.slickpg.PgPostGISSupport</a></p></span></dd></dl></div>
     </li><li name="geotrellis.slick.Projected" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="Projected[+G&lt;:geotrellis.vector.Geometry]extendsProductwithSerializable"></a>
       <a id="Projected[+G&lt;:Geometry]:Projected[G]"></a>
@@ -198,16 +198,15 @@ class City(tag: Tag) extends Table[(Int,String,Point)](tag, "cities") {
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">This tuples Geometry with an SRID.</p><div class="fullcomment"><div class="comment cmt"><p>This tuples Geometry with an SRID. It is up to the application developer to
-ensure that the SRID parameter stays semantically consistent.</p><p>Concretely this class exists because PostGIS requires an SRID to be stored
-with the Geometry and the decision has been made not to encapsulate SRID
-semantics in the Geometry hierarchy for the moment.</p><p>Sample Usage: <code>
-import geotrellis.proj4._
-
-val projected = Point(1,1).withSRID(4326)  // LatLng, trust me
-val projected = projected.reproject(LatLng, WebMercator)(3857)
-</code>
-</p></div></div>
+      <p class="shortcomment cmt">A case class which represents Geometry with an SRID.</p><div class="fullcomment"><div class="comment cmt"><p>A case class which represents Geometry with an SRID.
+</p></div><dl class="attributes block"> <div class="block">Example:
+               <ol><li class="cmt"><p></p><pre><span class="kw">import</span> geotrellis.proj4._
+<span class="kw">val</span> projected = Point(<span class="num">1</span>,<span class="num">1</span>).withSRID(<span class="num">4326</span>)  <span class="cmt">// LatLng, trust me</span>
+<span class="kw">val</span> projected = projected.reproject(LatLng, WebMercator)(<span class="num">3857</span>)</pre></li></ol>
+            </div><dt>Note</dt><dd><span class="cmt"><p>This exists because PostGIS requires an SRID to be stored
+      with the Geometry and the decision has been made not to encapsulate
+      SRID semantics in the Geometry hierarchy for the moment.</p></span>, <span class="cmt"><p>It is up to the application developer to ensure that
+      the SRID parameter stays semantically consistent.</p></span></dd></dl></div>
     </li></ol>
             </div>
 

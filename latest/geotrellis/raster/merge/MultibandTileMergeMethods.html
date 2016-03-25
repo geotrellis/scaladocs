@@ -49,7 +49,9 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A trait containing extension methods related to MultibandTile
+merging.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="TileMergeMethods.html" class="extype" name="geotrellis.raster.merge.TileMergeMethods">TileMergeMethods</a>[<a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>], <a href="../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>], <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
@@ -332,7 +334,11 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.merge.MultibandTileMergeMethods">MultibandTileMergeMethods</a> → <a href="TileMergeMethods.html" class="extype" name="geotrellis.raster.merge.TileMergeMethods">TileMergeMethods</a></dd></dl></div>
+      <p class="shortcomment cmt">Merge this <span class="extype" name="MultiBandTile">MultiBandTile</span> with the other one.</p><div class="fullcomment"><div class="comment cmt"><p>Merge this <span class="extype" name="MultiBandTile">MultiBandTile</span> with the other one.  All places in
+the present tile that contain NODATA and are in the intersection
+of the two given extents are filled-in with data from the other
+tile.  A new MutlibandTile is returned.
+</p></div><dl class="paramcmts block"><dt class="param">extent</dt><dd class="cmt"><p>The extent of this MultiBandTile</p></dd><dt class="param">otherExtent</dt><dd class="cmt"><p>The extent of the other MultiBandTile</p></dd><dt class="param">other</dt><dd class="cmt"><p>The other MultiBandTile</p></dd><dt class="param">method</dt><dd class="cmt"><p>The resampling method</p></dd><dt>returns</dt><dd class="cmt"><p>A new MultiBandTile, the result of the merge</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.merge.MultibandTileMergeMethods">MultibandTileMergeMethods</a> → <a href="TileMergeMethods.html" class="extype" name="geotrellis.raster.merge.TileMergeMethods">TileMergeMethods</a></dd></dl></div>
     </li><li name="geotrellis.raster.merge.MultibandTileMergeMethods#merge" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="merge(other:geotrellis.raster.MultibandTile):geotrellis.raster.MultibandTile"></a>
       <a id="merge(MultibandTile):MultibandTile"></a>
@@ -349,7 +355,9 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.merge.MultibandTileMergeMethods">MultibandTileMergeMethods</a> → <a href="TileMergeMethods.html" class="extype" name="geotrellis.raster.merge.TileMergeMethods">TileMergeMethods</a></dd></dl></div>
+      <p class="shortcomment cmt">Merge the respective bands of this MultibandTile and the other
+one.</p><div class="fullcomment"><div class="comment cmt"><p>Merge the respective bands of this MultibandTile and the other
+one.</p></div><dl class="paramcmts block"><dt class="param">other</dt><dd class="cmt"><p>The other Tile</p></dd><dt>returns</dt><dd class="cmt"><p>A new Tile, the result of the merge</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.merge.MultibandTileMergeMethods">MultibandTileMergeMethods</a> → <a href="TileMergeMethods.html" class="extype" name="geotrellis.raster.merge.TileMergeMethods">TileMergeMethods</a></dd></dl></div>
     </li><li name="geotrellis.raster.merge.TileMergeMethods#merge" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="merge(extent:geotrellis.vector.Extent,otherExtent:geotrellis.vector.Extent,other:T):T"></a>
       <a id="merge(Extent,Extent,MultibandTile):MultibandTile"></a>
@@ -366,7 +374,11 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="TileMergeMethods.html" class="extype" name="geotrellis.raster.merge.TileMergeMethods">TileMergeMethods</a></dd></dl></div>
+      <p class="shortcomment cmt">Merge this <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> with the other one.</p><div class="fullcomment"><div class="comment cmt"><p>Merge this <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> with the other one.  All places in the
+present tile that contain NODATA and are in the intersection of
+the two given extents are filled-in with data from the other
+tile.  A new Tile is returned.
+</p></div><dl class="paramcmts block"><dt class="param">extent</dt><dd class="cmt"><p>The extent of this Tile</p></dd><dt class="param">otherExtent</dt><dd class="cmt"><p>The extent of the other Tile</p></dd><dt class="param">other</dt><dd class="cmt"><p>The other Tile</p></dd><dt>returns</dt><dd class="cmt"><p>A new Tile, the result of the merge</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="TileMergeMethods.html" class="extype" name="geotrellis.raster.merge.TileMergeMethods">TileMergeMethods</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>

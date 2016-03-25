@@ -276,9 +276,8 @@
     </span>
       <p class="shortcomment cmt">Returns a GridExtent that lines up with this grid' resolution
 and grid layout.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a GridExtent that lines up with this grid' resolution
-and grid layout.
-i.e., the resulting GridExtent will not have the given extent,
-but will have the smallest extent such that the whole of
+and grid layout.</p><p>For example, the resulting GridExtent will not have the given
+extent, but will have the smallest extent such that the whole of
 the given extent is covered, that lines up with the grid.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a></dd></dl></div>
     </li><li name="geotrellis.raster.GridDefinition#createAlignedRasterExtent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -297,11 +296,10 @@ the given extent is covered, that lines up with the grid.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Returns a RasterExtent that lines up with this RasterExtent's resolution,
-and grid layout.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a RasterExtent that lines up with this RasterExtent's resolution,
-and grid layout.
-i.e., the resulting RasterExtent will not have the given extent,
-but will have the smallest extent such that the whole of
+      <p class="shortcomment cmt">Returns a RasterExtent that lines up with this RasterExtent's
+resolution, and grid layout.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a RasterExtent that lines up with this RasterExtent's
+resolution, and grid layout.</p><p>For example, the resulting RasterExtent will not have the given
+extent, but will have the smallest extent such that the whole of
 the given extent is covered, that lines up with the grid.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -354,11 +352,14 @@ the given extent is covered, that lines up with the grid.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Gets the Extent that matches the grid bounds passed in, aligned with this RasterExtent.</p><div class="fullcomment"><div class="comment cmt"><p>Gets the Extent that matches the grid bounds passed in, aligned with this RasterExtent.
-</p></div><dl class="paramcmts block"><dt class="param">gridBounds</dt><dd class="cmt"><p>The extent to get the grid bounds for</p></dd><dt class="param">clamp</dt><dd class="cmt"><p>Determines whether or not to clamp the Extent to the
-                          extent of this RasterExtent; defaults to true. If true, the
-                          returned extent will be contained by this RasterExtent's extent,
-                          if false, the Extent returned can be outside of this RasterExtent's extent.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a></dd></dl></div>
+      <p class="shortcomment cmt">Gets the Extent that matches the grid bounds passed in, aligned
+with this RasterExtent.</p><div class="fullcomment"><div class="comment cmt"><p>Gets the Extent that matches the grid bounds passed in, aligned
+with this RasterExtent.</p><p>The 'clamp' parameter determines whether or not to clamp the
+Extent to the extent of this RasterExtent; defaults to true. If
+true, the returned extent will be contained by this
+RasterExtent's extent, if false, the Extent returned can be
+outside of this RasterExtent's extent.
+</p></div><dl class="paramcmts block"><dt class="param">gridBounds</dt><dd class="cmt"><p>The extent to get the grid bounds for</p></dd><dt class="param">clamp</dt><dd class="cmt"><p>A boolean which controlls the clamping behvior</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a></dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -619,11 +620,12 @@ the given extent is covered, that lines up with the grid.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Creates a RasterExtent out of this GridExtent.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a RasterExtent out of this GridExtent.
+      <p class="shortcomment cmt"> Creates a RasterExtent out of this GridExtent.</p><div class="fullcomment"><div class="comment cmt"><p> Creates a RasterExtent out of this GridExtent.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a></dd><dt>Note</dt><dd><span class="cmt"><p>Use with caution: if the number of columns or rows are larger than Int.MaxValue,
-                           this will throw an exception. Also, if columns * rows &gt; Int.MaxValue, this will
-                           create a RasterExtent for a raster that could not be backed by any of the Array-backed
-                           tile types.</p></span></dd></dl></div>
+      this will throw an exception. Also, if columns * rows &gt;
+      Int.MaxValue, this will create a RasterExtent for a raster
+      that could not be backed by any of the Array-backed tile
+      types.</p></span></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>

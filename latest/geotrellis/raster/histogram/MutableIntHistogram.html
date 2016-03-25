@@ -49,7 +49,8 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>All mutable integer histograms are derived from this class.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="IntHistogram.html" class="extype" name="geotrellis.raster.histogram.IntHistogram">IntHistogram</a>, <a href="MutableHistogram.html" class="extype" name="geotrellis.raster.histogram.MutableHistogram">MutableHistogram</a>[<span class="extype" name="scala.Int">Int</span>], <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="scala.Int">Int</span>], <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
@@ -131,7 +132,8 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+      <p class="shortcomment cmt">The number of buckets utilized by this <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>.</p><div class="fullcomment"><div class="comment cmt"><p>The number of buckets utilized by this <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="geotrellis.raster.histogram.MutableHistogram#countItem" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="countItem(item:T,count:Int):Unit"></a>
       <a id="countItem(Int,Int):Unit"></a>
@@ -148,9 +150,9 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Note the occurance of 'item'.</p><div class="fullcomment"><div class="comment cmt"><p>Note the occurance of 'item'.</p><p>The optional parameter 'count' allows histograms to be built more
-efficiently. Negative counts can be used to remove a particular number
-of occurances of 'item'.
+      <p class="shortcomment cmt">Note the occurance of 'item'.</p><div class="fullcomment"><div class="comment cmt"><p>Note the occurance of 'item'.</p><p>The optional parameter 'count' allows histograms to be built
+more efficiently. Negative counts can be used to remove a
+particular number of occurances of 'item'.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="MutableHistogram.html" class="extype" name="geotrellis.raster.histogram.MutableHistogram">MutableHistogram</a></dd></dl></div>
     </li><li name="geotrellis.raster.histogram.Histogram#foreachValue" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="foreachValue(f:T=&gt;Unit):Unit"></a>
@@ -168,7 +170,10 @@ of occurances of 'item'.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+      <p class="shortcomment cmt">Execute the given function on the value of each bucket in the
+histogram.</p><div class="fullcomment"><div class="comment cmt"><p>Execute the given function on the value of each bucket in the
+histogram.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>A unit function of one parameter</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="geotrellis.raster.histogram.Histogram#itemCount" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="itemCount(item:T):Int"></a>
       <a id="itemCount(Int):Int"></a>
@@ -185,7 +190,7 @@ of occurances of 'item'.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Return the number of occurances for 'item'.</p><div class="fullcomment"><div class="comment cmt"><p>Return the number of occurances for 'item'.
+      <p class="shortcomment cmt">Return the number of occurrences for 'item'.</p><div class="fullcomment"><div class="comment cmt"><p>Return the number of occurrences for 'item'.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="geotrellis.raster.histogram.Histogram#maxValue" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="maxValue():Option[T]"></a>
@@ -221,7 +226,12 @@ of occurances of 'item'.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+      <p class="shortcomment cmt">Return the sum of this histogram and the given one (the sum is
+the histogram that would result from seeing all of the values
+seen by the two antecedent histograms).</p><div class="fullcomment"><div class="comment cmt"><p>Return the sum of this histogram and the given one (the sum is
+the histogram that would result from seeing all of the values
+seen by the two antecedent histograms).
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="geotrellis.raster.histogram.Histogram#minValue" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="minValue():Option[T]"></a>
       <a id="minValue():Option[Int]"></a>
@@ -274,7 +284,8 @@ of occurances of 'item'.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+      <p class="shortcomment cmt">Return an array containing the values seen by this histogram.</p><div class="fullcomment"><div class="comment cmt"><p>Return an array containing the values seen by this histogram.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="geotrellis.raster.histogram.MutableHistogram#setItem" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="setItem(item:T,count:Int):Unit"></a>
       <a id="setItem(Int,Int):Unit"></a>
@@ -309,7 +320,7 @@ of occurances of 'item'.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Return the total number of occurances for all items.</p><div class="fullcomment"><div class="comment cmt"><p>Return the total number of occurances for all items.
+      <p class="shortcomment cmt">Return the total number of occurrences for all items.</p><div class="fullcomment"><div class="comment cmt"><p>Return the total number of occurrences for all items.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="geotrellis.raster.histogram.MutableHistogram#uncountItem" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="uncountItem(item:T):Unit"></a>
@@ -345,7 +356,8 @@ of occurances of 'item'.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+      <p class="shortcomment cmt">Return a sorted array of values seen by this histogram.</p><div class="fullcomment"><div class="comment cmt"><p>Return a sorted array of values seen by this histogram.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li></ol>
             </div>
 
@@ -458,7 +470,10 @@ of occurances of 'item'.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.MutableIntHistogram">MutableIntHistogram</a> → <a href="MutableHistogram.html" class="extype" name="geotrellis.raster.histogram.MutableHistogram">MutableHistogram</a></dd></dl></div>
+      <p class="shortcomment cmt">Note the occurance of 'item'.</p><div class="fullcomment"><div class="comment cmt"><p>Note the occurance of 'item'.</p><p>The optional parameter 'count' allows histograms to be built
+more efficiently. Negative counts can be used to remove a
+particular number of occurances of 'item'.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.MutableIntHistogram">MutableIntHistogram</a> → <a href="MutableHistogram.html" class="extype" name="geotrellis.raster.histogram.MutableHistogram">MutableHistogram</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -532,7 +547,10 @@ of occurances of 'item'.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="IntHistogram.html" class="extype" name="geotrellis.raster.histogram.IntHistogram">IntHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+      <p class="shortcomment cmt">Execute the given function on the value and count of each bucket
+in the histogram.</p><div class="fullcomment"><div class="comment cmt"><p>Execute the given function on the value and count of each bucket
+in the histogram.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="IntHistogram.html" class="extype" name="geotrellis.raster.histogram.IntHistogram">IntHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -600,7 +618,10 @@ of occurances of 'item'.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="IntHistogram.html" class="extype" name="geotrellis.raster.histogram.IntHistogram">IntHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+      <p class="shortcomment cmt">Compute the mean of the distribution represented by the
+histogram.</p><div class="fullcomment"><div class="comment cmt"><p>Compute the mean of the distribution represented by the
+histogram.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="IntHistogram.html" class="extype" name="geotrellis.raster.histogram.IntHistogram">IntHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="geotrellis.raster.histogram.IntHistogram#median" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="median():Option[Int]"></a>
       <a id="median():Option[Int]"></a>
@@ -617,7 +638,10 @@ of occurances of 'item'.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="IntHistogram.html" class="extype" name="geotrellis.raster.histogram.IntHistogram">IntHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+      <p class="shortcomment cmt">Compute the median of the distribution represented by the
+histogram.</p><div class="fullcomment"><div class="comment cmt"><p>Compute the median of the distribution represented by the
+histogram.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="IntHistogram.html" class="extype" name="geotrellis.raster.histogram.IntHistogram">IntHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="geotrellis.raster.histogram.Histogram#minMaxValues" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="minMaxValues():Option[(T,T)]"></a>
       <a id="minMaxValues():Option[(Int,Int)]"></a>
@@ -652,7 +676,10 @@ of occurances of 'item'.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="IntHistogram.html" class="extype" name="geotrellis.raster.histogram.IntHistogram">IntHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+      <p class="shortcomment cmt">Compute the mode of the distribution represented by the
+histogram.</p><div class="fullcomment"><div class="comment cmt"><p>Compute the mode of the distribution represented by the
+histogram.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="IntHistogram.html" class="extype" name="geotrellis.raster.histogram.IntHistogram">IntHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -720,7 +747,10 @@ of occurances of 'item'.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.MutableIntHistogram">MutableIntHistogram</a> → <a href="MutableHistogram.html" class="extype" name="geotrellis.raster.histogram.MutableHistogram">MutableHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+      <p class="shortcomment cmt">Compute the quantile breaks of the histogram, where the latter
+are evenly spaced in 'num' increments starting at zero percent.</p><div class="fullcomment"><div class="comment cmt"><p>Compute the quantile breaks of the histogram, where the latter
+are evenly spaced in 'num' increments starting at zero percent.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.MutableIntHistogram">MutableIntHistogram</a> → <a href="MutableHistogram.html" class="extype" name="geotrellis.raster.histogram.MutableHistogram">MutableHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="geotrellis.raster.histogram.IntHistogram#statistics" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="statistics():Option[geotrellis.raster.summary.Statistics[Int]]"></a>
       <a id="statistics():Option[Statistics[Int]]"></a>
@@ -737,7 +767,11 @@ of occurances of 'item'.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="IntHistogram.html" class="extype" name="geotrellis.raster.histogram.IntHistogram">IntHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
+      <p class="shortcomment cmt">Return a statistics object for the distribution represented by
+the histogram.</p><div class="fullcomment"><div class="comment cmt"><p>Return a statistics object for the distribution represented by
+the histogram.  Contains among other things: mean, mode, median,
+and so-forth.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="IntHistogram.html" class="extype" name="geotrellis.raster.histogram.IntHistogram">IntHistogram</a> → <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -788,7 +822,8 @@ of occurances of 'item'.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.MutableIntHistogram">MutableIntHistogram</a> → <a href="MutableHistogram.html" class="extype" name="geotrellis.raster.histogram.MutableHistogram">MutableHistogram</a></dd></dl></div>
+      <p class="shortcomment cmt">Update this histogram with the entries from the other one.</p><div class="fullcomment"><div class="comment cmt"><p>Update this histogram with the entries from the other one.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.histogram.MutableIntHistogram">MutableIntHistogram</a> → <a href="MutableHistogram.html" class="extype" name="geotrellis.raster.histogram.MutableHistogram">MutableHistogram</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>

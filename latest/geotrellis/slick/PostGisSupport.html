@@ -49,19 +49,17 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This class provides column types and extension methods to work with Geometry columns in PostGIS.</p><p>Sample Usage:
-<code>
-val PostGIS = new PostGisSupport(PostgresDriver)
-import PostGIS._
-
-class City(tag: Tag) extends Table[(Int,String,Point)](tag, "cities") {
-  def id = column[Int]("id", O.PrimaryKey, O.AutoInc)
-  def name = column[String]("name")
-  def geom = column[Point]("geom")
-  def * = (id, name, geom)
-}
-</code></p><p>based on <a href="package.html" class="extype" name="geotrellis.slick">com.github.tminglei.slickpg.PgPostGISSupport</a>
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A class which provides column types and extension methods for working with Geometry columns in PostGIS.
+</p></div><dl class="attributes block"> <div class="block">Example:
+               <ol><li class="cmt"><p></p><pre><span class="kw">val</span> PostGIS = <span class="kw">new</span> PostGisSupport(PostgresDriver)
+<span class="kw">import</span> PostGIS._
+<span class="kw">class</span> City(tag: Tag) <span class="kw">extends</span> Table[(<span class="std">Int</span>,<span class="std">String</span>,Point)](tag, <span class="lit">"cities"</span>) {
+  <span class="kw">def</span> id = column[<span class="std">Int</span>](<span class="lit">"id"</span>, O.PrimaryKey, O.AutoInc)
+  <span class="kw">def</span> name = column[<span class="std">String</span>](<span class="lit">"name"</span>)
+  <span class="kw">def</span> geom = column[Point](<span class="lit">"geom"</span>)
+  <span class="kw">def</span> * = (id, name, geom)
+}</pre></li></ol>
+            </div><dt>See also</dt><dd><span class="cmt"><p><a href="package.html" class="extype" name="geotrellis.slick">com.github.tminglei.slickpg.PgPostGISSupport</a></p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="PostGisExtensions.html" class="extype" name="geotrellis.slick.PostGisExtensions">PostGisExtensions</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>

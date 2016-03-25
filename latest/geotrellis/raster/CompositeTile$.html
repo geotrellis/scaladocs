@@ -51,7 +51,8 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The companion object for the <a href="CompositeTile.html" class="extype" name="geotrellis.raster.CompositeTile">CompositeTile</a> type.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -147,7 +148,7 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.raster.CompositeTile#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.raster.CompositeTile#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="apply(tile:geotrellis.raster.Tile,tileLayout:geotrellis.raster.TileLayout):geotrellis.raster.CompositeTile"></a>
       <a id="apply(Tile,TileLayout):CompositeTile"></a>
       <h4 class="signature">
@@ -163,7 +164,10 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Given a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> and a <a href="TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a>, produce a
+<a href="CompositeTile.html" class="extype" name="geotrellis.raster.CompositeTile">CompositeTile</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Given a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> and a <a href="TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a>, produce a
+<a href="CompositeTile.html" class="extype" name="geotrellis.raster.CompositeTile">CompositeTile</a>.
+</p></div><dl class="paramcmts block"><dt class="param">tile</dt><dd class="cmt"><p>The tile</p></dd><dt class="param">tileLayout</dt><dd class="cmt"><p>The layout</p></dd><dt>returns</dt><dd class="cmt"><p>The CompositeTile</p></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -379,17 +383,14 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Splits a raster into a CompositeTile into tiles.</p><div class="fullcomment"><div class="comment cmt"><p>Splits a raster into a CompositeTile into tiles.
-</p></div><dl class="paramcmts block"><dt class="param">tile</dt><dd class="cmt"><p>Tile to split.</p></dd><dt class="param">tileLayout</dt><dd class="cmt"><p>TileLayout defining the tiles to be
-                             generated.</p></dd><dt class="param">cropped</dt><dd class="cmt"><p>Set this flag to false if you
-                             want the tiles to be ArrayTiles,
-                             otherwise they will be CroppedTiles
-                             with the raster 'r' as the backing raster.</p></dd><dt class="param">extend</dt><dd class="cmt"><p>Set this flag to false if you do not want the
-                             resulting tiles to extend past the input Tile's
-                             cols and rows based on the input tileLayout. For
-                             instance, if the tile layout has tileRows = 50,
-                             the input raster has rows = 90, and extend is false,
-                             the tiles of the last row will have rows = 40 instead of rows = 50.</p></dd></dl></div>
+      <p class="shortcomment cmt">Splits a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> into an array of tiles.</p><div class="fullcomment"><div class="comment cmt"><p>Splits a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> into an array of tiles.</p><p>Set the 'cropped' flag to false if you want the tiles to be
+<a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>s, otherwise they will be <a href="CroppedTile.html" class="extype" name="geotrellis.raster.CroppedTile">CroppedTile</a>s with the
+Tile 'tile' as the backing.</p><p>Set the 'extend' to false if you do not want the resulting tiles
+to extend past the input Tile's cols and rows based on the input
+tileLayout. For instance, if the tile layout has tileRows = 50,
+the input raster has rows = 90, and extend is false, the tiles
+of the last row will have rows = 40 instead of rows = 50.
+</p></div><dl class="paramcmts block"><dt class="param">tile</dt><dd class="cmt"><p>Tile to split</p></dd><dt class="param">tileLayout</dt><dd class="cmt"><p>TileLayout defining the tiles to be generated</p></dd><dt class="param">cropped</dt><dd class="cmt"><p>Boolean to control cropping</p></dd><dt class="param">extend</dt><dd class="cmt"><p>Boolean to control how much respect the extent</p></dd><dt>returns</dt><dd class="cmt"><p>An array of Tiles</p></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -509,12 +510,12 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Converts a raster into a CompositeTile with the given tileLayout.</p><div class="fullcomment"><div class="comment cmt"><p>Converts a raster into a CompositeTile with the given tileLayout.
-</p></div><dl class="paramcmts block"><dt class="param">tile</dt><dd class="cmt"><p>Tile to wrap.</p></dd><dt class="param">tileLayout</dt><dd class="cmt"><p>TileLayout of the resulting
-                             CompositeTile.</p></dd><dt class="param">cropped</dt><dd class="cmt"><p>Set this flag to false if you
-                             want the tiles to be ArrayTiles,
-                             otherwise they will be CroppedTiles
-                             with the raster 'r' as the backing raster.</p></dd></dl></div>
+      <p class="shortcomment cmt">Converts a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> into a <a href="CompositeTile.html" class="extype" name="geotrellis.raster.CompositeTile">CompositeTile</a> with the given
+<a href="TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Converts a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> into a <a href="CompositeTile.html" class="extype" name="geotrellis.raster.CompositeTile">CompositeTile</a> with the given
+<a href="TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a>.  Set the 'cropped' flag to false if you want the
+tiles to be <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>s, otherwise they will be
+<a href="CroppedTile.html" class="extype" name="geotrellis.raster.CroppedTile">CroppedTile</a>s with the Tile 'tile' as the backing.
+</p></div><dl class="paramcmts block"><dt class="param">tile</dt><dd class="cmt"><p>Tile to wrap.</p></dd><dt class="param">tileLayout</dt><dd class="cmt"><p>TileLayout of the resulting CompositeTile.</p></dd><dt class="param">cropped</dt><dd class="cmt"><p>Boolean to control cropping</p></dd><dt>returns</dt><dd class="cmt"><p>The CompositeTile</p></dd></dl></div>
     </li><li name="geotrellis.raster.CompositeTile#wrap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wrap(tile:geotrellis.raster.Tile,tileLayout:geotrellis.raster.TileLayout):geotrellis.raster.CompositeTile"></a>
       <a id="wrap(Tile,TileLayout):CompositeTile"></a>
@@ -531,9 +532,11 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Converts a raster into a CompositeTile with the given tileLayout.</p><div class="fullcomment"><div class="comment cmt"><p>Converts a raster into a CompositeTile with the given tileLayout.
-</p></div><dl class="paramcmts block"><dt class="param">tile</dt><dd class="cmt"><p>Tile to wrap.</p></dd><dt class="param">tileLayout</dt><dd class="cmt"><p>TileLayout of the resulting
-                             CompositeTile.</p></dd></dl></div>
+      <p class="shortcomment cmt">Converts a <span class="extype" name="Tile]">into a <a href="CompositeTile.html" class="extype" name="geotrellis.raster.CompositeTile">CompositeTile</a> with the given
+<a href="TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a>.
+</span></p><div class="fullcomment"><div class="comment cmt"><p>Converts a <span class="extype" name="Tile]">into a <a href="CompositeTile.html" class="extype" name="geotrellis.raster.CompositeTile">CompositeTile</a> with the given
+<a href="TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a>.
+</span></p></div><dl class="paramcmts block"><dt class="param">tile</dt><dd class="cmt"><p>Tile to wrap.</p></dd><dt class="param">tileLayout</dt><dd class="cmt"><p>TileLayout of the resulting CompositeTile.</p></dd><dt>returns</dt><dd class="cmt"><p>The CompositeTile</p></dd></dl></div>
     </li><li name="geotrellis.raster.CompositeTile#wrap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wrap(tile:geotrellis.raster.Tile,tileCols:Int,tileRows:Int,cropped:Boolean):geotrellis.raster.CompositeTile"></a>
       <a id="wrap(Tile,Int,Int,Boolean):CompositeTile"></a>
@@ -550,13 +553,12 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Converts a raster into a CompositeTile with the given tileLayout.</p><div class="fullcomment"><div class="comment cmt"><p>Converts a raster into a CompositeTile with the given tileLayout.
-</p></div><dl class="paramcmts block"><dt class="param">tile</dt><dd class="cmt"><p>Tile to wrap.</p></dd><dt class="param">tileCols</dt><dd class="cmt"><p>Number of tile columns of the resulting
-                             CompositeTile.</p></dd><dt class="param">tileRows</dt><dd class="cmt"><p>Number of tile columns of the resulting
-                             CompositeTile.</p></dd><dt class="param">cropped</dt><dd class="cmt"><p>Set this flag to false if you
-                             want the tiles to be ArrayTiles,
-                             otherwise they will be CroppedTiles
-                             with the raster 'r' as the backing raster.</p></dd></dl></div>
+      <p class="shortcomment cmt">Converts a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> into a <a href="CompositeTile.html" class="extype" name="geotrellis.raster.CompositeTile">CompositeTile</a> with the given tile
+layout.</p><div class="fullcomment"><div class="comment cmt"><p>Converts a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> into a <a href="CompositeTile.html" class="extype" name="geotrellis.raster.CompositeTile">CompositeTile</a> with the given tile
+layout.  Set the 'cropped' flag to false if you want the tiles
+to be <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>s, otherwise they will be <a href="CroppedTile.html" class="extype" name="geotrellis.raster.CroppedTile">CroppedTile</a>s
+with the Tile 'tile' as the backing.
+</p></div><dl class="paramcmts block"><dt class="param">tile</dt><dd class="cmt"><p>Tile to wrap.</p></dd><dt class="param">tileCols</dt><dd class="cmt"><p>Number of tile columns of the resulting CompositeTile.</p></dd><dt class="param">tileRows</dt><dd class="cmt"><p>Number of tile columns of the resulting CompositeTile.</p></dd><dt class="param">cropped</dt><dd class="cmt"><p>Boolean to control cropping</p></dd><dt>returns</dt><dd class="cmt"><p>The CompositeTile</p></dd></dl></div>
     </li><li name="geotrellis.raster.CompositeTile#wrap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wrap(tile:geotrellis.raster.Tile,tileCols:Int,tileRows:Int):geotrellis.raster.CompositeTile"></a>
       <a id="wrap(Tile,Int,Int):CompositeTile"></a>
@@ -573,10 +575,10 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Converts a raster into a CompositeTile with the given tileLayout.</p><div class="fullcomment"><div class="comment cmt"><p>Converts a raster into a CompositeTile with the given tileLayout.
-</p></div><dl class="paramcmts block"><dt class="param">tile</dt><dd class="cmt"><p>Tile to wrap.</p></dd><dt class="param">tileCols</dt><dd class="cmt"><p>Number of tile columns of the resulting
-                             CompositeTile.</p></dd><dt class="param">tileRows</dt><dd class="cmt"><p>Number of tile columns of the resulting
-                             CompositeTile.</p></dd></dl></div>
+      <p class="shortcomment cmt">Converts a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> into a <a href="CompositeTile.html" class="extype" name="geotrellis.raster.CompositeTile">CompositeTile</a> with the given tile
+layout.</p><div class="fullcomment"><div class="comment cmt"><p>Converts a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> into a <a href="CompositeTile.html" class="extype" name="geotrellis.raster.CompositeTile">CompositeTile</a> with the given tile
+layout.
+</p></div><dl class="paramcmts block"><dt class="param">tile</dt><dd class="cmt"><p>Tile to wrap.</p></dd><dt class="param">tileCols</dt><dd class="cmt"><p>Number of tile columns of the resulting CompositeTile.</p></dd><dt class="param">tileRows</dt><dd class="cmt"><p>Number of tile columns of the resulting CompositeTile.</p></dd><dt>returns</dt><dd class="cmt"><p>The CompositeTile</p></dd></dl></div>
     </li></ol>
             </div>
 

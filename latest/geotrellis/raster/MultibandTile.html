@@ -113,7 +113,8 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Retrieve a particular band from the <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a> and return
+it as a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>.</p>
     </li><li name="geotrellis.raster.MultibandTile#bandCount" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="bandCount:Int"></a>
       <a id="bandCount:Int"></a>
@@ -147,7 +148,8 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Retrieve a subset of the bands of the present <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>
+as a new <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>.</p>
     </li><li name="geotrellis.raster.MultibandTile#bands" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="bands(bandSequence:Seq[Int]):geotrellis.raster.MultibandTile"></a>
       <a id="bands(Seq[Int]):MultibandTile"></a>
@@ -164,7 +166,8 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Retrieve a subset of the bands of the present <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>
+as a new <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>.</p>
     </li><li name="geotrellis.raster.CellGrid#cellType" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="cellType:geotrellis.raster.CellType"></a>
       <a id="cellType:CellType"></a>
@@ -232,9 +235,10 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Combine each int band value for each cell.</p><div class="fullcomment"><div class="comment cmt"><p>Combine each int band value for each cell.
-This method will be inherently slower than calling a method with explicitly stated bands,
-so if you have as many or fewer bands to combine than an explicit method call, use that.
+      <p class="shortcomment cmt">Combine each int band value for each cell.</p><div class="fullcomment"><div class="comment cmt"><p>Combine each int band value for each cell.  This method will be
+inherently slower than calling a method with explicitly stated
+bands, so if you have as many or fewer bands to combine than an
+explicit method call, use that.
 </p></div></div>
     </li><li name="geotrellis.raster.MultibandTile#combine" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="combine(subset:Seq[Int])(f:Seq[Int]=&gt;Int):geotrellis.raster.Tile"></a>
@@ -255,7 +259,7 @@ so if you have as many or fewer bands to combine than an explicit method call, u
       <p class="shortcomment cmt">Combine a subset of the bands of a tile into a new
 integer-valued multiband tile using the function f.</p><div class="fullcomment"><div class="comment cmt"><p>Combine a subset of the bands of a tile into a new
 integer-valued multiband tile using the function f.
-</p></div><dl class="paramcmts block"><dt class="param">subset</dt><dd class="cmt"><p>A sequence containing the subset of bands that are of interest.</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function to combine the bands.</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">subset</dt><dd class="cmt"><p>A sequence containing the subset of bands that are of interest</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function to combine the bands</p></dd></dl></div>
     </li><li name="geotrellis.raster.MultibandTile#combineDouble" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="combineDouble(b0:Int,b1:Int)(f:(Double,Double)=&gt;Double):geotrellis.raster.Tile"></a>
       <a id="combineDouble(Int,Int)((Double,Double)⇒Double):Tile"></a>
@@ -289,9 +293,10 @@ integer-valued multiband tile using the function f.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Combine each double band value for each cell.</p><div class="fullcomment"><div class="comment cmt"><p>Combine each double band value for each cell.
-This method will be inherently slower than calling a method with explicitly stated bands,
-so if you have as many or fewer bands to combine than an explicit method call, use that.
+      <p class="shortcomment cmt">Combine each double band value for each cell.</p><div class="fullcomment"><div class="comment cmt"><p>Combine each double band value for each cell.  This method will
+be inherently slower than calling a method with explicitly
+stated bands, so if you have as many or fewer bands to combine
+than an explicit method call, use that.
 </p></div></div>
     </li><li name="geotrellis.raster.MultibandTile#combineDouble" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="combineDouble(subset:Seq[Int])(f:Seq[Double]=&gt;Double):geotrellis.raster.Tile"></a>
@@ -312,7 +317,7 @@ so if you have as many or fewer bands to combine than an explicit method call, u
       <p class="shortcomment cmt">Combine a subset of the bands of a tile into a new double-valued
 multiband tile using the function f.</p><div class="fullcomment"><div class="comment cmt"><p>Combine a subset of the bands of a tile into a new double-valued
 multiband tile using the function f.
-</p></div><dl class="paramcmts block"><dt class="param">subset</dt><dd class="cmt"><p>A sequence containing the subset of bands that are of interest.</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function to combine the bands.</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">subset</dt><dd class="cmt"><p>A sequence containing the subset of bands that are of interest</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function to combine the bands</p></dd></dl></div>
     </li><li name="geotrellis.macros.MacroCombinableMultibandTile#combineDoubleTileCombiner" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="combineDoubleTileCombiner(combiner:geotrellis.macros.DoubleTileCombiner10):T"></a>
       <a id="combineDoubleTileCombiner(DoubleTileCombiner10):Tile"></a>
@@ -585,7 +590,7 @@ multiband tile using the function f.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../macros/MacroCombinableMultibandTile.html" class="extype" name="geotrellis.macros.MacroCombinableMultibandTile">MacroCombinableMultibandTile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.MultibandTile#convert" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.raster.MultibandTile#convert" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="convert(newCellType:geotrellis.raster.CellType):geotrellis.raster.MultibandTile"></a>
       <a id="convert(CellType):MultibandTile"></a>
       <h4 class="signature">
@@ -601,7 +606,10 @@ multiband tile using the function f.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Returns a <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a> equivalent to this one, except with
+cells of the given type.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a> equivalent to this one, except with
+cells of the given type.
+</p></div><dl class="paramcmts block"><dt class="param">newCellType</dt><dd class="cmt"><p>The type of cells that the result should have</p></dd><dt>returns</dt><dd class="cmt"><p>The new MultibandTile</p></dd></dl></div>
     </li><li name="geotrellis.raster.MultibandTile#foreach" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="foreach(b0:Int)(f:Int=&gt;Unit):Unit"></a>
       <a id="foreach(Int)((Int)⇒Unit):Unit"></a>
@@ -618,7 +626,12 @@ multiband tile using the function f.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Iterate over a single band's int value.</p><div class="fullcomment"><div class="comment cmt"><p>Iterate over a single band's int value.</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>Function that takes in a band number and a value, and returns the foreachped value for that cell value.</p></dd></dl></div>
+      <p class="shortcomment cmt">Iterate over a single band's int value using a function that
+takes in a band number and a value, and returns the foreached
+value for that cell value.</p><div class="fullcomment"><div class="comment cmt"><p>Iterate over a single band's int value using a function that
+takes in a band number and a value, and returns the foreached
+value for that cell value.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>The function</p></dd></dl></div>
     </li><li name="geotrellis.raster.MultibandTile#foreach" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="foreach(f:(Int,Int)=&gt;Unit):Unit"></a>
       <a id="foreach((Int,Int)⇒Unit):Unit"></a>
@@ -635,7 +648,12 @@ multiband tile using the function f.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Iterate over each band's int value.</p><div class="fullcomment"><div class="comment cmt"><p>Iterate over each band's int value.</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>Function that takes in a band number and a value, and returns the foreachped value for that cell value.</p></dd></dl></div>
+      <p class="shortcomment cmt">Iterate over each band's int value using a function that takes
+in a band number and a value, and returns the foreached value
+for that cell value.</p><div class="fullcomment"><div class="comment cmt"><p>Iterate over each band's int value using a function that takes
+in a band number and a value, and returns the foreached value
+for that cell value.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>The function</p></dd></dl></div>
     </li><li name="geotrellis.raster.MultibandTile#foreachDouble" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="foreachDouble(b0:Int)(f:Double=&gt;Unit):Unit"></a>
       <a id="foreachDouble(Int)((Double)⇒Unit):Unit"></a>
@@ -652,7 +670,12 @@ multiband tile using the function f.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Iterate over a single band's double value.</p><div class="fullcomment"><div class="comment cmt"><p>Iterate over a single band's double value.</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>Function that takes in a band number and a value, and returns the foreachped value for that cell value.</p></dd></dl></div>
+      <p class="shortcomment cmt">Iterate over a single band's double value using a function that
+takes in a band number and a value, and returns the foreached
+value for that cell value.</p><div class="fullcomment"><div class="comment cmt"><p>Iterate over a single band's double value using a function that
+takes in a band number and a value, and returns the foreached
+value for that cell value.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>The function</p></dd></dl></div>
     </li><li name="geotrellis.raster.MultibandTile#foreachDouble" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="foreachDouble(f:(Int,Double)=&gt;Unit):Unit"></a>
       <a id="foreachDouble((Int,Double)⇒Unit):Unit"></a>
@@ -669,7 +692,12 @@ multiband tile using the function f.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Iterate over each band's double value.</p><div class="fullcomment"><div class="comment cmt"><p>Iterate over each band's double value.</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>Function that takes in a band number and a value, and returns the foreachped value for that cell value.</p></dd></dl></div>
+      <p class="shortcomment cmt">Iterate over each band's double value using a function that
+takes in a band number and a value, and returns the foreached
+value for that cell value.</p><div class="fullcomment"><div class="comment cmt"><p>Iterate over each band's double value using a function that
+takes in a band number and a value, and returns the foreached
+value for that cell value.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>The function</p></dd></dl></div>
     </li><li name="geotrellis.raster.MultibandTile#map" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="map(b0:Int)(f:Int=&gt;Int):geotrellis.raster.MultibandTile"></a>
       <a id="map(Int)((Int)⇒Int):MultibandTile"></a>
@@ -686,7 +714,12 @@ multiband tile using the function f.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Map a single band's int value.</p><div class="fullcomment"><div class="comment cmt"><p>Map a single band's int value.</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>Function that takes in a band number and a value, and returns the mapped value for that cell value.</p></dd></dl></div>
+      <p class="shortcomment cmt">Map a single band's int value using a function that takes in a
+band number and a value, and returns the mapped value for that
+cell value.</p><div class="fullcomment"><div class="comment cmt"><p>Map a single band's int value using a function that takes in a
+band number and a value, and returns the mapped value for that
+cell value.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>The function</p></dd></dl></div>
     </li><li name="geotrellis.raster.MultibandTile#map" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="map(f:(Int,Int)=&gt;Int):geotrellis.raster.MultibandTile"></a>
       <a id="map((Int,Int)⇒Int):MultibandTile"></a>
@@ -703,7 +736,12 @@ multiband tile using the function f.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Map each band's int value.</p><div class="fullcomment"><div class="comment cmt"><p>Map each band's int value.</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>Function that takes in a band number and a value, and returns the mapped value for that cell value.</p></dd></dl></div>
+      <p class="shortcomment cmt">Map each band's int value using a function that takes in a band
+number and a value, and returns the mapped value for that cell
+value.</p><div class="fullcomment"><div class="comment cmt"><p>Map each band's int value using a function that takes in a band
+number and a value, and returns the mapped value for that cell
+value.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>The function</p></dd></dl></div>
     </li><li name="geotrellis.raster.MultibandTile#map" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="map(subset:Seq[Int])(f:(Int,Int)=&gt;Int):geotrellis.raster.MultibandTile"></a>
       <a id="map(Seq[Int])((Int,Int)⇒Int):MultibandTile"></a>
@@ -723,7 +761,7 @@ multiband tile using the function f.
       <p class="shortcomment cmt">Map over a subset of the bands of a multiband tile to create a
 new integer-valued multiband tile.</p><div class="fullcomment"><div class="comment cmt"><p>Map over a subset of the bands of a multiband tile to create a
 new integer-valued multiband tile.
-</p></div><dl class="paramcmts block"><dt class="param">subset</dt><dd class="cmt"><p>A sequence containing the subset of bands that are of interest.</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function to map over the bands.</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">subset</dt><dd class="cmt"><p>A sequence containing the subset of bands that are of interest</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function to map over the bands</p></dd></dl></div>
     </li><li name="geotrellis.raster.MultibandTile#mapDouble" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="mapDouble(b0:Int)(f:Double=&gt;Double):geotrellis.raster.MultibandTile"></a>
       <a id="mapDouble(Int)((Double)⇒Double):MultibandTile"></a>
@@ -740,7 +778,12 @@ new integer-valued multiband tile.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Map each band's double value.</p><div class="fullcomment"><div class="comment cmt"><p>Map each band's double value.</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>Function that takes in a band number and a value, and returns the mapped value for that cell value.</p></dd></dl></div>
+      <p class="shortcomment cmt">Map each band's double value using a function that takes in a
+band number and a value, and returns the mapped value for that
+cell value.</p><div class="fullcomment"><div class="comment cmt"><p>Map each band's double value using a function that takes in a
+band number and a value, and returns the mapped value for that
+cell value.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>The function</p></dd></dl></div>
     </li><li name="geotrellis.raster.MultibandTile#mapDouble" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="mapDouble(f:(Int,Double)=&gt;Double):geotrellis.raster.MultibandTile"></a>
       <a id="mapDouble((Int,Double)⇒Double):MultibandTile"></a>
@@ -757,7 +800,12 @@ new integer-valued multiband tile.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Map each band's double value.</p><div class="fullcomment"><div class="comment cmt"><p>Map each band's double value.</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>Function that takes in a band number and a value, and returns the mapped value for that cell value.</p></dd></dl></div>
+      <p class="shortcomment cmt">Map each band's double value using a function that takes in a
+band number and a value, and returns the mapped value for that
+cell value.</p><div class="fullcomment"><div class="comment cmt"><p>Map each band's double value using a function that takes in a
+band number and a value, and returns the mapped value for that
+cell value.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>The function</p></dd></dl></div>
     </li><li name="geotrellis.raster.MultibandTile#mapDouble" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="mapDouble(subset:Seq[Int])(f:(Int,Double)=&gt;Double):geotrellis.raster.MultibandTile"></a>
       <a id="mapDouble(Seq[Int])((Int,Double)⇒Double):MultibandTile"></a>
@@ -777,7 +825,7 @@ new integer-valued multiband tile.
       <p class="shortcomment cmt">Map over a subset of the bands of a multiband tile to create a
 new double-valued multiband tile.</p><div class="fullcomment"><div class="comment cmt"><p>Map over a subset of the bands of a multiband tile to create a
 new double-valued multiband tile.
-</p></div><dl class="paramcmts block"><dt class="param">subset</dt><dd class="cmt"><p>A sequence containing the subset of bands that are of interest.</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function to map over the bands.</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">subset</dt><dd class="cmt"><p>A sequence containing the subset of bands that are of interest</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function to map over the bands</p></dd></dl></div>
     </li><li name="geotrellis.raster.CellGrid#rows" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="rows:Int"></a>
       <a id="rows:Int"></a>

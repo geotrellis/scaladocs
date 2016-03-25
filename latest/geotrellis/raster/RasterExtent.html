@@ -51,22 +51,34 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>RasterExtent objects represent the geographic extent (envelope) of a raster.</p><p>The Raster extent has two coordinate concepts involved: map coordinates and grid
-coordinates. Map coordinates are what the <span class="extype" name="Extent">Extent</span> class uses, and specifies points
-using an X coordinate and a Y coordinate. The X coordinate is oriented along west to east
-such that the larger the X coordinate, the more eastern the point. The Y coordinate is
-along south to north such that the larger the Y coordinate, the more Northern the point.</p><p>This contrasts with the grid coordinate system. The grid coordinate system does not
-actually reference points on the map, but instead a cell of the raster that represents
-values for some square area of the map. The column axis is similar in that the number
-gets larger as one goes from west to east; however, the row axis is inverted from map coordinates:
-as the row number increases, the cell is heading south. The top row is labeled as 0, and the next
-1, so that the highest indexed row is the southern most row of the raster.
-A cell has a height and a width that is in terms of map units. You can think of it as each cell
-is itself an extent, with width cellwidth and height cellheight. When a cell needs
-to be represented or thought of as a point, the center of the cell will be used.
-So when gridToMap is called, what is returned is the center point, in map coordinates.</p><p>Map points are considered to be 'inside' the cell based on these rules:</p><ul><li>If the point is inside the area of the cell, it is included in the cell.</li><li>If the point lies on the north or west border of the cell, it is included in the cell.</li><li>If the point lies on the south or east border of the cell, it is not included in the cell,
-   it is included in the next southern or eastern cell, respectively.</li></ul><p>Note that based on these rules, the eastern and southern borders of an Extent are not actually
-considered to be part of the RasterExtent.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>RasterExtent objects represent the geographic extent (envelope) of
+a raster.</p><p>The Raster extent has two coordinate concepts involved: map
+coordinates and grid coordinates. Map coordinates are what the
+<span class="extype" name="Extent">Extent</span> class uses, and specifies points using an X coordinate
+and a Y coordinate. The X coordinate is oriented along west to
+east such that the larger the X coordinate, the more eastern the
+point. The Y coordinate is along south to north such that the
+larger the Y coordinate, the more Northern the point.</p><p>This contrasts with the grid coordinate system. The grid
+coordinate system does not actually reference points on the map,
+but instead a cell of the raster that represents values for some
+square area of the map. The column axis is similar in that the
+number gets larger as one goes from west to east; however, the row
+axis is inverted from map coordinates: as the row number
+increases, the cell is heading south. The top row is labeled as 0,
+and the next 1, so that the highest indexed row is the southern
+most row of the raster.  A cell has a height and a width that is
+in terms of map units. You can think of it as each cell is itself
+an extent, with width cellwidth and height cellheight. When a cell
+needs to be represented or thought of as a point, the center of
+the cell will be used.  So when gridToMap is called, what is
+returned is the center point, in map coordinates.</p><p>Map points are considered to be 'inside' the cell based on these
+rules:</p><ul><li>If the point is inside the area of the cell, it is included in
+   the cell.</li><li>If the point lies on the north or west border of the cell, it
+   is included in the cell.</li><li>If the point lies on the south or east border of the cell, it
+   is not included in the cell, it is included in the next
+   southern or eastern cell, respectively.</li></ul><p>Note that based on these rules, the eastern and southern borders
+of an Extent are not actually considered to be part of the
+RasterExtent.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -199,9 +211,10 @@ considered to be part of the RasterExtent.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Adjusts a raster extent so that it can encompass the tile layout.</p><div class="fullcomment"><div class="comment cmt"><p>Adjusts a raster extent so that it can encompass the tile layout.
-Will resample the extent, but keep the resolution, and preserve north and
-west borders
+      <p class="shortcomment cmt">Adjusts a raster extent so that it can encompass the tile
+layout.</p><div class="fullcomment"><div class="comment cmt"><p>Adjusts a raster extent so that it can encompass the tile
+layout.  Will resample the extent, but keep the resolution, and
+preserve north and west borders
 </p></div></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
@@ -327,8 +340,9 @@ west borders
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Combine two different RasterExtents (which must have the same cellsizes).</p><div class="fullcomment"><div class="comment cmt"><p>Combine two different RasterExtents (which must have the same cellsizes).
-The result is a new extent at the same resolution.
+      <p class="shortcomment cmt">Combine two different RasterExtents (which must have the same
+cellsizes).</p><div class="fullcomment"><div class="comment cmt"><p>Combine two different RasterExtents (which must have the same
+cellsizes).  The result is a new extent at the same resolution.
 </p></div></div>
     </li><li name="geotrellis.raster.GridDefinition#createAlignedGridExtent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="createAlignedGridExtent(targetExtent:geotrellis.vector.Extent):geotrellis.raster.GridExtent"></a>
@@ -348,9 +362,8 @@ The result is a new extent at the same resolution.
     </span>
       <p class="shortcomment cmt">Returns a GridExtent that lines up with this grid' resolution
 and grid layout.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a GridExtent that lines up with this grid' resolution
-and grid layout.
-i.e., the resulting GridExtent will not have the given extent,
-but will have the smallest extent such that the whole of
+and grid layout.</p><p>For example, the resulting GridExtent will not have the given
+extent, but will have the smallest extent such that the whole of
 the given extent is covered, that lines up with the grid.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a></dd></dl></div>
     </li><li name="geotrellis.raster.GridDefinition#createAlignedRasterExtent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -369,11 +382,10 @@ the given extent is covered, that lines up with the grid.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Returns a RasterExtent that lines up with this RasterExtent's resolution,
-and grid layout.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a RasterExtent that lines up with this RasterExtent's resolution,
-and grid layout.
-i.e., the resulting RasterExtent will not have the given extent,
-but will have the smallest extent such that the whole of
+      <p class="shortcomment cmt">Returns a RasterExtent that lines up with this RasterExtent's
+resolution, and grid layout.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a RasterExtent that lines up with this RasterExtent's
+resolution, and grid layout.</p><p>For example, the resulting RasterExtent will not have the given
+extent, but will have the smallest extent such that the whole of
 the given extent is covered, that lines up with the grid.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a></dd></dl></div>
     </li><li name="geotrellis.raster.RasterExtent#dimensions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
@@ -443,11 +455,14 @@ the given extent is covered, that lines up with the grid.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Gets the Extent that matches the grid bounds passed in, aligned with this RasterExtent.</p><div class="fullcomment"><div class="comment cmt"><p>Gets the Extent that matches the grid bounds passed in, aligned with this RasterExtent.
-</p></div><dl class="paramcmts block"><dt class="param">gridBounds</dt><dd class="cmt"><p>The extent to get the grid bounds for</p></dd><dt class="param">clamp</dt><dd class="cmt"><p>Determines whether or not to clamp the Extent to the
-                          extent of this RasterExtent; defaults to true. If true, the
-                          returned extent will be contained by this RasterExtent's extent,
-                          if false, the Extent returned can be outside of this RasterExtent's extent.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a></dd></dl></div>
+      <p class="shortcomment cmt">Gets the Extent that matches the grid bounds passed in, aligned
+with this RasterExtent.</p><div class="fullcomment"><div class="comment cmt"><p>Gets the Extent that matches the grid bounds passed in, aligned
+with this RasterExtent.</p><p>The 'clamp' parameter determines whether or not to clamp the
+Extent to the extent of this RasterExtent; defaults to true. If
+true, the returned extent will be contained by this
+RasterExtent's extent, if false, the Extent returned can be
+outside of this RasterExtent's extent.
+</p></div><dl class="paramcmts block"><dt class="param">gridBounds</dt><dd class="cmt"><p>The extent to get the grid bounds for</p></dd><dt class="param">clamp</dt><dd class="cmt"><p>A boolean which controlls the clamping behvior</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a></dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -504,14 +519,16 @@ the given extent is covered, that lines up with the grid.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Gets the GridBounds aligned with this RasterExtent that is the smallest subgrid
-of containing all points within the extent.</p><div class="fullcomment"><div class="comment cmt"><p>Gets the GridBounds aligned with this RasterExtent that is the smallest subgrid
-of containing all points within the extent. The extent is considered inclusive
-on it's north and west borders, exclusive on it's east and south borders.
-See <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> for a discussion of grid and extent boundary concepts.
-</p></div><dl class="paramcmts block"><dt class="param">subExtent</dt><dd class="cmt"><p>The extent to get the grid bounds for</p></dd><dt class="param">clamp</dt><dd class="cmt"><p>Determines whether or not to clamp the GridBounds to the
-                          RasterExtent; defaults to true. If false, GridBounds can
-                          contain negative values, or values outside of this RasterExtent's boundaries.</p></dd></dl></div>
+      <p class="shortcomment cmt">Gets the GridBounds aligned with this RasterExtent that is the
+smallest subgrid of containing all points within the extent.</p><div class="fullcomment"><div class="comment cmt"><p>Gets the GridBounds aligned with this RasterExtent that is the
+smallest subgrid of containing all points within the extent. The
+extent is considered inclusive on it's north and west borders,
+exclusive on it's east and south borders.  See <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>
+for a discussion of grid and extent boundary concepts.</p><p>The 'clamp' flag determines whether or not to clamp the
+GridBounds to the RasterExtent; defaults to true. If false,
+GridBounds can contain negative values, or values outside of
+this RasterExtent's boundaries.
+</p></div><dl class="paramcmts block"><dt class="param">subExtent</dt><dd class="cmt"><p>The extent to get the grid bounds for</p></dd><dt class="param">clamp</dt><dd class="cmt"><p>A boolean</p></dd></dl></div>
     </li><li name="geotrellis.raster.RasterExtent#gridColToMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="gridColToMap(col:Int):Double"></a>
       <a id="gridColToMap(Int):Double"></a>
@@ -528,7 +545,8 @@ See <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">For a give column, find the corresponding x-coordinate in the
+grid of the present <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>.</p>
     </li><li name="geotrellis.raster.RasterExtent#gridRowToMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="gridRowToMap(row:Int):Double"></a>
       <a id="gridRowToMap(Int):Double"></a>
@@ -545,7 +563,8 @@ See <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">For a give row, find the corresponding y-coordinate in the grid
+of the present <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>.</p>
     </li><li name="geotrellis.raster.RasterExtent#gridToMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="gridToMap(col:Int,row:Int):(Double,Double)"></a>
       <a id="gridToMap(Int,Int):(Double,Double)"></a>
@@ -664,7 +683,7 @@ See <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Convert map coordinate x to grid coordinate column.</p>
     </li><li name="geotrellis.raster.RasterExtent#mapYToGrid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="mapYToGrid(y:Double):Int"></a>
       <a id="mapYToGrid(Double):Int"></a>
@@ -698,7 +717,7 @@ See <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Convert map coordinate y to grid coordinate row.</p>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -835,11 +854,12 @@ See <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Creates a RasterExtent out of this GridExtent.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a RasterExtent out of this GridExtent.
+      <p class="shortcomment cmt"> Creates a RasterExtent out of this GridExtent.</p><div class="fullcomment"><div class="comment cmt"><p> Creates a RasterExtent out of this GridExtent.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a></dd><dt>Note</dt><dd><span class="cmt"><p>Use with caution: if the number of columns or rows are larger than Int.MaxValue,
-                           this will throw an exception. Also, if columns * rows &gt; Int.MaxValue, this will
-                           create a RasterExtent for a raster that could not be backed by any of the Array-backed
-                           tile types.</p></span></dd></dl></div>
+      this will throw an exception. Also, if columns * rows &gt;
+      Int.MaxValue, this will create a RasterExtent for a raster
+      that could not be backed by any of the Array-backed tile
+      types.</p></span></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -943,9 +963,9 @@ given number of columns and rows.</p>
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Returns a RasterExtent with the same extent,
-but a modified number of columns and rows based
-on the given cell height and width.</p>
+      <p class="shortcomment cmt">Returns a RasterExtent with the same extent, but a modified
+number of columns and rows based on the given cell height and
+width.</p>
     </li><li name="geotrellis.raster.RasterExtent#withResolution" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="withResolution(targetCellWidth:Double,targetCellHeight:Double):geotrellis.raster.RasterExtent"></a>
       <a id="withResolution(Double,Double):RasterExtent"></a>
@@ -962,9 +982,9 @@ on the given cell height and width.</p>
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Returns a RasterExtent with the same extent,
-but a modified number of columns and rows based
-on the given cell height and width.</p>
+      <p class="shortcomment cmt">Returns a RasterExtent with the same extent, but a modified
+number of columns and rows based on the given cell height and
+width.</p>
     </li></ol>
             </div>
 

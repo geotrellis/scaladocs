@@ -49,11 +49,9 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Generate a Cost-Distance raster based on a set of starting points and a cost
-raster
-</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Operation will only work with integer typed Cost Tiles (BitCellType, ByteConstantNoDataCellType, ShortConstantNoDataCellType, IntConstantNoDataCellType).
-         If a double typed Cost Tile (FloatConstantNoDataCellType, DoubleConstantNoDataCellType) is passed in, those costs will be rounded
-         to their floor integer values.</p></span></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Object housing various functions related to Cost-Distance
+computations.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -127,7 +125,7 @@ raster
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">A class encoding directions.</p>
     </li></ol>
             </div>
 
@@ -186,7 +184,7 @@ raster
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.raster.costdistance.CostDistance#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.raster.costdistance.CostDistance#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="apply(cost:geotrellis.raster.Tile,points:Seq[(Int,Int)]):geotrellis.raster.Tile"></a>
       <a id="apply(Tile,Seq[(Int,Int)]):Tile"></a>
       <h4 class="signature">
@@ -202,7 +200,13 @@ raster
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Generate a Cost-Distance raster based on a set of starting points
+and a cost raster
+</p><div class="fullcomment"><div class="comment cmt"><p>Generate a Cost-Distance raster based on a set of starting points
+and a cost raster
+</p></div><dl class="paramcmts block"><dt class="param">cost</dt><dd class="cmt"><p>Cost Tile (Int)</p></dd><dt class="param">points</dt><dd class="cmt"><p>List of starting points as tuples</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Operation will only work with integer typed Cost Tiles (BitCellType, ByteConstantNoDataCellType, ShortConstantNoDataCellType, IntConstantNoDataCellType).
+         If a double typed Cost Tile (FloatConstantNoDataCellType, DoubleConstantNoDataCellType) is passed in, those costs will be rounded
+         to their floor integer values.</p></span></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -220,101 +224,6 @@ raster
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.raster.costdistance.CostDistance#calcCost" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="calcCost(c:Int,r:Int,dir:geotrellis.raster.costdistance.CostDistance.Dir,cost:geotrellis.raster.Tile):geotrellis.raster.costdistance.DOption"></a>
-      <a id="calcCost(Int,Int,Dir,Tile):DOption"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">calcCost</span><span class="params">(<span name="c">c: <span class="extype" name="scala.Int">Int</span></span>, <span name="r">r: <span class="extype" name="scala.Int">Int</span></span>, <span name="dir">dir: <a href="CostDistance$$Dir.html" class="extype" name="geotrellis.raster.costdistance.CostDistance.Dir">Dir</a></span>, <span name="cost">cost: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>)</span><span class="result">: <span class="extype" name="geotrellis.raster.costdistance.DOption">DOption</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.costdistance.CostDistance$@calcCost(c:Int,r:Int,dir:geotrellis.raster.costdistance.CostDistance.Dir,cost:geotrellis.raster.Tile):geotrellis.raster.costdistance.DOption" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.costdistance.CostDistance#calcCost" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="calcCost(c:Int,r:Int,cr2:(Int,Int),cost:geotrellis.raster.Tile):geotrellis.raster.costdistance.DOption"></a>
-      <a id="calcCost(Int,Int,(Int,Int),Tile):DOption"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">calcCost</span><span class="params">(<span name="c">c: <span class="extype" name="scala.Int">Int</span></span>, <span name="r">r: <span class="extype" name="scala.Int">Int</span></span>, <span name="cr2">cr2: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>, <span name="cost">cost: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>)</span><span class="result">: <span class="extype" name="geotrellis.raster.costdistance.DOption">DOption</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.costdistance.CostDistance$@calcCost(c:Int,r:Int,cr2:(Int,Int),cost:geotrellis.raster.Tile):geotrellis.raster.costdistance.DOption" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.costdistance.CostDistance#calcCost" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="calcCost(c:Int,r:Int,c2:Int,r2:Int,cost:geotrellis.raster.Tile):geotrellis.raster.costdistance.DOption"></a>
-      <a id="calcCost(Int,Int,Int,Int,Tile):DOption"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">calcCost</span><span class="params">(<span name="c">c: <span class="extype" name="scala.Int">Int</span></span>, <span name="r">r: <span class="extype" name="scala.Int">Int</span></span>, <span name="c2">c2: <span class="extype" name="scala.Int">Int</span></span>, <span name="r2">r2: <span class="extype" name="scala.Int">Int</span></span>, <span name="cost">cost: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>)</span><span class="result">: <span class="extype" name="geotrellis.raster.costdistance.DOption">DOption</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.costdistance.CostDistance$@calcCost(c:Int,r:Int,c2:Int,r2:Int,cost:geotrellis.raster.Tile):geotrellis.raster.costdistance.DOption" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.costdistance.CostDistance#calcCostCell" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="calcCostCell(c:Int,r:Int,dir:geotrellis.raster.costdistance.CostDistance.Dir,cost:geotrellis.raster.Tile,d:geotrellis.raster.DoubleArrayTile):Option[(Int,Int,Double)]"></a>
-      <a id="calcCostCell(Int,Int,Dir,Tile,DoubleArrayTile):Option[(Int,Int,Double)]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">calcCostCell</span><span class="params">(<span name="c">c: <span class="extype" name="scala.Int">Int</span></span>, <span name="r">r: <span class="extype" name="scala.Int">Int</span></span>, <span name="dir">dir: <a href="CostDistance$$Dir.html" class="extype" name="geotrellis.raster.costdistance.CostDistance.Dir">Dir</a></span>, <span name="cost">cost: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>, <span name="d">d: <a href="../DoubleArrayTile.html" class="extype" name="geotrellis.raster.DoubleArrayTile">DoubleArrayTile</a></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>)]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.costdistance.CostDistance$@calcCostCell(c:Int,r:Int,dir:geotrellis.raster.costdistance.CostDistance.Dir,cost:geotrellis.raster.Tile,d:geotrellis.raster.DoubleArrayTile):Option[(Int,Int,Double)]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Input:
-(c, r) =&gt; Source cell
-(dc, dr) =&gt; Delta (direction)
-cost =&gt; Cost raster
-d =&gt; C - D output raster</p><div class="fullcomment"><div class="comment cmt"><p>Input:
-(c, r) =&gt; Source cell
-(dc, dr) =&gt; Delta (direction)
-cost =&gt; Cost raster
-d =&gt; C - D output raster</p><p>Output:
-List((c, r)) &lt;- list of cells set
-</p></div></div>
-    </li><li name="geotrellis.raster.costdistance.CostDistance#calcNeighbors" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="calcNeighbors(c:Int,r:Int,cost:geotrellis.raster.Tile,d:geotrellis.raster.DoubleArrayTile,p:java.util.PriorityQueue[geotrellis.raster.costdistance.CostDistance.Cost]):Unit"></a>
-      <a id="calcNeighbors(Int,Int,Tile,DoubleArrayTile,PriorityQueue[Cost]):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">calcNeighbors</span><span class="params">(<span name="c">c: <span class="extype" name="scala.Int">Int</span></span>, <span name="r">r: <span class="extype" name="scala.Int">Int</span></span>, <span name="cost">cost: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>, <span name="d">d: <a href="../DoubleArrayTile.html" class="extype" name="geotrellis.raster.DoubleArrayTile">DoubleArrayTile</a></span>, <span name="p">p: <span class="extype" name="java.util.PriorityQueue">PriorityQueue</span>[<a href="#Cost=(Int,Int,Double)" class="extmbr" name="geotrellis.raster.costdistance.CostDistance.Cost">Cost</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.costdistance.CostDistance$@calcNeighbors(c:Int,r:Int,cost:geotrellis.raster.Tile,d:geotrellis.raster.DoubleArrayTile,p:java.util.PriorityQueue[geotrellis.raster.costdistance.CostDistance.Cost]):Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -389,23 +298,6 @@ List((c, r)) &lt;- list of cells set
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.raster.costdistance.CostDistance#factor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="factor(c:Int,r:Int,c1:Int,r1:Int):Double"></a>
-      <a id="factor(Int,Int,Int,Int):Double"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">factor</span><span class="params">(<span name="c">c: <span class="extype" name="scala.Int">Int</span></span>, <span name="r">r: <span class="extype" name="scala.Int">Int</span></span>, <span name="c1">c1: <span class="extype" name="scala.Int">Int</span></span>, <span name="r1">r1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.costdistance.CostDistance$@factor(c:Int,r:Int,c1:Int,r1:Int):Double" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -480,23 +372,6 @@ List((c, r)) &lt;- list of cells set
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.raster.costdistance.CostDistance#isValid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="isValid(c:Int,r:Int,cost:geotrellis.raster.Tile):Boolean"></a>
-      <a id="isValid(Int,Int,Tile):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isValid</span><span class="params">(<span name="c">c: <span class="extype" name="scala.Int">Int</span></span>, <span name="r">r: <span class="extype" name="scala.Int">Int</span></span>, <span name="cost">cost: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.costdistance.CostDistance$@isValid(c:Int,r:Int,cost:geotrellis.raster.Tile):Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -548,23 +423,6 @@ List((c, r)) &lt;- list of cells set
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.raster.costdistance.CostDistance#safeGet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="safeGet(c:Int,r:Int,cost:geotrellis.raster.Tile):geotrellis.raster.costdistance.IOption"></a>
-      <a id="safeGet(Int,Int,Tile):IOption"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">safeGet</span><span class="params">(<span name="c">c: <span class="extype" name="scala.Int">Int</span></span>, <span name="r">r: <span class="extype" name="scala.Int">Int</span></span>, <span name="cost">cost: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>)</span><span class="result">: <span class="extype" name="geotrellis.raster.costdistance.IOption">IOption</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.costdistance.CostDistance$@safeGet(c:Int,r:Int,cost:geotrellis.raster.Tile):geotrellis.raster.costdistance.IOption" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
