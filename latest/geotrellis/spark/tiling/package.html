@@ -47,10 +47,11 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This package is concerned with translation of coordinates or extents between:</p><ul><li>geographic extents</li><li>arbitrary tiling scheme, which defines origin and and axis</li><li>arbitrary indexing scheme which linearize two dimensional tiling space</li></ul><p> In order to facilitate these transformations each of the above spaces maps to
- a &quot;Grid Space&quot; which is a special case of a tiling scheme with the origin
- defined as upper left and (x, y) coordinate representing (col, row), Java array order.
-</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><span class="extype" name="geotrellis.spark.tiling.SpatialKeyGridTransform">geotrellis.spark.tiling.SpatialKeyGridTransform</span></p></span><span class="cmt"><p><span class="extype" name="geotrellis.spark.tiling.TileGridTransform">geotrellis.spark.tiling.TileGridTransform</span></p></span><span class="cmt"><p><span class="extype" name="geotrellis.spark.tiling.MapGridTransform">geotrellis.spark.tiling.MapGridTransform</span></p></span></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This package is concerned with translation of coordinates or extents between
+geographic extents and the grid space represented by SpatialKey(col, row) coordinates,
+the layout that defines that grid space, as well as functionality for cutting tiles into
+a uniform grid space.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -125,25 +126,6 @@
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.tiling.GridCoord" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="GridCoord=(Int,Int)"></a>
-      <a id="GridCoord:GridCoord"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">GridCoord</span><span class="result"> = (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.tiling.package@GridCoord=(Int,Int)" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Grid Coordinate always has the upper left as the origin.</p><div class="fullcomment"><div class="comment cmt"><p>Grid Coordinate always has the upper left as the origin.
-The tuple always interpreted a (col, row)
-</p></div></div>
     </li><li name="geotrellis.spark.tiling.Implicits" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="ImplicitsextendsAnyRef"></a>
       <a id="Implicits:Implicits"></a>
@@ -217,24 +199,6 @@ an extent and cellsize. The resolution of the tiles for the LayoutLevel returned
 will not necessarily match the CellSize provided, but an appropriately close
 selection will be made.</p><p>It also provides methods for next zoomed out tile layout level.
 </p></div></div>
-    </li><li name="geotrellis.spark.tiling.MapCoord" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MapCoord=(Double,Double)"></a>
-      <a id="MapCoord:MapCoord"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">MapCoord</span><span class="result"> = (<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>)</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.tiling.package@MapCoord=(Double,Double)" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Geographic Map Coordinate, uses left is the origin
-</p>
     </li><li name="geotrellis.spark.tiling.MapKeyTransform" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="MapKeyTransformextendsSerializable"></a>
       <a id="MapKeyTransform:MapKeyTransform"></a>
@@ -256,65 +220,6 @@ Since geographic point can only be mapped to a grid tile that contains that poin
 transformation from Extent to GridBounds to Extent will likely not
 produce the original geographic extent, but a larger one.
 </p></div></div>
-    </li><li name="geotrellis.spark.tiling.TileCoord" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="TileCoord=(Int,Int)"></a>
-      <a id="TileCoord:TileCoord"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">TileCoord</span><span class="result"> = (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.tiling.package@TileCoord=(Int,Int)" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Tile Coordinate in a tiling scheme.</p><div class="fullcomment"><div class="comment cmt"><p>Tile Coordinate in a tiling scheme. The origin and axes
-are defined by the scheme.
-</p></div></div>
-    </li><li name="geotrellis.spark.tiling.TileKeyTransform" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="TileKeyTransformextendsSerializable"></a>
-      <a id="TileKeyTransform:TileKeyTransform"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="TileKeyTransform.html"><span class="name">TileKeyTransform</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.tiling.package@TileKeyTransformextendsSerializable" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Transforms between spatial keys, which always have upper left as origin,
-to tiling scheme coordinates, which may have different origin and axis orientation.</p><div class="fullcomment"><div class="comment cmt"><p>Transforms between spatial keys, which always have upper left as origin,
-to tiling scheme coordinates, which may have different origin and axis orientation.</p><p> e.g.: TMS tiling scheme has lower left as it's origin
-       Bing tiling scheme has upper left as it's origin
-</p></div></div>
-    </li><li name="geotrellis.spark.tiling.TileScheme" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="TileSchemeextendsSerializable"></a>
-      <a id="TileScheme:TileScheme"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="TileScheme.html"><span class="name">TileScheme</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.tiling.package@TileSchemeextendsSerializable" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Tile Coordinate Scheme provides an object that is able to map from
-a given Tile Coordinate Scheme to a Grid Coordinate, where the
-origin is upper left corner and tuple (x, y) represents (col, row).</p>
     </li><li name="geotrellis.spark.tiling.TilerKeyMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="TilerKeyMethods[K1,K2]extendsMethodExtensions[K1]"></a>
       <a id="TilerKeyMethods[K1,K2]:TilerKeyMethods[K1,K2]"></a>
@@ -408,23 +313,6 @@ used in Leaflet et al.</p>
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.tiling.GridTileScheme" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="GridTileScheme"></a>
-      <a id="GridTileScheme:GridTileScheme"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="GridTileScheme$.html"><span class="name">GridTileScheme</span></a><span class="result"> extends <a href="TileScheme.html" class="extype" name="geotrellis.spark.tiling.TileScheme">TileScheme</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.tiling.package@GridTileScheme" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="geotrellis.spark.tiling.Implicits" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Implicits"></a>
       <a id="Implicits:Implicits"></a>
@@ -493,23 +381,6 @@ used in Leaflet et al.</p>
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.tiling.TileScheme" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="TileScheme"></a>
-      <a id="TileScheme:TileScheme"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="TileScheme$.html"><span class="name">TileScheme</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.tiling.package@TileScheme" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="geotrellis.spark.tiling.Tiler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Tiler"></a>
       <a id="Tiler:Tiler"></a>
@@ -527,26 +398,6 @@ used in Leaflet et al.</p>
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.tiling.TmsTileScheme" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="TmsTileScheme"></a>
-      <a id="TmsTileScheme:TmsTileScheme"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="TmsTileScheme$.html"><span class="name">TmsTileScheme</span></a><span class="result"> extends <a href="TileScheme.html" class="extype" name="geotrellis.spark.tiling.TileScheme">TileScheme</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.tiling.package@TmsTileScheme" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">TODO: This does not seem right! Furthur research shows that TMS tiling actually
-says that (0,0) is the top left.</p><div class="fullcomment"><div class="comment cmt"><p>TODO: This does not seem right! Furthur research shows that TMS tiling actually
-says that (0,0) is the top left. What gives?
-</p></div></div>
     </li><li name="geotrellis.spark.tiling.ZoomedLayoutScheme" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ZoomedLayoutScheme"></a>
       <a id="ZoomedLayoutScheme:ZoomedLayoutScheme"></a>

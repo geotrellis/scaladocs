@@ -45,7 +45,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">SpatialTileLayerRDDRenderMethods</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">SpatialTileLayerRDDRenderMethods</span><span class="tparams">[<span name="M">M</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
@@ -89,18 +89,18 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.spark.render.SpatialTileLayerRDDRenderMethods#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(rdd:geotrellis.spark.TileLayerRDD[geotrellis.spark.SpatialKey]):geotrellis.spark.render.package.SpatialTileLayerRDDRenderMethods"></a>
-      <a id="&lt;init&gt;:SpatialTileLayerRDDRenderMethods"></a>
+      <a id="&lt;init&gt;(rdd:org.apache.spark.rdd.RDD[(geotrellis.spark.SpatialKey,geotrellis.raster.Tile)]withgeotrellis.spark.Metadata[M])(implicitevidence$1:geotrellis.spark.GetComponent[M,geotrellis.proj4.CRS],implicitevidence$2:geotrellis.spark.GetComponent[M,geotrellis.spark.tiling.LayoutDefinition]):geotrellis.spark.render.package.SpatialTileLayerRDDRenderMethods[M]"></a>
+      <a id="&lt;init&gt;:SpatialTileLayerRDDRenderMethods[M]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">SpatialTileLayerRDDRenderMethods</span><span class="params">(<span name="rdd">rdd: <a href="../package.html#TileLayerRDD[K]=org.apache.spark.rdd.RDD[(K,geotrellis.raster.Tile)]withgeotrellis.spark.Metadata[geotrellis.spark.TileLayerMetadata[K]]" class="extmbr" name="geotrellis.spark.TileLayerRDD">TileLayerRDD</a>[<a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a>]</span>)</span>
+        <span class="name">SpatialTileLayerRDDRenderMethods</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a>, <a href="../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>)] with <a href="../Metadata.html" class="extype" name="geotrellis.spark.Metadata">Metadata</a>[<span class="extype" name="geotrellis.spark.render.SpatialTileLayerRDDRenderMethods.M">M</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../package$$GetComponent.html" class="extype" name="geotrellis.spark.GetComponent">GetComponent</a>[<span class="extype" name="geotrellis.spark.render.SpatialTileLayerRDDRenderMethods.M">M</span>, <a href="../../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a>]</span>, <span name="arg1">arg1: <a href="../package$$GetComponent.html" class="extype" name="geotrellis.spark.GetComponent">GetComponent</a>[<span class="extype" name="geotrellis.spark.render.SpatialTileLayerRDDRenderMethods.M">M</span>, <a href="../tiling/LayoutDefinition.html" class="extype" name="geotrellis.spark.tiling.LayoutDefinition">LayoutDefinition</a>]</span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.render.package$$SpatialTileLayerRDDRenderMethods@&lt;init&gt;(rdd:geotrellis.spark.TileLayerRDD[geotrellis.spark.SpatialKey]):geotrellis.spark.render.package.SpatialTileLayerRDDRenderMethods" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.render.package$$SpatialTileLayerRDDRenderMethods@&lt;init&gt;(rdd:org.apache.spark.rdd.RDD[(geotrellis.spark.SpatialKey,geotrellis.raster.Tile)]withgeotrellis.spark.Metadata[M])(implicitevidence$1:geotrellis.spark.GetComponent[M,geotrellis.proj4.CRS],implicitevidence$2:geotrellis.spark.GetComponent[M,geotrellis.spark.tiling.LayoutDefinition]):geotrellis.spark.render.package.SpatialTileLayerRDDRenderMethods[M]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -364,6 +364,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.spark.render.SpatialTileLayerRDDRenderMethods#rdd" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="rdd:org.apache.spark.rdd.RDD[(geotrellis.spark.SpatialKey,geotrellis.raster.Tile)]withgeotrellis.spark.Metadata[M]"></a>
+      <a id="rdd:RDD[(SpatialKey,Tile)]withMetadata[M]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rdd</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a>, <a href="../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>)] with <a href="../Metadata.html" class="extype" name="geotrellis.spark.Metadata">Metadata</a>[<span class="extype" name="geotrellis.spark.render.SpatialTileLayerRDDRenderMethods.M">M</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.render.package$$SpatialTileLayerRDDRenderMethods@rdd:org.apache.spark.rdd.RDD[(geotrellis.spark.SpatialKey,geotrellis.raster.Tile)]withgeotrellis.spark.Metadata[M]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.spark.render.SpatialTileLayerRDDRenderMethods#renderGeoTiff" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="renderGeoTiff():org.apache.spark.rdd.RDD[(geotrellis.spark.SpatialKey,Array[Byte])]"></a>
       <a id="renderGeoTiff():RDD[(SpatialKey,Array[Byte])]"></a>
@@ -381,41 +398,6 @@
       </a>
     </span>
       <p class="shortcomment cmt">Renders each tile as a GeoTiff.</p>
-    </li><li name="geotrellis.spark.render.SpatialTileLayerRDDRenderMethods#renderJpg" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="renderJpg(colorMap:Option[geotrellis.raster.render.ColorMap]):org.apache.spark.rdd.RDD[(geotrellis.spark.SpatialKey,Array[Byte])]"></a>
-      <a id="renderJpg(Option[ColorMap]):RDD[(SpatialKey,Array[Byte])]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">renderJpg</span><span class="params">(<span name="colorMap">colorMap: <span class="extype" name="scala.Option">Option</span>[<a href="../../raster/render/ColorMap.html" class="extype" name="geotrellis.raster.render.ColorMap">ColorMap</a>] = <span class="symbol">None</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>])]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.render.package$$SpatialTileLayerRDDRenderMethods@renderJpg(colorMap:Option[geotrellis.raster.render.ColorMap]):org.apache.spark.rdd.RDD[(geotrellis.spark.SpatialKey,Array[Byte])]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Renders each tile as a JPG.</p><div class="fullcomment"><div class="comment cmt"><p>Renders each tile as a JPG.
-</p></div><dl class="paramcmts block"><dt class="param">colorMap</dt><dd class="cmt"><p>If not defined cells are assumed to be RGB values</p></dd></dl></div>
-    </li><li name="geotrellis.spark.render.SpatialTileLayerRDDRenderMethods#renderPng" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="renderPng(colorMap:Option[geotrellis.raster.render.ColorMap]):org.apache.spark.rdd.RDD[(geotrellis.spark.SpatialKey,Array[Byte])]"></a>
-      <a id="renderPng(Option[ColorMap]):RDD[(SpatialKey,Array[Byte])]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">renderPng</span><span class="params">(<span name="colorMap">colorMap: <span class="extype" name="scala.Option">Option</span>[<a href="../../raster/render/ColorMap.html" class="extype" name="geotrellis.raster.render.ColorMap">ColorMap</a>] = <span class="symbol">None</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>])]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.render.package$$SpatialTileLayerRDDRenderMethods@renderPng(colorMap:Option[geotrellis.raster.render.ColorMap]):org.apache.spark.rdd.RDD[(geotrellis.spark.SpatialKey,Array[Byte])]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Renders each tile as a PNG.</p>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

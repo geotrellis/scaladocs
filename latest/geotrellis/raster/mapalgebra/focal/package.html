@@ -1077,7 +1077,7 @@ the more dissimilar the raster values are.
     </span>
       <p class="shortcomment cmt">Calculates the slope of each cell in a raster.</p><div class="fullcomment"><div class="comment cmt"><p>Calculates the slope of each cell in a raster.</p><p>Slope is the magnitude portion of the gradient vector. It is the maximum
 change of elevation from a raster cell to any immediate neighbor. It uses Horn's method
-for computing slope.</p><p>As with aspect, slope is calculated from estimates of the partial derivatives dz / dx and dz / dy.</p><p>Slope is computed in degrees from horizontal.</p><p>If Slope operations encounters NoData in its neighborhood, that neighborhood cell well be treated as having
+for computing slope.</p><p>As with aspect, slope is calculated from estimates of the partial derivatives dz / dx and dz / dy.</p><p>Slope is computed in degrees from horizontal.</p><p>The use of a z-factor is essential for correct slope calculations when the surface z units are expressed in units different from the ground x,y units.</p><p>If Slope operations encounters NoData in its neighborhood, that neighborhood cell well be treated as having
 the same elevation as the focal cell.</p><p>The expression for slope is:</p><pre><span class="kw">val</span> slope = atan(sqrt(pow(`dz / dy`, <span class="num">2</span>) * pow(`dz / dx`, <span class="num">2</span>)))</pre></div></div>
     </li><li name="geotrellis.raster.mapalgebra.focal.SpiralZagTraversalStrategy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="SpiralZagTraversalStrategy"></a>
