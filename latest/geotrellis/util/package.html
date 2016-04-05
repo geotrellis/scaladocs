@@ -47,13 +47,35 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"></div>
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
         
 
       <div id="mbrsel">
         <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
-        
-        
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By Inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="geotrellis.util"><span>util</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show All</span></li>
+            </ol>
+          </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
             <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
@@ -66,7 +88,42 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="geotrellis.util.MethodExtensions" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.util.Component" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Component[T,C]extendsGetComponent[T,C]withSetComponent[T,C]"></a>
+      <a id="Component[T,C]:Component[T,C]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Component.html"><span class="name">Component</span></a><span class="tparams">[<span name="T">T</span>, <span name="C">C</span>]</span><span class="result"> extends <a href="GetComponent.html" class="extype" name="geotrellis.util.GetComponent">GetComponent</a>[<span class="extype" name="geotrellis.util.Component.T">T</span>, <span class="extype" name="geotrellis.util.Component.C">C</span>] with <a href="SetComponent.html" class="extype" name="geotrellis.util.SetComponent">SetComponent</a>[<span class="extype" name="geotrellis.util.Component.T">T</span>, <span class="extype" name="geotrellis.util.Component.C">C</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.util.package@Component[T,C]extendsGetComponent[T,C]withSetComponent[T,C]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Defines an object that can be used as a lens
+into a component C of some type T.</p>
+    </li><li name="geotrellis.util.GetComponent" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="GetComponent[T,C]extendsSerializable"></a>
+      <a id="GetComponent[T,C]:GetComponent[T,C]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="GetComponent.html"><span class="name">GetComponent</span></a><span class="tparams">[<span name="T">T</span>, <span name="C">C</span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.util.package@GetComponent[T,C]extendsSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.util.MethodExtensions" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="MethodExtensions[+T]extendsSerializable"></a>
       <a id="MethodExtensions[+T]:MethodExtensions[T]"></a>
       <h4 class="signature">
@@ -84,6 +141,61 @@
     </span>
       <p class="shortcomment cmt">The base-trait from which all implicit classes containing
 extension methods are derived.</p>
+    </li><li name="geotrellis.util.SetComponent" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SetComponent[T,C]extendsSerializable"></a>
+      <a id="SetComponent[T,C]:SetComponent[T,C]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="SetComponent.html"><span class="name">SetComponent</span></a><span class="tparams">[<span name="T">T</span>, <span name="C">C</span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.util.package@SetComponent[T,C]extendsSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.util.withGetComponentMethods" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withGetComponentMethods[T]extendsMethodExtensions[T]"></a>
+      <a id="withGetComponentMethods[T]:withGetComponentMethods[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$withGetComponentMethods.html"><span class="name">withGetComponentMethods</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="geotrellis.util.withGetComponentMethods.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.util.package@withGetComponentMethods[T]extendsMethodExtensions[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A sugar method for getting a component of an object that has
+an implicitly defined lens into a component of that object
+with a specific type.</p>
+    </li><li name="geotrellis.util.withSetComponentMethods" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withSetComponentMethods[T]extendsMethodExtensions[T]"></a>
+      <a id="withSetComponentMethods[T]:withSetComponentMethods[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$withSetComponentMethods.html"><span class="name">withSetComponentMethods</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="geotrellis.util.withSetComponentMethods.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.util.package@withSetComponentMethods[T]extendsMethodExtensions[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A sugar method for setting a component of an object that has
+an implicitly defined lens into a component of that object
+with a specific type.</p>
     </li></ol>
             </div>
 
@@ -91,7 +203,24 @@ extension methods are derived.</p>
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="geotrellis.util.Filesystem" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.util.Component" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Component"></a>
+      <a id="Component:Component"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Component$.html"><span class="name">Component</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.util.package@Component" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.util.Filesystem" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Filesystem"></a>
       <a id="Filesystem:Filesystem"></a>
       <h4 class="signature">
@@ -108,6 +237,57 @@ extension methods are derived.</p>
       </a>
     </span>
       
+    </li><li name="geotrellis.util.GetComponent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GetComponent"></a>
+      <a id="GetComponent:GetComponent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GetComponent$.html"><span class="name">GetComponent</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.util.package@GetComponent" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.util.SetComponent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SetComponent"></a>
+      <a id="SetComponent:SetComponent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SetComponent$.html"><span class="name">SetComponent</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.util.package@SetComponent" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.util#identityComponent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="identityComponent[T]:geotrellis.util.Component[T,T]"></a>
+      <a id="identityComponent[T]:Component[T,T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">identityComponent</span><span class="tparams">[<span name="T">T</span>]</span><span class="result">: <a href="Component.html" class="extype" name="geotrellis.util.Component">Component</a>[<span class="extype" name="geotrellis.util.identityComponent.T">T</span>, <span class="extype" name="geotrellis.util.identityComponent.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.util.package@identityComponent[T]:geotrellis.util.Component[T,T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li></ol>
             </div>
 
@@ -117,7 +297,11 @@ extension methods are derived.</p>
         </div>
 
         <div id="inheritedMembers">
-        
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
         
         </div>
 

@@ -49,7 +49,7 @@
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="reproject/Implicits.html" class="extype" name="geotrellis.raster.reproject.Implicits">Implicits</a>, <a href="mapalgebra/focal/hillshade/Implicits.html" class="extype" name="geotrellis.raster.mapalgebra.focal.hillshade.Implicits">Implicits</a>, <a href="merge/Implicits.html" class="extype" name="geotrellis.raster.merge.Implicits">Implicits</a>, <a href="crop/Implicits.html" class="extype" name="geotrellis.raster.crop.Implicits">Implicits</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="split/Implicits.html" class="extype" name="geotrellis.raster.split.Implicits">Implicits</a>, <a href="reproject/Implicits.html" class="extype" name="geotrellis.raster.reproject.Implicits">Implicits</a>, <a href="merge/Implicits.html" class="extype" name="geotrellis.raster.merge.Implicits">Implicits</a>, <a href="mapalgebra/focal/hillshade/Implicits.html" class="extype" name="geotrellis.raster.mapalgebra.focal.hillshade.Implicits">Implicits</a>, <a href="crop/Implicits.html" class="extype" name="geotrellis.raster.crop.Implicits">Implicits</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -67,7 +67,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.raster"><span>raster</span></li><li class="in" name="geotrellis.raster.reproject.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.raster.mapalgebra.focal.hillshade.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.raster.merge.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.raster.crop.Implicits"><span>Implicits</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.raster"><span>raster</span></li><li class="in" name="geotrellis.raster.split.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.raster.reproject.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.raster.merge.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.raster.mapalgebra.focal.hillshade.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.raster.crop.Implicits"><span>Implicits</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -1638,30 +1638,6 @@ us to abstract over each of the combine functions</p>
       </a>
     </span>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">layoutCols</dt><dd class="cmt"><p>number of columns in the layout, East to West</p></dd><dt class="param">layoutRows</dt><dd class="cmt"><p>number of rows in the layout grid, North to South</p></dd><dt class="param">tileCols</dt><dd class="cmt"><p>number of pixel columns in each tile, East to West</p></dd><dt class="param">tileRows</dt><dd class="cmt"><p>number of pixel rows in each tile, North to South</p></dd></dl></div>
-    </li><li name="geotrellis.raster.TileSeqMethods" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="TileSeqMethodsextendsAnyRef"></a>
-      <a id="TileSeqMethods:TileSeqMethods"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="TileSeqMethods.html"><span class="name">TileSeqMethods</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package@TileSeqMethodsextendsAnyRef" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt"> This trait can be extended to add methods to Traversable[Tile],
-such as local operations.</p><div class="fullcomment"><div class="comment cmt"><p> This trait can be extended to add methods to Traversable[Tile],
-such as local operations. To do so, extent TileSeqMethods, then
-define an implicit class in the package object that wraps
-Travesable[Tile], that extends your Methods trait. See
-<span class="extype" name="LocalSeqMethods">LocalSeqMethods</span> and
-<span class="extype" name="geotrellis.raster.op.local.LocalSeqMethodExtensions">geotrellis.raster.op.local.LocalSeqMethodExtensions</span>
-</p></div></div>
     </li><li name="geotrellis.raster.TileTupleExtensions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="TileTupleExtensionsextendsAnyRef"></a>
       <a id="TileTupleExtensions:TileTupleExtensions"></a>
@@ -2108,25 +2084,25 @@ Travesable[Tile], that extends your Methods trait. See
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.withMultibandRasterMethodExtensions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="withMultibandRasterMethodExtensionsextendsMethodExtensions[geotrellis.raster.package.MultibandRaster]withMultibandRasterReprojectMethodswithMultibandRasterResampleMethods"></a>
-      <a id="withMultibandRasterMethodExtensions:withMultibandRasterMethodExtensions"></a>
+    </li><li name="geotrellis.raster.withMultibandRasterMethods" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withMultibandRasterMethodsextendsMethodExtensions[geotrellis.raster.package.MultibandRaster]withMultibandRasterReprojectMethodswithMultibandRasterResampleMethods"></a>
+      <a id="withMultibandRasterMethods:withMultibandRasterMethods"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="package$$withMultibandRasterMethodExtensions.html"><span class="name">withMultibandRasterMethodExtensions</span></a><span class="result"> extends <a href="../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<a href="#MultibandRaster=geotrellis.raster.Raster[geotrellis.raster.MultibandTile]" class="extmbr" name="geotrellis.raster.MultibandRaster">MultibandRaster</a>] with <a href="reproject/MultibandRasterReprojectMethods.html" class="extype" name="geotrellis.raster.reproject.MultibandRasterReprojectMethods">MultibandRasterReprojectMethods</a> with <a href="resample/MultibandRasterResampleMethods.html" class="extype" name="geotrellis.raster.resample.MultibandRasterResampleMethods">MultibandRasterResampleMethods</a></span>
+        <a href="package$$withMultibandRasterMethods.html"><span class="name">withMultibandRasterMethods</span></a><span class="result"> extends <a href="../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<a href="#MultibandRaster=geotrellis.raster.Raster[geotrellis.raster.MultibandTile]" class="extmbr" name="geotrellis.raster.MultibandRaster">MultibandRaster</a>] with <a href="reproject/MultibandRasterReprojectMethods.html" class="extype" name="geotrellis.raster.reproject.MultibandRasterReprojectMethods">MultibandRasterReprojectMethods</a> with <a href="resample/MultibandRasterResampleMethods.html" class="extype" name="geotrellis.raster.resample.MultibandRasterResampleMethods">MultibandRasterResampleMethods</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package@withMultibandRasterMethodExtensionsextendsMethodExtensions[geotrellis.raster.package.MultibandRaster]withMultibandRasterReprojectMethodswithMultibandRasterResampleMethods" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.package@withMultibandRasterMethodsextendsMethodExtensions[geotrellis.raster.package.MultibandRaster]withMultibandRasterReprojectMethodswithMultibandRasterResampleMethods" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
     </li><li name="geotrellis.raster.withMultibandTileMethods" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="withMultibandTileMethodsextendsMethodExtensions[geotrellis.raster.MultibandTile]withMultibandTileCropMethodswithMultibandTileMergeMethodswithMultibandTilePrototypeMethodswithMultibandTileReprojectMethodswithMultibandJpgRenderMethodswithMultibandColorMethodswithMultibandPngRenderMethodswithMultibandTileResampleMethods"></a>
+      <a id="withMultibandTileMethodsextendsMethodExtensions[geotrellis.raster.MultibandTile]withMultibandTileCropMethodswithMultibandTileMergeMethodswithMultibandTilePrototypeMethodswithMultibandTileReprojectMethodswithMultibandJpgRenderMethodswithMultibandColorMethodswithMultibandPngRenderMethodswithMultibandTileResampleMethodswithMultibandTileSplitMethods"></a>
       <a id="withMultibandTileMethods:withMultibandTileMethods"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2134,10 +2110,10 @@ Travesable[Tile], that extends your Methods trait. See
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="package$$withMultibandTileMethods.html"><span class="name">withMultibandTileMethods</span></a><span class="result"> extends <a href="../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<a href="MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>] with <a href="crop/MultibandTileCropMethods.html" class="extype" name="geotrellis.raster.crop.MultibandTileCropMethods">MultibandTileCropMethods</a> with <a href="merge/MultibandTileMergeMethods.html" class="extype" name="geotrellis.raster.merge.MultibandTileMergeMethods">MultibandTileMergeMethods</a> with <a href="prototype/MultibandTilePrototypeMethods.html" class="extype" name="geotrellis.raster.prototype.MultibandTilePrototypeMethods">MultibandTilePrototypeMethods</a> with <a href="reproject/MultibandTileReprojectMethods.html" class="extype" name="geotrellis.raster.reproject.MultibandTileReprojectMethods">MultibandTileReprojectMethods</a> with <a href="render/MultibandJpgRenderMethods.html" class="extype" name="geotrellis.raster.render.MultibandJpgRenderMethods">MultibandJpgRenderMethods</a> with <a href="render/MultibandColorMethods.html" class="extype" name="geotrellis.raster.render.MultibandColorMethods">MultibandColorMethods</a> with <a href="render/MultibandPngRenderMethods.html" class="extype" name="geotrellis.raster.render.MultibandPngRenderMethods">MultibandPngRenderMethods</a> with <a href="resample/MultibandTileResampleMethods.html" class="extype" name="geotrellis.raster.resample.MultibandTileResampleMethods">MultibandTileResampleMethods</a></span>
+        <a href="package$$withMultibandTileMethods.html"><span class="name">withMultibandTileMethods</span></a><span class="result"> extends <a href="../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<a href="MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>] with <a href="crop/MultibandTileCropMethods.html" class="extype" name="geotrellis.raster.crop.MultibandTileCropMethods">MultibandTileCropMethods</a> with <a href="merge/MultibandTileMergeMethods.html" class="extype" name="geotrellis.raster.merge.MultibandTileMergeMethods">MultibandTileMergeMethods</a> with <a href="prototype/MultibandTilePrototypeMethods.html" class="extype" name="geotrellis.raster.prototype.MultibandTilePrototypeMethods">MultibandTilePrototypeMethods</a> with <a href="reproject/MultibandTileReprojectMethods.html" class="extype" name="geotrellis.raster.reproject.MultibandTileReprojectMethods">MultibandTileReprojectMethods</a> with <a href="render/MultibandJpgRenderMethods.html" class="extype" name="geotrellis.raster.render.MultibandJpgRenderMethods">MultibandJpgRenderMethods</a> with <a href="render/MultibandColorMethods.html" class="extype" name="geotrellis.raster.render.MultibandColorMethods">MultibandColorMethods</a> with <a href="render/MultibandPngRenderMethods.html" class="extype" name="geotrellis.raster.render.MultibandPngRenderMethods">MultibandPngRenderMethods</a> with <a href="resample/MultibandTileResampleMethods.html" class="extype" name="geotrellis.raster.resample.MultibandTileResampleMethods">MultibandTileResampleMethods</a> with <a href="split/MultibandTileSplitMethods.html" class="extype" name="geotrellis.raster.split.MultibandTileSplitMethods">MultibandTileSplitMethods</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package@withMultibandTileMethodsextendsMethodExtensions[geotrellis.raster.MultibandTile]withMultibandTileCropMethodswithMultibandTileMergeMethodswithMultibandTilePrototypeMethodswithMultibandTileReprojectMethodswithMultibandJpgRenderMethodswithMultibandColorMethodswithMultibandPngRenderMethodswithMultibandTileResampleMethods" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.package@withMultibandTileMethodsextendsMethodExtensions[geotrellis.raster.MultibandTile]withMultibandTileCropMethodswithMultibandTileMergeMethodswithMultibandTilePrototypeMethodswithMultibandTileReprojectMethodswithMultibandJpgRenderMethodswithMultibandColorMethodswithMultibandPngRenderMethodswithMultibandTileResampleMethodswithMultibandTileSplitMethods" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -2176,6 +2152,23 @@ Travesable[Tile], that extends your Methods trait. See
       </a>
     </span>
       
+    </li><li name="geotrellis.raster.split.Implicits.withRasterExtentSplitMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withRasterExtentSplitMethodsextendsRasterExtentSplitMethods"></a>
+      <a id="withRasterExtentSplitMethods:withRasterExtentSplitMethods"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="split/Implicits$withRasterExtentSplitMethods.html"><span class="name">withRasterExtentSplitMethods</span></a><span class="result"> extends <a href="split/RasterExtentSplitMethods.html" class="extype" name="geotrellis.raster.split.RasterExtentSplitMethods">RasterExtentSplitMethods</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.split.Implicits@withRasterExtentSplitMethodsextendsRasterExtentSplitMethods" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="split/Implicits.html" class="extype" name="geotrellis.raster.split.Implicits">Implicits</a></dd></dl></div>
     </li><li name="geotrellis.raster.merge.Implicits.withRasterMergeMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="withRasterMergeMethods[T&lt;:geotrellis.raster.CellGrid]extendsRasterMergeMethods[T]"></a>
       <a id="withRasterMergeMethods[T&lt;:CellGrid]:withRasterMergeMethods[T]"></a>
@@ -2193,8 +2186,25 @@ Travesable[Tile], that extends your Methods trait. See
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="merge/Implicits.html" class="extype" name="geotrellis.raster.merge.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.raster.split.Implicits.withRasterSplitMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withRasterSplitMethods[T&lt;:geotrellis.raster.CellGrid]extendsRasterSplitMethods[T]"></a>
+      <a id="withRasterSplitMethods[T&lt;:CellGrid]:withRasterSplitMethods[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="split/Implicits$withRasterSplitMethods.html"><span class="name">withRasterSplitMethods</span></a><span class="tparams">[<span name="T">T &lt;: <a href="CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></span>]</span><span class="result"> extends <a href="split/RasterSplitMethods.html" class="extype" name="geotrellis.raster.split.RasterSplitMethods">RasterSplitMethods</a>[<span class="extype" name="geotrellis.raster.split.Implicits.withRasterSplitMethods.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.split.Implicits@withRasterSplitMethods[T&lt;:geotrellis.raster.CellGrid]extendsRasterSplitMethods[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="split/Implicits.html" class="extype" name="geotrellis.raster.split.Implicits">Implicits</a></dd></dl></div>
     </li><li name="geotrellis.raster.withSinglebandRasterMethods" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="withSinglebandRasterMethodsextendsMethodExtensions[geotrellis.raster.package.SinglebandRaster]withSinglebandRasterRasterizeMethods[geotrellis.raster.Tile]withSinglebandRasterReprojectMethodswithSinglebandRasterResampleMethodswithSinglebandRasterVectorizeMethods"></a>
+      <a id="withSinglebandRasterMethodsextendsMethodExtensions[geotrellis.raster.package.SinglebandRaster]withSinglebandRasterReprojectMethodswithSinglebandRasterResampleMethodswithSinglebandRasterVectorizeMethods"></a>
       <a id="withSinglebandRasterMethods:withSinglebandRasterMethods"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2202,16 +2212,16 @@ Travesable[Tile], that extends your Methods trait. See
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="package$$withSinglebandRasterMethods.html"><span class="name">withSinglebandRasterMethods</span></a><span class="result"> extends <a href="../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<a href="#SinglebandRaster=geotrellis.raster.Raster[geotrellis.raster.Tile]" class="extmbr" name="geotrellis.raster.SinglebandRaster">SinglebandRaster</a>] with <a href="rasterize/SinglebandRasterRasterizeMethods.html" class="extype" name="geotrellis.raster.rasterize.SinglebandRasterRasterizeMethods">SinglebandRasterRasterizeMethods</a>[<a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>] with <a href="reproject/SinglebandRasterReprojectMethods.html" class="extype" name="geotrellis.raster.reproject.SinglebandRasterReprojectMethods">SinglebandRasterReprojectMethods</a> with <a href="resample/SinglebandRasterResampleMethods.html" class="extype" name="geotrellis.raster.resample.SinglebandRasterResampleMethods">SinglebandRasterResampleMethods</a> with <a href="vectorize/SinglebandRasterVectorizeMethods.html" class="extype" name="geotrellis.raster.vectorize.SinglebandRasterVectorizeMethods">SinglebandRasterVectorizeMethods</a></span>
+        <a href="package$$withSinglebandRasterMethods.html"><span class="name">withSinglebandRasterMethods</span></a><span class="result"> extends <a href="../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<a href="#SinglebandRaster=geotrellis.raster.Raster[geotrellis.raster.Tile]" class="extmbr" name="geotrellis.raster.SinglebandRaster">SinglebandRaster</a>] with <a href="reproject/SinglebandRasterReprojectMethods.html" class="extype" name="geotrellis.raster.reproject.SinglebandRasterReprojectMethods">SinglebandRasterReprojectMethods</a> with <a href="resample/SinglebandRasterResampleMethods.html" class="extype" name="geotrellis.raster.resample.SinglebandRasterResampleMethods">SinglebandRasterResampleMethods</a> with <a href="vectorize/SinglebandRasterVectorizeMethods.html" class="extype" name="geotrellis.raster.vectorize.SinglebandRasterVectorizeMethods">SinglebandRasterVectorizeMethods</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package@withSinglebandRasterMethodsextendsMethodExtensions[geotrellis.raster.package.SinglebandRaster]withSinglebandRasterRasterizeMethods[geotrellis.raster.Tile]withSinglebandRasterReprojectMethodswithSinglebandRasterResampleMethodswithSinglebandRasterVectorizeMethods" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.package@withSinglebandRasterMethodsextendsMethodExtensions[geotrellis.raster.package.SinglebandRaster]withSinglebandRasterReprojectMethodswithSinglebandRasterResampleMethodswithSinglebandRasterVectorizeMethods" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
     </li><li name="geotrellis.raster.withTileMethods" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="withTileMethodsextendsMethodExtensions[geotrellis.raster.Tile]withCostDistanceMethodswithSinglebandTileCropMethodswithHydrologyMethodswithTileMaskMethodswithSinglebandTileMergeMethodswithLocalMethodswithFocalMethodswithZonalMethodswithHillshadeMethodswithSinglebandTilePrototypeMethodswithRegionGroupMethodswithColorMethodswithJpgRenderMethodswithPngRenderMethodswithSinglebandTileReprojectMethodswithSinglebandTileResampleMethodswithSummaryMethodswithPolygonalSummaryMethodswithViewshedMethodswithVectorizeMethods"></a>
+      <a id="withTileMethodsextendsMethodExtensions[geotrellis.raster.Tile]withCostDistanceMethodswithSinglebandTileCropMethodswithHydrologyMethodswithTileMaskMethodswithSinglebandTileMergeMethodswithLocalMethodswithFocalMethodswithZonalMethodswithHillshadeMethodswithSinglebandTilePrototypeMethodswithRegionGroupMethodswithColorMethodswithJpgRenderMethodswithPngRenderMethodswithSinglebandTileReprojectMethodswithSinglebandTileResampleMethodswithSinglebandTileSplitMethodswithSummaryMethodswithPolygonalSummaryMethodswithViewshedMethodswithVectorizeMethods"></a>
       <a id="withTileMethods:withTileMethods"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2219,10 +2229,27 @@ Travesable[Tile], that extends your Methods trait. See
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="package$$withTileMethods.html"><span class="name">withTileMethods</span></a><span class="result"> extends <a href="../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>] with <a href="costdistance/CostDistanceMethods.html" class="extype" name="geotrellis.raster.costdistance.CostDistanceMethods">CostDistanceMethods</a> with <a href="crop/SinglebandTileCropMethods.html" class="extype" name="geotrellis.raster.crop.SinglebandTileCropMethods">SinglebandTileCropMethods</a> with <a href="hydrology/HydrologyMethods.html" class="extype" name="geotrellis.raster.hydrology.HydrologyMethods">HydrologyMethods</a> with <a href="mask/TileMaskMethods.html" class="extype" name="geotrellis.raster.mask.TileMaskMethods">TileMaskMethods</a> with <a href="merge/SinglebandTileMergeMethods.html" class="extype" name="geotrellis.raster.merge.SinglebandTileMergeMethods">SinglebandTileMergeMethods</a> with <a href="mapalgebra/local/LocalMethods.html" class="extype" name="geotrellis.raster.mapalgebra.local.LocalMethods">LocalMethods</a> with <a href="mapalgebra/focal/FocalMethods.html" class="extype" name="geotrellis.raster.mapalgebra.focal.FocalMethods">FocalMethods</a> with <a href="mapalgebra/zonal/ZonalMethods.html" class="extype" name="geotrellis.raster.mapalgebra.zonal.ZonalMethods">ZonalMethods</a> with <a href="mapalgebra/focal/hillshade/HillshadeMethods.html" class="extype" name="geotrellis.raster.mapalgebra.focal.hillshade.HillshadeMethods">HillshadeMethods</a> with <a href="prototype/SinglebandTilePrototypeMethods.html" class="extype" name="geotrellis.raster.prototype.SinglebandTilePrototypeMethods">SinglebandTilePrototypeMethods</a> with <a href="regiongroup/RegionGroupMethods.html" class="extype" name="geotrellis.raster.regiongroup.RegionGroupMethods">RegionGroupMethods</a> with <a href="render/ColorMethods.html" class="extype" name="geotrellis.raster.render.ColorMethods">ColorMethods</a> with <a href="render/JpgRenderMethods.html" class="extype" name="geotrellis.raster.render.JpgRenderMethods">JpgRenderMethods</a> with <a href="render/PngRenderMethods.html" class="extype" name="geotrellis.raster.render.PngRenderMethods">PngRenderMethods</a> with <a href="reproject/SinglebandTileReprojectMethods.html" class="extype" name="geotrellis.raster.reproject.SinglebandTileReprojectMethods">SinglebandTileReprojectMethods</a> with <a href="resample/SinglebandTileResampleMethods.html" class="extype" name="geotrellis.raster.resample.SinglebandTileResampleMethods">SinglebandTileResampleMethods</a> with <a href="summary/SummaryMethods.html" class="extype" name="geotrellis.raster.summary.SummaryMethods">SummaryMethods</a> with <a href="summary/polygonal/PolygonalSummaryMethods.html" class="extype" name="geotrellis.raster.summary.polygonal.PolygonalSummaryMethods">PolygonalSummaryMethods</a> with <a href="viewshed/ViewshedMethods.html" class="extype" name="geotrellis.raster.viewshed.ViewshedMethods">ViewshedMethods</a> with <a href="vectorize/VectorizeMethods.html" class="extype" name="geotrellis.raster.vectorize.VectorizeMethods">VectorizeMethods</a></span>
+        <a href="package$$withTileMethods.html"><span class="name">withTileMethods</span></a><span class="result"> extends <a href="../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>] with <a href="costdistance/CostDistanceMethods.html" class="extype" name="geotrellis.raster.costdistance.CostDistanceMethods">CostDistanceMethods</a> with <a href="crop/SinglebandTileCropMethods.html" class="extype" name="geotrellis.raster.crop.SinglebandTileCropMethods">SinglebandTileCropMethods</a> with <a href="hydrology/HydrologyMethods.html" class="extype" name="geotrellis.raster.hydrology.HydrologyMethods">HydrologyMethods</a> with <a href="mask/TileMaskMethods.html" class="extype" name="geotrellis.raster.mask.TileMaskMethods">TileMaskMethods</a> with <a href="merge/SinglebandTileMergeMethods.html" class="extype" name="geotrellis.raster.merge.SinglebandTileMergeMethods">SinglebandTileMergeMethods</a> with <a href="mapalgebra/local/LocalMethods.html" class="extype" name="geotrellis.raster.mapalgebra.local.LocalMethods">LocalMethods</a> with <a href="mapalgebra/focal/FocalMethods.html" class="extype" name="geotrellis.raster.mapalgebra.focal.FocalMethods">FocalMethods</a> with <a href="mapalgebra/zonal/ZonalMethods.html" class="extype" name="geotrellis.raster.mapalgebra.zonal.ZonalMethods">ZonalMethods</a> with <a href="mapalgebra/focal/hillshade/HillshadeMethods.html" class="extype" name="geotrellis.raster.mapalgebra.focal.hillshade.HillshadeMethods">HillshadeMethods</a> with <a href="prototype/SinglebandTilePrototypeMethods.html" class="extype" name="geotrellis.raster.prototype.SinglebandTilePrototypeMethods">SinglebandTilePrototypeMethods</a> with <a href="regiongroup/RegionGroupMethods.html" class="extype" name="geotrellis.raster.regiongroup.RegionGroupMethods">RegionGroupMethods</a> with <a href="render/ColorMethods.html" class="extype" name="geotrellis.raster.render.ColorMethods">ColorMethods</a> with <a href="render/JpgRenderMethods.html" class="extype" name="geotrellis.raster.render.JpgRenderMethods">JpgRenderMethods</a> with <a href="render/PngRenderMethods.html" class="extype" name="geotrellis.raster.render.PngRenderMethods">PngRenderMethods</a> with <a href="reproject/SinglebandTileReprojectMethods.html" class="extype" name="geotrellis.raster.reproject.SinglebandTileReprojectMethods">SinglebandTileReprojectMethods</a> with <a href="resample/SinglebandTileResampleMethods.html" class="extype" name="geotrellis.raster.resample.SinglebandTileResampleMethods">SinglebandTileResampleMethods</a> with <a href="split/SinglebandTileSplitMethods.html" class="extype" name="geotrellis.raster.split.SinglebandTileSplitMethods">SinglebandTileSplitMethods</a> with <a href="summary/SummaryMethods.html" class="extype" name="geotrellis.raster.summary.SummaryMethods">SummaryMethods</a> with <a href="summary/polygonal/PolygonalSummaryMethods.html" class="extype" name="geotrellis.raster.summary.polygonal.PolygonalSummaryMethods">PolygonalSummaryMethods</a> with <a href="viewshed/ViewshedMethods.html" class="extype" name="geotrellis.raster.viewshed.ViewshedMethods">ViewshedMethods</a> with <a href="vectorize/VectorizeMethods.html" class="extype" name="geotrellis.raster.vectorize.VectorizeMethods">VectorizeMethods</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package@withTileMethodsextendsMethodExtensions[geotrellis.raster.Tile]withCostDistanceMethodswithSinglebandTileCropMethodswithHydrologyMethodswithTileMaskMethodswithSinglebandTileMergeMethodswithLocalMethodswithFocalMethodswithZonalMethodswithHillshadeMethodswithSinglebandTilePrototypeMethodswithRegionGroupMethodswithColorMethodswithJpgRenderMethodswithPngRenderMethodswithSinglebandTileReprojectMethodswithSinglebandTileResampleMethodswithSummaryMethodswithPolygonalSummaryMethodswithViewshedMethodswithVectorizeMethods" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.package@withTileMethodsextendsMethodExtensions[geotrellis.raster.Tile]withCostDistanceMethodswithSinglebandTileCropMethodswithHydrologyMethodswithTileMaskMethodswithSinglebandTileMergeMethodswithLocalMethodswithFocalMethodswithZonalMethodswithHillshadeMethodswithSinglebandTilePrototypeMethodswithRegionGroupMethodswithColorMethodswithJpgRenderMethodswithPngRenderMethodswithSinglebandTileReprojectMethodswithSinglebandTileResampleMethodswithSinglebandTileSplitMethodswithSummaryMethodswithPolygonalSummaryMethodswithViewshedMethodswithVectorizeMethods" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.withTileSeqMethods" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withTileSeqMethodsextendsMethodExtensions[Traversable[geotrellis.raster.Tile]]withLocalSeqMethods"></a>
+      <a id="withTileSeqMethods:withTileSeqMethods"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$withTileSeqMethods.html"><span class="name">withTileSeqMethods</span></a><span class="result"> extends <a href="../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="scala.Traversable">Traversable</span>[<a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]] with <a href="mapalgebra/local/LocalSeqMethods.html" class="extype" name="geotrellis.raster.mapalgebra.local.LocalSeqMethods">LocalSeqMethods</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package@withTileSeqMethodsextendsMethodExtensions[Traversable[geotrellis.raster.Tile]]withLocalSeqMethods" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -3937,6 +3964,23 @@ computations.</p>
       </a>
     </span>
       
+    </li><li name="geotrellis.raster.split" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="split"></a>
+      <a id="split:split"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="split/package.html"><span class="name">split</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package@split" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.raster.stitch" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="stitch"></a>
       <a id="stitch:stitch"></a>
@@ -4269,12 +4313,14 @@ computations.</p>
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="geotrellis.raster.reproject.Implicits">
+        <div class="parent" name="geotrellis.raster.split.Implicits">
+              <h3>Inherited from <a href="split/Implicits.html" class="extype" name="geotrellis.raster.split.Implicits">Implicits</a></h3>
+            </div><div class="parent" name="geotrellis.raster.reproject.Implicits">
               <h3>Inherited from <a href="reproject/Implicits.html" class="extype" name="geotrellis.raster.reproject.Implicits">Implicits</a></h3>
-            </div><div class="parent" name="geotrellis.raster.mapalgebra.focal.hillshade.Implicits">
-              <h3>Inherited from <a href="mapalgebra/focal/hillshade/Implicits.html" class="extype" name="geotrellis.raster.mapalgebra.focal.hillshade.Implicits">Implicits</a></h3>
             </div><div class="parent" name="geotrellis.raster.merge.Implicits">
               <h3>Inherited from <a href="merge/Implicits.html" class="extype" name="geotrellis.raster.merge.Implicits">Implicits</a></h3>
+            </div><div class="parent" name="geotrellis.raster.mapalgebra.focal.hillshade.Implicits">
+              <h3>Inherited from <a href="mapalgebra/focal/hillshade/Implicits.html" class="extype" name="geotrellis.raster.mapalgebra.focal.hillshade.Implicits">Implicits</a></h3>
             </div><div class="parent" name="geotrellis.raster.crop.Implicits">
               <h3>Inherited from <a href="crop/Implicits.html" class="extype" name="geotrellis.raster.crop.Implicits">Implicits</a></h3>
             </div><div class="parent" name="scala.AnyRef">

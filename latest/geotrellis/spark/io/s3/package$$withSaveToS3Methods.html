@@ -365,23 +365,23 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="geotrellis.spark.io.s3.SaveToS3Methods#saveToS3" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="saveToS3(keyToUri:K=&gt;String):Unit"></a>
-      <a id="saveToS3((K)⇒String):Unit"></a>
+      <a id="saveToS3(keyToUri:K=&gt;String,putObjectModifier:com.amazonaws.services.s3.model.PutObjectRequest=&gt;com.amazonaws.services.s3.model.PutObjectRequest):Unit"></a>
+      <a id="saveToS3((K)⇒String,(PutObjectRequest)⇒PutObjectRequest):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">saveToS3</span><span class="params">(<span name="keyToUri">keyToUri: (<span class="extype" name="geotrellis.spark.io.s3.withSaveToS3Methods.K">K</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">saveToS3</span><span class="params">(<span name="keyToUri">keyToUri: (<span class="extype" name="geotrellis.spark.io.s3.withSaveToS3Methods.K">K</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="putObjectModifier">putObjectModifier: (<span class="extype" name="com.amazonaws.services.s3.model.PutObjectRequest">PutObjectRequest</span>) ⇒ <span class="extype" name="com.amazonaws.services.s3.model.PutObjectRequest">PutObjectRequest</span> = <span class="symbol">p =&gt; p</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.package$$withSaveToS3Methods@saveToS3(keyToUri:K=&gt;String):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.package$$withSaveToS3Methods@saveToS3(keyToUri:K=&gt;String,putObjectModifier:com.amazonaws.services.s3.model.PutObjectRequest=&gt;com.amazonaws.services.s3.model.PutObjectRequest):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">Saves each RDD value to an S3 key.</p><div class="fullcomment"><div class="comment cmt"><p>Saves each RDD value to an S3 key.
-</p></div><dl class="paramcmts block"><dt class="param">keyToUri</dt><dd class="cmt"><p>A function from K (a key) to an S3 URI</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="SaveToS3Methods.html" class="extype" name="geotrellis.spark.io.s3.SaveToS3Methods">SaveToS3Methods</a></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">keyToUri</dt><dd class="cmt"><p>A function from K (a key) to an S3 URI</p></dd><dt class="param">putObjectModifier</dt><dd class="cmt"><p>Function that will be applied ot S3 PutObjectRequests, so that they can be modified (e.g. to change the ACL settings)</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="SaveToS3Methods.html" class="extype" name="geotrellis.spark.io.s3.SaveToS3Methods">SaveToS3Methods</a></dd></dl></div>
     </li><li name="geotrellis.spark.io.s3.SaveToS3Methods#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="self:org.apache.spark.rdd.RDD[(K,Array[Byte])]"></a>
       <a id="self:RDD[(K,Array[Byte])]"></a>
