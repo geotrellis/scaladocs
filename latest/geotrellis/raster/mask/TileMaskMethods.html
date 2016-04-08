@@ -45,18 +45,18 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">TileMaskMethods</span><span class="result"> extends <a href="../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</span>
+        <span class="name">TileMaskMethods</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="geotrellis.raster.mask.TileMaskMethods.T">T</span>]</span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A trait containing extension methods related to masking of
-<a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>s.
+tiles.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>], <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="geotrellis.raster.mask.TileMaskMethods.T">T</span>], <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
             <span class="toggle">Known Subclasses</span>
-            <div class="subClasses hiddenContent"><a href="../package$$withTileMethods.html" class="extype" name="geotrellis.raster.withTileMethods">withTileMethods</a></div>
+            <div class="subClasses hiddenContent"><a href="MultibandTileMaskMethods.html" class="extype" name="geotrellis.raster.mask.MultibandTileMaskMethods">MultibandTileMaskMethods</a>, <a href="SinglebandTileMaskMethods.html" class="extype" name="geotrellis.raster.mask.SinglebandTileMaskMethods">SinglebandTileMaskMethods</a>, <a href="../package$$withMultibandTileMethods.html" class="extype" name="geotrellis.raster.withMultibandTileMethods">withMultibandTileMethods</a>, <a href="../package$$withTileMethods.html" class="extype" name="geotrellis.raster.withTileMethods">withTileMethods</a></div>
           </div></div>
         
 
@@ -97,16 +97,81 @@
 
         <div id="values" class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="geotrellis.util.MethodExtensions#self" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="self:T"></a>
-      <a id="self:Tile"></a>
+              <ol><li name="geotrellis.raster.mask.TileMaskMethods#localInverseMask" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="localInverseMask(r:T,readMask:Int,writeMask:Int):T"></a>
+      <a id="localInverseMask(T,Int,Int):T"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">self</span><span class="result">: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
+        <span class="name">localInverseMask</span><span class="params">(<span name="r">r: <span class="extype" name="geotrellis.raster.mask.TileMaskMethods.T">T</span></span>, <span name="readMask">readMask: <span class="extype" name="scala.Int">Int</span></span>, <span name="writeMask">writeMask: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.raster.mask.TileMaskMethods.T">T</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.mask.TileMaskMethods@localInverseMask(r:T,readMask:Int,writeMask:Int):T" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Generate a raster with the values from the first raster, but
+only include cells in which the corresponding cell in the second
+raster is set to the &quot;readMask&quot; value.</p><div class="fullcomment"><div class="comment cmt"><p>Generate a raster with the values from the first raster, but
+only include cells in which the corresponding cell in the second
+raster is set to the &quot;readMask&quot; value.</p><p>For example, if *all* cells in the second raster are set to the
+readMask value, the output raster will be identical to the first
+raster.
+</p></div></div>
+    </li><li name="geotrellis.raster.mask.TileMaskMethods#localMask" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="localMask(r:T,readMask:Int,writeMask:Int):T"></a>
+      <a id="localMask(T,Int,Int):T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">localMask</span><span class="params">(<span name="r">r: <span class="extype" name="geotrellis.raster.mask.TileMaskMethods.T">T</span></span>, <span name="readMask">readMask: <span class="extype" name="scala.Int">Int</span></span>, <span name="writeMask">writeMask: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.raster.mask.TileMaskMethods.T">T</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.mask.TileMaskMethods@localMask(r:T,readMask:Int,writeMask:Int):T" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Generate a raster with the values from the first raster, but
+only include cells in which the corresponding cell in the second
+raster *are not* set to the &quot;readMask&quot; value.</p><div class="fullcomment"><div class="comment cmt"><p>Generate a raster with the values from the first raster, but
+only include cells in which the corresponding cell in the second
+raster *are not* set to the &quot;readMask&quot; value.</p><p>For example, if *all* cells in the second raster are set to the
+readMask value, the output raster will be empty -- all values
+set to NODATA.
+</p></div></div>
+    </li><li name="geotrellis.raster.mask.TileMaskMethods#mask" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="mask(ext:geotrellis.vector.Extent,geoms:Traversable[geotrellis.vector.Geometry],options:geotrellis.raster.rasterize.Rasterizer.Options):T"></a>
+      <a id="mask(Extent,Traversable[Geometry],Options):T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mask</span><span class="params">(<span name="ext">ext: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="geoms">geoms: <span class="extype" name="scala.Traversable">Traversable</span>[<a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a>]</span>, <span name="options">options: <a href="../rasterize/Rasterizer$$Options.html" class="extype" name="geotrellis.raster.rasterize.Rasterizer.Options">Options</a></span>)</span><span class="result">: <span class="extype" name="geotrellis.raster.mask.TileMaskMethods.T">T</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.mask.TileMaskMethods@mask(ext:geotrellis.vector.Extent,geoms:Traversable[geotrellis.vector.Geometry],options:geotrellis.raster.rasterize.Rasterizer.Options):T" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Masks this tile by the given Geometry.</p>
+    </li><li name="geotrellis.util.MethodExtensions#self" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="self:T"></a>
+      <a id="self:T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">self</span><span class="result">: <span class="extype" name="geotrellis.raster.mask.TileMaskMethods.T">T</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.raster.mask.TileMaskMethods@self:T" title="Permalink" target="_top">
@@ -318,84 +383,19 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.raster.mask.TileMaskMethods#localInverseMask" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="localInverseMask(r:geotrellis.raster.Tile,readMask:Int,writeMask:Int):geotrellis.raster.Tile"></a>
-      <a id="localInverseMask(Tile,Int,Int):Tile"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">localInverseMask</span><span class="params">(<span name="r">r: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>, <span name="readMask">readMask: <span class="extype" name="scala.Int">Int</span></span>, <span name="writeMask">writeMask: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.mask.TileMaskMethods@localInverseMask(r:geotrellis.raster.Tile,readMask:Int,writeMask:Int):geotrellis.raster.Tile" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Generate a raster with the values from the first raster, but
-only include cells in which the corresponding cell in the second
-raster is set to the &quot;readMask&quot; value.</p><div class="fullcomment"><div class="comment cmt"><p>Generate a raster with the values from the first raster, but
-only include cells in which the corresponding cell in the second
-raster is set to the &quot;readMask&quot; value.</p><p>For example, if *all* cells in the second raster are set to the
-readMask value, the output raster will be identical to the first
-raster.
-</p></div></div>
-    </li><li name="geotrellis.raster.mask.TileMaskMethods#localMask" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="localMask(r:geotrellis.raster.Tile,readMask:Int,writeMask:Int):geotrellis.raster.Tile"></a>
-      <a id="localMask(Tile,Int,Int):Tile"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">localMask</span><span class="params">(<span name="r">r: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>, <span name="readMask">readMask: <span class="extype" name="scala.Int">Int</span></span>, <span name="writeMask">writeMask: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.mask.TileMaskMethods@localMask(r:geotrellis.raster.Tile,readMask:Int,writeMask:Int):geotrellis.raster.Tile" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Generate a raster with the values from the first raster, but
-only include cells in which the corresponding cell in the second
-raster *are not* set to the &quot;readMask&quot; value.</p><div class="fullcomment"><div class="comment cmt"><p>Generate a raster with the values from the first raster, but
-only include cells in which the corresponding cell in the second
-raster *are not* set to the &quot;readMask&quot; value.</p><p>For example, if *all* cells in the second raster are set to the
-readMask value, the output raster will be empty -- all values
-set to NODATA.
-</p></div></div>
-    </li><li name="geotrellis.raster.mask.TileMaskMethods#mask" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="mask(ext:geotrellis.vector.Extent,geoms:Traversable[geotrellis.vector.Geometry],options:geotrellis.raster.rasterize.Rasterizer.Options):geotrellis.raster.Tile"></a>
-      <a id="mask(Extent,Traversable[Geometry],Options):Tile"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">mask</span><span class="params">(<span name="ext">ext: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="geoms">geoms: <span class="extype" name="scala.Traversable">Traversable</span>[<a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a>]</span>, <span name="options">options: <a href="../rasterize/Rasterizer$$Options.html" class="extype" name="geotrellis.raster.rasterize.Rasterizer.Options">Options</a></span>)</span><span class="result">: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.mask.TileMaskMethods@mask(ext:geotrellis.vector.Extent,geoms:Traversable[geotrellis.vector.Geometry],options:geotrellis.raster.rasterize.Rasterizer.Options):geotrellis.raster.Tile" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Masks this tile by the given Geometry.</p>
     </li><li name="geotrellis.raster.mask.TileMaskMethods#mask" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mask(ext:geotrellis.vector.Extent,geoms:Traversable[geotrellis.vector.Geometry]):geotrellis.raster.Tile"></a>
-      <a id="mask(Extent,Traversable[Geometry]):Tile"></a>
+      <a id="mask(ext:geotrellis.vector.Extent,geoms:Traversable[geotrellis.vector.Geometry]):T"></a>
+      <a id="mask(Extent,Traversable[Geometry]):T"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">mask</span><span class="params">(<span name="ext">ext: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="geoms">geoms: <span class="extype" name="scala.Traversable">Traversable</span>[<a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a>]</span>)</span><span class="result">: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
+        <span class="name">mask</span><span class="params">(<span name="ext">ext: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="geoms">geoms: <span class="extype" name="scala.Traversable">Traversable</span>[<a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a>]</span>)</span><span class="result">: <span class="extype" name="geotrellis.raster.mask.TileMaskMethods.T">T</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.mask.TileMaskMethods@mask(ext:geotrellis.vector.Extent,geoms:Traversable[geotrellis.vector.Geometry]):geotrellis.raster.Tile" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.mask.TileMaskMethods@mask(ext:geotrellis.vector.Extent,geoms:Traversable[geotrellis.vector.Geometry]):T" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -403,35 +403,35 @@ set to NODATA.
 exteriors.
 </p></div></div>
     </li><li name="geotrellis.raster.mask.TileMaskMethods#mask" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="mask(ext:geotrellis.vector.Extent,geom:geotrellis.vector.Geometry,options:geotrellis.raster.rasterize.Rasterizer.Options):geotrellis.raster.Tile"></a>
-      <a id="mask(Extent,Geometry,Options):Tile"></a>
+      <a id="mask(ext:geotrellis.vector.Extent,geom:geotrellis.vector.Geometry,options:geotrellis.raster.rasterize.Rasterizer.Options):T"></a>
+      <a id="mask(Extent,Geometry,Options):T"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">mask</span><span class="params">(<span name="ext">ext: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="geom">geom: <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>, <span name="options">options: <a href="../rasterize/Rasterizer$$Options.html" class="extype" name="geotrellis.raster.rasterize.Rasterizer.Options">Options</a></span>)</span><span class="result">: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
+        <span class="name">mask</span><span class="params">(<span name="ext">ext: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="geom">geom: <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>, <span name="options">options: <a href="../rasterize/Rasterizer$$Options.html" class="extype" name="geotrellis.raster.rasterize.Rasterizer.Options">Options</a></span>)</span><span class="result">: <span class="extype" name="geotrellis.raster.mask.TileMaskMethods.T">T</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.mask.TileMaskMethods@mask(ext:geotrellis.vector.Extent,geom:geotrellis.vector.Geometry,options:geotrellis.raster.rasterize.Rasterizer.Options):geotrellis.raster.Tile" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.mask.TileMaskMethods@mask(ext:geotrellis.vector.Extent,geom:geotrellis.vector.Geometry,options:geotrellis.raster.rasterize.Rasterizer.Options):T" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">Masks this tile by the given Geometry.</p>
     </li><li name="geotrellis.raster.mask.TileMaskMethods#mask" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mask(ext:geotrellis.vector.Extent,geom:geotrellis.vector.Geometry):geotrellis.raster.Tile"></a>
-      <a id="mask(Extent,Geometry):Tile"></a>
+      <a id="mask(ext:geotrellis.vector.Extent,geom:geotrellis.vector.Geometry):T"></a>
+      <a id="mask(Extent,Geometry):T"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">mask</span><span class="params">(<span name="ext">ext: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="geom">geom: <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>)</span><span class="result">: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
+        <span class="name">mask</span><span class="params">(<span name="ext">ext: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="geom">geom: <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>)</span><span class="result">: <span class="extype" name="geotrellis.raster.mask.TileMaskMethods.T">T</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.mask.TileMaskMethods@mask(ext:geotrellis.vector.Extent,geom:geotrellis.vector.Geometry):geotrellis.raster.Tile" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.mask.TileMaskMethods@mask(ext:geotrellis.vector.Extent,geom:geotrellis.vector.Geometry):T" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -602,7 +602,7 @@ exteriors.
 
         <div id="inheritedMembers">
         <div class="parent" name="geotrellis.util.MethodExtensions">
-              <h3>Inherited from <a href="../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</h3>
+              <h3>Inherited from <a href="../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="geotrellis.raster.mask.TileMaskMethods.T">T</span>]</h3>
             </div><div class="parent" name="scala.Serializable">
               <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
             </div><div class="parent" name="java.io.Serializable">

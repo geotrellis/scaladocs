@@ -133,41 +133,22 @@ it as a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a
     </span>
       
     </li><li name="geotrellis.raster.MultibandTile#bands" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="bands(bandSequence:Int*)(implicitd:DummyImplicit):geotrellis.raster.MultibandTile"></a>
-      <a id="bands(Int*)(DummyImplicit):MultibandTile"></a>
+      <a id="bands:Vector[geotrellis.raster.Tile]"></a>
+      <a id="bands:Vector[Tile]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">bands</span><span class="params">(<span name="bandSequence">bandSequence: <span class="extype" name="scala.Int">Int</span>*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></span>
+        <span class="name">bands</span><span class="result">: <span class="extype" name="scala.Vector">Vector</span>[<a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.MultibandTile@bands(bandSequence:Int*)(implicitd:DummyImplicit):geotrellis.raster.MultibandTile" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.MultibandTile@bands:Vector[geotrellis.raster.Tile]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Retrieve a subset of the bands of the present <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>
-as a new <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>.</p>
-    </li><li name="geotrellis.raster.MultibandTile#bands" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="bands(bandSequence:Seq[Int]):geotrellis.raster.MultibandTile"></a>
-      <a id="bands(Seq[Int]):MultibandTile"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">bands</span><span class="params">(<span name="bandSequence">bandSequence: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.MultibandTile@bands(bandSequence:Seq[Int]):geotrellis.raster.MultibandTile" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Retrieve a subset of the bands of the present <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>
-as a new <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>.</p>
+      <p class="shortcomment cmt">A vector of all bands in this MultibandTile.</p>
     </li><li name="geotrellis.raster.CellGrid#cellType" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="cellType:geotrellis.raster.CellType"></a>
       <a id="cellType:CellType"></a>
@@ -843,6 +824,24 @@ new double-valued multiband tile.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></dd></dl></div>
+    </li><li name="geotrellis.raster.MultibandTile#subsetBands" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="subsetBands(bandSequence:Seq[Int]):geotrellis.raster.MultibandTile"></a>
+      <a id="subsetBands(Seq[Int]):MultibandTile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">subsetBands</span><span class="params">(<span name="bandSequence">bandSequence: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.MultibandTile@subsetBands(bandSequence:Seq[Int]):geotrellis.raster.MultibandTile" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Retrieve a subset of the bands of the present <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>
+as a new <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>.</p>
     </li></ol>
             </div>
 
@@ -1421,6 +1420,24 @@ new double-valued multiband tile.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></dd></dl></div>
+    </li><li name="geotrellis.raster.MultibandTile#subsetBands" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="subsetBands(bandSequence:Int*)(implicitd:DummyImplicit):geotrellis.raster.MultibandTile"></a>
+      <a id="subsetBands(Int*)(DummyImplicit):MultibandTile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">subsetBands</span><span class="params">(<span name="bandSequence">bandSequence: <span class="extype" name="scala.Int">Int</span>*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.MultibandTile@subsetBands(bandSequence:Int*)(implicitd:DummyImplicit):geotrellis.raster.MultibandTile" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Retrieve a subset of the bands of the present <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>
+as a new <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>.</p>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
