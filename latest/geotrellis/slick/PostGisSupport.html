@@ -28,7 +28,7 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img alt="Class" src="../../lib/class_big.png" />
+        <img alt="Trait" src="../../lib/trait_big.png" />
         <p id="owner"><a href="../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="package.html" class="extype" name="geotrellis.slick">slick</a></p>
         <h1>PostGisSupport</h1><h3><span class="morelinks"><div>Related Doc:
             <a href="package.html" class="extype" name="geotrellis.slick">package slick</a>
@@ -42,26 +42,28 @@
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">class</span>
+        <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">PostGisSupport</span><span class="result"> extends <a href="PostGisExtensions.html" class="extype" name="geotrellis.slick.PostGisExtensions">PostGisExtensions</a></span>
+        <span class="name">PostGisSupport</span><span class="result"> extends <span class="extype" name="com.github.tminglei.slickpg.geom.PgPostGISExtensions">PgPostGISExtensions</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A class which provides column types and extension methods for working with Geometry columns in PostGIS.
-</p></div><dl class="attributes block"> <div class="block">Example:
-               <ol><li class="cmt"><p></p><pre><span class="kw">val</span> PostGIS = <span class="kw">new</span> PostGisSupport(PostgresDriver)
-<span class="kw">import</span> PostGIS._
-<span class="kw">class</span> City(tag: Tag) <span class="kw">extends</span> Table[(<span class="std">Int</span>,<span class="std">String</span>,Point)](tag, <span class="lit">"cities"</span>) {
-  <span class="kw">def</span> id = column[<span class="std">Int</span>](<span class="lit">"id"</span>, O.PrimaryKey, O.AutoInc)
-  <span class="kw">def</span> name = column[<span class="std">String</span>](<span class="lit">"name"</span>)
-  <span class="kw">def</span> geom = column[Point](<span class="lit">"geom"</span>)
-  <span class="kw">def</span> * = (id, name, geom)
-}</pre></li></ol>
-            </div><dt>See also</dt><dd><span class="cmt"><p><a href="package.html" class="extype" name="geotrellis.slick">com.github.tminglei.slickpg.PgPostGISSupport</a></p></span></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This class provides column types and extension methods to work with Geometry columns in PostGIS.</p><p>Sample Usage:
+<code>
+val PostGIS = new PostGisSupport(PostgresDriver)
+import PostGIS._
+
+class City(tag: Tag) extends Table[(Int,String,Point)](tag, "cities") {
+  def id = column[Int]("id", O.PrimaryKey, O.AutoInc)
+  def name = column[String]("name")
+  def geom = column[Point]("geom")
+  def * = (id, name, geom)
+}
+</code></p><p>based on <a href="package.html" class="extype" name="geotrellis.slick">com.github.tminglei.slickpg.PgPostGISSupport</a>
+</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="geotrellis.slick.PostGisSupport">PostGisSupport</a> with <span class="extype" name="slick.driver.PostgresDriver">PostgresDriver</span></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="PostGisExtensions.html" class="extype" name="geotrellis.slick.PostGisExtensions">PostGisExtensions</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="com.github.tminglei.slickpg.geom.PgPostGISExtensions">PgPostGISExtensions</span>, <span class="extype" name="slick.driver.JdbcTypesComponent">JdbcTypesComponent</span>, <span class="extype" name="slick.profile.RelationalTypesComponent">RelationalTypesComponent</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -79,7 +81,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.slick.PostGisSupport"><span>PostGisSupport</span></li><li class="in" name="geotrellis.slick.PostGisExtensions"><span>PostGisExtensions</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.slick.PostGisSupport"><span>PostGisSupport</span></li><li class="in" name="com.github.tminglei.slickpg.geom.PgPostGISExtensions"><span>PgPostGISExtensions</span></li><li class="in" name="slick.driver.JdbcTypesComponent"><span>JdbcTypesComponent</span></li><li class="in" name="slick.profile.RelationalTypesComponent"><span>RelationalTypesComponent</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -96,33 +98,81 @@
 
       <div id="template">
         <div id="allMembers">
-        <div id="constructors" class="members">
-              <h3>Instance Constructors</h3>
-              <ol><li name="geotrellis.slick.PostGisSupport#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(driver:scala.slick.driver.JdbcDriver):geotrellis.slick.PostGisSupport"></a>
-      <a id="&lt;init&gt;:PostGisSupport"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">PostGisSupport</span><span class="params">(<span name="driver">driver: <span class="extype" name="scala.slick.driver.JdbcDriver">JdbcDriver</span></span>)</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.slick.PostGisSupport@&lt;init&gt;(driver:scala.slick.driver.JdbcDriver):geotrellis.slick.PostGisSupport" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li></ol>
-            </div>
+        
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="geotrellis.slick.PostGisSupport.GEOMETRY" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="slick.profile.RelationalTypesComponent.BaseColumnType" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="BaseColumnType[T&lt;:&lt;?&gt;]&lt;:RelationalTypesComponent.this.ColumnType[T]withslick.ast.BaseTypedType[T]"></a>
+      <a id="BaseColumnType[T]:(PostGisSupport.this)#BaseColumnType[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BaseColumnType</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> &lt;: (<a href="" class="extype" name="geotrellis.slick.PostGisSupport">PostGisSupport</a>.this)#<span class="extype" name="slick.driver.JdbcProfile.ColumnType">ColumnType</span>[<span class="extype" name="slick.profile.RelationalTypesComponent.BaseColumnType.T">T</span>] with <span class="extype" name="slick.ast.BaseTypedType">BaseTypedType</span>[<span class="extype" name="slick.profile.RelationalTypesComponent.BaseColumnType.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.slick.PostGisSupport@BaseColumnType[T]&lt;:RelationalTypesComponent.this.ColumnType[T]withslick.ast.BaseTypedType[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RelationalTypesComponent</dd></dl></div>
+    </li><li name="com.github.tminglei.slickpg.geom.PgPostGISExtensions.BasePostGISAssistants" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="BasePostGISAssistants[GEOMETRY,POINT&lt;:GEOMETRY,LINESTRING&lt;:GEOMETRY,POLYGON&lt;:GEOMETRY,GEOMETRYCOLLECTION&lt;:GEOMETRY]extendsAnyRef"></a>
+      <a id="BasePostGISAssistants[GEOMETRY,POINT&lt;:GEOMETRY,LINESTRING&lt;:GEOMETRY,POLYGON&lt;:GEOMETRY,GEOMETRYCOLLECTION&lt;:GEOMETRY]:(PgPostGISExtensions.this)#BasePostGISAssistants[GEOMETRY,POINT,LINESTRING,POLYGON,GEOMETRYCOLLECTION]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BasePostGISAssistants</span><span class="tparams">[<span name="GEOMETRY">GEOMETRY</span>, <span name="POINT">POINT &lt;: <span class="extype" name="com.github.tminglei.slickpg.geom.PgPostGISExtensions.BasePostGISAssistants.GEOMETRY">GEOMETRY</span></span>, <span name="LINESTRING">LINESTRING &lt;: <span class="extype" name="com.github.tminglei.slickpg.geom.PgPostGISExtensions.BasePostGISAssistants.GEOMETRY">GEOMETRY</span></span>, <span name="POLYGON">POLYGON &lt;: <span class="extype" name="com.github.tminglei.slickpg.geom.PgPostGISExtensions.BasePostGISAssistants.GEOMETRY">GEOMETRY</span></span>, <span name="GEOMETRYCOLLECTION">GEOMETRYCOLLECTION &lt;: <span class="extype" name="com.github.tminglei.slickpg.geom.PgPostGISExtensions.BasePostGISAssistants.GEOMETRY">GEOMETRY</span></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.slick.PostGisSupport@BasePostGISAssistants[GEOMETRY,POINT&lt;:GEOMETRY,LINESTRING&lt;:GEOMETRY,POLYGON&lt;:GEOMETRY,GEOMETRYCOLLECTION&lt;:GEOMETRY]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>PgPostGISExtensions</dd></dl></div>
+    </li><li name="slick.profile.RelationalTypesComponent.ColumnType" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ColumnType[T&lt;:&lt;?&gt;]&lt;:slick.ast.TypedType[T]"></a>
+      <a id="ColumnType[T]:(PostGisSupport.this)#ColumnType[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ColumnType</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> &lt;: <span class="extype" name="slick.ast.TypedType">TypedType</span>[<span class="extype" name="slick.profile.RelationalTypesComponent.ColumnType.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.slick.PostGisSupport@ColumnType[T]&lt;:slick.ast.TypedType[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RelationalTypesComponent</dd></dl></div>
+    </li><li name="slick.driver.JdbcTypesComponent.DriverJdbcType" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="DriverJdbcType[T]extendsJdbcType[T]"></a>
+      <a id="DriverJdbcType[T]:slick.driver.JdbcDriver.DriverJdbcType[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DriverJdbcType</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="slick.jdbc.JdbcType">JdbcType</span>[<span class="extype" name="slick.driver.JdbcTypesComponent.DriverJdbcType.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.slick.PostGisSupport@DriverJdbcType[T]extendsJdbcType[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>JdbcTypesComponent</dd></dl></div>
+    </li><li name="geotrellis.slick.PostGisSupport.GEOMETRY" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="GEOMETRY=geotrellis.vector.Geometry"></a>
-      <a id="GEOMETRY:GEOMETRY"></a>
+      <a id="GEOMETRY:(PostGisSupport.this)#GEOMETRY"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
@@ -136,10 +186,10 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.slick.PostGisSupport">PostGisSupport</a> → <a href="PostGisExtensions.html" class="extype" name="geotrellis.slick.PostGisExtensions">PostGisExtensions</a></dd></dl></div>
-    </li><li name="geotrellis.slick.PostGisSupport.GEOMETRYCOLLECTION" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      
+    </li><li name="geotrellis.slick.PostGisSupport.GEOMETRYCOLLECTION" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="GEOMETRYCOLLECTION=geotrellis.vector.GeometryCollection"></a>
-      <a id="GEOMETRYCOLLECTION:GEOMETRYCOLLECTION"></a>
+      <a id="GEOMETRYCOLLECTION:(PostGisSupport.this)#GEOMETRYCOLLECTION"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
@@ -153,44 +203,78 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.slick.PostGisSupport">PostGisSupport</a> → <a href="PostGisExtensions.html" class="extype" name="geotrellis.slick.PostGisExtensions">PostGisExtensions</a></dd></dl></div>
-    </li><li name="geotrellis.slick.PostGisExtensions.GeometryColumnExtensionMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="GeometryColumnExtensionMethods[G1&lt;:PostGisExtensions.this.GEOMETRY,P1]extendsExtensionMethods[G1,P1]"></a>
-      <a id="GeometryColumnExtensionMethods[G1&lt;:GEOMETRY,P1]:GeometryColumnExtensionMethods[G1,P1]"></a>
+      
+    </li><li name="com.github.tminglei.slickpg.geom.PgPostGISExtensions.GeometryColumnExtensionMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GeometryColumnExtensionMethods[GEOMETRY,POINT&lt;:GEOMETRY,LINESTRING&lt;:GEOMETRY,POLYGON&lt;:GEOMETRY,GEOMETRYCOLLECTION&lt;:GEOMETRY,G1&lt;:GEOMETRY,P1]extendsExtensionMethods[G1,P1]"></a>
+      <a id="GeometryColumnExtensionMethods[GEOMETRY,POINT&lt;:GEOMETRY,LINESTRING&lt;:GEOMETRY,POLYGON&lt;:GEOMETRY,GEOMETRYCOLLECTION&lt;:GEOMETRY,G1&lt;:GEOMETRY,P1]:(PgPostGISExtensions.this)#GeometryColumnExtensionMethods[GEOMETRY,POINT,LINESTRING,POLYGON,GEOMETRYCOLLECTION,G1,P1]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="PostGisExtensions$GeometryColumnExtensionMethods.html"><span class="name">GeometryColumnExtensionMethods</span></a><span class="tparams">[<span name="G1">G1 &lt;: <a href="PostGisExtensions.html#GEOMETRY" class="extmbr" name="geotrellis.slick.PostGisExtensions.GEOMETRY">GEOMETRY</a></span>, <span name="P1">P1</span>]</span><span class="result"> extends <span class="extype" name="scala.slick.lifted.ExtensionMethods">ExtensionMethods</span>[<span class="extype" name="geotrellis.slick.PostGisExtensions.GeometryColumnExtensionMethods.G1">G1</span>, <span class="extype" name="geotrellis.slick.PostGisExtensions.GeometryColumnExtensionMethods.P1">P1</span>]</span>
+        <span class="name">GeometryColumnExtensionMethods</span><span class="tparams">[<span name="GEOMETRY">GEOMETRY</span>, <span name="POINT">POINT &lt;: <span class="extype" name="com.github.tminglei.slickpg.geom.PgPostGISExtensions.GeometryColumnExtensionMethods.GEOMETRY">GEOMETRY</span></span>, <span name="LINESTRING">LINESTRING &lt;: <span class="extype" name="com.github.tminglei.slickpg.geom.PgPostGISExtensions.GeometryColumnExtensionMethods.GEOMETRY">GEOMETRY</span></span>, <span name="POLYGON">POLYGON &lt;: <span class="extype" name="com.github.tminglei.slickpg.geom.PgPostGISExtensions.GeometryColumnExtensionMethods.GEOMETRY">GEOMETRY</span></span>, <span name="GEOMETRYCOLLECTION">GEOMETRYCOLLECTION &lt;: <span class="extype" name="com.github.tminglei.slickpg.geom.PgPostGISExtensions.GeometryColumnExtensionMethods.GEOMETRY">GEOMETRY</span></span>, <span name="G1">G1 &lt;: <span class="extype" name="com.github.tminglei.slickpg.geom.PgPostGISExtensions.GeometryColumnExtensionMethods.GEOMETRY">GEOMETRY</span></span>, <span name="P1">P1</span>]</span><span class="result"> extends <span class="extype" name="slick.lifted.ExtensionMethods">ExtensionMethods</span>[<span class="extype" name="com.github.tminglei.slickpg.geom.PgPostGISExtensions.GeometryColumnExtensionMethods.G1">G1</span>, <span class="extype" name="com.github.tminglei.slickpg.geom.PgPostGISExtensions.GeometryColumnExtensionMethods.P1">P1</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.slick.PostGisExtensions@GeometryColumnExtensionMethods[G1&lt;:PostGisExtensions.this.GEOMETRY,P1]extendsExtensionMethods[G1,P1]" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.slick.PostGisSupport@GeometryColumnExtensionMethods[GEOMETRY,POINT&lt;:GEOMETRY,LINESTRING&lt;:GEOMETRY,POLYGON&lt;:GEOMETRY,GEOMETRYCOLLECTION&lt;:GEOMETRY,G1&lt;:GEOMETRY,P1]extendsExtensionMethods[G1,P1]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Extension methods for postgis Columns</p><div class="fullcomment"><div class="comment cmt"><p>Extension methods for postgis Columns</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PostGisExtensions.html" class="extype" name="geotrellis.slick.PostGisExtensions">PostGisExtensions</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>PgPostGISExtensions</dd></dl></div>
     </li><li name="geotrellis.slick.PostGisSupport.GeometryJdbcType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="GeometryJdbcType[T&lt;:geotrellis.vector.Geometry]extendsPostGisSupport.this.driver.DriverJdbcType[T]"></a>
-      <a id="GeometryJdbcType[T&lt;:Geometry]:GeometryJdbcType[T]"></a>
+      <a id="GeometryJdbcType[T&lt;:geotrellis.vector.Geometry]extendsPostGisSupport.this.DriverJdbcType[T]"></a>
+      <a id="GeometryJdbcType[T&lt;:Geometry]:(PostGisSupport.this)#GeometryJdbcType[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="PostGisSupport$GeometryJdbcType.html"><span class="name">GeometryJdbcType</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>]</span><span class="result"> extends <span class="extype" name="scala.slick.driver.JdbcTypesComponent.DriverJdbcType">scala.slick.driver.JdbcDriver.DriverJdbcType</span>[<span class="extype" name="geotrellis.slick.PostGisSupport.GeometryJdbcType.T">T</span>]</span>
+        <a href="PostGisSupport$GeometryJdbcType.html"><span class="name">GeometryJdbcType</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>]</span><span class="result"> extends (<a href="" class="extype" name="geotrellis.slick.PostGisSupport">PostGisSupport</a>.this)#<span class="extype" name="slick.driver.JdbcTypesComponent.DriverJdbcType">DriverJdbcType</span>[<span class="extype" name="geotrellis.slick.PostGisSupport.GeometryJdbcType.T">T</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.slick.PostGisSupport@GeometryJdbcType[T&lt;:geotrellis.vector.Geometry]extendsPostGisSupport.this.driver.DriverJdbcType[T]" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.slick.PostGisSupport@GeometryJdbcType[T&lt;:geotrellis.vector.Geometry]extendsPostGisSupport.this.DriverJdbcType[T]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
-    </li><li name="geotrellis.slick.PostGisSupport.LINESTRING" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="slick.driver.JdbcTypesComponent.ImplicitColumnTypes" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ImplicitColumnTypesextendsJdbcTypesComponent.this.ImplicitColumnTypes"></a>
+      <a id="ImplicitColumnTypes:slick.driver.JdbcDriver.ImplicitColumnTypes"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ImplicitColumnTypes</span><span class="result"> extends <span class="extype" name="slick.profile.RelationalTypesComponent.ImplicitColumnTypes">slick.driver.JdbcDriver.ImplicitColumnTypes</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.slick.PostGisSupport@ImplicitColumnTypesextendsJdbcTypesComponent.this.ImplicitColumnTypes" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>JdbcTypesComponent</dd></dl></div>
+    </li><li name="slick.driver.JdbcTypesComponent.JdbcTypes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="JdbcTypesextendsAnyRef"></a>
+      <a id="JdbcTypes:slick.driver.JdbcDriver.JdbcTypes"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">JdbcTypes</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.slick.PostGisSupport@JdbcTypesextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>JdbcTypesComponent</dd></dl></div>
+    </li><li name="geotrellis.slick.PostGisSupport.LINESTRING" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="LINESTRING=geotrellis.vector.Line"></a>
-      <a id="LINESTRING:LINESTRING"></a>
+      <a id="LINESTRING:(PostGisSupport.this)#LINESTRING"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
@@ -204,10 +288,44 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.slick.PostGisSupport">PostGisSupport</a> → <a href="PostGisExtensions.html" class="extype" name="geotrellis.slick.PostGisExtensions">PostGisExtensions</a></dd></dl></div>
-    </li><li name="geotrellis.slick.PostGisSupport.POINT" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      
+    </li><li name="slick.profile.RelationalTypesComponent.MappedColumnTypeFactory" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MappedColumnTypeFactoryextendsAnyRef"></a>
+      <a id="MappedColumnTypeFactory:slick.profile.RelationalDriver.MappedColumnTypeFactory"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MappedColumnTypeFactory</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.slick.PostGisSupport@MappedColumnTypeFactoryextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RelationalTypesComponent</dd></dl></div>
+    </li><li name="slick.driver.JdbcTypesComponent.MappedJdbcType" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MappedJdbcType[T&lt;:&lt;?&gt;,U&lt;:&lt;?&gt;]extendsJdbcType[T]"></a>
+      <a id="MappedJdbcType[T,U]:slick.driver.JdbcDriver.MappedJdbcType[T,U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MappedJdbcType</span><span class="tparams">[<span name="T">T</span>, <span name="U">U</span>]</span><span class="result"> extends <span class="extype" name="slick.jdbc.JdbcType">JdbcType</span>[<span class="extype" name="slick.driver.JdbcTypesComponent.MappedJdbcType.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.slick.PostGisSupport@MappedJdbcType[T,U]extendsJdbcType[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>JdbcTypesComponent</dd></dl></div>
+    </li><li name="geotrellis.slick.PostGisSupport.POINT" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="POINT=geotrellis.vector.Point"></a>
-      <a id="POINT:POINT"></a>
+      <a id="POINT:(PostGisSupport.this)#POINT"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
@@ -221,10 +339,10 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.slick.PostGisSupport">PostGisSupport</a> → <a href="PostGisExtensions.html" class="extype" name="geotrellis.slick.PostGisExtensions">PostGisExtensions</a></dd></dl></div>
-    </li><li name="geotrellis.slick.PostGisSupport.POLYGON" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      
+    </li><li name="geotrellis.slick.PostGisSupport.POLYGON" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="POLYGON=geotrellis.vector.Polygon"></a>
-      <a id="POLYGON:POLYGON"></a>
+      <a id="POLYGON:(PostGisSupport.this)#POLYGON"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
@@ -238,31 +356,68 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.slick.PostGisSupport">PostGisSupport</a> → <a href="PostGisExtensions.html" class="extype" name="geotrellis.slick.PostGisExtensions">PostGisExtensions</a></dd></dl></div>
-    </li><li name="geotrellis.slick.PostGisExtensions.PostGisAssistants" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="PostGisAssistantsextendsAnyRef"></a>
-      <a id="PostGisAssistants:PostGisAssistants"></a>
+      
+    </li><li name="geotrellis.slick.PostGisSupport.PostGISAssistants" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PostGISAssistantsextendsPostGisSupport.this.BasePostGISAssistants[PostGisSupport.this.GEOMETRY,PostGisSupport.this.POINT,PostGisSupport.this.LINESTRING,PostGisSupport.this.POLYGON,PostGisSupport.this.GEOMETRYCOLLECTION]"></a>
+      <a id="PostGISAssistants:(PostGisSupport.this)#PostGISAssistants"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="PostGisExtensions$PostGisAssistants.html"><span class="name">PostGisAssistants</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="PostGisSupport$PostGISAssistants.html"><span class="name">PostGISAssistants</span></a><span class="result"> extends (<a href="" class="extype" name="geotrellis.slick.PostGisSupport">PostGisSupport</a>.this)#<span class="extype" name="com.github.tminglei.slickpg.geom.PgPostGISExtensions.BasePostGISAssistants">BasePostGISAssistants</span>[(<a href="" class="extype" name="geotrellis.slick.PostGisSupport">PostGisSupport</a>.this)#<span class="extype" name="geotrellis.slick.PostGisSupport.GEOMETRY">GEOMETRY</span>, (<a href="" class="extype" name="geotrellis.slick.PostGisSupport">PostGisSupport</a>.this)#<span class="extype" name="geotrellis.slick.PostGisSupport.POINT">POINT</span>, (<a href="" class="extype" name="geotrellis.slick.PostGisSupport">PostGisSupport</a>.this)#<span class="extype" name="geotrellis.slick.PostGisSupport.LINESTRING">LINESTRING</span>, (<a href="" class="extype" name="geotrellis.slick.PostGisSupport">PostGisSupport</a>.this)#<span class="extype" name="geotrellis.slick.PostGisSupport.POLYGON">POLYGON</span>, (<a href="" class="extype" name="geotrellis.slick.PostGisSupport">PostGisSupport</a>.this)#<span class="extype" name="geotrellis.slick.PostGisSupport.GEOMETRYCOLLECTION">GEOMETRYCOLLECTION</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.slick.PostGisExtensions@PostGisAssistantsextendsAnyRef" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.slick.PostGisSupport@PostGISAssistantsextendsPostGisSupport.this.BasePostGISAssistants[PostGisSupport.this.GEOMETRY,PostGisSupport.this.POINT,PostGisSupport.this.LINESTRING,PostGisSupport.this.POLYGON,PostGisSupport.this.GEOMETRYCOLLECTION]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PostGisExtensions.html" class="extype" name="geotrellis.slick.PostGisExtensions">PostGisExtensions</a></dd></dl></div>
+      
+    </li><li name="geotrellis.slick.PostGisSupport.PostGISImplicits" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PostGISImplicitsextendsAnyRef"></a>
+      <a id="PostGISImplicits:(PostGisSupport.this)#PostGISImplicits"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="PostGisSupport$PostGISImplicits.html"><span class="name">PostGISImplicits</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.slick.PostGisSupport@PostGISImplicitsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li></ol>
             </div>
 
-        
+        <div id="values" class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="slick.profile.RelationalTypesComponent#MappedColumnType" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MappedColumnType:RelationalTypesComponent.this.MappedColumnTypeFactory"></a>
+      <a id="MappedColumnType:(PostGisSupport.this)#MappedColumnTypeFactory"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MappedColumnType</span><span class="result">: (<a href="" class="extype" name="geotrellis.slick.PostGisSupport">PostGisSupport</a>.this)#<span class="extype" name="slick.profile.RelationalTypesComponent.MappedColumnTypeFactory">MappedColumnTypeFactory</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.slick.PostGisSupport@MappedColumnType:RelationalTypesComponent.this.MappedColumnTypeFactory" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RelationalTypesComponent</dd></dl></div>
+    </li></ol>
+            </div>
 
         <div id="values" class="values members">
-              <h3>Value Members</h3>
+              <h3>Concrete Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a>
       <a id="!=(Any):Boolean"></a>
@@ -314,23 +469,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.slick.PostGisExtensions.GeomLibrary" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="GeomLibrary"></a>
-      <a id="GeomLibrary:GeomLibrary"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="PostGisExtensions$GeomLibrary$.html"><span class="name">GeomLibrary</span></a>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.slick.PostGisExtensions@GeomLibrary" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PostGisExtensions.html" class="extype" name="geotrellis.slick.PostGisExtensions">PostGisExtensions</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -371,23 +509,23 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.slick.PostGisSupport#driver" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="driver:scala.slick.driver.JdbcDriver"></a>
-      <a id="driver:JdbcDriver"></a>
+    </li><li name="slick.driver.JdbcTypesComponent#defaultSqlTypeName" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="defaultSqlTypeName(tmd:&lt;?&gt;,sym:&lt;?&gt;):String"></a>
+      <a id="defaultSqlTypeName(JdbcType[_],Option[FieldSymbol]):String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">driver</span><span class="result">: <span class="extype" name="scala.slick.driver.JdbcDriver">JdbcDriver</span></span>
+        <span class="name">defaultSqlTypeName</span><span class="params">(<span name="tmd">tmd: <span class="extype" name="slick.jdbc.JdbcType">JdbcType</span>[_]</span>, <span name="sym">sym: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="slick.ast.FieldSymbol">FieldSymbol</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.slick.PostGisSupport@driver:scala.slick.driver.JdbcDriver" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.slick.PostGisSupport@defaultSqlTypeName(tmd:slick.jdbc.JdbcType[_],sym:Option[slick.ast.FieldSymbol]):String" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.slick.PostGisSupport">PostGisSupport</a> → <a href="PostGisExtensions.html" class="extype" name="geotrellis.slick.PostGisExtensions">PostGisExtensions</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>JdbcTypesComponent</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -445,74 +583,6 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.slick.PostGisSupport#geometryCollectionTypeMapper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="geometryCollectionTypeMapper:PostGisSupport.this.GeometryJdbcType[PostGisSupport.this.GEOMETRYCOLLECTION]"></a>
-      <a id="geometryCollectionTypeMapper:GeometryJdbcType[GEOMETRYCOLLECTION]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">geometryCollectionTypeMapper</span><span class="result">: <a href="PostGisSupport$GeometryJdbcType.html" class="extype" name="geotrellis.slick.PostGisSupport.GeometryJdbcType">GeometryJdbcType</a>[<a href="#GEOMETRYCOLLECTION=geotrellis.vector.GeometryCollection" class="extmbr" name="geotrellis.slick.PostGisSupport.GEOMETRYCOLLECTION">GEOMETRYCOLLECTION</a>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.slick.PostGisSupport@geometryCollectionTypeMapper:PostGisSupport.this.GeometryJdbcType[PostGisSupport.this.GEOMETRYCOLLECTION]" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.slick.PostGisSupport#geometryColumnExtensionMethods" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="geometryColumnExtensionMethods[G1&lt;:PostGisSupport.this.GEOMETRY](c:scala.slick.lifted.Column[G1]):PostGisSupport.this.GeometryColumnExtensionMethods[G1,G1]"></a>
-      <a id="geometryColumnExtensionMethods[G1&lt;:GEOMETRY](Column[G1]):GeometryColumnExtensionMethods[G1,G1]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">geometryColumnExtensionMethods</span><span class="tparams">[<span name="G1">G1 &lt;: <a href="#GEOMETRY=geotrellis.vector.Geometry" class="extmbr" name="geotrellis.slick.PostGisSupport.GEOMETRY">GEOMETRY</a></span>]</span><span class="params">(<span name="c">c: <span class="extype" name="scala.slick.lifted.Column">Column</span>[<span class="extype" name="geotrellis.slick.PostGisSupport.geometryColumnExtensionMethods.G1">G1</span>]</span>)</span><span class="result">: <a href="#GeometryColumnExtensionMethods[G1&lt;:PostGisExtensions.this.GEOMETRY,P1]extendsExtensionMethods[G1,P1]" class="extmbr" name="geotrellis.slick.PostGisExtensions.GeometryColumnExtensionMethods">GeometryColumnExtensionMethods</a>[<span class="extype" name="geotrellis.slick.PostGisSupport.geometryColumnExtensionMethods.G1">G1</span>, <span class="extype" name="geotrellis.slick.PostGisSupport.geometryColumnExtensionMethods.G1">G1</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.slick.PostGisSupport@geometryColumnExtensionMethods[G1&lt;:PostGisSupport.this.GEOMETRY](c:scala.slick.lifted.Column[G1]):PostGisSupport.this.GeometryColumnExtensionMethods[G1,G1]" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.slick.PostGisSupport#geometryOptionColumnExtensionMethods" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="geometryOptionColumnExtensionMethods[G1&lt;:PostGisSupport.this.GEOMETRY](c:scala.slick.lifted.Column[Option[G1]]):PostGisSupport.this.GeometryColumnExtensionMethods[G1,Option[G1]]"></a>
-      <a id="geometryOptionColumnExtensionMethods[G1&lt;:GEOMETRY](Column[Option[G1]]):GeometryColumnExtensionMethods[G1,Option[G1]]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">geometryOptionColumnExtensionMethods</span><span class="tparams">[<span name="G1">G1 &lt;: <a href="#GEOMETRY=geotrellis.vector.Geometry" class="extmbr" name="geotrellis.slick.PostGisSupport.GEOMETRY">GEOMETRY</a></span>]</span><span class="params">(<span name="c">c: <span class="extype" name="scala.slick.lifted.Column">Column</span>[<span class="extype" name="scala.Option">Option</span>[<span class="extype" name="geotrellis.slick.PostGisSupport.geometryOptionColumnExtensionMethods.G1">G1</span>]]</span>)</span><span class="result">: <a href="#GeometryColumnExtensionMethods[G1&lt;:PostGisExtensions.this.GEOMETRY,P1]extendsExtensionMethods[G1,P1]" class="extmbr" name="geotrellis.slick.PostGisExtensions.GeometryColumnExtensionMethods">GeometryColumnExtensionMethods</a>[<span class="extype" name="geotrellis.slick.PostGisSupport.geometryOptionColumnExtensionMethods.G1">G1</span>, <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="geotrellis.slick.PostGisSupport.geometryOptionColumnExtensionMethods.G1">G1</span>]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.slick.PostGisSupport@geometryOptionColumnExtensionMethods[G1&lt;:PostGisSupport.this.GEOMETRY](c:scala.slick.lifted.Column[Option[G1]]):PostGisSupport.this.GeometryColumnExtensionMethods[G1,Option[G1]]" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.slick.PostGisSupport#geometryTypeMapper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="geometryTypeMapper:PostGisSupport.this.GeometryJdbcType[PostGisSupport.this.GEOMETRY]"></a>
-      <a id="geometryTypeMapper:GeometryJdbcType[GEOMETRY]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">geometryTypeMapper</span><span class="result">: <a href="PostGisSupport$GeometryJdbcType.html" class="extype" name="geotrellis.slick.PostGisSupport.GeometryJdbcType">GeometryJdbcType</a>[<a href="#GEOMETRY=geotrellis.vector.Geometry" class="extmbr" name="geotrellis.slick.PostGisSupport.GEOMETRY">GEOMETRY</a>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.slick.PostGisSupport@geometryTypeMapper:PostGisSupport.this.GeometryJdbcType[PostGisSupport.this.GEOMETRY]" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -564,74 +634,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.slick.PostGisSupport#lineTypeMapper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="lineTypeMapper:PostGisSupport.this.GeometryJdbcType[PostGisSupport.this.LINESTRING]"></a>
-      <a id="lineTypeMapper:GeometryJdbcType[LINESTRING]"></a>
+    </li><li name="slick.driver.JdbcTypesComponent#jdbcTypeFor" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="jdbcTypeFor(t:&lt;?&gt;):slick.jdbc.JdbcType[Any]"></a>
+      <a id="jdbcTypeFor(Type):JdbcType[Any]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">val</span>
+        <span class="modifier"></span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">lineTypeMapper</span><span class="result">: <a href="PostGisSupport$GeometryJdbcType.html" class="extype" name="geotrellis.slick.PostGisSupport.GeometryJdbcType">GeometryJdbcType</a>[<a href="#LINESTRING=geotrellis.vector.Line" class="extmbr" name="geotrellis.slick.PostGisSupport.LINESTRING">LINESTRING</a>]</span>
+        <span class="name">jdbcTypeFor</span><span class="params">(<span name="t">t: <span class="extype" name="slick.ast.Type">Type</span></span>)</span><span class="result">: <span class="extype" name="slick.jdbc.JdbcType">JdbcType</span>[<span class="extype" name="scala.Any">Any</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.slick.PostGisSupport@lineTypeMapper:PostGisSupport.this.GeometryJdbcType[PostGisSupport.this.LINESTRING]" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.slick.PostGisSupport@jdbcTypeFor(t:slick.ast.Type):slick.jdbc.JdbcType[Any]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
-    </li><li name="geotrellis.slick.PostGisSupport#multiLineTypeMapper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="multiLineTypeMapper:PostGisSupport.this.GeometryJdbcType[geotrellis.vector.MultiLine]"></a>
-      <a id="multiLineTypeMapper:GeometryJdbcType[MultiLine]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">multiLineTypeMapper</span><span class="result">: <a href="PostGisSupport$GeometryJdbcType.html" class="extype" name="geotrellis.slick.PostGisSupport.GeometryJdbcType">GeometryJdbcType</a>[<a href="../vector/MultiLine.html" class="extype" name="geotrellis.vector.MultiLine">MultiLine</a>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.slick.PostGisSupport@multiLineTypeMapper:PostGisSupport.this.GeometryJdbcType[geotrellis.vector.MultiLine]" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.slick.PostGisSupport#multiPointTypeMapper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="multiPointTypeMapper:PostGisSupport.this.GeometryJdbcType[geotrellis.vector.MultiPoint]"></a>
-      <a id="multiPointTypeMapper:GeometryJdbcType[MultiPoint]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">multiPointTypeMapper</span><span class="result">: <a href="PostGisSupport$GeometryJdbcType.html" class="extype" name="geotrellis.slick.PostGisSupport.GeometryJdbcType">GeometryJdbcType</a>[<a href="../vector/MultiPoint.html" class="extype" name="geotrellis.vector.MultiPoint">MultiPoint</a>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.slick.PostGisSupport@multiPointTypeMapper:PostGisSupport.this.GeometryJdbcType[geotrellis.vector.MultiPoint]" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.slick.PostGisSupport#multiPolygonTypeMapper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="multiPolygonTypeMapper:PostGisSupport.this.GeometryJdbcType[geotrellis.vector.MultiPolygon]"></a>
-      <a id="multiPolygonTypeMapper:GeometryJdbcType[MultiPolygon]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">multiPolygonTypeMapper</span><span class="result">: <a href="PostGisSupport$GeometryJdbcType.html" class="extype" name="geotrellis.slick.PostGisSupport.GeometryJdbcType">GeometryJdbcType</a>[<a href="../vector/MultiPolygon.html" class="extype" name="geotrellis.vector.MultiPolygon">MultiPolygon</a>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.slick.PostGisSupport@multiPolygonTypeMapper:PostGisSupport.this.GeometryJdbcType[geotrellis.vector.MultiPolygon]" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>JdbcTypesComponent</dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -683,40 +702,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.slick.PostGisSupport#pointTypeMapper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="pointTypeMapper:PostGisSupport.this.GeometryJdbcType[PostGisSupport.this.POINT]"></a>
-      <a id="pointTypeMapper:GeometryJdbcType[POINT]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">pointTypeMapper</span><span class="result">: <a href="PostGisSupport$GeometryJdbcType.html" class="extype" name="geotrellis.slick.PostGisSupport.GeometryJdbcType">GeometryJdbcType</a>[<a href="#POINT=geotrellis.vector.Point" class="extmbr" name="geotrellis.slick.PostGisSupport.POINT">POINT</a>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.slick.PostGisSupport@pointTypeMapper:PostGisSupport.this.GeometryJdbcType[PostGisSupport.this.POINT]" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.slick.PostGisSupport#polygonTypeMapper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="polygonTypeMapper:PostGisSupport.this.GeometryJdbcType[PostGisSupport.this.POLYGON]"></a>
-      <a id="polygonTypeMapper:GeometryJdbcType[POLYGON]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">polygonTypeMapper</span><span class="result">: <a href="PostGisSupport$GeometryJdbcType.html" class="extype" name="geotrellis.slick.PostGisSupport.GeometryJdbcType">GeometryJdbcType</a>[<a href="#POLYGON=geotrellis.vector.Polygon" class="extmbr" name="geotrellis.slick.PostGisSupport.POLYGON">POLYGON</a>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.slick.PostGisSupport@polygonTypeMapper:PostGisSupport.this.GeometryJdbcType[PostGisSupport.this.POLYGON]" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -829,8 +814,12 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="geotrellis.slick.PostGisExtensions">
-              <h3>Inherited from <a href="PostGisExtensions.html" class="extype" name="geotrellis.slick.PostGisExtensions">PostGisExtensions</a></h3>
+        <div class="parent" name="com.github.tminglei.slickpg.geom.PgPostGISExtensions">
+              <h3>Inherited from <span class="extype" name="com.github.tminglei.slickpg.geom.PgPostGISExtensions">PgPostGISExtensions</span></h3>
+            </div><div class="parent" name="slick.driver.JdbcTypesComponent">
+              <h3>Inherited from <span class="extype" name="slick.driver.JdbcTypesComponent">JdbcTypesComponent</span></h3>
+            </div><div class="parent" name="slick.profile.RelationalTypesComponent">
+              <h3>Inherited from <span class="extype" name="slick.profile.RelationalTypesComponent">RelationalTypesComponent</span></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
