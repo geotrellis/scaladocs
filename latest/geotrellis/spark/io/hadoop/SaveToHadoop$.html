@@ -162,7 +162,7 @@
       </a>
     </span>
       <p class="shortcomment cmt">Saves to Hadoop FileSystem, returns an count of records saved.</p><div class="fullcomment"><div class="comment cmt"><p>Saves to Hadoop FileSystem, returns an count of records saved.
-</p></div><dl class="paramcmts block"><dt class="param">keyToUri</dt><dd class="cmt"><p>A function from K (a key) to a Hadoop URI</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">keyToUri</dt><dd class="cmt"><p>A function from K (a key) to a Hadoop URI</p></dd><dt class="param">toBytes</dt><dd class="cmt"><p>A function from record to array of bytes</p></dd></dl></div>
     </li><li name="geotrellis.spark.io.hadoop.SaveToHadoop#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="apply[K](rdd:org.apache.spark.rdd.RDD[(K,Array[Byte])],keyToUri:K=&gt;String):Long"></a>
       <a id="apply[K](RDD[(K,Array[Byte])],(K)⇒String):Long"></a>
@@ -397,7 +397,7 @@
       </a>
     </span>
       <p class="shortcomment cmt">Saves records from an iterator and returns them unchanged.</p><div class="fullcomment"><div class="comment cmt"><p>Saves records from an iterator and returns them unchanged.
-</p></div><dl class="paramcmts block"><dt class="param">recs</dt><dd class="cmt"><p>Key, Value records to be saved</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">recs</dt><dd class="cmt"><p>Key, Value records to be saved</p></dd><dt class="param">keyToUri</dt><dd class="cmt"><p>A function from K (a key) to Hadoop URI</p></dd><dt class="param">conf</dt><dd class="cmt"><p>Hadoop Configuration to used to get FileSystem</p></dd><dt class="param">toBytes</dt><dd class="cmt"><p>A function from record to array of bytes</p></dd></dl></div>
     </li><li name="geotrellis.spark.io.hadoop.SaveToHadoop#setup" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setup[K,V](rdd:org.apache.spark.rdd.RDD[(K,V)],keyToUri:K=&gt;String,toBytes:(K,V)=&gt;Array[Byte]):org.apache.spark.rdd.RDD[(K,V)]"></a>
       <a id="setup[K,V](RDD[(K,V)],(K)⇒String,(K,V)⇒Array[Byte]):RDD[(K,V)]"></a>
@@ -414,8 +414,10 @@
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Sets up saving to Hadoop, but returns an RDD so that writes can be chained.</p><div class="fullcomment"><div class="comment cmt"><p>Sets up saving to Hadoop, but returns an RDD so that writes can be chained.
-</p></div><dl class="paramcmts block"><dt class="param">keyToUri</dt><dd class="cmt"><p>A function from K (a key) to a Hadoop URI</p></dd></dl></div>
+      <p class="shortcomment cmt">Sets up saving to Hadoop, but returns an RDD so that writes can
+be chained.</p><div class="fullcomment"><div class="comment cmt"><p>Sets up saving to Hadoop, but returns an RDD so that writes can
+be chained.
+</p></div><dl class="paramcmts block"><dt class="param">keyToUri</dt><dd class="cmt"><p>A function from K (a key) to a Hadoop URI</p></dd><dt class="param">toBytes</dt><dd class="cmt"><p>A function from record to array of bytes</p></dd></dl></div>
     </li><li name="geotrellis.spark.io.hadoop.SaveToHadoop#setup" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setup[K](rdd:org.apache.spark.rdd.RDD[(K,Array[Byte])],keyToUri:K=&gt;String):org.apache.spark.rdd.RDD[(K,Array[Byte])]"></a>
       <a id="setup[K](RDD[(K,Array[Byte])],(K)⇒String):RDD[(K,Array[Byte])]"></a>
@@ -432,7 +434,9 @@
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Sets up saving to Hadoop, but returns an RDD so that writes can be chained.</p><div class="fullcomment"><div class="comment cmt"><p>Sets up saving to Hadoop, but returns an RDD so that writes can be chained.
+      <p class="shortcomment cmt">Sets up saving to Hadoop, but returns an RDD so that writes can
+be chained.</p><div class="fullcomment"><div class="comment cmt"><p>Sets up saving to Hadoop, but returns an RDD so that writes can
+be chained.
 </p></div><dl class="paramcmts block"><dt class="param">keyToUri</dt><dd class="cmt"><p>A function from K (a key) to a Hadoop URI</p></dd></dl></div>
     </li><li name="geotrellis.spark.io.hadoop.SaveToHadoop#spatialKeyToPath" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="spatialKeyToPath(id:geotrellis.spark.LayerId,pathTemplate:String):geotrellis.spark.SpatialKey=&gt;String"></a>

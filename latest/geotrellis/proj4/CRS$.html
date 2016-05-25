@@ -260,7 +260,7 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Creates a <span class="extype" name="CoordinateReferenceSystem">CoordinateReferenceSystem</span> (CRS) from an EPSG code.</p>
+      <p class="shortcomment cmt">Creates a CoordinateReferenceSystem (CRS) from an EPSG code.</p>
     </li><li name="geotrellis.proj4.CRS#fromName" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fromName(name:String):geotrellis.proj4.CRS"></a>
       <a id="fromName(String):CRS"></a>
@@ -277,7 +277,7 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Creates a <span class="extype" name="CoordinateReferenceSystem">CoordinateReferenceSystem</span> (CRS) from a well-known name.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a <span class="extype" name="CoordinateReferenceSystem">CoordinateReferenceSystem</span> (CRS) from a well-known name.
+      <p class="shortcomment cmt">Creates a CoordinateReferenceSystem (CRS) from a well-known name.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a CoordinateReferenceSystem (CRS) from a well-known name.
 CRS names are of the form: &quot;<tt>authority:code</tt>&quot;,
 with the components being:</p><ul><li><b><tt>authority</tt></b> is a code for a namespace supported by
 PROJ.4.
@@ -290,7 +290,7 @@ Currently supported values are
 If no authority is provided, the <tt>EPSG</tt> namespace is assumed.</li><li><b><tt>code</tt></b> is the id of a coordinate system in the authority namespace.
 For example, in the <tt>EPSG</tt> namespace a code is an integer value
 which identifies a CRS definition in the EPSG database.
-(Codes are read and handled as strings).</li></ul><p>An example of a valid CRS name is <tt>EPSG:3005</tt>.</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>the name of a coordinate system, with optional authority prefix</p></dd><dt>returns</dt><dd class="cmt"><p>the <span class="extype" name="CoordinateReferenceSystem">CoordinateReferenceSystem</span> corresponding to the given name</p></dd></dl></div>
+(Codes are read and handled as strings).</li></ul><p>An example of a valid CRS name is <tt>EPSG:3005</tt>.</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>The name of a coordinate system, with optional authority prefix</p></dd><dt>returns</dt><dd class="cmt"><p>The CoordinateReferenceSystem corresponding to the given name</p></dd></dl></div>
     </li><li name="geotrellis.proj4.CRS#fromString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fromString(name:String,proj4Params:String):geotrellis.proj4.CRS"></a>
       <a id="fromString(String,String):CRS"></a>
@@ -307,12 +307,13 @@ which identifies a CRS definition in the EPSG database.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Creates a <span class="extype" name="CoordinateReferenceSystem">CoordinateReferenceSystem</span>
-from a PROJ.4 projection parameter string.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a <span class="extype" name="CoordinateReferenceSystem">CoordinateReferenceSystem</span>
+      <p class="shortcomment cmt">Creates a CoordinateReferenceSystem
+from a PROJ.4 projection parameter string.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a CoordinateReferenceSystem
 from a PROJ.4 projection parameter string.</p><p>An example of a valid PROJ.4 projection parameter string is:
 <pre>
 +proj=aea +lat_1=50 +lat_2=58.5 +lat_0=45 +lon_0=-126 +x_0=1000000 +y_0=0 +ellps=GRS80 +units=m
-</pre></p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>a name for this coordinate system.</p></dd><dt class="param">proj4Params</dt><dd class="cmt"><p>a PROJ.4 projection parameter string</p></dd><dt>returns</dt><dd class="cmt"><p>the specified <span class="extype" name="CoordinateReferenceSystem">CoordinateReferenceSystem</span></p></dd></dl></div>
+</pre>
+</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>A name for this coordinate system.</p></dd><dt class="param">proj4Params</dt><dd class="cmt"><p>A PROJ.4 projection parameter string</p></dd><dt>returns</dt><dd class="cmt"><p>The specified CoordinateReferenceSystem</p></dd></dl></div>
     </li><li name="geotrellis.proj4.CRS#fromString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fromString(proj4Params:String):geotrellis.proj4.CRS"></a>
       <a id="fromString(String):CRS"></a>
@@ -329,12 +330,13 @@ from a PROJ.4 projection parameter string.</p><p>An example of a valid PROJ.4 pr
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Creates a <span class="extype" name="CoordinateReferenceSystem">CoordinateReferenceSystem</span>
-from a PROJ.4 projection parameter string.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a <span class="extype" name="CoordinateReferenceSystem">CoordinateReferenceSystem</span>
+      <p class="shortcomment cmt">Creates a CoordinateReferenceSystem
+from a PROJ.4 projection parameter string.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a CoordinateReferenceSystem
 from a PROJ.4 projection parameter string.</p><p>An example of a valid PROJ.4 projection parameter string is:
 <pre>
 +proj=aea +lat_1=50 +lat_2=58.5 +lat_0=45 +lon_0=-126 +x_0=1000000 +y_0=0 +ellps=GRS80 +units=m
-</pre></p></div><dl class="paramcmts block"><dt class="param">proj4Params</dt><dd class="cmt"><p>a PROJ.4 projection parameter string</p></dd><dt>returns</dt><dd class="cmt"><p>the specified <span class="extype" name="CoordinateReferenceSystem">CoordinateReferenceSystem</span></p></dd></dl></div>
+</pre>
+</p></div><dl class="paramcmts block"><dt class="param">proj4Params</dt><dd class="cmt"><p>A PROJ.4 projection parameter string</p></dd><dt>returns</dt><dd class="cmt"><p>The specified CoordinateReferenceSystem</p></dd></dl></div>
     </li><li name="geotrellis.proj4.CRS#fromWKT" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="fromWKT(wktString:String):geotrellis.proj4.CRS"></a>
       <a id="fromWKT(String):CRS"></a>
@@ -351,7 +353,8 @@ from a PROJ.4 projection parameter string.</p><p>An example of a valid PROJ.4 pr
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Creates a <span class="extype" name="CoordinateReferenceSystem">CoordinateReferenceSystem</span> (CRS) from a well-known-text String.</p>
+      <p class="shortcomment cmt">Creates a CoordinateReferenceSystem (CRS) from a
+well-known-text String.</p>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -385,7 +388,7 @@ from a PROJ.4 projection parameter string.</p><p>An example of a valid PROJ.4 pr
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Returns the numeric EPSG code of a proj4string</p>
+      <p class="shortcomment cmt">Returns the numeric EPSG code of a proj4string.</p>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
