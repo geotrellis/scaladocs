@@ -811,7 +811,7 @@ answer could be really bad).
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.histogram.StreamingHistogram#percentileBreaks" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.raster.histogram.StreamingHistogram#percentileBreaks" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="percentileBreaks(qs:Seq[Double]):Seq[Double]"></a>
       <a id="percentileBreaks(Seq[Double]):Seq[Double]"></a>
       <h4 class="signature">
@@ -827,8 +827,10 @@ answer could be really bad).
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">For each q in qs, all between 0 and 1, find a number
-(approximately) at the qth percentile.</p>
+      <p class="shortcomment cmt">For each q in qs, all between 0 and 1, find a number (approximately) at the qth percentile.</p><div class="fullcomment"><div class="comment cmt"><p>For each q in qs, all between 0 and 1, find a number (approximately) at the qth percentile.
+</p></div><dl class="paramcmts block"><dt class="param">qs</dt><dd class="cmt"><p>A list of quantiles (0.01 == 1th pctile, 0.2 == 20th pctile) to use in
+             generating breaks</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Our aim here is to produce values corresponding to the qs which stretch
+             from minValue to maxValue, interpolating based on observed bins along the way</p></span></dd></dl></div>
     </li><li name="geotrellis.raster.histogram.StreamingHistogram#percentileRanking" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="percentileRanking(item:Double):Double"></a>
       <a id="percentileRanking(Double):Double"></a>
