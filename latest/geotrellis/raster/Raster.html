@@ -47,14 +47,14 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Raster</span><span class="tparams">[<span name="T">+T &lt;: <a href="CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></span>]</span><span class="params">(<span name="tile">tile: <span class="extype" name="geotrellis.raster.Raster.T">T</span></span>, <span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product2">Product2</span>[<span class="extype" name="geotrellis.raster.Raster.T">T</span>, <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">Raster</span><span class="tparams">[<span name="T">+T &lt;: <a href="CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></span>]</span><span class="params">(<span name="tile">tile: <span class="extype" name="geotrellis.raster.Raster.T">T</span></span>, <span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product2">Product2</span>[<span class="extype" name="geotrellis.raster.Raster.T">T</span>, <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>] with <a href="CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The <a href="" class="extype" name="geotrellis.raster.Raster">Raster</a> type.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product2">Product2</span>[<span class="extype" name="geotrellis.raster.Raster.T">T</span>, <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>], <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a>, <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product2">Product2</span>[<span class="extype" name="geotrellis.raster.Raster.T">T</span>, <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>], <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -72,7 +72,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.raster.Raster"><span>Raster</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product2"><span>Product2</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.raster.Raster"><span>Raster</span></li><li class="in" name="geotrellis.raster.CellGrid"><span>CellGrid</span></li><li class="in" name="geotrellis.raster.Grid"><span>Grid</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product2"><span>Product2</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -254,6 +254,23 @@
       </a>
     </span>
       <p class="shortcomment cmt">Return the <a href="CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a> of this <a href="" class="extype" name="geotrellis.raster.Raster">Raster</a>.</p>
+    </li><li name="geotrellis.raster.Raster#cellType" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="cellType:geotrellis.raster.CellType"></a>
+      <a id="cellType:CellType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cellType</span><span class="result">: <a href="package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.Raster@cellType:geotrellis.raster.CellType" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.Raster">Raster</a> → <a href="CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -277,7 +294,7 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.raster.Raster#cols" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.raster.Raster#cols" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="cols:Int"></a>
       <a id="cols:Int"></a>
       <h4 class="signature">
@@ -293,8 +310,8 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
-    </li><li name="geotrellis.raster.Raster#dimensions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.Raster">Raster</a> → <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
+    </li><li name="geotrellis.raster.Grid#dimensions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="dimensions:(Int,Int)"></a>
       <a id="dimensions:(Int,Int)"></a>
       <h4 class="signature">
@@ -310,7 +327,7 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -385,6 +402,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.raster.Grid#gridBounds" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="gridBounds:geotrellis.raster.GridBounds"></a>
+      <a id="gridBounds:GridBounds"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">gridBounds</span><span class="result">: <a href="GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.Raster@gridBounds:geotrellis.raster.GridBounds" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -528,7 +562,7 @@
     </span>
       <p class="shortcomment cmt">Return the <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> that is correspondent to this
 <a href="" class="extype" name="geotrellis.raster.Raster">Raster</a>.</p>
-    </li><li name="geotrellis.raster.Raster#rows" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.raster.Raster#rows" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="rows:Int"></a>
       <a id="rows:Int"></a>
       <h4 class="signature">
@@ -544,7 +578,25 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.Raster">Raster</a> → <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
+    </li><li name="geotrellis.raster.Grid#size" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="size:Int"></a>
+      <a id="size:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">size</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.Raster@size:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The size of the grid, e.g.</p><div class="fullcomment"><div class="comment cmt"><p>The size of the grid, e.g. cols * rows.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -657,7 +709,11 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.Serializable">
+        <div class="parent" name="geotrellis.raster.CellGrid">
+              <h3>Inherited from <a href="CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></h3>
+            </div><div class="parent" name="geotrellis.raster.Grid">
+              <h3>Inherited from <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></h3>
+            </div><div class="parent" name="scala.Serializable">
               <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
             </div><div class="parent" name="java.io.Serializable">
               <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>

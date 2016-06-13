@@ -47,13 +47,13 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">LayoutDefinition</span><span class="params">(<span name="extent">extent: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="tileLayout">tileLayout: <a href="../../raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <a href="../../raster/GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">LayoutDefinition</span><span class="params">(<span name="extent">extent: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="tileLayout">tileLayout: <a href="../../raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>)</span><span class="result"> extends <a href="../../raster/GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Defines tiled raster layout</p></div><dl class="paramcmts block"><dt class="param">extent</dt><dd class="cmt"><p>extent covered by the layout tiles, could be greater than extent of data in the layer</p></dd><dt class="param">tileLayout</dt><dd class="cmt"><p>tile layout (tile cols, tile rows, tile pixel size)</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="../../raster/GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="../../raster/GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -71,7 +71,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.spark.tiling.LayoutDefinition"><span>LayoutDefinition</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="geotrellis.raster.GridDefinition"><span>GridDefinition</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.spark.tiling.LayoutDefinition"><span>LayoutDefinition</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="geotrellis.raster.GridExtent"><span>GridExtent</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -184,7 +184,7 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.raster.GridDefinition#cellSize" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.raster.GridExtent#cellSize" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="cellSize:geotrellis.raster.CellSize"></a>
       <a id="cellSize:CellSize"></a>
       <h4 class="signature">
@@ -200,8 +200,8 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a></dd></dl></div>
-    </li><li name="geotrellis.spark.tiling.LayoutDefinition#cellheight" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
+    </li><li name="geotrellis.raster.GridExtent#cellheight" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="cellheight:Double"></a>
       <a id="cellheight:Double"></a>
       <h4 class="signature">
@@ -217,8 +217,8 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.tiling.LayoutDefinition">LayoutDefinition</a> → <a href="../../raster/GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a></dd></dl></div>
-    </li><li name="geotrellis.spark.tiling.LayoutDefinition#cellwidth" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
+    </li><li name="geotrellis.raster.GridExtent#cellwidth" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="cellwidth:Double"></a>
       <a id="cellwidth:Double"></a>
       <h4 class="signature">
@@ -234,7 +234,7 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.tiling.LayoutDefinition">LayoutDefinition</a> → <a href="../../raster/GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -258,7 +258,7 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.raster.GridDefinition#createAlignedGridExtent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.raster.GridExtent#createAlignedGridExtent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="createAlignedGridExtent(targetExtent:geotrellis.vector.Extent):geotrellis.raster.GridExtent"></a>
       <a id="createAlignedGridExtent(Extent):GridExtent"></a>
       <h4 class="signature">
@@ -279,8 +279,8 @@ and grid layout.</p><div class="fullcomment"><div class="comment cmt"><p>Returns
 and grid layout.</p><p>For example, the resulting GridExtent will not have the given
 extent, but will have the smallest extent such that the whole of
 the given extent is covered, that lines up with the grid.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a></dd></dl></div>
-    </li><li name="geotrellis.raster.GridDefinition#createAlignedRasterExtent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
+    </li><li name="geotrellis.raster.GridExtent#createAlignedRasterExtent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="createAlignedRasterExtent(targetExtent:geotrellis.vector.Extent):geotrellis.raster.RasterExtent"></a>
       <a id="createAlignedRasterExtent(Extent):RasterExtent"></a>
       <h4 class="signature">
@@ -301,7 +301,7 @@ resolution, and grid layout.</p><div class="fullcomment"><div class="comment cmt
 resolution, and grid layout.</p><p>For example, the resulting RasterExtent will not have the given
 extent, but will have the smallest extent such that the whole of
 the given extent is covered, that lines up with the grid.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -319,6 +319,23 @@ the given extent is covered, that lines up with the grid.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.raster.GridExtent#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(o:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="o">o: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.tiling.LayoutDefinition@equals(o:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a> → AnyRef → Any</dd></dl></div>
     </li><li name="geotrellis.spark.tiling.LayoutDefinition#extent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="extent:geotrellis.vector.Extent"></a>
       <a id="extent:Extent"></a>
@@ -335,8 +352,8 @@ the given extent is covered, that lines up with the grid.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">extent covered by the layout tiles, could be greater than extent of data in the layer</p><div class="fullcomment"><div class="comment cmt"><p>extent covered by the layout tiles, could be greater than extent of data in the layer</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.tiling.LayoutDefinition">LayoutDefinition</a> → <a href="../../raster/GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a></dd></dl></div>
-    </li><li name="geotrellis.raster.GridDefinition#extentFor" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">extent covered by the layout tiles, could be greater than extent of data in the layer</p><div class="fullcomment"><div class="comment cmt"><p>extent covered by the layout tiles, could be greater than extent of data in the layer</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.tiling.LayoutDefinition">LayoutDefinition</a> → <a href="../../raster/GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
+    </li><li name="geotrellis.raster.GridExtent#extentFor" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="extentFor(gridBounds:geotrellis.raster.GridBounds,clamp:Boolean):geotrellis.vector.Extent"></a>
       <a id="extentFor(GridBounds,Boolean):Extent"></a>
       <h4 class="signature">
@@ -359,7 +376,7 @@ Extent to the extent of this RasterExtent; defaults to true. If
 true, the returned extent will be contained by this
 RasterExtent's extent, if false, the Extent returned can be
 outside of this RasterExtent's extent.
-</p></div><dl class="paramcmts block"><dt class="param">gridBounds</dt><dd class="cmt"><p>The extent to get the grid bounds for</p></dd><dt class="param">clamp</dt><dd class="cmt"><p>A boolean which controlls the clamping behvior</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">gridBounds</dt><dd class="cmt"><p>The extent to get the grid bounds for</p></dd><dt class="param">clamp</dt><dd class="cmt"><p>A boolean which controlls the clamping behvior</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -400,6 +417,42 @@ outside of this RasterExtent's extent.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.raster.GridExtent#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.tiling.LayoutDefinition@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a> → AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.raster.GridExtent#isGridExtentAlligned" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isGridExtentAlligned():Boolean"></a>
+      <a id="isGridExtentAlligned():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isGridExtentAlligned</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.tiling.LayoutDefinition@isGridExtentAlligned():Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Tests if the grid is aligned to the extent.</p><div class="fullcomment"><div class="comment cmt"><p>Tests if the grid is aligned to the extent.
+This is true when the extent is evenly divided by cellheight and cellwidth.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -587,24 +640,7 @@ outside of this RasterExtent's extent.
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.GridDefinition#toGridExtent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toGridExtent:geotrellis.raster.GridExtent"></a>
-      <a id="toGridExtent:GridExtent"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toGridExtent</span><span class="result">: <a href="../../raster/GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.tiling.LayoutDefinition@toGridExtent:geotrellis.raster.GridExtent" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a></dd></dl></div>
-    </li><li name="geotrellis.raster.GridDefinition#toRasterExtent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.raster.GridExtent#toRasterExtent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toRasterExtent():geotrellis.raster.RasterExtent"></a>
       <a id="toRasterExtent():RasterExtent"></a>
       <h4 class="signature">
@@ -621,11 +657,28 @@ outside of this RasterExtent's extent.
       </a>
     </span>
       <p class="shortcomment cmt"> Creates a RasterExtent out of this GridExtent.</p><div class="fullcomment"><div class="comment cmt"><p> Creates a RasterExtent out of this GridExtent.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a></dd><dt>Note</dt><dd><span class="cmt"><p>Use with caution: if the number of columns or rows are larger than Int.MaxValue,
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd><dt>Note</dt><dd><span class="cmt"><p>Use with caution: if the number of columns or rows are larger than Int.MaxValue,
       this will throw an exception. Also, if columns * rows &gt;
       Int.MaxValue, this will create a RasterExtent for a raster
       that could not be backed by any of the Array-backed tile
       types.</p></span></dd></dl></div>
+    </li><li name="geotrellis.raster.GridExtent#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.tiling.LayoutDefinition@toString():String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../raster/GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a> → AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -704,16 +757,16 @@ outside of this RasterExtent's extent.
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.Serializable">
-              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
-            </div><div class="parent" name="java.io.Serializable">
-              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
-            </div><div class="parent" name="geotrellis.raster.GridDefinition">
-              <h3>Inherited from <a href="../../raster/GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a></h3>
-            </div><div class="parent" name="scala.Product">
+        <div class="parent" name="scala.Product">
               <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
             </div><div class="parent" name="scala.Equals">
               <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="geotrellis.raster.GridExtent">
+              <h3>Inherited from <a href="../../raster/GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></h3>
+            </div><div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">

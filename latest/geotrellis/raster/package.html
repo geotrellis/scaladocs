@@ -333,7 +333,7 @@ array, with the given number of columns and rows.
     </span>
       
     </li><li name="geotrellis.raster.CellGrid" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="CellGridextendsSerializable"></a>
+      <a id="CellGridextendsGrid"></a>
       <a id="CellGrid:CellGrid"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -341,14 +341,15 @@ array, with the given number of columns and rows.
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="CellGrid.html"><span class="name">CellGrid</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="CellGrid.html"><span class="name">CellGrid</span></a><span class="result"> extends <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package@CellGridextendsSerializable" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.package@CellGridextendsGrid" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">The trait from which <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>s are derived.</p>
+      <p class="shortcomment cmt">A grid composed of cells with specific value types
+</p>
     </li><li name="geotrellis.raster.CellSet" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="CellSetextendsAnyRef"></a>
       <a id="CellSet:CellSet"></a>
@@ -867,6 +868,23 @@ set of cell coordinates
       </a>
     </span>
       <p class="shortcomment cmt"><a href="GeoAttrsError.html" class="extype" name="geotrellis.raster.GeoAttrsError">GeoAttrsError</a> exception.</p>
+    </li><li name="geotrellis.raster.Grid" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="GridextendsSerializable"></a>
+      <a id="Grid:Grid"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Grid.html"><span class="name">Grid</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package@GridextendsSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.raster.GridBounds" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="GridBoundsextendsProductwithSerializable"></a>
       <a id="GridBounds:GridBounds"></a>
@@ -886,40 +904,26 @@ set of cell coordinates
       <p class="shortcomment cmt">Represents grid coordinates of a subsection of a RasterExtent.</p><div class="fullcomment"><div class="comment cmt"><p>Represents grid coordinates of a subsection of a RasterExtent.
 These coordinates are inclusive.
 </p></div></div>
-    </li><li name="geotrellis.raster.GridDefinition" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="GridDefinitionextendsAnyRef"></a>
-      <a id="GridDefinition:GridDefinition"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="GridDefinition.html"><span class="name">GridDefinition</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package@GridDefinitionextendsAnyRef" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.GridExtent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="GridExtentextendsGridDefinitionwithProductwithSerializable"></a>
+    </li><li name="geotrellis.raster.GridExtent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GridExtentextendsSerializable"></a>
       <a id="GridExtent:GridExtent"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">case class</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="GridExtent.html"><span class="name">GridExtent</span></a><span class="params">(<span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="cellwidth">cellwidth: <span class="extype" name="scala.Double">Double</span></span>, <span name="cellheight">cellheight: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result"> extends <a href="GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="GridExtent.html"><span class="name">GridExtent</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package@GridExtentextendsGridDefinitionwithProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.package@GridExtentextendsSerializable" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">The <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a> type.</p>
+      <p class="shortcomment cmt">Represents an abstract grid over geographic extent.</p><div class="fullcomment"><div class="comment cmt"><p>Represents an abstract grid over geographic extent.
+Critically while the number of cell rows and columns is implied by the constructor arguments,
+they are intentionally not expressed to avoid Int overflow for large grids.
+</p></div></div>
     </li><li name="geotrellis.raster.mapalgebra.focal.hillshade.Implicits.HillshadeTuple" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="HillshadeTupleextendsAnyRef"></a>
       <a id="HillshadeTuple:HillshadeTuple"></a>
@@ -1351,7 +1355,7 @@ Tile for a specific band.</p>
     </span>
       <p class="shortcomment cmt">The <a href="ProjectedRaster.html" class="extype" name="geotrellis.raster.ProjectedRaster">ProjectedRaster</a> type.</p>
     </li><li name="geotrellis.raster.Raster" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Raster[+T&lt;:geotrellis.raster.CellGrid]extendsProduct2[T,geotrellis.vector.Extent]withProductwithSerializable"></a>
+      <a id="Raster[+T&lt;:geotrellis.raster.CellGrid]extendsProduct2[T,geotrellis.vector.Extent]withCellGridwithProductwithSerializable"></a>
       <a id="Raster[+T&lt;:CellGrid]:Raster[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1359,16 +1363,16 @@ Tile for a specific band.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Raster.html"><span class="name">Raster</span></a><span class="tparams">[<span name="T">+T &lt;: <a href="CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></span>]</span><span class="params">(<span name="tile">tile: <span class="extype" name="geotrellis.raster.Raster.T">T</span></span>, <span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product2">Product2</span>[<span class="extype" name="geotrellis.raster.Raster.T">T</span>, <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="Raster.html"><span class="name">Raster</span></a><span class="tparams">[<span name="T">+T &lt;: <a href="CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></span>]</span><span class="params">(<span name="tile">tile: <span class="extype" name="geotrellis.raster.Raster.T">T</span></span>, <span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product2">Product2</span>[<span class="extype" name="geotrellis.raster.Raster.T">T</span>, <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>] with <a href="CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package@Raster[+T&lt;:geotrellis.raster.CellGrid]extendsProduct2[T,geotrellis.vector.Extent]withProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.package@Raster[+T&lt;:geotrellis.raster.CellGrid]extendsProduct2[T,geotrellis.vector.Extent]withCellGridwithProductwithSerializable" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">The <a href="Raster.html" class="extype" name="geotrellis.raster.Raster">Raster</a> type.</p>
     </li><li name="geotrellis.raster.RasterExtent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="RasterExtentextendsGridDefinitionwithProductwithSerializable"></a>
+      <a id="RasterExtentextendsGridExtentwithGridwithProductwithSerializable"></a>
       <a id="RasterExtent:RasterExtent"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1376,10 +1380,10 @@ Tile for a specific band.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="RasterExtent.html"><span class="name">RasterExtent</span></a><span class="params">(<span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="cellwidth">cellwidth: <span class="extype" name="scala.Double">Double</span></span>, <span name="cellheight">cellheight: <span class="extype" name="scala.Double">Double</span></span>, <span name="cols">cols: <span class="extype" name="scala.Int">Int</span></span>, <span name="rows">rows: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="GridDefinition.html" class="extype" name="geotrellis.raster.GridDefinition">GridDefinition</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="RasterExtent.html"><span class="name">RasterExtent</span></a><span class="params">(<span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="cellwidth">cellwidth: <span class="extype" name="scala.Double">Double</span></span>, <span name="cellheight">cellheight: <span class="extype" name="scala.Double">Double</span></span>, <span name="cols">cols: <span class="extype" name="scala.Int">Int</span></span>, <span name="rows">rows: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a> with <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package@RasterExtentextendsGridDefinitionwithProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.package@RasterExtentextendsGridExtentwithGridwithProductwithSerializable" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -2687,7 +2691,7 @@ Tile or MultibandTile) together with some metadata.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">The companion object for the <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a> type.</p>
+      
     </li><li name="geotrellis.raster.IntArrayTile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="IntArrayTile"></a>
       <a id="IntArrayTile:IntArrayTile"></a>
