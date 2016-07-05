@@ -91,7 +91,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.spark.io.hadoop.HadoopValueReader#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(attributeStore:geotrellis.spark.io.hadoop.HadoopAttributeStore)(implicitsc:org.apache.spark.SparkContext):geotrellis.spark.io.hadoop.HadoopValueReader"></a>
+      <a id="&lt;init&gt;(attributeStore:geotrellis.spark.io.AttributeStore,conf:org.apache.hadoop.conf.Configuration,maxOpenFiles:Int):geotrellis.spark.io.hadoop.HadoopValueReader"></a>
       <a id="&lt;init&gt;:HadoopValueReader"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -99,10 +99,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">HadoopValueReader</span><span class="params">(<span name="attributeStore">attributeStore: <a href="HadoopAttributeStore.html" class="extype" name="geotrellis.spark.io.hadoop.HadoopAttributeStore">HadoopAttributeStore</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sc">sc: <span class="extype" name="org.apache.spark.SparkContext">SparkContext</span></span>)</span>
+        <span class="name">HadoopValueReader</span><span class="params">(<span name="attributeStore">attributeStore: <a href="../AttributeStore.html" class="extype" name="geotrellis.spark.io.AttributeStore">AttributeStore</a></span>, <span name="conf">conf: <span class="extype" name="org.apache.hadoop.conf.Configuration">Configuration</span></span>, <span name="maxOpenFiles">maxOpenFiles: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">16</span></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopValueReader@&lt;init&gt;(attributeStore:geotrellis.spark.io.hadoop.HadoopAttributeStore)(implicitsc:org.apache.spark.SparkContext):geotrellis.spark.io.hadoop.HadoopValueReader" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopValueReader@&lt;init&gt;(attributeStore:geotrellis.spark.io.AttributeStore,conf:org.apache.hadoop.conf.Configuration,maxOpenFiles:Int):geotrellis.spark.io.hadoop.HadoopValueReader" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -185,18 +185,18 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="geotrellis.spark.io.hadoop.HadoopValueReader#attributeStore" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="attributeStore:geotrellis.spark.io.hadoop.HadoopAttributeStore"></a>
-      <a id="attributeStore:HadoopAttributeStore"></a>
+      <a id="attributeStore:geotrellis.spark.io.AttributeStore"></a>
+      <a id="attributeStore:AttributeStore"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">attributeStore</span><span class="result">: <a href="HadoopAttributeStore.html" class="extype" name="geotrellis.spark.io.hadoop.HadoopAttributeStore">HadoopAttributeStore</a></span>
+        <span class="name">attributeStore</span><span class="result">: <a href="../AttributeStore.html" class="extype" name="geotrellis.spark.io.AttributeStore">AttributeStore</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopValueReader@attributeStore:geotrellis.spark.io.hadoop.HadoopAttributeStore" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopValueReader@attributeStore:geotrellis.spark.io.AttributeStore" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -224,23 +224,6 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.spark.io.hadoop.HadoopValueReader#conf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="conf:org.apache.hadoop.conf.Configuration"></a>
-      <a id="conf:Configuration"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">conf</span><span class="result">: <span class="extype" name="org.apache.hadoop.conf.Configuration">Configuration</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopValueReader@conf:org.apache.hadoop.conf.Configuration" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -417,6 +400,23 @@
       </a>
     </span>
       <p class="shortcomment cmt">Produce a key value reader for a specific layer, prefetching layer metadata once at construction time</p><div class="fullcomment"><div class="comment cmt"><p>Produce a key value reader for a specific layer, prefetching layer metadata once at construction time</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.io.hadoop.HadoopValueReader">HadoopValueReader</a> → <a href="../ValueReader.html" class="extype" name="geotrellis.spark.io.ValueReader">ValueReader</a></dd></dl></div>
+    </li><li name="geotrellis.spark.io.hadoop.HadoopValueReader#readers" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="readers:geotrellis.spark.util.cache.LRUCache[(geotrellis.spark.LayerId,org.apache.hadoop.fs.Path),org.apache.hadoop.io.MapFile.Reader]"></a>
+      <a id="readers:LRUCache[(LayerId,Path),org.apache.hadoop.io.MapFile.Reader]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">readers</span><span class="result">: <a href="../../util/cache/LRUCache.html" class="extype" name="geotrellis.spark.util.cache.LRUCache">LRUCache</a>[(<a href="../../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a>, <span class="extype" name="org.apache.hadoop.fs.Path">Path</span>), <span class="extype" name="org.apache.hadoop.io.MapFile.Reader">org.apache.hadoop.io.MapFile.Reader</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopValueReader@readers:geotrellis.spark.util.cache.LRUCache[(geotrellis.spark.LayerId,org.apache.hadoop.fs.Path),org.apache.hadoop.io.MapFile.Reader]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

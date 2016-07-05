@@ -1,9 +1,9 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>AtomicCache - geotrellis.spark.util.cache.AtomicCache</title>
-          <meta name="description" content="AtomicCache - geotrellis.spark.util.cache.AtomicCache" />
-          <meta name="keywords" content="AtomicCache geotrellis.spark.util.cache.AtomicCache" />
+          <title>MultiMapWriter - geotrellis.spark.io.hadoop.HadoopRDDWriter.MultiMapWriter</title>
+          <meta name="description" content="MultiMapWriter - geotrellis.spark.io.hadoop.HadoopRDDWriter.MultiMapWriter" />
+          <meta name="keywords" content="MultiMapWriter geotrellis.spark.io.hadoop.HadoopRDDWriter.MultiMapWriter" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -16,7 +16,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../index.html';
-            var hash = 'geotrellis.spark.util.cache.AtomicCache';
+            var hash = 'geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -28,12 +28,12 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img alt="Trait" src="../../../../lib/trait_big.png" />
-        <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.spark">spark</a>.<a href="../package.html" class="extype" name="geotrellis.spark.util">util</a>.<a href="package.html" class="extype" name="geotrellis.spark.util.cache">cache</a></p>
-        <h1>AtomicCache</h1><h3><span class="morelinks"><div>Related Doc:
-            <a href="package.html" class="extype" name="geotrellis.spark.util.cache">package cache</a>
+        <img alt="Class" src="../../../../lib/class_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.spark">spark</a>.<a href="../package.html" class="extype" name="geotrellis.spark.io">io</a>.<a href="package.html" class="extype" name="geotrellis.spark.io.hadoop">hadoop</a>.<a href="HadoopRDDWriter$.html" class="extype" name="geotrellis.spark.io.hadoop.HadoopRDDWriter">HadoopRDDWriter</a></p>
+        <h1>MultiMapWriter</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="HadoopRDDWriter$.html" class="extype" name="geotrellis.spark.io.hadoop.HadoopRDDWriter">package HadoopRDDWriter</a>
           </div></span></h3><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -42,22 +42,20 @@
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">AtomicCache</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="Cache.html" class="extype" name="geotrellis.spark.util.cache.Cache">Cache</a>[<span class="extype" name="geotrellis.spark.util.cache.AtomicCache.K">K</span>, <span class="extype" name="geotrellis.spark.util.cache.AtomicCache.V">V</span>]</span>
+        <span class="name">MultiMapWriter</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Atomic cache provides an atomic getOrInsert(k,v) method
-This cache assumes that (k,v) pair is immutable
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>When record being written would exceed the block size of the current MapFile
+opens a new file to continue writing. This allows to split partition into block-sized
+chunks without foreknowledge of how big it is.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="Cache.html" class="extype" name="geotrellis.spark.util.cache.Cache">Cache</a>[<span class="extype" name="geotrellis.spark.util.cache.AtomicCache.K">K</span>, <span class="extype" name="geotrellis.spark.util.cache.AtomicCache.V">V</span>], <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
-        </div><div class="toggleContainer block">
-            <span class="toggle">Known Subclasses</span>
-            <div class="subClasses hiddenContent"><a href="LRUCache.html" class="extype" name="geotrellis.spark.util.cache.LRUCache">LRUCache</a>, <a href="MRUCache.html" class="extype" name="geotrellis.spark.util.cache.MRUCache">MRUCache</a></div>
-          </div></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
         
 
       <div id="mbrsel">
@@ -74,7 +72,7 @@ This cache assumes that (k,v) pair is immutable
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.spark.util.cache.AtomicCache"><span>AtomicCache</span></li><li class="in" name="geotrellis.spark.util.cache.Cache"><span>Cache</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.spark.io.hadoop.HadoopRDDWriter.MultiMapWriter"><span>MultiMapWriter</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -91,34 +89,34 @@ This cache assumes that (k,v) pair is immutable
 
       <div id="template">
         <div id="allMembers">
-        
-
-        
-
-        <div id="values" class="values members">
-              <h3>Abstract Value Members</h3>
-              <ol><li name="geotrellis.spark.util.cache.Cache#remove" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="remove(k:K):Option[V]"></a>
-      <a id="remove(K):Option[V]"></a>
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="geotrellis.spark.io.hadoop.HadoopRDDWriter.MultiMapWriter#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(layerPath:String,partition:Int,blockSize:Long,indexInterval:Int):geotrellis.spark.io.hadoop.HadoopRDDWriter.MultiMapWriter"></a>
+      <a id="&lt;init&gt;:MultiMapWriter"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
+        <span class="modifier"></span>
+        <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">remove</span><span class="params">(<span name="k">k: <span class="extype" name="geotrellis.spark.util.cache.AtomicCache.K">K</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="geotrellis.spark.util.cache.AtomicCache.V">V</span>]</span>
+        <span class="name">MultiMapWriter</span><span class="params">(<span name="layerPath">layerPath: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="partition">partition: <span class="extype" name="scala.Int">Int</span></span>, <span name="blockSize">blockSize: <span class="extype" name="scala.Long">Long</span></span>, <span name="indexInterval">indexInterval: <span class="extype" name="scala.Int">Int</span></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@remove(k:K):Option[V]" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@&lt;init&gt;(layerPath:String,partition:Int,blockSize:Long,indexInterval:Int):geotrellis.spark.io.hadoop.HadoopRDDWriter.MultiMapWriter" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Remove k from the cache</p><div class="fullcomment"><div class="comment cmt"><p>Remove k from the cache</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Cache.html" class="extype" name="geotrellis.spark.util.cache.Cache">Cache</a></dd></dl></div>
+      
     </li></ol>
             </div>
 
+        
+
+        
+
         <div id="values" class="values members">
-              <h3>Concrete Value Members</h3>
+              <h3>Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a>
       <a id="!=(Any):Boolean"></a>
@@ -131,7 +129,7 @@ This cache assumes that (k,v) pair is immutable
         <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@!=(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -148,7 +146,7 @@ This cache assumes that (k,v) pair is immutable
         <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@##():Int" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@##():Int" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -165,7 +163,7 @@ This cache assumes that (k,v) pair is immutable
         <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@==(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@==(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -182,28 +180,11 @@ This cache assumes that (k,v) pair is immutable
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@asInstanceOf[T0]:T0" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.spark.util.cache.AtomicCache#bigLock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="bigLock:java.util.concurrent.locks.Lock"></a>
-      <a id="bigLock:Lock"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">bigLock</span><span class="result">: <span class="extype" name="java.util.concurrent.locks.Lock">Lock</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@bigLock:java.util.concurrent.locks.Lock" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -216,7 +197,7 @@ This cache assumes that (k,v) pair is immutable
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@clone():Object" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@clone():Object" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -227,19 +208,19 @@ This cache assumes that (k,v) pair is immutable
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.spark.util.cache.AtomicCache#currentlyLoading" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="currentlyLoading:scala.collection.mutable.HashMap[K,java.util.concurrent.locks.Lock]"></a>
-      <a id="currentlyLoading:HashMap[K,Lock]"></a>
+    </li><li name="geotrellis.spark.io.hadoop.HadoopRDDWriter.MultiMapWriter#close" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="close():Unit"></a>
+      <a id="close():Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">currentlyLoading</span><span class="result">: <span class="extype" name="scala.collection.mutable.HashMap">HashMap</span>[<span class="extype" name="geotrellis.spark.util.cache.AtomicCache.K">K</span>, <span class="extype" name="java.util.concurrent.locks.Lock">Lock</span>]</span>
+        <span class="name">close</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@currentlyLoading:scala.collection.mutable.HashMap[K,java.util.concurrent.locks.Lock]" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@close():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -256,7 +237,7 @@ This cache assumes that (k,v) pair is immutable
         <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -273,7 +254,7 @@ This cache assumes that (k,v) pair is immutable
         <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@equals(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -290,7 +271,7 @@ This cache assumes that (k,v) pair is immutable
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@finalize():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@finalize():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -313,32 +294,11 @@ This cache assumes that (k,v) pair is immutable
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@getClass():Class[_]" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@getClass():Class[_]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.spark.util.cache.AtomicCache#getOrInsert" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getOrInsert(k:K,v:=&gt;V):V"></a>
-      <a id="getOrInsert(K,⇒V):V"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getOrInsert</span><span class="params">(<span name="k">k: <span class="extype" name="geotrellis.spark.util.cache.AtomicCache.K">K</span></span>, <span name="v">v: ⇒ <span class="extype" name="geotrellis.spark.util.cache.AtomicCache.V">V</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.spark.util.cache.AtomicCache.V">V</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@getOrInsert(k:K,v:=&gt;V):V" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Lookup the value for key k
-If the value is in the cache, return it.</p><div class="fullcomment"><div class="comment cmt"><p>Lookup the value for key k
-If the value is in the cache, return it.
-Otherwise, insert the value v and return it</p><p>Note: This method does not guarantee that v will be in the cache when it returns
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the cached value keyed to k or the computed value of v</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.util.cache.AtomicCache">AtomicCache</a> → <a href="Cache.html" class="extype" name="geotrellis.spark.util.cache.Cache">Cache</a></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -351,28 +311,11 @@ Otherwise, insert the value v and return it</p><p>Note: This method does not gua
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@hashCode():Int" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@hashCode():Int" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.spark.util.cache.AtomicCache#insert" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="insert(k:K,v:V):Boolean"></a>
-      <a id="insert(K,V):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">insert</span><span class="params">(<span name="k">k: <span class="extype" name="geotrellis.spark.util.cache.AtomicCache.K">K</span></span>, <span name="v">v: <span class="extype" name="geotrellis.spark.util.cache.AtomicCache.V">V</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@insert(k:K,v:V):Boolean" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Insert the value v (keyed by k) into the cache</p><div class="fullcomment"><div class="comment cmt"><p>Insert the value v (keyed by k) into the cache</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>true if the value was inserted into the cache</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.util.cache.AtomicCache">AtomicCache</a> → <a href="Cache.html" class="extype" name="geotrellis.spark.util.cache.Cache">Cache</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -385,28 +328,11 @@ Otherwise, insert the value v and return it</p><p>Note: This method does not gua
         <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.spark.util.cache.AtomicCache#lookup" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="lookup(k:K):Option[V]"></a>
-      <a id="lookup(K):Option[V]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">lookup</span><span class="params">(<span name="k">k: <span class="extype" name="geotrellis.spark.util.cache.AtomicCache.K">K</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="geotrellis.spark.util.cache.AtomicCache.V">V</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@lookup(k:K):Option[V]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Lookup the value for key k</p><div class="fullcomment"><div class="comment cmt"><p>Lookup the value for key k</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Some(v) if the value was cached, None otherwise</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.util.cache.AtomicCache">AtomicCache</a> → <a href="Cache.html" class="extype" name="geotrellis.spark.util.cache.Cache">Cache</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -419,7 +345,7 @@ Otherwise, insert the value v and return it</p><p>Note: This method does not gua
         <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -436,7 +362,7 @@ Otherwise, insert the value v and return it</p><p>Note: This method does not gua
         <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@notify():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@notify():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -453,7 +379,7 @@ Otherwise, insert the value v and return it</p><p>Note: This method does not gua
         <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@notifyAll():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@notifyAll():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -470,7 +396,7 @@ Otherwise, insert the value v and return it</p><p>Note: This method does not gua
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -487,7 +413,7 @@ Otherwise, insert the value v and return it</p><p>Note: This method does not gua
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@toString():String" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@toString():String" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -504,7 +430,7 @@ Otherwise, insert the value v and return it</p><p>Note: This method does not gua
         <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@wait():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@wait():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -527,7 +453,7 @@ Otherwise, insert the value v and return it</p><p>Note: This method does not gua
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -550,7 +476,7 @@ Otherwise, insert the value v and return it</p><p>Note: This method does not gua
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.util.cache.AtomicCache@wait(x$1:Long):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@wait(x$1:Long):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -561,6 +487,23 @@ Otherwise, insert the value v and return it</p><p>Note: This method does not gua
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="geotrellis.spark.io.hadoop.HadoopRDDWriter.MultiMapWriter#write" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="write(key:org.apache.hadoop.io.LongWritable,value:org.apache.hadoop.io.BytesWritable):Unit"></a>
+      <a id="write(LongWritable,BytesWritable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">write</span><span class="params">(<span name="key">key: <span class="extype" name="org.apache.hadoop.io.LongWritable">LongWritable</span></span>, <span name="value">value: <span class="extype" name="org.apache.hadoop.io.BytesWritable">BytesWritable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$$MultiMapWriter@write(key:org.apache.hadoop.io.LongWritable,value:org.apache.hadoop.io.BytesWritable):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li></ol>
             </div>
 
@@ -570,13 +513,7 @@ Otherwise, insert the value v and return it</p><p>Note: This method does not gua
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="geotrellis.spark.util.cache.Cache">
-              <h3>Inherited from <a href="Cache.html" class="extype" name="geotrellis.spark.util.cache.Cache">Cache</a>[<span class="extype" name="geotrellis.spark.util.cache.AtomicCache.K">K</span>, <span class="extype" name="geotrellis.spark.util.cache.AtomicCache.V">V</span>]</h3>
-            </div><div class="parent" name="scala.Serializable">
-              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
-            </div><div class="parent" name="java.io.Serializable">
-              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
-            </div><div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
