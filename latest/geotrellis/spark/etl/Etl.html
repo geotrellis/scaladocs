@@ -47,7 +47,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Etl</span><span class="params">(<span name="args">args: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="modules">modules: <span class="extype" name="scala.Seq">Seq</span>[<a href="TypedModule.html" class="extype" name="geotrellis.spark.etl.TypedModule">TypedModule</a>] = <span class="symbol"><span class="name"><a href="Etl$.html">Etl.defaultModules</a></span></span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">Etl</span><span class="params">(<span name="conf">conf: <a href="config/EtlConf.html" class="extype" name="geotrellis.spark.etl.config.EtlConf">EtlConf</a></span>, <span name="modules">modules: <span class="extype" name="scala.Seq">Seq</span>[<a href="TypedModule.html" class="extype" name="geotrellis.spark.etl.TypedModule">TypedModule</a>] = <span class="symbol"><span class="name"><a href="Etl$.html">Etl.defaultModules</a></span></span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -91,7 +91,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.spark.etl.Etl#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(args:Seq[String],modules:Seq[geotrellis.spark.etl.TypedModule]):geotrellis.spark.etl.Etl"></a>
+      <a id="&lt;init&gt;(conf:geotrellis.spark.etl.config.EtlConf,modules:Seq[geotrellis.spark.etl.TypedModule]):geotrellis.spark.etl.Etl"></a>
       <a id="&lt;init&gt;:Etl"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -99,10 +99,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Etl</span><span class="params">(<span name="args">args: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="modules">modules: <span class="extype" name="scala.Seq">Seq</span>[<a href="TypedModule.html" class="extype" name="geotrellis.spark.etl.TypedModule">TypedModule</a>] = <span class="symbol"><span class="name"><a href="Etl$.html">Etl.defaultModules</a></span></span></span>)</span>
+        <span class="name">Etl</span><span class="params">(<span name="conf">conf: <a href="config/EtlConf.html" class="extype" name="geotrellis.spark.etl.config.EtlConf">EtlConf</a></span>, <span name="modules">modules: <span class="extype" name="scala.Seq">Seq</span>[<a href="TypedModule.html" class="extype" name="geotrellis.spark.etl.TypedModule">TypedModule</a>] = <span class="symbol"><span class="name"><a href="Etl$.html">Etl.defaultModules</a></span></span></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.Etl@&lt;init&gt;(args:Seq[String],modules:Seq[geotrellis.spark.etl.TypedModule]):geotrellis.spark.etl.Etl" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.etl.Etl@&lt;init&gt;(conf:geotrellis.spark.etl.config.EtlConf,modules:Seq[geotrellis.spark.etl.TypedModule]):geotrellis.spark.etl.Etl" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -167,23 +167,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.spark.etl.Etl#args" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="args:Seq[String]"></a>
-      <a id="args:Seq[String]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">args</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.Etl@args:Seq[String]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -242,7 +225,7 @@
     </span>
       
     </li><li name="geotrellis.spark.etl.Etl#conf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="conf:geotrellis.spark.etl.EtlConf"></a>
+      <a id="conf:geotrellis.spark.etl.config.EtlConf"></a>
       <a id="conf:EtlConf"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -250,10 +233,10 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">conf</span><span class="result">: <a href="EtlConf.html" class="extype" name="geotrellis.spark.etl.EtlConf">EtlConf</a></span>
+        <span class="name">conf</span><span class="result">: <a href="config/EtlConf.html" class="extype" name="geotrellis.spark.etl.config.EtlConf">EtlConf</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.Etl@conf:geotrellis.spark.etl.EtlConf" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.etl.Etl@conf:geotrellis.spark.etl.config.EtlConf" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -315,6 +298,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.spark.etl.Etl#input" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="input:geotrellis.spark.etl.config.Input"></a>
+      <a id="input:Input"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">input</span><span class="result">: <a href="config/Input.html" class="extype" name="geotrellis.spark.etl.config.Input">Input</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.etl.Etl@input:geotrellis.spark.etl.config.Input" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -436,25 +436,42 @@ This RDD will contain rasters as they are stored, possibly overlapping and not c
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.spark.etl.Etl#output" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="output:geotrellis.spark.etl.config.Output"></a>
+      <a id="output:Output"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">output</span><span class="result">: <a href="config/Output.html" class="extype" name="geotrellis.spark.etl.config.Output">Output</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.etl.Etl@output:geotrellis.spark.etl.config.Output" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.spark.etl.Etl#save" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="save[K,V&lt;:geotrellis.raster.CellGrid](id:geotrellis.spark.LayerId,rdd:org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[geotrellis.spark.TileLayerMetadata[K]],method:geotrellis.spark.io.index.KeyIndexMethod[K])(implicitevidence$26:geotrellis.spark.SpatialComponent[K],implicitevidence$27:reflect.runtime.universe.TypeTag[K],implicitevidence$28:reflect.runtime.universe.TypeTag[V],implicitevidence$29:V=&gt;geotrellis.raster.merge.TileMergeMethods[V],implicitevidence$30:V=&gt;geotrellis.raster.prototype.TilePrototypeMethods[V]):Unit"></a>
-      <a id="save[K,V&lt;:CellGrid](LayerId,RDD[(K,V)]withMetadata[TileLayerMetadata[K]],KeyIndexMethod[K])(SpatialComponent[K],scala.reflect.api.JavaUniverse.TypeTag[K],scala.reflect.api.JavaUniverse.TypeTag[V],(V)⇒TileMergeMethods[V],(V)⇒TilePrototypeMethods[V]):Unit"></a>
+      <a id="save[K,V&lt;:geotrellis.raster.CellGrid](id:geotrellis.spark.LayerId,rdd:org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[geotrellis.spark.TileLayerMetadata[K]])(implicitevidence$26:geotrellis.spark.SpatialComponent[K],implicitevidence$27:reflect.runtime.universe.TypeTag[K],implicitevidence$28:reflect.runtime.universe.TypeTag[V],implicitevidence$29:V=&gt;geotrellis.raster.merge.TileMergeMethods[V],implicitevidence$30:V=&gt;geotrellis.raster.prototype.TilePrototypeMethods[V]):Unit"></a>
+      <a id="save[K,V&lt;:CellGrid](LayerId,RDD[(K,V)]withMetadata[TileLayerMetadata[K]])(SpatialComponent[K],scala.reflect.api.JavaUniverse.TypeTag[K],scala.reflect.api.JavaUniverse.TypeTag[V],(V)⇒TileMergeMethods[V],(V)⇒TilePrototypeMethods[V]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">save</span><span class="tparams">[<span name="K">K</span>, <span name="V">V &lt;: <a href="../../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></span>]</span><span class="params">(<span name="id">id: <a href="../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a></span>, <span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.etl.Etl.save.K">K</span>, <span class="extype" name="geotrellis.spark.etl.Etl.save.V">V</span>)] with <a href="../Metadata.html" class="extype" name="geotrellis.spark.Metadata">Metadata</a>[<a href="../TileLayerMetadata.html" class="extype" name="geotrellis.spark.TileLayerMetadata">TileLayerMetadata</a>[<span class="extype" name="geotrellis.spark.etl.Etl.save.K">K</span>]]</span>, <span name="method">method: <a href="../io/index/KeyIndexMethod.html" class="extype" name="geotrellis.spark.io.index.KeyIndexMethod">KeyIndexMethod</a>[<span class="extype" name="geotrellis.spark.etl.Etl.save.K">K</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../package.html#SpatialComponent[K]=geotrellis.util.Component[K,geotrellis.spark.SpatialKey]" class="extmbr" name="geotrellis.spark.SpatialComponent">SpatialComponent</a>[<span class="extype" name="geotrellis.spark.etl.Etl.save.K">K</span>]</span>, <span name="arg1">arg1: <span class="extype" name="scala.reflect.api.TypeTags.TypeTag">scala.reflect.api.JavaUniverse.TypeTag</span>[<span class="extype" name="geotrellis.spark.etl.Etl.save.K">K</span>]</span>, <span name="arg2">arg2: <span class="extype" name="scala.reflect.api.TypeTags.TypeTag">scala.reflect.api.JavaUniverse.TypeTag</span>[<span class="extype" name="geotrellis.spark.etl.Etl.save.V">V</span>]</span>, <span name="arg3">arg3: (<span class="extype" name="geotrellis.spark.etl.Etl.save.V">V</span>) ⇒ <a href="../../raster/merge/TileMergeMethods.html" class="extype" name="geotrellis.raster.merge.TileMergeMethods">TileMergeMethods</a>[<span class="extype" name="geotrellis.spark.etl.Etl.save.V">V</span>]</span>, <span name="arg4">arg4: (<span class="extype" name="geotrellis.spark.etl.Etl.save.V">V</span>) ⇒ <a href="../../raster/prototype/TilePrototypeMethods.html" class="extype" name="geotrellis.raster.prototype.TilePrototypeMethods">TilePrototypeMethods</a>[<span class="extype" name="geotrellis.spark.etl.Etl.save.V">V</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">save</span><span class="tparams">[<span name="K">K</span>, <span name="V">V &lt;: <a href="../../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></span>]</span><span class="params">(<span name="id">id: <a href="../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a></span>, <span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.etl.Etl.save.K">K</span>, <span class="extype" name="geotrellis.spark.etl.Etl.save.V">V</span>)] with <a href="../Metadata.html" class="extype" name="geotrellis.spark.Metadata">Metadata</a>[<a href="../TileLayerMetadata.html" class="extype" name="geotrellis.spark.TileLayerMetadata">TileLayerMetadata</a>[<span class="extype" name="geotrellis.spark.etl.Etl.save.K">K</span>]]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../package.html#SpatialComponent[K]=geotrellis.util.Component[K,geotrellis.spark.SpatialKey]" class="extmbr" name="geotrellis.spark.SpatialComponent">SpatialComponent</a>[<span class="extype" name="geotrellis.spark.etl.Etl.save.K">K</span>]</span>, <span name="arg1">arg1: <span class="extype" name="scala.reflect.api.TypeTags.TypeTag">scala.reflect.api.JavaUniverse.TypeTag</span>[<span class="extype" name="geotrellis.spark.etl.Etl.save.K">K</span>]</span>, <span name="arg2">arg2: <span class="extype" name="scala.reflect.api.TypeTags.TypeTag">scala.reflect.api.JavaUniverse.TypeTag</span>[<span class="extype" name="geotrellis.spark.etl.Etl.save.V">V</span>]</span>, <span name="arg3">arg3: (<span class="extype" name="geotrellis.spark.etl.Etl.save.V">V</span>) ⇒ <a href="../../raster/merge/TileMergeMethods.html" class="extype" name="geotrellis.raster.merge.TileMergeMethods">TileMergeMethods</a>[<span class="extype" name="geotrellis.spark.etl.Etl.save.V">V</span>]</span>, <span name="arg4">arg4: (<span class="extype" name="geotrellis.spark.etl.Etl.save.V">V</span>) ⇒ <a href="../../raster/prototype/TilePrototypeMethods.html" class="extype" name="geotrellis.raster.prototype.TilePrototypeMethods">TilePrototypeMethods</a>[<span class="extype" name="geotrellis.spark.etl.Etl.save.V">V</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.Etl@save[K,V&lt;:geotrellis.raster.CellGrid](id:geotrellis.spark.LayerId,rdd:org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[geotrellis.spark.TileLayerMetadata[K]],method:geotrellis.spark.io.index.KeyIndexMethod[K])(implicitevidence$26:geotrellis.spark.SpatialComponent[K],implicitevidence$27:reflect.runtime.universe.TypeTag[K],implicitevidence$28:reflect.runtime.universe.TypeTag[V],implicitevidence$29:V=&gt;geotrellis.raster.merge.TileMergeMethods[V],implicitevidence$30:V=&gt;geotrellis.raster.prototype.TilePrototypeMethods[V]):Unit" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.etl.Etl@save[K,V&lt;:geotrellis.raster.CellGrid](id:geotrellis.spark.LayerId,rdd:org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[geotrellis.spark.TileLayerMetadata[K]])(implicitevidence$26:geotrellis.spark.SpatialComponent[K],implicitevidence$27:reflect.runtime.universe.TypeTag[K],implicitevidence$28:reflect.runtime.universe.TypeTag[V],implicitevidence$29:V=&gt;geotrellis.raster.merge.TileMergeMethods[V],implicitevidence$30:V=&gt;geotrellis.raster.prototype.TilePrototypeMethods[V]):Unit" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">Saves provided RDD to an output module specified by the ETL arguments.</p><div class="fullcomment"><div class="comment cmt"><p>Saves provided RDD to an output module specified by the ETL arguments.
 This step may perform two to one pyramiding until zoom level 1 is reached.
-</p></div><dl class="paramcmts block"><dt class="tparam">K</dt><dd class="cmt"><p>Key type with SpatialComponent corresponding LayoutDefinition</p></dd><dt class="tparam">V</dt><dd class="cmt"><p>Tile raster with cells from single tile in LayoutDefinition</p></dd><dt class="param">id</dt><dd class="cmt"><p>Layout ID to b</p></dd><dt class="param">rdd</dt><dd class="cmt"><p>Tiled raster RDD with TileLayerMetadata</p></dd><dt class="param">method</dt><dd class="cmt"><p>Index Method that maps an instance of K to a Long</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="tparam">K</dt><dd class="cmt"><p>Key type with SpatialComponent corresponding LayoutDefinition</p></dd><dt class="tparam">V</dt><dd class="cmt"><p>Tile raster with cells from single tile in LayoutDefinition</p></dd><dt class="param">id</dt><dd class="cmt"><p>Layout ID to b</p></dd><dt class="param">rdd</dt><dd class="cmt"><p>Tiled raster RDD with TileLayerMetadata</p></dd></dl></div>
     </li><li name="geotrellis.spark.etl.Etl#scheme" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="scheme:Either[geotrellis.spark.tiling.LayoutScheme,geotrellis.spark.tiling.LayoutDefinition]"></a>
       <a id="scheme:Either[LayoutScheme,LayoutDefinition]"></a>

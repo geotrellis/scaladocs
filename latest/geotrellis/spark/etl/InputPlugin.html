@@ -91,43 +91,23 @@
         <div id="allMembers">
         
 
-        <div id="types" class="types members">
-              <h3>Type Members</h3>
-              <ol><li name="geotrellis.spark.etl.Plugin.Parameters" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Parameters=Map[String,String]"></a>
-      <a id="Parameters:Parameters"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">Parameters</span><span class="result"> = <span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.InputPlugin@Parameters=Map[String,String]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Plugin.html" class="extype" name="geotrellis.spark.etl.Plugin">Plugin</a></dd></dl></div>
-    </li></ol>
-            </div>
+        
 
         <div id="values" class="values members">
               <h3>Abstract Value Members</h3>
               <ol><li name="geotrellis.spark.etl.InputPlugin#apply" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="apply(props:InputPlugin.this.Parameters)(implicitsc:org.apache.spark.SparkContext):org.apache.spark.rdd.RDD[(I,V)]"></a>
-      <a id="apply(Parameters)(SparkContext):RDD[(I,V)]"></a>
+      <a id="apply(conf:geotrellis.spark.etl.config.EtlConf)(implicitsc:org.apache.spark.SparkContext):org.apache.spark.rdd.RDD[(I,V)]"></a>
+      <a id="apply(EtlConf)(SparkContext):RDD[(I,V)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="props">props: <a href="#Parameters=Map[String,String]" class="extmbr" name="geotrellis.spark.etl.InputPlugin.Parameters">Parameters</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sc">sc: <span class="extype" name="org.apache.spark.SparkContext">SparkContext</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.etl.InputPlugin.I">I</span>, <span class="extype" name="geotrellis.spark.etl.InputPlugin.V">V</span>)]</span>
+        <span class="name">apply</span><span class="params">(<span name="conf">conf: <a href="config/EtlConf.html" class="extype" name="geotrellis.spark.etl.config.EtlConf">EtlConf</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sc">sc: <span class="extype" name="org.apache.spark.SparkContext">SparkContext</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.etl.InputPlugin.I">I</span>, <span class="extype" name="geotrellis.spark.etl.InputPlugin.V">V</span>)]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.InputPlugin@apply(props:InputPlugin.this.Parameters)(implicitsc:org.apache.spark.SparkContext):org.apache.spark.rdd.RDD[(I,V)]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.etl.InputPlugin@apply(conf:geotrellis.spark.etl.config.EtlConf)(implicitsc:org.apache.spark.SparkContext):org.apache.spark.rdd.RDD[(I,V)]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -166,23 +146,6 @@
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.etl.Plugin#requiredKeys" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="requiredKeys:Array[String]"></a>
-      <a id="requiredKeys:Array[String]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">requiredKeys</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.InputPlugin@requiredKeys:Array[String]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Plugin.html" class="extype" name="geotrellis.spark.etl.Plugin">Plugin</a></dd></dl></div>
     </li></ol>
             </div>
 
@@ -489,23 +452,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.spark.etl.InputPlugin#validate" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="validate(props:Map[String,String]):Unit"></a>
-      <a id="validate(Map[String,String]):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">validate</span><span class="params">(<span name="props">props: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.InputPlugin@validate(props:Map[String,String]):Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
