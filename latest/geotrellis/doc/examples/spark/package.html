@@ -64,7 +64,78 @@
         <div id="allMembers">
         
 
-        
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="geotrellis.doc.examples.spark.ShardingKeyIndex" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ShardingKeyIndex[K]extendsKeyIndex[K]"></a>
+      <a id="ShardingKeyIndex[K]:ShardingKeyIndex[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ShardingKeyIndex.html"><span class="name">ShardingKeyIndex</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="../../../spark/io/index/KeyIndex.html" class="extype" name="geotrellis.spark.io.index.KeyIndex">KeyIndex</a>[<span class="extype" name="geotrellis.doc.examples.spark.ShardingKeyIndex.K">K</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.package@ShardingKeyIndex[K]extendsKeyIndex[K]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An example of a generic KeyIndex which accounts for sharding that could occur
+in a data store like Apache Accumulo.</p><div class="fullcomment"><div class="comment cmt"><p>An example of a generic KeyIndex which accounts for sharding that could occur
+in a data store like Apache Accumulo. Given a shard count (pre-configured),
+this index adds a &quot;shard prefix&quot; to the true index as given by the <i>inner</i>
+argument. Accumulo can shard based off of the first digit of a row ID,
+and since we use a round-robin approach to generate prefixes, this distributes
+spatially close indices across different shards, and thus helps avoid hot spots.</p><h4>Assumptions</h4><ul><li>The given shard count will be between 1 and 8.</li><li>The <i>inner</i> index will produce a value less than 2^60 for any
+    given key.
+</li></ul></div></div>
+    </li><li name="geotrellis.doc.examples.spark.ShardingKeyIndexFormat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ShardingKeyIndexFormat[K]extendsRootJsonFormat[geotrellis.doc.examples.spark.ShardingKeyIndex[K]]"></a>
+      <a id="ShardingKeyIndexFormat[K]:ShardingKeyIndexFormat[K]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ShardingKeyIndexFormat.html"><span class="name">ShardingKeyIndexFormat</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <span class="extype" name="spray.json.RootJsonFormat">RootJsonFormat</span>[<a href="ShardingKeyIndex.html" class="extype" name="geotrellis.doc.examples.spark.ShardingKeyIndex">ShardingKeyIndex</a>[<span class="extype" name="geotrellis.doc.examples.spark.ShardingKeyIndexFormat.K">K</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.package@ShardingKeyIndexFormat[K]extendsRootJsonFormat[geotrellis.doc.examples.spark.ShardingKeyIndex[K]]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A standard JsonFormat for <a href="ShardingKeyIndex.html" class="extype" name="geotrellis.doc.examples.spark.ShardingKeyIndex">ShardingKeyIndex</a>, parameterized on the key type <i>K</i>.</p>
+    </li><li name="geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ShardingKeyIndexRegistratorextendsKeyIndexRegistrator"></a>
+      <a id="ShardingKeyIndexRegistrator:ShardingKeyIndexRegistrator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ShardingKeyIndexRegistrator.html"><span class="name">ShardingKeyIndexRegistrator</span></a><span class="result"> extends <a href="../../../spark/io/json/KeyIndexRegistrator.html" class="extype" name="geotrellis.spark.io.json.KeyIndexRegistrator">KeyIndexRegistrator</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.package@ShardingKeyIndexRegistratorextendsKeyIndexRegistrator" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Register <a href="ShardingKeyIndex.html" class="extype" name="geotrellis.doc.examples.spark.ShardingKeyIndex">ShardingKeyIndex</a>'s <span class="extype" name="JsonFormat">JsonFormat</span> with the central GeoTrellis
+<span class="extype" name="KeyIndex">KeyIndex</span> JsonFormat registry.</p><div class="fullcomment"><div class="comment cmt"><p>Register <a href="ShardingKeyIndex.html" class="extype" name="geotrellis.doc.examples.spark.ShardingKeyIndex">ShardingKeyIndex</a>'s <span class="extype" name="JsonFormat">JsonFormat</span> with the central GeoTrellis
+<span class="extype" name="KeyIndex">KeyIndex</span> JsonFormat registry.</p><p>Q: Why do we need to do this?</p><p>A: The <span class="extype" name="KeyIndex">KeyIndex</span> trait is critical to Tile layer IO. However,
+it is always used generically, without any class depending on KeyIndex's subtypes
+directly. This is advantageous, as the user never needs to externally keep track of
+what index they ingested a layer with. They can read and update a layer
+with less of a mental burden. That said, inventing new KeyIndex subclasses
+becomes labourous. In this way, we (the GeoTrellis authors) have accepted
+the burden of complexity to the benefit of our users.
+</p></div></div>
+    </li></ol>
+            </div>
 
         
 

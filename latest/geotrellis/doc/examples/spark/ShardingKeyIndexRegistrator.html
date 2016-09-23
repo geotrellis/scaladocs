@@ -1,22 +1,22 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>TypedModule - geotrellis.spark.etl.TypedModule</title>
-          <meta name="description" content="TypedModule - geotrellis.spark.etl.TypedModule" />
-          <meta name="keywords" content="TypedModule geotrellis.spark.etl.TypedModule" />
+          <title>ShardingKeyIndexRegistrator - geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator</title>
+          <meta name="description" content="ShardingKeyIndexRegistrator - geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator" />
+          <meta name="keywords" content="ShardingKeyIndexRegistrator geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
-      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
-      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
-      <script type="text/javascript" src="../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
       
       <script type="text/javascript">
          if(top === self) {
-            var url = '../../../index.html';
-            var hash = 'geotrellis.spark.etl.TypedModule';
+            var url = '../../../../index.html';
+            var hash = 'geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -28,13 +28,13 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img alt="Trait" src="../../../lib/trait_big.png" />
-        <p id="owner"><a href="../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../package.html" class="extype" name="geotrellis.spark">spark</a>.<a href="package.html" class="extype" name="geotrellis.spark.etl">etl</a></p>
-        <h1>TypedModule</h1><h3><span class="morelinks"><div>Related Doc:
-            <a href="package.html" class="extype" name="geotrellis.spark.etl">package etl</a>
+        <img alt="Class" src="../../../../lib/class_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.doc">doc</a>.<a href="../package.html" class="extype" name="geotrellis.doc.examples">examples</a>.<a href="package.html" class="extype" name="geotrellis.doc.examples.spark">spark</a></p>
+        <h1>ShardingKeyIndexRegistrator</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="package.html" class="extype" name="geotrellis.doc.examples.spark">package spark</a>
           </div></span></h3><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       </div>
@@ -42,20 +42,25 @@
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">TypedModule</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">ShardingKeyIndexRegistrator</span><span class="result"> extends <a href="../../../spark/io/json/KeyIndexRegistrator.html" class="extype" name="geotrellis.spark.io.json.KeyIndexRegistrator">KeyIndexRegistrator</a></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Register <a href="ShardingKeyIndex.html" class="extype" name="geotrellis.doc.examples.spark.ShardingKeyIndex">ShardingKeyIndex</a>'s <span class="extype" name="JsonFormat">JsonFormat</span> with the central GeoTrellis
+<span class="extype" name="KeyIndex">KeyIndex</span> JsonFormat registry.</p><p>Q: Why do we need to do this?</p><p>A: The <span class="extype" name="KeyIndex">KeyIndex</span> trait is critical to Tile layer IO. However,
+it is always used generically, without any class depending on KeyIndex's subtypes
+directly. This is advantageous, as the user never needs to externally keep track of
+what index they ingested a layer with. They can read and update a layer
+with less of a mental burden. That said, inventing new KeyIndex subclasses
+becomes labourous. In this way, we (the GeoTrellis authors) have accepted
+the burden of complexity to the benefit of our users.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
-        </div><div class="toggleContainer block">
-            <span class="toggle">Known Subclasses</span>
-            <div class="subClasses hiddenContent"><a href="accumulo/AccumuloModule$.html" class="extype" name="geotrellis.spark.etl.accumulo.AccumuloModule">AccumuloModule</a>, <a href="cassandra/CassandraModule$.html" class="extype" name="geotrellis.spark.etl.cassandra.CassandraModule">CassandraModule</a>, <a href="file/FileModule.html" class="extype" name="geotrellis.spark.etl.file.FileModule">FileModule</a>, <a href="file/FileModule$.html" class="extype" name="geotrellis.spark.etl.file.FileModule">FileModule</a>, <a href="hbase/HBaseModule$.html" class="extype" name="geotrellis.spark.etl.hbase.HBaseModule">HBaseModule</a>, <a href="hadoop/HadoopModule$.html" class="extype" name="geotrellis.spark.etl.hadoop.HadoopModule">HadoopModule</a>, <a href="hadoop/HadoopModule.html" class="extype" name="geotrellis.spark.etl.hadoop.HadoopModule">HadoopModule</a>, <a href="s3/S3Module$.html" class="extype" name="geotrellis.spark.etl.s3.S3Module">S3Module</a></div>
-          </div></div>
+          <div class="superTypes hiddenContent"><a href="../../../spark/io/json/KeyIndexRegistrator.html" class="extype" name="geotrellis.spark.io.json.KeyIndexRegistrator">KeyIndexRegistrator</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
         
 
       <div id="mbrsel">
@@ -72,7 +77,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.spark.etl.TypedModule"><span>TypedModule</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator"><span>ShardingKeyIndexRegistrator</span></li><li class="in" name="geotrellis.spark.io.json.KeyIndexRegistrator"><span>KeyIndexRegistrator</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -89,7 +94,27 @@
 
       <div id="template">
         <div id="allMembers">
-        
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;():geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator"></a>
+      <a id="&lt;init&gt;:ShardingKeyIndexRegistrator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ShardingKeyIndexRegistrator</span><span class="params">()</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@&lt;init&gt;():geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
 
         
 
@@ -109,8 +134,8 @@
         <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@!=(x$1:Any):Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -126,8 +151,8 @@
         <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@##():Int" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@##():Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -143,8 +168,8 @@
         <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@==(x$1:Any):Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -160,8 +185,8 @@
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@asInstanceOf[T0]:T0" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
@@ -177,11 +202,11 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@clone():Object" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@clone():Object" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
@@ -200,8 +225,8 @@
         <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -217,8 +242,8 @@
         <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@equals(x$1:Any):Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -234,51 +259,17 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@finalize():Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.spark.etl.TypedModule#find" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="find[T](implicitevidence$2:reflect.runtime.universe.TypeTag[T]):Option[T]"></a>
-      <a id="find[T](scala.reflect.api.JavaUniverse.TypeTag[T]):Option[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">find</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.api.TypeTags.TypeTag">scala.reflect.api.JavaUniverse.TypeTag</span>[<span class="extype" name="geotrellis.spark.etl.TypedModule.find.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="geotrellis.spark.etl.TypedModule.find.T">T</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@find[T](implicitevidence$2:reflect.runtime.universe.TypeTag[T]):Option[T]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.spark.etl.TypedModule#findSubclassOf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="findSubclassOf[T](implicitevidence$3:reflect.runtime.universe.TypeTag[T]):Seq[T]"></a>
-      <a id="findSubclassOf[T](scala.reflect.api.JavaUniverse.TypeTag[T]):Seq[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">findSubclassOf</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.api.TypeTags.TypeTag">scala.reflect.api.JavaUniverse.TypeTag</span>[<span class="extype" name="geotrellis.spark.etl.TypedModule.findSubclassOf.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="geotrellis.spark.etl.TypedModule.findSubclassOf.T">T</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@findSubclassOf[T](implicitevidence$3:reflect.runtime.universe.TypeTag[T]):Seq[T]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -291,8 +282,8 @@
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@getClass():Class[_]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -308,8 +299,8 @@
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@hashCode():Int" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -325,28 +316,11 @@
         <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.spark.etl.TypedModule#map" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="map:Map[reflect.runtime.universe.TypeTag[_],Function0[_]]"></a>
-      <a id="map:Map[scala.reflect.api.JavaUniverse.TypeTag[_],Function0[_]]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">map</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.reflect.api.TypeTags.TypeTag">scala.reflect.api.JavaUniverse.TypeTag</span>[_], <span class="extype" name="scala.Function0">Function0</span>[_]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@map:Map[reflect.runtime.universe.TypeTag[_],Function0[_]]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -359,8 +333,8 @@
         <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -376,8 +350,8 @@
         <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@notify():Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@notify():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -393,28 +367,30 @@
         <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@notifyAll():Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.spark.etl.TypedModule#register" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="register[T](thing:=&gt;T)(implicitevidence$1:reflect.runtime.universe.TypeTag[T]):Unit"></a>
-      <a id="register[T](⇒T)(scala.reflect.api.JavaUniverse.TypeTag[T]):Unit"></a>
+    </li><li name="geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator#register" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="register(keyIndexRegistry:geotrellis.spark.io.json.KeyIndexRegistry):Unit"></a>
+      <a id="register(KeyIndexRegistry):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">register</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="thing">thing: ⇒ <span class="extype" name="geotrellis.spark.etl.TypedModule.register.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.api.TypeTags.TypeTag">scala.reflect.api.JavaUniverse.TypeTag</span>[<span class="extype" name="geotrellis.spark.etl.TypedModule.register.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">register</span><span class="params">(<span name="keyIndexRegistry">keyIndexRegistry: <a href="../../../spark/io/json/KeyIndexRegistry.html" class="extype" name="geotrellis.spark.io.json.KeyIndexRegistry">KeyIndexRegistry</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@register[T](thing:=&gt;T)(implicitevidence$1:reflect.runtime.universe.TypeTag[T]):Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@register(keyIndexRegistry:geotrellis.spark.io.json.KeyIndexRegistry):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Necessary to extend KeyIndexRegistrator.</p><div class="fullcomment"><div class="comment cmt"><p>Necessary to extend KeyIndexRegistrator. This tells the central registry
+about each possible JsonFormat.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator">ShardingKeyIndexRegistrator</a> → <a href="../../../spark/io/json/KeyIndexRegistrator.html" class="extype" name="geotrellis.spark.io.json.KeyIndexRegistrator">KeyIndexRegistrator</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -427,8 +403,8 @@
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -444,28 +420,11 @@
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@toString():String" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@toString():String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.spark.etl.TypedModule#union" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="union(other:geotrellis.spark.etl.TypedModule):geotrellis.spark.etl.TypedModule"></a>
-      <a id="union(TypedModule):TypedModule"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">union</span><span class="params">(<span name="other">other: <a href="" class="extype" name="geotrellis.spark.etl.TypedModule">TypedModule</a></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.spark.etl.TypedModule">TypedModule</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@union(other:geotrellis.spark.etl.TypedModule):geotrellis.spark.etl.TypedModule" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -478,8 +437,8 @@
         <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@wait():Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@wait():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -501,8 +460,8 @@
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -524,8 +483,8 @@
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@wait(x$1:Long):Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -544,7 +503,9 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="geotrellis.spark.io.json.KeyIndexRegistrator">
+              <h3>Inherited from <a href="../../../spark/io/json/KeyIndexRegistrator.html" class="extype" name="geotrellis.spark.io.json.KeyIndexRegistrator">KeyIndexRegistrator</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
