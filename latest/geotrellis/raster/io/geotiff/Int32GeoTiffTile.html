@@ -89,7 +89,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.raster.io.geotiff.Int32GeoTiffTile#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(compressedBytes:Array[Array[Byte]],decompressor:geotrellis.raster.io.geotiff.compression.Decompressor,segmentLayout:geotrellis.raster.io.geotiff.GeoTiffSegmentLayout,compression:geotrellis.raster.io.geotiff.compression.Compression,cellType:geotrellis.raster.IntCellswithgeotrellis.raster.NoDataHandling):geotrellis.raster.io.geotiff.Int32GeoTiffTile"></a>
+      <a id="&lt;init&gt;(segmentBytes:geotrellis.raster.io.geotiff.SegmentBytes,decompressor:geotrellis.raster.io.geotiff.compression.Decompressor,segmentLayout:geotrellis.raster.io.geotiff.GeoTiffSegmentLayout,compression:geotrellis.raster.io.geotiff.compression.Compression,cellType:geotrellis.raster.IntCellswithgeotrellis.raster.NoDataHandling):geotrellis.raster.io.geotiff.Int32GeoTiffTile"></a>
       <a id="&lt;init&gt;:Int32GeoTiffTile"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -97,10 +97,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Int32GeoTiffTile</span><span class="params">(<span name="compressedBytes">compressedBytes: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>, <span name="decompressor">decompressor: <a href="compression/Decompressor.html" class="extype" name="geotrellis.raster.io.geotiff.compression.Decompressor">Decompressor</a></span>, <span name="segmentLayout">segmentLayout: <a href="GeoTiffSegmentLayout.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout">GeoTiffSegmentLayout</a></span>, <span name="compression">compression: <a href="compression/Compression.html" class="extype" name="geotrellis.raster.io.geotiff.compression.Compression">Compression</a></span>, <span name="cellType">cellType: <a href="../../IntCells.html" class="extype" name="geotrellis.raster.IntCells">IntCells</a> with <a href="../../NoDataHandling.html" class="extype" name="geotrellis.raster.NoDataHandling">NoDataHandling</a></span>)</span>
+        <span class="name">Int32GeoTiffTile</span><span class="params">(<span name="segmentBytes">segmentBytes: <a href="SegmentBytes.html" class="extype" name="geotrellis.raster.io.geotiff.SegmentBytes">SegmentBytes</a></span>, <span name="decompressor">decompressor: <a href="compression/Decompressor.html" class="extype" name="geotrellis.raster.io.geotiff.compression.Decompressor">Decompressor</a></span>, <span name="segmentLayout">segmentLayout: <a href="GeoTiffSegmentLayout.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout">GeoTiffSegmentLayout</a></span>, <span name="compression">compression: <a href="compression/Compression.html" class="extype" name="geotrellis.raster.io.geotiff.compression.Compression">Compression</a></span>, <span name="cellType">cellType: <a href="../../IntCells.html" class="extype" name="geotrellis.raster.IntCells">IntCells</a> with <a href="../../NoDataHandling.html" class="extype" name="geotrellis.raster.NoDataHandling">NoDataHandling</a></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.Int32GeoTiffTile@&lt;init&gt;(compressedBytes:Array[Array[Byte]],decompressor:geotrellis.raster.io.geotiff.compression.Decompressor,segmentLayout:geotrellis.raster.io.geotiff.GeoTiffSegmentLayout,compression:geotrellis.raster.io.geotiff.compression.Compression,cellType:geotrellis.raster.IntCellswithgeotrellis.raster.NoDataHandling):geotrellis.raster.io.geotiff.Int32GeoTiffTile" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.Int32GeoTiffTile@&lt;init&gt;(segmentBytes:geotrellis.raster.io.geotiff.SegmentBytes,decompressor:geotrellis.raster.io.geotiff.compression.Decompressor,segmentLayout:geotrellis.raster.io.geotiff.GeoTiffSegmentLayout,compression:geotrellis.raster.io.geotiff.compression.Compression,cellType:geotrellis.raster.IntCellswithgeotrellis.raster.NoDataHandling):geotrellis.raster.io.geotiff.Int32GeoTiffTile" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -388,23 +388,6 @@ to both and using the result to create a new Tile.
 to both and using the result to create a new Tile.</p><div class="fullcomment"><div class="comment cmt"><p>Combines two GeoTiffTiles by applying a function
 to both and using the result to create a new Tile.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A <a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> that contains the results of the given function</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffTile">GeoTiffTile</a> → <a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.Int32GeoTiffTile#compressedBytes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="compressedBytes:Array[Array[Byte]]"></a>
-      <a id="compressedBytes:Array[Array[Byte]]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">compressedBytes</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.Int32GeoTiffTile@compressedBytes:Array[Array[Byte]]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">represents all of the segments in the geotiff</p><div class="fullcomment"><div class="comment cmt"><p>represents all of the segments in the geotiff</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.io.geotiff.Int32GeoTiffTile">Int32GeoTiffTile</a> → <a href="GeoTiffSegmentCollection.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentCollection">GeoTiffSegmentCollection</a> → <a href="GeoTiffImageData.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffImageData">GeoTiffImageData</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffTile#convert" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="convert(newCellType:geotrellis.raster.CellType):geotrellis.raster.Tile"></a>
       <a id="convert(CellType):Tile"></a>
@@ -443,6 +426,26 @@ given CellType
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Int32GeoTiffSegmentCollection.html" class="extype" name="geotrellis.raster.io.geotiff.Int32GeoTiffSegmentCollection">Int32GeoTiffSegmentCollection</a> → <a href="GeoTiffSegmentCollection.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentCollection">GeoTiffSegmentCollection</a></dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.Int32GeoTiffTile#crop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="crop(gridBounds:geotrellis.raster.GridBounds):geotrellis.raster.MutableArrayTile"></a>
+      <a id="crop(GridBounds):MutableArrayTile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">crop</span><span class="params">(<span name="gridBounds">gridBounds: <a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>)</span><span class="result">: <a href="../../MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.Int32GeoTiffTile@crop(gridBounds:geotrellis.raster.GridBounds):geotrellis.raster.MutableArrayTile" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Performs a crop on itself where the returned GeoTiffTile will jave the
+same dimensions as the GridBounds.</p><div class="fullcomment"><div class="comment cmt"><p>Performs a crop on itself where the returned GeoTiffTile will jave the
+same dimensions as the GridBounds.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A <a href="../../MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.io.geotiff.Int32GeoTiffTile">Int32GeoTiffTile</a> → <a href="GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffTile">GeoTiffTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.Int32GeoTiffTile#decompressor" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="decompressor:geotrellis.raster.io.geotiff.compression.Decompressor"></a>
       <a id="decompressor:Decompressor"></a>
@@ -1292,6 +1295,23 @@ two given values.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffTile">GeoTiffTile</a> → <a href="GeoTiffImageData.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffImageData">GeoTiffImageData</a> → <a href="../../Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.Int32GeoTiffTile#segmentBytes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="segmentBytes:geotrellis.raster.io.geotiff.SegmentBytes"></a>
+      <a id="segmentBytes:SegmentBytes"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">segmentBytes</span><span class="result">: <a href="SegmentBytes.html" class="extype" name="geotrellis.raster.io.geotiff.SegmentBytes">SegmentBytes</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.Int32GeoTiffTile@segmentBytes:geotrellis.raster.io.geotiff.SegmentBytes" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">represents all of the segments in the geotiff</p><div class="fullcomment"><div class="comment cmt"><p>represents all of the segments in the geotiff</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.io.geotiff.Int32GeoTiffTile">Int32GeoTiffTile</a> → <a href="GeoTiffSegmentCollection.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentCollection">GeoTiffSegmentCollection</a> → <a href="GeoTiffImageData.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffImageData">GeoTiffImageData</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffTile#segmentCount" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="segmentCount:Int"></a>
       <a id="segmentCount:Int"></a>

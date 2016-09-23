@@ -99,7 +99,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="GeoTiffReader$$GeoTiffInfo.html"><span class="name">GeoTiffInfo</span></a><span class="params">(<span name="extent">extent: <a href="../../../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="crs">crs: <a href="../../../../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="tags">tags: <a href="../Tags.html" class="extype" name="geotrellis.raster.io.geotiff.Tags">Tags</a></span>, <span name="options">options: <a href="../GeoTiffOptions.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffOptions">GeoTiffOptions</a></span>, <span name="bandType">bandType: <a href="../BandType.html" class="extype" name="geotrellis.raster.io.geotiff.BandType">BandType</a></span>, <span name="compressedBytes">compressedBytes: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>, <span name="decompressor">decompressor: <a href="../compression/Decompressor.html" class="extype" name="geotrellis.raster.io.geotiff.compression.Decompressor">Decompressor</a></span>, <span name="segmentLayout">segmentLayout: <a href="../GeoTiffSegmentLayout.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout">GeoTiffSegmentLayout</a></span>, <span name="compression">compression: <a href="../compression/Compression.html" class="extype" name="geotrellis.raster.io.geotiff.compression.Compression">Compression</a></span>, <span name="bandCount">bandCount: <span class="extype" name="scala.Int">Int</span></span>, <span name="hasPixelInterleave">hasPixelInterleave: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="noDataValue">noDataValue: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="GeoTiffReader$$GeoTiffInfo.html"><span class="name">GeoTiffInfo</span></a><span class="params">(<span name="extent">extent: <a href="../../../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="crs">crs: <a href="../../../../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="tags">tags: <a href="../Tags.html" class="extype" name="geotrellis.raster.io.geotiff.Tags">Tags</a></span>, <span name="options">options: <a href="../GeoTiffOptions.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffOptions">GeoTiffOptions</a></span>, <span name="bandType">bandType: <a href="../BandType.html" class="extype" name="geotrellis.raster.io.geotiff.BandType">BandType</a></span>, <span name="segmentBytes">segmentBytes: <a href="../SegmentBytes.html" class="extype" name="geotrellis.raster.io.geotiff.SegmentBytes">SegmentBytes</a></span>, <span name="decompressor">decompressor: <a href="../compression/Decompressor.html" class="extype" name="geotrellis.raster.io.geotiff.compression.Decompressor">Decompressor</a></span>, <span name="segmentLayout">segmentLayout: <a href="../GeoTiffSegmentLayout.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout">GeoTiffSegmentLayout</a></span>, <span name="compression">compression: <a href="../compression/Compression.html" class="extype" name="geotrellis.raster.io.geotiff.compression.Compression">Compression</a></span>, <span name="bandCount">bandCount: <span class="extype" name="scala.Int">Int</span></span>, <span name="hasPixelInterleave">hasPixelInterleave: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="noDataValue">noDataValue: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../../index.html#geotrellis.raster.io.geotiff.reader.GeoTiffReader$@GeoTiffInfoextendsProductwithSerializable" title="Permalink" target="_top">
@@ -365,18 +365,35 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.reader.GeoTiffReader#readMultiband" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="readMultiband(bytes:Array[Byte],decompress:Boolean):geotrellis.raster.io.geotiff.MultibandGeoTiff"></a>
-      <a id="readMultiband(Array[Byte],Boolean):MultibandGeoTiff"></a>
+      <a id="readMultiband(byteBuffer:java.nio.ByteBuffer,decompress:Boolean,streaming:Boolean):geotrellis.raster.io.geotiff.MultibandGeoTiff"></a>
+      <a id="readMultiband(ByteBuffer,Boolean,Boolean):MultibandGeoTiff"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">readMultiband</span><span class="params">(<span name="bytes">bytes: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>, <span name="decompress">decompress: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../MultibandGeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.MultibandGeoTiff">MultibandGeoTiff</a></span>
+        <span class="name">readMultiband</span><span class="params">(<span name="byteBuffer">byteBuffer: <span class="extype" name="java.nio.ByteBuffer">ByteBuffer</span></span>, <span name="decompress">decompress: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="streaming">streaming: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../MultibandGeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.MultibandGeoTiff">MultibandGeoTiff</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#geotrellis.raster.io.geotiff.reader.GeoTiffReader$@readMultiband(bytes:Array[Byte],decompress:Boolean):geotrellis.raster.io.geotiff.MultibandGeoTiff" title="Permalink" target="_top">
+      <a href="../../../../../index.html#geotrellis.raster.io.geotiff.reader.GeoTiffReader$@readMultiband(byteBuffer:java.nio.ByteBuffer,decompress:Boolean,streaming:Boolean):geotrellis.raster.io.geotiff.MultibandGeoTiff" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.io.geotiff.reader.GeoTiffReader#readMultiband" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="readMultiband(bytes:Array[Byte],decompress:Boolean,streaming:Boolean):geotrellis.raster.io.geotiff.MultibandGeoTiff"></a>
+      <a id="readMultiband(Array[Byte],Boolean,Boolean):MultibandGeoTiff"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">readMultiband</span><span class="params">(<span name="bytes">bytes: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>, <span name="decompress">decompress: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="streaming">streaming: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <a href="../MultibandGeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.MultibandGeoTiff">MultibandGeoTiff</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#geotrellis.raster.io.geotiff.reader.GeoTiffReader$@readMultiband(bytes:Array[Byte],decompress:Boolean,streaming:Boolean):geotrellis.raster.io.geotiff.MultibandGeoTiff" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -399,18 +416,52 @@
     </span>
       
     </li><li name="geotrellis.raster.io.geotiff.reader.GeoTiffReader#readMultiband" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="readMultiband(path:String,decompress:Boolean):geotrellis.raster.io.geotiff.MultibandGeoTiff"></a>
-      <a id="readMultiband(String,Boolean):MultibandGeoTiff"></a>
+      <a id="readMultiband(path:String,decompress:Boolean,streaming:Boolean):geotrellis.raster.io.geotiff.MultibandGeoTiff"></a>
+      <a id="readMultiband(String,Boolean,Boolean):MultibandGeoTiff"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">readMultiband</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="decompress">decompress: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../MultibandGeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.MultibandGeoTiff">MultibandGeoTiff</a></span>
+        <span class="name">readMultiband</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="decompress">decompress: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="streaming">streaming: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../MultibandGeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.MultibandGeoTiff">MultibandGeoTiff</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#geotrellis.raster.io.geotiff.reader.GeoTiffReader$@readMultiband(path:String,decompress:Boolean):geotrellis.raster.io.geotiff.MultibandGeoTiff" title="Permalink" target="_top">
+      <a href="../../../../../index.html#geotrellis.raster.io.geotiff.reader.GeoTiffReader$@readMultiband(path:String,decompress:Boolean,streaming:Boolean):geotrellis.raster.io.geotiff.MultibandGeoTiff" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.io.geotiff.reader.GeoTiffReader#readMultiband" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="readMultiband(path:String,e:Option[geotrellis.vector.Extent]):geotrellis.raster.io.geotiff.MultibandGeoTiff"></a>
+      <a id="readMultiband(String,Option[Extent]):MultibandGeoTiff"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">readMultiband</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="e">e: <span class="extype" name="scala.Option">Option</span>[<a href="../../../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>]</span>)</span><span class="result">: <a href="../MultibandGeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.MultibandGeoTiff">MultibandGeoTiff</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#geotrellis.raster.io.geotiff.reader.GeoTiffReader$@readMultiband(path:String,e:Option[geotrellis.vector.Extent]):geotrellis.raster.io.geotiff.MultibandGeoTiff" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.io.geotiff.reader.GeoTiffReader#readMultiband" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="readMultiband(path:String,e:geotrellis.vector.Extent):geotrellis.raster.io.geotiff.MultibandGeoTiff"></a>
+      <a id="readMultiband(String,Extent):MultibandGeoTiff"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">readMultiband</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="e">e: <a href="../../../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span><span class="result">: <a href="../MultibandGeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.MultibandGeoTiff">MultibandGeoTiff</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#geotrellis.raster.io.geotiff.reader.GeoTiffReader$@readMultiband(path:String,e:geotrellis.vector.Extent):geotrellis.raster.io.geotiff.MultibandGeoTiff" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -433,18 +484,35 @@
     </span>
       
     </li><li name="geotrellis.raster.io.geotiff.reader.GeoTiffReader#readSingleband" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="readSingleband(bytes:Array[Byte],decompress:Boolean):geotrellis.raster.io.geotiff.SinglebandGeoTiff"></a>
-      <a id="readSingleband(Array[Byte],Boolean):SinglebandGeoTiff"></a>
+      <a id="readSingleband(byteBuffer:java.nio.ByteBuffer,decompress:Boolean,streaming:Boolean):geotrellis.raster.io.geotiff.SinglebandGeoTiff"></a>
+      <a id="readSingleband(ByteBuffer,Boolean,Boolean):SinglebandGeoTiff"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">readSingleband</span><span class="params">(<span name="bytes">bytes: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>, <span name="decompress">decompress: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../SinglebandGeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.SinglebandGeoTiff">SinglebandGeoTiff</a></span>
+        <span class="name">readSingleband</span><span class="params">(<span name="byteBuffer">byteBuffer: <span class="extype" name="java.nio.ByteBuffer">ByteBuffer</span></span>, <span name="decompress">decompress: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="streaming">streaming: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../SinglebandGeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.SinglebandGeoTiff">SinglebandGeoTiff</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#geotrellis.raster.io.geotiff.reader.GeoTiffReader$@readSingleband(bytes:Array[Byte],decompress:Boolean):geotrellis.raster.io.geotiff.SinglebandGeoTiff" title="Permalink" target="_top">
+      <a href="../../../../../index.html#geotrellis.raster.io.geotiff.reader.GeoTiffReader$@readSingleband(byteBuffer:java.nio.ByteBuffer,decompress:Boolean,streaming:Boolean):geotrellis.raster.io.geotiff.SinglebandGeoTiff" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.io.geotiff.reader.GeoTiffReader#readSingleband" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="readSingleband(bytes:Array[Byte],decompress:Boolean,streaming:Boolean):geotrellis.raster.io.geotiff.SinglebandGeoTiff"></a>
+      <a id="readSingleband(Array[Byte],Boolean,Boolean):SinglebandGeoTiff"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">readSingleband</span><span class="params">(<span name="bytes">bytes: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>, <span name="decompress">decompress: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="streaming">streaming: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <a href="../SinglebandGeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.SinglebandGeoTiff">SinglebandGeoTiff</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#geotrellis.raster.io.geotiff.reader.GeoTiffReader$@readSingleband(bytes:Array[Byte],decompress:Boolean,streaming:Boolean):geotrellis.raster.io.geotiff.SinglebandGeoTiff" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -467,18 +535,52 @@
     </span>
       
     </li><li name="geotrellis.raster.io.geotiff.reader.GeoTiffReader#readSingleband" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="readSingleband(path:String,decompress:Boolean):geotrellis.raster.io.geotiff.SinglebandGeoTiff"></a>
-      <a id="readSingleband(String,Boolean):SinglebandGeoTiff"></a>
+      <a id="readSingleband(path:String,decompress:Boolean,streaming:Boolean):geotrellis.raster.io.geotiff.SinglebandGeoTiff"></a>
+      <a id="readSingleband(String,Boolean,Boolean):SinglebandGeoTiff"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">readSingleband</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="decompress">decompress: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../SinglebandGeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.SinglebandGeoTiff">SinglebandGeoTiff</a></span>
+        <span class="name">readSingleband</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="decompress">decompress: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="streaming">streaming: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="../SinglebandGeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.SinglebandGeoTiff">SinglebandGeoTiff</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#geotrellis.raster.io.geotiff.reader.GeoTiffReader$@readSingleband(path:String,decompress:Boolean):geotrellis.raster.io.geotiff.SinglebandGeoTiff" title="Permalink" target="_top">
+      <a href="../../../../../index.html#geotrellis.raster.io.geotiff.reader.GeoTiffReader$@readSingleband(path:String,decompress:Boolean,streaming:Boolean):geotrellis.raster.io.geotiff.SinglebandGeoTiff" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.io.geotiff.reader.GeoTiffReader#readSingleband" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="readSingleband(path:String,e:Option[geotrellis.vector.Extent]):geotrellis.raster.io.geotiff.SinglebandGeoTiff"></a>
+      <a id="readSingleband(String,Option[Extent]):SinglebandGeoTiff"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">readSingleband</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="e">e: <span class="extype" name="scala.Option">Option</span>[<a href="../../../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>]</span>)</span><span class="result">: <a href="../SinglebandGeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.SinglebandGeoTiff">SinglebandGeoTiff</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#geotrellis.raster.io.geotiff.reader.GeoTiffReader$@readSingleband(path:String,e:Option[geotrellis.vector.Extent]):geotrellis.raster.io.geotiff.SinglebandGeoTiff" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.io.geotiff.reader.GeoTiffReader#readSingleband" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="readSingleband(path:String,e:geotrellis.vector.Extent):geotrellis.raster.io.geotiff.SinglebandGeoTiff"></a>
+      <a id="readSingleband(String,Extent):SinglebandGeoTiff"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">readSingleband</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="e">e: <a href="../../../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span><span class="result">: <a href="../SinglebandGeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.SinglebandGeoTiff">SinglebandGeoTiff</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#geotrellis.raster.io.geotiff.reader.GeoTiffReader$@readSingleband(path:String,e:geotrellis.vector.Extent):geotrellis.raster.io.geotiff.SinglebandGeoTiff" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
