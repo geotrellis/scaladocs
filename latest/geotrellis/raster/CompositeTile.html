@@ -54,7 +54,7 @@
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The <a href="" class="extype" name="geotrellis.raster.CompositeTile">CompositeTile</a> type.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>, <a href="MappableTile.html" class="extype" name="geotrellis.raster.MappableTile">MappableTile</a>[<a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>], <a href="../macros/MacroMappableTile.html" class="extype" name="geotrellis.macros.MacroMappableTile">MacroMappableTile</a>[<a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>], <a href="IterableTile.html" class="extype" name="geotrellis.raster.IterableTile">IterableTile</a>, <a href="../macros/MacroIterableTile.html" class="extype" name="geotrellis.macros.MacroIterableTile">MacroIterableTile</a>, <a href="CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a>, <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>, <span class="extype" name="com.typesafe.scalalogging.LazyLogging">LazyLogging</span>, <a href="MappableTile.html" class="extype" name="geotrellis.raster.MappableTile">MappableTile</a>[<a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>], <a href="../macros/MacroMappableTile.html" class="extype" name="geotrellis.macros.MacroMappableTile">MacroMappableTile</a>[<a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>], <a href="IterableTile.html" class="extype" name="geotrellis.raster.IterableTile">IterableTile</a>, <a href="../macros/MacroIterableTile.html" class="extype" name="geotrellis.macros.MacroIterableTile">MacroIterableTile</a>, <a href="CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a>, <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -72,7 +72,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.raster.CompositeTile"><span>CompositeTile</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="geotrellis.raster.Tile"><span>Tile</span></li><li class="in" name="geotrellis.raster.MappableTile"><span>MappableTile</span></li><li class="in" name="geotrellis.macros.MacroMappableTile"><span>MacroMappableTile</span></li><li class="in" name="geotrellis.raster.IterableTile"><span>IterableTile</span></li><li class="in" name="geotrellis.macros.MacroIterableTile"><span>MacroIterableTile</span></li><li class="in" name="geotrellis.raster.CellGrid"><span>CellGrid</span></li><li class="in" name="geotrellis.raster.Grid"><span>Grid</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.raster.CompositeTile"><span>CompositeTile</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="geotrellis.raster.Tile"><span>Tile</span></li><li class="in" name="com.typesafe.scalalogging.LazyLogging"><span>LazyLogging</span></li><li class="in" name="geotrellis.raster.MappableTile"><span>MappableTile</span></li><li class="in" name="geotrellis.macros.MacroMappableTile"><span>MacroMappableTile</span></li><li class="in" name="geotrellis.raster.IterableTile"><span>IterableTile</span></li><li class="in" name="geotrellis.macros.MacroIterableTile"><span>MacroIterableTile</span></li><li class="in" name="geotrellis.raster.CellGrid"><span>CellGrid</span></li><li class="in" name="geotrellis.raster.Grid"><span>Grid</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -785,6 +785,23 @@ as a double, and returns nothing (presumably for side-effects).
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
+    </li><li name="com.typesafe.scalalogging.LazyLogging#logger" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logger:com.typesafe.scalalogging.Logger"></a>
+      <a id="logger:Logger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logger</span><span class="result">: <span class="extype" name="com.typesafe.scalalogging.Logger">Logger</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.CompositeTile@logger:com.typesafe.scalalogging.Logger" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>LazyLogging</dd></dl></div>
     </li><li name="geotrellis.raster.CompositeTile#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="map(f:Int=&gt;Int):geotrellis.raster.Tile"></a>
       <a id="map((Int)⇒Int):Tile"></a>
@@ -1358,6 +1375,8 @@ array.
               <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
             </div><div class="parent" name="geotrellis.raster.Tile">
               <h3>Inherited from <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></h3>
+            </div><div class="parent" name="com.typesafe.scalalogging.LazyLogging">
+              <h3>Inherited from <span class="extype" name="com.typesafe.scalalogging.LazyLogging">LazyLogging</span></h3>
             </div><div class="parent" name="geotrellis.raster.MappableTile">
               <h3>Inherited from <a href="MappableTile.html" class="extype" name="geotrellis.raster.MappableTile">MappableTile</a>[<a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</h3>
             </div><div class="parent" name="geotrellis.macros.MacroMappableTile">
