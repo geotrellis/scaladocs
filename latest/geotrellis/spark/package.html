@@ -491,7 +491,7 @@ Consequently the result may be neither a nor b, but a new value.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="TileLayerMetadata.html"><span class="name">TileLayerMetadata</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="cellType">cellType: <a href="../raster/package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>, <span name="layout">layout: <a href="tiling/LayoutDefinition.html" class="extype" name="geotrellis.spark.tiling.LayoutDefinition">LayoutDefinition</a></span>, <span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="crs">crs: <a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="bounds">bounds: <a href="Bounds.html" class="extype" name="geotrellis.spark.Bounds">Bounds</a>[<span class="extype" name="geotrellis.spark.TileLayerMetadata.K">K</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="evidence$1">evidence$1: <a href="#SpatialComponent[K]=geotrellis.util.Component[K,geotrellis.spark.SpatialKey]" class="extmbr" name="geotrellis.spark.SpatialComponent">SpatialComponent</a>[<span class="extype" name="geotrellis.spark.TileLayerMetadata.K">K</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="TileLayerMetadata.html"><span class="name">TileLayerMetadata</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="cellType">cellType: <a href="../raster/package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>, <span name="layout">layout: <a href="tiling/LayoutDefinition.html" class="extype" name="geotrellis.spark.tiling.LayoutDefinition">LayoutDefinition</a></span>, <span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="crs">crs: <a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="bounds">bounds: <a href="Bounds.html" class="extype" name="geotrellis.spark.Bounds">Bounds</a>[<span class="extype" name="geotrellis.spark.TileLayerMetadata.K">K</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../index.html#geotrellis.spark.package@TileLayerMetadata[K]extendsProductwithSerializable" title="Permalink" target="_top">
@@ -499,6 +499,25 @@ Consequently the result may be neither a nor b, but a new value.
       </a>
     </span>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">cellType</dt><dd class="cmt"><p>value type of each cell</p></dd><dt class="param">layout</dt><dd class="cmt"><p>definition of the tiled raster layout</p></dd><dt class="param">extent</dt><dd class="cmt"><p>Extent covering the source data</p></dd><dt class="param">crs</dt><dd class="cmt"><p>CRS of the raster projection</p></dd></dl></div>
+    </li><li name="geotrellis.spark.TileLayerMetadataFunctor" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TileLayerMetadataFunctor[A]extendsFunctor[geotrellis.spark.TileLayerMetadata,A]"></a>
+      <a id="TileLayerMetadataFunctor[A]:TileLayerMetadataFunctor[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$TileLayerMetadataFunctor.html"><span class="name">TileLayerMetadataFunctor</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="../util/Functor.html" class="extype" name="geotrellis.util.Functor">Functor</a>[<a href="TileLayerMetadata.html" class="extype" name="geotrellis.spark.TileLayerMetadata">TileLayerMetadata</a>, <span class="extype" name="geotrellis.spark.TileLayerMetadataFunctor.A">A</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.spark.package@TileLayerMetadataFunctor[A]extendsFunctor[geotrellis.spark.TileLayerMetadata,A]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This is a type class required by the <a href="filter/ToSpatial$.html" class="extype" name="geotrellis.spark.filter.ToSpatial">geotrellis.spark.filter.ToSpatial</a> function.</p><div class="fullcomment"><div class="comment cmt"><p>This is a type class required by the <a href="filter/ToSpatial$.html" class="extype" name="geotrellis.spark.filter.ToSpatial">geotrellis.spark.filter.ToSpatial</a> function.
+<code>map</code> applies a function <code>A =&gt; B</code> on the keys from this Metadata's <a href="KeyBounds.html" class="extype" name="geotrellis.spark.KeyBounds">KeyBounds</a>,
+which allows for the transformation:</p><pre>TileLayerMetadata[A] <span class="kw">=&gt;</span> TileLayerMetadata[B]</pre></div></div>
     </li><li name="geotrellis.spark.TileLayerRDD" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="TileLayerRDD[K]=org.apache.spark.rdd.RDD[(K,geotrellis.raster.Tile)]withgeotrellis.spark.Metadata[geotrellis.spark.TileLayerMetadata[K]]"></a>
       <a id="TileLayerRDD[K]:TileLayerRDD[K]"></a>
@@ -1129,18 +1148,18 @@ Consequently the result may be neither a nor b, but a new value.
     </span>
       
     </li><li name="geotrellis.spark.filter.Implicits.withSpaceTimeToSpatialMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="withSpaceTimeToSpatialMethods[K,V,M]extendsSpaceTimeToSpatialMethods[K,V,M]"></a>
-      <a id="withSpaceTimeToSpatialMethods[K,V,M]:withSpaceTimeToSpatialMethods[K,V,M]"></a>
+      <a id="withSpaceTimeToSpatialMethods[K,V,M[_]]extendsSpaceTimeToSpatialMethods[K,V,M]"></a>
+      <a id="withSpaceTimeToSpatialMethods[K,V,M[_]]:withSpaceTimeToSpatialMethods[K,V,M]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="filter/Implicits$withSpaceTimeToSpatialMethods.html"><span class="name">withSpaceTimeToSpatialMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="M">M</span>]</span><span class="result"> extends <a href="filter/SpaceTimeToSpatialMethods.html" class="extype" name="geotrellis.spark.filter.SpaceTimeToSpatialMethods">SpaceTimeToSpatialMethods</a>[<span class="extype" name="geotrellis.spark.filter.Implicits.withSpaceTimeToSpatialMethods.K">K</span>, <span class="extype" name="geotrellis.spark.filter.Implicits.withSpaceTimeToSpatialMethods.V">V</span>, <span class="extype" name="geotrellis.spark.filter.Implicits.withSpaceTimeToSpatialMethods.M">M</span>]</span>
+        <a href="filter/Implicits$withSpaceTimeToSpatialMethods.html"><span class="name">withSpaceTimeToSpatialMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="M">M<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="filter/SpaceTimeToSpatialMethods.html" class="extype" name="geotrellis.spark.filter.SpaceTimeToSpatialMethods">SpaceTimeToSpatialMethods</a>[<span class="extype" name="geotrellis.spark.filter.Implicits.withSpaceTimeToSpatialMethods.K">K</span>, <span class="extype" name="geotrellis.spark.filter.Implicits.withSpaceTimeToSpatialMethods.V">V</span>, <span class="extype" name="geotrellis.spark.filter.Implicits.withSpaceTimeToSpatialMethods.M">M</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.filter.Implicits@withSpaceTimeToSpatialMethods[K,V,M]extendsSpaceTimeToSpatialMethods[K,V,M]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.filter.Implicits@withSpaceTimeToSpatialMethods[K,V,M[_]]extendsSpaceTimeToSpatialMethods[K,V,M]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
