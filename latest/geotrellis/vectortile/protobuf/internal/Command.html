@@ -47,7 +47,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">Command</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">Command</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -69,7 +69,7 @@ are read, the cursor moves according the list of parsed delta pairs.
 ClosePath does not move the cursor, but may in future versions of the spec.</p><p>Caveats:</p><ul><li>Point features, whether single or multi, will always consist of a single MoveTo.</li><li>Any Polygon in a Polygon feature must have a LineTo with a count of at least 2.</li><li>ClosePath must always have a parameter count of 1.
 </li></ul></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
             <span class="toggle">Known Subclasses</span>
             <div class="subClasses hiddenContent"><a href="ClosePath$.html" class="extype" name="geotrellis.vectortile.protobuf.internal.ClosePath">ClosePath</a>, <a href="LineTo.html" class="extype" name="geotrellis.vectortile.protobuf.internal.LineTo">LineTo</a>, <a href="MoveTo.html" class="extype" name="geotrellis.vectortile.protobuf.internal.MoveTo">MoveTo</a></div>
@@ -90,7 +90,7 @@ ClosePath does not move the cursor, but may in future versions of the spec.</p><
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.vectortile.protobuf.internal.Command"><span>Command</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.vectortile.protobuf.internal.Command"><span>Command</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -477,7 +477,11 @@ ClosePath does not move the cursor, but may in future versions of the spec.</p><
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>

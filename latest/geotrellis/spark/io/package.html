@@ -49,7 +49,7 @@
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="avro/codecs/Implicits.html" class="extype" name="geotrellis.spark.io.avro.codecs.Implicits">Implicits</a>, <a href="avro/codecs/KeyCodecs.html" class="extype" name="geotrellis.spark.io.avro.codecs.KeyCodecs">KeyCodecs</a>, <a href="avro/codecs/TileFeatureCodec.html" class="extype" name="geotrellis.spark.io.avro.codecs.TileFeatureCodec">TileFeatureCodec</a>, <a href="avro/codecs/TileCodecs.html" class="extype" name="geotrellis.spark.io.avro.codecs.TileCodecs">TileCodecs</a>, <a href="json/Implicits.html" class="extype" name="geotrellis.spark.io.json.Implicits">Implicits</a>, <a href="json/KeyIndexFormats.html" class="extype" name="geotrellis.spark.io.json.KeyIndexFormats">KeyIndexFormats</a>, <a href="json/KeyFormats.html" class="extype" name="geotrellis.spark.io.json.KeyFormats">KeyFormats</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="avro/codecs/Implicits.html" class="extype" name="geotrellis.spark.io.avro.codecs.Implicits">Implicits</a>, <a href="avro/codecs/KeyCodecs.html" class="extype" name="geotrellis.spark.io.avro.codecs.KeyCodecs">KeyCodecs</a>, <a href="avro/codecs/ExtentCodec.html" class="extype" name="geotrellis.spark.io.avro.codecs.ExtentCodec">ExtentCodec</a>, <a href="avro/codecs/TileFeatureCodec.html" class="extype" name="geotrellis.spark.io.avro.codecs.TileFeatureCodec">TileFeatureCodec</a>, <a href="avro/codecs/TileCodecs.html" class="extype" name="geotrellis.spark.io.avro.codecs.TileCodecs">TileCodecs</a>, <a href="json/Implicits.html" class="extype" name="geotrellis.spark.io.json.Implicits">Implicits</a>, <a href="json/KeyIndexFormats.html" class="extype" name="geotrellis.spark.io.json.KeyIndexFormats">KeyIndexFormats</a>, <a href="json/KeyFormats.html" class="extype" name="geotrellis.spark.io.json.KeyFormats">KeyFormats</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -67,7 +67,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.spark.io"><span>io</span></li><li class="in" name="geotrellis.spark.io.avro.codecs.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.spark.io.avro.codecs.KeyCodecs"><span>KeyCodecs</span></li><li class="in" name="geotrellis.spark.io.avro.codecs.TileFeatureCodec"><span>TileFeatureCodec</span></li><li class="in" name="geotrellis.spark.io.avro.codecs.TileCodecs"><span>TileCodecs</span></li><li class="in" name="geotrellis.spark.io.json.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.spark.io.json.KeyIndexFormats"><span>KeyIndexFormats</span></li><li class="in" name="geotrellis.spark.io.json.KeyFormats"><span>KeyFormats</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.spark.io"><span>io</span></li><li class="in" name="geotrellis.spark.io.avro.codecs.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.spark.io.avro.codecs.KeyCodecs"><span>KeyCodecs</span></li><li class="in" name="geotrellis.spark.io.avro.codecs.ExtentCodec"><span>ExtentCodec</span></li><li class="in" name="geotrellis.spark.io.avro.codecs.TileFeatureCodec"><span>TileFeatureCodec</span></li><li class="in" name="geotrellis.spark.io.avro.codecs.TileCodecs"><span>TileCodecs</span></li><li class="in" name="geotrellis.spark.io.json.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.spark.io.json.KeyIndexFormats"><span>KeyIndexFormats</span></li><li class="in" name="geotrellis.spark.io.json.KeyFormats"><span>KeyFormats</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -1134,7 +1134,7 @@ constructing a storage back-end specific reader.</p></div></div>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="json/Implicits$RootDateTimeFormat$.html"><span class="name">RootDateTimeFormat</span></a><span class="result"> extends <span class="extype" name="spray.json.RootJsonFormat">RootJsonFormat</span>[<span class="extype" name="com.github.nscala_time.time.TypeImports.DateTime">com.github.nscala_time.time.Imports.DateTime</span>]</span>
+        <a href="json/Implicits$RootDateTimeFormat$.html"><span class="name">RootDateTimeFormat</span></a><span class="result"> extends <span class="extype" name="spray.json.RootJsonFormat">RootJsonFormat</span>[<span class="extype" name="java.time.ZonedDateTime">ZonedDateTime</span>]</span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.json.Implicits@RootDateTimeFormat" title="Permalink" target="_top">
@@ -1374,6 +1374,23 @@ noDataValue can either be:
 - OR -
 3. a floating point value (which is a UserDefinedNoDataValue's value)
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="avro/codecs/TileCodecs.html" class="extype" name="geotrellis.spark.io.avro.codecs.TileCodecs">TileCodecs</a></dd></dl></div>
+    </li><li name="geotrellis.spark.io.avro.codecs.ExtentCodec#extentCodec" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="extentCodec:geotrellis.spark.io.avro.AvroRecordCodec[geotrellis.vector.Extent]"></a>
+      <a id="extentCodec:AvroRecordCodec[Extent]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">extentCodec</span><span class="result">: <a href="avro/AvroRecordCodec.html" class="extype" name="geotrellis.spark.io.avro.AvroRecordCodec">AvroRecordCodec</a>[<a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.io.package@extentCodec:geotrellis.spark.io.avro.AvroRecordCodec[geotrellis.vector.Extent]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="avro/codecs/ExtentCodec.html" class="extype" name="geotrellis.spark.io.avro.codecs.ExtentCodec">ExtentCodec</a></dd></dl></div>
     </li><li name="geotrellis.spark.io.file" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="file"></a>
       <a id="file:file"></a>
@@ -1806,6 +1823,8 @@ noDataValue can either be:
               <h3>Inherited from <a href="avro/codecs/Implicits.html" class="extype" name="geotrellis.spark.io.avro.codecs.Implicits">Implicits</a></h3>
             </div><div class="parent" name="geotrellis.spark.io.avro.codecs.KeyCodecs">
               <h3>Inherited from <a href="avro/codecs/KeyCodecs.html" class="extype" name="geotrellis.spark.io.avro.codecs.KeyCodecs">KeyCodecs</a></h3>
+            </div><div class="parent" name="geotrellis.spark.io.avro.codecs.ExtentCodec">
+              <h3>Inherited from <a href="avro/codecs/ExtentCodec.html" class="extype" name="geotrellis.spark.io.avro.codecs.ExtentCodec">ExtentCodec</a></h3>
             </div><div class="parent" name="geotrellis.spark.io.avro.codecs.TileFeatureCodec">
               <h3>Inherited from <a href="avro/codecs/TileFeatureCodec.html" class="extype" name="geotrellis.spark.io.avro.codecs.TileFeatureCodec">TileFeatureCodec</a></h3>
             </div><div class="parent" name="geotrellis.spark.io.avro.codecs.TileCodecs">
