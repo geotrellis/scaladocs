@@ -45,11 +45,11 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">BufferSegmentBytes</span><span class="params">(<span name="byteBuffer">byteBuffer: <span class="extype" name="java.nio.ByteBuffer">ByteBuffer</span></span>, <span name="tiffTags">tiffTags: <a href="tags/TiffTags.html" class="extype" name="geotrellis.raster.io.geotiff.tags.TiffTags">TiffTags</a></span>)</span><span class="result"> extends <a href="SegmentBytes.html" class="extype" name="geotrellis.raster.io.geotiff.SegmentBytes">SegmentBytes</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">BufferSegmentBytes</span><span class="params">(<span name="byteReader">byteReader: <a href="../../../util/ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a></span>, <span name="tiffTags">tiffTags: <a href="tags/TiffTags.html" class="extype" name="geotrellis.raster.io.geotiff.tags.TiffTags">TiffTags</a></span>)</span><span class="result"> extends <a href="SegmentBytes.html" class="extype" name="geotrellis.raster.io.geotiff.SegmentBytes">SegmentBytes</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This class implements <a href="SegmentBytes.html" class="extype" name="geotrellis.raster.io.geotiff.SegmentBytes">SegmentBytes</a> via a ByteBuffer.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This class implements <a href="SegmentBytes.html" class="extype" name="geotrellis.raster.io.geotiff.SegmentBytes">SegmentBytes</a> via a ByteReader.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A new instance of BufferSegmentBytes</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="SegmentBytes.html" class="extype" name="geotrellis.raster.io.geotiff.SegmentBytes">SegmentBytes</a>, <span class="extype" name="scala.collection.Traversable">Traversable</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]], <span class="extype" name="scala.collection.GenTraversable">GenTraversable</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]], <span class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>], <span class="extype" name="scala.collection.Traversable">Traversable</span>], <span class="extype" name="scala.collection.TraversableLike">TraversableLike</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>], <span class="extype" name="scala.collection.Traversable">Traversable</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]], <span class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>], <span class="extype" name="scala.collection.Traversable">Traversable</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]], <span class="extype" name="scala.collection.Parallelizable">Parallelizable</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>], <span class="extype" name="scala.collection.parallel.ParIterable">ParIterable</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]], <span class="extype" name="scala.collection.TraversableOnce">TraversableOnce</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]], <span class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]], <span class="extype" name="scala.collection.generic.FilterMonadic">FilterMonadic</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>], <span class="extype" name="scala.collection.Traversable">Traversable</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]], <span class="extype" name="scala.collection.generic.HasNewBuilder">HasNewBuilder</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>], <span class="extype" name="scala.collection.Traversable">Traversable</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -90,7 +90,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.raster.io.geotiff.BufferSegmentBytes#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(byteBuffer:java.nio.ByteBuffer,tiffTags:geotrellis.raster.io.geotiff.tags.TiffTags):geotrellis.raster.io.geotiff.BufferSegmentBytes"></a>
+      <a id="&lt;init&gt;(byteReader:geotrellis.util.ByteReader,tiffTags:geotrellis.raster.io.geotiff.tags.TiffTags):geotrellis.raster.io.geotiff.BufferSegmentBytes"></a>
       <a id="&lt;init&gt;:BufferSegmentBytes"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -98,10 +98,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">BufferSegmentBytes</span><span class="params">(<span name="byteBuffer">byteBuffer: <span class="extype" name="java.nio.ByteBuffer">ByteBuffer</span></span>, <span name="tiffTags">tiffTags: <a href="tags/TiffTags.html" class="extype" name="geotrellis.raster.io.geotiff.tags.TiffTags">TiffTags</a></span>)</span>
+        <span class="name">BufferSegmentBytes</span><span class="params">(<span name="byteReader">byteReader: <a href="../../../util/ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a></span>, <span name="tiffTags">tiffTags: <a href="tags/TiffTags.html" class="extype" name="geotrellis.raster.io.geotiff.tags.TiffTags">TiffTags</a></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.BufferSegmentBytes@&lt;init&gt;(byteBuffer:java.nio.ByteBuffer,tiffTags:geotrellis.raster.io.geotiff.tags.TiffTags):geotrellis.raster.io.geotiff.BufferSegmentBytes" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.BufferSegmentBytes@&lt;init&gt;(byteReader:geotrellis.util.ByteReader,tiffTags:geotrellis.raster.io.geotiff.tags.TiffTags):geotrellis.raster.io.geotiff.BufferSegmentBytes" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -373,23 +373,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.BufferSegmentBytes#byteBuffer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="byteBuffer:java.nio.ByteBuffer"></a>
-      <a id="byteBuffer:ByteBuffer"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">byteBuffer</span><span class="result">: <span class="extype" name="java.nio.ByteBuffer">ByteBuffer</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.BufferSegmentBytes@byteBuffer:java.nio.ByteBuffer" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="geotrellis.raster.io.geotiff.BufferSegmentBytes#byteCounts" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="byteCounts:Array[Int]"></a>
       <a id="byteCounts:Array[Int]"></a>
@@ -403,6 +386,23 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.io.geotiff.BufferSegmentBytes@byteCounts:Array[Int]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.io.geotiff.BufferSegmentBytes#byteReader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="byteReader:geotrellis.util.ByteReader"></a>
+      <a id="byteReader:ByteReader"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">byteReader</span><span class="result">: <a href="../../../util/ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.BufferSegmentBytes@byteReader:geotrellis.util.ByteReader" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
