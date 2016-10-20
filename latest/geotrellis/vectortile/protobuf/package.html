@@ -66,24 +66,41 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="geotrellis.vectortile.protobuf.ProtobufLayer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="ProtobufLayerextendsLayerwithProductwithSerializable"></a>
-      <a id="ProtobufLayer:ProtobufLayer"></a>
+              <ol><li name="geotrellis.vectortile.protobuf.LazyProtobufLayer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LazyProtobufLayerextendsProtobufLayerwithProductwithSerializable"></a>
+      <a id="LazyProtobufLayer:LazyProtobufLayer"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="ProtobufLayer.html"><span class="name">ProtobufLayer</span></a><span class="params">(<span name="rawLayer">rawLayer: <a href="internal/vector_tile/Tile$$Layer.html" class="extype" name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Layer">internal.vector_tile.Tile.Layer</a></span>, <span name="tileExtent">tileExtent: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span><span class="result"> extends <a href="../Layer.html" class="extype" name="geotrellis.vectortile.Layer">Layer</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="LazyProtobufLayer.html"><span class="name">LazyProtobufLayer</span></a><span class="params">(<span name="rawLayer">rawLayer: <a href="internal/vector_tile/Tile$$Layer.html" class="extype" name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Layer">internal.vector_tile.Tile.Layer</a></span>, <span name="tileExtent">tileExtent: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span><span class="result"> extends <a href="ProtobufLayer.html" class="extype" name="geotrellis.vectortile.protobuf.ProtobufLayer">ProtobufLayer</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.package@ProtobufLayerextendsLayerwithProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.vectortile.protobuf.package@LazyProtobufLayerextendsProtobufLayerwithProductwithSerializable" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">A <a href="../Layer.html" class="extype" name="geotrellis.vectortile.Layer">Layer</a> decoded from Protobuf data.</p><div class="fullcomment"><div class="comment cmt"><p>A <a href="../Layer.html" class="extype" name="geotrellis.vectortile.Layer">Layer</a> decoded from Protobuf data. All of its Features are decoded
 lazily, making for very fast extraction of single features/geometries.</p></div></div>
+    </li><li name="geotrellis.vectortile.protobuf.ProtobufLayer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ProtobufLayerextendsLayer"></a>
+      <a id="ProtobufLayer:ProtobufLayer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ProtobufLayer.html"><span class="name">ProtobufLayer</span></a><span class="result"> extends <a href="../Layer.html" class="extype" name="geotrellis.vectortile.Layer">Layer</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.vectortile.protobuf.package@ProtobufLayerextendsLayer" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The parent trait for a two-variety sum type for ProtobufLayers: Lazy and Strict.</p>
     </li><li name="geotrellis.vectortile.protobuf.ProtobufTile" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ProtobufTileextendsVectorTilewithProductwithSerializable"></a>
       <a id="ProtobufTile:ProtobufTile"></a>
@@ -110,6 +127,23 @@ bytes. This is the original/default type for VectorTiles.</p><pre><span class="k
 <span class="kw">val</span> tileExtent: Extent = layout.mapTransform(key)
 
 <span class="kw">val</span> tile: VectorTile = ProtobufTile.fromBytes(bytes, tileExtent)</pre></div></div>
+    </li><li name="geotrellis.vectortile.protobuf.StrictProtobufLayer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StrictProtobufLayerextendsProtobufLayerwithProductwithSerializable"></a>
+      <a id="StrictProtobufLayer:StrictProtobufLayer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="StrictProtobufLayer.html"><span class="name">StrictProtobufLayer</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tileWidth">tileWidth: <span class="extype" name="scala.Int">Int</span></span>, <span name="version">version: <span class="extype" name="scala.Int">Int</span></span>, <span name="tileExtent">tileExtent: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="points">points: <span class="extype" name="scala.Seq">Seq</span>[<a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../../vector/Point.html" class="extype" name="geotrellis.vector.Point">Point</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="Value.html" class="extype" name="geotrellis.vectortile.protobuf.Value">Value</a>]]]</span>, <span name="multiPoints">multiPoints: <span class="extype" name="scala.Seq">Seq</span>[<a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../../vector/MultiPoint.html" class="extype" name="geotrellis.vector.MultiPoint">MultiPoint</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="Value.html" class="extype" name="geotrellis.vectortile.protobuf.Value">Value</a>]]]</span>, <span name="lines">lines: <span class="extype" name="scala.Seq">Seq</span>[<a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../../vector/Line.html" class="extype" name="geotrellis.vector.Line">Line</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="Value.html" class="extype" name="geotrellis.vectortile.protobuf.Value">Value</a>]]]</span>, <span name="multiLines">multiLines: <span class="extype" name="scala.Seq">Seq</span>[<a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../../vector/MultiLine.html" class="extype" name="geotrellis.vector.MultiLine">MultiLine</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="Value.html" class="extype" name="geotrellis.vectortile.protobuf.Value">Value</a>]]]</span>, <span name="polygons">polygons: <span class="extype" name="scala.Seq">Seq</span>[<a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../../vector/Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="Value.html" class="extype" name="geotrellis.vectortile.protobuf.Value">Value</a>]]]</span>, <span name="multiPolygons">multiPolygons: <span class="extype" name="scala.Seq">Seq</span>[<a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../../vector/MultiPolygon.html" class="extype" name="geotrellis.vector.MultiPolygon">MultiPolygon</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="Value.html" class="extype" name="geotrellis.vectortile.protobuf.Value">Value</a>]]]</span>)</span><span class="result"> extends <a href="ProtobufLayer.html" class="extype" name="geotrellis.vectortile.protobuf.ProtobufLayer">ProtobufLayer</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.vectortile.protobuf.package@StrictProtobufLayerextendsProtobufLayerwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A <a href="../Layer.html" class="extype" name="geotrellis.vectortile.Layer">Layer</a> crafted through some strict ingest process.</p>
     </li><li name="geotrellis.vectortile.protobuf.VBool" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="VBoolextendsValuewithProductwithSerializable"></a>
       <a id="VBool:VBool"></a>
