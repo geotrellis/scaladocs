@@ -406,7 +406,9 @@
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Converts all of the bands into a collection of Vector[Tile]</p><div class="fullcomment"><div class="comment cmt"><p>Converts all of the bands into a collection of Vector[Tile]</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
+      <p class="shortcomment cmt">Converts all of the bands into a collection of Vector[Tile]
+</p><div class="fullcomment"><div class="comment cmt"><p>Converts all of the bands into a collection of Vector[Tile]
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.UInt16GeoTiffMultibandTile#cellType" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="cellType:geotrellis.raster.CellType"></a>
       <a id="cellType:CellType"></a>
@@ -480,10 +482,10 @@
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Apply a function that takes a (Int, Int) and returns an Int over two
-selected bands in the MultibandTile.</p><div class="fullcomment"><div class="comment cmt"><p>Apply a function that takes a (Int, Int) and returns an Int over two
-selected bands in the MultibandTile.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Returns a new <a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> that contains the results of f</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
+      <p class="shortcomment cmt">Apply a function that takes a (Int, Int) and returns an Int over
+two selected bands in the MultibandTile.</p><div class="fullcomment"><div class="comment cmt"><p>Apply a function that takes a (Int, Int) and returns an Int over
+two selected bands in the MultibandTile.
+</p></div><dl class="paramcmts block"><dt class="param">b0</dt><dd class="cmt"><p>The first band</p></dd><dt class="param">b1</dt><dd class="cmt"><p>The second band</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function that takes a (Int, Int) and returns an Int</p></dd><dt>returns</dt><dd class="cmt"><p>Returns a new <a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> that contains the results of f</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile#combine" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="combine(f:Array[Int]=&gt;Int):geotrellis.raster.Tile"></a>
       <a id="combine((Array[Int])⇒Int):Tile"></a>
@@ -521,9 +523,9 @@ explicit method call, use that.
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Piggy-back on the other combine method to support combing a
-subset of the bands.</p><div class="fullcomment"><div class="comment cmt"><p>Piggy-back on the other combine method to support combing a
-subset of the bands.</p></div><dl class="paramcmts block"><dt class="param">subset</dt><dd class="cmt"><p>A sequence containing the subset of bands that are of interest</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function to combine the bands</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
+      <p class="shortcomment cmt">This function piggy-backs on the other combine method to support
+combing a subset of the bands.</p><div class="fullcomment"><div class="comment cmt"><p>This function piggy-backs on the other combine method to support
+combing a subset of the bands.</p></div><dl class="paramcmts block"><dt class="param">subset</dt><dd class="cmt"><p>A sequence containing the subset of bands that are of interest</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function to combine the bands</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
     </li><li name="geotrellis.macros.MacroCombineFunctions#combine" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="combine(b0:Int,b1:Int,b2:Int,b3:Int,b4:Int,b5:Int,b6:Int,b7:Int,b8:Int,b9:Int)(f:(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)=&gt;Int):T"></a>
       <a id="combine(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)((Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)⇒Int):Tile"></a>
@@ -676,10 +678,10 @@ subset of the bands.</p></div><dl class="paramcmts block"><dt class="param">subs
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Apply a function that takes a (Double, Double) and returns a Double over two
-selected bands in the MultibandTile.</p><div class="fullcomment"><div class="comment cmt"><p>Apply a function that takes a (Double, Double) and returns a Double over two
-selected bands in the MultibandTile.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Returns a new <a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> that contains the results of f</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
+      <p class="shortcomment cmt">Apply a function that takes a (Double, Double) and returns a
+Double over two selected bands in the MultibandTile.</p><div class="fullcomment"><div class="comment cmt"><p>Apply a function that takes a (Double, Double) and returns a
+Double over two selected bands in the MultibandTile.
+</p></div><dl class="paramcmts block"><dt class="param">b0</dt><dd class="cmt"><p>The first band</p></dd><dt class="param">b1</dt><dd class="cmt"><p>The second band</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function that takes a (Double, Double) and returns a Double</p></dd><dt>returns</dt><dd class="cmt"><p>Returns a new <a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> that contains the results of f</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile#combineDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="combineDouble(f:Array[Double]=&gt;Double):geotrellis.raster.Tile"></a>
       <a id="combineDouble((Array[Double])⇒Double):Tile"></a>
@@ -717,9 +719,9 @@ than an explicit method call, use that.
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Piggy-back on the other combineDouble method to support
-combining a subset of the bands.</p><div class="fullcomment"><div class="comment cmt"><p>Piggy-back on the other combineDouble method to support
-combining a subset of the bands.</p></div><dl class="paramcmts block"><dt class="param">subset</dt><dd class="cmt"><p>A sequence containing the subset of bands that are of interest</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function to combine the bands</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
+      <p class="shortcomment cmt">This function piggy-backs on the other combineDouble method to
+support combining a subset of the bands.</p><div class="fullcomment"><div class="comment cmt"><p>This function piggy-backs on the other combineDouble method to
+support combining a subset of the bands.</p></div><dl class="paramcmts block"><dt class="param">subset</dt><dd class="cmt"><p>A sequence containing the subset of bands that are of interest</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function to combine the bands</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
     </li><li name="geotrellis.macros.MacroCombineFunctions#combineDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="combineDouble(b0:Int,b1:Int,b2:Int,b3:Int,b4:Int,b5:Int,b6:Int,b7:Int,b8:Int,b9:Int)(f:(Double,Double,Double,Double,Double,Double,Double,Double,Double,Double)=&gt;Double):T"></a>
       <a id="combineDouble(Int,Int,Int,Int,Int,Int,Int,Int,Int,Int)((Double,Double,Double,Double,Double,Double,Double,Double,Double,Double)⇒Double):Tile"></a>
@@ -1162,7 +1164,7 @@ combining a subset of the bands.</p></div><dl class="paramcmts block"><dt class=
       </a>
     </span>
       <p class="shortcomment cmt">Converts the CellTypes of a MultibandTile to the given CellType.</p><div class="fullcomment"><div class="comment cmt"><p>Converts the CellTypes of a MultibandTile to the given CellType.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A MultibandTile that contains the the new CellType</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">newCellType</dt><dd class="cmt"><p>The desired <a href="../../package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></p></dd><dt>returns</dt><dd class="cmt"><p>A MultibandTile that contains the the new CellType</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.UInt16GeoTiffSegmentCollection#createSegment" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="createSegment:Int=&gt;geotrellis.raster.io.geotiff.UInt16GeoTiffSegment"></a>
       <a id="createSegment:(Int)⇒UInt16GeoTiffSegment"></a>
@@ -1215,9 +1217,9 @@ the combine algorithms over BandType.</p></div><dl class="attributes block"> <dt
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Performs a crop on itself.</p><div class="fullcomment"><div class="comment cmt"><p>Performs a crop on itself. The returned MultibandGeoTiffTile will contain
-bands that have the same area as the inputte GridBounds.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A <a href="../../ArrayMultibandTile.html" class="extype" name="geotrellis.raster.ArrayMultibandTile">ArrayMultibandTile</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a></dd></dl></div>
+      <p class="shortcomment cmt">Performs a crop on itself.</p><div class="fullcomment"><div class="comment cmt"><p>Performs a crop on itself. The returned MultibandGeoTiffTile will
+contain bands that have the same area as the inputte GridBounds.
+</p></div><dl class="paramcmts block"><dt class="param">gridBounds</dt><dd class="cmt"><p>A <a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a> that contains the area to be cropped.</p></dd><dt>returns</dt><dd class="cmt"><p>A <a href="../../ArrayMultibandTile.html" class="extype" name="geotrellis.raster.ArrayMultibandTile">ArrayMultibandTile</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile#decompressor" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="decompressor:geotrellis.raster.io.geotiff.compression.Decompressor"></a>
       <a id="decompressor:Decompressor"></a>
@@ -1347,10 +1349,10 @@ value for that cell value.
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Apply a function that takes a (Int, Int) and returns Unit over
-a MultibandTile.</p><div class="fullcomment"><div class="comment cmt"><p>Apply a function that takes a (Int, Int) and returns Unit over
-a MultibandTile.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Returns the Unit value for each (Int, Int) in the MultibandTile</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
+      <p class="shortcomment cmt">Apply a function that takes a (Int, Int) and returns Unit over a
+MultibandTile.</p><div class="fullcomment"><div class="comment cmt"><p>Apply a function that takes a (Int, Int) and returns Unit over a
+MultibandTile.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>A function that takes a (Int, Int) and returns Unit</p></dd><dt>returns</dt><dd class="cmt"><p>Returns the Unit value for each (Int, Int) in the MultibandTile</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile#foreach" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="foreach(b0:Int)(f:Int=&gt;Unit):Unit"></a>
       <a id="foreach(Int)((Int)⇒Unit):Unit"></a>
@@ -1367,10 +1369,10 @@ a MultibandTile.
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Apply a function that takes an Int and returns Unit over
-a MultibandTile starting at the given band.</p><div class="fullcomment"><div class="comment cmt"><p>Apply a function that takes an Int and returns Unit over
-a MultibandTile starting at the given band.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Returns the Unit value for each Int in the selected bands</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
+      <p class="shortcomment cmt">Apply a function that takes an Int and returns Unit over a
+MultibandTile starting at the given band.</p><div class="fullcomment"><div class="comment cmt"><p>Apply a function that takes an Int and returns Unit over a
+MultibandTile starting at the given band.
+</p></div><dl class="paramcmts block"><dt class="param">b0</dt><dd class="cmt"><p>The starting band</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function that takes an Int and returns Unit</p></dd><dt>returns</dt><dd class="cmt"><p>Returns the Unit value for each Int in the selected bands</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile#foreachDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="foreachDouble(f:Array[Double]=&gt;Unit):Unit"></a>
       <a id="foreachDouble((Array[Double])⇒Unit):Unit"></a>
@@ -1409,10 +1411,10 @@ value for that cell value.
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Apply a function that takes a (Double, Double) and returns Unit over
-a MultibandTile.</p><div class="fullcomment"><div class="comment cmt"><p>Apply a function that takes a (Double, Double) and returns Unit over
-a MultibandTile.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Returns the Unit value for each (Double, Double) in the MultibandTile</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
+      <p class="shortcomment cmt">Apply a function that takes a (Double, Double) and returns Unit
+over a MultibandTile.</p><div class="fullcomment"><div class="comment cmt"><p>Apply a function that takes a (Double, Double) and returns Unit
+over a MultibandTile.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>A function that takes a (Double, Double) and returns Unit</p></dd><dt>returns</dt><dd class="cmt"><p>Returns the Unit value for each (Double, Double) in the MultibandTile</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile#foreachDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="foreachDouble(b0:Int)(f:Double=&gt;Unit):Unit"></a>
       <a id="foreachDouble(Int)((Double)⇒Unit):Unit"></a>
@@ -1429,10 +1431,10 @@ a MultibandTile.
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Apply a function that takes a Double and returns Unit over
-a MultibandTile starting at the given band.</p><div class="fullcomment"><div class="comment cmt"><p>Apply a function that takes a Double and returns Unit over
-a MultibandTile starting at the given band.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Returns the Unit value for each Double in the selected bands</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
+      <p class="shortcomment cmt">Apply a function that takes a Double and returns Unit over a
+MultibandTile starting at the given band.</p><div class="fullcomment"><div class="comment cmt"><p>Apply a function that takes a Double and returns Unit over a
+MultibandTile starting at the given band.
+</p></div><dl class="paramcmts block"><dt class="param">b0</dt><dd class="cmt"><p>The starting band</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function that takes a Double and returns Unit</p></dd><dt>returns</dt><dd class="cmt"><p>Returns the Unit value for each Double in the selected bands</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -1568,10 +1570,10 @@ a MultibandTile starting at the given band.
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Map over a MultibandTile with a function that takes a (Int, Int) and
-returns an Int.</p><div class="fullcomment"><div class="comment cmt"><p>Map over a MultibandTile with a function that takes a (Int, Int) and
-returns an Int.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Returns a MultibandGeoTiff that contains the results of f</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
+      <p class="shortcomment cmt">Map over a MultibandTile with a function that takes a (Int, Int)
+and returns an Int.</p><div class="fullcomment"><div class="comment cmt"><p>Map over a MultibandTile with a function that takes a (Int, Int)
+and returns an Int.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>A function that takes a (Int, Int) and returns an Int</p></dd><dt>returns</dt><dd class="cmt"><p>Returns a MultibandGeoTiff that contains the results of f</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="map(b0:Int)(f:Int=&gt;Int):geotrellis.raster.MultibandTile"></a>
       <a id="map(Int)((Int)⇒Int):MultibandTile"></a>
@@ -1589,7 +1591,7 @@ returns an Int.
       </a>
     </span>
       <p class="shortcomment cmt">Map over a MultibandTile band.</p><div class="fullcomment"><div class="comment cmt"><p>Map over a MultibandTile band.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Returns a MultibandGeoTiff that contains both the changed and unchanged bands</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">b0</dt><dd class="cmt"><p>The band</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function that takes an Int and returns an Int</p></dd><dt>returns</dt><dd class="cmt"><p>Returns a MultibandGeoTiff that contains both the changed and unchanged bands</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="map(subset:Seq[Int])(f:(Int,Int)=&gt;Int):geotrellis.raster.MultibandTile"></a>
       <a id="map(Seq[Int])((Int,Int)⇒Int):MultibandTile"></a>
@@ -1606,9 +1608,9 @@ returns an Int.
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Piggy-back on the other map method to support mapping a subset
-of the bands.</p><div class="fullcomment"><div class="comment cmt"><p>Piggy-back on the other map method to support mapping a subset
-of the bands.</p></div><dl class="paramcmts block"><dt class="param">subset</dt><dd class="cmt"><p>A sequence containing the subset of bands that are of interest</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function to map over the bands</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
+      <p class="shortcomment cmt">This function piggy-backs on the other map method to support
+mapping a subset of the bands.</p><div class="fullcomment"><div class="comment cmt"><p>This function piggy-backs on the other map method to support
+mapping a subset of the bands.</p></div><dl class="paramcmts block"><dt class="param">subset</dt><dd class="cmt"><p>A sequence containing the subset of bands that are of interest</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function to map over the bands</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.MultibandTile#mapBands" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mapBands(f:(Int,geotrellis.raster.Tile)=&gt;geotrellis.raster.Tile):geotrellis.raster.MultibandTile"></a>
       <a id="mapBands((Int,Tile)⇒Tile):MultibandTile"></a>
@@ -1643,10 +1645,10 @@ of the bands.</p></div><dl class="paramcmts block"><dt class="param">subset</dt>
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Map over a MultibandTile with a function that takes a (Int, Double) and
-returns a Double.</p><div class="fullcomment"><div class="comment cmt"><p>Map over a MultibandTile with a function that takes a (Int, Double) and
-returns a Double.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Returns a MultibandGeoTiff that contains the results of f</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
+      <p class="shortcomment cmt">Map over a MultibandTile with a function that takes a (Int,
+Double) and returns a Double.</p><div class="fullcomment"><div class="comment cmt"><p>Map over a MultibandTile with a function that takes a (Int,
+Double) and returns a Double.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>A function that takes a (Int, Double) and returns a Double</p></dd><dt>returns</dt><dd class="cmt"><p>Returns a MultibandGeoTiff that contains the results of f</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile#mapDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mapDouble(b0:Int)(f:Double=&gt;Double):geotrellis.raster.MultibandTile"></a>
       <a id="mapDouble(Int)((Double)⇒Double):MultibandTile"></a>
@@ -1664,7 +1666,7 @@ returns a Double.
       </a>
     </span>
       <p class="shortcomment cmt">Map over a MultibandTile band.</p><div class="fullcomment"><div class="comment cmt"><p>Map over a MultibandTile band.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Returns a MultibandGeoTiff that contains both the changed and unchanged bands</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">b0</dt><dd class="cmt"><p>The band</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function that takes a Double and returns a Double</p></dd><dt>returns</dt><dd class="cmt"><p>Returns a MultibandGeoTiff that contains both the changed and unchanged bands</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile#mapDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mapDouble(subset:Seq[Int])(f:(Int,Double)=&gt;Double):geotrellis.raster.MultibandTile"></a>
       <a id="mapDouble(Seq[Int])((Int,Double)⇒Double):MultibandTile"></a>
@@ -1681,9 +1683,9 @@ returns a Double.
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Piggy-back on the other map method to support mapping a subset
-of the bands.</p><div class="fullcomment"><div class="comment cmt"><p>Piggy-back on the other map method to support mapping a subset
-of the bands.</p></div><dl class="paramcmts block"><dt class="param">subset</dt><dd class="cmt"><p>A sequence containing the subset of bands that are of interest</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function to map over the bands</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
+      <p class="shortcomment cmt">This function piggy-backs on the other mapDouble method to
+support mapping a subset of the bands.</p><div class="fullcomment"><div class="comment cmt"><p>This function piggy-backs on the other mapDouble method to
+support mapping a subset of the bands.</p></div><dl class="paramcmts block"><dt class="param">subset</dt><dd class="cmt"><p>A sequence containing the subset of bands that are of interest</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function to map over the bands</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile#mapSegments" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mapSegments(f:(geotrellis.raster.io.geotiff.GeoTiffSegment,Int)=&gt;Array[Byte]):geotrellis.raster.MultibandTile"></a>
       <a id="mapSegments((GeoTiffSegment,Int)⇒Array[Byte]):MultibandTile"></a>
@@ -1700,10 +1702,10 @@ of the bands.</p></div><dl class="paramcmts block"><dt class="param">subset</dt>
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Takes a function that takes a GeoTiffSegment and an Int and returns the
-results as a new MultibandTile.</p><div class="fullcomment"><div class="comment cmt"><p>Takes a function that takes a GeoTiffSegment and an Int and returns the
-results as a new MultibandTile.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A new MultibandTile that contains the results of the function</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a></dd></dl></div>
+      <p class="shortcomment cmt">Takes a function that takes a GeoTiffSegment and an Int and
+returns the results as a new MultibandTile.</p><div class="fullcomment"><div class="comment cmt"><p>Takes a function that takes a GeoTiffSegment and an Int and
+returns the results as a new MultibandTile.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>A function that takes a <a href="GeoTiffSegment.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegment">GeoTiffSegment</a> and an Int and returns an Array[Byte]</p></dd><dt>returns</dt><dd class="cmt"><p>A new MultibandTile that contains the results of the function</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -1874,8 +1876,10 @@ results as a new MultibandTile.
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Creates an ArrayMultibandTIle that contains a subset of bands from the GeoTiff.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an ArrayMultibandTIle that contains a subset of bands from the GeoTiff.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Returns an <span class="extype" name="ArrayMutlibandTile">ArrayMutlibandTile</span> with the selected bands</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
+      <p class="shortcomment cmt">Creates an ArrayMultibandTIle that contains a subset of bands
+from the GeoTiff.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an ArrayMultibandTIle that contains a subset of bands
+from the GeoTiff.
+</p></div><dl class="paramcmts block"><dt class="param">bandSequence</dt><dd class="cmt"><p>A sequence of band indexes that are a subset of bands of the GeoTiff</p></dd><dt>returns</dt><dd class="cmt"><p>Returns an <a href="../../ArrayMultibandTile.html" class="extype" name="geotrellis.raster.ArrayMultibandTile">ArrayMultibandTile</a> with the selected bands</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.MultibandTile#subsetBands" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="subsetBands(bandSequence:Int*)(implicitd:DummyImplicit):geotrellis.raster.MultibandTile"></a>
       <a id="subsetBands(Int*)(DummyImplicit):MultibandTile"></a>
@@ -1929,7 +1933,9 @@ as a new <a href="../../MultibandTile.html" class="extype" name="geotrellis.rast
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Converts the GeoTiffMultibandTile to an <span class="extype" name="ArrayMutlibandTile">ArrayMutlibandTile</span></p><div class="fullcomment"><div class="comment cmt"><p>Converts the GeoTiffMultibandTile to an <span class="extype" name="ArrayMutlibandTile">ArrayMutlibandTile</span></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a></dd></dl></div>
+      <p class="shortcomment cmt">Converts the GeoTiffMultibandTile to an
+<a href="../../ArrayMultibandTile.html" class="extype" name="geotrellis.raster.ArrayMultibandTile">ArrayMultibandTile</a></p><div class="fullcomment"><div class="comment cmt"><p>Converts the GeoTiffMultibandTile to an
+<a href="../../ArrayMultibandTile.html" class="extype" name="geotrellis.raster.ArrayMultibandTile">ArrayMultibandTile</a></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a></dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>
