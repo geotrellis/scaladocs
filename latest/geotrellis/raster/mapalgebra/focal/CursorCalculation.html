@@ -93,7 +93,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.raster.mapalgebra.focal.CursorCalculation#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(tile:geotrellis.raster.Tile,n:geotrellis.raster.mapalgebra.focal.Neighborhood,analysisArea:Option[geotrellis.raster.GridBounds]):geotrellis.raster.mapalgebra.focal.CursorCalculation[T]"></a>
+      <a id="&lt;init&gt;(tile:geotrellis.raster.Tile,n:geotrellis.raster.mapalgebra.focal.Neighborhood,analysisArea:Option[geotrellis.raster.GridBounds],target:geotrellis.raster.mapalgebra.focal.TargetCell):geotrellis.raster.mapalgebra.focal.CursorCalculation[T]"></a>
       <a id="&lt;init&gt;:CursorCalculation[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -101,10 +101,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">CursorCalculation</span><span class="params">(<span name="tile">tile: <a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>, <span name="n">n: <a href="Neighborhood.html" class="extype" name="geotrellis.raster.mapalgebra.focal.Neighborhood">Neighborhood</a></span>, <span name="analysisArea">analysisArea: <span class="extype" name="scala.Option">Option</span>[<a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a>]</span>)</span>
+        <span class="name">CursorCalculation</span><span class="params">(<span name="tile">tile: <a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>, <span name="n">n: <a href="Neighborhood.html" class="extype" name="geotrellis.raster.mapalgebra.focal.Neighborhood">Neighborhood</a></span>, <span name="analysisArea">analysisArea: <span class="extype" name="scala.Option">Option</span>[<a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a>]</span>, <span name="target">target: <a href="TargetCell.html" class="extype" name="geotrellis.raster.mapalgebra.focal.TargetCell">TargetCell</a></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.CursorCalculation@&lt;init&gt;(tile:geotrellis.raster.Tile,n:geotrellis.raster.mapalgebra.focal.Neighborhood,analysisArea:Option[geotrellis.raster.GridBounds]):geotrellis.raster.mapalgebra.focal.CursorCalculation[T]" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.CursorCalculation@&lt;init&gt;(tile:geotrellis.raster.Tile,n:geotrellis.raster.mapalgebra.focal.Neighborhood,analysisArea:Option[geotrellis.raster.GridBounds],target:geotrellis.raster.mapalgebra.focal.TargetCell):geotrellis.raster.mapalgebra.focal.CursorCalculation[T]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -133,6 +133,23 @@
       </a>
     </span>
       
+    </li><li name="geotrellis.raster.mapalgebra.focal.Resulting#copyOriginalValue" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="copyOriginalValue:(Int,Int,Int,Int)=&gt;Unit"></a>
+      <a id="copyOriginalValue:(Int,Int,Int,Int)⇒Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">copyOriginalValue</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.CursorCalculation@copyOriginalValue:(Int,Int,Int,Int)=&gt;Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Copies original value to result, (focusCol: Int, focusRow: Int, resultCol: Int, rowRow: Int) =&gt; Unit</p><div class="fullcomment"><div class="comment cmt"><p>Copies original value to result, (focusCol: Int, focusRow: Int, resultCol: Int, rowRow: Int) =&gt; Unit</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Resulting.html" class="extype" name="geotrellis.raster.mapalgebra.focal.Resulting">Resulting</a></dd></dl></div>
     </li><li name="geotrellis.raster.mapalgebra.focal.Resulting#result" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="result:T"></a>
       <a id="result:T"></a>
@@ -490,6 +507,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.raster.mapalgebra.focal.FocalCalculation#target" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="target:geotrellis.raster.mapalgebra.focal.TargetCell"></a>
+      <a id="target:TargetCell"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">target</span><span class="result">: <a href="TargetCell.html" class="extype" name="geotrellis.raster.mapalgebra.focal.TargetCell">TargetCell</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.CursorCalculation@target:geotrellis.raster.mapalgebra.focal.TargetCell" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="FocalCalculation.html" class="extype" name="geotrellis.raster.mapalgebra.focal.FocalCalculation">FocalCalculation</a></dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>

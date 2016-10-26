@@ -243,6 +243,23 @@ for setting up the tile.</p>
       </a>
     </span>
       
+    </li><li name="geotrellis.raster.mapalgebra.focal.CellwiseStrategyCalculation" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CellwiseStrategyCalculationextendsAnyRef"></a>
+      <a id="CellwiseStrategyCalculation:CellwiseStrategyCalculation"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="CellwiseStrategyCalculation.html"><span class="name">CellwiseStrategyCalculation</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.package@CellwiseStrategyCalculationextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.raster.mapalgebra.focal.CellwiseSumCalc" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CellwiseSumCalcextendsCellwiseCalculation[geotrellis.raster.Tile]withArrayTileResult"></a>
       <a id="CellwiseSumCalc:CellwiseSumCalc"></a>
@@ -669,8 +686,7 @@ of the neighborhood (or kernel) to be used in a focal operation.</p>
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Declares that implementers have a result
-</p>
+      
     </li><li name="geotrellis.raster.mapalgebra.focal.ShortArrayTileResult" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="ShortArrayTileResultextendsResulting[geotrellis.raster.Tile]"></a>
       <a id="ShortArrayTileResult:ShortArrayTileResult"></a>
@@ -710,6 +726,23 @@ for setting up the tile.</p>
 </p></div><dl class="paramcmts block"><dt class="param">extent</dt><dd class="cmt"><p>Extent of the neighborhood.
                   The extent is how many cells past the focus the bounding box goes.
                   (e.g., 1 for 3x3 square)</p></dd></dl></div>
+    </li><li name="geotrellis.raster.mapalgebra.focal.TargetCell" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TargetCellextendsSerializable"></a>
+      <a id="TargetCell:TargetCell"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="TargetCell.html"><span class="name">TargetCell</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.package@TargetCellextendsSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.raster.mapalgebra.focal.TraversalStrategy" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="TraversalStrategyextendsAnyRef"></a>
       <a id="TraversalStrategy:TraversalStrategy"></a>
@@ -957,7 +990,7 @@ what cells have been removed since the last move.</p>
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.mapalgebra.focal.Min" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.raster.mapalgebra.focal.Min" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Min"></a>
       <a id="Min:Min"></a>
       <h4 class="signature">
@@ -974,10 +1007,7 @@ what cells have been removed since the last move.</p>
       </a>
     </span>
       <p class="shortcomment cmt">Computes the minimum value of a neighborhood for a given raster
-</p><div class="fullcomment"><div class="comment cmt"><p>Computes the minimum value of a neighborhood for a given raster
-</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Min does not currently support Double raster data.
-                 If you use a Tile with a Double CellType (FloatConstantNoDataCellType, DoubleConstantNoDataCellType)
-                 the data values will be rounded to integers.</p></span></dd></dl></div>
+</p>
     </li><li name="geotrellis.raster.mapalgebra.focal.Mode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="Mode"></a>
       <a id="Mode:Mode"></a>
@@ -1128,6 +1158,23 @@ the same elevation as the focal cell.</p><p>The expression for slope is:</p><pre
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.package@Sum" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.mapalgebra.focal.TargetCell" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TargetCell"></a>
+      <a id="TargetCell:TargetCell"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TargetCell$.html"><span class="name">TargetCell</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.package@TargetCell" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
