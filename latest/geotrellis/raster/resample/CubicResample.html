@@ -52,8 +52,9 @@
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This abstract class serves as a base class for the family of
 cubic resample algorithms implemented. As a constructor argument
 it takes the dimension of the cube. It takes the closest dimension ^ 2
-points and then resamples over those points.</p><p>If there is less then dimension ^ 2 points obtainable for the current point
-the implementation falls back on bilinear resample.</p><p>Note that this class is single-threaded.
+points and then resamples over those points.</p><p>If there is less then dimension ^ 2 points obtainable for the
+current point the implementation extrapolates points in order to
+approximate the derivatives that it needs.</p><p>Note that this class is single-threaded.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="BilinearResample.html" class="extype" name="geotrellis.raster.resample.BilinearResample">BilinearResample</a>, <a href="Resample.html" class="extype" name="geotrellis.raster.resample.Resample">Resample</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
