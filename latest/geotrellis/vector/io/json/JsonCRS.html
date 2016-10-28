@@ -1,9 +1,9 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>CRS - geotrellis.vector.io.json.CRS</title>
-          <meta name="description" content="CRS - geotrellis.vector.io.json.CRS" />
-          <meta name="keywords" content="CRS geotrellis.vector.io.json.CRS" />
+          <title>JsonCRS - geotrellis.vector.io.json.JsonCRS</title>
+          <meta name="description" content="JsonCRS - geotrellis.vector.io.json.JsonCRS" />
+          <meta name="keywords" content="JsonCRS geotrellis.vector.io.json.JsonCRS" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -16,7 +16,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../index.html';
-            var hash = 'geotrellis.vector.io.json.CRS';
+            var hash = 'geotrellis.vector.io.json.JsonCRS';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -28,12 +28,12 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img alt="Trait" src="../../../../lib/trait_big.png" />
+        <img alt="Class" src="../../../../lib/class_big.png" />
         <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.vector">vector</a>.<a href="../package.html" class="extype" name="geotrellis.vector.io">io</a>.<a href="package.html" class="extype" name="geotrellis.vector.io.json">json</a></p>
-        <h1>CRS</h1><h3><span class="morelinks"><div>Related Doc:
+        <h1>JsonCRS</h1><h3><span class="morelinks"><div>Related Doc:
             <a href="package.html" class="extype" name="geotrellis.vector.io.json">package json</a>
           </div></span></h3><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -41,20 +41,20 @@
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
-        <span class="modifier">sealed </span>
-        <span class="kind">trait</span>
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">CRS</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">JsonCRS</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Abstract trait for various implementations of Coordinate Reference System values</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Abstract trait for various implementations of Coordinate Reference System values</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Reference: http://geojson.org/geojson-spec.html#coordinate-reference-system-objects</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
             <span class="toggle">Known Subclasses</span>
-            <div class="subClasses hiddenContent"><a href="BlankCRS$.html" class="extype" name="geotrellis.vector.io.json.BlankCRS">BlankCRS</a>, <a href="LinkedCRS.html" class="extype" name="geotrellis.vector.io.json.LinkedCRS">LinkedCRS</a>, <a href="NamedCRS.html" class="extype" name="geotrellis.vector.io.json.NamedCRS">NamedCRS</a></div>
+            <div class="subClasses hiddenContent"><a href="LinkedCRS.html" class="extype" name="geotrellis.vector.io.json.LinkedCRS">LinkedCRS</a>, <a href="NamedCRS.html" class="extype" name="geotrellis.vector.io.json.NamedCRS">NamedCRS</a></div>
           </div></div>
         
 
@@ -72,7 +72,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.vector.io.json.CRS"><span>CRS</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.vector.io.json.JsonCRS"><span>JsonCRS</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -95,23 +95,23 @@
 
         <div id="values" class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="geotrellis.vector.io.json.CRS#toJson" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="toJson:spray.json.JsValue"></a>
-      <a id="toJson:JsValue"></a>
+              <ol><li name="geotrellis.vector.io.json.JsonCRS#toCRS" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="toCRS:Option[geotrellis.proj4.CRS]"></a>
+      <a id="toCRS:Option[CRS]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toJson</span><span class="result">: <span class="extype" name="spray.json.JsValue">JsValue</span></span>
+        <span class="name">toCRS</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../../../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@toJson:spray.json.JsValue" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS@toCRS:Option[geotrellis.proj4.CRS]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Attempt to resolve to <span class="extype" name="CRS">CRS</span> object.</p><div class="fullcomment"><div class="comment cmt"><p>Attempt to resolve to <span class="extype" name="CRS">CRS</span> object. Will cause network request for <a href="LinkedCRS.html" class="extype" name="geotrellis.vector.io.json.LinkedCRS">LinkedCRS</a></p></div></div>
     </li></ol>
             </div>
 
@@ -129,7 +129,7 @@
         <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS@!=(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -146,7 +146,7 @@
         <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@##():Int" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS@##():Int" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -163,28 +163,11 @@
         <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@==(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS@==(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.vector.io.json.CRS#addTo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="addTo(json:spray.json.JsValue):spray.json.JsValue"></a>
-      <a id="addTo(JsValue):JsValue"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">addTo</span><span class="params">(<span name="json">json: <span class="extype" name="spray.json.JsValue">JsValue</span></span>)</span><span class="result">: <span class="extype" name="spray.json.JsValue">JsValue</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@addTo(json:spray.json.JsValue):spray.json.JsValue" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -197,7 +180,7 @@
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS@asInstanceOf[T0]:T0" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -214,7 +197,7 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@clone():Object" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS@clone():Object" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -237,7 +220,7 @@
         <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -254,7 +237,7 @@
         <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS@equals(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -271,7 +254,7 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@finalize():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS@finalize():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -294,7 +277,7 @@
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@getClass():Class[_]" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS@getClass():Class[_]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -311,7 +294,7 @@
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@hashCode():Int" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS@hashCode():Int" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -328,7 +311,7 @@
         <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -345,7 +328,7 @@
         <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -362,7 +345,7 @@
         <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@notify():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS@notify():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -379,7 +362,7 @@
         <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@notifyAll():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS@notifyAll():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -396,7 +379,7 @@
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -413,7 +396,7 @@
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@toString():String" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS@toString():String" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -430,7 +413,7 @@
         <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@wait():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS@wait():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -453,7 +436,7 @@
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -476,7 +459,7 @@
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.CRS@wait(x$1:Long):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.JsonCRS@wait(x$1:Long):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

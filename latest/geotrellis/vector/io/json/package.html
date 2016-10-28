@@ -66,24 +66,7 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="geotrellis.vector.io.json.CRS" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="CRSextendsAnyRef"></a>
-      <a id="CRS:CRS"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">sealed </span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="CRS.html"><span class="name">CRS</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.package@CRSextendsAnyRef" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Abstract trait for various implementations of Coordinate Reference System values</p>
-    </li><li name="geotrellis.vector.io.json.CrsFormats" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.vector.io.json.CrsFormats" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="CrsFormatsextendsAnyRef"></a>
       <a id="CrsFormats:CrsFormats"></a>
       <h4 class="signature">
@@ -169,6 +152,23 @@
       </a>
     </span>
       
+    </li><li name="geotrellis.vector.io.json.JsonCRS" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="JsonCRSextendsAnyRef"></a>
+      <a id="JsonCRS:JsonCRS"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="JsonCRS.html"><span class="name">JsonCRS</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.vector.io.json.package@JsonCRSextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Abstract trait for various implementations of Coordinate Reference System values</p><div class="fullcomment"><div class="comment cmt"><p>Abstract trait for various implementations of Coordinate Reference System values</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Reference: http://geojson.org/geojson-spec.html#coordinate-reference-system-objects</p></span></dd></dl></div>
     </li><li name="geotrellis.vector.io.json.JsonFeatureCollection" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="JsonFeatureCollectionextendsAnyRef"></a>
       <a id="JsonFeatureCollection:JsonFeatureCollection"></a>
@@ -214,7 +214,7 @@ This object is instantiated with list of JsValues representing features.
 It may be queried using .getAll[F &lt;: Feature[_] ] method.</p><p>It aggregates feature objects with data member still encoded in json
 </p></div></div>
     </li><li name="geotrellis.vector.io.json.LinkedCRS" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="LinkedCRSextendsCRSwithProductwithSerializable"></a>
+      <a id="LinkedCRSextendsJsonCRSwithProductwithSerializable"></a>
       <a id="LinkedCRS:LinkedCRS"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -222,18 +222,18 @@ It may be queried using .getAll[F &lt;: Feature[_] ] method.</p><p>It aggregates
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="LinkedCRS.html"><span class="name">LinkedCRS</span></a><span class="params">(<span name="href">href: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="crsType">crsType: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>)</span><span class="result"> extends <a href="CRS.html" class="extype" name="geotrellis.vector.io.json.CRS">CRS</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="LinkedCRS.html"><span class="name">LinkedCRS</span></a><span class="params">(<span name="href">href: <span class="extype" name="java.net.URI">URI</span></span>, <span name="format">format: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="JsonCRS.html" class="extype" name="geotrellis.vector.io.json.JsonCRS">JsonCRS</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.package@LinkedCRSextendsCRSwithProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.package@LinkedCRSextendsJsonCRSwithProductwithSerializable" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">A CRS object with a link to CRS parameters on the Web.</p><div class="fullcomment"><div class="comment cmt"><p>A CRS object with a link to CRS parameters on the Web.
-</p></div><dl class="paramcmts block"><dt class="param">href</dt><dd class="cmt"><p>must be a dereferenceable URI.</p></dd><dt class="param">crsType</dt><dd class="cmt"><p>must be a string that hints at the format
+</p></div><dl class="paramcmts block"><dt class="param">href</dt><dd class="cmt"><p>must be a dereferenceable URI.</p></dd><dt class="param">format</dt><dd class="cmt"><p>must be a string that hints at the format
        used to represent CRS parameters at the provided URI.</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Suggested values are: &quot;proj4&quot;, &quot;ogcwkt&quot;, &quot;esriwkt&quot;, others can be used:</p></span></dd></dl></div>
     </li><li name="geotrellis.vector.io.json.NamedCRS" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="NamedCRSextendsCRSwithProductwithSerializable"></a>
+      <a id="NamedCRSextendsJsonCRSwithProductwithSerializable"></a>
       <a id="NamedCRS:NamedCRS"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -241,16 +241,15 @@ It may be queried using .getAll[F &lt;: Feature[_] ] method.</p><p>It aggregates
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="NamedCRS.html"><span class="name">NamedCRS</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="CRS.html" class="extype" name="geotrellis.vector.io.json.CRS">CRS</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="NamedCRS.html"><span class="name">NamedCRS</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="JsonCRS.html" class="extype" name="geotrellis.vector.io.json.JsonCRS">JsonCRS</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.package@NamedCRSextendsCRSwithProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.vector.io.json.package@NamedCRSextendsJsonCRSwithProductwithSerializable" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">A CRS object which indicates a coordinate reference system by name.</p><div class="fullcomment"><div class="comment cmt"><p>A CRS object which indicates a coordinate reference system by name.
-</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>must be a string identifying a coordinate reference system.</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>OGC CRS URNs such as &quot;urn:ogc:def:crs:OGC:1.3:CRS84&quot; shall be
-      preferred over legacy identifiers such as &quot;EPSG:4326&quot;</p></span></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>must be a string identifying a coordinate reference system.</p></dd></dl></div>
     </li><li name="geotrellis.vector.io.json.Style" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="StyleextendsProductwithSerializable"></a>
       <a id="Style:Style"></a>
@@ -277,7 +276,7 @@ It may be queried using .getAll[F &lt;: Feature[_] ] method.</p><p>It aggregates
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="WithCrs.html"><span class="name">WithCrs</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="t">t: <span class="extype" name="geotrellis.vector.io.json.WithCrs.T">T</span></span>, <span name="crs">crs: <a href="CRS.html" class="extype" name="geotrellis.vector.io.json.CRS">CRS</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="WithCrs.html"><span class="name">WithCrs</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="obj">obj: <span class="extype" name="geotrellis.vector.io.json.WithCrs.T">T</span></span>, <span name="crs">crs: <a href="JsonCRS.html" class="extype" name="geotrellis.vector.io.json.JsonCRS">JsonCRS</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.vector.io.json.package@WithCrs[T]extendsProductwithSerializable" title="Permalink" target="_top">
@@ -292,24 +291,7 @@ It may be queried using .getAll[F &lt;: Feature[_] ] method.</p><p>It aggregates
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="geotrellis.vector.io.json.BlankCRS" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="BlankCRS"></a>
-      <a id="BlankCRS:BlankCRS"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="BlankCRS$.html"><span class="name">BlankCRS</span></a><span class="result"> extends <a href="CRS.html" class="extype" name="geotrellis.vector.io.json.CRS">CRS</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.io.json.package@BlankCRS" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">A blank CRS field (will not be associated with GeoJSON object)</p>
-    </li><li name="geotrellis.vector.io.json.CrsFormats" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.vector.io.json.CrsFormats" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CrsFormats"></a>
       <a id="CrsFormats:CrsFormats"></a>
       <h4 class="signature">
