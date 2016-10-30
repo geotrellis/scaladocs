@@ -1148,18 +1148,18 @@ support combining a subset of the bands.</p></div><dl class="paramcmts block"><d
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a> → <a href="../../MacroGeotiffMultibandCombiners.html" class="extype" name="geotrellis.raster.MacroGeotiffMultibandCombiners">MacroGeotiffMultibandCombiners</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile#convert" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="convert(newCellType:geotrellis.raster.CellType):geotrellis.raster.MultibandTile"></a>
-      <a id="convert(CellType):MultibandTile"></a>
+      <a id="convert(newCellType:geotrellis.raster.CellType):geotrellis.raster.io.geotiff.GeoTiffMultibandTile"></a>
+      <a id="convert(CellType):GeoTiffMultibandTile"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">convert</span><span class="params">(<span name="newCellType">newCellType: <a href="../../package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>)</span><span class="result">: <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></span>
+        <span class="name">convert</span><span class="params">(<span name="newCellType">newCellType: <a href="../../package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>)</span><span class="result">: <a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile@convert(newCellType:geotrellis.raster.CellType):geotrellis.raster.MultibandTile" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile@convert(newCellType:geotrellis.raster.CellType):geotrellis.raster.io.geotiff.GeoTiffMultibandTile" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -1537,6 +1537,26 @@ MultibandTile starting at the given band.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile#interpretAs" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="interpretAs(newCellType:geotrellis.raster.CellType):geotrellis.raster.io.geotiff.GeoTiffMultibandTile"></a>
+      <a id="interpretAs(CellType):GeoTiffMultibandTile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">interpretAs</span><span class="params">(<span name="newCellType">newCellType: <a href="../../package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>)</span><span class="result">: <a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile@interpretAs(newCellType:geotrellis.raster.CellType):geotrellis.raster.io.geotiff.GeoTiffMultibandTile" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Changes the interpretation of the tile cells through changing NoData handling and optionally cell data type.</p><div class="fullcomment"><div class="comment cmt"><p>Changes the interpretation of the tile cells through changing NoData handling and optionally cell data type.
+If <a href="../../DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> portion of the <a href="../../package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a> is unchanged the tile data is not duplicated through conversion.
+If cell <a href="../../DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> conversion is required it is done in a naive way, without considering NoData handling.
+</p></div><dl class="paramcmts block"><dt class="param">newCellType</dt><dd class="cmt"><p>CellType to be used in interpreting existing cells</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile">UInt32GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -2005,6 +2025,23 @@ as a new <a href="../../MultibandTile.html" class="extype" name="geotrellis.rast
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile#withNoData" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withNoData(noDataValue:Option[Double]):geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile"></a>
+      <a id="withNoData(Option[Double]):UInt32GeoTiffMultibandTile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withNoData</span><span class="params">(<span name="noDataValue">noDataValue: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile">UInt32GeoTiffMultibandTile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile@withNoData(noDataValue:Option[Double]):geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Return tile tile as raw cell <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a> with No NoData handling</p><div class="fullcomment"><div class="comment cmt"><p>Return tile tile as raw cell <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a> with No NoData handling</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile">UInt32GeoTiffMultibandTile</a> → <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></dd></dl></div>
     </li></ol>
             </div>
 

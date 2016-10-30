@@ -377,7 +377,7 @@ the given type.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.BitConstantTile">BitConstantTile</a> → <a href="ConstantTile.html" class="extype" name="geotrellis.raster.ConstantTile">ConstantTile</a></dd></dl></div>
+      <p class="shortcomment cmt">Precomputed view of tile cells as seen by <a href="#getDouble(col:Int,row:Int):Double" class="extmbr" name="geotrellis.raster.BitConstantTile#getDouble">getDouble</a> method</p><div class="fullcomment"><div class="comment cmt"><p>Precomputed view of tile cells as seen by <a href="#getDouble(col:Int,row:Int):Double" class="extmbr" name="geotrellis.raster.BitConstantTile#getDouble">getDouble</a> method</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.BitConstantTile">BitConstantTile</a> → <a href="ConstantTile.html" class="extype" name="geotrellis.raster.ConstantTile">ConstantTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.Grid#dimensions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="dimensions:(Int,Int)"></a>
       <a id="dimensions:(Int,Int)"></a>
@@ -778,7 +778,27 @@ as a double, and returns nothing (presumably for side-effects).
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.BitConstantTile">BitConstantTile</a> → <a href="ConstantTile.html" class="extype" name="geotrellis.raster.ConstantTile">ConstantTile</a></dd></dl></div>
+      <p class="shortcomment cmt">Precomputed view of tile cells as seen by <a href="#get(col:Int,row:Int):Int" class="extmbr" name="geotrellis.raster.BitConstantTile#get">get</a> method</p><div class="fullcomment"><div class="comment cmt"><p>Precomputed view of tile cells as seen by <a href="#get(col:Int,row:Int):Int" class="extmbr" name="geotrellis.raster.BitConstantTile#get">get</a> method</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.BitConstantTile">BitConstantTile</a> → <a href="ConstantTile.html" class="extype" name="geotrellis.raster.ConstantTile">ConstantTile</a></dd></dl></div>
+    </li><li name="geotrellis.raster.ConstantTile#interpretAs" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="interpretAs(newCellType:geotrellis.raster.CellType):geotrellis.raster.Tile"></a>
+      <a id="interpretAs(CellType):Tile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">interpretAs</span><span class="params">(<span name="newCellType">newCellType: <a href="package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.BitConstantTile@interpretAs(newCellType:geotrellis.raster.CellType):geotrellis.raster.Tile" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Changes the interpretation of the tile cells through changing NoData handling and optionally cell data type.</p><div class="fullcomment"><div class="comment cmt"><p>Changes the interpretation of the tile cells through changing NoData handling and optionally cell data type.
+If <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> portion of the <a href="package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a> is unchanged the tile data is not duplicated through conversion.
+If cell <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> conversion is required it is done in a naive way, without considering NoData handling.
+</p></div><dl class="paramcmts block"><dt class="param">newCellType</dt><dd class="cmt"><p>CellType to be used in interpreting existing cells</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ConstantTile.html" class="extype" name="geotrellis.raster.ConstantTile">ConstantTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -1349,6 +1369,23 @@ two given values.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="geotrellis.raster.BitConstantTile#withNoData" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withNoData(noDataValue:Option[Double]):geotrellis.raster.ConstantTile"></a>
+      <a id="withNoData(Option[Double]):ConstantTile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withNoData</span><span class="params">(<span name="noDataValue">noDataValue: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="ConstantTile.html" class="extype" name="geotrellis.raster.ConstantTile">ConstantTile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.BitConstantTile@withNoData(noDataValue:Option[Double]):geotrellis.raster.ConstantTile" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.BitConstantTile">BitConstantTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
     </li></ol>
             </div>
 

@@ -289,6 +289,26 @@ function.</p>
       </a>
     </span>
       <p class="shortcomment cmt">Get value at given coordinates.</p>
+    </li><li name="geotrellis.raster.Tile#interpretAs" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="interpretAs(newCellType:geotrellis.raster.CellType):geotrellis.raster.Tile"></a>
+      <a id="interpretAs(CellType):Tile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">interpretAs</span><span class="params">(<span name="newCellType">newCellType: <a href="package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.Tile@interpretAs(newCellType:geotrellis.raster.CellType):geotrellis.raster.Tile" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Changes the interpretation of the tile cells through changing NoData handling and optionally cell data type.</p><div class="fullcomment"><div class="comment cmt"><p>Changes the interpretation of the tile cells through changing NoData handling and optionally cell data type.
+If <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> portion of the <a href="package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a> is unchanged the tile data is not duplicated through conversion.
+If cell <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> conversion is required it is done in a naive way, without considering NoData handling.
+</p></div><dl class="paramcmts block"><dt class="param">newCellType</dt><dd class="cmt"><p>CellType to be used in interpreting existing cells</p></dd></dl></div>
     </li><li name="geotrellis.raster.Tile#map" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="map(f:Int=&gt;Int):geotrellis.raster.Tile"></a>
       <a id="map((Int)⇒Int):Tile"></a>
@@ -467,6 +487,23 @@ doubles.</p>
     </span>
       <p class="shortcomment cmt">Return the data behind this <a href="" class="extype" name="geotrellis.raster.Tile">Tile</a>, or a copy, as an Array of
 bytes.</p>
+    </li><li name="geotrellis.raster.Tile#withNoData" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="withNoData(noDataValue:Option[Double]):geotrellis.raster.Tile"></a>
+      <a id="withNoData(Option[Double]):Tile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withNoData</span><span class="params">(<span name="noDataValue">noDataValue: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.Tile@withNoData(noDataValue:Option[Double]):geotrellis.raster.Tile" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li></ol>
             </div>
 

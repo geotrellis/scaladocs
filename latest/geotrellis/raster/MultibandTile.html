@@ -723,6 +723,26 @@ value for that cell value.</p><div class="fullcomment"><div class="comment cmt">
 takes in a band number and a value, and returns the foreached
 value for that cell value.
 </p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>The function</p></dd></dl></div>
+    </li><li name="geotrellis.raster.MultibandTile#interpretAs" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="interpretAs(newCellType:geotrellis.raster.CellType):geotrellis.raster.MultibandTile"></a>
+      <a id="interpretAs(CellType):MultibandTile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">interpretAs</span><span class="params">(<span name="newCellType">newCellType: <a href="package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.MultibandTile@interpretAs(newCellType:geotrellis.raster.CellType):geotrellis.raster.MultibandTile" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Changes the interpretation of the tile cells through changing NoData handling and optionally cell data type.</p><div class="fullcomment"><div class="comment cmt"><p>Changes the interpretation of the tile cells through changing NoData handling and optionally cell data type.
+If <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> portion of the <a href="package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a> is unchanged the tile data is not duplicated through conversion.
+If cell <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> conversion is required it is done in a naive way, without considering NoData handling.
+</p></div><dl class="paramcmts block"><dt class="param">newCellType</dt><dd class="cmt"><p>CellType to be used in interpreting existing cells</p></dd></dl></div>
     </li><li name="geotrellis.raster.MultibandTile#map" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="map(b0:Int)(f:Int=&gt;Int):geotrellis.raster.MultibandTile"></a>
       <a id="map(Int)((Int)⇒Int):MultibandTile"></a>
@@ -886,6 +906,23 @@ new double-valued multiband tile.
     </span>
       <p class="shortcomment cmt">Retrieve a subset of the bands of the present <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>
 as a new <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>.</p>
+    </li><li name="geotrellis.raster.MultibandTile#withNoData" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="withNoData(noDataValue:Option[Double]):geotrellis.raster.MultibandTile"></a>
+      <a id="withNoData(Option[Double]):MultibandTile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withNoData</span><span class="params">(<span name="noDataValue">noDataValue: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.MultibandTile@withNoData(noDataValue:Option[Double]):geotrellis.raster.MultibandTile" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Return tile tile as raw cell <a href="" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a> with No NoData handling</p>
     </li></ol>
             </div>
 
