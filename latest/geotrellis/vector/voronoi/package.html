@@ -82,8 +82,9 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">A class to compute the Delaunay triangulation of a set of points.</p><div class="fullcomment"><div class="comment cmt"><p>A class to compute the Delaunay triangulation of a set of points.  Details can be found in
-&lt;geotrellis_home&gt;/docs/vector/voronoi.md
+      <p class="shortcomment cmt">A class for triangulating a set of points to satisfy the delaunay property.</p><div class="fullcomment"><div class="comment cmt"><p>A class for triangulating a set of points to satisfy the delaunay property.
+Each resulting triangle's circumscribing circle will contain no other points
+of the input set.
 </p></div></div>
     </li><li name="geotrellis.vector.voronoi.DelaunayTriangulationArrayMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="DelaunayTriangulationArrayMethodsextendsMethodExtensions[Array[geotrellis.vector.Point]]"></a>
@@ -169,8 +170,15 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">A class to compute the Voronoi diagram of a set of points.</p><div class="fullcomment"><div class="comment cmt"><p>A class to compute the Voronoi diagram of a set of points.  See
-&lt;geotrellis_home&gt;/docs/vector/voronoi.md for more information.
+      <p class="shortcomment cmt">A class to compute the Voronoi diagram of a collection of points.</p><div class="fullcomment"><div class="comment cmt"><p>A class to compute the Voronoi diagram of a collection of points.  The Voronoi
+diagram partitions the plane into a set of non-overlapping convex polygonal
+cells in one-to-one correspondence with the input points.  The cells are
+defined as the region in the plane closer to the corresponding point than any
+other point.</p><p>This class is a simple wrapper around functionality provided by JTS.  That
+package elected to compute the Voronoi cells bounded by an arbitrary bounding
+triangle.  While this bounding triangle is large, it is not infinite nor
+user-specifiable.  If the target point set inhabits a region that is small with
+respect to the domain of interest, you may have to handle cell boundaries.
 </p></div></div>
     </li><li name="geotrellis.vector.voronoi.VoronoiDiagramArrayMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="VoronoiDiagramArrayMethodsextendsMethodExtensions[Array[geotrellis.vector.Point]]"></a>

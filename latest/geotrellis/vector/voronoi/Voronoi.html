@@ -49,8 +49,15 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A class to compute the Voronoi diagram of a set of points.  See
-&lt;geotrellis_home&gt;/docs/vector/voronoi.md for more information.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A class to compute the Voronoi diagram of a collection of points.  The Voronoi
+diagram partitions the plane into a set of non-overlapping convex polygonal
+cells in one-to-one correspondence with the input points.  The cells are
+defined as the region in the plane closer to the corresponding point than any
+other point.</p><p>This class is a simple wrapper around functionality provided by JTS.  That
+package elected to compute the Voronoi cells bounded by an arbitrary bounding
+triangle.  While this bounding triangle is large, it is not infinite nor
+user-specifiable.  If the target point set inhabits a region that is small with
+respect to the domain of interest, you may have to handle cell boundaries.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -91,7 +98,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.vector.voronoi.Voronoi#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(verts:Array[geotrellis.vector.Point],extent:geotrellis.vector.Extent):geotrellis.vector.voronoi.Voronoi"></a>
+      <a id="&lt;init&gt;(verts:Array[geotrellis.vector.Point]):geotrellis.vector.voronoi.Voronoi"></a>
       <a id="&lt;init&gt;:Voronoi"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -99,10 +106,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Voronoi</span><span class="params">(<span name="verts">verts: <span class="extype" name="scala.Array">Array</span>[<a href="../Point.html" class="extype" name="geotrellis.vector.Point">Point</a>]</span>, <span name="extent">extent: <a href="../Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span>
+        <span class="name">Voronoi</span><span class="params">(<span name="verts">verts: <span class="extype" name="scala.Array">Array</span>[<a href="../Point.html" class="extype" name="geotrellis.vector.Point">Point</a>]</span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Voronoi@&lt;init&gt;(verts:Array[geotrellis.vector.Point],extent:geotrellis.vector.Extent):geotrellis.vector.voronoi.Voronoi" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.vector.voronoi.Voronoi@&lt;init&gt;(verts:Array[geotrellis.vector.Point]):geotrellis.vector.voronoi.Voronoi" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -110,95 +117,7 @@
     </li></ol>
             </div>
 
-        <div id="types" class="types members">
-              <h3>Type Members</h3>
-              <ol><li name="geotrellis.vector.voronoi.Voronoi.BoundedRay" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="BoundedRayextendsVoronoi.this.CellBoundwithProductwithSerializable"></a>
-      <a id="BoundedRay:BoundedRay"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="Voronoi$BoundedRay.html"><span class="name">BoundedRay</span></a><span class="params">(<span name="base">base: <a href="../Point.html" class="extype" name="geotrellis.vector.Point">Point</a></span>, <span name="dir">dir: <a href="Voronoi$V2.html" class="extype" name="geotrellis.vector.voronoi.Voronoi.V2">V2</a></span>)</span><span class="result"> extends <a href="Voronoi$CellBound.html" class="extype" name="geotrellis.vector.voronoi.Voronoi.CellBound">CellBound</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Voronoi@BoundedRayextendsVoronoi.this.CellBoundwithProductwithSerializable" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.vector.voronoi.Voronoi.CellBound" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="CellBoundextendsAnyRef"></a>
-      <a id="CellBound:CellBound"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">sealed </span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="Voronoi$CellBound.html"><span class="name">CellBound</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Voronoi@CellBoundextendsAnyRef" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.vector.voronoi.Voronoi.Ray" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="RayextendsVoronoi.this.CellBoundwithProductwithSerializable"></a>
-      <a id="Ray:Ray"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="Voronoi$Ray.html"><span class="name">Ray</span></a><span class="params">(<span name="base">base: <a href="../Point.html" class="extype" name="geotrellis.vector.Point">Point</a></span>, <span name="dir">dir: <a href="Voronoi$V2.html" class="extype" name="geotrellis.vector.voronoi.Voronoi.V2">V2</a></span>)</span><span class="result"> extends <a href="Voronoi$CellBound.html" class="extype" name="geotrellis.vector.voronoi.Voronoi.CellBound">CellBound</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Voronoi@RayextendsVoronoi.this.CellBoundwithProductwithSerializable" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.vector.voronoi.Voronoi.ReverseRay" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ReverseRayextendsVoronoi.this.CellBoundwithProductwithSerializable"></a>
-      <a id="ReverseRay:ReverseRay"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="Voronoi$ReverseRay.html"><span class="name">ReverseRay</span></a><span class="params">(<span name="base">base: <a href="../Point.html" class="extype" name="geotrellis.vector.Point">Point</a></span>, <span name="dir">dir: <a href="Voronoi$V2.html" class="extype" name="geotrellis.vector.voronoi.Voronoi.V2">V2</a></span>)</span><span class="result"> extends <a href="Voronoi$CellBound.html" class="extype" name="geotrellis.vector.voronoi.Voronoi.CellBound">CellBound</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Voronoi@ReverseRayextendsVoronoi.this.CellBoundwithProductwithSerializable" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.vector.voronoi.Voronoi.V2" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="V2extendsProductwithSerializable"></a>
-      <a id="V2:V2"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="Voronoi$V2.html"><span class="name">V2</span></a><span class="params">(<span name="v">v: <span class="extype" name="org.apache.commons.math3.linear.RealVector">RealVector</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Voronoi@V2extendsProductwithSerializable" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li></ol>
-            </div>
+        
 
         
 
@@ -255,23 +174,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.vector.voronoi.Voronoi.V2" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="V2"></a>
-      <a id="V2:V2"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Voronoi$V2$.html"><span class="name">V2</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Voronoi@V2" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -312,23 +214,23 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.vector.voronoi.Voronoi#dt" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="dt:geotrellis.vector.voronoi.Delaunay"></a>
-      <a id="dt:Delaunay"></a>
+    </li><li name="geotrellis.vector.voronoi.Voronoi#del" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="del:geotrellis.vector.voronoi.Delaunay"></a>
+      <a id="del:Delaunay"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">dt</span><span class="result">: <a href="Delaunay.html" class="extype" name="geotrellis.vector.voronoi.Delaunay">Delaunay</a></span>
+        <span class="name">del</span><span class="result">: <a href="Delaunay.html" class="extype" name="geotrellis.vector.voronoi.Delaunay">Delaunay</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Voronoi@dt:geotrellis.vector.voronoi.Delaunay" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.vector.voronoi.Voronoi@del:geotrellis.vector.voronoi.Delaunay" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">The dual Delaunay triangulation of the Voronoi diagram.</p>
+      
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -363,23 +265,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.vector.voronoi.Voronoi#extent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="extent:geotrellis.vector.Extent"></a>
-      <a id="extent:Extent"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">extent</span><span class="result">: <a href="../Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Voronoi@extent:geotrellis.vector.Extent" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -556,82 +441,40 @@
       </a>
     </span>
       
-    </li><li name="geotrellis.vector.voronoi.Voronoi#voronoiCell" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="voronoiCell(i:Int):geotrellis.vector.Polygon"></a>
-      <a id="voronoiCell(Int):Polygon"></a>
+    </li><li name="geotrellis.vector.voronoi.Voronoi#voronoiCells" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="voronoiCells():Seq[geotrellis.vector.Polygon]"></a>
+      <a id="voronoiCells():Seq[Polygon]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">voronoiCell</span><span class="params">(<span name="i">i: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a></span>
+        <span class="name">voronoiCells</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="../Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Voronoi@voronoiCell(i:Int):geotrellis.vector.Polygon" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.vector.voronoi.Voronoi@voronoiCells():Seq[geotrellis.vector.Polygon]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">A method to generate the Voronoi cell corresponding to the point in verts(i).</p><div class="fullcomment"><div class="comment cmt"><p>A method to generate the Voronoi cell corresponding to the point in verts(i).  Note that if
-verts(i) is not distinct, this function may raise an exception.
-</p></div></div>
-    </li><li name="geotrellis.vector.voronoi.Voronoi#voronoiCell" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="voronoiCell(incidentEdge:geotrellis.vector.voronoi.HalfEdge[Int,geotrellis.vector.Point]):geotrellis.vector.Polygon"></a>
-      <a id="voronoiCell(HalfEdge[Int,Point]):Polygon"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">voronoiCell</span><span class="params">(<span name="incidentEdge">incidentEdge: <a href="HalfEdge.html" class="extype" name="geotrellis.vector.voronoi.HalfEdge">HalfEdge</a>[<span class="extype" name="scala.Int">Int</span>, <a href="../Point.html" class="extype" name="geotrellis.vector.Point">Point</a>]</span>)</span><span class="result">: <a href="../Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Voronoi@voronoiCell(incidentEdge:geotrellis.vector.voronoi.HalfEdge[Int,geotrellis.vector.Point]):geotrellis.vector.Polygon" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">A method to generate the Voronoi cell corresponding to the point in verts(incidentEdge.vert).</p><div class="fullcomment"><div class="comment cmt"><p>A method to generate the Voronoi cell corresponding to the point in verts(incidentEdge.vert).
-If the incident edge is not an interior edge (incidentEdge.face == None) the results are
-undefined.
-</p></div></div>
-    </li><li name="geotrellis.vector.voronoi.Voronoi#voronoiCells" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="voronoiCells():Iterator[geotrellis.vector.Polygon]"></a>
-      <a id="voronoiCells():Iterator[Polygon]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">voronoiCells</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[<a href="../Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Voronoi@voronoiCells():Iterator[geotrellis.vector.Polygon]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">The polygonal regions of the Voronoi diagram.</p><div class="fullcomment"><div class="comment cmt"><p>The polygonal regions of the Voronoi diagram.  There exists one such convex polygon for each
-distinct vector of verts.
-</p></div></div>
+      
     </li><li name="geotrellis.vector.voronoi.Voronoi#voronoiCellsWithPoints" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="voronoiCellsWithPoints():Iterator[(geotrellis.vector.Polygon,geotrellis.vector.Point)]"></a>
-      <a id="voronoiCellsWithPoints():Iterator[(Polygon,Point)]"></a>
+      <a id="voronoiCellsWithPoints:Seq[(geotrellis.vector.Polygon,geotrellis.vector.Point)]"></a>
+      <a id="voronoiCellsWithPoints:Seq[(Polygon,Point)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">voronoiCellsWithPoints</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[(<a href="../Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a>, <a href="../Point.html" class="extype" name="geotrellis.vector.Point">Point</a>)]</span>
+        <span class="name">voronoiCellsWithPoints</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[(<a href="../Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a>, <a href="../Point.html" class="extype" name="geotrellis.vector.Point">Point</a>)]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Voronoi@voronoiCellsWithPoints():Iterator[(geotrellis.vector.Polygon,geotrellis.vector.Point)]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.vector.voronoi.Voronoi@voronoiCellsWithPoints:Seq[(geotrellis.vector.Polygon,geotrellis.vector.Point)]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Provides an iterator over the Voronoi cells of the diagram and the points that defined the
-corresponding polygonal regions.</p>
+      
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>

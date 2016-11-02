@@ -49,8 +49,9 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A class to compute the Delaunay triangulation of a set of points.  Details can be found in
-&lt;geotrellis_home&gt;/docs/vector/voronoi.md
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A class for triangulating a set of points to satisfy the delaunay property.
+Each resulting triangle's circumscribing circle will contain no other points
+of the input set.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -167,23 +168,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.vector.voronoi.Delaunay#_faceIncidentToVertex" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="_faceIncidentToVertex:scala.collection.mutable.Map[Int,geotrellis.vector.voronoi.HalfEdge[Int,geotrellis.vector.Point]]"></a>
-      <a id="_faceIncidentToVertex:Map[Int,HalfEdge[Int,Point]]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">_faceIncidentToVertex</span><span class="result">: <span class="extype" name="scala.collection.mutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="HalfEdge.html" class="extype" name="geotrellis.vector.voronoi.HalfEdge">HalfEdge</a>[<span class="extype" name="scala.Int">Int</span>, <a href="../Point.html" class="extype" name="geotrellis.vector.Point">Point</a>]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Delaunay@_faceIncidentToVertex:scala.collection.mutable.Map[Int,geotrellis.vector.voronoi.HalfEdge[Int,geotrellis.vector.Point]]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -201,26 +185,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.vector.voronoi.Delaunay#boundary" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="boundary:geotrellis.vector.voronoi.HalfEdge[Int,geotrellis.vector.Point]"></a>
-      <a id="boundary:HalfEdge[Int,Point]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">boundary</span><span class="result">: <a href="HalfEdge.html" class="extype" name="geotrellis.vector.voronoi.HalfEdge">HalfEdge</a>[<span class="extype" name="scala.Int">Int</span>, <a href="../Point.html" class="extype" name="geotrellis.vector.Point">Point</a>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Delaunay@boundary:geotrellis.vector.voronoi.HalfEdge[Int,geotrellis.vector.Point]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Provides a handle on the bounding loop of a Delaunay triangulation.</p><div class="fullcomment"><div class="comment cmt"><p>Provides a handle on the bounding loop of a Delaunay triangulation.  All of the half-edges
-reachable by applying next to boundary have no bounding face information.  That is
-boundary(.next)*.face == None.
-</p></div></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -261,27 +225,6 @@ boundary(.next)*.face == None.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.vector.voronoi.Delaunay#faceIncidentToVertex" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="faceIncidentToVertex:scala.collection.immutable.Map[Int,geotrellis.vector.voronoi.HalfEdge[Int,geotrellis.vector.Point]]"></a>
-      <a id="faceIncidentToVertex:Map[Int,HalfEdge[Int,Point]]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">faceIncidentToVertex</span><span class="result">: <span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <a href="HalfEdge.html" class="extype" name="geotrellis.vector.voronoi.HalfEdge">HalfEdge</a>[<span class="extype" name="scala.Int">Int</span>, <a href="../Point.html" class="extype" name="geotrellis.vector.Point">Point</a>]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Delaunay@faceIncidentToVertex:scala.collection.immutable.Map[Int,geotrellis.vector.voronoi.HalfEdge[Int,geotrellis.vector.Point]]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">A catalog of edges incident on the vertices of a Delaunay triangulation.</p><div class="fullcomment"><div class="comment cmt"><p>A catalog of edges incident on the vertices of a Delaunay triangulation.  These half edges may
-be used to navigate the faces that have a given point as a vertex.  For example, all edges
-incident on vertex i may be visited by repeated application of the rotCCWDest() method of
-HalfEdge on faceIncidentToVertex(i).
-</p></div></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -407,28 +350,23 @@ HalfEdge on faceIncidentToVertex(i).
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.vector.voronoi.Delaunay#triangles" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="triangles:scala.collection.immutable.Map[(Int,Int,Int),geotrellis.vector.voronoi.HalfEdge[Int,geotrellis.vector.Point]]"></a>
-      <a id="triangles:Map[(Int,Int,Int),HalfEdge[Int,Point]]"></a>
+    </li><li name="geotrellis.vector.voronoi.Delaunay#triangles" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="triangles:Seq[geotrellis.vector.Polygon]"></a>
+      <a id="triangles:Seq[Polygon]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">triangles</span><span class="result">: <span class="extype" name="scala.collection.immutable.Map">Map</span>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>), <a href="HalfEdge.html" class="extype" name="geotrellis.vector.voronoi.HalfEdge">HalfEdge</a>[<span class="extype" name="scala.Int">Int</span>, <a href="../Point.html" class="extype" name="geotrellis.vector.Point">Point</a>]]</span>
+        <span class="name">triangles</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="../Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Delaunay@triangles:scala.collection.immutable.Map[(Int,Int,Int),geotrellis.vector.voronoi.HalfEdge[Int,geotrellis.vector.Point]]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.vector.voronoi.Delaunay@triangles:Seq[geotrellis.vector.Polygon]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">A catalog of the triangles produced by the Delaunay triangulation as a Map from (Int,Int,Int)
-to HalfEdge[Int,Point].</p><div class="fullcomment"><div class="comment cmt"><p>A catalog of the triangles produced by the Delaunay triangulation as a Map from (Int,Int,Int)
-to HalfEdge[Int,Point].  All integers are indices of points in verts, while the Points describe
-the center of the circumscribing circle for the triangle.  The Int triples give the triangle
-vertices in counter-clockwise order, starting from the lowest-numbered vertex.
-</p></div></div>
+      
     </li><li name="geotrellis.vector.voronoi.Delaunay#verts" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="verts:Array[geotrellis.vector.Point]"></a>
       <a id="verts:Array[Point]"></a>
