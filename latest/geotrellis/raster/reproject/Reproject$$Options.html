@@ -47,14 +47,14 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Options</span><span class="params">(<span name="method">method: <a href="../resample/ResampleMethod.html" class="extype" name="geotrellis.raster.resample.ResampleMethod">ResampleMethod</a> = <span class="symbol"><span class="name"><a href="../../package.html">NearestNeighbor</a></span></span></span>, <span name="errorThreshold">errorThreshold: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">0.125</span></span>, <span name="parentGridExtent">parentGridExtent: <span class="extype" name="scala.Option">Option</span>[<a href="../GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>] = <span class="symbol">None</span></span>, <span name="targetCellSize">targetCellSize: <span class="extype" name="scala.Option">Option</span>[<a href="../CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">Options</span><span class="params">(<span name="method">method: <a href="../resample/ResampleMethod.html" class="extype" name="geotrellis.raster.resample.ResampleMethod">ResampleMethod</a> = <span class="symbol"><span class="name"><a href="../../package.html">NearestNeighbor</a></span></span></span>, <span name="errorThreshold">errorThreshold: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">0.125</span></span>, <span name="parentGridExtent">parentGridExtent: <span class="extype" name="scala.Option">Option</span>[<a href="../GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>] = <span class="symbol">None</span></span>, <span name="targetRasterExtent">targetRasterExtent: <span class="extype" name="scala.Option">Option</span>[<a href="../RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>] = <span class="symbol">None</span></span>, <span name="targetCellSize">targetCellSize: <span class="extype" name="scala.Option">Option</span>[<a href="../CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Reprojection options.
 </p></div><dl class="paramcmts block"><dt class="param">method</dt><dd class="cmt"><p>The resampling method that will be used in this reprojection.</p></dd><dt class="param">errorThreshold</dt><dd class="cmt"><p>Error threshold when using approximate row transformations in reprojection.
                                  This default comes from GDAL 1.11 code.</p></dd><dt class="param">parentGridExtent</dt><dd class="cmt"><p>An optional GridExtent that if set represents the target grid extent for some
-                                 parent window, which reprojected extents will snap to. Use with caution.</p></dd><dt class="param">targetCellSize</dt><dd class="cmt"><p>An optional cell size that if set will be used for for the projected raster.
+                                 parent window, which reprojected extents will snap to. Use with caution.</p></dd><dt class="param">targetRasterExtent</dt><dd class="cmt"><p>The target raster extent to reproject to.</p></dd><dt class="param">targetCellSize</dt><dd class="cmt"><p>An optional cell size that if set will be used for for the projected raster.
                                  Use with caution.</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -95,7 +95,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.raster.reproject.Reproject.Options#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(method:geotrellis.raster.resample.ResampleMethod,errorThreshold:Double,parentGridExtent:Option[geotrellis.raster.GridExtent],targetCellSize:Option[geotrellis.raster.CellSize]):geotrellis.raster.reproject.Reproject.Options"></a>
+      <a id="&lt;init&gt;(method:geotrellis.raster.resample.ResampleMethod,errorThreshold:Double,parentGridExtent:Option[geotrellis.raster.GridExtent],targetRasterExtent:Option[geotrellis.raster.RasterExtent],targetCellSize:Option[geotrellis.raster.CellSize]):geotrellis.raster.reproject.Reproject.Options"></a>
       <a id="&lt;init&gt;:Options"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -103,16 +103,16 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Options</span><span class="params">(<span name="method">method: <a href="../resample/ResampleMethod.html" class="extype" name="geotrellis.raster.resample.ResampleMethod">ResampleMethod</a> = <span class="symbol"><span class="name"><a href="../../package.html">NearestNeighbor</a></span></span></span>, <span name="errorThreshold">errorThreshold: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">0.125</span></span>, <span name="parentGridExtent">parentGridExtent: <span class="extype" name="scala.Option">Option</span>[<a href="../GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>] = <span class="symbol">None</span></span>, <span name="targetCellSize">targetCellSize: <span class="extype" name="scala.Option">Option</span>[<a href="../CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a>] = <span class="symbol">None</span></span>)</span>
+        <span class="name">Options</span><span class="params">(<span name="method">method: <a href="../resample/ResampleMethod.html" class="extype" name="geotrellis.raster.resample.ResampleMethod">ResampleMethod</a> = <span class="symbol"><span class="name"><a href="../../package.html">NearestNeighbor</a></span></span></span>, <span name="errorThreshold">errorThreshold: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">0.125</span></span>, <span name="parentGridExtent">parentGridExtent: <span class="extype" name="scala.Option">Option</span>[<a href="../GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>] = <span class="symbol">None</span></span>, <span name="targetRasterExtent">targetRasterExtent: <span class="extype" name="scala.Option">Option</span>[<a href="../RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>] = <span class="symbol">None</span></span>, <span name="targetCellSize">targetCellSize: <span class="extype" name="scala.Option">Option</span>[<a href="../CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a>] = <span class="symbol">None</span></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.reproject.Reproject$$Options@&lt;init&gt;(method:geotrellis.raster.resample.ResampleMethod,errorThreshold:Double,parentGridExtent:Option[geotrellis.raster.GridExtent],targetCellSize:Option[geotrellis.raster.CellSize]):geotrellis.raster.reproject.Reproject.Options" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.reproject.Reproject$$Options@&lt;init&gt;(method:geotrellis.raster.resample.ResampleMethod,errorThreshold:Double,parentGridExtent:Option[geotrellis.raster.GridExtent],targetRasterExtent:Option[geotrellis.raster.RasterExtent],targetCellSize:Option[geotrellis.raster.CellSize]):geotrellis.raster.reproject.Reproject.Options" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">method</dt><dd class="cmt"><p>The resampling method that will be used in this reprojection.</p></dd><dt class="param">errorThreshold</dt><dd class="cmt"><p>Error threshold when using approximate row transformations in reprojection.
                                  This default comes from GDAL 1.11 code.</p></dd><dt class="param">parentGridExtent</dt><dd class="cmt"><p>An optional GridExtent that if set represents the target grid extent for some
-                                 parent window, which reprojected extents will snap to. Use with caution.</p></dd><dt class="param">targetCellSize</dt><dd class="cmt"><p>An optional cell size that if set will be used for for the projected raster.
+                                 parent window, which reprojected extents will snap to. Use with caution.</p></dd><dt class="param">targetRasterExtent</dt><dd class="cmt"><p>The target raster extent to reproject to.</p></dd><dt class="param">targetCellSize</dt><dd class="cmt"><p>An optional cell size that if set will be used for for the projected raster.
                                  Use with caution.</p></dd></dl></div>
     </li></ol>
             </div>
@@ -428,6 +428,23 @@
     </span>
       <p class="shortcomment cmt">An optional cell size that if set will be used for for the projected raster.</p><div class="fullcomment"><div class="comment cmt"><p>An optional cell size that if set will be used for for the projected raster.
                                  Use with caution.</p></div></div>
+    </li><li name="geotrellis.raster.reproject.Reproject.Options#targetRasterExtent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="targetRasterExtent:Option[geotrellis.raster.RasterExtent]"></a>
+      <a id="targetRasterExtent:Option[RasterExtent]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">targetRasterExtent</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.reproject.Reproject$$Options@targetRasterExtent:Option[geotrellis.raster.RasterExtent]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The target raster extent to reproject to.</p>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
