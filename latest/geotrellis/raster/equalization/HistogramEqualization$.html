@@ -163,10 +163,12 @@ http://www.math.uci.edu/icamp/courses/math77c/demos/hist_eq.pdf
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Given a <a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a> and a <span class="extype" name="Histogram[T">Histogram[T</span>] for each of its
-bands, return a MultibandTile whose bands all have equalized
-histograms.</p><div class="fullcomment"><div class="comment cmt"><p>Given a <a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a> and a <span class="extype" name="Histogram[T">Histogram[T</span>] for each of its
-bands, return a MultibandTile whose bands all have equalized
+      <p class="shortcomment cmt">Given a <a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a> and a
+<a href="../histogram/Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">geotrellis.raster.histogram.Histogram</a> for each of its bands,
+return a MultibandTile whose bands all have equalized
+histograms.</p><div class="fullcomment"><div class="comment cmt"><p>Given a <a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a> and a
+<a href="../histogram/Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">geotrellis.raster.histogram.Histogram</a> for each of its bands,
+return a MultibandTile whose bands all have equalized
 histograms.
 </p></div><dl class="paramcmts block"><dt class="param">tile</dt><dd class="cmt"><p>A multiband tile</p></dd><dt class="param">histograms</dt><dd class="cmt"><p>A sequence of histograms, one for each band</p></dd><dt>returns</dt><dd class="cmt"><p>A multiband tile with improved contrast</p></dd></dl></div>
     </li><li name="geotrellis.raster.equalization.HistogramEqualization#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -205,8 +207,10 @@ all have equalized histograms.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Given a <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> and a <span class="extype" name="Histogram[T">Histogram[T</span>], return a Tile with an
-equalized histogram.</p><div class="fullcomment"><div class="comment cmt"><p>Given a <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> and a <span class="extype" name="Histogram[T">Histogram[T</span>], return a Tile with an
+      <p class="shortcomment cmt">Given a <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> and a
+<a href="../histogram/Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">geotrellis.raster.histogram.Histogram</a>, return a Tile with an
+equalized histogram.</p><div class="fullcomment"><div class="comment cmt"><p>Given a <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> and a
+<a href="../histogram/Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">geotrellis.raster.histogram.Histogram</a>, return a Tile with an
 equalized histogram.
 </p></div><dl class="paramcmts block"><dt class="param">tile</dt><dd class="cmt"><p>A singleband tile</p></dd><dt class="param">histogram</dt><dd class="cmt"><p>The histogram of the tile</p></dd><dt>returns</dt><dd class="cmt"><p>A singleband tile with improved contrast</p></dd></dl></div>
     </li><li name="geotrellis.raster.equalization.HistogramEqualization#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -358,6 +362,29 @@ equalized histogram.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.raster.equalization.HistogramEqualization#intensityToCdf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="intensityToCdf(cellType:geotrellis.raster.CellType,cdf:Array[(Double,Double)])(x:Double):Double"></a>
+      <a id="intensityToCdf(CellType,Array[(Double,Double)])(Double):Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">intensityToCdf</span><span class="params">(<span name="cellType">cellType: <a href="../package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>, <span name="cdf">cdf: <span class="extype" name="scala.Array">Array</span>[(<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>)]</span>)</span><span class="params">(<span name="x">x: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.equalization.HistogramEqualization$@intensityToCdf(cellType:geotrellis.raster.CellType,cdf:Array[(Double,Double)])(x:Double):Double" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Given a <a href="../package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a> and a CDF, this function produces a
+function that takes an intensity x to CDF(x).</p><div class="fullcomment"><div class="comment cmt"><p>Given a <a href="../package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a> and a CDF, this function produces a
+function that takes an intensity x to CDF(x).
+</p></div><dl class="paramcmts block"><dt class="param">cellType</dt><dd class="cmt"><p>The CellType in which the intensity x is given</p></dd><dt class="param">cdf</dt><dd class="cmt"><p>The CDF</p></dd><dt class="param">x</dt><dd class="cmt"><p>An intensity value which is mapped to CDF(x) by the returned function</p></dd><dt>returns</dt><dd class="cmt"><p>A function from Double =&gt; Double which maps x to CDF(x)</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -443,6 +470,31 @@ equalized histogram.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.raster.equalization.HistogramEqualization#toIntensity" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toIntensity(cellType:geotrellis.raster.CellType,x:Double):Double"></a>
+      <a id="toIntensity(CellType,Double):Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toIntensity</span><span class="params">(<span name="cellType">cellType: <a href="../package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>, <span name="x">x: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.equalization.HistogramEqualization$@toIntensity(cellType:geotrellis.raster.CellType,x:Double):Double" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Given a <a href="../package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a> and an intensity value in the unit
+interval, this function returns an corresponding intensity value
+appropriately scaled for the given cell type.</p><div class="fullcomment"><div class="comment cmt"><p>Given a <a href="../package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a> and an intensity value in the unit
+interval, this function returns an corresponding intensity value
+appropriately scaled for the given cell type.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>

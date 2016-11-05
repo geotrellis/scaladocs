@@ -294,25 +294,25 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="geotrellis.spark.sigmoidal.RDDSigmoidalContrast#multiband" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="multiband[K,V,M](rdd:org.apache.spark.rdd.RDD[(K,V)],alpha:Double,beta:Double)(implicitevidence$3:V=&gt;geotrellis.raster.MultibandTile,implicitevidence$4:scala.reflect.ClassTag[V]):org.apache.spark.rdd.RDD[(K,geotrellis.raster.MultibandTile)]"></a>
-      <a id="multiband[K,V,M](RDD[(K,V)],Double,Double)((V)⇒MultibandTile,ClassTag[V]):RDD[(K,MultibandTile)]"></a>
+      <a id="multiband[K,V](rdd:org.apache.spark.rdd.RDD[(K,V)],alpha:Double,beta:Double)(implicitevidence$2:V=&gt;geotrellis.raster.MultibandTile):org.apache.spark.rdd.RDD[(K,geotrellis.raster.MultibandTile)]"></a>
+      <a id="multiband[K,V](RDD[(K,V)],Double,Double)((V)⇒MultibandTile):RDD[(K,MultibandTile)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">multiband</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="M">M</span>]</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.sigmoidal.RDDSigmoidalContrast.multiband.K">K</span>, <span class="extype" name="geotrellis.spark.sigmoidal.RDDSigmoidalContrast.multiband.V">V</span>)]</span>, <span name="alpha">alpha: <span class="extype" name="scala.Double">Double</span></span>, <span name="beta">beta: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (<span class="extype" name="geotrellis.spark.sigmoidal.RDDSigmoidalContrast.multiband.V">V</span>) ⇒ <a href="../../raster/MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></span>, <span name="arg1">arg1: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.sigmoidal.RDDSigmoidalContrast.multiband.V">V</span>]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.sigmoidal.RDDSigmoidalContrast.multiband.K">K</span>, <a href="../../raster/MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>)]</span>
+        <span class="name">multiband</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.sigmoidal.RDDSigmoidalContrast.multiband.K">K</span>, <span class="extype" name="geotrellis.spark.sigmoidal.RDDSigmoidalContrast.multiband.V">V</span>)]</span>, <span name="alpha">alpha: <span class="extype" name="scala.Double">Double</span></span>, <span name="beta">beta: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (<span class="extype" name="geotrellis.spark.sigmoidal.RDDSigmoidalContrast.multiband.V">V</span>) ⇒ <a href="../../raster/MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.sigmoidal.RDDSigmoidalContrast.multiband.K">K</span>, <a href="../../raster/MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>)]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.sigmoidal.RDDSigmoidalContrast$@multiband[K,V,M](rdd:org.apache.spark.rdd.RDD[(K,V)],alpha:Double,beta:Double)(implicitevidence$3:V=&gt;geotrellis.raster.MultibandTile,implicitevidence$4:scala.reflect.ClassTag[V]):org.apache.spark.rdd.RDD[(K,geotrellis.raster.MultibandTile)]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.sigmoidal.RDDSigmoidalContrast$@multiband[K,V](rdd:org.apache.spark.rdd.RDD[(K,V)],alpha:Double,beta:Double)(implicitevidence$2:V=&gt;geotrellis.raster.MultibandTile):org.apache.spark.rdd.RDD[(K,geotrellis.raster.MultibandTile)]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Given an RDD of <span class="extype" name="MultibandTile">MultibandTile</span> objects and parameters alpha
-and beta, return an RDD of tiles where the sigmoidal contrast
-operation has been performed on each band of each tile.</p><div class="fullcomment"><div class="comment cmt"><p>Given an RDD of <span class="extype" name="MultibandTile">MultibandTile</span> objects and parameters alpha
-and beta, return an RDD of tiles where the sigmoidal contrast
+      <p class="shortcomment cmt">Given an RDD of MultibandTile objects and parameters alpha and
+beta, return an RDD of tiles where the sigmoidal contrast
+operation has been performed on each band of each tile.</p><div class="fullcomment"><div class="comment cmt"><p>Given an RDD of MultibandTile objects and parameters alpha and
+beta, return an RDD of tiles where the sigmoidal contrast
 operation has been performed on each band of each tile.</p><p>The approach used is described here:
 https://www.imagemagick.org/Usage/color_mods/#sigmoidal
 </p></div><dl class="paramcmts block"><dt class="param">rdd</dt><dd class="cmt"><p>An RDD of input tiles</p></dd><dt class="param">alpha</dt><dd class="cmt"><p>The center around-which the stretch is performed (given as a fraction)</p></dd><dt class="param">beta</dt><dd class="cmt"><p>The standard deviation in the computation, used to avoid saturating the upper and lower parts of the gamut</p></dd><dt>returns</dt><dd class="cmt"><p>An RDD of output tiles</p></dd></dl></div>
@@ -368,24 +368,24 @@ https://www.imagemagick.org/Usage/color_mods/#sigmoidal
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="geotrellis.spark.sigmoidal.RDDSigmoidalContrast#singleband" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="singleband[K,V,M](rdd:org.apache.spark.rdd.RDD[(K,V)],alpha:Double,beta:Double)(implicitevidence$1:V=&gt;geotrellis.raster.Tile,implicitevidence$2:scala.reflect.ClassTag[V]):org.apache.spark.rdd.RDD[(K,geotrellis.raster.Tile)]"></a>
-      <a id="singleband[K,V,M](RDD[(K,V)],Double,Double)((V)⇒Tile,ClassTag[V]):RDD[(K,Tile)]"></a>
+      <a id="singleband[K,V](rdd:org.apache.spark.rdd.RDD[(K,V)],alpha:Double,beta:Double)(implicitevidence$1:V=&gt;geotrellis.raster.Tile):org.apache.spark.rdd.RDD[(K,geotrellis.raster.Tile)]"></a>
+      <a id="singleband[K,V](RDD[(K,V)],Double,Double)((V)⇒Tile):RDD[(K,Tile)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">singleband</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="M">M</span>]</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.sigmoidal.RDDSigmoidalContrast.singleband.K">K</span>, <span class="extype" name="geotrellis.spark.sigmoidal.RDDSigmoidalContrast.singleband.V">V</span>)]</span>, <span name="alpha">alpha: <span class="extype" name="scala.Double">Double</span></span>, <span name="beta">beta: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (<span class="extype" name="geotrellis.spark.sigmoidal.RDDSigmoidalContrast.singleband.V">V</span>) ⇒ <a href="../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>, <span name="arg1">arg1: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.sigmoidal.RDDSigmoidalContrast.singleband.V">V</span>]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.sigmoidal.RDDSigmoidalContrast.singleband.K">K</span>, <a href="../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>)]</span>
+        <span class="name">singleband</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.sigmoidal.RDDSigmoidalContrast.singleband.K">K</span>, <span class="extype" name="geotrellis.spark.sigmoidal.RDDSigmoidalContrast.singleband.V">V</span>)]</span>, <span name="alpha">alpha: <span class="extype" name="scala.Double">Double</span></span>, <span name="beta">beta: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (<span class="extype" name="geotrellis.spark.sigmoidal.RDDSigmoidalContrast.singleband.V">V</span>) ⇒ <a href="../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.sigmoidal.RDDSigmoidalContrast.singleband.K">K</span>, <a href="../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>)]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.sigmoidal.RDDSigmoidalContrast$@singleband[K,V,M](rdd:org.apache.spark.rdd.RDD[(K,V)],alpha:Double,beta:Double)(implicitevidence$1:V=&gt;geotrellis.raster.Tile,implicitevidence$2:scala.reflect.ClassTag[V]):org.apache.spark.rdd.RDD[(K,geotrellis.raster.Tile)]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.sigmoidal.RDDSigmoidalContrast$@singleband[K,V](rdd:org.apache.spark.rdd.RDD[(K,V)],alpha:Double,beta:Double)(implicitevidence$1:V=&gt;geotrellis.raster.Tile):org.apache.spark.rdd.RDD[(K,geotrellis.raster.Tile)]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Given an RDD of <span class="extype" name="Tile">Tile</span> objects and parameters alpha and beta,
+      <p class="shortcomment cmt">Given an RDD of Tile objects and parameters alpha and beta,
 return an RDD of tiles upon-which the sigmoidal contrast
-operation has been performed.</p><div class="fullcomment"><div class="comment cmt"><p>Given an RDD of <span class="extype" name="Tile">Tile</span> objects and parameters alpha and beta,
+operation has been performed.</p><div class="fullcomment"><div class="comment cmt"><p>Given an RDD of Tile objects and parameters alpha and beta,
 return an RDD of tiles upon-which the sigmoidal contrast
 operation has been performed.</p><p>The approach used is described here:
 https://www.imagemagick.org/Usage/color_mods/#sigmoidal

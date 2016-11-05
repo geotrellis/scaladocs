@@ -309,15 +309,13 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Given an RDD of <span class="extype" name="MultibandTile">MultibandTile</span> objects and a sequence of
-<span class="extype" name="Histogram">Histogram</span> objects (on per band) derived from all of the
-tiles, return another RDD of multiband tiles where the
-respective bands of the respective tiles have had their
-histograms equalized.</p><div class="fullcomment"><div class="comment cmt"><p>Given an RDD of <span class="extype" name="MultibandTile">MultibandTile</span> objects and a sequence of
-<span class="extype" name="Histogram">Histogram</span> objects (on per band) derived from all of the
-tiles, return another RDD of multiband tiles where the
-respective bands of the respective tiles have had their
-histograms equalized.
+      <p class="shortcomment cmt">Given an RDD of MultibandTile objects and a sequence of
+Histogram objects (on per band) derived from all of the tiles,
+return another RDD of multiband tiles where the respective bands
+of the respective tiles have had their histograms equalized.</p><div class="fullcomment"><div class="comment cmt"><p>Given an RDD of MultibandTile objects and a sequence of
+Histogram objects (on per band) derived from all of the tiles,
+return another RDD of multiband tiles where the respective bands
+of the respective tiles have had their histograms equalized.
 </p></div><dl class="paramcmts block"><dt class="param">rdd</dt><dd class="cmt"><p>An RDD of tile objects</p></dd><dt class="param">histograms</dt><dd class="cmt"><p>A histogram derived from the whole RDD of tiles</p></dd></dl></div>
     </li><li name="geotrellis.spark.equalization.RDDHistogramEqualization#multiband" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="multiband[K,V,M](rdd:org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M])(implicitevidence$5:V=&gt;geotrellis.raster.MultibandTile,implicitevidence$6:scala.reflect.ClassTag[V]):org.apache.spark.rdd.RDD[(K,geotrellis.raster.MultibandTile)]withgeotrellis.spark.Metadata[M]"></a>
@@ -335,10 +333,10 @@ histograms equalized.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Given an RDD of <span class="extype" name="MultibandTile">MultibandTile</span> objects, return another RDD of
+      <p class="shortcomment cmt">Given an RDD of MultibandTile objects, return another RDD of
 multiband tiles where the respective bands of the respective
 tiles have been equalized according to a joint histogram of the
-bands of the input RDD.</p><div class="fullcomment"><div class="comment cmt"><p>Given an RDD of <span class="extype" name="MultibandTile">MultibandTile</span> objects, return another RDD of
+bands of the input RDD.</p><div class="fullcomment"><div class="comment cmt"><p>Given an RDD of MultibandTile objects, return another RDD of
 multiband tiles where the respective bands of the respective
 tiles have been equalized according to a joint histogram of the
 bands of the input RDD.
@@ -410,10 +408,10 @@ bands of the input RDD.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Given an RDD of <span class="extype" name="Tile">Tile</span> objects and a <span class="extype" name="Histogram">Histogram</span> derived
-from all of the tiles, return another RDD of tiles where the
-respective tiles have had their histograms equalized.</p><div class="fullcomment"><div class="comment cmt"><p>Given an RDD of <span class="extype" name="Tile">Tile</span> objects and a <span class="extype" name="Histogram">Histogram</span> derived
-from all of the tiles, return another RDD of tiles where the
+      <p class="shortcomment cmt">Given an RDD of Tile objects and a Histogram which summarizes
+all of the tiles, return another RDD of tiles where the
+respective tiles have had their histograms equalized.</p><div class="fullcomment"><div class="comment cmt"><p>Given an RDD of Tile objects and a Histogram which summarizes
+all of the tiles, return another RDD of tiles where the
 respective tiles have had their histograms equalized.
 </p></div><dl class="paramcmts block"><dt class="param">rdd</dt><dd class="cmt"><p>An RDD of tile objects</p></dd><dt class="param">histogram</dt><dd class="cmt"><p>A histogram derived from the whole RDD of tiles</p></dd></dl></div>
     </li><li name="geotrellis.spark.equalization.RDDHistogramEqualization#singleband" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -432,11 +430,11 @@ respective tiles have had their histograms equalized.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Given an RDD of <span class="extype" name="Tile">Tile</span> objects, return another RDD of tiles
-where the respective tiles have had their histograms equalized
-the joint histogram of all of the tiles.</p><div class="fullcomment"><div class="comment cmt"><p>Given an RDD of <span class="extype" name="Tile">Tile</span> objects, return another RDD of tiles
-where the respective tiles have had their histograms equalized
-the joint histogram of all of the tiles.
+      <p class="shortcomment cmt">Given an RDD of Tile objects, return another RDD of tiles where
+the respective tiles have had their histograms equalized the
+joint histogram of all of the tiles.</p><div class="fullcomment"><div class="comment cmt"><p>Given an RDD of Tile objects, return another RDD of tiles where
+the respective tiles have had their histograms equalized the
+joint histogram of all of the tiles.
 </p></div><dl class="paramcmts block"><dt class="param">rdd</dt><dd class="cmt"><p>An RDD of tile objects</p></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
