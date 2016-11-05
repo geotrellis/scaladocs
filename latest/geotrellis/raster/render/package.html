@@ -88,7 +88,31 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="geotrellis.raster.render.ClassBoundaryType" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.raster.render.BreakMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BreakMap[A,B]extendsA=&gt;BwithSerializable"></a>
+      <a id="BreakMap[A,B]:BreakMap[A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BreakMap.html"><span class="name">BreakMap</span></a><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="result"> extends (<span class="extype" name="geotrellis.raster.render.BreakMap.A">A</span>) ⇒ <span class="extype" name="geotrellis.raster.render.BreakMap.B">B</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.package@BreakMap[A,B]extendsA=&gt;BwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A <code>Map</code> which provides specific Binary Search-based <i>map</i> behaviour
+with breaks and a break strategy.</p><div class="fullcomment"><div class="comment cmt"><p>A <code>Map</code> which provides specific Binary Search-based <i>map</i> behaviour
+with breaks and a break strategy.</p><pre><span class="kw">val</span> bm: BreakMap[<span class="std">Int</span>, <span class="std">Int</span>] = ...
+<span class="kw">val</span> t: Tile = ...
+
+<span class="cmt">// Map all the cells of `t` to a target bin value in O(klogn).</span>
+<span class="kw">val</span> newT: Tile = t.map(vm)</pre><p><b>Note:</b> <code>A</code> and <code>B</code> are specialized on <code>Int</code> and <code>Double</code>.
+</p></div></div>
+    </li><li name="geotrellis.raster.render.ClassBoundaryType" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="ClassBoundaryTypeextendsAnyRef"></a>
       <a id="ClassBoundaryType:ClassBoundaryType"></a>
       <h4 class="signature">
@@ -261,6 +285,24 @@ information in the color mapping.
       </a>
     </span>
       
+    </li><li name="geotrellis.raster.render.MapStrategy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="MapStrategy[A]extendsSerializable"></a>
+      <a id="MapStrategy[A]:MapStrategy[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MapStrategy.html"><span class="name">MapStrategy</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.package@MapStrategy[A]extendsSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A strategy for mapping values via a <a href="BreakMap.html" class="extype" name="geotrellis.raster.render.BreakMap">BreakMap</a>.</p><div class="fullcomment"><div class="comment cmt"><p>A strategy for mapping values via a <a href="BreakMap.html" class="extype" name="geotrellis.raster.render.BreakMap">BreakMap</a>.</p><p><b>Note:</b> Specialized for <code>Int</code> and <code>Double</code>.
+</p></div></div>
     </li><li name="geotrellis.raster.render.MultibandColorMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="MultibandColorMethodsextendsMethodExtensions[geotrellis.raster.MultibandTile]"></a>
       <a id="MultibandColorMethods:MultibandColorMethods"></a>
@@ -370,7 +412,24 @@ information in the color mapping.
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="geotrellis.raster.render.ColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.raster.render.BreakMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BreakMap"></a>
+      <a id="BreakMap:BreakMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BreakMap$.html"><span class="name">BreakMap</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.package@BreakMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Helper methods for constructing BreakMaps.</p>
+    </li><li name="geotrellis.raster.render.ColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ColorMap"></a>
       <a id="ColorMap:ColorMap"></a>
       <h4 class="signature">
@@ -523,6 +582,23 @@ information in the color mapping.
       </a>
     </span>
       
+    </li><li name="geotrellis.raster.render.MapStrategy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MapStrategy"></a>
+      <a id="MapStrategy:MapStrategy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MapStrategy$.html"><span class="name">MapStrategy</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.render.package@MapStrategy" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Helper methods for constructing a <a href="MapStrategy.html" class="extype" name="geotrellis.raster.render.MapStrategy">MapStrategy</a>.</p>
     </li><li name="geotrellis.raster.render.Png" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Png"></a>
       <a id="Png:Png"></a>

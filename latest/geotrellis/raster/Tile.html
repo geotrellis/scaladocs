@@ -326,7 +326,15 @@ If cell <a href="DataType.html" class="extype" name="geotrellis.raster.DataType"
       </a>
     </span>
       <p class="shortcomment cmt">Map the given function across the present <a href="" class="extype" name="geotrellis.raster.Tile">Tile</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Map the given function across the present <a href="" class="extype" name="geotrellis.raster.Tile">Tile</a>.  The result
-is another Tile.
+is another Tile.</p><p>Values can also be mapped with &quot;class-break logic&quot;:</p><pre><span class="kw">import</span> geotrellis.raster.render.BreakMap
+
+<span class="cmt">// Maps break values to result values</span>
+<span class="kw">val</span> m: <span class="std">Map</span>[<span class="std">Int</span>, <span class="std">Int</span>] = ...
+<span class="kw">val</span> t: Tile = ...
+
+<span class="cmt">// BreakMap extends `Function1`</span>
+t.map(BreakMap.i2i(m))</pre><p>If <code>Tile</code> above had an underlying floating <a href="package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a>,
+then the transformation would effectively be from <code>Double =&gt; Int</code>.
 </p></div></div>
     </li><li name="geotrellis.raster.Tile#mapDouble" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="mapDouble(f:Double=&gt;Double):geotrellis.raster.Tile"></a>
@@ -345,7 +353,15 @@ is another Tile.
       </a>
     </span>
       <p class="shortcomment cmt">Map the given function across the present <a href="" class="extype" name="geotrellis.raster.Tile">Tile</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Map the given function across the present <a href="" class="extype" name="geotrellis.raster.Tile">Tile</a>.  The result
-is another Tile.
+is another Tile.</p><p>Values can also be mapped with &quot;class-break logic&quot;:</p><pre><span class="kw">import</span> geotrellis.raster.render.BreakMap
+
+<span class="cmt">// Maps break values to result values</span>
+<span class="kw">val</span> m: <span class="std">Map</span>[<span class="std">Double</span>, <span class="std">Double</span>] = ...
+<span class="kw">val</span> t: Tile = ...
+
+<span class="cmt">// BreakMap extends `Function1`</span>
+t.mapDouble(BreakMap.i2i(m))</pre><p>If <code>Tile</code> above had an underlying integer <a href="package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a>,
+then the transformation would effectively be from <code>Int =&gt; Double</code>.
 </p></div></div>
     </li><li name="geotrellis.macros.MacroMappableTile#mapDoubleMapper" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="mapDoubleMapper(mapper:geotrellis.macros.DoubleTileMapper):T"></a>
