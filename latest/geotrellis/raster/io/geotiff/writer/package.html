@@ -134,6 +134,29 @@
       </a>
     </span>
       
+    </li><li name="geotrellis.raster.io.geotiff.writer.IncompatibleGeoTiffOptionsException" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="IncompatibleGeoTiffOptionsExceptionextendsRuntimeException"></a>
+      <a id="IncompatibleGeoTiffOptionsException:IncompatibleGeoTiffOptionsException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="IncompatibleGeoTiffOptionsException.html"><span class="name">IncompatibleGeoTiffOptionsException</span></a><span class="result"> extends <span class="extype" name="scala.RuntimeException">RuntimeException</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#geotrellis.raster.io.geotiff.writer.package@IncompatibleGeoTiffOptionsExceptionextendsRuntimeException" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This exception may be thrown by <a href="GeoTiffWriter.html" class="extype" name="geotrellis.raster.io.geotiff.writer.GeoTiffWriter">GeoTiffWriter</a> in the case where a combination of color space,
+color map, and sample depth are not supported by the GeoTiff specification.</p><div class="fullcomment"><div class="comment cmt"><p>This exception may be thrown by <a href="GeoTiffWriter.html" class="extype" name="geotrellis.raster.io.geotiff.writer.GeoTiffWriter">GeoTiffWriter</a> in the case where a combination of color space,
+color map, and sample depth are not supported by the GeoTiff specification. A specific case is
+when <a href="../GeoTiffOptions.html#colorSpace:Int" class="extmbr" name="geotrellis.raster.io.geotiff.GeoTiffOptions#colorSpace">GeoTiffOptions.colorSpace</a> is set to <a href="../tags/codes/ColorSpace$.html#Palette:Int" class="extmbr" name="geotrellis.raster.io.geotiff.tags.codes.ColorSpace#Palette">geotrellis.raster.io.geotiff.tags.codes.ColorSpace.Palette</a>
+and <a href="../GeoTiffOptions.html#colorMap:Option[geotrellis.raster.render.IndexedColorMap]" class="extmbr" name="geotrellis.raster.io.geotiff.GeoTiffOptions#colorMap">GeoTiffOptions.colorMap</a> is <code>None</code> and/or the raster's <a href="../../../package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">geotrellis.raster.CellType</a> is not an 8-bit
+or 16-bit integral value.
+</p></div></div>
     </li><li name="geotrellis.raster.io.geotiff.writer.MalformedProj4Exception" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MalformedProj4ExceptionextendsRuntimeException"></a>
       <a id="MalformedProj4Exception:MalformedProj4Exception"></a>
