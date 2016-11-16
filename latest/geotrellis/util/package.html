@@ -123,27 +123,6 @@
     </span>
       <p class="shortcomment cmt">This trait is a characteristic of instances that can retrieve bytes from some
 source.</p>
-    </li><li name="geotrellis.util.BytesStreamer" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="BytesStreamerextendsAnyRef"></a>
-      <a id="BytesStreamer:BytesStreamer"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="BytesStreamer.html"><span class="name">BytesStreamer</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.package@BytesStreamerextendsAnyRef" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">This trait defines methods for breaking up a source of bytes into
-Map[Long, Array[Byte]] called a, &quot;chunk&quot;.</p><div class="fullcomment"><div class="comment cmt"><p>This trait defines methods for breaking up a source of bytes into
-Map[Long, Array[Byte]] called a, &quot;chunk&quot;. Where the Long is where within
-the file the chunk begins and the Array[Byte] containing the actual bytes.
-</p></div></div>
     </li><li name="geotrellis.util.Component" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="Component[T,C]extendsGetComponent[T,C]withSetComponent[T,C]"></a>
       <a id="Component[T,C]:Component[T,C]"></a>
@@ -162,6 +141,25 @@ the file the chunk begins and the Array[Byte] containing the actual bytes.
     </span>
       <p class="shortcomment cmt">Defines an object that can be used as a lens
 into a component C of some type T.</p>
+    </li><li name="geotrellis.util.FileRangeReader" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FileRangeReaderextendsRangeReader"></a>
+      <a id="FileRangeReader:FileRangeReader"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FileRangeReader.html"><span class="name">FileRangeReader</span></a><span class="result"> extends <a href="RangeReader.html" class="extype" name="geotrellis.util.RangeReader">RangeReader</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.util.package@FileRangeReaderextendsRangeReader" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This class extends <a href="RangeReader.html" class="extype" name="geotrellis.util.RangeReader">RangeReader</a> by reading chunks from a given local path.</p><div class="fullcomment"><div class="comment cmt"><p>This class extends <a href="RangeReader.html" class="extype" name="geotrellis.util.RangeReader">RangeReader</a> by reading chunks from a given local path. This
+allows for reading in of files larger than 4gb into GeoTrellis.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A new instance of FileRangeReader</p></dd></dl></div>
     </li><li name="geotrellis.util.Functor" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="Functor[F[_],A]extendsMethodExtensions[F[A]]"></a>
       <a id="Functor[F[_],A]:Functor[F,A]"></a>
@@ -200,25 +198,6 @@ required on <code>A</code> within the <a href="Functor.html#map[B](f:A=&gt;B):F[
       </a>
     </span>
       
-    </li><li name="geotrellis.util.LocalBytesStreamer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="LocalBytesStreamerextendsBytesStreamer"></a>
-      <a id="LocalBytesStreamer:LocalBytesStreamer"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="LocalBytesStreamer.html"><span class="name">LocalBytesStreamer</span></a><span class="result"> extends <a href="BytesStreamer.html" class="extype" name="geotrellis.util.BytesStreamer">BytesStreamer</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.package@LocalBytesStreamerextendsBytesStreamer" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">This class extends <a href="BytesStreamer.html" class="extype" name="geotrellis.util.BytesStreamer">BytesStreamer</a> by reading chunks from a given local path.</p><div class="fullcomment"><div class="comment cmt"><p>This class extends <a href="BytesStreamer.html" class="extype" name="geotrellis.util.BytesStreamer">BytesStreamer</a> by reading chunks from a given local path. This
-allows for reading in of files larger than 4gb into GeoTrellis.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A new instance of LocalBytesStreamer</p></dd></dl></div>
     </li><li name="geotrellis.util.MethodExtensions" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="MethodExtensions[+T]extendsSerializable"></a>
       <a id="MethodExtensions[+T]:MethodExtensions[T]"></a>
@@ -237,6 +216,27 @@ allows for reading in of files larger than 4gb into GeoTrellis.
     </span>
       <p class="shortcomment cmt">The base-trait from which all implicit classes containing
 extension methods are derived.</p>
+    </li><li name="geotrellis.util.RangeReader" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="RangeReaderextendsAnyRef"></a>
+      <a id="RangeReader:RangeReader"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="RangeReader.html"><span class="name">RangeReader</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.util.package@RangeReaderextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This trait defines methods for breaking up a source of bytes into
+Map[Long, Array[Byte]] called a, &quot;chunk&quot;.</p><div class="fullcomment"><div class="comment cmt"><p>This trait defines methods for breaking up a source of bytes into
+Map[Long, Array[Byte]] called a, &quot;chunk&quot;. Where the Long is where within
+the file the chunk begins and the Array[Byte] containing the actual bytes.
+</p></div></div>
     </li><li name="geotrellis.util.SetComponent" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="SetComponent[T,C]extendsSerializable"></a>
       <a id="SetComponent[T,C]:SetComponent[T,C]"></a>
@@ -254,25 +254,29 @@ extension methods are derived.</p>
       </a>
     </span>
       
-    </li><li name="geotrellis.util.StreamByteReader" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="StreamByteReaderextendsByteReader"></a>
-      <a id="StreamByteReader:StreamByteReader"></a>
+    </li><li name="geotrellis.util.StreamingByteReader" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="StreamingByteReaderextendsByteReader"></a>
+      <a id="StreamingByteReader:StreamingByteReader"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="StreamByteReader.html"><span class="name">StreamByteReader</span></a><span class="result"> extends <a href="ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a></span>
+        <a href="StreamingByteReader.html"><span class="name">StreamingByteReader</span></a><span class="result"> extends <a href="ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.package@StreamByteReaderextendsByteReader" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.package@StreamingByteReaderextendsByteReader" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">This class extends <a href="ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a> who's source of bytes is from a
 BytesStreamer instance.</p><div class="fullcomment"><div class="comment cmt"><p>This class extends <a href="ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a> who's source of bytes is from a
-BytesStreamer instance.
+BytesStreamer instance.</p><p>The StreamingByteReader will read ranges of bytes (chunks) from
+a source using a RangeReader. If bytes are requested from it
+that require chunks it does not have, it will fetch those chunks
+and store them in memory. If the maximum number of chunks (numChunks)
+is reached, the oldes chunks will be kicked out.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A new instance of StreamByteReader</p></dd></dl></div>
     </li><li name="geotrellis.util.withGetComponentMethods" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="withGetComponentMethods[T]extendsMethodExtensions[T]"></a>
@@ -389,6 +393,23 @@ to and from ByteBuffers and ByteReaders.
       </a>
     </span>
       
+    </li><li name="geotrellis.util.FileRangeReader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FileRangeReader"></a>
+      <a id="FileRangeReader:FileRangeReader"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FileRangeReader$.html"><span class="name">FileRangeReader</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.util.package@FileRangeReader" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The companion object of <a href="FileRangeReader.html" class="extype" name="geotrellis.util.FileRangeReader">FileRangeReader</a></p>
     </li><li name="geotrellis.util.Filesystem" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Filesystem"></a>
       <a id="Filesystem:Filesystem"></a>
@@ -423,23 +444,23 @@ to and from ByteBuffers and ByteReaders.
       </a>
     </span>
       
-    </li><li name="geotrellis.util.LocalBytesStreamer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="LocalBytesStreamer"></a>
-      <a id="LocalBytesStreamer:LocalBytesStreamer"></a>
+    </li><li name="geotrellis.util.RangeReader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RangeReader"></a>
+      <a id="RangeReader:RangeReader"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="LocalBytesStreamer$.html"><span class="name">LocalBytesStreamer</span></a>
+        <a href="RangeReader$.html"><span class="name">RangeReader</span></a>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.package@LocalBytesStreamer" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.package@RangeReader" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">The companion object of <a href="LocalBytesStreamer.html" class="extype" name="geotrellis.util.LocalBytesStreamer">LocalBytesStreamer</a></p>
+      
     </li><li name="geotrellis.util.SetComponent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="SetComponent"></a>
       <a id="SetComponent:SetComponent"></a>
@@ -457,23 +478,23 @@ to and from ByteBuffers and ByteReaders.
       </a>
     </span>
       
-    </li><li name="geotrellis.util.StreamByteReader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="StreamByteReader"></a>
-      <a id="StreamByteReader:StreamByteReader"></a>
+    </li><li name="geotrellis.util.StreamingByteReader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StreamingByteReader"></a>
+      <a id="StreamingByteReader:StreamingByteReader"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="StreamByteReader$.html"><span class="name">StreamByteReader</span></a>
+        <a href="StreamingByteReader$.html"><span class="name">StreamingByteReader</span></a>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.package@StreamByteReader" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.package@StreamingByteReader" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">The companion object of <a href="StreamByteReader.html" class="extype" name="geotrellis.util.StreamByteReader">StreamByteReader</a></p>
+      <p class="shortcomment cmt">The companion object of <span class="extype" name="StreamByteReader">StreamByteReader</span></p>
     </li><li name="geotrellis.util.annotations" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="annotations"></a>
       <a id="annotations:annotations"></a>

@@ -28,10 +28,12 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img alt="Class" src="../../../../lib/class_big.png" />
+        <a href="GeoTiffS3InputFormat$.html" title="See companion object"><img alt="Class/Object" src="../../../../lib/class_to_object_big.png" /></a>
         <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.spark">spark</a>.<a href="../package.html" class="extype" name="geotrellis.spark.io">io</a>.<a href="package.html" class="extype" name="geotrellis.spark.io.s3">s3</a></p>
-        <h1>GeoTiffS3InputFormat</h1><h3><span class="morelinks"><div>Related Doc:
-            <a href="package.html" class="extype" name="geotrellis.spark.io.s3">package s3</a>
+        <h1><a href="GeoTiffS3InputFormat$.html" title="See companion object">GeoTiffS3InputFormat</a></h1><h3><span class="morelinks"><div>
+            Related Docs:
+            <a href="GeoTiffS3InputFormat$.html" title="See companion object">object GeoTiffS3InputFormat</a>
+            | <a href="package.html" class="extype" name="geotrellis.spark.io.s3">package s3</a>
           </div></span></h3><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.s3.GeoTiffS3InputFormat" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
@@ -45,11 +47,14 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">GeoTiffS3InputFormat</span><span class="result"> extends <a href="S3InputFormat.html" class="extype" name="geotrellis.spark.io.s3.S3InputFormat">S3InputFormat</a>[<a href="../../../vector/ProjectedExtent.html" class="extype" name="geotrellis.vector.ProjectedExtent">ProjectedExtent</a>, <a href="../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</span>
+        <span class="name deprecated" title="Deprecated: (Since version 1.0.0) GeoTiffS3InputFormat is deprecated, use S3GeoTiffRDD instead">GeoTiffS3InputFormat</span><span class="result"> extends <a href="S3InputFormat.html" class="extype" name="geotrellis.spark.io.s3.S3InputFormat">S3InputFormat</a>[<a href="../../../vector/ProjectedExtent.html" class="extype" name="geotrellis.vector.ProjectedExtent">ProjectedExtent</a>, <a href="../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Read single band GeoTiff from S3</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Read single band GeoTiff from S3</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.0.0)</i> GeoTiffS3InputFormat is deprecated, use S3GeoTiffRDD instead</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="S3InputFormat.html" class="extype" name="geotrellis.spark.io.s3.S3InputFormat">S3InputFormat</a>[<a href="../../../vector/ProjectedExtent.html" class="extype" name="geotrellis.vector.ProjectedExtent">ProjectedExtent</a>, <a href="../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>], <span class="extype" name="com.typesafe.scalalogging.LazyLogging">LazyLogging</span>, <span class="extype" name="org.apache.hadoop.mapreduce.InputFormat">InputFormat</span>[<a href="../../../vector/ProjectedExtent.html" class="extype" name="geotrellis.vector.ProjectedExtent">ProjectedExtent</a>, <a href="../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -297,18 +302,18 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="geotrellis.spark.io.s3.S3InputFormat#getS3Client" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getS3Client(credentials:com.amazonaws.auth.AWSCredentials):geotrellis.spark.io.s3.S3Client"></a>
-      <a id="getS3Client(AWSCredentials):S3Client"></a>
+      <a id="getS3Client(context:org.apache.hadoop.mapreduce.JobContext):geotrellis.spark.io.s3.S3Client"></a>
+      <a id="getS3Client(JobContext):S3Client"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getS3Client</span><span class="params">(<span name="credentials">credentials: <span class="extype" name="com.amazonaws.auth.AWSCredentials">AWSCredentials</span></span>)</span><span class="result">: <a href="S3Client.html" class="extype" name="geotrellis.spark.io.s3.S3Client">S3Client</a></span>
+        <span class="name">getS3Client</span><span class="params">(<span name="context">context: <span class="extype" name="org.apache.hadoop.mapreduce.JobContext">JobContext</span></span>)</span><span class="result">: <a href="S3Client.html" class="extype" name="geotrellis.spark.io.s3.S3Client">S3Client</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.GeoTiffS3InputFormat@getS3Client(credentials:com.amazonaws.auth.AWSCredentials):geotrellis.spark.io.s3.S3Client" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.GeoTiffS3InputFormat@getS3Client(context:org.apache.hadoop.mapreduce.JobContext):geotrellis.spark.io.s3.S3Client" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

@@ -1,9 +1,9 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>StreamByteReader - geotrellis.util.StreamByteReader</title>
-          <meta name="description" content="StreamByteReader - geotrellis.util.StreamByteReader" />
-          <meta name="keywords" content="StreamByteReader geotrellis.util.StreamByteReader" />
+          <title>RangeReader - geotrellis.util.RangeReader</title>
+          <meta name="description" content="RangeReader - geotrellis.util.RangeReader" />
+          <meta name="keywords" content="RangeReader geotrellis.util.RangeReader" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -16,7 +16,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../index.html';
-            var hash = 'geotrellis.util.StreamByteReader';
+            var hash = 'geotrellis.util.RangeReader';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -28,14 +28,14 @@
         </head>
         <body class="type">
       <div id="definition">
-        <a href="StreamByteReader$.html" title="See companion object"><img alt="Class/Object" src="../../lib/class_to_object_big.png" /></a>
+        <a href="RangeReader$.html" title="See companion object"><img alt="Trait/Object" src="../../lib/trait_to_object_big.png" /></a>
         <p id="owner"><a href="../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="package.html" class="extype" name="geotrellis.util">util</a></p>
-        <h1><a href="StreamByteReader$.html" title="See companion object">StreamByteReader</a></h1><h3><span class="morelinks"><div>
+        <h1><a href="RangeReader$.html" title="See companion object">RangeReader</a></h1><h3><span class="morelinks"><div>
             Related Docs:
-            <a href="StreamByteReader$.html" title="See companion object">object StreamByteReader</a>
+            <a href="RangeReader$.html" title="See companion object">object RangeReader</a>
             | <a href="package.html" class="extype" name="geotrellis.util">package util</a>
           </div></span></h3><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -44,19 +44,23 @@
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">class</span>
+        <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">StreamByteReader</span><span class="result"> extends <a href="ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a></span>
+        <span class="name">RangeReader</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This class extends <a href="ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a> who's source of bytes is from a
-BytesStreamer instance.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A new instance of StreamByteReader</p></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This trait defines methods for breaking up a source of bytes into
+Map[Long, Array[Byte]] called a, &quot;chunk&quot;. Where the Long is where within
+the file the chunk begins and the Array[Byte] containing the actual bytes.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
-        </div></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div><div class="toggleContainer block">
+            <span class="toggle">Known Subclasses</span>
+            <div class="subClasses hiddenContent"><a href="FileRangeReader.html" class="extype" name="geotrellis.util.FileRangeReader">FileRangeReader</a>, <a href="../spark/io/hadoop/HdfsRangeReader.html" class="extype" name="geotrellis.spark.io.hadoop.HdfsRangeReader">HdfsRangeReader</a>, <a href="../spark/io/s3/util/S3RangeReader.html" class="extype" name="geotrellis.spark.io.s3.util.S3RangeReader">S3RangeReader</a></div>
+          </div></div>
         
 
       <div id="mbrsel">
@@ -73,7 +77,7 @@ BytesStreamer instance.
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.util.StreamByteReader"><span>StreamByteReader</span></li><li class="in" name="geotrellis.util.ByteReader"><span>ByteReader</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.util.RangeReader"><span>RangeReader</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -90,34 +94,51 @@ BytesStreamer instance.
 
       <div id="template">
         <div id="allMembers">
-        <div id="constructors" class="members">
-              <h3>Instance Constructors</h3>
-              <ol><li name="geotrellis.util.StreamByteReader#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(bytesStreamer:geotrellis.util.BytesStreamer):geotrellis.util.StreamByteReader"></a>
-      <a id="&lt;init&gt;:StreamByteReader"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">StreamByteReader</span><span class="params">(<span name="bytesStreamer">bytesStreamer: <a href="BytesStreamer.html" class="extype" name="geotrellis.util.BytesStreamer">BytesStreamer</a></span>)</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@&lt;init&gt;(bytesStreamer:geotrellis.util.BytesStreamer):geotrellis.util.StreamByteReader" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt"></p>
-    </li></ol>
-            </div>
-
         
 
         
 
         <div id="values" class="values members">
-              <h3>Value Members</h3>
+              <h3>Abstract Value Members</h3>
+              <ol><li name="geotrellis.util.RangeReader#readClippedRange" visbl="prt" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="readClippedRange(start:Long,length:Int):Array[Byte]"></a>
+      <a id="readClippedRange(Long,Int):Array[Byte]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">readClippedRange</span><span class="params">(<span name="start">start: <span class="extype" name="scala.Long">Long</span></span>, <span name="length">length: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.util.RangeReader@readClippedRange(start:Long,length:Int):Array[Byte]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="geotrellis.util.RangeReader#totalLength" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="totalLength:Long"></a>
+      <a id="totalLength:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">totalLength</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.util.RangeReader@totalLength:Long" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Concrete Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a>
       <a id="!=(Any):Boolean"></a>
@@ -130,7 +151,7 @@ BytesStreamer instance.
         <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@!=(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -147,7 +168,7 @@ BytesStreamer instance.
         <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@##():Int" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@##():Int" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -164,7 +185,7 @@ BytesStreamer instance.
         <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@==(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@==(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -181,7 +202,7 @@ BytesStreamer instance.
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@asInstanceOf[T0]:T0" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -198,7 +219,7 @@ BytesStreamer instance.
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@clone():Object" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@clone():Object" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -221,7 +242,7 @@ BytesStreamer instance.
         <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -238,7 +259,7 @@ BytesStreamer instance.
         <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@equals(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -255,7 +276,7 @@ BytesStreamer instance.
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@finalize():Unit" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@finalize():Unit" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -266,57 +287,6 @@ BytesStreamer instance.
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.util.StreamByteReader#get" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="get:Byte"></a>
-      <a id="get:Byte"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">get</span><span class="result">: <span class="extype" name="scala.Byte">Byte</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@get:Byte" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.util.StreamByteReader">StreamByteReader</a> → <a href="ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a></dd></dl></div>
-    </li><li name="geotrellis.util.StreamByteReader#getByteBuffer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getByteBuffer:java.nio.ByteBuffer"></a>
-      <a id="getByteBuffer:ByteBuffer"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getByteBuffer</span><span class="result">: <span class="extype" name="java.nio.ByteBuffer">ByteBuffer</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@getByteBuffer:java.nio.ByteBuffer" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.util.StreamByteReader">StreamByteReader</a> → <a href="ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a></dd></dl></div>
-    </li><li name="geotrellis.util.StreamByteReader#getChar" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getChar:Char"></a>
-      <a id="getChar:Char"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getChar</span><span class="result">: <span class="extype" name="scala.Char">Char</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@getChar:Char" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.util.StreamByteReader">StreamByteReader</a> → <a href="ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -329,96 +299,11 @@ BytesStreamer instance.
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@getClass():Class[_]" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@getClass():Class[_]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.util.StreamByteReader#getDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getDouble:Double"></a>
-      <a id="getDouble:Double"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getDouble</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@getDouble:Double" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.util.StreamByteReader">StreamByteReader</a> → <a href="ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a></dd></dl></div>
-    </li><li name="geotrellis.util.StreamByteReader#getFloat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getFloat:Float"></a>
-      <a id="getFloat:Float"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getFloat</span><span class="result">: <span class="extype" name="scala.Float">Float</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@getFloat:Float" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.util.StreamByteReader">StreamByteReader</a> → <a href="ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a></dd></dl></div>
-    </li><li name="geotrellis.util.StreamByteReader#getInt" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getInt:Int"></a>
-      <a id="getInt:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getInt</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@getInt:Int" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.util.StreamByteReader">StreamByteReader</a> → <a href="ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a></dd></dl></div>
-    </li><li name="geotrellis.util.StreamByteReader#getLong" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getLong:Long"></a>
-      <a id="getLong:Long"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getLong</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@getLong:Long" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.util.StreamByteReader">StreamByteReader</a> → <a href="ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a></dd></dl></div>
-    </li><li name="geotrellis.util.StreamByteReader#getShort" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getShort:Short"></a>
-      <a id="getShort:Short"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getShort</span><span class="result">: <span class="extype" name="scala.Short">Short</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@getShort:Short" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.util.StreamByteReader">StreamByteReader</a> → <a href="ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -431,7 +316,7 @@ BytesStreamer instance.
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@hashCode():Int" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@hashCode():Int" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -448,28 +333,11 @@ BytesStreamer instance.
         <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.util.StreamByteReader#length" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="length:Int"></a>
-      <a id="length:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">length</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@length:Int" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -482,7 +350,7 @@ BytesStreamer instance.
         <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -499,7 +367,7 @@ BytesStreamer instance.
         <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@notify():Unit" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@notify():Unit" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -516,45 +384,47 @@ BytesStreamer instance.
         <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@notifyAll():Unit" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@notifyAll():Unit" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.util.StreamByteReader#position" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="position(newPoint:Long):java.nio.Buffer"></a>
-      <a id="position(Long):Buffer"></a>
+    </li><li name="geotrellis.util.RangeReader#readAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="readAll():Array[Byte]"></a>
+      <a id="readAll():Array[Byte]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">position</span><span class="params">(<span name="newPoint">newPoint: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="java.nio.Buffer">Buffer</span></span>
+        <span class="name">readAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@position(newPoint:Long):java.nio.Buffer" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@readAll():Array[Byte]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.util.StreamByteReader">StreamByteReader</a> → <a href="ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a></dd></dl></div>
-    </li><li name="geotrellis.util.StreamByteReader#position" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="position:Long"></a>
-      <a id="position:Long"></a>
+      <p class="shortcomment cmt">Gets the entire object as an Array.</p><div class="fullcomment"><div class="comment cmt"><p>Gets the entire object as an Array.
+This will fail if objectLength &gt; Int.MaxValue
+</p></div></div>
+    </li><li name="geotrellis.util.RangeReader#readRange" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="readRange(start:Long,length:Int):Array[Byte]"></a>
+      <a id="readRange(Long,Int):Array[Byte]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">position</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+        <span class="name">readRange</span><span class="params">(<span name="start">start: <span class="extype" name="scala.Long">Long</span></span>, <span name="length">length: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@position:Long" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@readRange(start:Long,length:Int):Array[Byte]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.util.StreamByteReader">StreamByteReader</a> → <a href="ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a></dd></dl></div>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -567,7 +437,7 @@ BytesStreamer instance.
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -584,7 +454,7 @@ BytesStreamer instance.
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@toString():String" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@toString():String" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -601,7 +471,7 @@ BytesStreamer instance.
         <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@wait():Unit" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@wait():Unit" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -624,7 +494,7 @@ BytesStreamer instance.
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -647,7 +517,7 @@ BytesStreamer instance.
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.StreamByteReader@wait(x$1:Long):Unit" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.RangeReader@wait(x$1:Long):Unit" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -667,9 +537,7 @@ BytesStreamer instance.
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="geotrellis.util.ByteReader">
-              <h3>Inherited from <a href="ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a></h3>
-            </div><div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>

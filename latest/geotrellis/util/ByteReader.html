@@ -58,7 +58,7 @@ source.
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
             <span class="toggle">Known Subclasses</span>
-            <div class="subClasses hiddenContent"><a href="../spark/io/s3/testkit/MockS3ByteReader.html" class="extype" name="geotrellis.spark.io.s3.testkit.MockS3ByteReader">MockS3ByteReader</a>, <a href="StreamByteReader.html" class="extype" name="geotrellis.util.StreamByteReader">StreamByteReader</a></div>
+            <div class="subClasses hiddenContent"><a href="StreamingByteReader.html" class="extype" name="geotrellis.util.StreamingByteReader">StreamingByteReader</a></div>
           </div></div>
         
 
@@ -116,19 +116,19 @@ source.
       </a>
     </span>
       
-    </li><li name="geotrellis.util.ByteReader#getByteBuffer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="getByteBuffer:java.nio.ByteBuffer"></a>
-      <a id="getByteBuffer:ByteBuffer"></a>
+    </li><li name="geotrellis.util.ByteReader#getBytes" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="getBytes(length:Int):Array[Byte]"></a>
+      <a id="getBytes(Int):Array[Byte]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getByteBuffer</span><span class="result">: <span class="extype" name="java.nio.ByteBuffer">ByteBuffer</span></span>
+        <span class="name">getBytes</span><span class="params">(<span name="length">length: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.ByteReader@getByteBuffer:java.nio.ByteBuffer" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.ByteReader@getBytes(length:Int):Array[Byte]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -235,19 +235,53 @@ source.
       </a>
     </span>
       
-    </li><li name="geotrellis.util.ByteReader#position" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="position(i:Long):java.nio.Buffer"></a>
-      <a id="position(Long):Buffer"></a>
+    </li><li name="geotrellis.util.ByteReader#order" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="order(byteOrder:java.nio.ByteOrder):Unit"></a>
+      <a id="order(ByteOrder):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">position</span><span class="params">(<span name="i">i: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="java.nio.Buffer">Buffer</span></span>
+        <span class="name">order</span><span class="params">(<span name="byteOrder">byteOrder: <span class="extype" name="java.nio.ByteOrder">ByteOrder</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.util.ByteReader@position(i:Long):java.nio.Buffer" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.util.ByteReader@order(byteOrder:java.nio.ByteOrder):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.util.ByteReader#order" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="order:java.nio.ByteOrder"></a>
+      <a id="order:ByteOrder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">order</span><span class="result">: <span class="extype" name="java.nio.ByteOrder">ByteOrder</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.util.ByteReader@order:java.nio.ByteOrder" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.util.ByteReader#position" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="position(i:Long):geotrellis.util.ByteReader"></a>
+      <a id="position(Long):ByteReader"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">position</span><span class="params">(<span name="i">i: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.util.ByteReader">ByteReader</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.util.ByteReader@position(i:Long):geotrellis.util.ByteReader" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

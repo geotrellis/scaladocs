@@ -45,14 +45,17 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">TemporalMultibandGeoTiffS3InputFormat</span><span class="result"> extends <a href="S3InputFormat.html" class="extype" name="geotrellis.spark.io.s3.S3InputFormat">S3InputFormat</a>[<a href="../../TemporalProjectedExtent.html" class="extype" name="geotrellis.spark.TemporalProjectedExtent">TemporalProjectedExtent</a>, <a href="../../../raster/MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>]</span>
+        <span class="name deprecated" title="Deprecated: (Since version 1.0.0) TemporalMultibandGeoTiffS3InputFormat is deprecated, use S3GeoTiffRDD instead">TemporalMultibandGeoTiffS3InputFormat</span><span class="result"> extends <a href="S3InputFormat.html" class="extype" name="geotrellis.spark.io.s3.S3InputFormat">S3InputFormat</a>[<a href="../../TemporalProjectedExtent.html" class="extype" name="geotrellis.spark.TemporalProjectedExtent">TemporalProjectedExtent</a>, <a href="../../../raster/MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>]</span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Read single band GeoTiff from S3</p><p>This can be configured with the hadoop configuration by providing:
 TemporalMultibandGeoTiffS3InputFormat.GEOTIFF_TIME_TAG; default of &quot;TIFFTAG_DATETIME&quot;
 TemporalMultibandGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quot;yyyy:MM:DD HH:MM:SS&quot;&quot;
-</p></div><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.0.0)</i> TemporalMultibandGeoTiffS3InputFormat is deprecated, use S3GeoTiffRDD instead</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="S3InputFormat.html" class="extype" name="geotrellis.spark.io.s3.S3InputFormat">S3InputFormat</a>[<a href="../../TemporalProjectedExtent.html" class="extype" name="geotrellis.spark.TemporalProjectedExtent">TemporalProjectedExtent</a>, <a href="../../../raster/MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>], <span class="extype" name="com.typesafe.scalalogging.LazyLogging">LazyLogging</span>, <span class="extype" name="org.apache.hadoop.mapreduce.InputFormat">InputFormat</span>[<a href="../../TemporalProjectedExtent.html" class="extype" name="geotrellis.spark.TemporalProjectedExtent">TemporalProjectedExtent</a>, <a href="../../../raster/MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -300,18 +303,18 @@ TemporalMultibandGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quo
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="geotrellis.spark.io.s3.S3InputFormat#getS3Client" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getS3Client(credentials:com.amazonaws.auth.AWSCredentials):geotrellis.spark.io.s3.S3Client"></a>
-      <a id="getS3Client(AWSCredentials):S3Client"></a>
+      <a id="getS3Client(context:org.apache.hadoop.mapreduce.JobContext):geotrellis.spark.io.s3.S3Client"></a>
+      <a id="getS3Client(JobContext):S3Client"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getS3Client</span><span class="params">(<span name="credentials">credentials: <span class="extype" name="com.amazonaws.auth.AWSCredentials">AWSCredentials</span></span>)</span><span class="result">: <a href="S3Client.html" class="extype" name="geotrellis.spark.io.s3.S3Client">S3Client</a></span>
+        <span class="name">getS3Client</span><span class="params">(<span name="context">context: <span class="extype" name="org.apache.hadoop.mapreduce.JobContext">JobContext</span></span>)</span><span class="result">: <a href="S3Client.html" class="extype" name="geotrellis.spark.io.s3.S3Client">S3Client</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.TemporalMultibandGeoTiffS3InputFormat@getS3Client(credentials:com.amazonaws.auth.AWSCredentials):geotrellis.spark.io.s3.S3Client" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.TemporalMultibandGeoTiffS3InputFormat@getS3Client(context:org.apache.hadoop.mapreduce.JobContext):geotrellis.spark.io.s3.S3Client" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

@@ -105,57 +105,41 @@
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.io.s3.GeoTiffS3InputFormat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="GeoTiffS3InputFormatextendsS3InputFormat[geotrellis.vector.ProjectedExtent,geotrellis.raster.Tile]"></a>
-      <a id="GeoTiffS3InputFormat:GeoTiffS3InputFormat"></a>
+    </li><li name="geotrellis.spark.io.s3.BaseS3RecordReader" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="BaseS3RecordReader[K,V]extendsRecordReader[K,V]withLazyLogging"></a>
+      <a id="BaseS3RecordReader[K,V]:BaseS3RecordReader[K,V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="GeoTiffS3InputFormat.html"><span class="name">GeoTiffS3InputFormat</span></a><span class="result"> extends <a href="S3InputFormat.html" class="extype" name="geotrellis.spark.io.s3.S3InputFormat">S3InputFormat</a>[<a href="../../../vector/ProjectedExtent.html" class="extype" name="geotrellis.vector.ProjectedExtent">ProjectedExtent</a>, <a href="../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</span>
+        <a href="BaseS3RecordReader.html"><span class="name">BaseS3RecordReader</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <span class="extype" name="org.apache.hadoop.mapreduce.RecordReader">RecordReader</span>[<span class="extype" name="geotrellis.spark.io.s3.BaseS3RecordReader.K">K</span>, <span class="extype" name="geotrellis.spark.io.s3.BaseS3RecordReader.V">V</span>] with <span class="extype" name="com.typesafe.scalalogging.LazyLogging">LazyLogging</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.package@GeoTiffS3InputFormatextendsS3InputFormat[geotrellis.vector.ProjectedExtent,geotrellis.raster.Tile]" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.package@BaseS3RecordReader[K,V]extendsRecordReader[K,V]withLazyLogging" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Read single band GeoTiff from S3</p>
-    </li><li name="geotrellis.spark.io.s3.GeoTiffS3RecordReader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="GeoTiffS3RecordReaderextendsS3RecordReader[geotrellis.vector.ProjectedExtent,geotrellis.raster.Tile]"></a>
-      <a id="GeoTiffS3RecordReader:GeoTiffS3RecordReader"></a>
+      <p class="shortcomment cmt">This is the base class for readers that will create key value pairs for object requests.</p><div class="fullcomment"><div class="comment cmt"><p>This is the base class for readers that will create key value pairs for object requests.
+Subclass must extend [readObjectRequest] method to map from S3 object requests to (K,V)</p></div></div>
+    </li><li name="geotrellis.spark.io.s3.BytesS3InputFormat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BytesS3InputFormatextendsS3InputFormat[String,Array[Byte]]"></a>
+      <a id="BytesS3InputFormat:BytesS3InputFormat"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="GeoTiffS3RecordReader.html"><span class="name">GeoTiffS3RecordReader</span></a><span class="result"> extends <a href="S3RecordReader.html" class="extype" name="geotrellis.spark.io.s3.S3RecordReader">S3RecordReader</a>[<a href="../../../vector/ProjectedExtent.html" class="extype" name="geotrellis.vector.ProjectedExtent">ProjectedExtent</a>, <a href="../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</span>
+        <a href="BytesS3InputFormat.html"><span class="name">BytesS3InputFormat</span></a><span class="result"> extends <a href="S3InputFormat.html" class="extype" name="geotrellis.spark.io.s3.S3InputFormat">S3InputFormat</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.package@GeoTiffS3RecordReaderextendsS3RecordReader[geotrellis.vector.ProjectedExtent,geotrellis.raster.Tile]" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.package@BytesS3InputFormatextendsS3InputFormat[String,Array[Byte]]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.io.s3.MultibandGeoTiffS3InputFormat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MultibandGeoTiffS3InputFormatextendsS3InputFormat[geotrellis.vector.ProjectedExtent,geotrellis.raster.MultibandTile]"></a>
-      <a id="MultibandGeoTiffS3InputFormat:MultibandGeoTiffS3InputFormat"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="MultibandGeoTiffS3InputFormat.html"><span class="name">MultibandGeoTiffS3InputFormat</span></a><span class="result"> extends <a href="S3InputFormat.html" class="extype" name="geotrellis.spark.io.s3.S3InputFormat">S3InputFormat</a>[<a href="../../../vector/ProjectedExtent.html" class="extype" name="geotrellis.vector.ProjectedExtent">ProjectedExtent</a>, <a href="../../../raster/MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.package@MultibandGeoTiffS3InputFormatextendsS3InputFormat[geotrellis.vector.ProjectedExtent,geotrellis.raster.MultibandTile]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Read multi band GeoTiff from S3</p>
     </li><li name="geotrellis.spark.io.s3.S3AttributeStore" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="S3AttributeStoreextendsBlobLayerAttributeStore"></a>
       <a id="S3AttributeStore:S3AttributeStore"></a>
@@ -418,7 +402,7 @@ AWS credentials have already been discovered and provided by the S3InputFormat.
     </span>
       
     </li><li name="geotrellis.spark.io.s3.S3RecordReader" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="S3RecordReader[K,V]extendsRecordReader[K,V]withLazyLogging"></a>
+      <a id="S3RecordReader[K,V]extendsBaseS3RecordReader[K,V]"></a>
       <a id="S3RecordReader[K,V]:S3RecordReader[K,V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -426,10 +410,10 @@ AWS credentials have already been discovered and provided by the S3InputFormat.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="S3RecordReader.html"><span class="name">S3RecordReader</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <span class="extype" name="org.apache.hadoop.mapreduce.RecordReader">RecordReader</span>[<span class="extype" name="geotrellis.spark.io.s3.S3RecordReader.K">K</span>, <span class="extype" name="geotrellis.spark.io.s3.S3RecordReader.V">V</span>] with <span class="extype" name="com.typesafe.scalalogging.LazyLogging">LazyLogging</span></span>
+        <a href="S3RecordReader.html"><span class="name">S3RecordReader</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="BaseS3RecordReader.html" class="extype" name="geotrellis.spark.io.s3.BaseS3RecordReader">BaseS3RecordReader</a>[<span class="extype" name="geotrellis.spark.io.s3.S3RecordReader.K">K</span>, <span class="extype" name="geotrellis.spark.io.s3.S3RecordReader.V">V</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.package@S3RecordReader[K,V]extendsRecordReader[K,V]withLazyLogging" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.package@S3RecordReader[K,V]extendsBaseS3RecordReader[K,V]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -469,63 +453,41 @@ Subclass must extend [read] method to map from S3 object bytes to (K,V)</p></div
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.io.s3.TemporalGeoTiffS3InputFormat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="TemporalGeoTiffS3InputFormatextendsS3InputFormat[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.Tile]"></a>
-      <a id="TemporalGeoTiffS3InputFormat:TemporalGeoTiffS3InputFormat"></a>
+    </li><li name="geotrellis.spark.io.s3.StreamingS3RecordReader" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="StreamingS3RecordReader[K,V]extendsBaseS3RecordReader[K,V]"></a>
+      <a id="StreamingS3RecordReader[K,V]:StreamingS3RecordReader[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="StreamingS3RecordReader.html"><span class="name">StreamingS3RecordReader</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="BaseS3RecordReader.html" class="extype" name="geotrellis.spark.io.s3.BaseS3RecordReader">BaseS3RecordReader</a>[<span class="extype" name="geotrellis.spark.io.s3.StreamingS3RecordReader.K">K</span>, <span class="extype" name="geotrellis.spark.io.s3.StreamingS3RecordReader.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.package@StreamingS3RecordReader[K,V]extendsBaseS3RecordReader[K,V]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This reader will stream bytes of each key one at a time using [AmazonS3Client.getObject].</p><div class="fullcomment"><div class="comment cmt"><p>This reader will stream bytes of each key one at a time using [AmazonS3Client.getObject].
+Subclass must extend [read] method to map from S3RangeReader to (K,V)</p></div></div>
+    </li><li name="geotrellis.spark.io.s3.TiffTagsS3InputFormat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TiffTagsS3InputFormatextendsS3InputFormat[com.amazonaws.services.s3.model.GetObjectRequest,geotrellis.raster.io.geotiff.tags.TiffTags]"></a>
+      <a id="TiffTagsS3InputFormat:TiffTagsS3InputFormat"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="TemporalGeoTiffS3InputFormat.html"><span class="name">TemporalGeoTiffS3InputFormat</span></a><span class="result"> extends <a href="S3InputFormat.html" class="extype" name="geotrellis.spark.io.s3.S3InputFormat">S3InputFormat</a>[<a href="../../TemporalProjectedExtent.html" class="extype" name="geotrellis.spark.TemporalProjectedExtent">TemporalProjectedExtent</a>, <a href="../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</span>
+        <a href="TiffTagsS3InputFormat.html"><span class="name">TiffTagsS3InputFormat</span></a><span class="result"> extends <a href="S3InputFormat.html" class="extype" name="geotrellis.spark.io.s3.S3InputFormat">S3InputFormat</a>[<span class="extype" name="com.amazonaws.services.s3.model.GetObjectRequest">GetObjectRequest</span>, <a href="../../../raster/io/geotiff/tags/TiffTags.html" class="extype" name="geotrellis.raster.io.geotiff.tags.TiffTags">TiffTags</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.package@TemporalGeoTiffS3InputFormatextendsS3InputFormat[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.Tile]" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.package@TiffTagsS3InputFormatextendsS3InputFormat[com.amazonaws.services.s3.model.GetObjectRequest,geotrellis.raster.io.geotiff.tags.TiffTags]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Read single band GeoTiff from S3</p><div class="fullcomment"><div class="comment cmt"><p>Read single band GeoTiff from S3</p><p>This can be configured with the hadoop configuration by providing:
-TemporalGeoTiffS3InputFormat.GEOTIFF_TIME_TAG; default of &quot;TIFFTAG_DATETIME&quot;
-TemporalGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quot;yyyy:MM:dd HH:mm:ss&quot;&quot;
-</p></div></div>
-    </li><li name="geotrellis.spark.io.s3.TemporalGeoTiffS3RecordReader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="TemporalGeoTiffS3RecordReaderextendsS3RecordReader[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.Tile]"></a>
-      <a id="TemporalGeoTiffS3RecordReader:TemporalGeoTiffS3RecordReader"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="TemporalGeoTiffS3RecordReader.html"><span class="name">TemporalGeoTiffS3RecordReader</span></a><span class="result"> extends <a href="S3RecordReader.html" class="extype" name="geotrellis.spark.io.s3.S3RecordReader">S3RecordReader</a>[<a href="../../TemporalProjectedExtent.html" class="extype" name="geotrellis.spark.TemporalProjectedExtent">TemporalProjectedExtent</a>, <a href="../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.package@TemporalGeoTiffS3RecordReaderextendsS3RecordReader[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.Tile]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.spark.io.s3.TemporalMultibandGeoTiffS3InputFormat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="TemporalMultibandGeoTiffS3InputFormatextendsS3InputFormat[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.MultibandTile]"></a>
-      <a id="TemporalMultibandGeoTiffS3InputFormat:TemporalMultibandGeoTiffS3InputFormat"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="TemporalMultibandGeoTiffS3InputFormat.html"><span class="name">TemporalMultibandGeoTiffS3InputFormat</span></a><span class="result"> extends <a href="S3InputFormat.html" class="extype" name="geotrellis.spark.io.s3.S3InputFormat">S3InputFormat</a>[<a href="../../TemporalProjectedExtent.html" class="extype" name="geotrellis.spark.TemporalProjectedExtent">TemporalProjectedExtent</a>, <a href="../../../raster/MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.package@TemporalMultibandGeoTiffS3InputFormatextendsS3InputFormat[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.MultibandTile]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Read single band GeoTiff from S3</p><div class="fullcomment"><div class="comment cmt"><p>Read single band GeoTiff from S3</p><p>This can be configured with the hadoop configuration by providing:
-TemporalMultibandGeoTiffS3InputFormat.GEOTIFF_TIME_TAG; default of &quot;TIFFTAG_DATETIME&quot;
-TemporalMultibandGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quot;yyyy:MM:DD HH:MM:SS&quot;&quot;
-</p></div></div>
+      <p class="shortcomment cmt">Reads the tiff tags of GeoTiffs on S3, avoiding full file read.</p>
     </li><li name="geotrellis.spark.io.s3.withSaveToS3Methods" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="withSaveToS3Methods[K]extendsSaveToS3Methods[K]"></a>
       <a id="withSaveToS3Methods[K]:withSaveToS3Methods[K]"></a>
@@ -543,6 +505,132 @@ TemporalMultibandGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quo
       </a>
     </span>
       
+    </li><li name="geotrellis.spark.io.s3.GeoTiffS3InputFormat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GeoTiffS3InputFormatextendsS3InputFormat[geotrellis.vector.ProjectedExtent,geotrellis.raster.Tile]"></a>
+      <a id="GeoTiffS3InputFormat:GeoTiffS3InputFormat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="GeoTiffS3InputFormat.html"><span class="name deprecated" title="Deprecated: (Since version 1.0.0) GeoTiffS3InputFormat is deprecated, use S3GeoTiffRDD instead">GeoTiffS3InputFormat</span></a><span class="result"> extends <a href="S3InputFormat.html" class="extype" name="geotrellis.spark.io.s3.S3InputFormat">S3InputFormat</a>[<a href="../../../vector/ProjectedExtent.html" class="extype" name="geotrellis.vector.ProjectedExtent">ProjectedExtent</a>, <a href="../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.package@GeoTiffS3InputFormatextendsS3InputFormat[geotrellis.vector.ProjectedExtent,geotrellis.raster.Tile]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Read single band GeoTiff from S3</p><div class="fullcomment"><div class="comment cmt"><p>Read single band GeoTiff from S3</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.0.0)</i> GeoTiffS3InputFormat is deprecated, use S3GeoTiffRDD instead</p></dd></dl></div>
+    </li><li name="geotrellis.spark.io.s3.GeoTiffS3RecordReader" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GeoTiffS3RecordReaderextendsS3RecordReader[geotrellis.vector.ProjectedExtent,geotrellis.raster.Tile]"></a>
+      <a id="GeoTiffS3RecordReader:GeoTiffS3RecordReader"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="GeoTiffS3RecordReader.html"><span class="name deprecated" title="Deprecated: (Since version 1.0.0) GeoTiffS3RecordReader is deprecated, use S3GeoTiffRDD instead">GeoTiffS3RecordReader</span></a><span class="result"> extends <a href="S3RecordReader.html" class="extype" name="geotrellis.spark.io.s3.S3RecordReader">S3RecordReader</a>[<a href="../../../vector/ProjectedExtent.html" class="extype" name="geotrellis.vector.ProjectedExtent">ProjectedExtent</a>, <a href="../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.package@GeoTiffS3RecordReaderextendsS3RecordReader[geotrellis.vector.ProjectedExtent,geotrellis.raster.Tile]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.0.0)</i> GeoTiffS3RecordReader is deprecated, use S3GeoTiffRDD instead</p></dd></dl></div>
+    </li><li name="geotrellis.spark.io.s3.MultibandGeoTiffS3InputFormat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="MultibandGeoTiffS3InputFormatextendsS3InputFormat[geotrellis.vector.ProjectedExtent,geotrellis.raster.MultibandTile]"></a>
+      <a id="MultibandGeoTiffS3InputFormat:MultibandGeoTiffS3InputFormat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MultibandGeoTiffS3InputFormat.html"><span class="name deprecated" title="Deprecated: (Since version 1.0.0) MultibandGeoTiffS3InputFormat is deprecated, use S3GeoTiffRDD instead">MultibandGeoTiffS3InputFormat</span></a><span class="result"> extends <a href="S3InputFormat.html" class="extype" name="geotrellis.spark.io.s3.S3InputFormat">S3InputFormat</a>[<a href="../../../vector/ProjectedExtent.html" class="extype" name="geotrellis.vector.ProjectedExtent">ProjectedExtent</a>, <a href="../../../raster/MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.package@MultibandGeoTiffS3InputFormatextendsS3InputFormat[geotrellis.vector.ProjectedExtent,geotrellis.raster.MultibandTile]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Read multi band GeoTiff from S3</p><div class="fullcomment"><div class="comment cmt"><p>Read multi band GeoTiff from S3</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.0.0)</i> MultibandGeoTiffS3InputFormat is deprecated, use S3GeoTiffRDD instead</p></dd></dl></div>
+    </li><li name="geotrellis.spark.io.s3.TemporalGeoTiffS3InputFormat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TemporalGeoTiffS3InputFormatextendsS3InputFormat[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.Tile]"></a>
+      <a id="TemporalGeoTiffS3InputFormat:TemporalGeoTiffS3InputFormat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TemporalGeoTiffS3InputFormat.html"><span class="name deprecated" title="Deprecated: (Since version 1.0.0) TemporalGeoTiffS3InputFormat is deprecated, use S3GeoTiffRDD instead">TemporalGeoTiffS3InputFormat</span></a><span class="result"> extends <a href="S3InputFormat.html" class="extype" name="geotrellis.spark.io.s3.S3InputFormat">S3InputFormat</a>[<a href="../../TemporalProjectedExtent.html" class="extype" name="geotrellis.spark.TemporalProjectedExtent">TemporalProjectedExtent</a>, <a href="../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.package@TemporalGeoTiffS3InputFormatextendsS3InputFormat[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.Tile]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Read single band GeoTiff from S3</p><div class="fullcomment"><div class="comment cmt"><p>Read single band GeoTiff from S3</p><p>This can be configured with the hadoop configuration by providing:
+TemporalGeoTiffS3InputFormat.GEOTIFF_TIME_TAG; default of &quot;TIFFTAG_DATETIME&quot;
+TemporalGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quot;yyyy:MM:dd HH:mm:ss&quot;&quot;
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.0.0)</i> TemporalGeoTiffS3InputFormat is deprecated, use S3GeoTiffRDD instead</p></dd></dl></div>
+    </li><li name="geotrellis.spark.io.s3.TemporalGeoTiffS3RecordReader" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TemporalGeoTiffS3RecordReaderextendsS3RecordReader[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.Tile]"></a>
+      <a id="TemporalGeoTiffS3RecordReader:TemporalGeoTiffS3RecordReader"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TemporalGeoTiffS3RecordReader.html"><span class="name deprecated" title="Deprecated: (Since version 1.0.0) TemporalGeoTiffS3RecordReader is deprecated, use S3GeoTiffRDD instead">TemporalGeoTiffS3RecordReader</span></a><span class="result"> extends <a href="S3RecordReader.html" class="extype" name="geotrellis.spark.io.s3.S3RecordReader">S3RecordReader</a>[<a href="../../TemporalProjectedExtent.html" class="extype" name="geotrellis.spark.TemporalProjectedExtent">TemporalProjectedExtent</a>, <a href="../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.package@TemporalGeoTiffS3RecordReaderextendsS3RecordReader[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.Tile]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.0.0)</i> TemporalGeoTiffS3RecordReader is deprecated, use S3GeoTiffRDD instead</p></dd></dl></div>
+    </li><li name="geotrellis.spark.io.s3.TemporalMultibandGeoTiffS3InputFormat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TemporalMultibandGeoTiffS3InputFormatextendsS3InputFormat[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.MultibandTile]"></a>
+      <a id="TemporalMultibandGeoTiffS3InputFormat:TemporalMultibandGeoTiffS3InputFormat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TemporalMultibandGeoTiffS3InputFormat.html"><span class="name deprecated" title="Deprecated: (Since version 1.0.0) TemporalMultibandGeoTiffS3InputFormat is deprecated, use S3GeoTiffRDD instead">TemporalMultibandGeoTiffS3InputFormat</span></a><span class="result"> extends <a href="S3InputFormat.html" class="extype" name="geotrellis.spark.io.s3.S3InputFormat">S3InputFormat</a>[<a href="../../TemporalProjectedExtent.html" class="extype" name="geotrellis.spark.TemporalProjectedExtent">TemporalProjectedExtent</a>, <a href="../../../raster/MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.package@TemporalMultibandGeoTiffS3InputFormatextendsS3InputFormat[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.MultibandTile]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Read single band GeoTiff from S3</p><div class="fullcomment"><div class="comment cmt"><p>Read single band GeoTiff from S3</p><p>This can be configured with the hadoop configuration by providing:
+TemporalMultibandGeoTiffS3InputFormat.GEOTIFF_TIME_TAG; default of &quot;TIFFTAG_DATETIME&quot;
+TemporalMultibandGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quot;yyyy:MM:DD HH:MM:SS&quot;&quot;
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.0.0)</i> TemporalMultibandGeoTiffS3InputFormat is deprecated, use S3GeoTiffRDD instead</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -550,7 +638,24 @@ TemporalMultibandGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quo
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="geotrellis.spark.io.s3.S3AttributeStore" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.spark.io.s3.AmazonS3Client" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AmazonS3Client"></a>
+      <a id="AmazonS3Client:AmazonS3Client"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AmazonS3Client$.html"><span class="name">AmazonS3Client</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.package@AmazonS3Client" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.s3.S3AttributeStore" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="S3AttributeStore"></a>
       <a id="S3AttributeStore:S3AttributeStore"></a>
       <h4 class="signature">
@@ -618,6 +723,23 @@ TemporalMultibandGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quo
       </a>
     </span>
       
+    </li><li name="geotrellis.spark.io.s3.S3GeoTiffRDD" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="S3GeoTiffRDD"></a>
+      <a id="S3GeoTiffRDD:S3GeoTiffRDD"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="S3GeoTiffRDD$.html"><span class="name">S3GeoTiffRDD</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.package@S3GeoTiffRDD" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The S3GeoTiffRDD object allows for the creation of whole or windowed RDD[(K, V)]s from files on S3.</p>
     </li><li name="geotrellis.spark.io.s3.S3InputFormat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="S3InputFormat"></a>
       <a id="S3InputFormat:S3InputFormat"></a>
@@ -839,23 +961,6 @@ TemporalMultibandGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quo
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.io.s3.TemporalGeoTiffS3InputFormat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="TemporalGeoTiffS3InputFormat"></a>
-      <a id="TemporalGeoTiffS3InputFormat:TemporalGeoTiffS3InputFormat"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="TemporalGeoTiffS3InputFormat$.html"><span class="name">TemporalGeoTiffS3InputFormat</span></a>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.package@TemporalGeoTiffS3InputFormat" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="geotrellis.spark.io.s3.testkit" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="testkit"></a>
       <a id="testkit:testkit"></a>
@@ -895,7 +1000,50 @@ TemporalMultibandGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quo
 
         
 
-        
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="geotrellis.spark.io.s3.GeoTiffS3InputFormat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GeoTiffS3InputFormat"></a>
+      <a id="GeoTiffS3InputFormat:GeoTiffS3InputFormat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GeoTiffS3InputFormat$.html"><span class="name deprecated" title="Deprecated: (Since version 1.0.0) GeoTiffS3InputFormat is deprecated, use S3GeoTiffRDD instead">GeoTiffS3InputFormat</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.package@GeoTiffS3InputFormat" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.0.0)</i> GeoTiffS3InputFormat is deprecated, use S3GeoTiffRDD instead</p></dd></dl></div>
+    </li><li name="geotrellis.spark.io.s3.TemporalGeoTiffS3InputFormat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TemporalGeoTiffS3InputFormat"></a>
+      <a id="TemporalGeoTiffS3InputFormat:TemporalGeoTiffS3InputFormat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TemporalGeoTiffS3InputFormat$.html"><span class="name deprecated" title="Deprecated: (Since version 1.0.0) TemporalGeoTiffS3InputFormat is deprecated, use S3GeoTiffRDD instead">TemporalGeoTiffS3InputFormat</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.package@TemporalGeoTiffS3InputFormat" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.0.0)</i> TemporalGeoTiffS3InputFormat is deprecated, use S3GeoTiffRDD instead</p></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">

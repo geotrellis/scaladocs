@@ -74,6 +74,9 @@
       <div class="name">BaseEtlConf</div>
       <div class="occurrences"><a href="../geotrellis/spark/etl/config/package.html" class="extype" name="geotrellis.spark.etl.config">config</a> </div>
     </div><div class="entry">
+      <div class="name">BaseS3RecordReader</div>
+      <div class="occurrences"><a href="../geotrellis/spark/io/s3/package.html" class="extype" name="geotrellis.spark.io.s3">s3</a> </div>
+    </div><div class="entry">
       <div class="name">BasicCoordinateTransform</div>
       <div class="occurrences"><a href="../org/osgeo/proj4j/package.html" class="extype" name="org.osgeo.proj4j">proj4j</a> </div>
     </div><div class="entry">
@@ -197,9 +200,6 @@
       <div class="name">Bucket</div>
       <div class="occurrences"><a href="../geotrellis/raster/histogram/StreamingHistogram$.html" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> <a href="../geotrellis/spark/io/s3/testkit/MockS3Client$.html" class="extype" name="geotrellis.spark.io.s3.testkit.MockS3Client">MockS3Client</a> <a href="../geotrellis/vector/interpolation/LinearEmpiricalVariogram$.html" class="extype" name="geotrellis.vector.interpolation.LinearEmpiricalVariogram">LinearEmpiricalVariogram</a> </div>
     </div><div class="entry">
-      <div class="name">BufferSegmentBytes</div>
-      <div class="occurrences"><a href="../geotrellis/raster/io/geotiff/package.html" class="extype" name="geotrellis.raster.io.geotiff">geotiff</a> </div>
-    </div><div class="entry">
       <div class="name">BufferSizes</div>
       <div class="occurrences"><a href="../geotrellis/spark/buffer/package.html" class="extype" name="geotrellis.spark.buffer">buffer</a> </div>
     </div><div class="entry">
@@ -293,8 +293,11 @@
       <div class="name">BytesFieldType</div>
       <div class="occurrences"><a href="../geotrellis/raster/io/geotiff/tags/codes/TiffFieldType$.html" class="extype" name="geotrellis.raster.io.geotiff.tags.codes.TiffFieldType">TiffFieldType</a> </div>
     </div><div class="entry">
-      <div class="name">BytesStreamer</div>
-      <div class="occurrences"><a href="../geotrellis/util/package.html" class="extype" name="geotrellis.util">util</a> </div>
+      <div class="name">BytesFileInputFormat</div>
+      <div class="occurrences"><a href="../geotrellis/spark/io/hadoop/formats/package.html" class="extype" name="geotrellis.spark.io.hadoop.formats">formats</a> </div>
+    </div><div class="entry">
+      <div class="name">BytesS3InputFormat</div>
+      <div class="occurrences"><a href="../geotrellis/spark/io/s3/package.html" class="extype" name="geotrellis.spark.io.s3">s3</a> </div>
     </div><div class="entry">
       <div class="name">b0</div>
       <div class="occurrences"><a href="../geotrellis/macros/DoubleTileCombiner10.html" class="extype" name="geotrellis.macros.DoubleTileCombiner10">DoubleTileCombiner10</a> <a href="../geotrellis/macros/DoubleTileCombiner3.html" class="extype" name="geotrellis.macros.DoubleTileCombiner3">DoubleTileCombiner3</a> <a href="../geotrellis/macros/DoubleTileCombiner4.html" class="extype" name="geotrellis.macros.DoubleTileCombiner4">DoubleTileCombiner4</a> <a href="../geotrellis/macros/DoubleTileCombiner5.html" class="extype" name="geotrellis.macros.DoubleTileCombiner5">DoubleTileCombiner5</a> <a href="../geotrellis/macros/DoubleTileCombiner6.html" class="extype" name="geotrellis.macros.DoubleTileCombiner6">DoubleTileCombiner6</a> <a href="../geotrellis/macros/DoubleTileCombiner7.html" class="extype" name="geotrellis.macros.DoubleTileCombiner7">DoubleTileCombiner7</a> <a href="../geotrellis/macros/DoubleTileCombiner8.html" class="extype" name="geotrellis.macros.DoubleTileCombiner8">DoubleTileCombiner8</a> <a href="../geotrellis/macros/DoubleTileCombiner9.html" class="extype" name="geotrellis.macros.DoubleTileCombiner9">DoubleTileCombiner9</a> <a href="../geotrellis/macros/IntTileCombiner10.html" class="extype" name="geotrellis.macros.IntTileCombiner10">IntTileCombiner10</a> <a href="../geotrellis/macros/IntTileCombiner3.html" class="extype" name="geotrellis.macros.IntTileCombiner3">IntTileCombiner3</a> <a href="../geotrellis/macros/IntTileCombiner4.html" class="extype" name="geotrellis.macros.IntTileCombiner4">IntTileCombiner4</a> <a href="../geotrellis/macros/IntTileCombiner5.html" class="extype" name="geotrellis.macros.IntTileCombiner5">IntTileCombiner5</a> <a href="../geotrellis/macros/IntTileCombiner6.html" class="extype" name="geotrellis.macros.IntTileCombiner6">IntTileCombiner6</a> <a href="../geotrellis/macros/IntTileCombiner7.html" class="extype" name="geotrellis.macros.IntTileCombiner7">IntTileCombiner7</a> <a href="../geotrellis/macros/IntTileCombiner8.html" class="extype" name="geotrellis.macros.IntTileCombiner8">IntTileCombiner8</a> <a href="../geotrellis/macros/IntTileCombiner9.html" class="extype" name="geotrellis.macros.IntTileCombiner9">IntTileCombiner9</a> </div>
@@ -495,7 +498,7 @@
       <div class="occurrences"><a href="../geotrellis/spark/etl/config/json/ConfigFormats$BackendPathFormat.html" class="extype" name="geotrellis.spark.etl.config.json.ConfigFormats.BackendPathFormat">BackendPathFormat</a> </div>
     </div><div class="entry">
       <div class="name">bucket</div>
-      <div class="occurrences"><a href="../geotrellis/spark/etl/config/S3Path.html" class="extype" name="geotrellis.spark.etl.config.S3Path">S3Path</a> <a href="../geotrellis/spark/io/s3/S3AttributeStore.html" class="extype" name="geotrellis.spark.io.s3.S3AttributeStore">S3AttributeStore</a> <a href="../geotrellis/spark/io/s3/S3InputSplit.html" class="extype" name="geotrellis.spark.io.s3.S3InputSplit">S3InputSplit</a> <a href="../geotrellis/spark/io/s3/S3LayerHeader.html" class="extype" name="geotrellis.spark.io.s3.S3LayerHeader">S3LayerHeader</a> <a href="../geotrellis/spark/io/s3/S3RecordReader.html" class="extype" name="geotrellis.spark.io.s3.S3RecordReader">S3RecordReader</a> <a href="../geotrellis/spark/io/slippy/S3SlippyTileReader.html" class="extype" name="geotrellis.spark.io.slippy.S3SlippyTileReader">S3SlippyTileReader</a> </div>
+      <div class="occurrences"><a href="../geotrellis/spark/etl/config/S3Path.html" class="extype" name="geotrellis.spark.etl.config.S3Path">S3Path</a> <a href="../geotrellis/spark/io/s3/BaseS3RecordReader.html" class="extype" name="geotrellis.spark.io.s3.BaseS3RecordReader">BaseS3RecordReader</a> <a href="../geotrellis/spark/io/s3/S3AttributeStore.html" class="extype" name="geotrellis.spark.io.s3.S3AttributeStore">S3AttributeStore</a> <a href="../geotrellis/spark/io/s3/S3InputSplit.html" class="extype" name="geotrellis.spark.io.s3.S3InputSplit">S3InputSplit</a> <a href="../geotrellis/spark/io/s3/S3LayerHeader.html" class="extype" name="geotrellis.spark.io.s3.S3LayerHeader">S3LayerHeader</a> <a href="../geotrellis/spark/io/slippy/S3SlippyTileReader.html" class="extype" name="geotrellis.spark.io.slippy.S3SlippyTileReader">S3SlippyTileReader</a> </div>
     </div><div class="entry">
       <div class="name">bucketCount</div>
       <div class="occurrences"><a href="../geotrellis/raster/histogram/FastMapHistogram.html" class="extype" name="geotrellis.raster.histogram.FastMapHistogram">FastMapHistogram</a> <a href="../geotrellis/raster/histogram/Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a> <a href="../geotrellis/raster/histogram/StreamingHistogram.html" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> </div>
@@ -504,7 +507,10 @@
       <div class="occurrences"><a href="../geotrellis/raster/histogram/StreamingHistogram.html" class="extype" name="geotrellis.raster.histogram.StreamingHistogram">StreamingHistogram</a> <a href="../geotrellis/spark/io/s3/testkit/MockS3Client$.html" class="extype" name="geotrellis.spark.io.s3.testkit.MockS3Client">MockS3Client</a> </div>
     </div><div class="entry">
       <div class="name">buffer</div>
-      <div class="occurrences"><a href="../geotrellis/raster/io/geotiff/Float32GeoTiffSegment.html" class="extype" name="geotrellis.raster.io.geotiff.Float32GeoTiffSegment">Float32GeoTiffSegment</a> <a href="../geotrellis/raster/io/geotiff/Float64GeoTiffSegment.html" class="extype" name="geotrellis.raster.io.geotiff.Float64GeoTiffSegment">Float64GeoTiffSegment</a> <a href="../geotrellis/raster/io/geotiff/Int16GeoTiffSegment.html" class="extype" name="geotrellis.raster.io.geotiff.Int16GeoTiffSegment">Int16GeoTiffSegment</a> <a href="../geotrellis/raster/io/geotiff/Int32GeoTiffSegment.html" class="extype" name="geotrellis.raster.io.geotiff.Int32GeoTiffSegment">Int32GeoTiffSegment</a> <a href="../geotrellis/raster/io/geotiff/UInt16GeoTiffSegment.html" class="extype" name="geotrellis.raster.io.geotiff.UInt16GeoTiffSegment">UInt16GeoTiffSegment</a> <a href="../geotrellis/raster/io/geotiff/UInt32GeoTiffSegment.html" class="extype" name="geotrellis.raster.io.geotiff.UInt32GeoTiffSegment">UInt32GeoTiffSegment</a> <a href="../geotrellis/spark/package.html" class="extype" name="geotrellis.spark">spark</a> <a href="../geotrellis/vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a> <a href="../geotrellis/vector/Line.html" class="extype" name="geotrellis.vector.Line">Line</a> <a href="../geotrellis/vector/MultiGeometry.html" class="extype" name="geotrellis.vector.MultiGeometry">MultiGeometry</a> <a href="../geotrellis/vector/Point.html" class="extype" name="geotrellis.vector.Point">Point</a> <a href="../geotrellis/vector/Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a> </div>
+      <div class="occurrences"><a href="../geotrellis/raster/io/geotiff/Float32GeoTiffSegment.html" class="extype" name="geotrellis.raster.io.geotiff.Float32GeoTiffSegment">Float32GeoTiffSegment</a> <a href="../geotrellis/raster/io/geotiff/Float64GeoTiffSegment.html" class="extype" name="geotrellis.raster.io.geotiff.Float64GeoTiffSegment">Float64GeoTiffSegment</a> <a href="../geotrellis/raster/io/geotiff/Int16GeoTiffSegment.html" class="extype" name="geotrellis.raster.io.geotiff.Int16GeoTiffSegment">Int16GeoTiffSegment</a> <a href="../geotrellis/raster/io/geotiff/Int32GeoTiffSegment.html" class="extype" name="geotrellis.raster.io.geotiff.Int32GeoTiffSegment">Int32GeoTiffSegment</a> <a href="../geotrellis/raster/io/geotiff/UInt16GeoTiffSegment.html" class="extype" name="geotrellis.raster.io.geotiff.UInt16GeoTiffSegment">UInt16GeoTiffSegment</a> <a href="../geotrellis/raster/io/geotiff/UInt32GeoTiffSegment.html" class="extype" name="geotrellis.raster.io.geotiff.UInt32GeoTiffSegment">UInt32GeoTiffSegment</a> <a href="../geotrellis/spark/package.html" class="extype" name="geotrellis.spark">spark</a> <a href="../geotrellis/util/StreamingByteReader$Chunk.html" class="extype" name="geotrellis.util.StreamingByteReader.Chunk">Chunk</a> <a href="../geotrellis/vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a> <a href="../geotrellis/vector/Line.html" class="extype" name="geotrellis.vector.Line">Line</a> <a href="../geotrellis/vector/MultiGeometry.html" class="extype" name="geotrellis.vector.MultiGeometry">MultiGeometry</a> <a href="../geotrellis/vector/Point.html" class="extype" name="geotrellis.vector.Point">Point</a> <a href="../geotrellis/vector/Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a> </div>
+    </div><div class="entry">
+      <div class="name">bufferPosition</div>
+      <div class="occurrences"><a href="../geotrellis/util/StreamingByteReader$Chunk.html" class="extype" name="geotrellis.util.StreamingByteReader.Chunk">Chunk</a> </div>
     </div><div class="entry">
       <div class="name">bufferTiles</div>
       <div class="occurrences"><a href="../geotrellis/spark/buffer/BufferTilesMethods.html" class="extype" name="geotrellis.spark.buffer.BufferTilesMethods">BufferTilesMethods</a> <a href="../geotrellis/spark/buffer/CollectionBufferTilesMethods.html" class="extype" name="geotrellis.spark.buffer.CollectionBufferTilesMethods">CollectionBufferTilesMethods</a> </div>
@@ -570,7 +576,7 @@
       <div class="occurrences"><a href="../geotrellis/util/ByteReader$.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a> </div>
     </div><div class="entry">
       <div class="name">byteCounts</div>
-      <div class="occurrences"><a href="../geotrellis/raster/io/geotiff/BufferSegmentBytes.html" class="extype" name="geotrellis.raster.io.geotiff.BufferSegmentBytes">BufferSegmentBytes</a> </div>
+      <div class="occurrences"><a href="../geotrellis/raster/io/geotiff/LazySegmentBytes.html" class="extype" name="geotrellis.raster.io.geotiff.LazySegmentBytes">LazySegmentBytes</a> </div>
     </div><div class="entry">
       <div class="name">byteNODATA</div>
       <div class="occurrences"><a href="../geotrellis/raster/package.html" class="extype" name="geotrellis.raster">raster</a> </div>
@@ -585,7 +591,7 @@
       <div class="occurrences"><a href="../geotrellis/raster/testkit/TileBuilders.html" class="extype" name="geotrellis.raster.testkit.TileBuilders">TileBuilders</a> </div>
     </div><div class="entry">
       <div class="name">byteReader</div>
-      <div class="occurrences"><a href="../geotrellis/raster/io/geotiff/BufferSegmentBytes.html" class="extype" name="geotrellis.raster.io.geotiff.BufferSegmentBytes">BufferSegmentBytes</a> <a href="../geotrellis/raster/io/geotiff/reader/TiffTagsReader$$ByteReaderTagReaderWrapper.html" class="extype" name="geotrellis.raster.io.geotiff.reader.TiffTagsReader.ByteReaderTagReaderWrapper">ByteReaderTagReaderWrapper</a> </div>
+      <div class="occurrences"><a href="../geotrellis/raster/io/geotiff/LazySegmentBytes.html" class="extype" name="geotrellis.raster.io.geotiff.LazySegmentBytes">LazySegmentBytes</a> <a href="../geotrellis/raster/io/geotiff/reader/TiffTagsReader$$ByteReaderTagReaderWrapper.html" class="extype" name="geotrellis.raster.io.geotiff.reader.TiffTagsReader.ByteReaderTagReaderWrapper">ByteReaderTagReaderWrapper</a> </div>
     </div><div class="entry">
       <div class="name">byteToBinaryString</div>
       <div class="occurrences"><a href="../geotrellis/raster/io/geotiff/BitGeoTiffSegment.html" class="extype" name="geotrellis.raster.io.geotiff.BitGeoTiffSegment">BitGeoTiffSegment</a> </div>

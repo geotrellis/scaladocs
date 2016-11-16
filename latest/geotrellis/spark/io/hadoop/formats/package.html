@@ -100,6 +100,23 @@
       </a>
     </span>
       
+    </li><li name="geotrellis.spark.io.hadoop.formats.BytesFileInputFormat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BytesFileInputFormatextendsFileInputFormat[org.apache.hadoop.fs.Path,Array[Byte]]"></a>
+      <a id="BytesFileInputFormat:BytesFileInputFormat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BytesFileInputFormat.html"><span class="name">BytesFileInputFormat</span></a><span class="result"> extends <span class="extype" name="org.apache.hadoop.mapreduce.lib.input.FileInputFormat">FileInputFormat</span>[<span class="extype" name="org.apache.hadoop.fs.Path">Path</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#geotrellis.spark.io.hadoop.formats.package@BytesFileInputFormatextendsFileInputFormat[org.apache.hadoop.fs.Path,Array[Byte]]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.spark.io.hadoop.formats.FilterMapFileInputFormat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="FilterMapFileInputFormatextendsFileInputFormat[org.apache.hadoop.io.LongWritable,org.apache.hadoop.io.BytesWritable]"></a>
       <a id="FilterMapFileInputFormat:FilterMapFileInputFormat"></a>
@@ -117,24 +134,46 @@
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.io.hadoop.formats.GeotiffInputFormat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="GeotiffInputFormatextendsFileInputFormat[geotrellis.vector.ProjectedExtent,geotrellis.raster.Tile]withBinaryFileInputFormat[geotrellis.vector.ProjectedExtent,geotrellis.raster.Tile]"></a>
-      <a id="GeotiffInputFormat:GeotiffInputFormat"></a>
+    </li><li name="geotrellis.spark.io.hadoop.formats.TiffTagsInputFormat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TiffTagsInputFormatextendsFileInputFormat[org.apache.hadoop.fs.Path,geotrellis.raster.io.geotiff.tags.TiffTags]"></a>
+      <a id="TiffTagsInputFormat:TiffTagsInputFormat"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="GeotiffInputFormat.html"><span class="name">GeotiffInputFormat</span></a><span class="result"> extends <span class="extype" name="org.apache.hadoop.mapreduce.lib.input.FileInputFormat">FileInputFormat</span>[<a href="../../../../vector/ProjectedExtent.html" class="extype" name="geotrellis.vector.ProjectedExtent">ProjectedExtent</a>, <a href="../../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>] with <a href="BinaryFileInputFormat.html" class="extype" name="geotrellis.spark.io.hadoop.formats.BinaryFileInputFormat">BinaryFileInputFormat</a>[<a href="../../../../vector/ProjectedExtent.html" class="extype" name="geotrellis.vector.ProjectedExtent">ProjectedExtent</a>, <a href="../../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</span>
+        <a href="TiffTagsInputFormat.html"><span class="name">TiffTagsInputFormat</span></a><span class="result"> extends <span class="extype" name="org.apache.hadoop.mapreduce.lib.input.FileInputFormat">FileInputFormat</span>[<span class="extype" name="org.apache.hadoop.fs.Path">Path</span>, <a href="../../../../raster/io/geotiff/tags/TiffTags.html" class="extype" name="geotrellis.raster.io.geotiff.tags.TiffTags">TiffTags</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#geotrellis.spark.io.hadoop.formats.package@GeotiffInputFormatextendsFileInputFormat[geotrellis.vector.ProjectedExtent,geotrellis.raster.Tile]withBinaryFileInputFormat[geotrellis.vector.ProjectedExtent,geotrellis.raster.Tile]" title="Permalink" target="_top">
+      <a href="../../../../../index.html#geotrellis.spark.io.hadoop.formats.package@TiffTagsInputFormatextendsFileInputFormat[org.apache.hadoop.fs.Path,geotrellis.raster.io.geotiff.tags.TiffTags]" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
-    </li><li name="geotrellis.spark.io.hadoop.formats.MultibandGeoTiffInputFormat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">This class extends <span class="extype" name="FileInputFormat">FileInputFormat</span> and is used to create RDDs of TiffTags.</p><div class="fullcomment"><div class="comment cmt"><p>This class extends <span class="extype" name="FileInputFormat">FileInputFormat</span> and is used to create RDDs of TiffTags.
+from files on Hdfs.
+</p></div></div>
+    </li><li name="geotrellis.spark.io.hadoop.formats.GeoTiffInputFormat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GeoTiffInputFormatextendsFileInputFormat[geotrellis.vector.ProjectedExtent,geotrellis.raster.Tile]withBinaryFileInputFormat[geotrellis.vector.ProjectedExtent,geotrellis.raster.Tile]"></a>
+      <a id="GeoTiffInputFormat:GeoTiffInputFormat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="GeoTiffInputFormat.html"><span class="name deprecated" title="Deprecated: (Since version 1.0.0) GeoTiffInputFormat is deprecated, use HadoopGeoTiffRDD instead">GeoTiffInputFormat</span></a><span class="result"> extends <span class="extype" name="org.apache.hadoop.mapreduce.lib.input.FileInputFormat">FileInputFormat</span>[<a href="../../../../vector/ProjectedExtent.html" class="extype" name="geotrellis.vector.ProjectedExtent">ProjectedExtent</a>, <a href="../../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>] with <a href="BinaryFileInputFormat.html" class="extype" name="geotrellis.spark.io.hadoop.formats.BinaryFileInputFormat">BinaryFileInputFormat</a>[<a href="../../../../vector/ProjectedExtent.html" class="extype" name="geotrellis.vector.ProjectedExtent">ProjectedExtent</a>, <a href="../../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#geotrellis.spark.io.hadoop.formats.package@GeoTiffInputFormatextendsFileInputFormat[geotrellis.vector.ProjectedExtent,geotrellis.raster.Tile]withBinaryFileInputFormat[geotrellis.vector.ProjectedExtent,geotrellis.raster.Tile]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.0.0)</i> GeoTiffInputFormat is deprecated, use HadoopGeoTiffRDD instead</p></dd></dl></div>
+    </li><li name="geotrellis.spark.io.hadoop.formats.MultibandGeoTiffInputFormat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="MultibandGeoTiffInputFormatextendsFileInputFormat[geotrellis.vector.ProjectedExtent,geotrellis.raster.MultibandTile]withBinaryFileInputFormat[geotrellis.vector.ProjectedExtent,geotrellis.raster.MultibandTile]"></a>
       <a id="MultibandGeoTiffInputFormat:MultibandGeoTiffInputFormat"></a>
       <h4 class="signature">
@@ -143,14 +182,17 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="MultibandGeoTiffInputFormat.html"><span class="name">MultibandGeoTiffInputFormat</span></a><span class="result"> extends <span class="extype" name="org.apache.hadoop.mapreduce.lib.input.FileInputFormat">FileInputFormat</span>[<a href="../../../../vector/ProjectedExtent.html" class="extype" name="geotrellis.vector.ProjectedExtent">ProjectedExtent</a>, <a href="../../../../raster/MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>] with <a href="BinaryFileInputFormat.html" class="extype" name="geotrellis.spark.io.hadoop.formats.BinaryFileInputFormat">BinaryFileInputFormat</a>[<a href="../../../../vector/ProjectedExtent.html" class="extype" name="geotrellis.vector.ProjectedExtent">ProjectedExtent</a>, <a href="../../../../raster/MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>]</span>
+        <a href="MultibandGeoTiffInputFormat.html"><span class="name deprecated" title="Deprecated: (Since version 1.0.0) MultibandGeoTiffInputFormat is deprecated, use HadoopGeoTiffRDD instead">MultibandGeoTiffInputFormat</span></a><span class="result"> extends <span class="extype" name="org.apache.hadoop.mapreduce.lib.input.FileInputFormat">FileInputFormat</span>[<a href="../../../../vector/ProjectedExtent.html" class="extype" name="geotrellis.vector.ProjectedExtent">ProjectedExtent</a>, <a href="../../../../raster/MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>] with <a href="BinaryFileInputFormat.html" class="extype" name="geotrellis.spark.io.hadoop.formats.BinaryFileInputFormat">BinaryFileInputFormat</a>[<a href="../../../../vector/ProjectedExtent.html" class="extype" name="geotrellis.vector.ProjectedExtent">ProjectedExtent</a>, <a href="../../../../raster/MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>]</span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../../index.html#geotrellis.spark.io.hadoop.formats.package@MultibandGeoTiffInputFormatextendsFileInputFormat[geotrellis.vector.ProjectedExtent,geotrellis.raster.MultibandTile]withBinaryFileInputFormat[geotrellis.vector.ProjectedExtent,geotrellis.raster.MultibandTile]" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.0.0)</i> MultibandGeoTiffInputFormat is deprecated, use HadoopGeoTiffRDD instead</p></dd></dl></div>
     </li><li name="geotrellis.spark.io.hadoop.formats.TemporalGeoTiffInputFormat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="TemporalGeoTiffInputFormatextendsFileInputFormat[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.Tile]withBinaryFileInputFormat[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.Tile]"></a>
       <a id="TemporalGeoTiffInputFormat:TemporalGeoTiffInputFormat"></a>
@@ -160,7 +202,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="TemporalGeoTiffInputFormat.html"><span class="name">TemporalGeoTiffInputFormat</span></a><span class="result"> extends <span class="extype" name="org.apache.hadoop.mapreduce.lib.input.FileInputFormat">FileInputFormat</span>[<a href="../../../TemporalProjectedExtent.html" class="extype" name="geotrellis.spark.TemporalProjectedExtent">TemporalProjectedExtent</a>, <a href="../../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>] with <a href="BinaryFileInputFormat.html" class="extype" name="geotrellis.spark.io.hadoop.formats.BinaryFileInputFormat">BinaryFileInputFormat</a>[<a href="../../../TemporalProjectedExtent.html" class="extype" name="geotrellis.spark.TemporalProjectedExtent">TemporalProjectedExtent</a>, <a href="../../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</span>
+        <a href="TemporalGeoTiffInputFormat.html"><span class="name deprecated" title="Deprecated: (Since version 1.0.0) TemporalGeoTiffInputFormat is deprecated, use HadoopGeoTiffRDD instead">TemporalGeoTiffInputFormat</span></a><span class="result"> extends <span class="extype" name="org.apache.hadoop.mapreduce.lib.input.FileInputFormat">FileInputFormat</span>[<a href="../../../TemporalProjectedExtent.html" class="extype" name="geotrellis.spark.TemporalProjectedExtent">TemporalProjectedExtent</a>, <a href="../../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>] with <a href="BinaryFileInputFormat.html" class="extype" name="geotrellis.spark.io.hadoop.formats.BinaryFileInputFormat">BinaryFileInputFormat</a>[<a href="../../../TemporalProjectedExtent.html" class="extype" name="geotrellis.spark.TemporalProjectedExtent">TemporalProjectedExtent</a>, <a href="../../../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../../index.html#geotrellis.spark.io.hadoop.formats.package@TemporalGeoTiffInputFormatextendsFileInputFormat[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.Tile]withBinaryFileInputFormat[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.Tile]" title="Permalink" target="_top">
@@ -170,7 +212,10 @@
       <p class="shortcomment cmt">Read single band GeoTiff with a timestamp</p><div class="fullcomment"><div class="comment cmt"><p>Read single band GeoTiff with a timestamp</p><p>This can be configured with the hadoop configuration by providing:
 TemporalGeoTiffS3InputFormat.GEOTIFF_TIME_TAG; default of &quot;TIFFTAG_DATETIME&quot;
 TemporalGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quot;yyyy:MM:DD HH:MM:SS&quot;&quot;
-</p></div></div>
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.0.0)</i> TemporalGeoTiffInputFormat is deprecated, use HadoopGeoTiffRDD instead</p></dd></dl></div>
     </li><li name="geotrellis.spark.io.hadoop.formats.TemporalMultibandGeoTiffInputFormat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="TemporalMultibandGeoTiffInputFormatextendsFileInputFormat[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.MultibandTile]withBinaryFileInputFormat[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.MultibandTile]"></a>
       <a id="TemporalMultibandGeoTiffInputFormat:TemporalMultibandGeoTiffInputFormat"></a>
@@ -180,7 +225,7 @@ TemporalGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quot;yyyy:MM
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="TemporalMultibandGeoTiffInputFormat.html"><span class="name">TemporalMultibandGeoTiffInputFormat</span></a><span class="result"> extends <span class="extype" name="org.apache.hadoop.mapreduce.lib.input.FileInputFormat">FileInputFormat</span>[<a href="../../../TemporalProjectedExtent.html" class="extype" name="geotrellis.spark.TemporalProjectedExtent">TemporalProjectedExtent</a>, <a href="../../../../raster/MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>] with <a href="BinaryFileInputFormat.html" class="extype" name="geotrellis.spark.io.hadoop.formats.BinaryFileInputFormat">BinaryFileInputFormat</a>[<a href="../../../TemporalProjectedExtent.html" class="extype" name="geotrellis.spark.TemporalProjectedExtent">TemporalProjectedExtent</a>, <a href="../../../../raster/MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>]</span>
+        <a href="TemporalMultibandGeoTiffInputFormat.html"><span class="name deprecated" title="Deprecated: (Since version 1.0.0) TemporalMultibandGeoTiffInputFormat is deprecated, use HadoopGeoTiffRDD instead">TemporalMultibandGeoTiffInputFormat</span></a><span class="result"> extends <span class="extype" name="org.apache.hadoop.mapreduce.lib.input.FileInputFormat">FileInputFormat</span>[<a href="../../../TemporalProjectedExtent.html" class="extype" name="geotrellis.spark.TemporalProjectedExtent">TemporalProjectedExtent</a>, <a href="../../../../raster/MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>] with <a href="BinaryFileInputFormat.html" class="extype" name="geotrellis.spark.io.hadoop.formats.BinaryFileInputFormat">BinaryFileInputFormat</a>[<a href="../../../TemporalProjectedExtent.html" class="extype" name="geotrellis.spark.TemporalProjectedExtent">TemporalProjectedExtent</a>, <a href="../../../../raster/MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>]</span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../../index.html#geotrellis.spark.io.hadoop.formats.package@TemporalMultibandGeoTiffInputFormatextendsFileInputFormat[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.MultibandTile]withBinaryFileInputFormat[geotrellis.spark.TemporalProjectedExtent,geotrellis.raster.MultibandTile]" title="Permalink" target="_top">
@@ -190,7 +235,10 @@ TemporalGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quot;yyyy:MM
       <p class="shortcomment cmt">Read multiband GeoTiff with a timestamp</p><div class="fullcomment"><div class="comment cmt"><p>Read multiband GeoTiff with a timestamp</p><p>This can be configured with the hadoop configuration by providing:
 TemporalGeoTiffS3InputFormat.GEOTIFF_TIME_TAG; default of &quot;TIFFTAG_DATETIME&quot;
 TemporalGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quot;yyyy:MM:DD HH:MM:SS&quot;&quot;
-</p></div></div>
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.0.0)</i> TemporalMultibandGeoTiffInputFormat is deprecated, use HadoopGeoTiffRDD instead</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -215,7 +263,34 @@ TemporalGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quot;yyyy:MM
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.io.hadoop.formats.TemporalGeoTiffInputFormat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="geotrellis.spark.io.hadoop.formats.GeoTiffInputFormat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GeoTiffInputFormat"></a>
+      <a id="GeoTiffInputFormat:GeoTiffInputFormat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GeoTiffInputFormat$.html"><span class="name deprecated" title="Deprecated: (Since version 1.0.0) GeoTiffInputFormat is deprecated, use HadoopGeoTiffRDD instead">GeoTiffInputFormat</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#geotrellis.spark.io.hadoop.formats.package@GeoTiffInputFormat" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.0.0)</i> GeoTiffInputFormat is deprecated, use HadoopGeoTiffRDD instead</p></dd></dl></div>
+    </li><li name="geotrellis.spark.io.hadoop.formats.TemporalGeoTiffInputFormat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="TemporalGeoTiffInputFormat"></a>
       <a id="TemporalGeoTiffInputFormat:TemporalGeoTiffInputFormat"></a>
       <h4 class="signature">
@@ -224,20 +299,19 @@ TemporalGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quot;yyyy:MM
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="TemporalGeoTiffInputFormat$.html"><span class="name">TemporalGeoTiffInputFormat</span></a>
+        <a href="TemporalGeoTiffInputFormat$.html"><span class="name deprecated" title="Deprecated: (Since version 1.0.0) TemporalGeoTiffInputFormat is deprecated, use HadoopGeoTiffRDD instead">TemporalGeoTiffInputFormat</span></a>
       </span>
       </h4><span class="permalink">
       <a href="../../../../../index.html#geotrellis.spark.io.hadoop.formats.package@TemporalGeoTiffInputFormat" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.0.0)</i> TemporalGeoTiffInputFormat is deprecated, use HadoopGeoTiffRDD instead</p></dd></dl></div>
     </li></ol>
             </div>
-
-        
-
-        
         </div>
 
         <div id="inheritedMembers">
