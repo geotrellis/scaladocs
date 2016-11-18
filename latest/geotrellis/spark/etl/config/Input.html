@@ -45,7 +45,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Input</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="format">format: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="backend">backend: <a href="Backend.html" class="extype" name="geotrellis.spark.etl.config.Backend">Backend</a></span>, <span name="cache">cache: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.apache.spark.storage.StorageLevel">StorageLevel</span>] = <span class="symbol">None</span></span>, <span name="noData">noData: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>] = <span class="symbol">None</span></span>, <span name="clip">clip: <span class="extype" name="scala.Option">Option</span>[<a href="../../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>] = <span class="symbol">None</span></span>, <span name="crs">crs: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>, <span name="maxTileSize">maxTileSize: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span> with <span class="extype" name="scala.Product">Product</span></span>
+        <span class="name">Input</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="format">format: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="backend">backend: <a href="Backend.html" class="extype" name="geotrellis.spark.etl.config.Backend">Backend</a></span>, <span name="cache">cache: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.apache.spark.storage.StorageLevel">StorageLevel</span>] = <span class="symbol">None</span></span>, <span name="noData">noData: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>] = <span class="symbol">None</span></span>, <span name="clip">clip: <span class="extype" name="scala.Option">Option</span>[<a href="../../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>] = <span class="symbol">None</span></span>, <span name="crs">crs: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>, <span name="maxTileSize">maxTileSize: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">None</span></span>, <span name="numPartitions">numPartitions: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span> with <span class="extype" name="scala.Product">Product</span></span>
       </span>
       </h4>
       
@@ -89,7 +89,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.spark.etl.config.Input#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(name:String,format:String,backend:geotrellis.spark.etl.config.Backend,cache:Option[org.apache.spark.storage.StorageLevel],noData:Option[Double],clip:Option[geotrellis.vector.Extent],crs:Option[String],maxTileSize:Option[Int]):geotrellis.spark.etl.config.Input"></a>
+      <a id="&lt;init&gt;(name:String,format:String,backend:geotrellis.spark.etl.config.Backend,cache:Option[org.apache.spark.storage.StorageLevel],noData:Option[Double],clip:Option[geotrellis.vector.Extent],crs:Option[String],maxTileSize:Option[Int],numPartitions:Option[Int]):geotrellis.spark.etl.config.Input"></a>
       <a id="&lt;init&gt;:Input"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -97,10 +97,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Input</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="format">format: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="backend">backend: <a href="Backend.html" class="extype" name="geotrellis.spark.etl.config.Backend">Backend</a></span>, <span name="cache">cache: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.apache.spark.storage.StorageLevel">StorageLevel</span>] = <span class="symbol">None</span></span>, <span name="noData">noData: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>] = <span class="symbol">None</span></span>, <span name="clip">clip: <span class="extype" name="scala.Option">Option</span>[<a href="../../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>] = <span class="symbol">None</span></span>, <span name="crs">crs: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>, <span name="maxTileSize">maxTileSize: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">None</span></span>)</span>
+        <span class="name">Input</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="format">format: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="backend">backend: <a href="Backend.html" class="extype" name="geotrellis.spark.etl.config.Backend">Backend</a></span>, <span name="cache">cache: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.apache.spark.storage.StorageLevel">StorageLevel</span>] = <span class="symbol">None</span></span>, <span name="noData">noData: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Double">Double</span>] = <span class="symbol">None</span></span>, <span name="clip">clip: <span class="extype" name="scala.Option">Option</span>[<a href="../../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>] = <span class="symbol">None</span></span>, <span name="crs">crs: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>, <span name="maxTileSize">maxTileSize: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">None</span></span>, <span name="numPartitions">numPartitions: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">None</span></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.etl.config.Input@&lt;init&gt;(name:String,format:String,backend:geotrellis.spark.etl.config.Backend,cache:Option[org.apache.spark.storage.StorageLevel],noData:Option[Double],clip:Option[geotrellis.vector.Extent],crs:Option[String],maxTileSize:Option[Int]):geotrellis.spark.etl.config.Input" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.etl.config.Input@&lt;init&gt;(name:String,format:String,backend:geotrellis.spark.etl.config.Backend,cache:Option[org.apache.spark.storage.StorageLevel],noData:Option[Double],clip:Option[geotrellis.vector.Extent],crs:Option[String],maxTileSize:Option[Int],numPartitions:Option[Int]):geotrellis.spark.etl.config.Input" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -483,6 +483,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.spark.etl.config.Input#numPartitions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="numPartitions:Option[Int]"></a>
+      <a id="numPartitions:Option[Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">numPartitions</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.etl.config.Input@numPartitions:Option[Int]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
