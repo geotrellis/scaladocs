@@ -49,10 +49,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@<a href="../../util/annotations/experimental.html" class="extype" name="geotrellis.util.annotations.experimental">experimental</a></span><span class="args">()</span>
-              
-        </dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -148,8 +145,8 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.spark.join.VectorJoin#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[L,R](shorter:org.apache.spark.rdd.RDD[L],longer:org.apache.spark.rdd.RDD[R],pred:(geotrellis.vector.Geometry,geotrellis.vector.Geometry)=&gt;Boolean)(implicitevidence$5:scala.reflect.ClassTag[L],implicitevidence$6:L=&gt;geotrellis.vector.Geometry,implicitevidence$7:scala.reflect.ClassTag[R],implicitevidence$8:R=&gt;geotrellis.vector.Geometry,implicitsc:org.apache.spark.SparkContext):org.apache.spark.rdd.RDD[(L,R)]"></a>
+    </li><li name="geotrellis.spark.join.VectorJoin#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply[L,R](left:org.apache.spark.rdd.RDD[L],right:org.apache.spark.rdd.RDD[R],pred:(geotrellis.vector.Geometry,geotrellis.vector.Geometry)=&gt;Boolean)(implicitevidence$2:scala.reflect.ClassTag[L],implicitevidence$3:L=&gt;geotrellis.vector.Geometry,implicitevidence$4:scala.reflect.ClassTag[R],implicitevidence$5:R=&gt;geotrellis.vector.Geometry,implicitsc:org.apache.spark.SparkContext):org.apache.spark.rdd.RDD[(L,R)]"></a>
       <a id="apply[L,R](RDD[L],RDD[R],(Geometry,Geometry)⇒Boolean)(ClassTag[L],(L)⇒Geometry,ClassTag[R],(R)⇒Geometry,SparkContext):RDD[(L,R)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -157,14 +154,19 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="L">L</span>, <span name="R">R</span>]</span><span class="params">(<span name="shorter">shorter: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="geotrellis.spark.join.VectorJoin.apply.L">L</span>]</span>, <span name="longer">longer: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="geotrellis.spark.join.VectorJoin.apply.R">R</span>]</span>, <span name="pred">pred: (<a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a>, <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.join.VectorJoin.apply.L">L</span>]</span>, <span name="arg1">arg1: (<span class="extype" name="geotrellis.spark.join.VectorJoin.apply.L">L</span>) ⇒ <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>, <span name="arg2">arg2: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.join.VectorJoin.apply.R">R</span>]</span>, <span name="arg3">arg3: (<span class="extype" name="geotrellis.spark.join.VectorJoin.apply.R">R</span>) ⇒ <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>, <span name="sc">sc: <span class="extype" name="org.apache.spark.SparkContext">SparkContext</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.join.VectorJoin.apply.L">L</span>, <span class="extype" name="geotrellis.spark.join.VectorJoin.apply.R">R</span>)]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="L">L</span>, <span name="R">R</span>]</span><span class="params">(<span name="left">left: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="geotrellis.spark.join.VectorJoin.apply.L">L</span>]</span>, <span name="right">right: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="geotrellis.spark.join.VectorJoin.apply.R">R</span>]</span>, <span name="pred">pred: (<a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a>, <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.join.VectorJoin.apply.L">L</span>]</span>, <span name="arg1">arg1: (<span class="extype" name="geotrellis.spark.join.VectorJoin.apply.L">L</span>) ⇒ <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>, <span name="arg2">arg2: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.join.VectorJoin.apply.R">R</span>]</span>, <span name="arg3">arg3: (<span class="extype" name="geotrellis.spark.join.VectorJoin.apply.R">R</span>) ⇒ <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>, <span name="sc">sc: <span class="extype" name="org.apache.spark.SparkContext">SparkContext</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.join.VectorJoin.apply.L">L</span>, <span class="extype" name="geotrellis.spark.join.VectorJoin.apply.R">R</span>)]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.join.VectorJoin$@apply[L,R](shorter:org.apache.spark.rdd.RDD[L],longer:org.apache.spark.rdd.RDD[R],pred:(geotrellis.vector.Geometry,geotrellis.vector.Geometry)=&gt;Boolean)(implicitevidence$5:scala.reflect.ClassTag[L],implicitevidence$6:L=&gt;geotrellis.vector.Geometry,implicitevidence$7:scala.reflect.ClassTag[R],implicitevidence$8:R=&gt;geotrellis.vector.Geometry,implicitsc:org.apache.spark.SparkContext):org.apache.spark.rdd.RDD[(L,R)]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.join.VectorJoin$@apply[L,R](left:org.apache.spark.rdd.RDD[L],right:org.apache.spark.rdd.RDD[R],pred:(geotrellis.vector.Geometry,geotrellis.vector.Geometry)=&gt;Boolean)(implicitevidence$2:scala.reflect.ClassTag[L],implicitevidence$3:L=&gt;geotrellis.vector.Geometry,implicitevidence$4:scala.reflect.ClassTag[R],implicitevidence$5:R=&gt;geotrellis.vector.Geometry,implicitsc:org.apache.spark.SparkContext):org.apache.spark.rdd.RDD[(L,R)]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Perform the vector join operation over an RDD[L] and and RDD[R],
+where both L and R are viewble as Geometry.</p><div class="fullcomment"><div class="comment cmt"><p>Perform the vector join operation over an RDD[L] and and RDD[R],
+where both L and R are viewble as Geometry.  This makes use of
+the FilteredCartesianRDD type to accelerate the process
+(relative to plain-old CartesianRDD).
+</p></div><dl class="paramcmts block"><dt class="param">left</dt><dd class="cmt"><p>An RDD[L], where L is viewable as a Geometry</p></dd><dt class="param">right</dt><dd class="cmt"><p>An RDD[R], where R is viewable as a Geometry</p></dd><dt class="param">pred</dt><dd class="cmt"><p>A predicate which answers whether an L and an R should be joined</p></dd><dt>returns</dt><dd class="cmt"><p>An RDD of L-R pairs</p></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -182,6 +184,24 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.spark.join.VectorJoin#calculateEnvelope" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="calculateEnvelope[T](gs:Iterator[T])(implicitevidence$1:T=&gt;geotrellis.vector.Geometry):Iterator[com.vividsolutions.jts.geom.Envelope]"></a>
+      <a id="calculateEnvelope[T](Iterator[T])((T)⇒Geometry):Iterator[Envelope]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">calculateEnvelope</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="gs">gs: <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="geotrellis.spark.join.VectorJoin.calculateEnvelope.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (<span class="extype" name="geotrellis.spark.join.VectorJoin.calculateEnvelope.T">T</span>) ⇒ <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>)</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.vividsolutions.jts.geom.Envelope">Envelope</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.join.VectorJoin$@calculateEnvelope[T](gs:Iterator[T])(implicitevidence$1:T=&gt;geotrellis.vector.Geometry):Iterator[com.vividsolutions.jts.geom.Envelope]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A function which calculates the envelope of a partition.</p><div class="fullcomment"><div class="comment cmt"><p>A function which calculates the envelope of a partition.
+</p></div><dl class="paramcmts block"><dt class="param">gs</dt><dd class="cmt"><p>An iterator containing the contents of the RDD</p></dd><dt>returns</dt><dd class="cmt"><p>An Iterator containing one envelope</p></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -398,26 +418,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.spark.join.VectorJoin#unflattened" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="unflattened[L,R](shorter:org.apache.spark.rdd.RDD[L],longer:org.apache.spark.rdd.RDD[R],pred:(geotrellis.vector.Geometry,geotrellis.vector.Geometry)=&gt;Boolean)(implicitevidence$1:scala.reflect.ClassTag[L],implicitevidence$2:L=&gt;geotrellis.vector.Geometry,implicitevidence$3:scala.reflect.ClassTag[R],implicitevidence$4:R=&gt;geotrellis.vector.Geometry,implicitsc:org.apache.spark.SparkContext):org.apache.spark.rdd.RDD[(L,Seq[R])]"></a>
-      <a id="unflattened[L,R](RDD[L],RDD[R],(Geometry,Geometry)⇒Boolean)(ClassTag[L],(L)⇒Geometry,ClassTag[R],(R)⇒Geometry,SparkContext):RDD[(L,Seq[R])]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">unflattened</span><span class="tparams">[<span name="L">L</span>, <span name="R">R</span>]</span><span class="params">(<span name="shorter">shorter: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="geotrellis.spark.join.VectorJoin.unflattened.L">L</span>]</span>, <span name="longer">longer: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="geotrellis.spark.join.VectorJoin.unflattened.R">R</span>]</span>, <span name="pred">pred: (<a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a>, <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.join.VectorJoin.unflattened.L">L</span>]</span>, <span name="arg1">arg1: (<span class="extype" name="geotrellis.spark.join.VectorJoin.unflattened.L">L</span>) ⇒ <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>, <span name="arg2">arg2: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.join.VectorJoin.unflattened.R">R</span>]</span>, <span name="arg3">arg3: (<span class="extype" name="geotrellis.spark.join.VectorJoin.unflattened.R">R</span>) ⇒ <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>, <span name="sc">sc: <span class="extype" name="org.apache.spark.SparkContext">SparkContext</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.join.VectorJoin.unflattened.L">L</span>, <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="geotrellis.spark.join.VectorJoin.unflattened.R">R</span>])]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.join.VectorJoin$@unflattened[L,R](shorter:org.apache.spark.rdd.RDD[L],longer:org.apache.spark.rdd.RDD[R],pred:(geotrellis.vector.Geometry,geotrellis.vector.Geometry)=&gt;Boolean)(implicitevidence$1:scala.reflect.ClassTag[L],implicitevidence$2:L=&gt;geotrellis.vector.Geometry,implicitevidence$3:scala.reflect.ClassTag[R],implicitevidence$4:R=&gt;geotrellis.vector.Geometry,implicitsc:org.apache.spark.SparkContext):org.apache.spark.rdd.RDD[(L,Seq[R])]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@<a href="../../util/annotations/experimental.html" class="extype" name="geotrellis.util.annotations.experimental">experimental</a></span><span class="args">()</span>
-              
-        </dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
