@@ -47,11 +47,20 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Feature</span><span class="params">(<span name="id">id: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>] = <span class="symbol">None</span></span>, <span name="tags">tags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">Nil</span></span>, <span name="type">type: <span class="extype" name="scala.Option">Option</span>[<a href="Tile$$GeomType.html" class="extype" name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.GeomType">GeomType</a>] = <span class="symbol">None</span></span>, <span name="geometry">geometry: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">Nil</span></span>)</span><span class="result"> extends <span class="extype" name="com.trueaccord.scalapb.GeneratedMessage">GeneratedMessage</span> with <span class="extype" name="com.trueaccord.scalapb.Message">Message</span>[<a href="" class="extype" name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature">Feature</a>] with <span class="extype" name="com.trueaccord.lenses.Updatable">Updatable</span>[<a href="" class="extype" name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature">Feature</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">Feature</span><span class="params">(<span name="id">id: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>] = <span class="symbol">None</span></span>, <span name="tags">tags: <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">_root_.scala.collection.Seq.empty</span></span>, <span name="type">type: <span class="extype" name="scala.Option">Option</span>[<a href="Tile$$GeomType.html" class="extype" name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.GeomType">GeomType</a>] = <span class="symbol">None</span></span>, <span name="geometry">geometry: <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">_root_.scala.collection.Seq.empty</span></span>)</span><span class="result"> extends <span class="extype" name="com.trueaccord.scalapb.GeneratedMessage">GeneratedMessage</span> with <span class="extype" name="com.trueaccord.scalapb.Message">Message</span>[<a href="" class="extype" name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature">Feature</a>] with <span class="extype" name="com.trueaccord.lenses.Updatable">Updatable</span>[<a href="" class="extype" name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature">Feature</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Annotations</dt><dd>
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Features are described in section 4.2 of the specification
+</p></div><dl class="paramcmts block"><dt class="param">tags</dt><dd class="cmt"><p>
+  Tags of this feature are encoded as repeated pairs of
+  integers.
+  A detailed description of tags is located in sections
+  4.2 and 4.4 of the specification</p></dd><dt class="param">type</dt><dd class="cmt"><p>
+  The type of geometry stored in this feature.</p></dd><dt class="param">geometry</dt><dd class="cmt"><p>
+  Contains a stream of commands and parameters (vertices).
+  A detailed description on geometry encoding is located in
+  section 4.3 of the specification.</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@SerialVersionUID</span><span class="args">()</span>
               
         </dd></dl><div class="toggleContainer block">
@@ -93,7 +102,7 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="&lt;init&gt;(id:Option[Long],tags:Seq[Int],type:Option[geotrellis.vectortile.protobuf.internal.vector_tile.Tile.GeomType],geometry:Seq[Int]):geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature"></a>
       <a id="&lt;init&gt;:Feature"></a>
       <h4 class="signature">
@@ -102,14 +111,22 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Feature</span><span class="params">(<span name="id">id: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>] = <span class="symbol">None</span></span>, <span name="tags">tags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">Nil</span></span>, <span name="type">type: <span class="extype" name="scala.Option">Option</span>[<a href="Tile$$GeomType.html" class="extype" name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.GeomType">GeomType</a>] = <span class="symbol">None</span></span>, <span name="geometry">geometry: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">Nil</span></span>)</span>
+        <span class="name">Feature</span><span class="params">(<span name="id">id: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>] = <span class="symbol">None</span></span>, <span name="tags">tags: <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">_root_.scala.collection.Seq.empty</span></span>, <span name="type">type: <span class="extype" name="scala.Option">Option</span>[<a href="Tile$$GeomType.html" class="extype" name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.GeomType">GeomType</a>] = <span class="symbol">None</span></span>, <span name="geometry">geometry: <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">_root_.scala.collection.Seq.empty</span></span>)</span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../../index.html#geotrellis.vectortile.protobuf.internal.vector_tile.Tile$$Feature@&lt;init&gt;(id:Option[Long],tags:Seq[Int],type:Option[geotrellis.vectortile.protobuf.internal.vector_tile.Tile.GeomType],geometry:Seq[Int]):geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">tags</dt><dd class="cmt"><p>
+  Tags of this feature are encoded as repeated pairs of
+  integers.
+  A detailed description of tags is located in sections
+  4.2 and 4.4 of the specification</p></dd><dt class="param">type</dt><dd class="cmt"><p>
+  The type of geometry stored in this feature.</p></dd><dt class="param">geometry</dt><dd class="cmt"><p>
+  Contains a stream of commands and parameters (vertices).
+  A detailed description on geometry encoding is located in
+  section 4.3 of the specification.</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -403,7 +420,7 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature#geometry" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature#geometry" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="geometry:Seq[Int]"></a>
       <a id="geometry:Seq[Int]"></a>
       <h4 class="signature">
@@ -412,14 +429,18 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">geometry</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+        <span class="name">geometry</span><span class="result">: <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../../index.html#geotrellis.vectortile.protobuf.internal.vector_tile.Tile$$Feature@geometry:Seq[Int]" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">
+  Contains a stream of commands and parameters (vertices).</p><div class="fullcomment"><div class="comment cmt"><p>
+  Contains a stream of commands and parameters (vertices).
+  A detailed description on geometry encoding is located in
+  section 4.3 of the specification.</p></div></div>
     </li><li name="com.trueaccord.scalapb.GeneratedMessage#getAllFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getAllFields:Map[com.google.protobuf.Descriptors.FieldDescriptor,Any]"></a>
       <a id="getAllFields:Map[FieldDescriptor,Any]"></a>
@@ -455,7 +476,24 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature#getField" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getField(__field:com.google.protobuf.Descriptors.FieldDescriptor):Any"></a>
+      <a id="getField(__field:scalapb.descriptors.FieldDescriptor):scalapb.descriptors.PValue"></a>
+      <a id="getField(FieldDescriptor):PValue"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getField</span><span class="params">(<span name="__field">__field: <span class="extype" name="scalapb.descriptors.FieldDescriptor">FieldDescriptor</span></span>)</span><span class="result">: <span class="extype" name="scalapb.descriptors.PValue">PValue</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#geotrellis.vectortile.protobuf.internal.vector_tile.Tile$$Feature@getField(__field:scalapb.descriptors.FieldDescriptor):scalapb.descriptors.PValue" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature">Feature</a> → GeneratedMessage</dd></dl></div>
+    </li><li name="com.trueaccord.scalapb.GeneratedMessage#getField" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getField(field:com.google.protobuf.Descriptors.FieldDescriptor):Any"></a>
       <a id="getField(FieldDescriptor):Any"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -463,10 +501,27 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getField</span><span class="params">(<span name="__field">__field: <span class="extype" name="com.google.protobuf.Descriptors.FieldDescriptor">FieldDescriptor</span></span>)</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+        <span class="name">getField</span><span class="params">(<span name="field">field: <span class="extype" name="com.google.protobuf.Descriptors.FieldDescriptor">FieldDescriptor</span></span>)</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#geotrellis.vectortile.protobuf.internal.vector_tile.Tile$$Feature@getField(__field:com.google.protobuf.Descriptors.FieldDescriptor):Any" title="Permalink" target="_top">
+      <a href="../../../../../index.html#geotrellis.vectortile.protobuf.internal.vector_tile.Tile$$Feature@getField(field:com.google.protobuf.Descriptors.FieldDescriptor):Any" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GeneratedMessage</dd></dl></div>
+    </li><li name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature#getFieldByNumber" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getFieldByNumber(__fieldNumber:Int):Any"></a>
+      <a id="getFieldByNumber(Int):Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getFieldByNumber</span><span class="params">(<span name="__fieldNumber">__fieldNumber: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#geotrellis.vectortile.protobuf.internal.vector_tile.Tile$$Feature@getFieldByNumber(__fieldNumber:Int):Any" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -540,7 +595,7 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature#mergeFrom" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mergeFrom(__input:com.google.protobuf.CodedInputStream):geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature"></a>
+      <a id="mergeFrom(_input__:com.google.protobuf.CodedInputStream):geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature"></a>
       <a id="mergeFrom(CodedInputStream):Feature"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -548,10 +603,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">mergeFrom</span><span class="params">(<span name="__input">__input: <span class="extype" name="com.google.protobuf.CodedInputStream">CodedInputStream</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature">Feature</a></span>
+        <span class="name">mergeFrom</span><span class="params">(<span name="_input__">_input__: <span class="extype" name="com.google.protobuf.CodedInputStream">CodedInputStream</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature">Feature</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#geotrellis.vectortile.protobuf.internal.vector_tile.Tile$$Feature@mergeFrom(__input:com.google.protobuf.CodedInputStream):geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature" title="Permalink" target="_top">
+      <a href="../../../../../index.html#geotrellis.vectortile.protobuf.internal.vector_tile.Tile$$Feature@mergeFrom(_input__:com.google.protobuf.CodedInputStream):geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -641,7 +696,7 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature#tags" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature#tags" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="tags:Seq[Int]"></a>
       <a id="tags:Seq[Int]"></a>
       <h4 class="signature">
@@ -650,14 +705,20 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">tags</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+        <span class="name">tags</span><span class="result">: <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../../index.html#geotrellis.vectortile.protobuf.internal.vector_tile.Tile$$Feature@tags:Seq[Int]" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">
+  Tags of this feature are encoded as repeated pairs of
+  integers.</p><div class="fullcomment"><div class="comment cmt"><p>
+  Tags of this feature are encoded as repeated pairs of
+  integers.
+  A detailed description of tags is located in sections
+  4.2 and 4.4 of the specification</p></div></div>
     </li><li name="com.trueaccord.scalapb.GeneratedMessage#toByteArray" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toByteArray:Array[Byte]"></a>
       <a id="toByteArray:Array[Byte]"></a>
@@ -671,6 +732,40 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../../../index.html#geotrellis.vectortile.protobuf.internal.vector_tile.Tile$$Feature@toByteArray:Array[Byte]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GeneratedMessage</dd></dl></div>
+    </li><li name="com.trueaccord.scalapb.GeneratedMessage#toByteString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toByteString:com.google.protobuf.ByteString"></a>
+      <a id="toByteString:ByteString"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toByteString</span><span class="result">: <span class="extype" name="com.google.protobuf.ByteString">ByteString</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#geotrellis.vectortile.protobuf.internal.vector_tile.Tile$$Feature@toByteString:com.google.protobuf.ByteString" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GeneratedMessage</dd></dl></div>
+    </li><li name="com.trueaccord.scalapb.GeneratedMessage#toPMessage" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toPMessage:scalapb.descriptors.PMessage"></a>
+      <a id="toPMessage:PMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toPMessage</span><span class="result">: <span class="extype" name="scalapb.descriptors.PMessage">PMessage</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#geotrellis.vectortile.protobuf.internal.vector_tile.Tile$$Feature@toPMessage:scalapb.descriptors.PMessage" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -708,7 +803,8 @@
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">
+  The type of geometry stored in this feature.</p>
     </li><li name="com.trueaccord.lenses.Updatable#update" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="update(ms:com.trueaccord.lenses.Lens[A,A]=&gt;com.trueaccord.lenses.Mutation[A]*):A"></a>
       <a id="update((Lens[Feature,Feature])⇒Mutation[Feature]*):Feature"></a>
@@ -804,7 +900,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">withGeometry</span><span class="params">(<span name="__v">__v: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature">Feature</a></span>
+        <span class="name">withGeometry</span><span class="params">(<span name="__v">__v: <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature">Feature</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../../index.html#geotrellis.vectortile.protobuf.internal.vector_tile.Tile$$Feature@withGeometry(__v:Seq[Int]):geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature" title="Permalink" target="_top">
@@ -838,7 +934,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">withTags</span><span class="params">(<span name="__v">__v: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature">Feature</a></span>
+        <span class="name">withTags</span><span class="params">(<span name="__v">__v: <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature">Feature</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../../index.html#geotrellis.vectortile.protobuf.internal.vector_tile.Tile$$Feature@withTags(__v:Seq[Int]):geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature" title="Permalink" target="_top">
@@ -881,7 +977,7 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GeneratedMessage</dd></dl></div>
     </li><li name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Feature#writeTo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="writeTo(output:com.google.protobuf.CodedOutputStream):Unit"></a>
+      <a id="writeTo(_output__:com.google.protobuf.CodedOutputStream):Unit"></a>
       <a id="writeTo(CodedOutputStream):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -889,10 +985,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">writeTo</span><span class="params">(<span name="output">output: <span class="extype" name="com.google.protobuf.CodedOutputStream">CodedOutputStream</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">writeTo</span><span class="params">(<span name="_output__">_output__: <span class="extype" name="com.google.protobuf.CodedOutputStream">CodedOutputStream</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../index.html#geotrellis.vectortile.protobuf.internal.vector_tile.Tile$$Feature@writeTo(output:com.google.protobuf.CodedOutputStream):Unit" title="Permalink" target="_top">
+      <a href="../../../../../index.html#geotrellis.vectortile.protobuf.internal.vector_tile.Tile$$Feature@writeTo(_output__:com.google.protobuf.CodedOutputStream):Unit" title="Permalink" target="_top">
         <img src="../../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
