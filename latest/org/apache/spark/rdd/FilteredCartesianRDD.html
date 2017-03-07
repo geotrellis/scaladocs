@@ -49,7 +49,15 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Performs a cartesian join of two RDDs using filter and refine pattern.</p><p>During RDD declaration n*m partitions will be generated, one for each possible cartesian mapping.
+During RDD execution summary functions will be applied in a map-side reduce to <code>rrd1</code> and <code>rdd2</code>.
+These results will be collected and filtered using <code>metapred</code> for partitions with potential matches.
+Partition pairings with possible matches will be checked using <code>pred</code> in a refinement step.</p><p>No shuffle from <code>rdd1</code> or <code>rdd2</code> will be performed by the filter step,
+but the records of metardds, produced using the summary functions, will be shuffled (as they must be).
+The metardds contain one item per partition (ex: a &quot;bounding box&quot; of records in parent rdd),
+so it is assumed that this shuffle will be low cost.</p><p>For efficient execution it is assumed that potential matches exist for limited number
+of cartesian pairings, if no filtering is possible worst case scenario is full cartesian product.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="org.apache.spark.rdd.FilteredCartesianRDD.T">T</span>, <span class="extype" name="org.apache.spark.rdd.FilteredCartesianRDD.U">U</span>)], <span class="extype" name="org.apache.spark.internal.Logging">Logging</span>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -88,7 +96,7 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="org.apache.spark.rdd.FilteredCartesianRDD#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="org.apache.spark.rdd.FilteredCartesianRDD#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="&lt;init&gt;(sc:org.apache.spark.SparkContext,pred:(T,U)=&gt;Boolean,metapred:(V,V)=&gt;Boolean,rdd1:org.apache.spark.rdd.RDD[T],summaryFn1:Iterator[T]=&gt;Iterator[V],rdd2:org.apache.spark.rdd.RDD[U],summaryFn2:Iterator[U]=&gt;Iterator[V])(implicitevidence$1:scala.reflect.ClassTag[T],implicitevidence$2:scala.reflect.ClassTag[U],implicitevidence$3:scala.reflect.ClassTag[V]):org.apache.spark.rdd.FilteredCartesianRDD[T,U,V]"></a>
       <a id="&lt;init&gt;:FilteredCartesianRDD[T,U,V]"></a>
       <h4 class="signature">
@@ -104,7 +112,7 @@
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">sc</dt><dd class="cmt"><p>SparkContext</p></dd><dt class="param">pred</dt><dd class="cmt"><p>refinement predicate</p></dd><dt class="param">metapred</dt><dd class="cmt"><p>filter predicate</p></dd><dt class="param">rdd1</dt><dd class="cmt"><p>RDD of elements on the left side of the cartisian join</p></dd><dt class="param">rdd2</dt><dd class="cmt"><p>RDD of elements on the right side of the cartisian join</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -1729,7 +1737,7 @@
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">RDD of elements on the left side of the cartisian join</p>
     </li><li name="org.apache.spark.rdd.FilteredCartesianRDD#rdd2" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="rdd2:org.apache.spark.rdd.RDD[U]"></a>
       <a id="rdd2:RDD[U]"></a>
@@ -1746,7 +1754,7 @@
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">RDD of elements on the right side of the cartisian join</p>
     </li><li name="org.apache.spark.rdd.RDD#reduce" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="reduce(f:(T,T)=&gt;T):T"></a>
       <a id="reduce(((T,U),(T,U))⇒(T,U)):(T,U)"></a>

@@ -88,7 +88,7 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="org.apache.spark.rdd.FilteredCartesianRDD" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="org.apache.spark.rdd.FilteredCartesianRDD" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="FilteredCartesianRDD[T,U,V]extendsRDD[(T,U)]withSerializable"></a>
       <a id="FilteredCartesianRDD[T,U,V]:FilteredCartesianRDD[T,U,V]"></a>
       <h4 class="signature">
@@ -104,7 +104,15 @@
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Performs a cartesian join of two RDDs using filter and refine pattern.</p><div class="fullcomment"><div class="comment cmt"><p>Performs a cartesian join of two RDDs using filter and refine pattern.</p><p>During RDD declaration n*m partitions will be generated, one for each possible cartesian mapping.
+During RDD execution summary functions will be applied in a map-side reduce to <code>rrd1</code> and <code>rdd2</code>.
+These results will be collected and filtered using <code>metapred</code> for partitions with potential matches.
+Partition pairings with possible matches will be checked using <code>pred</code> in a refinement step.</p><p>No shuffle from <code>rdd1</code> or <code>rdd2</code> will be performed by the filter step,
+but the records of metardds, produced using the summary functions, will be shuffled (as they must be).
+The metardds contain one item per partition (ex: a &quot;bounding box&quot; of records in parent rdd),
+so it is assumed that this shuffle will be low cost.</p><p>For efficient execution it is assumed that potential matches exist for limited number
+of cartesian pairings, if no filtering is possible worst case scenario is full cartesian product.
+</p></div></div>
     </li></ol>
             </div>
 
