@@ -1,9 +1,9 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>GeoTiffSegmentLayout - geotrellis.raster.io.geotiff.GeoTiffSegmentLayout</title>
-          <meta name="description" content="GeoTiffSegmentLayout - geotrellis.raster.io.geotiff.GeoTiffSegmentLayout" />
-          <meta name="keywords" content="GeoTiffSegmentLayout geotrellis.raster.io.geotiff.GeoTiffSegmentLayout" />
+          <title>StripedSegmentTransform - geotrellis.raster.io.geotiff.StripedSegmentTransform</title>
+          <meta name="description" content="StripedSegmentTransform - geotrellis.raster.io.geotiff.StripedSegmentTransform" />
+          <meta name="keywords" content="StripedSegmentTransform geotrellis.raster.io.geotiff.StripedSegmentTransform" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -16,7 +16,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../index.html';
-            var hash = 'geotrellis.raster.io.geotiff.GeoTiffSegmentLayout';
+            var hash = 'geotrellis.raster.io.geotiff.StripedSegmentTransform';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -28,14 +28,12 @@
         </head>
         <body class="type">
       <div id="definition">
-        <a href="GeoTiffSegmentLayout$.html" title="See companion object"><img alt="Class/Object" src="../../../../lib/class_to_object_big.png" /></a>
+        <img alt="Class" src="../../../../lib/class_big.png" />
         <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.raster">raster</a>.<a href="../package.html" class="extype" name="geotrellis.raster.io">io</a>.<a href="package.html" class="extype" name="geotrellis.raster.io.geotiff">geotiff</a></p>
-        <h1><a href="GeoTiffSegmentLayout$.html" title="See companion object">GeoTiffSegmentLayout</a></h1><h3><span class="morelinks"><div>
-            Related Docs:
-            <a href="GeoTiffSegmentLayout$.html" title="See companion object">object GeoTiffSegmentLayout</a>
-            | <a href="package.html" class="extype" name="geotrellis.raster.io.geotiff">package geotiff</a>
+        <h1>StripedSegmentTransform</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="package.html" class="extype" name="geotrellis.raster.io.geotiff">package geotiff</a>
           </div></span></h3><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -47,14 +45,13 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">GeoTiffSegmentLayout</span><span class="params">(<span name="totalCols">totalCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="totalRows">totalRows: <span class="extype" name="scala.Int">Int</span></span>, <span name="tileLayout">tileLayout: <a href="../../TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="isTiled">isTiled: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">StripedSegmentTransform</span><span class="params">(<span name="segmentIndex">segmentIndex: <span class="extype" name="scala.Int">Int</span></span>, <span name="segmentLayout">segmentLayout: <a href="GeoTiffSegmentLayout.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout">GeoTiffSegmentLayout</a></span>)</span><span class="result"> extends <a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This case class represents how the segments in a given <a href="GeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiff">GeoTiff</a> are arranged.
-</p></div><dl class="paramcmts block"><dt class="param">totalCols</dt><dd class="cmt"><p>The total amount of cols in the GeoTiff</p></dd><dt class="param">totalRows</dt><dd class="cmt"><p>The total amount of rows in the GeoTiff</p></dd><dt class="param">tileLayout</dt><dd class="cmt"><p>The <a href="../../TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a> of the GeoTiff</p></dd><dt class="param">isTiled</dt><dd class="cmt"><p>A Boolean that represents if the given GeoTiff is Tiled or not</p></dd><dt>returns</dt><dd class="cmt"><p>A new instance of the GeoTiffSegmentLayout case class</p></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -72,7 +69,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout"><span>GeoTiffSegmentLayout</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.raster.io.geotiff.StripedSegmentTransform"><span>StripedSegmentTransform</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="geotrellis.raster.io.geotiff.GridIndexTransform"><span>GridIndexTransform</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -91,23 +88,23 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(totalCols:Int,totalRows:Int,tileLayout:geotrellis.raster.TileLayout,isTiled:Boolean):geotrellis.raster.io.geotiff.GeoTiffSegmentLayout"></a>
-      <a id="&lt;init&gt;:GeoTiffSegmentLayout"></a>
+              <ol><li name="geotrellis.raster.io.geotiff.StripedSegmentTransform#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(segmentIndex:Int,segmentLayout:geotrellis.raster.io.geotiff.GeoTiffSegmentLayout):geotrellis.raster.io.geotiff.StripedSegmentTransform"></a>
+      <a id="&lt;init&gt;:StripedSegmentTransform"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">GeoTiffSegmentLayout</span><span class="params">(<span name="totalCols">totalCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="totalRows">totalRows: <span class="extype" name="scala.Int">Int</span></span>, <span name="tileLayout">tileLayout: <a href="../../TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="isTiled">isTiled: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span>
+        <span class="name">StripedSegmentTransform</span><span class="params">(<span name="segmentIndex">segmentIndex: <span class="extype" name="scala.Int">Int</span></span>, <span name="segmentLayout">segmentLayout: <a href="GeoTiffSegmentLayout.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout">GeoTiffSegmentLayout</a></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@&lt;init&gt;(totalCols:Int,totalRows:Int,tileLayout:geotrellis.raster.TileLayout,isTiled:Boolean):geotrellis.raster.io.geotiff.GeoTiffSegmentLayout" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@&lt;init&gt;(segmentIndex:Int,segmentLayout:geotrellis.raster.io.geotiff.GeoTiffSegmentLayout):geotrellis.raster.io.geotiff.StripedSegmentTransform" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">totalCols</dt><dd class="cmt"><p>The total amount of cols in the GeoTiff</p></dd><dt class="param">totalRows</dt><dd class="cmt"><p>The total amount of rows in the GeoTiff</p></dd><dt class="param">tileLayout</dt><dd class="cmt"><p>The <a href="../../TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a> of the GeoTiff</p></dd><dt class="param">isTiled</dt><dd class="cmt"><p>A Boolean that represents if the given GeoTiff is Tiled or not</p></dd></dl></div>
+      
     </li></ol>
             </div>
 
@@ -129,7 +126,7 @@
         <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@!=(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -146,7 +143,7 @@
         <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@##():Int" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@##():Int" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -163,7 +160,7 @@
         <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@==(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@==(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -180,11 +177,45 @@
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@asInstanceOf[T0]:T0" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.GridIndexTransform#bitIndexToCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="bitIndexToCol(i:Int):Int"></a>
+      <a id="bitIndexToCol(Int):Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bitIndexToCol</span><span class="params">(<span name="i">i: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@bitIndexToCol(i:Int):Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Specific to BitGeoTiffSegment index.</p><div class="fullcomment"><div class="comment cmt"><p>Specific to BitGeoTiffSegment index. The col of the source raster that this index represents.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a></dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.GridIndexTransform#bitIndexToRow" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="bitIndexToRow(i:Int):Int"></a>
+      <a id="bitIndexToRow(Int):Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bitIndexToRow</span><span class="params">(<span name="i">i: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@bitIndexToRow(i:Int):Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Specific to BitGeoTiffSegment index.</p><div class="fullcomment"><div class="comment cmt"><p>Specific to BitGeoTiffSegment index. The row of the source raster that this index represents.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -197,7 +228,7 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@clone():Object" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@clone():Object" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -220,7 +251,7 @@
         <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -237,7 +268,7 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@finalize():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@finalize():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -260,118 +291,62 @@
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@getClass():Class[_]" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@getClass():Class[_]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#getGridBounds" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getGridBounds(segmentIndex:Int,isBit:Boolean):geotrellis.raster.GridBounds"></a>
-      <a id="getGridBounds(Int,Boolean):GridBounds"></a>
+    </li><li name="geotrellis.raster.io.geotiff.StripedSegmentTransform#gridToIndex" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="gridToIndex(col:Int,row:Int):Int"></a>
+      <a id="gridToIndex(Int,Int):Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getGridBounds</span><span class="params">(<span name="segmentIndex">segmentIndex: <span class="extype" name="scala.Int">Int</span></span>, <span name="isBit">isBit: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>
+        <span class="name">gridToIndex</span><span class="params">(<span name="col">col: <span class="extype" name="scala.Int">Int</span></span>, <span name="row">row: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@getGridBounds(segmentIndex:Int,isBit:Boolean):geotrellis.raster.GridBounds" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@gridToIndex(col:Int,row:Int):Int" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#getSegmentDimensions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getSegmentDimensions(segmentIndex:Int):(Int,Int)"></a>
-      <a id="getSegmentDimensions(Int):(Int,Int)"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.io.geotiff.StripedSegmentTransform">StripedSegmentTransform</a> → <a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a></dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.GridIndexTransform#indexToCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="indexToCol(i:Int):Int"></a>
+      <a id="indexToCol(Int):Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getSegmentDimensions</span><span class="params">(<span name="segmentIndex">segmentIndex: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>
+        <span class="name">indexToCol</span><span class="params">(<span name="i">i: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@getSegmentDimensions(segmentIndex:Int):(Int,Int)" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@indexToCol(i:Int):Int" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Calculates pixel dimensions of a given segment in this layout.</p><div class="fullcomment"><div class="comment cmt"><p>Calculates pixel dimensions of a given segment in this layout.
-Segments are indexed in row-major order relative to the GeoTiff they comprise.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Tuple representing segment (cols, rows)</p></dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#getSegmentIndex" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getSegmentIndex(col:Int,row:Int):Int"></a>
-      <a id="getSegmentIndex(Int,Int):Int"></a>
+      <p class="shortcomment cmt">The col of the source raster that this index represents.</p><div class="fullcomment"><div class="comment cmt"><p>The col of the source raster that this index represents. Can produce indefid cols</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a></dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.GridIndexTransform#indexToRow" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="indexToRow(i:Int):Int"></a>
+      <a id="indexToRow(Int):Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getSegmentIndex</span><span class="params">(<span name="col">col: <span class="extype" name="scala.Int">Int</span></span>, <span name="row">row: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">indexToRow</span><span class="params">(<span name="i">i: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@getSegmentIndex(col:Int,row:Int):Int" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@indexToRow(i:Int):Int" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Finds the corresponding segment index given GeoTiff col and row
-</p><div class="fullcomment"><div class="comment cmt"><p>Finds the corresponding segment index given GeoTiff col and row
-</p></div><dl class="paramcmts block"><dt class="param">col</dt><dd class="cmt"><p>Pixel column in overall layout</p></dd><dt class="param">row</dt><dd class="cmt"><p>Pixel row in overall layout</p></dd><dt>returns</dt><dd class="cmt"><p>The index of the segment in this layout</p></dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#getSegmentSize" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getSegmentSize(segmentIndex:Int):Int"></a>
-      <a id="getSegmentSize(Int):Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getSegmentSize</span><span class="params">(<span name="segmentIndex">segmentIndex: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@getSegmentSize(segmentIndex:Int):Int" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Calculates the total pixel count for given segment in this layout.</p><div class="fullcomment"><div class="comment cmt"><p>Calculates the total pixel count for given segment in this layout.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Pixel size of the segment</p></dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#getSegmentTransform" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getSegmentTransform(segmentIndex:Int):geotrellis.raster.io.geotiff.GridIndexTransform"></a>
-      <a id="getSegmentTransform(Int):GridIndexTransform"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getSegmentTransform</span><span class="params">(<span name="segmentIndex">segmentIndex: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@getSegmentTransform(segmentIndex:Int):geotrellis.raster.io.geotiff.GridIndexTransform" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#intersectingSegments" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="intersectingSegments(bounds:geotrellis.raster.GridBounds):Array[Int]"></a>
-      <a id="intersectingSegments(GridBounds):Array[Int]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">intersectingSegments</span><span class="params">(<span name="bounds">bounds: <a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@intersectingSegments(bounds:geotrellis.raster.GridBounds):Array[Int]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Returns all segment indices which intersect given pixel grid bounds</p>
+      <p class="shortcomment cmt">The row of the source raster that this index represents.</p><div class="fullcomment"><div class="comment cmt"><p>The row of the source raster that this index represents. Can produce indefid rows</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -384,45 +359,79 @@ Segments are indexed in row-major order relative to the GeoTiff they comprise.
         <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#isStriped" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="isStriped:Boolean"></a>
-      <a id="isStriped:Boolean"></a>
+    </li><li name="geotrellis.raster.io.geotiff.GridIndexTransform#layoutCol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="layoutCol:Int"></a>
+      <a id="layoutCol:Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isStriped</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">layoutCol</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@isStriped:Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@layoutCol:Int" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Determines if the GeoTiff has Striped storage</p>
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#isTiled" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="isTiled:Boolean"></a>
-      <a id="isTiled:Boolean"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a></dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.GridIndexTransform#layoutCols" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="layoutCols:Int"></a>
+      <a id="layoutCols:Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isTiled</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">layoutCols</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@isTiled:Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@layoutCols:Int" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">A Boolean that represents if the given GeoTiff is Tiled or not</p>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a></dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.GridIndexTransform#layoutRow" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="layoutRow:Int"></a>
+      <a id="layoutRow:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">layoutRow</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@layoutRow:Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a></dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.GridIndexTransform#layoutRows" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="layoutRows:Int"></a>
+      <a id="layoutRows:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">layoutRows</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@layoutRows:Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -435,7 +444,7 @@ Segments are indexed in row-major order relative to the GeoTiff they comprise.
         <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -452,7 +461,7 @@ Segments are indexed in row-major order relative to the GeoTiff they comprise.
         <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@notify():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@notify():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -469,30 +478,79 @@ Segments are indexed in row-major order relative to the GeoTiff they comprise.
         <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@notifyAll():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@notifyAll():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#storageMethod" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="storageMethod:geotrellis.raster.io.geotiff.StorageMethod"></a>
-      <a id="storageMethod:StorageMethod"></a>
+    </li><li name="geotrellis.raster.io.geotiff.GridIndexTransform#segmentCols" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="segmentCols:Int"></a>
+      <a id="segmentCols:Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">storageMethod</span><span class="result">: <a href="StorageMethod.html" class="extype" name="geotrellis.raster.io.geotiff.StorageMethod">StorageMethod</a></span>
+        <span class="name">segmentCols</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@storageMethod:geotrellis.raster.io.geotiff.StorageMethod" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@segmentCols:Int" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Determines if the GeoTiff uses Striped or Tiled storage of data
-</p><div class="fullcomment"><div class="comment cmt"><p>Determines if the GeoTiff uses Striped or Tiled storage of data
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Returns the <a href="StorageMethod.html" class="extype" name="geotrellis.raster.io.geotiff.StorageMethod">StorageMethod</a> of the GeoTiff</p></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a></dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.StripedSegmentTransform#segmentIndex" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="segmentIndex:Int"></a>
+      <a id="segmentIndex:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">segmentIndex</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@segmentIndex:Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.io.geotiff.StripedSegmentTransform">StripedSegmentTransform</a> → <a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a></dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.StripedSegmentTransform#segmentLayout" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="segmentLayout:geotrellis.raster.io.geotiff.GeoTiffSegmentLayout"></a>
+      <a id="segmentLayout:GeoTiffSegmentLayout"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">segmentLayout</span><span class="result">: <a href="GeoTiffSegmentLayout.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout">GeoTiffSegmentLayout</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@segmentLayout:geotrellis.raster.io.geotiff.GeoTiffSegmentLayout" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.io.geotiff.StripedSegmentTransform">StripedSegmentTransform</a> → <a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a></dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.GridIndexTransform#segmentRows" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="segmentRows:Int"></a>
+      <a id="segmentRows:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">segmentRows</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@segmentRows:Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -505,62 +563,45 @@ Segments are indexed in row-major order relative to the GeoTiff they comprise.
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#tileLayout" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="tileLayout:geotrellis.raster.TileLayout"></a>
-      <a id="tileLayout:TileLayout"></a>
+    </li><li name="geotrellis.raster.io.geotiff.GridIndexTransform#tileCols" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tileCols:Int"></a>
+      <a id="tileCols:Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">tileLayout</span><span class="result">: <a href="../../TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>
+        <span class="name">tileCols</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@tileLayout:geotrellis.raster.TileLayout" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@tileCols:Int" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">The <a href="../../TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a> of the GeoTiff</p>
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#totalCols" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="totalCols:Int"></a>
-      <a id="totalCols:Int"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a></dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.GridIndexTransform#tileRows" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tileRows:Int"></a>
+      <a id="tileRows:Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">totalCols</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">tileRows</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@totalCols:Int" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@tileRows:Int" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">The total amount of cols in the GeoTiff</p>
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#totalRows" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="totalRows:Int"></a>
-      <a id="totalRows:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">totalRows</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@totalRows:Int" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">The total amount of rows in the GeoTiff</p>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -573,7 +614,7 @@ Segments are indexed in row-major order relative to the GeoTiff they comprise.
         <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@wait():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@wait():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -596,7 +637,7 @@ Segments are indexed in row-major order relative to the GeoTiff they comprise.
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -619,7 +660,7 @@ Segments are indexed in row-major order relative to the GeoTiff they comprise.
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@wait(x$1:Long):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.StripedSegmentTransform@wait(x$1:Long):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -647,6 +688,8 @@ Segments are indexed in row-major order relative to the GeoTiff they comprise.
               <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
             </div><div class="parent" name="scala.Equals">
               <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="geotrellis.raster.io.geotiff.GridIndexTransform">
+              <h3>Inherited from <a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">

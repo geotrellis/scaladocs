@@ -626,7 +626,7 @@ defined tags.</p>
       <p class="shortcomment cmt">This trait holds the basic information about the image data of a <a href="GeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiff">GeoTiff</a>
 </p>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="GeoTiffMultibandTileextendsMultibandTilewithGeoTiffImageDatawithMacroGeotiffMultibandCombiners"></a>
+      <a id="GeoTiffMultibandTileextendsMultibandTilewithGeoTiffImageDatawithMacroGeotiffMultibandCombinerswithLazyLogging"></a>
       <a id="GeoTiffMultibandTile:GeoTiffMultibandTile"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -634,10 +634,10 @@ defined tags.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="GeoTiffMultibandTile.html"><span class="name">GeoTiffMultibandTile</span></a><span class="result"> extends <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a> with <a href="GeoTiffImageData.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffImageData">GeoTiffImageData</a> with <a href="../../MacroGeotiffMultibandCombiners.html" class="extype" name="geotrellis.raster.MacroGeotiffMultibandCombiners">MacroGeotiffMultibandCombiners</a></span>
+        <a href="GeoTiffMultibandTile.html"><span class="name">GeoTiffMultibandTile</span></a><span class="result"> extends <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a> with <a href="GeoTiffImageData.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffImageData">GeoTiffImageData</a> with <a href="../../MacroGeotiffMultibandCombiners.html" class="extype" name="geotrellis.raster.MacroGeotiffMultibandCombiners">MacroGeotiffMultibandCombiners</a> with <span class="extype" name="com.typesafe.scalalogging.LazyLogging">LazyLogging</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.package@GeoTiffMultibandTileextendsMultibandTilewithGeoTiffImageDatawithMacroGeotiffMultibandCombiners" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.package@GeoTiffMultibandTileextendsMultibandTilewithGeoTiffImageDatawithMacroGeotiffMultibandCombinerswithLazyLogging" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -715,7 +715,7 @@ are used.
       </a>
     </span>
       <p class="shortcomment cmt">This case class represents how the segments in a given <a href="GeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiff">GeoTiff</a> are arranged.</p><div class="fullcomment"><div class="comment cmt"><p>This case class represents how the segments in a given <a href="GeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiff">GeoTiff</a> are arranged.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A new instance of the GeoTiffSegmentLayout case class</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">totalCols</dt><dd class="cmt"><p>The total amount of cols in the GeoTiff</p></dd><dt class="param">totalRows</dt><dd class="cmt"><p>The total amount of rows in the GeoTiff</p></dd><dt class="param">tileLayout</dt><dd class="cmt"><p>The <a href="../../TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a> of the GeoTiff</p></dd><dt class="param">isTiled</dt><dd class="cmt"><p>A Boolean that represents if the given GeoTiff is Tiled or not</p></dd><dt>returns</dt><dd class="cmt"><p>A new instance of the GeoTiffSegmentLayout case class</p></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffTile" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="GeoTiffTileextendsTilewithGeoTiffImageData"></a>
       <a id="GeoTiffTile:GeoTiffTile"></a>
@@ -750,7 +750,7 @@ are used.
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.io.geotiff.GridIndexTransform" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.raster.io.geotiff.GridIndexTransform" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="GridIndexTransformextendsAnyRef"></a>
       <a id="GridIndexTransform:GridIndexTransform"></a>
       <h4 class="signature">
@@ -766,7 +766,7 @@ are used.
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Specifically for single band segments.</p><div class="fullcomment"><div class="comment cmt"><p>Specifically for single band segments. If dealing with multiband segments, you must do the math</p></div></div>
+      
     </li><li name="geotrellis.raster.io.geotiff.Int16ConstantNoDataGeoTiffSegment" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Int16ConstantNoDataGeoTiffSegmentextendsInt16GeoTiffSegment"></a>
       <a id="Int16ConstantNoDataGeoTiffSegment:Int16ConstantNoDataGeoTiffSegment"></a>
@@ -1005,44 +1005,23 @@ are used.
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.io.geotiff.Intersection" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="IntersectionextendsProductwithSerializable"></a>
-      <a id="Intersection:Intersection"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="Intersection.html"><span class="name">Intersection</span></a><span class="params">(<span name="segmentGridBounds">segmentGridBounds: <a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>, <span name="intersection">intersection: <a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>, <span name="segmentLayout">segmentLayout: <a href="GeoTiffSegmentLayout.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout">GeoTiffSegmentLayout</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.package@IntersectionextendsProductwithSerializable" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">This case class is used to determine where an intersection between a
-segment of a GeoTiffTile and of a GridBounds begins and ends.</p><div class="fullcomment"><div class="comment cmt"><p>This case class is used to determine where an intersection between a
-segment of a GeoTiffTile and of a GridBounds begins and ends.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A new instance of Intersection</p></dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.LazySegmentBytes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="LazySegmentBytesextendsSegmentByteswithProductwithSerializable"></a>
+    </li><li name="geotrellis.raster.io.geotiff.LazySegmentBytes" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LazySegmentBytesextendsSegmentByteswithLazyLogging"></a>
       <a id="LazySegmentBytes:LazySegmentBytes"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">case class</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="LazySegmentBytes.html"><span class="name">LazySegmentBytes</span></a><span class="params">(<span name="byteReader">byteReader: <a href="../../../util/ByteReader.html" class="extype" name="geotrellis.util.ByteReader">ByteReader</a></span>, <span name="tiffTags">tiffTags: <a href="tags/TiffTags.html" class="extype" name="geotrellis.raster.io.geotiff.tags.TiffTags">TiffTags</a></span>)</span><span class="result"> extends <a href="SegmentBytes.html" class="extype" name="geotrellis.raster.io.geotiff.SegmentBytes">SegmentBytes</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="LazySegmentBytes.html"><span class="name">LazySegmentBytes</span></a><span class="result"> extends <a href="SegmentBytes.html" class="extype" name="geotrellis.raster.io.geotiff.SegmentBytes">SegmentBytes</a> with <span class="extype" name="com.typesafe.scalalogging.LazyLogging">LazyLogging</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.package@LazySegmentBytesextendsSegmentByteswithProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.package@LazySegmentBytesextendsSegmentByteswithLazyLogging" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">This class implements <a href="SegmentBytes.html" class="extype" name="geotrellis.raster.io.geotiff.SegmentBytes">SegmentBytes</a> via a ByteReader.</p><div class="fullcomment"><div class="comment cmt"><p>This class implements <a href="SegmentBytes.html" class="extype" name="geotrellis.raster.io.geotiff.SegmentBytes">SegmentBytes</a> via a ByteReader.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A new instance of LazySegmentBytes</p></dd></dl></div>
+      
     </li><li name="geotrellis.raster.io.geotiff.MultibandCropIterator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MultibandCropIteratorextendsCropIterator[geotrellis.raster.MultibandTile]"></a>
       <a id="MultibandCropIterator:MultibandCropIterator"></a>
@@ -1079,7 +1058,7 @@ multibandGeoTiffs.</p>
     </span>
       
     </li><li name="geotrellis.raster.io.geotiff.SegmentBytes" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="SegmentBytesextendsTraversable[Array[Byte]]"></a>
+      <a id="SegmentBytesextendsSeq[Array[Byte]]"></a>
       <a id="SegmentBytes:SegmentBytes"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1087,14 +1066,14 @@ multibandGeoTiffs.</p>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="SegmentBytes.html"><span class="name">SegmentBytes</span></a><span class="result"> extends <span class="extype" name="scala.Traversable">Traversable</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>
+        <a href="SegmentBytes.html"><span class="name">SegmentBytes</span></a><span class="result"> extends <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.package@SegmentBytesextendsTraversable[Array[Byte]]" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.package@SegmentBytesextendsSeq[Array[Byte]]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">The base trait of SegmentBytes.</p><div class="fullcomment"><div class="comment cmt"><p>The base trait of SegmentBytes. It can be implemented either as
+      <p class="shortcomment cmt">Represents the bytes of the segments with-in a GeoTiff.</p><div class="fullcomment"><div class="comment cmt"><p>Represents the bytes of the segments with-in a GeoTiff.</p><p>The base trait of SegmentBytes. It can be implemented either as
 an Array[Array[Byte]] or as a ByteBuffer that is lazily read in.
 </p></div></div>
     </li><li name="geotrellis.raster.io.geotiff.SinglebandCropIterator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
@@ -1166,6 +1145,23 @@ multibandGeoTiffs.</p>
       </a>
     </span>
       
+    </li><li name="geotrellis.raster.io.geotiff.StripedSegmentTransform" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StripedSegmentTransformextendsGridIndexTransformwithProductwithSerializable"></a>
+      <a id="StripedSegmentTransform:StripedSegmentTransform"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="StripedSegmentTransform.html"><span class="name">StripedSegmentTransform</span></a><span class="params">(<span name="segmentIndex">segmentIndex: <span class="extype" name="scala.Int">Int</span></span>, <span name="segmentLayout">segmentLayout: <a href="GeoTiffSegmentLayout.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout">GeoTiffSegmentLayout</a></span>)</span><span class="result"> extends <a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.package@StripedSegmentTransformextendsGridIndexTransformwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.raster.io.geotiff.Tags" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="TagsextendsProductwithSerializable"></a>
       <a id="Tags:Tags"></a>
@@ -1199,6 +1195,23 @@ See the &quot;Metadata&quot; section here: http://www.gdal.org/gdal_datamodel.ht
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.io.geotiff.package@TiledextendsStorageMethodwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.io.geotiff.TiledSegmentTransform" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TiledSegmentTransformextendsGridIndexTransformwithProductwithSerializable"></a>
+      <a id="TiledSegmentTransform:TiledSegmentTransform"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="TiledSegmentTransform.html"><span class="name">TiledSegmentTransform</span></a><span class="params">(<span name="segmentIndex">segmentIndex: <span class="extype" name="scala.Int">Int</span></span>, <span name="segmentLayout">segmentLayout: <a href="GeoTiffSegmentLayout.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout">GeoTiffSegmentLayout</a></span>)</span><span class="result"> extends <a href="GridIndexTransform.html" class="extype" name="geotrellis.raster.io.geotiff.GridIndexTransform">GridIndexTransform</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.package@TiledSegmentTransformextendsGridIndexTransformwithProductwithSerializable" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -1705,6 +1718,23 @@ See the &quot;Metadata&quot; section here: http://www.gdal.org/gdal_datamodel.ht
     </span>
       <p class="shortcomment cmt">The companion object to <a href="GeoTiffOptions.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffOptions">GeoTiffOptions</a>
 </p>
+    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegment" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GeoTiffSegment"></a>
+      <a id="GeoTiffSegment:GeoTiffSegment"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GeoTiffSegment$.html"><span class="name">GeoTiffSegment</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.package@GeoTiffSegment" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="GeoTiffSegmentLayout"></a>
       <a id="GeoTiffSegmentLayout:GeoTiffSegmentLayout"></a>
@@ -1770,6 +1800,23 @@ See the &quot;Metadata&quot; section here: http://www.gdal.org/gdal_datamodel.ht
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.io.geotiff.package@Int32BandType" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.io.geotiff.LazySegmentBytes" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LazySegmentBytes"></a>
+      <a id="LazySegmentBytes:LazySegmentBytes"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LazySegmentBytes$.html"><span class="name">LazySegmentBytes</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.package@LazySegmentBytes" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

@@ -279,19 +279,19 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.UByteGeoTiffSegmentCollection#createSegment" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="createSegment:Int=&gt;geotrellis.raster.io.geotiff.UByteGeoTiffSegment"></a>
-      <a id="createSegment:(Int)⇒UByteGeoTiffSegment"></a>
+    </li><li name="geotrellis.raster.io.geotiff.UByteGeoTiffSegmentCollection#decompressGeoTiffSegment" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="decompressGeoTiffSegment:(Int,Array[Byte])=&gt;geotrellis.raster.io.geotiff.UByteGeoTiffSegment"></a>
+      <a id="decompressGeoTiffSegment:(Int,Array[Byte])⇒UByteGeoTiffSegment"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
-        <span class="name">createSegment</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>) ⇒ <a href="UByteGeoTiffSegment.html" class="extype" name="geotrellis.raster.io.geotiff.UByteGeoTiffSegment">UByteGeoTiffSegment</a></span>
+        <span class="name">decompressGeoTiffSegment</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]) ⇒ <a href="UByteGeoTiffSegment.html" class="extype" name="geotrellis.raster.io.geotiff.UByteGeoTiffSegment">UByteGeoTiffSegment</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.UByteGeoTiffSegmentCollection@createSegment:Int=&gt;geotrellis.raster.io.geotiff.UByteGeoTiffSegment" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.UByteGeoTiffSegmentCollection@decompressGeoTiffSegment:(Int,Array[Byte])=&gt;geotrellis.raster.io.geotiff.UByteGeoTiffSegment" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -370,23 +370,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentCollection#getDecompressedBytes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getDecompressedBytes(i:Int):Array[Byte]"></a>
-      <a id="getDecompressedBytes(Int):Array[Byte]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getDecompressedBytes</span><span class="params">(<span name="i">i: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.UByteGeoTiffSegmentCollection@getDecompressedBytes(i:Int):Array[Byte]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffSegmentCollection.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentCollection">GeoTiffSegmentCollection</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentCollection#getSegment" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getSegment(i:Int):GeoTiffSegmentCollection.this.T"></a>
       <a id="getSegment(Int):T"></a>
@@ -400,6 +383,23 @@
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.io.geotiff.UByteGeoTiffSegmentCollection@getSegment(i:Int):GeoTiffSegmentCollection.this.T" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffSegmentCollection.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentCollection">GeoTiffSegmentCollection</a></dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentCollection#getSegments" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getSegments(ids:Traversable[Int]):Iterator[(Int,GeoTiffSegmentCollection.this.T)]"></a>
+      <a id="getSegments(Traversable[Int]):Iterator[(Int,T)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getSegments</span><span class="params">(<span name="ids">ids: <span class="extype" name="scala.Traversable">Traversable</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[(<span class="extype" name="scala.Int">Int</span>, <a href="#T=geotrellis.raster.io.geotiff.UByteGeoTiffSegment" class="extmbr" name="geotrellis.raster.io.geotiff.UByteGeoTiffSegmentCollection.T">T</a>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.UByteGeoTiffSegmentCollection@getSegments(ids:Traversable[Int]):Iterator[(Int,GeoTiffSegmentCollection.this.T)]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

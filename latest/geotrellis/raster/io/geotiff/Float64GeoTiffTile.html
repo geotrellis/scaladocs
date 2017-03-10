@@ -409,25 +409,8 @@ given CellType
 </p><div class="fullcomment"><div class="comment cmt"><p>Converts the CellType of the GeoTiffTile to the
 given CellType
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A new <a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> that contains the new CellTypes</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffTile">GeoTiffTile</a> → <a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.Float64GeoTiffSegmentCollection#createSegment" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="createSegment:Int=&gt;geotrellis.raster.io.geotiff.Float64GeoTiffSegment"></a>
-      <a id="createSegment:(Int)⇒Float64GeoTiffSegment"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">createSegment</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>) ⇒ <a href="Float64GeoTiffSegment.html" class="extype" name="geotrellis.raster.io.geotiff.Float64GeoTiffSegment">Float64GeoTiffSegment</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.Float64GeoTiffTile@createSegment:Int=&gt;geotrellis.raster.io.geotiff.Float64GeoTiffSegment" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Float64GeoTiffSegmentCollection.html" class="extype" name="geotrellis.raster.io.geotiff.Float64GeoTiffSegmentCollection">Float64GeoTiffSegmentCollection</a> → <a href="GeoTiffSegmentCollection.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentCollection">GeoTiffSegmentCollection</a></dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.Float64GeoTiffTile#crop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="crop(gridBounds:geotrellis.raster.GridBounds):geotrellis.raster.MutableArrayTile"></a>
+    </li><li name="geotrellis.raster.io.geotiff.GeoTiffTile#crop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="crop(bounds:geotrellis.raster.GridBounds):geotrellis.raster.MutableArrayTile"></a>
       <a id="crop(GridBounds):MutableArrayTile"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -435,17 +418,32 @@ given CellType
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">crop</span><span class="params">(<span name="gridBounds">gridBounds: <a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>)</span><span class="result">: <a href="../../MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a></span>
+        <span class="name">crop</span><span class="params">(<span name="bounds">bounds: <a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>)</span><span class="result">: <a href="../../MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.Float64GeoTiffTile@crop(gridBounds:geotrellis.raster.GridBounds):geotrellis.raster.MutableArrayTile" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.Float64GeoTiffTile@crop(bounds:geotrellis.raster.GridBounds):geotrellis.raster.MutableArrayTile" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Performs a crop on itself where the returned GeoTiffTile will jave the
-same dimensions as the GridBounds.</p><div class="fullcomment"><div class="comment cmt"><p>Performs a crop on itself where the returned GeoTiffTile will jave the
-same dimensions as the GridBounds.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A <a href="../../MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.io.geotiff.Float64GeoTiffTile">Float64GeoTiffTile</a> → <a href="GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffTile">GeoTiffTile</a></dd></dl></div>
+      <p class="shortcomment cmt">Crop this tile to given pixel region.</p><div class="fullcomment"><div class="comment cmt"><p>Crop this tile to given pixel region.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A <a href="../../MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a> of the cropped region</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffTile">GeoTiffTile</a></dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.Float64GeoTiffSegmentCollection#decompressGeoTiffSegment" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="decompressGeoTiffSegment:(Int,Array[Byte])=&gt;geotrellis.raster.io.geotiff.Float64GeoTiffSegment"></a>
+      <a id="decompressGeoTiffSegment:(Int,Array[Byte])⇒Float64GeoTiffSegment"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">decompressGeoTiffSegment</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]) ⇒ <a href="Float64GeoTiffSegment.html" class="extype" name="geotrellis.raster.io.geotiff.Float64GeoTiffSegment">Float64GeoTiffSegment</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.Float64GeoTiffTile@decompressGeoTiffSegment:(Int,Array[Byte])=&gt;geotrellis.raster.io.geotiff.Float64GeoTiffSegment" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Float64GeoTiffSegmentCollection.html" class="extype" name="geotrellis.raster.io.geotiff.Float64GeoTiffSegmentCollection">Float64GeoTiffSegmentCollection</a> → <a href="GeoTiffSegmentCollection.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentCollection">GeoTiffSegmentCollection</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.Float64GeoTiffTile#decompressor" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="decompressor:geotrellis.raster.io.geotiff.compression.Decompressor"></a>
       <a id="decompressor:Decompressor"></a>
@@ -831,23 +829,6 @@ as a double, and returns nothing (presumably for side-effects).
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentCollection#getDecompressedBytes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getDecompressedBytes(i:Int):Array[Byte]"></a>
-      <a id="getDecompressedBytes(Int):Array[Byte]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getDecompressedBytes</span><span class="params">(<span name="i">i: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.Float64GeoTiffTile@getDecompressedBytes(i:Int):Array[Byte]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffSegmentCollection.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentCollection">GeoTiffSegmentCollection</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffTile#getDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getDouble(col:Int,row:Int):Double"></a>
       <a id="getDouble(Int,Int):Double"></a>
@@ -879,6 +860,23 @@ as a double, and returns nothing (presumably for side-effects).
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.io.geotiff.Float64GeoTiffTile@getSegment(i:Int):GeoTiffSegmentCollection.this.T" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffSegmentCollection.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentCollection">GeoTiffSegmentCollection</a></dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentCollection#getSegments" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getSegments(ids:Traversable[Int]):Iterator[(Int,GeoTiffSegmentCollection.this.T)]"></a>
+      <a id="getSegments(Traversable[Int]):Iterator[(Int,T)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getSegments</span><span class="params">(<span name="ids">ids: <span class="extype" name="scala.Traversable">Traversable</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[(<span class="extype" name="scala.Int">Int</span>, <a href="#T=geotrellis.raster.io.geotiff.Float64GeoTiffSegment" class="extmbr" name="geotrellis.raster.io.geotiff.Float64GeoTiffTile.T">T</a>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.Float64GeoTiffTile@getSegments(ids:Traversable[Int]):Iterator[(Int,GeoTiffSegmentCollection.this.T)]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -1148,7 +1146,7 @@ not.  The result of the mapping is returned as a tile.
     </span>
       <p class="shortcomment cmt">Map an <a href="../../package.html#IntTileMapper=geotrellis.macros.IntTileMapper" class="extmbr" name="geotrellis.raster.IntTileMapper">IntTileMapper</a> over the given tile.</p><div class="fullcomment"><div class="comment cmt"><p>Map an <a href="../../package.html#IntTileMapper=geotrellis.macros.IntTileMapper" class="extmbr" name="geotrellis.raster.IntTileMapper">IntTileMapper</a> over the given tile.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A <a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> with the results of the mapper</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffTile">GeoTiffTile</a> → <a href="../../../macros/MacroMappableTile.html" class="extype" name="geotrellis.macros.MacroMappableTile">MacroMappableTile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.Float64GeoTiffTile#mutable" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.raster.io.geotiff.GeoTiffTile#mutable" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mutable:geotrellis.raster.MutableArrayTile"></a>
       <a id="mutable:MutableArrayTile"></a>
       <h4 class="signature">
@@ -1166,7 +1164,7 @@ not.  The result of the mapping is returned as a tile.
     </span>
       <p class="shortcomment cmt">Converts GeoTiffTile to a MutableArrayTile
 </p><div class="fullcomment"><div class="comment cmt"><p>Converts GeoTiffTile to a MutableArrayTile
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A <a href="../../MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a> of the GeoTiffTile</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.io.geotiff.Float64GeoTiffTile">Float64GeoTiffTile</a> → <a href="GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffTile">GeoTiffTile</a> → <a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A <a href="../../MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a> of the GeoTiffTile</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffTile">GeoTiffTile</a> → <a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
