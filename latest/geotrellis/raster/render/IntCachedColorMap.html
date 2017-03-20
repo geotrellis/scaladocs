@@ -51,7 +51,8 @@
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Caches a color ramp based on a histogram of values. This is an optimization, since
 often times we create a histogram while classifying, and can reuse that computed
-information in the color mapping.
+information in the color mapping.</p><p>In order for this class to work correctly the histogram acts as a map from values to their colors
+and must contain a value for each pixel value that we expect to encounter.</p><p>The performance benefit is <code>eC</code> lookup cost instead of <code>Log</code> provided by <a href="IntColorMap.html" class="extype" name="geotrellis.raster.render.IntColorMap">IntColorMap</a>
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="ColorMap.html" class="extype" name="geotrellis.raster.render.ColorMap">ColorMap</a>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -91,7 +92,7 @@ information in the color mapping.
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="geotrellis.raster.render.IntCachedColorMap#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.raster.render.IntCachedColorMap#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="&lt;init&gt;(colors:Vector[Int],h:geotrellis.raster.histogram.Histogram[Int],options:geotrellis.raster.render.ColorMap.Options):geotrellis.raster.render.IntCachedColorMap"></a>
       <a id="&lt;init&gt;:IntCachedColorMap"></a>
       <h4 class="signature">
@@ -107,7 +108,7 @@ information in the color mapping.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">colors</dt><dd class="cmt"><p>All color values that can be encountered</p></dd><dt class="param">h</dt><dd class="cmt"><p>Histogram where counts of values have been replaced cached RGBA color</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -243,7 +244,7 @@ The opposite of the <a href="ColorMap$.html#fromString(str:String):Option[geotre
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.render.IntCachedColorMap">IntCachedColorMap</a> → <a href="ColorMap.html" class="extype" name="geotrellis.raster.render.ColorMap">ColorMap</a></dd></dl></div>
+      <p class="shortcomment cmt">All color values that can be encountered</p><div class="fullcomment"><div class="comment cmt"><p>All color values that can be encountered</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.render.IntCachedColorMap">IntCachedColorMap</a> → <a href="ColorMap.html" class="extype" name="geotrellis.raster.render.ColorMap">ColorMap</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -419,7 +420,8 @@ The opposite of the <a href="ColorMap$.html#fromString(str:String):Option[geotre
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.render.IntCachedColorMap">IntCachedColorMap</a> → <a href="ColorMap.html" class="extype" name="geotrellis.raster.render.ColorMap">ColorMap</a></dd></dl></div>
+      <p class="shortcomment cmt">Maps each color value to its index in the <a href="#colors:Vector[Int]" class="extmbr" name="geotrellis.raster.render.IntCachedColorMap#colors">colors</a> sequence.</p><div class="fullcomment"><div class="comment cmt"><p>Maps each color value to its index in the <a href="#colors:Vector[Int]" class="extmbr" name="geotrellis.raster.render.IntCachedColorMap#colors">colors</a> sequence.
+This is useful for table lookup encodings (ex: <a href="png/IndexedPngEncoding.html" class="extype" name="geotrellis.raster.render.png.IndexedPngEncoding">geotrellis.raster.render.png.IndexedPngEncoding</a>)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.render.IntCachedColorMap">IntCachedColorMap</a> → <a href="ColorMap.html" class="extype" name="geotrellis.raster.render.ColorMap">ColorMap</a></dd></dl></div>
     </li><li name="geotrellis.raster.render.IntCachedColorMap#mapDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mapDouble(z:Double):Int"></a>
       <a id="mapDouble(Double):Int"></a>

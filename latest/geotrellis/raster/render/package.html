@@ -250,7 +250,8 @@ Primarily used for capturing and persisting indexed color maps in GeoTIFFs.</p><
     </span>
       <p class="shortcomment cmt">Caches a color ramp based on a histogram of values.</p><div class="fullcomment"><div class="comment cmt"><p>Caches a color ramp based on a histogram of values. This is an optimization, since
 often times we create a histogram while classifying, and can reuse that computed
-information in the color mapping.
+information in the color mapping.</p><p>In order for this class to work correctly the histogram acts as a map from values to their colors
+and must contain a value for each pixel value that we expect to encounter.</p><p>The performance benefit is <code>eC</code> lookup cost instead of <code>Log</code> provided by <a href="IntColorMap.html" class="extype" name="geotrellis.raster.render.IntColorMap">IntColorMap</a>
 </p></div></div>
     </li><li name="geotrellis.raster.render.IntColorMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="IntColorMapextendsColorMap"></a>
