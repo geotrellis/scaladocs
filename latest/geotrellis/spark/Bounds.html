@@ -51,7 +51,11 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Represents a region of discrete space, bounding it by minimum and maximum points.
+The bounds maybe <a href="EmptyBounds$.html" class="extype" name="geotrellis.spark.EmptyBounds">EmptyBounds</a> as result of intersection operation.</p><p>The dimensionality of region is implied by the dimensionality of type parameter A.
+<a href="Boundable.html" class="extype" name="geotrellis.spark.Boundable">Boundable</a> typeclass is required to manipulate instance of A.</p><p>Conceptually this ADT is similar <code>Option[KeyBounds[A]]</code> but adds methods convenient
+for testing and forming region intersection, union and mutation.
+</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>Type of keys, or points in descrete space</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
@@ -130,8 +134,8 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
-    </li><li name="geotrellis.spark.Bounds#contains" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Combine two regions by creating a region that covers both regions fully</p>
+    </li><li name="geotrellis.spark.Bounds#contains" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="contains[B&gt;:A](other:geotrellis.spark.Bounds[B])(implicitb:geotrellis.spark.Boundable[B]):Boolean"></a>
       <a id="contains[B&gt;:A](Bounds[B])(Boundable[B]):Boolean"></a>
       <h4 class="signature">
@@ -147,7 +151,9 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Test if other bounds are fully contained by this bounds.</p><div class="fullcomment"><div class="comment cmt"><p>Test if other bounds are fully contained by this bounds.
+<a href="EmptyBounds$.html" class="extype" name="geotrellis.spark.EmptyBounds">EmptyBounds</a> contain no other bounds but are contained by all non-empty bounds.
+</p></div></div>
     </li><li name="geotrellis.spark.Bounds#get" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="get:geotrellis.spark.KeyBounds[A]"></a>
       <a id="get:KeyBounds[A]"></a>
@@ -164,7 +170,7 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Returns non-empty bounds or throws <span class="extype" name="NoSuchElementException">NoSuchElementException</span></p>
     </li><li name="geotrellis.spark.Bounds#include" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="include[B&gt;:A](key:B)(implicitb:geotrellis.spark.Boundable[B]):geotrellis.spark.KeyBounds[B]"></a>
       <a id="include[B&gt;:A](B)(Boundable[B]):KeyBounds[B]"></a>
@@ -181,7 +187,7 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Expand bounds to include the key or keep unchanged if it is already included</p>
     </li><li name="geotrellis.spark.Bounds#includes" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="includes[B&gt;:A](key:B)(implicitb:geotrellis.spark.Boundable[B]):Boolean"></a>
       <a id="includes[B&gt;:A](B)(Boundable[B]):Boolean"></a>
@@ -198,7 +204,7 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Test if the key is included in bounds</p>
     </li><li name="geotrellis.spark.Bounds#intersect" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="intersect[B&gt;:A](other:geotrellis.spark.Bounds[B])(implicitb:geotrellis.spark.Boundable[B]):geotrellis.spark.Bounds[B]"></a>
       <a id="intersect[B&gt;:A](Bounds[B])(Boundable[B]):Bounds[B]"></a>
@@ -215,7 +221,7 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Returns the intersection, if any, between two bounds</p>
     </li><li name="geotrellis.spark.Bounds#isEmpty" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="isEmpty:Boolean"></a>
       <a id="isEmpty:Boolean"></a>
@@ -232,7 +238,7 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Returns true if this is <a href="EmptyBounds$.html" class="extype" name="geotrellis.spark.EmptyBounds">EmptyBounds</a></p>
     </li><li name="scala.Product#productArity" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="productArity:Int"></a>
       <a id="productArity:Int"></a>
@@ -283,7 +289,8 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Updates the spatial region of bounds to match that of the argument,
+ leaving other dimensions, if any, unchanged.</p>
     </li><li name="geotrellis.spark.Bounds#toOption" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="toOption:Option[geotrellis.spark.KeyBounds[A]]"></a>
       <a id="toOption:Option[KeyBounds[A]]"></a>
@@ -470,7 +477,10 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+      <p class="shortcomment cmt">Returns the result of applying f to this <a href="" class="extype" name="geotrellis.spark.Bounds">Bounds</a> minKey and maxKey if this it is nonempty.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the result of applying f to this <a href="" class="extype" name="geotrellis.spark.Bounds">Bounds</a> minKey and maxKey if this it is nonempty.
+The minKey and maxKeys are given as instance of <a href="KeyBounds.html" class="extype" name="geotrellis.spark.KeyBounds">KeyBounds</a> instead of a tuple.
+If this <a href="" class="extype" name="geotrellis.spark.Bounds">Bounds</a> is <a href="EmptyBounds$.html" class="extype" name="geotrellis.spark.EmptyBounds">EmptyBounds</a> it is returned unchanged.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@inline</span><span class="args">()</span>
               
         </dd></dl></div>
@@ -507,7 +517,7 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Returns non-empty bounds or the default value</p>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -541,7 +551,7 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Test if two bounds for intersection</p>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -575,7 +585,10 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+      <p class="shortcomment cmt">Returns the result of applying f to this <a href="" class="extype" name="geotrellis.spark.Bounds">Bounds</a> minKey and maxKey if this it is nonempty.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the result of applying f to this <a href="" class="extype" name="geotrellis.spark.Bounds">Bounds</a> minKey and maxKey if this it is nonempty.
+The minKey and maxKey are given as instance of <a href="KeyBounds.html" class="extype" name="geotrellis.spark.KeyBounds">KeyBounds</a> instead of a tuple.
+If this <a href="" class="extype" name="geotrellis.spark.Bounds">Bounds</a> is <a href="EmptyBounds$.html" class="extype" name="geotrellis.spark.EmptyBounds">EmptyBounds</a> it is returned unchanged.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@inline</span><span class="args">()</span>
               
         </dd></dl></div>
@@ -612,7 +625,7 @@
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Returns false if this is <a href="EmptyBounds$.html" class="extype" name="geotrellis.spark.EmptyBounds">EmptyBounds</a></p>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>

@@ -108,7 +108,7 @@
 It is used to construct bounding hypercube for a set of Ks.</p><p>The bounds must be calculated by taking min/max of each component dimension of K.
 Consequently the result may be neither a nor b, but a new value.
 </p></div></div>
-    </li><li name="geotrellis.spark.Bounds" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.spark.Bounds" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="Bounds[+A]extendsProductwithSerializable"></a>
       <a id="Bounds[+A]:Bounds[A]"></a>
       <h4 class="signature">
@@ -124,7 +124,11 @@ Consequently the result may be neither a nor b, but a new value.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Represents a region of discrete space, bounding it by minimum and maximum points.</p><div class="fullcomment"><div class="comment cmt"><p>Represents a region of discrete space, bounding it by minimum and maximum points.
+The bounds maybe <a href="EmptyBounds$.html" class="extype" name="geotrellis.spark.EmptyBounds">EmptyBounds</a> as result of intersection operation.</p><p>The dimensionality of region is implied by the dimensionality of type parameter A.
+<a href="Boundable.html" class="extype" name="geotrellis.spark.Boundable">Boundable</a> typeclass is required to manipulate instance of A.</p><p>Conceptually this ADT is similar <code>Option[KeyBounds[A]]</code> but adds methods convenient
+for testing and forming region intersection, union and mutation.
+</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>Type of keys, or points in descrete space</p></dd></dl></div>
     </li><li name="geotrellis.spark.CellGridLayoutCollectionMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="CellGridLayoutCollectionMethods[K,V&lt;:geotrellis.raster.CellGrid,M]extendsMethodExtensions[Seq[(K,V)]withgeotrellis.spark.Metadata[M]]"></a>
       <a id="CellGridLayoutCollectionMethods[K,V&lt;:CellGrid,M]:CellGridLayoutCollectionMethods[K,V,M]"></a>
@@ -227,7 +231,7 @@ Consequently the result may be neither a nor b, but a new value.
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.KeyBounds" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.spark.KeyBounds" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="KeyBounds[+K]extendsBounds[K]withProductwithSerializable"></a>
       <a id="KeyBounds[+K]:KeyBounds[K]"></a>
       <h4 class="signature">
@@ -243,7 +247,10 @@ Consequently the result may be neither a nor b, but a new value.
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Represents non-empty region of descrete space.</p><div class="fullcomment"><div class="comment cmt"><p>Represents non-empty region of descrete space.
+Any key which is greater than or equal to minKey and less then or equal to maxKey
+in each individual dimension is part of the region described by these <a href="Bounds.html" class="extype" name="geotrellis.spark.Bounds">Bounds</a>.
+</p></div><dl class="paramcmts block"><dt class="param">minKey</dt><dd class="cmt"><p>Minimum key of the region, inclusive.</p></dd><dt class="param">maxKey</dt><dd class="cmt"><p>Maximum key of the region, inclusive.</p></dd></dl></div>
     </li><li name="geotrellis.spark.LayerId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="LayerIdextendsProductwithSerializable"></a>
       <a id="LayerId:LayerId"></a>
@@ -1953,7 +1960,7 @@ which allows for the transformation:</p><pre>TileLayerMetadata[A] <span class="k
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.EmptyBounds" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.spark.EmptyBounds" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="EmptyBounds"></a>
       <a id="EmptyBounds:EmptyBounds"></a>
       <h4 class="signature">
@@ -1969,7 +1976,9 @@ which allows for the transformation:</p><pre>TileLayerMetadata[A] <span class="k
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Represents empty region of space.</p><div class="fullcomment"><div class="comment cmt"><p>Represents empty region of space.
+Empty region contains no possible key.
+</p></div></div>
     </li><li name="geotrellis.spark.KeyBounds" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="KeyBounds"></a>
       <a id="KeyBounds:KeyBounds"></a>
