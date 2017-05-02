@@ -1,9 +1,9 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>Boundable - geotrellis.spark.Boundable</title>
-          <meta name="description" content="Boundable - geotrellis.spark.Boundable" />
-          <meta name="keywords" content="Boundable geotrellis.spark.Boundable" />
+          <title>SpecifiedUserDefinedNoDataEncoding - geotrellis.raster.SpecifiedUserDefinedNoDataEncoding</title>
+          <meta name="description" content="SpecifiedUserDefinedNoDataEncoding - geotrellis.raster.SpecifiedUserDefinedNoDataEncoding" />
+          <meta name="keywords" content="SpecifiedUserDefinedNoDataEncoding geotrellis.raster.SpecifiedUserDefinedNoDataEncoding" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -16,7 +16,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../index.html';
-            var hash = 'geotrellis.spark.Boundable';
+            var hash = 'geotrellis.raster.SpecifiedUserDefinedNoDataEncoding';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -28,12 +28,12 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img alt="Trait" src="../../lib/trait_big.png" />
-        <p id="owner"><a href="../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="package.html" class="extype" name="geotrellis.spark">spark</a></p>
-        <h1>Boundable</h1><h3><span class="morelinks"><div>Related Doc:
-            <a href="package.html" class="extype" name="geotrellis.spark">package spark</a>
+        <img alt="Class" src="../../lib/class_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="package.html" class="extype" name="geotrellis.raster">raster</a></p>
+        <h1>SpecifiedUserDefinedNoDataEncoding</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="package.html" class="extype" name="geotrellis.raster">package raster</a>
           </div></span></h3><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -42,23 +42,17 @@
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Boundable</span><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">SpecifiedUserDefinedNoDataEncoding</span><span class="tparams">[<span name="N">N</span>]</span><span class="params">(<span name="base">base: <a href="UserDefinedNoDataEncoding.html" class="extype" name="geotrellis.raster.UserDefinedNoDataEncoding">UserDefinedNoDataEncoding</a></span>, <span name="noData">noData: <span class="extype" name="geotrellis.raster.SpecifiedUserDefinedNoDataEncoding.N">N</span></span>)</span><span class="result"> extends <a href="UserDefinedNoDataEncoding.html" class="extype" name="geotrellis.raster.UserDefinedNoDataEncoding">UserDefinedNoDataEncoding</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This type class marks K as point that can be bounded in space.
-It is used to construct bounding hypercube for a set of Ks.</p><p>The bounds must be calculated by taking min/max of each component dimension of K.
-Consequently the result may be neither a nor b, but a new value.
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>On-demand cell type encoding for specific user defined no data values.</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
-        </div><div class="toggleContainer block">
-            <span class="toggle">Known Subclasses</span>
-            <div class="subClasses hiddenContent"><a href="SpaceTimeKey$$Boundable$.html" class="extype" name="geotrellis.spark.SpaceTimeKey.Boundable">Boundable</a>, <a href="../doc/examples/spark/VoxelKey$$Boundable$.html" class="extype" name="geotrellis.doc.examples.spark.VoxelKey.Boundable">Boundable</a>, <a href="SpatialKey$$Boundable$.html" class="extype" name="geotrellis.spark.SpatialKey.Boundable">Boundable</a></div>
-          </div></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="UserDefinedNoDataEncoding.html" class="extype" name="geotrellis.raster.UserDefinedNoDataEncoding">UserDefinedNoDataEncoding</a>, <a href="CellTypeEncoding.html" class="extype" name="geotrellis.raster.CellTypeEncoding">CellTypeEncoding</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
         
 
       <div id="mbrsel">
@@ -75,7 +69,7 @@ Consequently the result may be neither a nor b, but a new value.
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.spark.Boundable"><span>Boundable</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.raster.SpecifiedUserDefinedNoDataEncoding"><span>SpecifiedUserDefinedNoDataEncoding</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="geotrellis.raster.UserDefinedNoDataEncoding"><span>UserDefinedNoDataEncoding</span></li><li class="in" name="geotrellis.raster.CellTypeEncoding"><span>CellTypeEncoding</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -92,42 +86,21 @@ Consequently the result may be neither a nor b, but a new value.
 
       <div id="template">
         <div id="allMembers">
-        
-
-        
-
-        <div id="values" class="values members">
-              <h3>Abstract Value Members</h3>
-              <ol><li name="geotrellis.spark.Boundable#maxBound" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="maxBound(p1:K,p2:K):K"></a>
-      <a id="maxBound(K,K):K"></a>
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="geotrellis.raster.SpecifiedUserDefinedNoDataEncoding#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(base:geotrellis.raster.UserDefinedNoDataEncoding,noData:N):geotrellis.raster.SpecifiedUserDefinedNoDataEncoding[N]"></a>
+      <a id="&lt;init&gt;:SpecifiedUserDefinedNoDataEncoding[N]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
+        <span class="modifier"></span>
+        <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">maxBound</span><span class="params">(<span name="p1">p1: <span class="extype" name="geotrellis.spark.Boundable.K">K</span></span>, <span name="p2">p2: <span class="extype" name="geotrellis.spark.Boundable.K">K</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.spark.Boundable.K">K</span></span>
+        <span class="name">SpecifiedUserDefinedNoDataEncoding</span><span class="params">(<span name="base">base: <a href="UserDefinedNoDataEncoding.html" class="extype" name="geotrellis.raster.UserDefinedNoDataEncoding">UserDefinedNoDataEncoding</a></span>, <span name="noData">noData: <span class="extype" name="geotrellis.raster.SpecifiedUserDefinedNoDataEncoding.N">N</span></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@maxBound(p1:K,p2:K):K" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.spark.Boundable#minBound" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="minBound(p1:K,p2:K):K"></a>
-      <a id="minBound(K,K):K"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">minBound</span><span class="params">(<span name="p1">p1: <span class="extype" name="geotrellis.spark.Boundable.K">K</span></span>, <span name="p2">p2: <span class="extype" name="geotrellis.spark.Boundable.K">K</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.spark.Boundable.K">K</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@minBound(p1:K,p2:K):K" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@&lt;init&gt;(base:geotrellis.raster.UserDefinedNoDataEncoding,noData:N):geotrellis.raster.SpecifiedUserDefinedNoDataEncoding[N]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -135,8 +108,12 @@ Consequently the result may be neither a nor b, but a new value.
     </li></ol>
             </div>
 
+        
+
+        
+
         <div id="values" class="values members">
-              <h3>Concrete Value Members</h3>
+              <h3>Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a>
       <a id="!=(Any):Boolean"></a>
@@ -149,7 +126,7 @@ Consequently the result may be neither a nor b, but a new value.
         <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@!=(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -166,7 +143,7 @@ Consequently the result may be neither a nor b, but a new value.
         <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@##():Int" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@##():Int" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -183,11 +160,28 @@ Consequently the result may be neither a nor b, but a new value.
         <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@==(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@==(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.raster.SpecifiedUserDefinedNoDataEncoding#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply[T](noData:T):geotrellis.raster.SpecifiedUserDefinedNoDataEncoding[T]"></a>
+      <a id="apply[T](T):SpecifiedUserDefinedNoDataEncoding[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="noData">noData: <span class="extype" name="geotrellis.raster.SpecifiedUserDefinedNoDataEncoding.apply.T">T</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.SpecifiedUserDefinedNoDataEncoding">SpecifiedUserDefinedNoDataEncoding</a>[<span class="extype" name="geotrellis.raster.SpecifiedUserDefinedNoDataEncoding.apply.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@apply[T](noData:T):geotrellis.raster.SpecifiedUserDefinedNoDataEncoding[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Create a cell encoding for a specific noData value.</p><div class="fullcomment"><div class="comment cmt"><p>Create a cell encoding for a specific noData value.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.SpecifiedUserDefinedNoDataEncoding">SpecifiedUserDefinedNoDataEncoding</a> → <a href="UserDefinedNoDataEncoding.html" class="extype" name="geotrellis.raster.UserDefinedNoDataEncoding">UserDefinedNoDataEncoding</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -200,11 +194,28 @@ Consequently the result may be neither a nor b, but a new value.
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@asInstanceOf[T0]:T0" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.raster.SpecifiedUserDefinedNoDataEncoding#base" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="base:geotrellis.raster.UserDefinedNoDataEncoding"></a>
+      <a id="base:UserDefinedNoDataEncoding"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">base</span><span class="result">: <a href="UserDefinedNoDataEncoding.html" class="extype" name="geotrellis.raster.UserDefinedNoDataEncoding">UserDefinedNoDataEncoding</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@base:geotrellis.raster.UserDefinedNoDataEncoding" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -217,7 +228,7 @@ Consequently the result may be neither a nor b, but a new value.
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@clone():Object" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@clone():Object" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -228,23 +239,6 @@ Consequently the result may be neither a nor b, but a new value.
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.spark.Boundable#combine" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="combine(b1:geotrellis.spark.KeyBounds[K],b2:geotrellis.spark.KeyBounds[K]):geotrellis.spark.KeyBounds[K]"></a>
-      <a id="combine(KeyBounds[K],KeyBounds[K]):KeyBounds[K]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">combine</span><span class="params">(<span name="b1">b1: <a href="KeyBounds.html" class="extype" name="geotrellis.spark.KeyBounds">KeyBounds</a>[<span class="extype" name="geotrellis.spark.Boundable.K">K</span>]</span>, <span name="b2">b2: <a href="KeyBounds.html" class="extype" name="geotrellis.spark.KeyBounds">KeyBounds</a>[<span class="extype" name="geotrellis.spark.Boundable.K">K</span>]</span>)</span><span class="result">: <a href="KeyBounds.html" class="extype" name="geotrellis.spark.KeyBounds">KeyBounds</a>[<span class="extype" name="geotrellis.spark.Boundable.K">K</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@combine(b1:geotrellis.spark.KeyBounds[K],b2:geotrellis.spark.KeyBounds[K]):geotrellis.spark.KeyBounds[K]" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -257,28 +251,11 @@ Consequently the result may be neither a nor b, but a new value.
         <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(x$1:Any):Boolean"></a>
-      <a id="equals(Any):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@equals(x$1:Any):Boolean" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -291,7 +268,7 @@ Consequently the result may be neither a nor b, but a new value.
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@finalize():Unit" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@finalize():Unit" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -314,96 +291,28 @@ Consequently the result may be neither a nor b, but a new value.
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@getClass():Class[_]" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@getClass():Class[_]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="hashCode():Int"></a>
-      <a id="hashCode():Int"></a>
+    </li><li name="geotrellis.raster.UserDefinedNoDataEncoding#isFloatingPoint" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isFloatingPoint:Boolean"></a>
+      <a id="isFloatingPoint:Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">isFloatingPoint</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@hashCode():Int" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@isFloatingPoint:Boolean" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.spark.Boundable#include" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="include(p:K,bounds:geotrellis.spark.KeyBounds[K]):geotrellis.spark.KeyBounds[K]"></a>
-      <a id="include(K,KeyBounds[K]):KeyBounds[K]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">include</span><span class="params">(<span name="p">p: <span class="extype" name="geotrellis.spark.Boundable.K">K</span></span>, <span name="bounds">bounds: <a href="KeyBounds.html" class="extype" name="geotrellis.spark.KeyBounds">KeyBounds</a>[<span class="extype" name="geotrellis.spark.Boundable.K">K</span>]</span>)</span><span class="result">: <a href="KeyBounds.html" class="extype" name="geotrellis.spark.KeyBounds">KeyBounds</a>[<span class="extype" name="geotrellis.spark.Boundable.K">K</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@include(p:K,bounds:geotrellis.spark.KeyBounds[K]):geotrellis.spark.KeyBounds[K]" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.spark.Boundable#includes" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="includes(p:K,bounds:geotrellis.spark.KeyBounds[K]):Boolean"></a>
-      <a id="includes(K,KeyBounds[K]):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">includes</span><span class="params">(<span name="p">p: <span class="extype" name="geotrellis.spark.Boundable.K">K</span></span>, <span name="bounds">bounds: <a href="KeyBounds.html" class="extype" name="geotrellis.spark.KeyBounds">KeyBounds</a>[<span class="extype" name="geotrellis.spark.Boundable.K">K</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@includes(p:K,bounds:geotrellis.spark.KeyBounds[K]):Boolean" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.spark.Boundable#intersect" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="intersect(b1:geotrellis.spark.KeyBounds[K],b2:geotrellis.spark.KeyBounds[K]):Option[geotrellis.spark.KeyBounds[K]]"></a>
-      <a id="intersect(KeyBounds[K],KeyBounds[K]):Option[KeyBounds[K]]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">intersect</span><span class="params">(<span name="b1">b1: <a href="KeyBounds.html" class="extype" name="geotrellis.spark.KeyBounds">KeyBounds</a>[<span class="extype" name="geotrellis.spark.Boundable.K">K</span>]</span>, <span name="b2">b2: <a href="KeyBounds.html" class="extype" name="geotrellis.spark.KeyBounds">KeyBounds</a>[<span class="extype" name="geotrellis.spark.Boundable.K">K</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="KeyBounds.html" class="extype" name="geotrellis.spark.KeyBounds">KeyBounds</a>[<span class="extype" name="geotrellis.spark.Boundable.K">K</span>]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@intersect(b1:geotrellis.spark.KeyBounds[K],b2:geotrellis.spark.KeyBounds[K]):Option[geotrellis.spark.KeyBounds[K]]" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.spark.Boundable#intersects" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="intersects(b1:geotrellis.spark.KeyBounds[K],b2:geotrellis.spark.KeyBounds[K]):Boolean"></a>
-      <a id="intersects(KeyBounds[K],KeyBounds[K]):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">intersects</span><span class="params">(<span name="b1">b1: <a href="KeyBounds.html" class="extype" name="geotrellis.spark.KeyBounds">KeyBounds</a>[<span class="extype" name="geotrellis.spark.Boundable.K">K</span>]</span>, <span name="b2">b2: <a href="KeyBounds.html" class="extype" name="geotrellis.spark.KeyBounds">KeyBounds</a>[<span class="extype" name="geotrellis.spark.Boundable.K">K</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@intersects(b1:geotrellis.spark.KeyBounds[K],b2:geotrellis.spark.KeyBounds[K]):Boolean" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="UserDefinedNoDataEncoding.html" class="extype" name="geotrellis.raster.UserDefinedNoDataEncoding">UserDefinedNoDataEncoding</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -416,11 +325,28 @@ Consequently the result may be neither a nor b, but a new value.
         <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.raster.SpecifiedUserDefinedNoDataEncoding#name" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="name:String"></a>
+      <a id="name:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">name</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@name:String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.SpecifiedUserDefinedNoDataEncoding">SpecifiedUserDefinedNoDataEncoding</a> → <a href="CellTypeEncoding.html" class="extype" name="geotrellis.raster.CellTypeEncoding">CellTypeEncoding</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -433,11 +359,28 @@ Consequently the result may be neither a nor b, but a new value.
         <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.raster.SpecifiedUserDefinedNoDataEncoding#noData" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="noData:N"></a>
+      <a id="noData:N"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">noData</span><span class="result">: <span class="extype" name="geotrellis.raster.SpecifiedUserDefinedNoDataEncoding.N">N</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@noData:N" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -450,7 +393,7 @@ Consequently the result may be neither a nor b, but a new value.
         <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@notify():Unit" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@notify():Unit" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -467,7 +410,7 @@ Consequently the result may be neither a nor b, but a new value.
         <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@notifyAll():Unit" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@notifyAll():Unit" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -484,28 +427,28 @@ Consequently the result may be neither a nor b, but a new value.
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toString():String"></a>
-      <a id="toString():String"></a>
+    </li><li name="geotrellis.raster.UserDefinedNoDataEncoding#unapply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="unapply(text:String):Option[geotrellis.raster.WidenedNoData]"></a>
+      <a id="unapply(String):Option[WidenedNoData]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">unapply</span><span class="params">(<span name="text">text: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="WidenedNoData.html" class="extype" name="geotrellis.raster.WidenedNoData">WidenedNoData</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@toString():String" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@unapply(text:String):Option[geotrellis.raster.WidenedNoData]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="UserDefinedNoDataEncoding.html" class="extype" name="geotrellis.raster.UserDefinedNoDataEncoding">UserDefinedNoDataEncoding</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -518,7 +461,7 @@ Consequently the result may be neither a nor b, but a new value.
         <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@wait():Unit" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@wait():Unit" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -541,7 +484,7 @@ Consequently the result may be neither a nor b, but a new value.
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -564,7 +507,7 @@ Consequently the result may be neither a nor b, but a new value.
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.spark.Boundable@wait(x$1:Long):Unit" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.SpecifiedUserDefinedNoDataEncoding@wait(x$1:Long):Unit" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -588,6 +531,14 @@ Consequently the result may be neither a nor b, but a new value.
               <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
             </div><div class="parent" name="java.io.Serializable">
               <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="geotrellis.raster.UserDefinedNoDataEncoding">
+              <h3>Inherited from <a href="UserDefinedNoDataEncoding.html" class="extype" name="geotrellis.raster.UserDefinedNoDataEncoding">UserDefinedNoDataEncoding</a></h3>
+            </div><div class="parent" name="geotrellis.raster.CellTypeEncoding">
+              <h3>Inherited from <a href="CellTypeEncoding.html" class="extype" name="geotrellis.raster.CellTypeEncoding">CellTypeEncoding</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">

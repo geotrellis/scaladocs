@@ -404,6 +404,23 @@ set of cell coordinates
       </a>
     </span>
       
+    </li><li name="geotrellis.raster.CellTypeEncoding" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CellTypeEncodingextendsAnyRef"></a>
+      <a id="CellTypeEncoding:CellTypeEncoding"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="CellTypeEncoding.html"><span class="name">CellTypeEncoding</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package@CellTypeEncodingextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Root trait for CellType encoding definitions.</p>
     </li><li name="geotrellis.raster.CompositeTile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CompositeTileextendsTilewithProductwithSerializable"></a>
       <a id="CompositeTile:CompositeTile"></a>
@@ -771,6 +788,23 @@ a cell type of the target cell type.
       </a>
     </span>
       
+    </li><li name="geotrellis.raster.FixedNoDataEncoding" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FixedNoDataEncodingextendsCellTypeEncoding"></a>
+      <a id="FixedNoDataEncoding:FixedNoDataEncoding"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="FixedNoDataEncoding.html"><span class="name">FixedNoDataEncoding</span></a><span class="result"> extends <a href="CellTypeEncoding.html" class="extype" name="geotrellis.raster.CellTypeEncoding">CellTypeEncoding</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package@FixedNoDataEncodingextendsCellTypeEncoding" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Base trait for encoding CellTypes with fixed or no NoData values.</p>
     </li><li name="geotrellis.raster.FloatArrayFiller" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="FloatArrayFillerextendsAnyVal"></a>
       <a id="FloatArrayFiller:FloatArrayFiller"></a>
@@ -1631,6 +1665,23 @@ us to abstract over each of the combine functions</p>
       </a>
     </span>
       
+    </li><li name="geotrellis.raster.SpecifiedUserDefinedNoDataEncoding" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SpecifiedUserDefinedNoDataEncoding[N]extendsUserDefinedNoDataEncodingwithProductwithSerializable"></a>
+      <a id="SpecifiedUserDefinedNoDataEncoding[N]:SpecifiedUserDefinedNoDataEncoding[N]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="SpecifiedUserDefinedNoDataEncoding.html"><span class="name">SpecifiedUserDefinedNoDataEncoding</span></a><span class="tparams">[<span name="N">N</span>]</span><span class="params">(<span name="base">base: <a href="UserDefinedNoDataEncoding.html" class="extype" name="geotrellis.raster.UserDefinedNoDataEncoding">UserDefinedNoDataEncoding</a></span>, <span name="noData">noData: <span class="extype" name="geotrellis.raster.SpecifiedUserDefinedNoDataEncoding.N">N</span></span>)</span><span class="result"> extends <a href="UserDefinedNoDataEncoding.html" class="extype" name="geotrellis.raster.UserDefinedNoDataEncoding">UserDefinedNoDataEncoding</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package@SpecifiedUserDefinedNoDataEncoding[N]extendsUserDefinedNoDataEncodingwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">On-demand cell type encoding for specific user defined no data values.</p>
     </li><li name="geotrellis.raster.Tile" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="TileextendsCellGridwithIterableTilewithMappableTile[geotrellis.raster.Tile]withLazyLogging"></a>
       <a id="Tile:Tile"></a>
@@ -2079,6 +2130,23 @@ Tile or MultibandTile) together with some metadata.
       </a>
     </span>
       <p class="shortcomment cmt">The <a href="UserDefinedNoData.html" class="extype" name="geotrellis.raster.UserDefinedNoData">UserDefinedNoData</a> type, derived from <a href="NoDataHandling.html" class="extype" name="geotrellis.raster.NoDataHandling">NoDataHandling</a>.</p>
+    </li><li name="geotrellis.raster.UserDefinedNoDataEncoding" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="UserDefinedNoDataEncodingextendsCellTypeEncoding"></a>
+      <a id="UserDefinedNoDataEncoding:UserDefinedNoDataEncoding"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="UserDefinedNoDataEncoding.html"><span class="name">UserDefinedNoDataEncoding</span></a><span class="result"> extends <a href="CellTypeEncoding.html" class="extype" name="geotrellis.raster.CellTypeEncoding">CellTypeEncoding</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package@UserDefinedNoDataEncodingextendsCellTypeEncoding" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Base trait for encoding CellTypes with user defined NoData values.</p>
     </li><li name="geotrellis.raster.UserDefinedShortNoDataConversions" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="UserDefinedShortNoDataConversionsextendsAnyRef"></a>
       <a id="UserDefinedShortNoDataConversions:UserDefinedShortNoDataConversions"></a>
@@ -2096,6 +2164,58 @@ Tile or MultibandTile) together with some metadata.
       </a>
     </span>
       
+    </li><li name="geotrellis.raster.WideDoubleNoData" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WideDoubleNoDataextendsWidenedNoDatawithProductwithSerializable"></a>
+      <a id="WideDoubleNoData:WideDoubleNoData"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="WideDoubleNoData.html"><span class="name">WideDoubleNoData</span></a><span class="params">(<span name="asDouble">asDouble: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result"> extends <a href="WidenedNoData.html" class="extype" name="geotrellis.raster.WidenedNoData">WidenedNoData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package@WideDoubleNoDataextendsWidenedNoDatawithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">NoData stored as a Double</p>
+    </li><li name="geotrellis.raster.WideIntNoData" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WideIntNoDataextendsWidenedNoDatawithProductwithSerializable"></a>
+      <a id="WideIntNoData:WideIntNoData"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="WideIntNoData.html"><span class="name">WideIntNoData</span></a><span class="params">(<span name="asInt">asInt: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="WidenedNoData.html" class="extype" name="geotrellis.raster.WidenedNoData">WidenedNoData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package@WideIntNoDataextendsWidenedNoDatawithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">NoData value stored as an Int.</p>
+    </li><li name="geotrellis.raster.WidenedNoData" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="WidenedNoDataextendsAnyRef"></a>
+      <a id="WidenedNoData:WidenedNoData"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="WidenedNoData.html"><span class="name">WidenedNoData</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package@WidenedNoDataextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Container for NoData value using wider word size than declared to handled
+unsigned number rollover.</p>
     </li><li name="geotrellis.raster.density.Implicits.withDoubleKernelDensityMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="withDoubleKernelDensityMethodsextendsDoubleKernelDensityMethods"></a>
       <a id="withDoubleKernelDensityMethods:withDoubleKernelDensityMethods"></a>
@@ -2699,6 +2819,27 @@ Tile or MultibandTile) together with some metadata.
       </a>
     </span>
       
+    </li><li name="geotrellis.raster.CellTypeEncoding" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="CellTypeEncoding"></a>
+      <a id="CellTypeEncoding:CellTypeEncoding"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CellTypeEncoding$.html"><span class="name">CellTypeEncoding</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package@CellTypeEncoding" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Enumeration of tokens used to represent the different types of cell encodings and their
+associated no-data values in GeoTrellis.</p><div class="fullcomment"><div class="comment cmt"><p>Enumeration of tokens used to represent the different types of cell encodings and their
+associated no-data values in GeoTrellis. Used primarily for serialization to/from String, and
+pattern-matching operations.
+</p></div></div>
     </li><li name="geotrellis.raster.CompositeTile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CompositeTile"></a>
       <a id="CompositeTile:CompositeTile"></a>
@@ -3393,6 +3534,23 @@ suitably-tiny extents.</p>
       </span>
       </h4><span class="permalink">
       <a href="../../index.html#geotrellis.raster.package@UShortConstantNoDataCellType" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.WideIntNoData" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WideIntNoData"></a>
+      <a id="WideIntNoData:WideIntNoData"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="WideIntNoData$.html"><span class="name">WideIntNoData</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package@WideIntNoData" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
