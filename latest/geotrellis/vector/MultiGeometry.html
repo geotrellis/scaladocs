@@ -472,6 +472,27 @@ by this Polygon and g.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></dd></dl></div>
+    </li><li name="geotrellis.vector.Geometry#isEmpty" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isEmpty:Boolean"></a>
+      <a id="isEmpty:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isEmpty</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vector.MultiGeometry@isEmpty:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Is this Geometry empty? This is faster than checking manually like:</p><div class="fullcomment"><div class="comment cmt"><p>Is this Geometry empty? This is faster than checking manually like:</p><pre><span class="kw">val</span> mp: MultiPoint = ...
+<span class="kw">val</span> ps: <span class="std">Array</span>[Point] = mp.points  <span class="cmt">// `.points` is a lazy val with processing overhead</span>
+
+ps.isEmpty  <span class="cmt">// possible, but mp.isEmpty is faster</span></pre><p>It would be similar for <a href="MultiLine.html" class="extype" name="geotrellis.vector.MultiLine">MultiLine</a> or <a href="MultiPolygon.html" class="extype" name="geotrellis.vector.MultiPolygon">MultiPolygon</a>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
