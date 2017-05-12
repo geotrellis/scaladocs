@@ -148,6 +148,23 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="geotrellis.vector.triangulation.StitchedDelaunay#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="apply(center:geotrellis.vector.triangulation.DelaunayTriangulation,neighbors:Map[geotrellis.util.Direction,(geotrellis.vector.triangulation.BoundaryDelaunay,geotrellis.vector.Extent)],debug:Boolean):geotrellis.vector.triangulation.StitchedDelaunay"></a>
+      <a id="apply(DelaunayTriangulation,Map[Direction,(BoundaryDelaunay,Extent)],Boolean):StitchedDelaunay"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="center">center: <a href="DelaunayTriangulation.html" class="extype" name="geotrellis.vector.triangulation.DelaunayTriangulation">DelaunayTriangulation</a></span>, <span name="neighbors">neighbors: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../../util/Direction.html" class="extype" name="geotrellis.util.Direction">Direction</a>, (<a href="BoundaryDelaunay.html" class="extype" name="geotrellis.vector.triangulation.BoundaryDelaunay">BoundaryDelaunay</a>, <a href="../Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>)]</span>, <span name="debug">debug: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="StitchedDelaunay.html" class="extype" name="geotrellis.vector.triangulation.StitchedDelaunay">StitchedDelaunay</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.vector.triangulation.StitchedDelaunay$@apply(center:geotrellis.vector.triangulation.DelaunayTriangulation,neighbors:Map[geotrellis.util.Direction,(geotrellis.vector.triangulation.BoundaryDelaunay,geotrellis.vector.Extent)],debug:Boolean):geotrellis.vector.triangulation.StitchedDelaunay" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.vector.triangulation.StitchedDelaunay#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="apply(neighbors:Map[geotrellis.util.Direction,(geotrellis.vector.triangulation.DelaunayTriangulation,geotrellis.vector.Extent)],debug:Boolean)(implicitdummy:DummyImplicit):geotrellis.vector.triangulation.StitchedDelaunay"></a>
       <a id="apply(Map[Direction,(DelaunayTriangulation,Extent)],Boolean)(DummyImplicit):StitchedDelaunay"></a>
       <h4 class="signature">
@@ -224,19 +241,53 @@ creates a merged representation
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.vector.triangulation.StitchedDelaunay#directionToVertexOffset" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="directionToVertexOffset(d:geotrellis.util.Direction):Int"></a>
-      <a id="directionToVertexOffset(Direction):Int"></a>
+    </li><li name="geotrellis.vector.triangulation.StitchedDelaunay#combinedPointSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="combinedPointSet(neighbors:Map[geotrellis.util.Direction,(geotrellis.vector.triangulation.DelaunayTriangulation,geotrellis.vector.Extent)])(implicitdummy:DummyImplicit):(Int,geotrellis.vector.mesh.IndexedPointSet,Map[geotrellis.util.Direction,Map[Int,Int]])"></a>
+      <a id="combinedPointSet(Map[Direction,(DelaunayTriangulation,Extent)])(DummyImplicit):(Int,IndexedPointSet,Map[Direction,Map[Int,Int]])"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">directionToVertexOffset</span><span class="params">(<span name="d">d: <a href="../../util/Direction.html" class="extype" name="geotrellis.util.Direction">Direction</a></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">combinedPointSet</span><span class="params">(<span name="neighbors">neighbors: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../../util/Direction.html" class="extype" name="geotrellis.util.Direction">Direction</a>, (<a href="DelaunayTriangulation.html" class="extype" name="geotrellis.vector.triangulation.DelaunayTriangulation">DelaunayTriangulation</a>, <a href="../Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>)]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="dummy">dummy: <span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span></span>)</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <a href="../mesh/IndexedPointSet.html" class="extype" name="geotrellis.vector.mesh.IndexedPointSet">IndexedPointSet</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../../util/Direction.html" class="extype" name="geotrellis.util.Direction">Direction</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]])</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.triangulation.StitchedDelaunay$@directionToVertexOffset(d:geotrellis.util.Direction):Int" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.vector.triangulation.StitchedDelaunay$@combinedPointSet(neighbors:Map[geotrellis.util.Direction,(geotrellis.vector.triangulation.DelaunayTriangulation,geotrellis.vector.Extent)])(implicitdummy:DummyImplicit):(Int,geotrellis.vector.mesh.IndexedPointSet,Map[geotrellis.util.Direction,Map[Int,Int]])" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.vector.triangulation.StitchedDelaunay#combinedPointSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="combinedPointSet(neighbors:Map[geotrellis.util.Direction,(geotrellis.vector.triangulation.BoundaryDelaunay,geotrellis.vector.Extent)]):(Int,geotrellis.vector.mesh.IndexedPointSet,Map[geotrellis.util.Direction,Map[Int,Int]])"></a>
+      <a id="combinedPointSet(Map[Direction,(BoundaryDelaunay,Extent)]):(Int,IndexedPointSet,Map[Direction,Map[Int,Int]])"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">combinedPointSet</span><span class="params">(<span name="neighbors">neighbors: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../../util/Direction.html" class="extype" name="geotrellis.util.Direction">Direction</a>, (<a href="BoundaryDelaunay.html" class="extype" name="geotrellis.vector.triangulation.BoundaryDelaunay">BoundaryDelaunay</a>, <a href="../Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>)]</span>)</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <a href="../mesh/IndexedPointSet.html" class="extype" name="geotrellis.vector.mesh.IndexedPointSet">IndexedPointSet</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../../util/Direction.html" class="extype" name="geotrellis.util.Direction">Direction</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]])</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.vector.triangulation.StitchedDelaunay$@combinedPointSet(neighbors:Map[geotrellis.util.Direction,(geotrellis.vector.triangulation.BoundaryDelaunay,geotrellis.vector.Extent)]):(Int,geotrellis.vector.mesh.IndexedPointSet,Map[geotrellis.util.Direction,Map[Int,Int]])" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.vector.triangulation.StitchedDelaunay#combinedPointSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="combinedPointSet(center:geotrellis.vector.triangulation.DelaunayTriangulation,neighbors:Map[geotrellis.util.Direction,(geotrellis.vector.triangulation.BoundaryDelaunay,geotrellis.vector.Extent)]):(Int,geotrellis.vector.mesh.IndexedPointSet,Map[geotrellis.util.Direction,Map[Int,Int]])"></a>
+      <a id="combinedPointSet(DelaunayTriangulation,Map[Direction,(BoundaryDelaunay,Extent)]):(Int,IndexedPointSet,Map[Direction,Map[Int,Int]])"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">combinedPointSet</span><span class="params">(<span name="center">center: <a href="DelaunayTriangulation.html" class="extype" name="geotrellis.vector.triangulation.DelaunayTriangulation">DelaunayTriangulation</a></span>, <span name="neighbors">neighbors: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../../util/Direction.html" class="extype" name="geotrellis.util.Direction">Direction</a>, (<a href="BoundaryDelaunay.html" class="extype" name="geotrellis.vector.triangulation.BoundaryDelaunay">BoundaryDelaunay</a>, <a href="../Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>)]</span>)</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <a href="../mesh/IndexedPointSet.html" class="extype" name="geotrellis.vector.mesh.IndexedPointSet">IndexedPointSet</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../../util/Direction.html" class="extype" name="geotrellis.util.Direction">Direction</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]])</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.vector.triangulation.StitchedDelaunay$@combinedPointSet(center:geotrellis.vector.triangulation.DelaunayTriangulation,neighbors:Map[geotrellis.util.Direction,(geotrellis.vector.triangulation.BoundaryDelaunay,geotrellis.vector.Extent)]):(Int,geotrellis.vector.mesh.IndexedPointSet,Map[geotrellis.util.Direction,Map[Int,Int]])" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -332,40 +383,6 @@ creates a merged representation
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.vector.triangulation.StitchedDelaunay#indexToVertex" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="indexToVertex(neighbors:Map[geotrellis.util.Direction,(geotrellis.vector.triangulation.DelaunayTriangulation,geotrellis.vector.Extent)])(implicitdummy:DummyImplicit):Int=&gt;com.vividsolutions.jts.geom.Coordinate"></a>
-      <a id="indexToVertex(Map[Direction,(DelaunayTriangulation,Extent)])(DummyImplicit):(Int)⇒Coordinate"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">indexToVertex</span><span class="params">(<span name="neighbors">neighbors: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../../util/Direction.html" class="extype" name="geotrellis.util.Direction">Direction</a>, (<a href="DelaunayTriangulation.html" class="extype" name="geotrellis.vector.triangulation.DelaunayTriangulation">DelaunayTriangulation</a>, <a href="../Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>)]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="dummy">dummy: <span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span></span>)</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="com.vividsolutions.jts.geom.Coordinate">Coordinate</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.triangulation.StitchedDelaunay$@indexToVertex(neighbors:Map[geotrellis.util.Direction,(geotrellis.vector.triangulation.DelaunayTriangulation,geotrellis.vector.Extent)])(implicitdummy:DummyImplicit):Int=&gt;com.vividsolutions.jts.geom.Coordinate" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.vector.triangulation.StitchedDelaunay#indexToVertex" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="indexToVertex(neighbors:Map[geotrellis.util.Direction,(geotrellis.vector.triangulation.BoundaryDelaunay,geotrellis.vector.Extent)]):Int=&gt;com.vividsolutions.jts.geom.Coordinate"></a>
-      <a id="indexToVertex(Map[Direction,(BoundaryDelaunay,Extent)]):(Int)⇒Coordinate"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">indexToVertex</span><span class="params">(<span name="neighbors">neighbors: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../../util/Direction.html" class="extype" name="geotrellis.util.Direction">Direction</a>, (<a href="BoundaryDelaunay.html" class="extype" name="geotrellis.vector.triangulation.BoundaryDelaunay">BoundaryDelaunay</a>, <a href="../Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>)]</span>)</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="com.vividsolutions.jts.geom.Coordinate">Coordinate</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.triangulation.StitchedDelaunay$@indexToVertex(neighbors:Map[geotrellis.util.Direction,(geotrellis.vector.triangulation.BoundaryDelaunay,geotrellis.vector.Extent)]):Int=&gt;com.vividsolutions.jts.geom.Coordinate" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>

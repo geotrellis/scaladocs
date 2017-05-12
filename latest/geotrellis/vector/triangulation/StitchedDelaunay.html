@@ -47,7 +47,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">StitchedDelaunay</span><span class="params">(<span name="indexToCoord">indexToCoord: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="com.vividsolutions.jts.geom.Coordinate">Coordinate</span></span>, <span name="edges">edges: <a href="HalfEdgeTable.html" class="extype" name="geotrellis.vector.triangulation.HalfEdgeTable">HalfEdgeTable</a></span>, <span name="pointSet">pointSet: <a href="IndexedPointSet.html" class="extype" name="geotrellis.vector.triangulation.IndexedPointSet">IndexedPointSet</a></span>, <span name="fillTriangles">fillTriangles: <a href="TriangleMap.html" class="extype" name="geotrellis.vector.triangulation.TriangleMap">TriangleMap</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">StitchedDelaunay</span><span class="params">(<span name="indexToCoord">indexToCoord: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="com.vividsolutions.jts.geom.Coordinate">Coordinate</span></span>, <span name="halfEdgeTable">halfEdgeTable: <a href="../mesh/HalfEdgeTable.html" class="extype" name="geotrellis.vector.mesh.HalfEdgeTable">HalfEdgeTable</a></span>, <span name="boundary">boundary: <span class="extype" name="scala.Int">Int</span></span>, <span name="pointSet">pointSet: <a href="../mesh/IndexedPointSet.html" class="extype" name="geotrellis.vector.mesh.IndexedPointSet">IndexedPointSet</a></span>, <span name="fillTriangles">fillTriangles: <a href="TriangleMap.html" class="extype" name="geotrellis.vector.triangulation.TriangleMap">TriangleMap</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -91,7 +91,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.vector.triangulation.StitchedDelaunay#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(indexToCoord:Int=&gt;com.vividsolutions.jts.geom.Coordinate,edges:geotrellis.vector.triangulation.HalfEdgeTable,pointSet:geotrellis.vector.triangulation.IndexedPointSet,fillTriangles:geotrellis.vector.triangulation.TriangleMap):geotrellis.vector.triangulation.StitchedDelaunay"></a>
+      <a id="&lt;init&gt;(indexToCoord:Int=&gt;com.vividsolutions.jts.geom.Coordinate,halfEdgeTable:geotrellis.vector.mesh.HalfEdgeTable,boundary:Int,pointSet:geotrellis.vector.mesh.IndexedPointSet,fillTriangles:geotrellis.vector.triangulation.TriangleMap):geotrellis.vector.triangulation.StitchedDelaunay"></a>
       <a id="&lt;init&gt;:StitchedDelaunay"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -99,10 +99,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">StitchedDelaunay</span><span class="params">(<span name="indexToCoord">indexToCoord: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="com.vividsolutions.jts.geom.Coordinate">Coordinate</span></span>, <span name="edges">edges: <a href="HalfEdgeTable.html" class="extype" name="geotrellis.vector.triangulation.HalfEdgeTable">HalfEdgeTable</a></span>, <span name="pointSet">pointSet: <a href="IndexedPointSet.html" class="extype" name="geotrellis.vector.triangulation.IndexedPointSet">IndexedPointSet</a></span>, <span name="fillTriangles">fillTriangles: <a href="TriangleMap.html" class="extype" name="geotrellis.vector.triangulation.TriangleMap">TriangleMap</a></span>)</span>
+        <span class="name">StitchedDelaunay</span><span class="params">(<span name="indexToCoord">indexToCoord: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="com.vividsolutions.jts.geom.Coordinate">Coordinate</span></span>, <span name="halfEdgeTable">halfEdgeTable: <a href="../mesh/HalfEdgeTable.html" class="extype" name="geotrellis.vector.mesh.HalfEdgeTable">HalfEdgeTable</a></span>, <span name="boundary">boundary: <span class="extype" name="scala.Int">Int</span></span>, <span name="pointSet">pointSet: <a href="../mesh/IndexedPointSet.html" class="extype" name="geotrellis.vector.mesh.IndexedPointSet">IndexedPointSet</a></span>, <span name="fillTriangles">fillTriangles: <a href="TriangleMap.html" class="extype" name="geotrellis.vector.triangulation.TriangleMap">TriangleMap</a></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.triangulation.StitchedDelaunay@&lt;init&gt;(indexToCoord:Int=&gt;com.vividsolutions.jts.geom.Coordinate,edges:geotrellis.vector.triangulation.HalfEdgeTable,pointSet:geotrellis.vector.triangulation.IndexedPointSet,fillTriangles:geotrellis.vector.triangulation.TriangleMap):geotrellis.vector.triangulation.StitchedDelaunay" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.vector.triangulation.StitchedDelaunay@&lt;init&gt;(indexToCoord:Int=&gt;com.vividsolutions.jts.geom.Coordinate,halfEdgeTable:geotrellis.vector.mesh.HalfEdgeTable,boundary:Int,pointSet:geotrellis.vector.mesh.IndexedPointSet,fillTriangles:geotrellis.vector.triangulation.TriangleMap):geotrellis.vector.triangulation.StitchedDelaunay" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -184,6 +184,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.vector.triangulation.StitchedDelaunay#boundary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="boundary:Int"></a>
+      <a id="boundary:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">boundary</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.vector.triangulation.StitchedDelaunay@boundary:Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -264,6 +281,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.vector.triangulation.StitchedDelaunay#halfEdgeTable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="halfEdgeTable:geotrellis.vector.mesh.HalfEdgeTable"></a>
+      <a id="halfEdgeTable:HalfEdgeTable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">halfEdgeTable</span><span class="result">: <a href="../mesh/HalfEdgeTable.html" class="extype" name="geotrellis.vector.mesh.HalfEdgeTable">HalfEdgeTable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.vector.triangulation.StitchedDelaunay@halfEdgeTable:geotrellis.vector.mesh.HalfEdgeTable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.vector.triangulation.StitchedDelaunay#indexToCoord" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="indexToCoord:Int=&gt;com.vividsolutions.jts.geom.Coordinate"></a>
       <a id="indexToCoord:(Int)⇒Coordinate"></a>
@@ -349,6 +383,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.vector.triangulation.StitchedDelaunay#pointSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="pointSet:geotrellis.vector.mesh.IndexedPointSet"></a>
+      <a id="pointSet:IndexedPointSet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pointSet</span><span class="result">: <a href="../mesh/IndexedPointSet.html" class="extype" name="geotrellis.vector.mesh.IndexedPointSet">IndexedPointSet</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.vector.triangulation.StitchedDelaunay@pointSet:geotrellis.vector.mesh.IndexedPointSet" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

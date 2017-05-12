@@ -75,7 +75,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="BoundaryDelaunay.html"><span class="name">BoundaryDelaunay</span></a><span class="params">(<span name="pointSet">pointSet: <a href="IndexedPointSet.html" class="extype" name="geotrellis.vector.triangulation.IndexedPointSet">IndexedPointSet</a></span>, <span name="halfEdgeTable">halfEdgeTable: <a href="HalfEdgeTable.html" class="extype" name="geotrellis.vector.triangulation.HalfEdgeTable">HalfEdgeTable</a></span>, <span name="triangleMap">triangleMap: <a href="TriangleMap.html" class="extype" name="geotrellis.vector.triangulation.TriangleMap">TriangleMap</a></span>, <span name="boundary">boundary: <span class="extype" name="scala.Int">Int</span></span>, <span name="isLinear">isLinear: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="BoundaryDelaunay.html"><span class="name">BoundaryDelaunay</span></a><span class="params">(<span name="pointSet">pointSet: <a href="../mesh/IndexedPointSet.html" class="extype" name="geotrellis.vector.mesh.IndexedPointSet">IndexedPointSet</a></span>, <span name="liveVertices">liveVertices: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="halfEdgeTable">halfEdgeTable: <a href="../mesh/HalfEdgeTable.html" class="extype" name="geotrellis.vector.mesh.HalfEdgeTable">HalfEdgeTable</a></span>, <span name="triangleMap">triangleMap: <a href="TriangleMap.html" class="extype" name="geotrellis.vector.triangulation.TriangleMap">TriangleMap</a></span>, <span name="boundary">boundary: <span class="extype" name="scala.Int">Int</span></span>, <span name="isLinear">isLinear: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.vector.triangulation.package@BoundaryDelaunayextendsProductwithSerializable" title="Permalink" target="_top">
@@ -83,24 +83,6 @@
       </a>
     </span>
       
-    </li><li name="geotrellis.vector.triangulation.CompleteIndexedPointSet" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="CompleteIndexedPointSetextendsIndexedPointSet"></a>
-      <a id="CompleteIndexedPointSet:CompleteIndexedPointSet"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="CompleteIndexedPointSet.html"><span class="name">CompleteIndexedPointSet</span></a><span class="result"> extends <a href="IndexedPointSet.html" class="extype" name="geotrellis.vector.triangulation.IndexedPointSet">IndexedPointSet</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.triangulation.package@CompleteIndexedPointSetextendsIndexedPointSet" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">A more specific version of IndexedPointSet guaranteeing that every index from
-0 to length-1 has an associated Coordinate.</p>
     </li><li name="geotrellis.vector.triangulation.DelaunayStitcher" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DelaunayStitcherextendsAnyRef"></a>
       <a id="DelaunayStitcher:DelaunayStitcher"></a>
@@ -127,7 +109,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="DelaunayTriangulation.html"><span class="name">DelaunayTriangulation</span></a><span class="params">(<span name="pointSet">pointSet: <a href="CompleteIndexedPointSet.html" class="extype" name="geotrellis.vector.triangulation.CompleteIndexedPointSet">CompleteIndexedPointSet</a></span>, <span name="halfEdgeTable">halfEdgeTable: <a href="HalfEdgeTable.html" class="extype" name="geotrellis.vector.triangulation.HalfEdgeTable">HalfEdgeTable</a></span>, <span name="tolerance">tolerance: <span class="extype" name="scala.Double">Double</span></span>, <span name="debug">debug: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="DelaunayTriangulation.html"><span class="name">DelaunayTriangulation</span></a><span class="params">(<span name="pointSet">pointSet: <a href="../mesh/CompleteIndexedPointSet.html" class="extype" name="geotrellis.vector.mesh.CompleteIndexedPointSet">CompleteIndexedPointSet</a></span>, <span name="halfEdgeTable">halfEdgeTable: <a href="../mesh/HalfEdgeTable.html" class="extype" name="geotrellis.vector.mesh.HalfEdgeTable">HalfEdgeTable</a></span>, <span name="tolerance">tolerance: <span class="extype" name="scala.Double">Double</span></span>, <span name="debug">debug: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.vector.triangulation.package@DelaunayTriangulationextendsProductwithSerializable" title="Permalink" target="_top">
@@ -151,68 +133,57 @@ these problems if left alone.)  The /tolerance/ parameter is set to a
 reasonable value in the defaults of the DelaunayTriangulation object's apply()
 method, but bear in mind that problems may arise in your particular case.
 </p></div></div>
-    </li><li name="geotrellis.vector.triangulation.HalfEdge" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="HalfEdge[V,F]extendsAnyRef"></a>
-      <a id="HalfEdge[V,F]:HalfEdge[V,F]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="HalfEdge.html"><span class="name">HalfEdge</span></a><span class="tparams">[<span name="V">V</span>, <span name="F">F</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.triangulation.package@HalfEdge[V,F]extendsAnyRef" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.vector.triangulation.HalfEdgeTable" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="HalfEdgeTableextendsAnyRef"></a>
-      <a id="HalfEdgeTable:HalfEdgeTable"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="HalfEdgeTable.html"><span class="name">HalfEdgeTable</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.triangulation.package@HalfEdgeTableextendsAnyRef" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Mutable, non-thread safe class to keep track of half edges
-during Delaunay triangulation.</p><div class="fullcomment"><div class="comment cmt"><p>Mutable, non-thread safe class to keep track of half edges
-during Delaunay triangulation.</p><p>Edge table contains an Array[Int] of triples:
-      [i,e1,e2] where i is the vertex of the halfedge (where the half edge 'points' to)
-                      e1 is the halfedge index of the flip of the halfedge
-                         (the halfedge that points to the source)
-                      e2 is the halfedge index of the next half edge
-                         (counter-clockwise of the triangle)
-</p></div></div>
-    </li><li name="geotrellis.vector.triangulation.IndexedPointSet" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="IndexedPointSetextendsAnyRef"></a>
-      <a id="IndexedPointSet:IndexedPointSet"></a>
+    </li><li name="geotrellis.vector.triangulation.DelaunayTriangulationArrayMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DelaunayTriangulationArrayMethodsextendsMethodExtensions[Array[com.vividsolutions.jts.geom.Coordinate]]"></a>
+      <a id="DelaunayTriangulationArrayMethods:DelaunayTriangulationArrayMethods"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="IndexedPointSet.html"><span class="name">IndexedPointSet</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="DelaunayTriangulationArrayMethods.html"><span class="name">DelaunayTriangulationArrayMethods</span></a><span class="result"> extends <a href="../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="com.vividsolutions.jts.geom.Coordinate">Coordinate</span>]]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.triangulation.package@IndexedPointSetextendsAnyRef" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.vector.triangulation.package@DelaunayTriangulationArrayMethodsextendsMethodExtensions[Array[com.vividsolutions.jts.geom.Coordinate]]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Provides an interface to a collection of Coordinates that have integer
-indices.</p><div class="fullcomment"><div class="comment cmt"><p>Provides an interface to a collection of Coordinates that have integer
-indices.  The wrapped collection may be sparsely indexed.
-</p></div></div>
+      
+    </li><li name="geotrellis.vector.triangulation.DelaunayTriangulationMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DelaunayTriangulationMethodsextendsMethodExtensions[Traversable[com.vividsolutions.jts.geom.Coordinate]]"></a>
+      <a id="DelaunayTriangulationMethods:DelaunayTriangulationMethods"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="DelaunayTriangulationMethods.html"><span class="name">DelaunayTriangulationMethods</span></a><span class="result"> extends <a href="../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="scala.Traversable">Traversable</span>[<span class="extype" name="com.vividsolutions.jts.geom.Coordinate">Coordinate</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.vector.triangulation.package@DelaunayTriangulationMethodsextendsMethodExtensions[Traversable[com.vividsolutions.jts.geom.Coordinate]]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.vector.triangulation.Implicits" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ImplicitsextendsAnyRef"></a>
+      <a id="Implicits:Implicits"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Implicits.html"><span class="name">Implicits</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.vector.triangulation.package@ImplicitsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.vector.triangulation.StitchedDelaunay" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="StitchedDelaunayextendsProductwithSerializable"></a>
       <a id="StitchedDelaunay:StitchedDelaunay"></a>
@@ -222,7 +193,7 @@ indices.  The wrapped collection may be sparsely indexed.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="StitchedDelaunay.html"><span class="name">StitchedDelaunay</span></a><span class="params">(<span name="indexToCoord">indexToCoord: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="com.vividsolutions.jts.geom.Coordinate">Coordinate</span></span>, <span name="edges">edges: <a href="HalfEdgeTable.html" class="extype" name="geotrellis.vector.triangulation.HalfEdgeTable">HalfEdgeTable</a></span>, <span name="pointSet">pointSet: <a href="IndexedPointSet.html" class="extype" name="geotrellis.vector.triangulation.IndexedPointSet">IndexedPointSet</a></span>, <span name="fillTriangles">fillTriangles: <a href="TriangleMap.html" class="extype" name="geotrellis.vector.triangulation.TriangleMap">TriangleMap</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="StitchedDelaunay.html"><span class="name">StitchedDelaunay</span></a><span class="params">(<span name="indexToCoord">indexToCoord: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="com.vividsolutions.jts.geom.Coordinate">Coordinate</span></span>, <span name="halfEdgeTable">halfEdgeTable: <a href="../mesh/HalfEdgeTable.html" class="extype" name="geotrellis.vector.mesh.HalfEdgeTable">HalfEdgeTable</a></span>, <span name="boundary">boundary: <span class="extype" name="scala.Int">Int</span></span>, <span name="pointSet">pointSet: <a href="../mesh/IndexedPointSet.html" class="extype" name="geotrellis.vector.mesh.IndexedPointSet">IndexedPointSet</a></span>, <span name="fillTriangles">fillTriangles: <a href="TriangleMap.html" class="extype" name="geotrellis.vector.triangulation.TriangleMap">TriangleMap</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.vector.triangulation.package@StitchedDelaunayextendsProductwithSerializable" title="Permalink" target="_top">
@@ -305,36 +276,19 @@ indices.  The wrapped collection may be sparsely indexed.
       </a>
     </span>
       
-    </li><li name="geotrellis.vector.triangulation.HalfEdge" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="HalfEdge"></a>
-      <a id="HalfEdge:HalfEdge"></a>
+    </li><li name="geotrellis.vector.triangulation.Implicits" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Implicits"></a>
+      <a id="Implicits:Implicits"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="HalfEdge$.html"><span class="name">HalfEdge</span></a>
+        <a href="Implicits$.html"><span class="name">Implicits</span></a><span class="result"> extends <a href="Implicits.html" class="extype" name="geotrellis.vector.triangulation.Implicits">Implicits</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.triangulation.package@HalfEdge" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.vector.triangulation.IndexedPointSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="IndexedPointSet"></a>
-      <a id="IndexedPointSet:IndexedPointSet"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="IndexedPointSet$.html"><span class="name">IndexedPointSet</span></a>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.triangulation.package@IndexedPointSet" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.vector.triangulation.package@Implicits" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -386,23 +340,6 @@ indices.  The wrapped collection may be sparsely indexed.
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.vector.triangulation.package@TriangleMap" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.vector.triangulation.TriangulationPredicates" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="TriangulationPredicates"></a>
-      <a id="TriangulationPredicates:TriangulationPredicates"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="TriangulationPredicates$.html"><span class="name">TriangulationPredicates</span></a>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.triangulation.package@TriangulationPredicates" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
