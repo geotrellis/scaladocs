@@ -145,7 +145,7 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.spark.distance.EuclideanDistance#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.spark.distance.EuclideanDistance#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="apply(rdd:org.apache.spark.rdd.RDD[(geotrellis.spark.SpatialKey,Array[com.vividsolutions.jts.geom.Coordinate])],layoutDefinition:geotrellis.spark.tiling.LayoutDefinition):org.apache.spark.rdd.RDD[(geotrellis.spark.SpatialKey,geotrellis.raster.Tile)]"></a>
       <a id="apply(RDD[(SpatialKey,Array[Coordinate])],LayoutDefinition):RDD[(SpatialKey,Tile)]"></a>
       <h4 class="signature">
@@ -161,7 +161,22 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Computes a tiled Euclidean distance raster over a very large, dense point set.</p><div class="fullcomment"><div class="comment cmt"><p>Computes a tiled Euclidean distance raster over a very large, dense point set.</p><p>Given a very large, dense point set—on the order of 10s to 100s of millions
+of points or more—this apply method provides the means to relatively
+efficiently produce a Euclidean distance raster layer for those points.
+This operator assumes that there is a layout definition for the space in
+qustion, and that the input points have been binned according to that
+layout's mapTransform object.</p><p>There are caveats to using this function.  The assumption is that the
+incoming point set is _dense_ relative to the layout.  An empty SpatialKey
+in isolation is not probematic.  However, large areas devoid of points
+which translate to many adjacent spatial keys in the grid which are empty
+will likely cause problems.  Additionally, tiles whose Euclidean distance
+values are defined by points that are not in the current tile or in one of
+the 8 neighboring tiles will produce incorrect values.  This is
+particularly true in regions outside the mass of points where the medial
+axis of the point set intrudes (these will be generated in large interior
+voids or in areas where the point set boundary has nonconvex pockets).
+</p></div></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
