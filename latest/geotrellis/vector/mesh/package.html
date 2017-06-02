@@ -119,7 +119,24 @@
     </span>
       <p class="shortcomment cmt">Mutable, non-thread safe class to keep track of half edges
 during Delaunay triangulation.</p><div class="fullcomment"><div class="comment cmt"><p>Mutable, non-thread safe class to keep track of half edges
-during Delaunay triangulation.</p><p>Edge table contains an Array[Int] of triples:
+during Delaunay triangulation.</p><p>Half edge meshes are representations of piecewise linear, orientable,
+manifold surfaces, with or without boundary (no Mobius strips, edges are
+shared by at most two facets, every vertex has a single continuous fan of
+facets emanating from it).  Every facet in the mesh is defined by a loop of
+half edges that are in a linked list, and every facet is joined to its
+neighboring facets by linking complementary half edges.  In short, a half
+edge has three pieces of information: (1) a vertex reference (dest), (2) a
+complementary HalfEdge (flip), and (3) a pointer to the next edge on the
+boundary of a facet.  These are sufficient to allow complete navigation of a
+mesh.</p><p>For convenience, derived navigation operations are provided.  Consider the
+following diagram:</p><pre>v1 <span class="kw">&lt;-</span>--------- v2 <span class="kw">&lt;-</span>--------- v3
+^|     e1      ^|     e2      ^|
+||             ||             ||
+|| e3       e4 || e5       e6 ||
+||             ||             ||
+|V     e7      |V     e8      |V
+v4 ----------&gt; v5 ----------&gt; v6</pre><p>Starting from e1, <code>getNext</code> produces the sequence e1, e3, e7, e4, e1, ...</p><p>Starting from e2, <code>getPrev</code> produces the sequence e2, e6, e8, e5, e2, ...</p><p><code>getFlip(e4) == e5</code> and <code>getFlip(e5) == e4</code></p><p><code>rotCCWSrc(e4) == getFlip(e7)</code></p><p><code>rotCWSrc(e4) == e8</code></p><p><code>rotCCWDest(e4) == e2</code></p><p><code>rotCWDest(e4) == getFlip(e1)</code></p><p><code>getDest(e4) == v2</code></p><p><code>getSrc(e4) == getDest(e5) == v5</code></p><p>The HalfEdgeTable contains an Array[Int] in chunks of three where each of
+these chunks is specified as follows:
       [i,e1,e2] where i is the vertex of the halfedge (where the half edge 'points' to)
                       e1 is the halfedge index of the flip of the halfedge
                          (the halfedge that points to the source)
