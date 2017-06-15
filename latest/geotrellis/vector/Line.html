@@ -776,6 +776,27 @@ by this Line and a Point.</p></div><dl class="paramcmts block"><dt class="param"
 by this Polygon and g.</p><div class="fullcomment"><div class="comment cmt"><p>Computes a Result that represents a Geometry made up of the points shared
 by this Polygon and g.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></dd></dl></div>
+    </li><li name="geotrellis.vector.Geometry#intersectionSafe" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="intersectionSafe(g:geotrellis.vector.Geometry):geotrellis.vector.TwoDimensionsTwoDimensionsIntersectionResult"></a>
+      <a id="intersectionSafe(Geometry):TwoDimensionsTwoDimensionsIntersectionResult"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">intersectionSafe</span><span class="params">(<span name="g">g: <a href="Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>)</span><span class="result">: <a href="TwoDimensionsTwoDimensionsIntersectionResult.html" class="extype" name="geotrellis.vector.TwoDimensionsTwoDimensionsIntersectionResult">TwoDimensionsTwoDimensionsIntersectionResult</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vector.Line@intersectionSafe(g:geotrellis.vector.Geometry):geotrellis.vector.TwoDimensionsTwoDimensionsIntersectionResult" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Computes a Result that represents a Geometry made up of the
+points shared by this Polygon and g.</p><div class="fullcomment"><div class="comment cmt"><p>Computes a Result that represents a Geometry made up of the
+points shared by this Polygon and g. If it fails, it reduces the
+precision to avoid TopologyException.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></dd></dl></div>
     </li><li name="geotrellis.vector.Geometry#intersects" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="intersects(other:geotrellis.vector.Geometry):Boolean"></a>
       <a id="intersects(Geometry):Boolean"></a>
@@ -1023,27 +1044,6 @@ Returns true if The DE-9IM Intersection Matrix for the two geometries is
       </a>
     </span>
       <p class="shortcomment cmt">Returns the points which determine this line (i.e.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the points which determine this line (i.e. its vertices</p></div></div>
-    </li><li name="geotrellis.vector.Geometry#safeIntersection" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="safeIntersection(g:geotrellis.vector.Geometry):geotrellis.vector.TwoDimensionsTwoDimensionsIntersectionResult"></a>
-      <a id="safeIntersection(Geometry):TwoDimensionsTwoDimensionsIntersectionResult"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">safeIntersection</span><span class="params">(<span name="g">g: <a href="Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>)</span><span class="result">: <a href="TwoDimensionsTwoDimensionsIntersectionResult.html" class="extype" name="geotrellis.vector.TwoDimensionsTwoDimensionsIntersectionResult">TwoDimensionsTwoDimensionsIntersectionResult</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.vector.Line@safeIntersection(g:geotrellis.vector.Geometry):geotrellis.vector.TwoDimensionsTwoDimensionsIntersectionResult" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Computes a Result that represents a Geometry made up of the
-points shared by this Polygon and g.</p><div class="fullcomment"><div class="comment cmt"><p>Computes a Result that represents a Geometry made up of the
-points shared by this Polygon and g. If it fails, it reduces the
-precision to avoid TopologyException.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></dd></dl></div>
     </li><li name="geotrellis.vector.Line#symDifference" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="symDifference(mp:geotrellis.vector.MultiPolygon):geotrellis.vector.LineMultiPolygonSymDifferenceResult"></a>
       <a id="symDifference(MultiPolygon):LineMultiPolygonSymDifferenceResult"></a>
@@ -1477,7 +1477,30 @@ this Line and a a ZeroDimensions geometry.</p></div><dl class="paramcmts block">
 
         
 
-        
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="geotrellis.vector.Geometry#safeIntersection" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="safeIntersection(g:geotrellis.vector.Geometry):geotrellis.vector.TwoDimensionsTwoDimensionsIntersectionResult"></a>
+      <a id="safeIntersection(Geometry):TwoDimensionsTwoDimensionsIntersectionResult"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 1.2) This will be removed in 2.0 - use intersectionSafe instead">safeIntersection</span><span class="params">(<span name="g">g: <a href="Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>)</span><span class="result">: <a href="TwoDimensionsTwoDimensionsIntersectionResult.html" class="extype" name="geotrellis.vector.TwoDimensionsTwoDimensionsIntersectionResult">TwoDimensionsTwoDimensionsIntersectionResult</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vector.Line@safeIntersection(g:geotrellis.vector.Geometry):geotrellis.vector.TwoDimensionsTwoDimensionsIntersectionResult" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2)</i> This will be removed in 2.0 - use intersectionSafe instead</p></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">
