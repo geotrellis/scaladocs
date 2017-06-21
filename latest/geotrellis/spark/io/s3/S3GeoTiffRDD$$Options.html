@@ -54,7 +54,8 @@
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This case class contains the various parameters one can set when reading RDDs from S3 using Spark.
 </p></div><dl class="paramcmts block"><dt class="param">tiffExtensions</dt><dd class="cmt"><p>Read all file with an extension contained in the given list.</p></dd><dt class="param">crs</dt><dd class="cmt"><p>Override CRS of the input files. If <span class="extype" name="None">None</span>, the reader will use the file's original CRS.</p></dd><dt class="param">timeTag</dt><dd class="cmt"><p>Name of tiff tag containing the timestamp for the tile.</p></dd><dt class="param">timeFormat</dt><dd class="cmt"><p>Pattern for <span class="extype" name="java.time.format.DateTimeFormatter">java.time.format.DateTimeFormatter</span> to parse timeTag.</p></dd><dt class="param">maxTileSize</dt><dd class="cmt"><p>Maximum allowed size of each tiles in output RDD.
                       May result in a one input GeoTiff being split amongst multiple records if it exceeds this size.
-                      If no maximum tile size is specific, then each file file is read fully.</p></dd><dt class="param">numPartitions</dt><dd class="cmt"><p>How many partitions Spark should create when it repartitions the data.</p></dd><dt class="param">partitionBytes</dt><dd class="cmt"><p>Desired partition size in bytes, at least one item per partition will be assigned</p></dd><dt class="param">chunkSize</dt><dd class="cmt"><p>How many bytes should be read in at a time.</p></dd><dt class="param">delimiter</dt><dd class="cmt"><p>Delimiter to use for S3 objet listings. See</p></dd><dt class="param">getS3Client</dt><dd class="cmt"><p>A function to instantiate an S3Client. Must be serializable.</p></dd></dl><div class="toggleContainer block">
+                      If no maximum tile size is specific, then each file file is read fully.</p></dd><dt class="param">numPartitions</dt><dd class="cmt"><p>How many partitions Spark should create when it repartitions the data.</p></dd><dt class="param">partitionBytes</dt><dd class="cmt"><p>Desired partition size in bytes, at least one item per partition will be assigned.
+                            This option is incompatible with the maxTileSize option.</p></dd><dt class="param">chunkSize</dt><dd class="cmt"><p>How many bytes should be read in at a time.</p></dd><dt class="param">delimiter</dt><dd class="cmt"><p>Delimiter to use for S3 objet listings. See</p></dd><dt class="param">getS3Client</dt><dd class="cmt"><p>A function to instantiate an S3Client. Must be serializable.</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="../RasterReader$$Options.html" class="extype" name="geotrellis.spark.io.RasterReader.Options">RasterReader.Options</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -111,7 +112,8 @@
     </span>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">tiffExtensions</dt><dd class="cmt"><p>Read all file with an extension contained in the given list.</p></dd><dt class="param">crs</dt><dd class="cmt"><p>Override CRS of the input files. If <span class="extype" name="None">None</span>, the reader will use the file's original CRS.</p></dd><dt class="param">timeTag</dt><dd class="cmt"><p>Name of tiff tag containing the timestamp for the tile.</p></dd><dt class="param">timeFormat</dt><dd class="cmt"><p>Pattern for <span class="extype" name="java.time.format.DateTimeFormatter">java.time.format.DateTimeFormatter</span> to parse timeTag.</p></dd><dt class="param">maxTileSize</dt><dd class="cmt"><p>Maximum allowed size of each tiles in output RDD.
                       May result in a one input GeoTiff being split amongst multiple records if it exceeds this size.
-                      If no maximum tile size is specific, then each file file is read fully.</p></dd><dt class="param">numPartitions</dt><dd class="cmt"><p>How many partitions Spark should create when it repartitions the data.</p></dd><dt class="param">partitionBytes</dt><dd class="cmt"><p>Desired partition size in bytes, at least one item per partition will be assigned</p></dd><dt class="param">chunkSize</dt><dd class="cmt"><p>How many bytes should be read in at a time.</p></dd><dt class="param">delimiter</dt><dd class="cmt"><p>Delimiter to use for S3 objet listings. See</p></dd><dt class="param">getS3Client</dt><dd class="cmt"><p>A function to instantiate an S3Client. Must be serializable.</p></dd></dl></div>
+                      If no maximum tile size is specific, then each file file is read fully.</p></dd><dt class="param">numPartitions</dt><dd class="cmt"><p>How many partitions Spark should create when it repartitions the data.</p></dd><dt class="param">partitionBytes</dt><dd class="cmt"><p>Desired partition size in bytes, at least one item per partition will be assigned.
+                            This option is incompatible with the maxTileSize option.</p></dd><dt class="param">chunkSize</dt><dd class="cmt"><p>How many bytes should be read in at a time.</p></dd><dt class="param">delimiter</dt><dd class="cmt"><p>Delimiter to use for S3 objet listings. See</p></dd><dt class="param">getS3Client</dt><dd class="cmt"><p>A function to instantiate an S3Client. Must be serializable.</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -458,7 +460,7 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../RasterReader$$Options.html" class="extype" name="geotrellis.spark.io.RasterReader.Options">Options</a></dd></dl></div>
-    </li><li name="geotrellis.spark.io.s3.S3GeoTiffRDD.Options#partitionBytes" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.spark.io.s3.S3GeoTiffRDD.Options#partitionBytes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="partitionBytes:Option[Long]"></a>
       <a id="partitionBytes:Option[Long]"></a>
       <h4 class="signature">
@@ -474,7 +476,8 @@
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Desired partition size in bytes, at least one item per partition will be assigned</p>
+      <p class="shortcomment cmt">Desired partition size in bytes, at least one item per partition will be assigned.</p><div class="fullcomment"><div class="comment cmt"><p>Desired partition size in bytes, at least one item per partition will be assigned.
+                            This option is incompatible with the maxTileSize option.</p></div></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
