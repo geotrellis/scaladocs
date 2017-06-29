@@ -1,9 +1,9 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>Viewshed - geotrellis.raster.viewshed.Viewshed</title>
-          <meta name="description" content="Viewshed - geotrellis.raster.viewshed.Viewshed" />
-          <meta name="keywords" content="Viewshed geotrellis.raster.viewshed.Viewshed" />
+          <title>IterativeViewshed - geotrellis.spark.viewshed.IterativeViewshed</title>
+          <meta name="description" content="IterativeViewshed - geotrellis.spark.viewshed.IterativeViewshed" />
+          <meta name="keywords" content="IterativeViewshed geotrellis.spark.viewshed.IterativeViewshed" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -16,7 +16,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../index.html';
-            var hash = 'geotrellis.raster.viewshed.Viewshed$';
+            var hash = 'geotrellis.spark.viewshed.IterativeViewshed$';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -29,11 +29,11 @@
         <body class="value">
       <div id="definition">
         <img alt="Object" src="../../../lib/object_big.png" />
-        <p id="owner"><a href="../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../package.html" class="extype" name="geotrellis.raster">raster</a>.<a href="package.html" class="extype" name="geotrellis.raster.viewshed">viewshed</a></p>
-        <h1>Viewshed</h1><h3><span class="morelinks"><div>Related Doc:
-            <a href="package.html" class="extype" name="geotrellis.raster.viewshed">package viewshed</a>
+        <p id="owner"><a href="../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../package.html" class="extype" name="geotrellis.spark">spark</a>.<a href="package.html" class="extype" name="geotrellis.spark.viewshed">viewshed</a></p>
+        <h1>IterativeViewshed</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="package.html" class="extype" name="geotrellis.spark.viewshed">package viewshed</a>
           </div></span></h3><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -45,18 +45,17 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">Viewshed</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">IterativeViewshed</span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Created by jchien on 4/24/14.</p><p>This appears to be an implementation of the R3 Viewshed algorithm
-from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A Spark-enabled implementation of R2 [1] viewshed.</p><p>1. Franklin, Wm Randolph, and Clark Ray.
    &quot;Higher isn’t necessarily better: Visibility algorithms and experiments.&quot;
-    Advances in GIS research: sixth international symposium on spatial data handling. Vol. 2.
-    Taylor &amp; Francis Edinburgh, 1994.
+   Advances in GIS research: sixth international symposium on spatial data handling. Vol. 2.
+   Taylor &amp; Francis Edinburgh, 1994.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -74,7 +73,7 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.raster.viewshed.Viewshed"><span>Viewshed</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.spark.viewshed.IterativeViewshed"><span>IterativeViewshed</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -93,7 +92,33 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         <div id="allMembers">
         
 
-        
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="geotrellis.spark.viewshed.IterativeViewshed.Point6D" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Point6DextendsProductwithSerializable"></a>
+      <a id="Point6D:Point6D"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="IterativeViewshed$$Point6D.html"><span class="name">Point6D</span></a><span class="params">(<span name="x">x: <span class="extype" name="scala.Double">Double</span></span>, <span name="y">y: <span class="extype" name="scala.Double">Double</span></span>, <span name="viewHeight">viewHeight: <span class="extype" name="scala.Double">Double</span></span>, <span name="angle">angle: <span class="extype" name="scala.Double">Double</span></span>, <span name="fieldOfView">fieldOfView: <span class="extype" name="scala.Double">Double</span></span>, <span name="altitude">altitude: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@Point6DextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">x:           x-coordinate (in the units used by the layer)
+y:           y-coordinate (in the units used by the layer)
+viewHeight:  view height (in units of &quot;meters&quot;) if positive then height above the surface, if negative then absolute height
+angle:       the angle in radians (about the z-axis) of the &quot;camera&quot;
+fieldOfView: the field of view of the &quot;camera&quot; in radians
+altitude:    the absolute altitude to query; if -∞ then use the terrain height
+</p>
+    </li></ol>
+            </div>
 
         
 
@@ -111,7 +136,7 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@!=(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -128,7 +153,7 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@##():Int" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@##():Int" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -145,28 +170,35 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@==(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@==(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.raster.viewshed.Viewshed#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(r:geotrellis.raster.Tile,startCol:Int,startRow:Int):geotrellis.raster.Tile"></a>
-      <a id="apply(Tile,Int,Int):Tile"></a>
+    </li><li name="geotrellis.spark.viewshed.IterativeViewshed#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply[K,V](elevation:org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[geotrellis.spark.TileLayerMetadata[K]],ps:Seq[geotrellis.spark.viewshed.IterativeViewshed.Point6D],maxDistance:Double,curvature:Boolean,operator:geotrellis.raster.viewshed.R2Viewshed.AggregationOperator,epsilon:Double)(implicitevidence$5:K=&gt;geotrellis.spark.SpatialKey,implicitevidence$6:scala.reflect.ClassTag[K],implicitevidence$7:V=&gt;geotrellis.raster.Tile):org.apache.spark.rdd.RDD[(K,geotrellis.raster.Tile)]withgeotrellis.spark.Metadata[geotrellis.spark.TileLayerMetadata[K]]"></a>
+      <a id="apply[K,V](RDD[(K,V)]withMetadata[TileLayerMetadata[K]],Seq[Point6D],Double,Boolean,AggregationOperator,Double)((K)⇒SpatialKey,ClassTag[K],(V)⇒Tile):RDD[(K,Tile)]withMetadata[TileLayerMetadata[K]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="r">r: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>, <span name="startCol">startCol: <span class="extype" name="scala.Int">Int</span></span>, <span name="startRow">startRow: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
+        <span class="name">apply</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="params">(<span name="elevation">elevation: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.K">K</span>, <span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.V">V</span>)] with <a href="../Metadata.html" class="extype" name="geotrellis.spark.Metadata">Metadata</a>[<a href="../TileLayerMetadata.html" class="extype" name="geotrellis.spark.TileLayerMetadata">TileLayerMetadata</a>[<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.K">K</span>]]</span>, <span name="ps">ps: <span class="extype" name="scala.Seq">Seq</span>[<a href="IterativeViewshed$$Point6D.html" class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.Point6D">Point6D</a>]</span>, <span name="maxDistance">maxDistance: <span class="extype" name="scala.Double">Double</span></span>, <span name="curvature">curvature: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="operator">operator: <a href="../../raster/viewshed/R2Viewshed$$AggregationOperator.html" class="extype" name="geotrellis.raster.viewshed.R2Viewshed.AggregationOperator">AggregationOperator</a> = <span class="symbol"><span class="name"><a href="../../package.html">Or</a></span></span></span>, <span name="epsilon">epsilon: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">1/math.Pi</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.K">K</span>) ⇒ <a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a></span>, <span name="arg1">arg1: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.K">K</span>]</span>, <span name="arg2">arg2: (<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.V">V</span>) ⇒ <a href="../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.K">K</span>, <a href="../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>)] with <a href="../Metadata.html" class="extype" name="geotrellis.spark.Metadata">Metadata</a>[<a href="../TileLayerMetadata.html" class="extype" name="geotrellis.spark.TileLayerMetadata">TileLayerMetadata</a>[<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.K">K</span>]]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@apply(r:geotrellis.raster.Tile,startCol:Int,startRow:Int):geotrellis.raster.Tile" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@apply[K,V](elevation:org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[geotrellis.spark.TileLayerMetadata[K]],ps:Seq[geotrellis.spark.viewshed.IterativeViewshed.Point6D],maxDistance:Double,curvature:Boolean,operator:geotrellis.raster.viewshed.R2Viewshed.AggregationOperator,epsilon:Double)(implicitevidence$5:K=&gt;geotrellis.spark.SpatialKey,implicitevidence$6:scala.reflect.ClassTag[K],implicitevidence$7:V=&gt;geotrellis.raster.Tile):org.apache.spark.rdd.RDD[(K,geotrellis.raster.Tile)]withgeotrellis.spark.Metadata[geotrellis.spark.TileLayerMetadata[K]]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">The main entry-point for the iterative viewshed implementation.</p><div class="fullcomment"><div class="comment cmt"><p>The main entry-point for the iterative viewshed implementation.
+Takes a layer, some source points, and other ancillary
+information and produces a viewshed layer.</p><p>Parameters given in units of meters interact with the layer
+(approximate) layer resolution, which is computed in this
+function.  That approximation is done by reprojecting keys to
+EPSG:4326, then converting degrees to meters, then dividing the
+number of meters by the number of pixels.
+</p></div><dl class="paramcmts block"><dt class="param">elevation</dt><dd class="cmt"><p>The elevation layer; pixel values are interpreted as being in units of &quot;meters&quot;</p></dd><dt class="param">ps</dt><dd class="cmt"><p>Viewshed source points; their construction and interpretation is described above</p></dd><dt class="param">maxDistance</dt><dd class="cmt"><p>The maximum distance that rays are allowed to travel; a lower number reduces computational cost.  This is given in units of meters.</p></dd><dt class="param">curvature</dt><dd class="cmt"><p>Whether or not to take the curvature of the Earth into account</p></dd><dt class="param">operator</dt><dd class="cmt"><p>The aggregation operator to use (e.g. Or)</p></dd><dt class="param">epsilon</dt><dd class="cmt"><p>Rays within this many radians of horizontal (vertical) are considered to be horizontal (vertical)</p></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -179,7 +211,7 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@asInstanceOf[T0]:T0" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -196,7 +228,7 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@clone():Object" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@clone():Object" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -207,6 +239,23 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="geotrellis.spark.viewshed.IterativeViewshed#coordinatesToPoints" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="coordinatesToPoints(points:Seq[com.vividsolutions.jts.geom.Coordinate]):Seq[geotrellis.spark.viewshed.IterativeViewshed.Point6D]"></a>
+      <a id="coordinatesToPoints(Seq[Coordinate]):Seq[Point6D]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">coordinatesToPoints</span><span class="params">(<span name="points">points: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="com.vividsolutions.jts.geom.Coordinate">Coordinate</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="IterativeViewshed$$Point6D.html" class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.Point6D">Point6D</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@coordinatesToPoints(points:Seq[com.vividsolutions.jts.geom.Coordinate]):Seq[geotrellis.spark.viewshed.IterativeViewshed.Point6D]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -219,7 +268,7 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -236,7 +285,7 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@equals(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -253,7 +302,7 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@finalize():Unit" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@finalize():Unit" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -276,7 +325,7 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@getClass():Class[_]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@getClass():Class[_]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -293,7 +342,7 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@hashCode():Int" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@hashCode():Int" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -310,7 +359,7 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -327,7 +376,7 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -344,7 +393,7 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@notify():Unit" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@notify():Unit" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -361,28 +410,11 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@notifyAll():Unit" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@notifyAll():Unit" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.raster.viewshed.Viewshed#offsets" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="offsets(r:geotrellis.raster.Tile,startCol:Int,startRow:Int):geotrellis.raster.Tile"></a>
-      <a id="offsets(Tile,Int,Int):Tile"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">offsets</span><span class="params">(<span name="r">r: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>, <span name="startCol">startCol: <span class="extype" name="scala.Int">Int</span></span>, <span name="startRow">startRow: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@offsets(r:geotrellis.raster.Tile,startCol:Int,startRow:Int):geotrellis.raster.Tile" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -395,7 +427,7 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -412,7 +444,7 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@toString():String" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@toString():String" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -429,7 +461,7 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@wait():Unit" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@wait():Unit" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -452,7 +484,7 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -475,7 +507,7 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.viewshed.Viewshed$@wait(x$1:Long):Unit" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@wait(x$1:Long):Unit" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -495,11 +527,7 @@ from [1].</p><p>1. Franklin, Wm Randolph, and Clark Ray.
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.Serializable">
-              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
-            </div><div class="parent" name="java.io.Serializable">
-              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
-            </div><div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
