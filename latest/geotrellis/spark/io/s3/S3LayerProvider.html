@@ -1,22 +1,22 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>TypedModule - geotrellis.spark.etl.TypedModule</title>
-          <meta name="description" content="TypedModule - geotrellis.spark.etl.TypedModule" />
-          <meta name="keywords" content="TypedModule geotrellis.spark.etl.TypedModule" />
+          <title>S3LayerProvider - geotrellis.spark.io.s3.S3LayerProvider</title>
+          <meta name="description" content="S3LayerProvider - geotrellis.spark.io.s3.S3LayerProvider" />
+          <meta name="keywords" content="S3LayerProvider geotrellis.spark.io.s3.S3LayerProvider" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
-      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
-      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
-      <script type="text/javascript" src="../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
       
       <script type="text/javascript">
          if(top === self) {
-            var url = '../../../index.html';
-            var hash = 'geotrellis.spark.etl.TypedModule';
+            var url = '../../../../index.html';
+            var hash = 'geotrellis.spark.io.s3.S3LayerProvider';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -28,13 +28,13 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img alt="Trait" src="../../../lib/trait_big.png" />
-        <p id="owner"><a href="../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../package.html" class="extype" name="geotrellis.spark">spark</a>.<a href="package.html" class="extype" name="geotrellis.spark.etl">etl</a></p>
-        <h1>TypedModule</h1><h3><span class="morelinks"><div>Related Doc:
-            <a href="package.html" class="extype" name="geotrellis.spark.etl">package etl</a>
+        <img alt="Class" src="../../../../lib/class_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.spark">spark</a>.<a href="../package.html" class="extype" name="geotrellis.spark.io">io</a>.<a href="package.html" class="extype" name="geotrellis.spark.io.s3">s3</a></p>
+        <h1>S3LayerProvider</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="package.html" class="extype" name="geotrellis.spark.io.s3">package s3</a>
           </div></span></h3><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       </div>
@@ -42,20 +42,20 @@
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">TypedModule</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">S3LayerProvider</span><span class="result"> extends <a href="../AttributeStoreProvider.html" class="extype" name="geotrellis.spark.io.AttributeStoreProvider">AttributeStoreProvider</a> with <a href="../LayerReaderProvider.html" class="extype" name="geotrellis.spark.io.LayerReaderProvider">LayerReaderProvider</a> with <a href="../LayerWriterProvider.html" class="extype" name="geotrellis.spark.io.LayerWriterProvider">LayerWriterProvider</a></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Provides <a href="S3LayerReader.html" class="extype" name="geotrellis.spark.io.s3.S3LayerReader">S3LayerReader</a> instance for URI with <code>s3</code> scheme.
+The uri represents S3 bucket an prefix of catalog root.
+ ex: <code>s3://&lt;bucket&gt;/&lt;prefix-to-catalog&gt;</code>
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
-        </div><div class="toggleContainer block">
-            <span class="toggle">Known Subclasses</span>
-            <div class="subClasses hiddenContent"><a href="accumulo/AccumuloModule$.html" class="extype" name="geotrellis.spark.etl.accumulo.AccumuloModule">AccumuloModule</a>, <a href="cassandra/CassandraModule$.html" class="extype" name="geotrellis.spark.etl.cassandra.CassandraModule">CassandraModule</a>, <a href="file/FileModule.html" class="extype" name="geotrellis.spark.etl.file.FileModule">FileModule</a>, <a href="file/FileModule$.html" class="extype" name="geotrellis.spark.etl.file.FileModule">FileModule</a>, <a href="hbase/HBaseModule$.html" class="extype" name="geotrellis.spark.etl.hbase.HBaseModule">HBaseModule</a>, <a href="hadoop/HadoopModule.html" class="extype" name="geotrellis.spark.etl.hadoop.HadoopModule">HadoopModule</a>, <a href="hadoop/HadoopModule$.html" class="extype" name="geotrellis.spark.etl.hadoop.HadoopModule">HadoopModule</a>, <a href="s3/S3Module$.html" class="extype" name="geotrellis.spark.etl.s3.S3Module">S3Module</a></div>
-          </div></div>
+          <div class="superTypes hiddenContent"><a href="../LayerWriterProvider.html" class="extype" name="geotrellis.spark.io.LayerWriterProvider">LayerWriterProvider</a>, <a href="../LayerReaderProvider.html" class="extype" name="geotrellis.spark.io.LayerReaderProvider">LayerReaderProvider</a>, <a href="../AttributeStoreProvider.html" class="extype" name="geotrellis.spark.io.AttributeStoreProvider">AttributeStoreProvider</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
         
 
       <div id="mbrsel">
@@ -72,7 +72,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.spark.etl.TypedModule"><span>TypedModule</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.spark.io.s3.S3LayerProvider"><span>S3LayerProvider</span></li><li class="in" name="geotrellis.spark.io.LayerWriterProvider"><span>LayerWriterProvider</span></li><li class="in" name="geotrellis.spark.io.LayerReaderProvider"><span>LayerReaderProvider</span></li><li class="in" name="geotrellis.spark.io.AttributeStoreProvider"><span>AttributeStoreProvider</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -89,7 +89,27 @@
 
       <div id="template">
         <div id="allMembers">
-        
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="geotrellis.spark.io.s3.S3LayerProvider#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;():geotrellis.spark.io.s3.S3LayerProvider"></a>
+      <a id="&lt;init&gt;:S3LayerProvider"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">S3LayerProvider</span><span class="params">()</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@&lt;init&gt;():geotrellis.spark.io.s3.S3LayerProvider" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
 
         
 
@@ -109,8 +129,8 @@
         <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@!=(x$1:Any):Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -126,8 +146,8 @@
         <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@##():Int" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@##():Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -143,8 +163,8 @@
         <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@==(x$1:Any):Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -160,11 +180,45 @@
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@asInstanceOf[T0]:T0" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.spark.io.s3.S3LayerProvider#attributeStore" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="attributeStore(uri:java.net.URI):geotrellis.spark.io.AttributeStore"></a>
+      <a id="attributeStore(URI):AttributeStore"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">attributeStore</span><span class="params">(<span name="uri">uri: <span class="extype" name="java.net.URI">URI</span></span>)</span><span class="result">: <a href="../AttributeStore.html" class="extype" name="geotrellis.spark.io.AttributeStore">AttributeStore</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@attributeStore(uri:java.net.URI):geotrellis.spark.io.AttributeStore" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.io.s3.S3LayerProvider">S3LayerProvider</a> → <a href="../AttributeStoreProvider.html" class="extype" name="geotrellis.spark.io.AttributeStoreProvider">AttributeStoreProvider</a></dd></dl></div>
+    </li><li name="geotrellis.spark.io.s3.S3LayerProvider#canProcess" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="canProcess(uri:java.net.URI):Boolean"></a>
+      <a id="canProcess(URI):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">canProcess</span><span class="params">(<span name="uri">uri: <span class="extype" name="java.net.URI">URI</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@canProcess(uri:java.net.URI):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.io.s3.S3LayerProvider">S3LayerProvider</a> → <a href="../LayerWriterProvider.html" class="extype" name="geotrellis.spark.io.LayerWriterProvider">LayerWriterProvider</a> → <a href="../LayerReaderProvider.html" class="extype" name="geotrellis.spark.io.LayerReaderProvider">LayerReaderProvider</a> → <a href="../AttributeStoreProvider.html" class="extype" name="geotrellis.spark.io.AttributeStoreProvider">AttributeStoreProvider</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -177,11 +231,11 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@clone():Object" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@clone():Object" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
@@ -200,8 +254,8 @@
         <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -217,8 +271,8 @@
         <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@equals(x$1:Any):Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -234,51 +288,17 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@finalize():Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.spark.etl.TypedModule#find" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="find[T](implicitevidence$2:reflect.runtime.universe.TypeTag[T]):Option[T]"></a>
-      <a id="find[T](scala.reflect.api.JavaUniverse.TypeTag[T]):Option[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">find</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.api.TypeTags.TypeTag">scala.reflect.api.JavaUniverse.TypeTag</span>[<span class="extype" name="geotrellis.spark.etl.TypedModule.find.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="geotrellis.spark.etl.TypedModule.find.T">T</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@find[T](implicitevidence$2:reflect.runtime.universe.TypeTag[T]):Option[T]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.spark.etl.TypedModule#findSubclassOf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="findSubclassOf[T](implicitevidence$3:reflect.runtime.universe.TypeTag[T]):Seq[T]"></a>
-      <a id="findSubclassOf[T](scala.reflect.api.JavaUniverse.TypeTag[T]):Seq[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">findSubclassOf</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.api.TypeTags.TypeTag">scala.reflect.api.JavaUniverse.TypeTag</span>[<span class="extype" name="geotrellis.spark.etl.TypedModule.findSubclassOf.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="geotrellis.spark.etl.TypedModule.findSubclassOf.T">T</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@findSubclassOf[T](implicitevidence$3:reflect.runtime.universe.TypeTag[T]):Seq[T]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -291,8 +311,8 @@
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@getClass():Class[_]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -308,8 +328,8 @@
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@hashCode():Int" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -325,28 +345,45 @@
         <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.spark.etl.TypedModule#map" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="map:Map[reflect.runtime.universe.TypeTag[_],Function0[_]]"></a>
-      <a id="map:Map[scala.reflect.api.JavaUniverse.TypeTag[_],Function0[_]]"></a>
+    </li><li name="geotrellis.spark.io.s3.S3LayerProvider#layerReader" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="layerReader(uri:java.net.URI,store:geotrellis.spark.io.AttributeStore,sc:org.apache.spark.SparkContext):geotrellis.spark.io.FilteringLayerReader[geotrellis.spark.LayerId]"></a>
+      <a id="layerReader(URI,AttributeStore,SparkContext):FilteringLayerReader[LayerId]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">var</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">map</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.reflect.api.TypeTags.TypeTag">scala.reflect.api.JavaUniverse.TypeTag</span>[_], <span class="extype" name="scala.Function0">Function0</span>[_]]</span>
+        <span class="name">layerReader</span><span class="params">(<span name="uri">uri: <span class="extype" name="java.net.URI">URI</span></span>, <span name="store">store: <a href="../AttributeStore.html" class="extype" name="geotrellis.spark.io.AttributeStore">AttributeStore</a></span>, <span name="sc">sc: <span class="extype" name="org.apache.spark.SparkContext">SparkContext</span></span>)</span><span class="result">: <a href="../FilteringLayerReader.html" class="extype" name="geotrellis.spark.io.FilteringLayerReader">FilteringLayerReader</a>[<a href="../../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@map:Map[reflect.runtime.universe.TypeTag[_],Function0[_]]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@layerReader(uri:java.net.URI,store:geotrellis.spark.io.AttributeStore,sc:org.apache.spark.SparkContext):geotrellis.spark.io.FilteringLayerReader[geotrellis.spark.LayerId]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.io.s3.S3LayerProvider">S3LayerProvider</a> → <a href="../LayerReaderProvider.html" class="extype" name="geotrellis.spark.io.LayerReaderProvider">LayerReaderProvider</a></dd></dl></div>
+    </li><li name="geotrellis.spark.io.s3.S3LayerProvider#layerWriter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="layerWriter(uri:java.net.URI,store:geotrellis.spark.io.AttributeStore):geotrellis.spark.io.LayerWriter[geotrellis.spark.LayerId]"></a>
+      <a id="layerWriter(URI,AttributeStore):LayerWriter[LayerId]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">layerWriter</span><span class="params">(<span name="uri">uri: <span class="extype" name="java.net.URI">URI</span></span>, <span name="store">store: <a href="../AttributeStore.html" class="extype" name="geotrellis.spark.io.AttributeStore">AttributeStore</a></span>)</span><span class="result">: <a href="../LayerWriter.html" class="extype" name="geotrellis.spark.io.LayerWriter">LayerWriter</a>[<a href="../../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@layerWriter(uri:java.net.URI,store:geotrellis.spark.io.AttributeStore):geotrellis.spark.io.LayerWriter[geotrellis.spark.LayerId]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.io.s3.S3LayerProvider">S3LayerProvider</a> → <a href="../LayerWriterProvider.html" class="extype" name="geotrellis.spark.io.LayerWriterProvider">LayerWriterProvider</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -359,8 +396,8 @@
         <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -376,8 +413,8 @@
         <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@notify():Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@notify():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -393,28 +430,11 @@
         <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@notifyAll():Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.spark.etl.TypedModule#register" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="register[T](thing:=&gt;T)(implicitevidence$1:reflect.runtime.universe.TypeTag[T]):Unit"></a>
-      <a id="register[T](⇒T)(scala.reflect.api.JavaUniverse.TypeTag[T]):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">register</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="thing">thing: ⇒ <span class="extype" name="geotrellis.spark.etl.TypedModule.register.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.api.TypeTags.TypeTag">scala.reflect.api.JavaUniverse.TypeTag</span>[<span class="extype" name="geotrellis.spark.etl.TypedModule.register.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@register[T](thing:=&gt;T)(implicitevidence$1:reflect.runtime.universe.TypeTag[T]):Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -427,8 +447,8 @@
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -444,28 +464,11 @@
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@toString():String" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@toString():String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.spark.etl.TypedModule#union" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="union(other:geotrellis.spark.etl.TypedModule):geotrellis.spark.etl.TypedModule"></a>
-      <a id="union(TypedModule):TypedModule"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">union</span><span class="params">(<span name="other">other: <a href="" class="extype" name="geotrellis.spark.etl.TypedModule">TypedModule</a></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.spark.etl.TypedModule">TypedModule</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@union(other:geotrellis.spark.etl.TypedModule):geotrellis.spark.etl.TypedModule" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -478,8 +481,8 @@
         <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@wait():Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@wait():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -501,8 +504,8 @@
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -524,8 +527,8 @@
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.etl.TypedModule@wait(x$1:Long):Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3LayerProvider@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -544,7 +547,13 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="geotrellis.spark.io.LayerWriterProvider">
+              <h3>Inherited from <a href="../LayerWriterProvider.html" class="extype" name="geotrellis.spark.io.LayerWriterProvider">LayerWriterProvider</a></h3>
+            </div><div class="parent" name="geotrellis.spark.io.LayerReaderProvider">
+              <h3>Inherited from <a href="../LayerReaderProvider.html" class="extype" name="geotrellis.spark.io.LayerReaderProvider">LayerReaderProvider</a></h3>
+            </div><div class="parent" name="geotrellis.spark.io.AttributeStoreProvider">
+              <h3>Inherited from <a href="../AttributeStoreProvider.html" class="extype" name="geotrellis.spark.io.AttributeStoreProvider">AttributeStoreProvider</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
