@@ -204,6 +204,51 @@ These coordinates are inclusive.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.raster.GridBounds#buffer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="buffer(colBuffer:Int,rowBuffer:Int,clamp:Boolean):geotrellis.raster.GridBounds"></a>
+      <a id="buffer(Int,Int,Boolean):GridBounds"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">buffer</span><span class="params">(<span name="colBuffer">colBuffer: <span class="extype" name="scala.Int">Int</span></span>, <span name="rowBuffer">rowBuffer: <span class="extype" name="scala.Int">Int</span></span>, <span name="clamp">clamp: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.GridBounds@buffer(colBuffer:Int,rowBuffer:Int,clamp:Boolean):geotrellis.raster.GridBounds" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Creates a new <a href="" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a> using a buffer around this
+GridBounds.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a new <a href="" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a> using a buffer around this
+GridBounds.
+</p></div><dl class="paramcmts block"><dt class="param">colBuffer</dt><dd class="cmt"><p>The amount the cols within this GridBounds should be buffered.</p></dd><dt class="param">rowBuffer</dt><dd class="cmt"><p>The amount the rows within this GridBounds should be buffered.</p></dd><dt class="param">clamp</dt><dd class="cmt"><p>Determines whether or not to clamp the GridBounds to the grid
+                 such that it no value will be under 0; defaults to true. If false,
+                 then the resulting GridBounds can contain negative values outside
+                 of the grid boundaries.</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>This will not buffer past 0 regardless of how much the buffer
+      falls below it.</p></span></dd></dl></div>
+    </li><li name="geotrellis.raster.GridBounds#buffer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="buffer(bufferSize:Int):geotrellis.raster.GridBounds"></a>
+      <a id="buffer(Int):GridBounds"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">buffer</span><span class="params">(<span name="bufferSize">bufferSize: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.GridBounds@buffer(bufferSize:Int):geotrellis.raster.GridBounds" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Creates a new <a href="" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a> using a buffer around this
+GridBounds.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a new <a href="" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a> using a buffer around this
+GridBounds.
+</p></div><dl class="paramcmts block"><dt class="param">bufferSize</dt><dd class="cmt"><p>The amount this GridBounds should be buffered by.</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>This will not buffer past 0 regardless of how much the buffer
+      falls below it.</p></span></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -572,6 +617,48 @@ consist of more than one GridBounds.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.raster.GridBounds#offset" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="offset(colOffset:Int,rowOffset:Int):geotrellis.raster.GridBounds"></a>
+      <a id="offset(Int,Int):GridBounds"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">offset</span><span class="params">(<span name="colOffset">colOffset: <span class="extype" name="scala.Int">Int</span></span>, <span name="rowOffset">rowOffset: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.GridBounds@offset(colOffset:Int,rowOffset:Int):geotrellis.raster.GridBounds" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Offsets this <a href="" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a> to a new location relative to its current
+position
+</p><div class="fullcomment"><div class="comment cmt"><p>Offsets this <a href="" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a> to a new location relative to its current
+position
+</p></div><dl class="paramcmts block"><dt class="param">colOffset</dt><dd class="cmt"><p>The amount the cols should be shifted.</p></dd><dt class="param">rowOffset</dt><dd class="cmt"><p>The amount the rows should be shifted.</p></dd></dl></div>
+    </li><li name="geotrellis.raster.GridBounds#offset" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="offset(boundsOffset:Int):geotrellis.raster.GridBounds"></a>
+      <a id="offset(Int):GridBounds"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">offset</span><span class="params">(<span name="boundsOffset">boundsOffset: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.GridBounds@offset(boundsOffset:Int):geotrellis.raster.GridBounds" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Offsets this <a href="" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a> to a new location relative to its current
+position
+</p><div class="fullcomment"><div class="comment cmt"><p>Offsets this <a href="" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a> to a new location relative to its current
+position
+</p></div><dl class="paramcmts block"><dt class="param">boundsOffset</dt><dd class="cmt"><p>The amount the GridBounds should be shifted.</p></dd></dl></div>
     </li><li name="geotrellis.raster.GridBounds#rowMax" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="rowMax:Int"></a>
       <a id="rowMax:Int"></a>
