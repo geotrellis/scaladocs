@@ -347,6 +347,45 @@ LineString.</p><div class="fullcomment"><div class="comment cmt"><p>Iterates ove
 LineString.  The iteration happens in the direction from the
 first point to the last point.
 </p></div></div>
+    </li><li name="geotrellis.raster.rasterize.Rasterizer#foreachCellByLineString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="foreachCellByLineString(line:geotrellis.vector.Line,re:geotrellis.raster.RasterExtent,c:geotrellis.raster.Connectivity)(f:(Int,Int)=&gt;Unit):Unit"></a>
+      <a id="foreachCellByLineString(Line,RasterExtent,Connectivity)((Int,Int)⇒Unit):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreachCellByLineString</span><span class="params">(<span name="line">line: <a href="../../vector/Line.html" class="extype" name="geotrellis.vector.Line">Line</a></span>, <span name="re">re: <a href="../RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>, <span name="c">c: <a href="../Connectivity.html" class="extype" name="geotrellis.raster.Connectivity">Connectivity</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.rasterize.Rasterizer$@foreachCellByLineString(line:geotrellis.vector.Line,re:geotrellis.raster.RasterExtent,c:geotrellis.raster.Connectivity)(f:(Int,Int)=&gt;Unit):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Iterates over the cells determined by the segments of a
+LineString.</p><div class="fullcomment"><div class="comment cmt"><p>Iterates over the cells determined by the segments of a
+LineString.  The iteration happens in the direction from the
+first point to the last point.
+</p></div></div>
+    </li><li name="geotrellis.raster.rasterize.Rasterizer#foreachCellByMultiLineString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="foreachCellByMultiLineString(g:geotrellis.vector.MultiLine,re:geotrellis.raster.RasterExtent,c:geotrellis.raster.Connectivity)(f:(Int,Int)=&gt;Unit):Unit"></a>
+      <a id="foreachCellByMultiLineString(MultiLine,RasterExtent,Connectivity)((Int,Int)⇒Unit):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreachCellByMultiLineString</span><span class="params">(<span name="g">g: <a href="../../vector/MultiLine.html" class="extype" name="geotrellis.vector.MultiLine">MultiLine</a></span>, <span name="re">re: <a href="../RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>, <span name="c">c: <a href="../Connectivity.html" class="extype" name="geotrellis.raster.Connectivity">Connectivity</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.rasterize.Rasterizer$@foreachCellByMultiLineString(g:geotrellis.vector.MultiLine,re:geotrellis.raster.RasterExtent,c:geotrellis.raster.Connectivity)(f:(Int,Int)=&gt;Unit):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Apply function f to every cell contained within MultiLineString.</p><div class="fullcomment"><div class="comment cmt"><p>Apply function f to every cell contained within MultiLineString.
+</p></div><dl class="paramcmts block"><dt class="param">g</dt><dd class="cmt"><p>MultiLineString used to define zone</p></dd><dt class="param">re</dt><dd class="cmt"><p>RasterExtent used to determine cols and rows</p></dd><dt class="param">c</dt><dd class="cmt"><p>Desired connectivity of the line</p></dd><dt class="param">f</dt><dd class="cmt"><p>Function to apply: f(cols, row, feature)</p></dd></dl></div>
     </li><li name="geotrellis.raster.rasterize.Rasterizer#foreachCellByMultiLineString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="foreachCellByMultiLineString(g:geotrellis.vector.MultiLine,re:geotrellis.raster.RasterExtent)(f:(Int,Int)=&gt;Unit):Unit"></a>
       <a id="foreachCellByMultiLineString(MultiLine,RasterExtent)((Int,Int)⇒Unit):Unit"></a>
@@ -502,6 +541,28 @@ each pixel in the raster extent covered by the geometry.</p><div class="fullcomm
 each pixel in the raster extent covered by the geometry.  The
 two arguments to the function 'f' are the column and row.
 </p></div></div>
+    </li><li name="geotrellis.raster.rasterize.Rasterizer#foreachCellInGridLine" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="foreachCellInGridLine(x0:Int,y0:Int,x1:Int,y1:Int,re:geotrellis.raster.RasterExtent,skipLast:Boolean,c:geotrellis.raster.Connectivity)(f:(Int,Int)=&gt;Unit):Unit"></a>
+      <a id="foreachCellInGridLine(Int,Int,Int,Int,RasterExtent,Boolean,Connectivity)((Int,Int)⇒Unit):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreachCellInGridLine</span><span class="params">(<span name="x0">x0: <span class="extype" name="scala.Int">Int</span></span>, <span name="y0">y0: <span class="extype" name="scala.Int">Int</span></span>, <span name="x1">x1: <span class="extype" name="scala.Int">Int</span></span>, <span name="y1">y1: <span class="extype" name="scala.Int">Int</span></span>, <span name="re">re: <a href="../RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>, <span name="skipLast">skipLast: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="c">c: <a href="../Connectivity.html" class="extype" name="geotrellis.raster.Connectivity">Connectivity</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.rasterize.Rasterizer$@foreachCellInGridLine(x0:Int,y0:Int,x1:Int,y1:Int,re:geotrellis.raster.RasterExtent,skipLast:Boolean,c:geotrellis.raster.Connectivity)(f:(Int,Int)=&gt;Unit):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Implementation of the Bresenham line drawing algorithm.</p><div class="fullcomment"><div class="comment cmt"><p>Implementation of the Bresenham line drawing algorithm.  Only
+calls on cell coordinates within raster extent.</p><p>The parameter 'skipLast' is a flag which is 'true' if the
+function should skip function calling the last cell (x1, y1) and
+false otherwise.  This is useful for not duplicating end points
+when calling for multiple line segments.
+</p></div><dl class="paramcmts block"><dt class="param">re</dt><dd class="cmt"><p>RasterExtent used to determine cols and rows</p></dd><dt class="param">skipLast</dt><dd class="cmt"><p>Boolean flag</p></dd><dt class="param">f</dt><dd class="cmt"><p>Function to apply: f(cols, row, feature)</p></dd></dl></div>
     </li><li name="geotrellis.raster.rasterize.Rasterizer#foreachCellInGridLine" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="foreachCellInGridLine[D](x0:Int,y0:Int,x1:Int,y1:Int,p:geotrellis.vector.Line,re:geotrellis.raster.RasterExtent,skipLast:Boolean)(f:(Int,Int)=&gt;Unit):Unit"></a>
       <a id="foreachCellInGridLine[D](Int,Int,Int,Int,Line,RasterExtent,Boolean)((Int,Int)⇒Unit):Unit"></a>
