@@ -28,10 +28,12 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img alt="Trait" src="../../lib/trait_big.png" />
+        <a href="VectorTile$.html" title="See companion object"><img alt="Class/Object" src="../../lib/class_to_object_big.png" /></a>
         <p id="owner"><a href="../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="package.html" class="extype" name="geotrellis.vectortile">vectortile</a></p>
-        <h1>VectorTile</h1><h3><span class="morelinks"><div>Related Doc:
-            <a href="package.html" class="extype" name="geotrellis.vectortile">package vectortile</a>
+        <h1><a href="VectorTile$.html" title="See companion object">VectorTile</a></h1><h3><span class="morelinks"><div>
+            Related Docs:
+            <a href="VectorTile$.html" title="See companion object">object VectorTile</a>
+            | <a href="package.html" class="extype" name="geotrellis.vectortile">package vectortile</a>
           </div></span></h3><span class="permalink">
       <a href="../../index.html#geotrellis.vectortile.VectorTile" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
@@ -42,26 +44,31 @@
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">VectorTile</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">VectorTile</span><span class="params">(<span name="layers">layers: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="Layer.html" class="extype" name="geotrellis.vectortile.Layer">Layer</a>]</span>, <span name="tileExtent">tileExtent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A high-level representation of a Vector Tile. At its simplest, a Tile is
-just a collection of Layers. We opt to expose each Layer name at the Tile
-level, as the keys of a <span class="extype" name="Map">Map</span>. This way, if the layer names are known by
-the user ahead of time, they can search through the Tile quickly.</p><p>Traditionally, VectorTiles are encoded as Protobuf data, which this library
-provides a codec for. However, by making this top-level type a trait, we
-are able to define alternative backends (GeoJson, for instance. Yet unimplemented.).</p><p>See <a href="protobuf/ProtobufTile.html" class="extype" name="geotrellis.vectortile.protobuf.ProtobufTile">geotrellis.vectortile.protobuf.ProtobufTile</a> for more information
-on how to decode and encode VectorTiles.</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A concrete representation of a VectorTile, as one decoded from Protobuf
+bytes. At its simplest, a Tile is just a collection of Layers. We opt
+to expose each Layer name at the Tile level, as the keys of a <span class="extype" name="Map">Map</span>.
+This way, if the layer names are known by the user ahead of time,
+they can search through the Tile quickly.</p><pre><span class="kw">import</span> geotrellis.vectortile._
+
+<span class="kw">val</span> bytes: <span class="std">Array</span>[<span class="std">Byte</span>] = ...  <span class="cmt">// from some `.mvt` file</span>
+<span class="kw">val</span> key: SpatialKey = ...  <span class="cmt">// preknown</span>
+<span class="kw">val</span> layout: LayoutDefinition = ...  <span class="cmt">// preknown</span>
+<span class="kw">val</span> tileExtent: Extent = layout.mapTransform(key)
+
+<span class="kw">val</span> tile: VectorTile = VectorTile.fromBytes(bytes, tileExtent)</pre></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../util/annotations/experimental.html" class="extype" name="geotrellis.util.annotations.experimental">experimental</a></span><span class="args">()</span>
+              
+        </dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
-        </div><div class="toggleContainer block">
-            <span class="toggle">Known Subclasses</span>
-            <div class="subClasses hiddenContent"><a href="protobuf/ProtobufTile.html" class="extype" name="geotrellis.vectortile.protobuf.ProtobufTile">ProtobufTile</a></div>
-          </div></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
         
 
       <div id="mbrsel">
@@ -78,7 +85,7 @@ on how to decode and encode VectorTiles.</p></div><div class="toggleContainer bl
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.vectortile.VectorTile"><span>VectorTile</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.vectortile.VectorTile"><span>VectorTile</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -95,55 +102,35 @@ on how to decode and encode VectorTiles.</p></div><div class="toggleContainer bl
 
       <div id="template">
         <div id="allMembers">
-        
-
-        
-
-        <div id="values" class="values members">
-              <h3>Abstract Value Members</h3>
-              <ol><li name="geotrellis.vectortile.VectorTile#layers" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="layers:Map[String,geotrellis.vectortile.Layer]"></a>
-      <a id="layers:Map[String,Layer]"></a>
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="geotrellis.vectortile.VectorTile#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(layers:Map[String,geotrellis.vectortile.Layer],tileExtent:geotrellis.vector.Extent):geotrellis.vectortile.VectorTile"></a>
+      <a id="&lt;init&gt;:VectorTile"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">val</span>
+        <span class="modifier"></span>
+        <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">layers</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="Layer.html" class="extype" name="geotrellis.vectortile.Layer">Layer</a>]</span>
+        <span class="name">VectorTile</span><span class="params">(<span name="layers">layers: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="Layer.html" class="extype" name="geotrellis.vectortile.Layer">Layer</a>]</span>, <span name="tileExtent">tileExtent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.vectortile.VectorTile@layers:Map[String,geotrellis.vectortile.Layer]" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.vectortile.VectorTile@&lt;init&gt;(layers:Map[String,geotrellis.vectortile.Layer],tileExtent:geotrellis.vector.Extent):geotrellis.vectortile.VectorTile" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Every Layer in this Tile, with its name as a lookup key.</p>
-    </li><li name="geotrellis.vectortile.VectorTile#tileExtent" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="tileExtent:geotrellis.vector.Extent"></a>
-      <a id="tileExtent:Extent"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">tileExtent</span><span class="result">: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.vectortile.VectorTile@tileExtent:geotrellis.vector.Extent" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">The <span class="extype" name="Extent">Extent</span> of <b>this</b> Tile in some CRS.</p><div class="fullcomment"><div class="comment cmt"><p>The <span class="extype" name="Extent">Extent</span> of <b>this</b> Tile in some CRS.
-A Tile's extent can be easily found from its Key and <span class="extype" name="LayoutDefinition">LayoutDefinition</span>:</p><pre><span class="kw">val</span> key: SpatialKey = ...
-<span class="kw">val</span> layout: LayoutDefinition = ...
-
-<span class="kw">val</span> tileExtent: Extent = layout.mapTransform(key)</pre></div></div>
+      <p class="shortcomment cmt">This is not meant to be called directly - see this class's
+companion object for the available helper methods.</p>
     </li></ol>
             </div>
 
+        
+
+        
+
         <div id="values" class="values members">
-              <h3>Concrete Value Members</h3>
+              <h3>Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a>
       <a id="!=(Any):Boolean"></a>
@@ -252,23 +239,6 @@ A Tile's extent can be easily found from its Key and <span class="extype" name="
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(x$1:Any):Boolean"></a>
-      <a id="equals(Any):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.vectortile.VectorTile@equals(x$1:Any):Boolean" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -309,23 +279,6 @@ A Tile's extent can be easily found from its Key and <span class="extype" name="
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="hashCode():Int"></a>
-      <a id="hashCode():Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.vectortile.VectorTile@hashCode():Int" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -343,6 +296,23 @@ A Tile's extent can be easily found from its Key and <span class="extype" name="
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.vectortile.VectorTile#layers" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="layers:Map[String,geotrellis.vectortile.Layer]"></a>
+      <a id="layers:Map[String,Layer]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">layers</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="Layer.html" class="extype" name="geotrellis.vectortile.Layer">Layer</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vectortile.VectorTile@layers:Map[String,geotrellis.vectortile.Layer]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -394,6 +364,23 @@ A Tile's extent can be easily found from its Key and <span class="extype" name="
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.vectortile.VectorTile#pretty" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="pretty:String"></a>
+      <a id="pretty:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pretty</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vectortile.VectorTile@pretty:String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Pretty-print this VectorTile.</p>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -411,23 +398,76 @@ A Tile's extent can be easily found from its Key and <span class="extype" name="
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toString():String"></a>
-      <a id="toString():String"></a>
+    </li><li name="geotrellis.vectortile.VectorTile#tileExtent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="tileExtent:geotrellis.vector.Extent"></a>
+      <a id="tileExtent:Extent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tileExtent</span><span class="result">: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vectortile.VectorTile@tileExtent:geotrellis.vector.Extent" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.vectortile.VectorTile#toBytes" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toBytes:Array[Byte]"></a>
+      <a id="toBytes:Array[Byte]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">toBytes</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.vectortile.VectorTile@toString():String" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.vectortile.VectorTile@toBytes:Array[Byte]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <p class="shortcomment cmt">Encode this VectorTile back into its original form of Protobuf bytes.</p>
+    </li><li name="geotrellis.vectortile.VectorTile#toGeoJson" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toGeoJson:String"></a>
+      <a id="toGeoJson:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toGeoJson</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vectortile.VectorTile@toGeoJson:String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Yield GeoJson for this VectorTile.</p><div class="fullcomment"><div class="comment cmt"><p>Yield GeoJson for this VectorTile. Geometries are reprojected from
+WebMercator to LatLng, and metadata is dropped.
+</p></div></div>
+    </li><li name="geotrellis.vectortile.VectorTile#toIterable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toIterable:Iterable[geotrellis.vector.Feature[geotrellis.vector.Geometry,Map[String,geotrellis.vectortile.Value]]]"></a>
+      <a id="toIterable:Iterable[Feature[Geometry,Map[String,Value]]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toIterable</span><span class="result">: <span class="extype" name="scala.Iterable">Iterable</span>[<a href="../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="Value.html" class="extype" name="geotrellis.vectortile.Value">Value</a>]]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vectortile.VectorTile@toIterable:Iterable[geotrellis.vector.Feature[geotrellis.vector.Geometry,Map[String,geotrellis.vectortile.Value]]]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Return a VectorTile to a Spark-friendly structure.</p>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -510,6 +550,10 @@ A Tile's extent can be easily found from its Key and <span class="extype" name="
               <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
             </div><div class="parent" name="java.io.Serializable">
               <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">

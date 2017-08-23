@@ -1,22 +1,22 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>ProtobufTile - geotrellis.vectortile.protobuf.ProtobufTile</title>
-          <meta name="description" content="ProtobufTile - geotrellis.vectortile.protobuf.ProtobufTile" />
-          <meta name="keywords" content="ProtobufTile geotrellis.vectortile.protobuf.ProtobufTile" />
+          <title>VSint64 - geotrellis.vectortile.VSint64</title>
+          <meta name="description" content="VSint64 - geotrellis.vectortile.VSint64" />
+          <meta name="keywords" content="VSint64 geotrellis.vectortile.VSint64" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
-      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
-      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
-      <script type="text/javascript" src="../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
       
       <script type="text/javascript">
          if(top === self) {
-            var url = '../../../index.html';
-            var hash = 'geotrellis.vectortile.protobuf.ProtobufTile';
+            var url = '../../index.html';
+            var hash = 'geotrellis.vectortile.VSint64';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -28,15 +28,13 @@
         </head>
         <body class="type">
       <div id="definition">
-        <a href="ProtobufTile$.html" title="See companion object"><img alt="Class/Object" src="../../../lib/class_to_object_big.png" /></a>
-        <p id="owner"><a href="../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../package.html" class="extype" name="geotrellis.vectortile">vectortile</a>.<a href="package.html" class="extype" name="geotrellis.vectortile.protobuf">protobuf</a></p>
-        <h1><a href="ProtobufTile$.html" title="See companion object">ProtobufTile</a></h1><h3><span class="morelinks"><div>
-            Related Docs:
-            <a href="ProtobufTile$.html" title="See companion object">object ProtobufTile</a>
-            | <a href="package.html" class="extype" name="geotrellis.vectortile.protobuf">package protobuf</a>
+        <img alt="Class" src="../../lib/class_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="package.html" class="extype" name="geotrellis.vectortile">vectortile</a></p>
+        <h1>VSint64</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="package.html" class="extype" name="geotrellis.vectortile">package vectortile</a>
           </div></span></h3><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../index.html#geotrellis.vectortile.VSint64" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       </div>
@@ -47,21 +45,15 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">ProtobufTile</span><span class="params">(<span name="layers">layers: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="ProtobufLayer.html" class="extype" name="geotrellis.vectortile.protobuf.ProtobufLayer">ProtobufLayer</a>]</span>, <span name="tileExtent">tileExtent: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span><span class="result"> extends <a href="../VectorTile.html" class="extype" name="geotrellis.vectortile.VectorTile">VectorTile</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">VSint64</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result"> extends <a href="Value.html" class="extype" name="geotrellis.vectortile.Value">Value</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A concrete representation of a VectorTile, as one decoded from Protobuf
-bytes. This is the original/default type for VectorTiles.</p><pre><span class="kw">import</span> geotrellis.vectortile.protobuf._
-
-<span class="kw">val</span> bytes: <span class="std">Array</span>[<span class="std">Byte</span>] = ...  <span class="cmt">// from some `.mvt` file</span>
-<span class="kw">val</span> key: SpatialKey = ...  <span class="cmt">// preknown</span>
-<span class="kw">val</span> layout: LayoutDefinition = ...  <span class="cmt">// preknown</span>
-<span class="kw">val</span> tileExtent: Extent = layout.mapTransform(key)
-
-<span class="kw">val</span> tile: VectorTile = ProtobufTile.fromBytes(bytes, tileExtent)</pre></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A wrapper for zig-zag encoded ints to allow all <code>Value</code> subtypes to be
+stored in the same Map.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="../VectorTile.html" class="extype" name="geotrellis.vectortile.VectorTile">VectorTile</a>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="Value.html" class="extype" name="geotrellis.vectortile.Value">Value</a>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -79,7 +71,7 @@ bytes. This is the original/default type for VectorTiles.</p><pre><span class="k
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.vectortile.protobuf.ProtobufTile"><span>ProtobufTile</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="geotrellis.vectortile.VectorTile"><span>VectorTile</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.vectortile.VSint64"><span>VSint64</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="geotrellis.vectortile.Value"><span>Value</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -98,24 +90,23 @@ bytes. This is the original/default type for VectorTiles.</p><pre><span class="k
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="geotrellis.vectortile.protobuf.ProtobufTile#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(layers:Map[String,geotrellis.vectortile.protobuf.ProtobufLayer],tileExtent:geotrellis.vector.Extent):geotrellis.vectortile.protobuf.ProtobufTile"></a>
-      <a id="&lt;init&gt;:ProtobufTile"></a>
+              <ol><li name="geotrellis.vectortile.VSint64#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(value:Long):geotrellis.vectortile.VSint64"></a>
+      <a id="&lt;init&gt;:VSint64"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ProtobufTile</span><span class="params">(<span name="layers">layers: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="ProtobufLayer.html" class="extype" name="geotrellis.vectortile.protobuf.ProtobufLayer">ProtobufLayer</a>]</span>, <span name="tileExtent">tileExtent: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span>
+        <span class="name">VSint64</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Long">Long</span></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@&lt;init&gt;(layers:Map[String,geotrellis.vectortile.protobuf.ProtobufLayer],tileExtent:geotrellis.vector.Extent):geotrellis.vectortile.protobuf.ProtobufTile" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../index.html#geotrellis.vectortile.VSint64@&lt;init&gt;(value:Long):geotrellis.vectortile.VSint64" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">This is not meant to be called directly.</p><div class="fullcomment"><div class="comment cmt"><p>This is not meant to be called directly. See this class's
-companion object for the available helper methods.</p></div></div>
+      
     </li></ol>
             </div>
 
@@ -137,8 +128,8 @@ companion object for the available helper methods.</p></div></div>
         <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@!=(x$1:Any):Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../index.html#geotrellis.vectortile.VSint64@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -154,8 +145,8 @@ companion object for the available helper methods.</p></div></div>
         <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@##():Int" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../index.html#geotrellis.vectortile.VSint64@##():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -171,8 +162,8 @@ companion object for the available helper methods.</p></div></div>
         <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@==(x$1:Any):Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../index.html#geotrellis.vectortile.VSint64@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -188,8 +179,8 @@ companion object for the available helper methods.</p></div></div>
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@asInstanceOf[T0]:T0" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../index.html#geotrellis.vectortile.VSint64@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
@@ -205,11 +196,11 @@ companion object for the available helper methods.</p></div></div>
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@clone():Object" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../index.html#geotrellis.vectortile.VSint64@clone():Object" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
@@ -228,8 +219,8 @@ companion object for the available helper methods.</p></div></div>
         <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../index.html#geotrellis.vectortile.VSint64@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -245,11 +236,11 @@ companion object for the available helper methods.</p></div></div>
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@finalize():Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../index.html#geotrellis.vectortile.VSint64@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -268,8 +259,8 @@ companion object for the available helper methods.</p></div></div>
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@getClass():Class[_]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../index.html#geotrellis.vectortile.VSint64@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -285,28 +276,11 @@ companion object for the available helper methods.</p></div></div>
         <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../index.html#geotrellis.vectortile.VSint64@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.vectortile.protobuf.ProtobufTile#layers" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="layers:Map[String,geotrellis.vectortile.protobuf.ProtobufLayer]"></a>
-      <a id="layers:Map[String,ProtobufLayer]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">layers</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="ProtobufLayer.html" class="extype" name="geotrellis.vectortile.protobuf.ProtobufLayer">ProtobufLayer</a>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@layers:Map[String,geotrellis.vectortile.protobuf.ProtobufLayer]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Every Layer in this Tile, with its name as a lookup key.</p><div class="fullcomment"><div class="comment cmt"><p>Every Layer in this Tile, with its name as a lookup key.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.vectortile.protobuf.ProtobufTile">ProtobufTile</a> → <a href="../VectorTile.html" class="extype" name="geotrellis.vectortile.VectorTile">VectorTile</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -319,8 +293,8 @@ companion object for the available helper methods.</p></div></div>
         <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../index.html#geotrellis.vectortile.VSint64@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -336,8 +310,8 @@ companion object for the available helper methods.</p></div></div>
         <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@notify():Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../index.html#geotrellis.vectortile.VSint64@notify():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -353,8 +327,8 @@ companion object for the available helper methods.</p></div></div>
         <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@notifyAll():Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../index.html#geotrellis.vectortile.VSint64@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -370,66 +344,28 @@ companion object for the available helper methods.</p></div></div>
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../index.html#geotrellis.vectortile.VSint64@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.vectortile.protobuf.ProtobufTile#tileExtent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="tileExtent:geotrellis.vector.Extent"></a>
-      <a id="tileExtent:Extent"></a>
+    </li><li name="geotrellis.vectortile.VSint64#value" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="value:Long"></a>
+      <a id="value:Long"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">tileExtent</span><span class="result">: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>
+        <span class="name">value</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@tileExtent:geotrellis.vector.Extent" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../index.html#geotrellis.vectortile.VSint64@value:Long" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">The <span class="extype" name="Extent">Extent</span> of <b>this</b> Tile in some CRS.</p><div class="fullcomment"><div class="comment cmt"><p>The <span class="extype" name="Extent">Extent</span> of <b>this</b> Tile in some CRS.
-A Tile's extent can be easily found from its Key and <span class="extype" name="LayoutDefinition">LayoutDefinition</span>:</p><pre><span class="kw">val</span> key: SpatialKey = ...
-<span class="kw">val</span> layout: LayoutDefinition = ...
-
-<span class="kw">val</span> tileExtent: Extent = layout.mapTransform(key)</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.vectortile.protobuf.ProtobufTile">ProtobufTile</a> → <a href="../VectorTile.html" class="extype" name="geotrellis.vectortile.VectorTile">VectorTile</a></dd></dl></div>
-    </li><li name="geotrellis.vectortile.protobuf.ProtobufTile#toBytes" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="toBytes:Array[Byte]"></a>
-      <a id="toBytes:Array[Byte]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toBytes</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@toBytes:Array[Byte]" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Encode this VectorTile back into its original form of Protobuf bytes.</p>
-    </li><li name="geotrellis.vectortile.protobuf.ProtobufTile#toProtobuf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="toProtobuf:geotrellis.vectortile.protobuf.internal.vector_tile.Tile"></a>
-      <a id="toProtobuf:Tile"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toProtobuf</span><span class="result">: <a href="internal/vector_tile/Tile.html" class="extype" name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile">Tile</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@toProtobuf:geotrellis.vectortile.protobuf.internal.vector_tile.Tile" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Encode this VectorTile back into a mid-level Protobuf object.</p>
+      
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -442,8 +378,8 @@ A Tile's extent can be easily found from its Key and <span class="extype" name="
         <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@wait():Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../index.html#geotrellis.vectortile.VSint64@wait():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -465,8 +401,8 @@ A Tile's extent can be easily found from its Key and <span class="extype" name="
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../index.html#geotrellis.vectortile.VSint64@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -488,8 +424,8 @@ A Tile's extent can be easily found from its Key and <span class="extype" name="
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vectortile.protobuf.ProtobufTile@wait(x$1:Long):Unit" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
+      <a href="../../index.html#geotrellis.vectortile.VSint64@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -512,8 +448,8 @@ A Tile's extent can be easily found from its Key and <span class="extype" name="
               <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
             </div><div class="parent" name="scala.Equals">
               <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
-            </div><div class="parent" name="geotrellis.vectortile.VectorTile">
-              <h3>Inherited from <a href="../VectorTile.html" class="extype" name="geotrellis.vectortile.VectorTile">VectorTile</a></h3>
+            </div><div class="parent" name="geotrellis.vectortile.Value">
+              <h3>Inherited from <a href="Value.html" class="extype" name="geotrellis.vectortile.Value">Value</a></h3>
             </div><div class="parent" name="scala.Serializable">
               <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
             </div><div class="parent" name="java.io.Serializable">

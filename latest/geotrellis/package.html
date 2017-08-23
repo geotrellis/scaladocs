@@ -279,26 +279,20 @@
         <img src="../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Invented by <a href="https://www.mapbox.com/" target="_blank">Mapbox</a>, VectorTiles are a combination of the
-ideas of finite-sized tiles and vector geometries.</p><div class="fullcomment"><div class="comment cmt"><p>Invented by <a href="https://www.mapbox.com/" target="_blank">Mapbox</a>, VectorTiles are a combination of the
+      <p class="shortcomment cmt"><i>This package is experimental. Expect API flux.</i></p><div class="fullcomment"><div class="comment cmt"><p><i>This package is experimental. Expect API flux.</i></p><p>Invented by <a href="https://www.mapbox.com/" target="_blank">Mapbox</a>, VectorTiles are a combination of the
 ideas of finite-sized tiles and vector geometries. Mapbox maintains the
 official implementation spec for VectorTile codecs. The specification is free
 and open source.</p><p>VectorTiles are advantageous over raster tiles in that:</p><ul><li>They are typically smaller to store</li><li>They can be easily transformed (rotated, etc.) in real time</li><li>They allow for continuous (as opposed to step-wise) zoom in Slippy Maps.</li></ul><p>Raw VectorTile data is stored in the protobuf format. Any codec implementing
 <a href="https://github.com/mapbox/vector-tile-spec/tree/master/2.1" target="_blank">the spec</a> must
 decode and encode data according to
 <a href="https://github.com/mapbox/vector-tile-spec/blob/master/2.1/vector_tile.proto" target="_blank">this <i>.proto</i> schema</a>.</p><h4>What is this package?</h4><p><i>geotrellis-vectortile</i> is a high-performance implementation of
-<b>Version 2.1</b> of the VectorTile spec. It features:</p><ul><li>Decoding of <b>Version 2</b> VectorTiles from Protobuf byte data into useful Geotrellis types.</li><li>Lazy decoding of Geometries. Only parse what you need!</li></ul><h4>Using this Package</h4><h5>Modules</h5><p>Users of this library need only pay attention to <a href="vectortile/package.html" class="extype" name="geotrellis.vectortile">geotrellis.vectortile</a>
-and <a href="vectortile/protobuf/package.html" class="extype" name="geotrellis.vectortile.protobuf">geotrellis.vectortile.protobuf</a>.
+<b>Version 2.1</b> of the VectorTile spec. It features:</p><ul><li>Decoding of <b>Version 2</b> VectorTiles from Protobuf byte data into useful GeoTrellis types.</li><li>Lazy decoding of Geometries. Only parse what you need!</li></ul><h4>Using this Package</h4><h5>Modules</h5><p>Users of this library need only pay attention to <a href="vectortile/package.html" class="extype" name="geotrellis.vectortile">geotrellis.vectortile</a>.
 Any classes in the <i>internal.*</i> submodules are unique to the machinery
-of VectorTile {de,en}coding, and can be safely ignored.</p><h5>Types</h5><p>The central type is the <a href="vectortile/VectorTile.html" class="extype" name="geotrellis.vectortile.VectorTile">VectorTile</a> trait. At current, it is only
-backed by one backend, the default Protobuf implementation that follows the
-original spec. The accompanying type is
-<a href="vectortile/protobuf/ProtobufTile.html" class="extype" name="geotrellis.vectortile.protobuf.ProtobufTile">geotrellis.vectortile.protobuf.ProtobufTile</a>, and its companion object can
-be used to actually construct VectorTiles from raw byte data:</p><pre><span class="kw">import</span> geotrellis.spark.SpatialKey
+of VectorTile {de,en}coding, and can be safely ignored.</p><h5>Types</h5><p>The central type is the <a href="vectortile/VectorTile.html" class="extype" name="geotrellis.vectortile.VectorTile">VectorTile</a> class. Its companion object can
+be used to construct VectorTiles from raw byte data:</p><pre><span class="kw">import</span> geotrellis.spark.SpatialKey
 <span class="kw">import</span> geotrellis.spark.tiling.LayoutDefinition
 <span class="kw">import</span> geotrellis.vector.Extent
 <span class="kw">import</span> geotrellis.vectortile.VectorTile
-<span class="kw">import</span> geotrellis.vectortile.protobuf._
 
 <span class="kw">val</span> bytes: <span class="std">Array</span>[<span class="std">Byte</span>] = ...  <span class="cmt">// from some `.mvt` file</span>
 <span class="kw">val</span> key: SpatialKey = ...  <span class="cmt">// preknown</span>
@@ -306,25 +300,22 @@ be used to actually construct VectorTiles from raw byte data:</p><pre><span clas
 <span class="kw">val</span> tileExtent: Extent = layout.mapTransform(key)
 
 <span class="cmt">/* Decode Protobuf bytes. */</span>
-<span class="kw">val</span> tile: VectorTile = ProtobufTile.fromBytes(bytes, tileExtent)
+<span class="kw">val</span> tile: VectorTile = VectorTile.fromBytes(bytes, tileExtent)
 
 <span class="cmt">/* Encode a VectorTile back into bytes. */</span>
-<span class="kw">val</span> encodedBytes: <span class="std">Array</span>[<span class="std">Byte</span>] = tile <span class="kw">match</span> {
-  <span class="kw">case</span> t: ProtobufTile <span class="kw">=&gt;</span> t.toBytes
-  <span class="kw">case</span> _ <span class="kw">=&gt;</span> ???  <span class="cmt">// Handle other backends or throw errors.</span>
-}</pre><p>The <i>V*</i> types form a small <a href="https://en.wikipedia.org/wiki/Sum_type" target="_blank">sum type</a>
+<span class="kw">val</span> encodedBytes: <span class="std">Array</span>[<span class="std">Byte</span>] = tile.toBytes</pre><p>The <i>V*</i> types form a small <a href="https://en.wikipedia.org/wiki/Sum_type" target="_blank">sum type</a>
 and are used to represent usually untyped Feature-level metadata. This metadata
 is equivalent to a JSON Object, where String keys index values of any type.
 A Scala Map requires more rigidity (for the better), and so we use
-<a href="vectortile/protobuf/Value.html" class="extype" name="geotrellis.vectortile.protobuf.Value">geotrellis.vectortile.protobuf.Value</a> to guarantee type safety.</p><h4>Implementation Assumptions</h4><p>This particular implementation of the VectorTile spec makes the following
+<a href="vectortile/Value.html" class="extype" name="geotrellis.vectortile.Value">geotrellis.vectortile.Value</a> to guarantee type safety.</p><h4>Implementation Assumptions</h4><p>This particular implementation of the VectorTile spec makes the following
 assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordinate Reference
     system. That is, there is no such thing as a &quot;projectionless&quot; VectorTile.
-    When decoding a VectorTile, we must provide a Geotrellis <span class="extype" name="Extent">Extent</span> that
+    When decoding a VectorTile, we must provide a GeoTrellis <span class="extype" name="Extent">Extent</span> that
     represents the Tile's area on a map.
     With this, the grid coordinates stored in the VectorTile's Geometry are
     shifted from their
     original [0,4096] range to actual world coordinates in the Extent's CRS.</li><li>The <code>id</code> field in VectorTile Features doesn't matter.</li><li><code>UNKNOWN</code> geometries are safe to ignore.</li><li>If a VectorTile <code>geometry</code> list marked as <code>POINT</code> has only one pair
-    of coordinates, it will be decoded as a Geotrellis <code>Point</code>. If it has
+    of coordinates, it will be decoded as a GeoTrellis <code>Point</code>. If it has
     more than one pair, it will be decoded as a <code>MultiPoint</code>. Likewise for
     the <code>LINESTRING</code> and <code>POLYGON</code> types. A complaint has been made about
     the spec regarding this, and future versions may include a difference

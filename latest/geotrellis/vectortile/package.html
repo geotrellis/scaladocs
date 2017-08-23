@@ -47,25 +47,20 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Invented by <a href="https://www.mapbox.com/" target="_blank">Mapbox</a>, VectorTiles are a combination of the
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p><i>This package is experimental. Expect API flux.</i></p><p>Invented by <a href="https://www.mapbox.com/" target="_blank">Mapbox</a>, VectorTiles are a combination of the
 ideas of finite-sized tiles and vector geometries. Mapbox maintains the
 official implementation spec for VectorTile codecs. The specification is free
 and open source.</p><p>VectorTiles are advantageous over raster tiles in that:</p><ul><li>They are typically smaller to store</li><li>They can be easily transformed (rotated, etc.) in real time</li><li>They allow for continuous (as opposed to step-wise) zoom in Slippy Maps.</li></ul><p>Raw VectorTile data is stored in the protobuf format. Any codec implementing
 <a href="https://github.com/mapbox/vector-tile-spec/tree/master/2.1" target="_blank">the spec</a> must
 decode and encode data according to
 <a href="https://github.com/mapbox/vector-tile-spec/blob/master/2.1/vector_tile.proto" target="_blank">this <i>.proto</i> schema</a>.</p><h4>What is this package?</h4><p><i>geotrellis-vectortile</i> is a high-performance implementation of
-<b>Version 2.1</b> of the VectorTile spec. It features:</p><ul><li>Decoding of <b>Version 2</b> VectorTiles from Protobuf byte data into useful Geotrellis types.</li><li>Lazy decoding of Geometries. Only parse what you need!</li></ul><h4>Using this Package</h4><h5>Modules</h5><p>Users of this library need only pay attention to <a href="" class="extype" name="geotrellis.vectortile">geotrellis.vectortile</a>
-and <a href="protobuf/package.html" class="extype" name="geotrellis.vectortile.protobuf">geotrellis.vectortile.protobuf</a>.
+<b>Version 2.1</b> of the VectorTile spec. It features:</p><ul><li>Decoding of <b>Version 2</b> VectorTiles from Protobuf byte data into useful GeoTrellis types.</li><li>Lazy decoding of Geometries. Only parse what you need!</li></ul><h4>Using this Package</h4><h5>Modules</h5><p>Users of this library need only pay attention to <a href="" class="extype" name="geotrellis.vectortile">geotrellis.vectortile</a>.
 Any classes in the <i>internal.*</i> submodules are unique to the machinery
-of VectorTile {de,en}coding, and can be safely ignored.</p><h5>Types</h5><p>The central type is the <a href="VectorTile.html" class="extype" name="geotrellis.vectortile.VectorTile">VectorTile</a> trait. At current, it is only
-backed by one backend, the default Protobuf implementation that follows the
-original spec. The accompanying type is
-<a href="protobuf/ProtobufTile.html" class="extype" name="geotrellis.vectortile.protobuf.ProtobufTile">geotrellis.vectortile.protobuf.ProtobufTile</a>, and its companion object can
-be used to actually construct VectorTiles from raw byte data:</p><pre><span class="kw">import</span> geotrellis.spark.SpatialKey
+of VectorTile {de,en}coding, and can be safely ignored.</p><h5>Types</h5><p>The central type is the <a href="VectorTile.html" class="extype" name="geotrellis.vectortile.VectorTile">VectorTile</a> class. Its companion object can
+be used to construct VectorTiles from raw byte data:</p><pre><span class="kw">import</span> geotrellis.spark.SpatialKey
 <span class="kw">import</span> geotrellis.spark.tiling.LayoutDefinition
 <span class="kw">import</span> geotrellis.vector.Extent
 <span class="kw">import</span> geotrellis.vectortile.VectorTile
-<span class="kw">import</span> geotrellis.vectortile.protobuf._
 
 <span class="kw">val</span> bytes: <span class="std">Array</span>[<span class="std">Byte</span>] = ...  <span class="cmt">// from some `.mvt` file</span>
 <span class="kw">val</span> key: SpatialKey = ...  <span class="cmt">// preknown</span>
@@ -73,25 +68,22 @@ be used to actually construct VectorTiles from raw byte data:</p><pre><span clas
 <span class="kw">val</span> tileExtent: Extent = layout.mapTransform(key)
 
 <span class="cmt">/* Decode Protobuf bytes. */</span>
-<span class="kw">val</span> tile: VectorTile = ProtobufTile.fromBytes(bytes, tileExtent)
+<span class="kw">val</span> tile: VectorTile = VectorTile.fromBytes(bytes, tileExtent)
 
 <span class="cmt">/* Encode a VectorTile back into bytes. */</span>
-<span class="kw">val</span> encodedBytes: <span class="std">Array</span>[<span class="std">Byte</span>] = tile <span class="kw">match</span> {
-  <span class="kw">case</span> t: ProtobufTile <span class="kw">=&gt;</span> t.toBytes
-  <span class="kw">case</span> _ <span class="kw">=&gt;</span> ???  <span class="cmt">// Handle other backends or throw errors.</span>
-}</pre><p>The <i>V*</i> types form a small <a href="https://en.wikipedia.org/wiki/Sum_type" target="_blank">sum type</a>
+<span class="kw">val</span> encodedBytes: <span class="std">Array</span>[<span class="std">Byte</span>] = tile.toBytes</pre><p>The <i>V*</i> types form a small <a href="https://en.wikipedia.org/wiki/Sum_type" target="_blank">sum type</a>
 and are used to represent usually untyped Feature-level metadata. This metadata
 is equivalent to a JSON Object, where String keys index values of any type.
 A Scala Map requires more rigidity (for the better), and so we use
-<a href="protobuf/Value.html" class="extype" name="geotrellis.vectortile.protobuf.Value">geotrellis.vectortile.protobuf.Value</a> to guarantee type safety.</p><h4>Implementation Assumptions</h4><p>This particular implementation of the VectorTile spec makes the following
+<a href="Value.html" class="extype" name="geotrellis.vectortile.Value">geotrellis.vectortile.Value</a> to guarantee type safety.</p><h4>Implementation Assumptions</h4><p>This particular implementation of the VectorTile spec makes the following
 assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordinate Reference
     system. That is, there is no such thing as a &quot;projectionless&quot; VectorTile.
-    When decoding a VectorTile, we must provide a Geotrellis <span class="extype" name="Extent">Extent</span> that
+    When decoding a VectorTile, we must provide a GeoTrellis <span class="extype" name="Extent">Extent</span> that
     represents the Tile's area on a map.
     With this, the grid coordinates stored in the VectorTile's Geometry are
     shifted from their
     original [0,4096] range to actual world coordinates in the Extent's CRS.</li><li>The <code>id</code> field in VectorTile Features doesn't matter.</li><li><code>UNKNOWN</code> geometries are safe to ignore.</li><li>If a VectorTile <code>geometry</code> list marked as <code>POINT</code> has only one pair
-    of coordinates, it will be decoded as a Geotrellis <code>Point</code>. If it has
+    of coordinates, it will be decoded as a GeoTrellis <code>Point</code>. If it has
     more than one pair, it will be decoded as a <code>MultiPoint</code>. Likewise for
     the <code>LINESTRING</code> and <code>POLYGON</code> types. A complaint has been made about
     the spec regarding this, and future versions may include a difference
@@ -154,32 +146,242 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
       </a>
     </span>
       <p class="shortcomment cmt">A layer, which could contain any number of Features of any Geometry type.</p><div class="fullcomment"><div class="comment cmt"><p>A layer, which could contain any number of Features of any Geometry type.
-Here, &quot;Feature&quot; and &quot;Geometry&quot; refer specifically to the Geotrellis classes
+Here, &quot;Feature&quot; and &quot;Geometry&quot; refer specifically to the GeoTrellis classes
 of the same names.
-</p></div></div>
-    </li><li name="geotrellis.vectortile.VectorTile" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="VectorTileextendsSerializable"></a>
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../util/annotations/experimental.html" class="extype" name="geotrellis.util.annotations.experimental">experimental</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="geotrellis.vectortile.LazyLayer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LazyLayerextendsLayerwithProductwithSerializable"></a>
+      <a id="LazyLayer:LazyLayer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="LazyLayer.html"><span class="name">LazyLayer</span></a><span class="params">(<span name="rawLayer">rawLayer: <span class="extype" name="geotrellis.vectortile.internal.vector_tile.Tile.Layer">internal.vector_tile.Tile.Layer</span></span>, <span name="tileExtent">tileExtent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span><span class="result"> extends <a href="Layer.html" class="extype" name="geotrellis.vectortile.Layer">Layer</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vectortile.package@LazyLayerextendsLayerwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A <a href="Layer.html" class="extype" name="geotrellis.vectortile.Layer">Layer</a> decoded from Protobuf data.</p><div class="fullcomment"><div class="comment cmt"><p>A <a href="Layer.html" class="extype" name="geotrellis.vectortile.Layer">Layer</a> decoded from Protobuf data. All of its Features are decoded
+lazily, making for very fast extraction of single features/geometries.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../util/annotations/experimental.html" class="extype" name="geotrellis.util.annotations.experimental">experimental</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="geotrellis.vectortile.StrictLayer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="StrictLayerextendsLayerwithProductwithSerializable"></a>
+      <a id="StrictLayer:StrictLayer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="StrictLayer.html"><span class="name">StrictLayer</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tileWidth">tileWidth: <span class="extype" name="scala.Int">Int</span></span>, <span name="version">version: <span class="extype" name="scala.Int">Int</span></span>, <span name="tileExtent">tileExtent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="points">points: <span class="extype" name="scala.Seq">Seq</span>[<a href="../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../vector/Point.html" class="extype" name="geotrellis.vector.Point">Point</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="Value.html" class="extype" name="geotrellis.vectortile.Value">Value</a>]]]</span>, <span name="multiPoints">multiPoints: <span class="extype" name="scala.Seq">Seq</span>[<a href="../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../vector/MultiPoint.html" class="extype" name="geotrellis.vector.MultiPoint">MultiPoint</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="Value.html" class="extype" name="geotrellis.vectortile.Value">Value</a>]]]</span>, <span name="lines">lines: <span class="extype" name="scala.Seq">Seq</span>[<a href="../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../vector/Line.html" class="extype" name="geotrellis.vector.Line">Line</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="Value.html" class="extype" name="geotrellis.vectortile.Value">Value</a>]]]</span>, <span name="multiLines">multiLines: <span class="extype" name="scala.Seq">Seq</span>[<a href="../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../vector/MultiLine.html" class="extype" name="geotrellis.vector.MultiLine">MultiLine</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="Value.html" class="extype" name="geotrellis.vectortile.Value">Value</a>]]]</span>, <span name="polygons">polygons: <span class="extype" name="scala.Seq">Seq</span>[<a href="../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../vector/Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="Value.html" class="extype" name="geotrellis.vectortile.Value">Value</a>]]]</span>, <span name="multiPolygons">multiPolygons: <span class="extype" name="scala.Seq">Seq</span>[<a href="../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../vector/MultiPolygon.html" class="extype" name="geotrellis.vector.MultiPolygon">MultiPolygon</a>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="Value.html" class="extype" name="geotrellis.vectortile.Value">Value</a>]]]</span>)</span><span class="result"> extends <a href="Layer.html" class="extype" name="geotrellis.vectortile.Layer">Layer</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vectortile.package@StrictLayerextendsLayerwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A <a href="Layer.html" class="extype" name="geotrellis.vectortile.Layer">Layer</a> crafted through some strict ingest process.</p><div class="fullcomment"><div class="comment cmt"><p>A <a href="Layer.html" class="extype" name="geotrellis.vectortile.Layer">Layer</a> crafted through some strict ingest process.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../util/annotations/experimental.html" class="extype" name="geotrellis.util.annotations.experimental">experimental</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="geotrellis.vectortile.VBool" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VBoolextendsValuewithProductwithSerializable"></a>
+      <a id="VBool:VBool"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="VBool.html"><span class="name">VBool</span></a><span class="params">(<span name="value">value: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <a href="Value.html" class="extype" name="geotrellis.vectortile.Value">Value</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vectortile.package@VBoolextendsValuewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A wrapper for <code>Boolean</code> to allow all <code>Value</code> subtypes to be stored in
+the same Map.</p>
+    </li><li name="geotrellis.vectortile.VDouble" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VDoubleextendsValuewithProductwithSerializable"></a>
+      <a id="VDouble:VDouble"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="VDouble.html"><span class="name">VDouble</span></a><span class="params">(<span name="value">value: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result"> extends <a href="Value.html" class="extype" name="geotrellis.vectortile.Value">Value</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vectortile.package@VDoubleextendsValuewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A wrapper for <code>Double</code> to allow all <code>Value</code> subtypes to be stored in
+the same Map.</p>
+    </li><li name="geotrellis.vectortile.VFloat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VFloatextendsValuewithProductwithSerializable"></a>
+      <a id="VFloat:VFloat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="VFloat.html"><span class="name">VFloat</span></a><span class="params">(<span name="value">value: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result"> extends <a href="Value.html" class="extype" name="geotrellis.vectortile.Value">Value</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vectortile.package@VFloatextendsValuewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A wrapper for <code>Float</code> to allow all <code>Value</code> subtypes to be stored in
+the same Map.</p>
+    </li><li name="geotrellis.vectortile.VInt64" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VInt64extendsValuewithProductwithSerializable"></a>
+      <a id="VInt64:VInt64"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="VInt64.html"><span class="name">VInt64</span></a><span class="params">(<span name="value">value: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result"> extends <a href="Value.html" class="extype" name="geotrellis.vectortile.Value">Value</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vectortile.package@VInt64extendsValuewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A wrapper for <code>Long</code> to allow all <code>Value</code> subtypes to be stored in
+the same Map.</p>
+    </li><li name="geotrellis.vectortile.VSint64" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VSint64extendsValuewithProductwithSerializable"></a>
+      <a id="VSint64:VSint64"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="VSint64.html"><span class="name">VSint64</span></a><span class="params">(<span name="value">value: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result"> extends <a href="Value.html" class="extype" name="geotrellis.vectortile.Value">Value</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vectortile.package@VSint64extendsValuewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A wrapper for zig-zag encoded ints to allow all <code>Value</code> subtypes to be
+stored in the same Map.</p>
+    </li><li name="geotrellis.vectortile.VString" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VStringextendsValuewithProductwithSerializable"></a>
+      <a id="VString:VString"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="VString.html"><span class="name">VString</span></a><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Value.html" class="extype" name="geotrellis.vectortile.Value">Value</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vectortile.package@VStringextendsValuewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A wrapper for <code>String</code> to allow all <code>Value</code> subtypes to be stored in
+the same Map.</p>
+    </li><li name="geotrellis.vectortile.VWord64" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VWord64extendsValuewithProductwithSerializable"></a>
+      <a id="VWord64:VWord64"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="VWord64.html"><span class="name">VWord64</span></a><span class="params">(<span name="value">value: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result"> extends <a href="Value.html" class="extype" name="geotrellis.vectortile.Value">Value</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vectortile.package@VWord64extendsValuewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A wrapper for unsigned, 64-bit ints to allow all <code>Value</code> subtypes to be
+stored in the same Map.</p>
+    </li><li name="geotrellis.vectortile.Value" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ValueextendsSerializable"></a>
+      <a id="Value:Value"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Value.html"><span class="name">Value</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vectortile.package@ValueextendsSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Feature metadata key/value Maps are completely untyped.</p><div class="fullcomment"><div class="comment cmt"><p>Feature metadata key/value Maps are completely untyped. All keys
+and values used by Features across a common parent Layer are stored in that
+parent. Raw Features themselves only store indices into the parent's
+key/value lists. So, for an example MultiPoint Feature of fire hydrant locations,
+its metadata could look like:</p><pre>{ name: <span class="lit">"Hydrants"</span>,
+  colour: <span class="lit">"red"</span>,
+  model: <span class="num">5</span>
+}</pre><p>That's fine if interpreted as JSON, but bad as Scala, as it doesn't give us
+a clean <code>Map[String, ConcreteTypeHere]</code>. Furthermore, Features within the
+same Layer don't have to agree on the Value type for the same key:</p><pre>{ name: <span class="lit">"Stop lights"</span>,
+  colour: <span class="num">1</span>,
+  model: <span class="lit">"ABC-123"</span>
+}</pre><p>Nor, actually, do Layers have to agree on key sets for their Features.
+The sealed trait <code>Value</code> here and its extensions aim to provide some
+type safety in light of the situation described here.</p></div></div>
+    </li><li name="geotrellis.vectortile.VectorTile" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VectorTileextendsProductwithSerializable"></a>
       <a id="VectorTile:VectorTile"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="VectorTile.html"><span class="name">VectorTile</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="VectorTile.html"><span class="name">VectorTile</span></a><span class="params">(<span name="layers">layers: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="Layer.html" class="extype" name="geotrellis.vectortile.Layer">Layer</a>]</span>, <span name="tileExtent">tileExtent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.vectortile.package@VectorTileextendsSerializable" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.vectortile.package@VectorTileextendsProductwithSerializable" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">A high-level representation of a Vector Tile.</p><div class="fullcomment"><div class="comment cmt"><p>A high-level representation of a Vector Tile. At its simplest, a Tile is
-just a collection of Layers. We opt to expose each Layer name at the Tile
-level, as the keys of a <span class="extype" name="Map">Map</span>. This way, if the layer names are known by
-the user ahead of time, they can search through the Tile quickly.</p><p>Traditionally, VectorTiles are encoded as Protobuf data, which this library
-provides a codec for. However, by making this top-level type a trait, we
-are able to define alternative backends (GeoJson, for instance. Yet unimplemented.).</p><p>See <a href="protobuf/ProtobufTile.html" class="extype" name="geotrellis.vectortile.protobuf.ProtobufTile">geotrellis.vectortile.protobuf.ProtobufTile</a> for more information
-on how to decode and encode VectorTiles.</p></div></div>
+      <p class="shortcomment cmt">A concrete representation of a VectorTile, as one decoded from Protobuf
+bytes.</p><div class="fullcomment"><div class="comment cmt"><p>A concrete representation of a VectorTile, as one decoded from Protobuf
+bytes. At its simplest, a Tile is just a collection of Layers. We opt
+to expose each Layer name at the Tile level, as the keys of a <span class="extype" name="Map">Map</span>.
+This way, if the layer names are known by the user ahead of time,
+they can search through the Tile quickly.</p><pre><span class="kw">import</span> geotrellis.vectortile._
+
+<span class="kw">val</span> bytes: <span class="std">Array</span>[<span class="std">Byte</span>] = ...  <span class="cmt">// from some `.mvt` file</span>
+<span class="kw">val</span> key: SpatialKey = ...  <span class="cmt">// preknown</span>
+<span class="kw">val</span> layout: LayoutDefinition = ...  <span class="cmt">// preknown</span>
+<span class="kw">val</span> tileExtent: Extent = layout.mapTransform(key)
+
+<span class="kw">val</span> tile: VectorTile = VectorTile.fromBytes(bytes, tileExtent)</pre></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../util/annotations/experimental.html" class="extype" name="geotrellis.util.annotations.experimental">experimental</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
     </li></ol>
             </div>
 
@@ -187,23 +389,26 @@ on how to decode and encode VectorTiles.</p></div></div>
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="geotrellis.vectortile.protobuf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="protobuf"></a>
-      <a id="protobuf:protobuf"></a>
+              <ol><li name="geotrellis.vectortile.VectorTile" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VectorTile"></a>
+      <a id="VectorTile:VectorTile"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">package</span>
+        <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="protobuf/package.html"><span class="name">protobuf</span></a>
+        <a href="VectorTile$.html"><span class="name">VectorTile</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.vectortile.package@protobuf" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.vectortile.package@VectorTile" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@<a href="../util/annotations/experimental.html" class="extype" name="geotrellis.util.annotations.experimental">experimental</a></span><span class="args">()</span>
+              
+        </dd></dl></div>
     </li></ol>
             </div>
 
