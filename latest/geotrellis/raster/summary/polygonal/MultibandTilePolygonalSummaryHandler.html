@@ -1,9 +1,9 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>PolygonalSummaryHandler - geotrellis.vector.summary.polygonal.PolygonalSummaryHandler</title>
-          <meta name="description" content="PolygonalSummaryHandler - geotrellis.vector.summary.polygonal.PolygonalSummaryHandler" />
-          <meta name="keywords" content="PolygonalSummaryHandler geotrellis.vector.summary.polygonal.PolygonalSummaryHandler" />
+          <title>MultibandTilePolygonalSummaryHandler - geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler</title>
+          <meta name="description" content="MultibandTilePolygonalSummaryHandler - geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler" />
+          <meta name="keywords" content="MultibandTilePolygonalSummaryHandler geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -16,7 +16,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../index.html';
-            var hash = 'geotrellis.vector.summary.polygonal.PolygonalSummaryHandler';
+            var hash = 'geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -28,14 +28,12 @@
         </head>
         <body class="type">
       <div id="definition">
-        <a href="PolygonalSummaryHandler$.html" title="See companion object"><img alt="Trait/Object" src="../../../../lib/trait_to_object_big.png" /></a>
-        <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.vector">vector</a>.<a href="../package.html" class="extype" name="geotrellis.vector.summary">summary</a>.<a href="package.html" class="extype" name="geotrellis.vector.summary.polygonal">polygonal</a></p>
-        <h1><a href="PolygonalSummaryHandler$.html" title="See companion object">PolygonalSummaryHandler</a></h1><h3><span class="morelinks"><div>
-            Related Docs:
-            <a href="PolygonalSummaryHandler$.html" title="See companion object">object PolygonalSummaryHandler</a>
-            | <a href="package.html" class="extype" name="geotrellis.vector.summary.polygonal">package polygonal</a>
+        <img alt="Trait" src="../../../../lib/trait_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.raster">raster</a>.<a href="../package.html" class="extype" name="geotrellis.raster.summary">summary</a>.<a href="package.html" class="extype" name="geotrellis.raster.summary.polygonal">polygonal</a></p>
+        <h1>MultibandTilePolygonalSummaryHandler</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="package.html" class="extype" name="geotrellis.raster.summary.polygonal">package polygonal</a>
           </div></span></h3><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -47,23 +45,17 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">PolygonalSummaryHandler</span><span class="tparams">[<span name="G">G &lt;: <a href="../../Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>, <span name="D">D</span>, <span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">MultibandTilePolygonalSummaryHandler</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../../../vector/summary/polygonal/PolygonalSummaryHandler.html" class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler">PolygonalSummaryHandler</a>[<a href="../../../vector/Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a>, <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>, <span class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler.T">T</span>]</span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This trait provides the scaffolding necessary to generate aggregations
-which depend on <a href="../../Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a> and <a href="../../MultiPolygon.html" class="extype" name="geotrellis.vector.MultiPolygon">MultiPolygon</a> instances.
-</p></div><dl class="paramcmts block"><dt class="tparam">G</dt><dd class="cmt"><p>the <a href="../../Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a> type against which containment and intersection checks are
-           carried out to determine the flow of aggregation logic</p></dd><dt class="tparam">D</dt><dd class="cmt"><p>the type of any data expected to be associated with G in <a href="../../Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a> instances</p></dd><dt class="tparam">T</dt><dd class="cmt"><p>the type being aggregated to through summary mergeOp calls</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>This trait specifies the type of operation to be carried out but *NOT* the &quot;zero
-       element&quot; which determines the beginning value for a chain of operations (like the
-       starting element in a fold) and *NOT* the <a href="../../Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a> or <a href="../../MultiPolygon.html" class="extype" name="geotrellis.vector.MultiPolygon">MultiPolygon</a> to be
-       used during a summary. Instead, those are specified in a call to mergeOp which
-       returns the function used in an actual summarization.</p></span></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Base trait for tile polygonal summary handlers.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../../../vector/summary/polygonal/PolygonalSummaryHandler.html" class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler">PolygonalSummaryHandler</a>[<a href="../../../vector/Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a>, <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>, <span class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler.T">T</span>], <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
             <span class="toggle">Known Subclasses</span>
-            <div class="subClasses hiddenContent"><a href="../../../raster/summary/polygonal/DoubleHistogramSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.DoubleHistogramSummary">DoubleHistogramSummary</a>, <a href="../../../raster/summary/polygonal/IntHistogramSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.IntHistogramSummary">IntHistogramSummary</a>, <a href="../../../raster/summary/polygonal/MaxDoubleSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MaxDoubleSummary">MaxDoubleSummary</a>, <a href="../../../raster/summary/polygonal/MaxSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MaxSummary">MaxSummary</a>, <a href="../../../raster/summary/polygonal/MeanSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MeanSummary">MeanSummary</a>, <a href="../../../raster/summary/polygonal/MinDoubleSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MinDoubleSummary">MinDoubleSummary</a>, <a href="../../../raster/summary/polygonal/MinSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MinSummary">MinSummary</a>, <a href="../../../raster/summary/polygonal/MultibandTileDoubleHistogramSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTileDoubleHistogramSummary">MultibandTileDoubleHistogramSummary</a>, <a href="../../../raster/summary/polygonal/MultibandTileIntHistogramSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTileIntHistogramSummary">MultibandTileIntHistogramSummary</a>, <a href="../../../raster/summary/polygonal/MultibandTileMaxDoubleSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTileMaxDoubleSummary">MultibandTileMaxDoubleSummary</a>, <a href="../../../raster/summary/polygonal/MultibandTileMaxSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTileMaxSummary">MultibandTileMaxSummary</a>, <a href="../../../raster/summary/polygonal/MultibandTileMeanSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTileMeanSummary">MultibandTileMeanSummary</a>, <a href="../../../raster/summary/polygonal/MultibandTileMinDoubleSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTileMinDoubleSummary">MultibandTileMinDoubleSummary</a>, <a href="../../../raster/summary/polygonal/MultibandTileMinSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTileMinSummary">MultibandTileMinSummary</a>, <a href="../../../raster/summary/polygonal/MultibandTilePolygonalSummaryHandler.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler">MultibandTilePolygonalSummaryHandler</a>, <a href="../../../raster/summary/polygonal/MultibandTileSumDoubleSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTileSumDoubleSummary">MultibandTileSumDoubleSummary</a>, <a href="../../../raster/summary/polygonal/MultibandTileSumSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTileSumSummary">MultibandTileSumSummary</a>, <a href="../../../raster/summary/polygonal/SumDoubleSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.SumDoubleSummary">SumDoubleSummary</a>, <a href="../../../raster/summary/polygonal/SumSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.SumSummary">SumSummary</a>, <a href="../../../raster/summary/polygonal/TilePolygonalSummaryHandler.html" class="extype" name="geotrellis.raster.summary.polygonal.TilePolygonalSummaryHandler">TilePolygonalSummaryHandler</a></div>
+            <div class="subClasses hiddenContent"><a href="MultibandTileDoubleHistogramSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTileDoubleHistogramSummary">MultibandTileDoubleHistogramSummary</a>, <a href="MultibandTileIntHistogramSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTileIntHistogramSummary">MultibandTileIntHistogramSummary</a>, <a href="MultibandTileMaxDoubleSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTileMaxDoubleSummary">MultibandTileMaxDoubleSummary</a>, <a href="MultibandTileMaxSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTileMaxSummary">MultibandTileMaxSummary</a>, <a href="MultibandTileMeanSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTileMeanSummary">MultibandTileMeanSummary</a>, <a href="MultibandTileMinDoubleSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTileMinDoubleSummary">MultibandTileMinDoubleSummary</a>, <a href="MultibandTileMinSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTileMinSummary">MultibandTileMinSummary</a>, <a href="MultibandTileSumDoubleSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTileSumDoubleSummary">MultibandTileSumDoubleSummary</a>, <a href="MultibandTileSumSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTileSumSummary">MultibandTileSumSummary</a></div>
           </div></div>
         
 
@@ -81,7 +73,7 @@ which depend on <a href="../../Polygon.html" class="extype" name="geotrellis.vec
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler"><span>PolygonalSummaryHandler</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler"><span>MultibandTilePolygonalSummaryHandler</span></li><li class="in" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler"><span>PolygonalSummaryHandler</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -104,7 +96,7 @@ which depend on <a href="../../Polygon.html" class="extype" name="geotrellis.vec
 
         <div id="values" class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler#combineOp" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler#combineOp" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="combineOp(v1:T,v2:T):T"></a>
       <a id="combineOp(T,T):T"></a>
       <h4 class="signature">
@@ -113,48 +105,68 @@ which depend on <a href="../../Polygon.html" class="extype" name="geotrellis.vec
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">combineOp</span><span class="params">(<span name="v1">v1: <span class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler.T">T</span></span>, <span name="v2">v2: <span class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler.T">T</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler.T">T</span></span>
+        <span class="name">combineOp</span><span class="params">(<span name="v1">v1: <span class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler.T">T</span></span>, <span name="v2">v2: <span class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler.T">T</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler.T">T</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@combineOp(v1:T,v2:T):T" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@combineOp(v1:T,v2:T):T" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
-    </li><li name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler#handleContains" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="handleContains(feature:geotrellis.vector.Feature[G,D]):T"></a>
-      <a id="handleContains(Feature[G,D]):T"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler">MultibandTilePolygonalSummaryHandler</a> → <a href="../../../vector/summary/polygonal/PolygonalSummaryHandler.html" class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler">PolygonalSummaryHandler</a></dd></dl></div>
+    </li><li name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler#combineResults" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="combineResults(res:Seq[T]):T"></a>
+      <a id="combineResults(Seq[T]):T"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">handleContains</span><span class="params">(<span name="feature">feature: <a href="../../Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<span class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler.G">G</span>, <span class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler.D">D</span>]</span>)</span><span class="result">: <span class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler.T">T</span></span>
+        <span class="name">combineResults</span><span class="params">(<span name="res">res: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler.T">T</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@handleContains(feature:geotrellis.vector.Feature[G,D]):T" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@combineResults(res:Seq[T]):T" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
-    </li><li name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler#handleIntersection" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="handleIntersection(polygon:geotrellis.vector.Polygon,feature:geotrellis.vector.Feature[G,D]):T"></a>
-      <a id="handleIntersection(Polygon,Feature[G,D]):T"></a>
+    </li><li name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler#handleFullMultibandTile" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="handleFullMultibandTile(multibandTile:geotrellis.raster.MultibandTile):T"></a>
+      <a id="handleFullMultibandTile(MultibandTile):T"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">handleIntersection</span><span class="params">(<span name="polygon">polygon: <a href="../../Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a></span>, <span name="feature">feature: <a href="../../Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<span class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler.G">G</span>, <span class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler.D">D</span>]</span>)</span><span class="result">: <span class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler.T">T</span></span>
+        <span class="name">handleFullMultibandTile</span><span class="params">(<span name="multibandTile">multibandTile: <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></span>)</span><span class="result">: <span class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler.T">T</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@handleIntersection(polygon:geotrellis.vector.Polygon,feature:geotrellis.vector.Feature[G,D]):T" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@handleFullMultibandTile(multibandTile:geotrellis.raster.MultibandTile):T" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Given a tile, &quot;handle&quot; the case were the tile is fully
+enveloped.</p>
+    </li><li name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler#handlePartialMultibandTile" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="handlePartialMultibandTile(raster:geotrellis.raster.Raster[geotrellis.raster.MultibandTile],intersection:geotrellis.vector.Polygon):T"></a>
+      <a id="handlePartialMultibandTile(Raster[MultibandTile],Polygon):T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">handlePartialMultibandTile</span><span class="params">(<span name="raster">raster: <a href="../../Raster.html" class="extype" name="geotrellis.raster.Raster">Raster</a>[<a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>]</span>, <span name="intersection">intersection: <a href="../../../vector/Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a></span>)</span><span class="result">: <span class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler.T">T</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@handlePartialMultibandTile(raster:geotrellis.raster.Raster[geotrellis.raster.MultibandTile],intersection:geotrellis.vector.Polygon):T" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Given a <a href="../../Raster.html" class="extype" name="geotrellis.raster.Raster">Raster</a> and an intersection polygon, &quot;handle&quot; the
+case where there is an intersection between the raster and some
+polygon.</p>
     </li></ol>
             </div>
 
@@ -172,7 +184,7 @@ which depend on <a href="../../Polygon.html" class="extype" name="geotrellis.vec
         <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@!=(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -189,7 +201,7 @@ which depend on <a href="../../Polygon.html" class="extype" name="geotrellis.vec
         <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@##():Int" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@##():Int" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -206,7 +218,7 @@ which depend on <a href="../../Polygon.html" class="extype" name="geotrellis.vec
         <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@==(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@==(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -223,7 +235,7 @@ which depend on <a href="../../Polygon.html" class="extype" name="geotrellis.vec
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@asInstanceOf[T0]:T0" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -240,7 +252,7 @@ which depend on <a href="../../Polygon.html" class="extype" name="geotrellis.vec
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@clone():Object" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@clone():Object" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -263,7 +275,7 @@ which depend on <a href="../../Polygon.html" class="extype" name="geotrellis.vec
         <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -280,7 +292,7 @@ which depend on <a href="../../Polygon.html" class="extype" name="geotrellis.vec
         <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@equals(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -297,7 +309,7 @@ which depend on <a href="../../Polygon.html" class="extype" name="geotrellis.vec
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@finalize():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@finalize():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -320,11 +332,53 @@ which depend on <a href="../../Polygon.html" class="extype" name="geotrellis.vec
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@getClass():Class[_]" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@getClass():Class[_]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler#handleContains" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="handleContains(feature:geotrellis.vector.PolygonFeature[geotrellis.raster.MultibandTile]):T"></a>
+      <a id="handleContains(PolygonFeature[MultibandTile]):T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">handleContains</span><span class="params">(<span name="feature">feature: <a href="../../../vector/package.html#PolygonFeature[D]=geotrellis.vector.Feature[geotrellis.vector.Polygon,D]" class="extmbr" name="geotrellis.vector.PolygonFeature">PolygonFeature</a>[<a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>]</span>)</span><span class="result">: <span class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler.T">T</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@handleContains(feature:geotrellis.vector.PolygonFeature[geotrellis.raster.MultibandTile]):T" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Given a PolygonFeature, &quot;handle&quot; the case of an
+entirly-contained tile.</p><div class="fullcomment"><div class="comment cmt"><p>Given a PolygonFeature, &quot;handle&quot; the case of an
+entirly-contained tile.  This falls through to the
+'handleFullMultibandTile' handler.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler">MultibandTilePolygonalSummaryHandler</a> → <a href="../../../vector/summary/polygonal/PolygonalSummaryHandler.html" class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler">PolygonalSummaryHandler</a></dd></dl></div>
+    </li><li name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler#handleIntersection" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="handleIntersection(polygon:geotrellis.vector.Polygon,feature:geotrellis.vector.PolygonFeature[geotrellis.raster.MultibandTile]):T"></a>
+      <a id="handleIntersection(Polygon,PolygonFeature[MultibandTile]):T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">handleIntersection</span><span class="params">(<span name="polygon">polygon: <a href="../../../vector/Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a></span>, <span name="feature">feature: <a href="../../../vector/package.html#PolygonFeature[D]=geotrellis.vector.Feature[geotrellis.vector.Polygon,D]" class="extmbr" name="geotrellis.vector.PolygonFeature">PolygonFeature</a>[<a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>]</span>)</span><span class="result">: <span class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler.T">T</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@handleIntersection(polygon:geotrellis.vector.Polygon,feature:geotrellis.vector.PolygonFeature[geotrellis.raster.MultibandTile]):T" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Given a Polygon and a PolygonFeature, &quot;handle&quot; the case of an
+intersection.</p><div class="fullcomment"><div class="comment cmt"><p>Given a Polygon and a PolygonFeature, &quot;handle&quot; the case of an
+intersection.  This falls through to the 'handlePartialMultibandTile'
+handler.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler">MultibandTilePolygonalSummaryHandler</a> → <a href="../../../vector/summary/polygonal/PolygonalSummaryHandler.html" class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler">PolygonalSummaryHandler</a></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -337,7 +391,7 @@ which depend on <a href="../../Polygon.html" class="extype" name="geotrellis.vec
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@hashCode():Int" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@hashCode():Int" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -354,49 +408,53 @@ which depend on <a href="../../Polygon.html" class="extype" name="geotrellis.vec
         <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler#mergeOp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler#mergeOp" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mergeOp(multiPolygon:geotrellis.vector.MultiPolygon,zeroValue:T):(T,geotrellis.vector.Feature[G,D])=&gt;T"></a>
-      <a id="mergeOp(MultiPolygon,T):(T,Feature[G,D])⇒T"></a>
+      <a id="mergeOp(MultiPolygon,T):(T,Feature[Polygon,MultibandTile])⇒T"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">mergeOp</span><span class="params">(<span name="multiPolygon">multiPolygon: <a href="../../MultiPolygon.html" class="extype" name="geotrellis.vector.MultiPolygon">MultiPolygon</a></span>, <span name="zeroValue">zeroValue: <span class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler.T">T</span></span>)</span><span class="result">: (<span class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler.T">T</span>, <a href="../../Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<span class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler.G">G</span>, <span class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler.D">D</span>]) ⇒ <span class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler.T">T</span></span>
+        <span class="name">mergeOp</span><span class="params">(<span name="multiPolygon">multiPolygon: <a href="../../../vector/MultiPolygon.html" class="extype" name="geotrellis.vector.MultiPolygon">MultiPolygon</a></span>, <span name="zeroValue">zeroValue: <span class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler.T">T</span></span>)</span><span class="result">: (<span class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler.T">T</span>, <a href="../../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../../../vector/Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a>, <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>]) ⇒ <span class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler.T">T</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@mergeOp(multiPolygon:geotrellis.vector.MultiPolygon,zeroValue:T):(T,geotrellis.vector.Feature[G,D])=&gt;T" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@mergeOp(multiPolygon:geotrellis.vector.MultiPolygon,zeroValue:T):(T,geotrellis.vector.Feature[G,D])=&gt;T" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">Given a polygon and a zerovalue, this function returns a function
 which can be used to compute aggregations
-</p>
-    </li><li name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler#mergeOp" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+</p><div class="fullcomment"><div class="comment cmt"><p>Given a polygon and a zerovalue, this function returns a function
+which can be used to compute aggregations
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../vector/summary/polygonal/PolygonalSummaryHandler.html" class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler">PolygonalSummaryHandler</a></dd></dl></div>
+    </li><li name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler#mergeOp" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mergeOp(polygon:geotrellis.vector.Polygon,zeroValue:T):(T,geotrellis.vector.Feature[G,D])=&gt;T"></a>
-      <a id="mergeOp(Polygon,T):(T,Feature[G,D])⇒T"></a>
+      <a id="mergeOp(Polygon,T):(T,Feature[Polygon,MultibandTile])⇒T"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">mergeOp</span><span class="params">(<span name="polygon">polygon: <a href="../../Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a></span>, <span name="zeroValue">zeroValue: <span class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler.T">T</span></span>)</span><span class="result">: (<span class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler.T">T</span>, <a href="../../Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<span class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler.G">G</span>, <span class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler.D">D</span>]) ⇒ <span class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler.T">T</span></span>
+        <span class="name">mergeOp</span><span class="params">(<span name="polygon">polygon: <a href="../../../vector/Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a></span>, <span name="zeroValue">zeroValue: <span class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler.T">T</span></span>)</span><span class="result">: (<span class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler.T">T</span>, <a href="../../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../../../vector/Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a>, <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>]) ⇒ <span class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler.T">T</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@mergeOp(polygon:geotrellis.vector.Polygon,zeroValue:T):(T,geotrellis.vector.Feature[G,D])=&gt;T" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@mergeOp(polygon:geotrellis.vector.Polygon,zeroValue:T):(T,geotrellis.vector.Feature[G,D])=&gt;T" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">Given a polygon and a zerovalue, this function returns a function
 which can be used to compute aggregations
-</p>
+</p><div class="fullcomment"><div class="comment cmt"><p>Given a polygon and a zerovalue, this function returns a function
+which can be used to compute aggregations
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../vector/summary/polygonal/PolygonalSummaryHandler.html" class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler">PolygonalSummaryHandler</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -409,7 +467,7 @@ which can be used to compute aggregations
         <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -426,7 +484,7 @@ which can be used to compute aggregations
         <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@notify():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@notify():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -443,7 +501,7 @@ which can be used to compute aggregations
         <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@notifyAll():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@notifyAll():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -460,7 +518,7 @@ which can be used to compute aggregations
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -477,7 +535,7 @@ which can be used to compute aggregations
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@toString():String" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@toString():String" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -494,7 +552,7 @@ which can be used to compute aggregations
         <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@wait():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@wait():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -517,7 +575,7 @@ which can be used to compute aggregations
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -540,7 +598,7 @@ which can be used to compute aggregations
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.vector.summary.polygonal.PolygonalSummaryHandler@wait(x$1:Long):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler@wait(x$1:Long):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -560,7 +618,9 @@ which can be used to compute aggregations
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.Serializable">
+        <div class="parent" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler">
+              <h3>Inherited from <a href="../../../vector/summary/polygonal/PolygonalSummaryHandler.html" class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler">PolygonalSummaryHandler</a>[<a href="../../../vector/Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a>, <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>, <span class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler.T">T</span>]</h3>
+            </div><div class="parent" name="scala.Serializable">
               <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
             </div><div class="parent" name="java.io.Serializable">
               <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
