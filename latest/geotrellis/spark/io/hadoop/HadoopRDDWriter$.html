@@ -169,6 +169,25 @@ chunks without foreknowledge of how big it is.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.spark.io.hadoop.HadoopRDDWriter#DefaultIndexInterval" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DefaultIndexInterval:Int(4)"></a>
+      <a id="DefaultIndexInterval:Int(4)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DefaultIndexInterval</span><span class="result">: Int(4)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$@DefaultIndexInterval:Int(4)" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Index innterval at which map files should store an offset into sequence file.</p><div class="fullcomment"><div class="comment cmt"><p>Index innterval at which map files should store an offset into sequence file.
+This value is picked as a compromize between in-memory footprint and IO cost of retreiving a single record.
+</p></div></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -489,18 +508,18 @@ chunks without foreknowledge of how big it is.
               
         </dd></dl></div>
     </li><li name="geotrellis.spark.io.hadoop.HadoopRDDWriter#write" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="write[K,V](rdd:org.apache.spark.rdd.RDD[(K,V)],path:org.apache.hadoop.fs.Path,keyIndex:geotrellis.spark.io.index.KeyIndex[K],indexInterval:Int)(implicitevidence$1:geotrellis.spark.io.avro.AvroRecordCodec[K],implicitevidence$2:scala.reflect.ClassTag[K],implicitevidence$3:geotrellis.spark.io.avro.AvroRecordCodec[V],implicitevidence$4:scala.reflect.ClassTag[V]):Unit"></a>
-      <a id="write[K,V](RDD[(K,V)],Path,KeyIndex[K],Int)(AvroRecordCodec[K],ClassTag[K],AvroRecordCodec[V],ClassTag[V]):Unit"></a>
+      <a id="write[K,V](rdd:org.apache.spark.rdd.RDD[(K,V)],path:org.apache.hadoop.fs.Path,keyIndex:geotrellis.spark.io.index.KeyIndex[K],indexInterval:Int,existenceCheck:Boolean)(implicitevidence$5:geotrellis.spark.io.avro.AvroRecordCodec[K],implicitevidence$6:scala.reflect.ClassTag[K],implicitevidence$7:geotrellis.spark.io.avro.AvroRecordCodec[V],implicitevidence$8:scala.reflect.ClassTag[V]):Unit"></a>
+      <a id="write[K,V](RDD[(K,V)],Path,KeyIndex[K],Int,Boolean)(AvroRecordCodec[K],ClassTag[K],AvroRecordCodec[V],ClassTag[V]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">write</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.io.hadoop.HadoopRDDWriter.write.K">K</span>, <span class="extype" name="geotrellis.spark.io.hadoop.HadoopRDDWriter.write.V">V</span>)]</span>, <span name="path">path: <span class="extype" name="org.apache.hadoop.fs.Path">Path</span></span>, <span name="keyIndex">keyIndex: <a href="../index/KeyIndex.html" class="extype" name="geotrellis.spark.io.index.KeyIndex">KeyIndex</a>[<span class="extype" name="geotrellis.spark.io.hadoop.HadoopRDDWriter.write.K">K</span>]</span>, <span name="indexInterval">indexInterval: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">4</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../avro/AvroRecordCodec.html" class="extype" name="geotrellis.spark.io.avro.AvroRecordCodec">AvroRecordCodec</a>[<span class="extype" name="geotrellis.spark.io.hadoop.HadoopRDDWriter.write.K">K</span>]</span>, <span name="arg1">arg1: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.io.hadoop.HadoopRDDWriter.write.K">K</span>]</span>, <span name="arg2">arg2: <a href="../avro/AvroRecordCodec.html" class="extype" name="geotrellis.spark.io.avro.AvroRecordCodec">AvroRecordCodec</a>[<span class="extype" name="geotrellis.spark.io.hadoop.HadoopRDDWriter.write.V">V</span>]</span>, <span name="arg3">arg3: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.io.hadoop.HadoopRDDWriter.write.V">V</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">write</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.io.hadoop.HadoopRDDWriter.write.K">K</span>, <span class="extype" name="geotrellis.spark.io.hadoop.HadoopRDDWriter.write.V">V</span>)]</span>, <span name="path">path: <span class="extype" name="org.apache.hadoop.fs.Path">Path</span></span>, <span name="keyIndex">keyIndex: <a href="../index/KeyIndex.html" class="extype" name="geotrellis.spark.io.index.KeyIndex">KeyIndex</a>[<span class="extype" name="geotrellis.spark.io.hadoop.HadoopRDDWriter.write.K">K</span>]</span>, <span name="indexInterval">indexInterval: <span class="extype" name="scala.Int">Int</span> = <span class="symbol"><span class="name"><a href="#DefaultIndexInterval:Int(4)">DefaultIndexInterval</a></span></span></span>, <span name="existenceCheck">existenceCheck: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../avro/AvroRecordCodec.html" class="extype" name="geotrellis.spark.io.avro.AvroRecordCodec">AvroRecordCodec</a>[<span class="extype" name="geotrellis.spark.io.hadoop.HadoopRDDWriter.write.K">K</span>]</span>, <span name="arg1">arg1: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.io.hadoop.HadoopRDDWriter.write.K">K</span>]</span>, <span name="arg2">arg2: <a href="../avro/AvroRecordCodec.html" class="extype" name="geotrellis.spark.io.avro.AvroRecordCodec">AvroRecordCodec</a>[<span class="extype" name="geotrellis.spark.io.hadoop.HadoopRDDWriter.write.V">V</span>]</span>, <span name="arg3">arg3: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.io.hadoop.HadoopRDDWriter.write.V">V</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$@write[K,V](rdd:org.apache.spark.rdd.RDD[(K,V)],path:org.apache.hadoop.fs.Path,keyIndex:geotrellis.spark.io.index.KeyIndex[K],indexInterval:Int)(implicitevidence$1:geotrellis.spark.io.avro.AvroRecordCodec[K],implicitevidence$2:scala.reflect.ClassTag[K],implicitevidence$3:geotrellis.spark.io.avro.AvroRecordCodec[V],implicitevidence$4:scala.reflect.ClassTag[V]):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopRDDWriter$@write[K,V](rdd:org.apache.spark.rdd.RDD[(K,V)],path:org.apache.hadoop.fs.Path,keyIndex:geotrellis.spark.io.index.KeyIndex[K],indexInterval:Int,existenceCheck:Boolean)(implicitevidence$5:geotrellis.spark.io.avro.AvroRecordCodec[K],implicitevidence$6:scala.reflect.ClassTag[K],implicitevidence$7:geotrellis.spark.io.avro.AvroRecordCodec[V],implicitevidence$8:scala.reflect.ClassTag[V]):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
