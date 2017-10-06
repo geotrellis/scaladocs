@@ -47,13 +47,13 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">S3ValueReader</span><span class="result"> extends <a href="../ValueReader.html" class="extype" name="geotrellis.spark.io.ValueReader">ValueReader</a>[<a href="../../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a>]</span>
+        <span class="name">S3ValueReader</span><span class="result"> extends <a href="../OverzoomingValueReader.html" class="extype" name="geotrellis.spark.io.OverzoomingValueReader">OverzoomingValueReader</a></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="../ValueReader.html" class="extype" name="geotrellis.spark.io.ValueReader">ValueReader</a>[<a href="../../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../OverzoomingValueReader.html" class="extype" name="geotrellis.spark.io.OverzoomingValueReader">OverzoomingValueReader</a>, <a href="../ValueReader.html" class="extype" name="geotrellis.spark.io.ValueReader">ValueReader</a>[<a href="../../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -71,7 +71,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.spark.io.s3.S3ValueReader"><span>S3ValueReader</span></li><li class="in" name="geotrellis.spark.io.ValueReader"><span>ValueReader</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.spark.io.s3.S3ValueReader"><span>S3ValueReader</span></li><li class="in" name="geotrellis.spark.io.OverzoomingValueReader"><span>OverzoomingValueReader</span></li><li class="in" name="geotrellis.spark.io.ValueReader"><span>ValueReader</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -383,6 +383,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.spark.io.OverzoomingValueReader#overzoomingReader" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="overzoomingReader[K,V&lt;:geotrellis.raster.CellGrid](layerId:geotrellis.spark.LayerId,resampleMethod:geotrellis.raster.resample.ResampleMethod)(implicitevidence$1:geotrellis.spark.io.avro.AvroRecordCodec[K],implicitevidence$2:spray.json.JsonFormat[K],implicitevidence$3:geotrellis.spark.SpatialComponent[K],implicitevidence$4:scala.reflect.ClassTag[K],implicitevidence$5:geotrellis.spark.io.avro.AvroRecordCodec[V],implicitevidence$6:V=&gt;geotrellis.raster.resample.TileResampleMethods[V]):geotrellis.spark.io.Reader[K,V]"></a>
+      <a id="overzoomingReader[K,V&lt;:CellGrid](LayerId,ResampleMethod)(AvroRecordCodec[K],JsonFormat[K],SpatialComponent[K],ClassTag[K],AvroRecordCodec[V],(V)⇒TileResampleMethods[V]):Reader[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">overzoomingReader</span><span class="tparams">[<span name="K">K</span>, <span name="V">V &lt;: <a href="../../../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></span>]</span><span class="params">(<span name="layerId">layerId: <a href="../../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a></span>, <span name="resampleMethod">resampleMethod: <a href="../../../raster/resample/ResampleMethod.html" class="extype" name="geotrellis.raster.resample.ResampleMethod">ResampleMethod</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../avro/AvroRecordCodec.html" class="extype" name="geotrellis.spark.io.avro.AvroRecordCodec">AvroRecordCodec</a>[<span class="extype" name="geotrellis.spark.io.OverzoomingValueReader.overzoomingReader.K">K</span>]</span>, <span name="arg1">arg1: <span class="extype" name="spray.json.JsonFormat">JsonFormat</span>[<span class="extype" name="geotrellis.spark.io.OverzoomingValueReader.overzoomingReader.K">K</span>]</span>, <span name="arg2">arg2: <a href="../../package.html#SpatialComponent[K]=geotrellis.util.Component[K,geotrellis.spark.SpatialKey]" class="extmbr" name="geotrellis.spark.SpatialComponent">SpatialComponent</a>[<span class="extype" name="geotrellis.spark.io.OverzoomingValueReader.overzoomingReader.K">K</span>]</span>, <span name="arg3">arg3: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.io.OverzoomingValueReader.overzoomingReader.K">K</span>]</span>, <span name="arg4">arg4: <a href="../avro/AvroRecordCodec.html" class="extype" name="geotrellis.spark.io.avro.AvroRecordCodec">AvroRecordCodec</a>[<span class="extype" name="geotrellis.spark.io.OverzoomingValueReader.overzoomingReader.V">V</span>]</span>, <span name="arg5">arg5: (<span class="extype" name="geotrellis.spark.io.OverzoomingValueReader.overzoomingReader.V">V</span>) ⇒ <a href="../../../raster/resample/TileResampleMethods.html" class="extype" name="geotrellis.raster.resample.TileResampleMethods">TileResampleMethods</a>[<span class="extype" name="geotrellis.spark.io.OverzoomingValueReader.overzoomingReader.V">V</span>]</span>)</span><span class="result">: <a href="../Reader.html" class="extype" name="geotrellis.spark.io.Reader">Reader</a>[<span class="extype" name="geotrellis.spark.io.OverzoomingValueReader.overzoomingReader.K">K</span>, <span class="extype" name="geotrellis.spark.io.OverzoomingValueReader.overzoomingReader.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3ValueReader@overzoomingReader[K,V&lt;:geotrellis.raster.CellGrid](layerId:geotrellis.spark.LayerId,resampleMethod:geotrellis.raster.resample.ResampleMethod)(implicitevidence$1:geotrellis.spark.io.avro.AvroRecordCodec[K],implicitevidence$2:spray.json.JsonFormat[K],implicitevidence$3:geotrellis.spark.SpatialComponent[K],implicitevidence$4:scala.reflect.ClassTag[K],implicitevidence$5:geotrellis.spark.io.avro.AvroRecordCodec[V],implicitevidence$6:V=&gt;geotrellis.raster.resample.TileResampleMethods[V]):geotrellis.spark.io.Reader[K,V]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../OverzoomingValueReader.html" class="extype" name="geotrellis.spark.io.OverzoomingValueReader">OverzoomingValueReader</a> → <a href="../ValueReader.html" class="extype" name="geotrellis.spark.io.ValueReader">ValueReader</a></dd></dl></div>
     </li><li name="geotrellis.spark.io.s3.S3ValueReader#reader" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="reader[K,V](layerId:geotrellis.spark.LayerId)(implicitevidence$1:geotrellis.spark.io.avro.AvroRecordCodec[K],implicitevidence$2:spray.json.JsonFormat[K],implicitevidence$3:scala.reflect.ClassTag[K],implicitevidence$4:geotrellis.spark.io.avro.AvroRecordCodec[V]):geotrellis.spark.io.Reader[K,V]"></a>
       <a id="reader[K,V](LayerId)(AvroRecordCodec[K],JsonFormat[K],ClassTag[K],AvroRecordCodec[V]):Reader[K,V]"></a>
@@ -529,7 +546,9 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="geotrellis.spark.io.ValueReader">
+        <div class="parent" name="geotrellis.spark.io.OverzoomingValueReader">
+              <h3>Inherited from <a href="../OverzoomingValueReader.html" class="extype" name="geotrellis.spark.io.OverzoomingValueReader">OverzoomingValueReader</a></h3>
+            </div><div class="parent" name="geotrellis.spark.io.ValueReader">
               <h3>Inherited from <a href="../ValueReader.html" class="extype" name="geotrellis.spark.io.ValueReader">ValueReader</a>[<a href="../../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a>]</h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
