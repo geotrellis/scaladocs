@@ -206,23 +206,6 @@ produce the original geographic extent, but a larger one.
     </span>
       
     </li><li name="geotrellis.spark.tiling.MapKeyTransform#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[K](key:K)(implicitevidence$1:geotrellis.spark.SpatialComponent[K]):geotrellis.vector.Extent"></a>
-      <a id="apply[K](K)(SpatialComponent[K]):Extent"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="key">key: <span class="extype" name="geotrellis.spark.tiling.MapKeyTransform.apply.K">K</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../package.html#SpatialComponent[K]=geotrellis.util.Component[K,geotrellis.spark.SpatialKey]" class="extmbr" name="geotrellis.spark.SpatialComponent">SpatialComponent</a>[<span class="extype" name="geotrellis.spark.tiling.MapKeyTransform.apply.K">K</span>]</span>)</span><span class="result">: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.tiling.MapKeyTransform@apply[K](key:K)(implicitevidence$1:geotrellis.spark.SpatialComponent[K]):geotrellis.vector.Extent" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.spark.tiling.MapKeyTransform#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="apply(x:Double,y:Double):geotrellis.spark.SpatialKey"></a>
       <a id="apply(Double,Double):SpatialKey"></a>
       <h4 class="signature">
@@ -307,6 +290,23 @@ produce the original geographic extent, but a larger one.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.spark.tiling.MapKeyTransform#boundsToExtent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="boundsToExtent(gridBounds:geotrellis.raster.GridBounds):geotrellis.vector.Extent"></a>
+      <a id="boundsToExtent(GridBounds):Extent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">boundsToExtent</span><span class="params">(<span name="gridBounds">gridBounds: <a href="../../raster/GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>)</span><span class="result">: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.tiling.MapKeyTransform@boundsToExtent(gridBounds:geotrellis.raster.GridBounds):geotrellis.vector.Extent" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -377,6 +377,23 @@ produce the original geographic extent, but a larger one.
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.tiling.MapKeyTransform@extent:geotrellis.vector.Extent" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.tiling.MapKeyTransform#extentToBounds" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="extentToBounds(otherExtent:geotrellis.vector.Extent):geotrellis.raster.GridBounds"></a>
+      <a id="extentToBounds(Extent):GridBounds"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">extentToBounds</span><span class="params">(<span name="otherExtent">otherExtent: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span><span class="result">: <a href="../../raster/GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.tiling.MapKeyTransform@extentToBounds(otherExtent:geotrellis.vector.Extent):geotrellis.raster.GridBounds" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -455,6 +472,40 @@ produce the original geographic extent, but a larger one.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.spark.tiling.MapKeyTransform#keyToExtent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="keyToExtent(col:Int,row:Int):geotrellis.vector.Extent"></a>
+      <a id="keyToExtent(Int,Int):Extent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">keyToExtent</span><span class="params">(<span name="col">col: <span class="extype" name="scala.Int">Int</span></span>, <span name="row">row: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.tiling.MapKeyTransform@keyToExtent(col:Int,row:Int):geotrellis.vector.Extent" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">'col' and 'row' correspond to a <a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a> column and row in some grid.</p>
+    </li><li name="geotrellis.spark.tiling.MapKeyTransform#keyToExtent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="keyToExtent(key:geotrellis.spark.SpatialKey):geotrellis.vector.Extent"></a>
+      <a id="keyToExtent(SpatialKey):Extent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">keyToExtent</span><span class="params">(<span name="key">key: <a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a></span>)</span><span class="result">: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.tiling.MapKeyTransform@keyToExtent(key:geotrellis.spark.SpatialKey):geotrellis.vector.Extent" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Get the <span class="extype" name="Extent">Extent</span> corresponding to a <a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a> in some zoom level.</p>
     </li><li name="geotrellis.spark.tiling.MapKeyTransform#layoutCols" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="layoutCols:Int"></a>
       <a id="layoutCols:Int"></a>
@@ -540,6 +591,40 @@ produce the original geographic extent, but a larger one.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.spark.tiling.MapKeyTransform#pointToKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="pointToKey(x:Double,y:Double):geotrellis.spark.SpatialKey"></a>
+      <a id="pointToKey(Double,Double):SpatialKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pointToKey</span><span class="params">(<span name="x">x: <span class="extype" name="scala.Double">Double</span></span>, <span name="y">y: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.tiling.MapKeyTransform@pointToKey(x:Double,y:Double):geotrellis.spark.SpatialKey" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Fetch the <a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a> that corresponds to some coordinates in some CRS on the Earth.</p>
+    </li><li name="geotrellis.spark.tiling.MapKeyTransform#pointToKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="pointToKey(p:geotrellis.vector.Point):geotrellis.spark.SpatialKey"></a>
+      <a id="pointToKey(Point):SpatialKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pointToKey</span><span class="params">(<span name="p">p: <a href="../../vector/Point.html" class="extype" name="geotrellis.vector.Point">Point</a></span>)</span><span class="result">: <a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.tiling.MapKeyTransform@pointToKey(p:geotrellis.vector.Point):geotrellis.spark.SpatialKey" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Fetch the <a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a> that corresponds to some coordinates in some CRS on the Earth.</p>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -682,7 +767,30 @@ produce the original geographic extent, but a larger one.
 
         
 
-        
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="geotrellis.spark.tiling.MapKeyTransform#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply[K](key:K)(implicitevidence$1:geotrellis.spark.SpatialComponent[K]):geotrellis.vector.Extent"></a>
+      <a id="apply[K](K)(SpatialComponent[K]):Extent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 1.2) Use this instead: MapKeyTransform.keyToExtent(key.getComponent[SpatialKey])">apply</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="key">key: <span class="extype" name="geotrellis.spark.tiling.MapKeyTransform.apply.K">K</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../package.html#SpatialComponent[K]=geotrellis.util.Component[K,geotrellis.spark.SpatialKey]" class="extmbr" name="geotrellis.spark.SpatialComponent">SpatialComponent</a>[<span class="extype" name="geotrellis.spark.tiling.MapKeyTransform.apply.K">K</span>]</span>)</span><span class="result">: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.tiling.MapKeyTransform@apply[K](key:K)(implicitevidence$1:geotrellis.spark.SpatialComponent[K]):geotrellis.vector.Extent" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2)</i> Use this instead: MapKeyTransform.keyToExtent(key.getComponent[SpatialKey])</p></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">
