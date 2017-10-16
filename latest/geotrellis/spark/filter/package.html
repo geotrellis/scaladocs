@@ -100,6 +100,30 @@
       </a>
     </span>
       <p class="shortcomment cmt">See <a href="ToSpatial$.html" class="extype" name="geotrellis.spark.filter.ToSpatial">geotrellis.spark.filter.ToSpatial</a> to get explanations about Metadata (M[K]) constrains</p>
+    </li><li name="geotrellis.spark.filter.SpaceTimeToSpatialReduceMethods" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SpaceTimeToSpatialReduceMethods[K,V,M[_]]extendsMethodExtensions[org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M[K]]]"></a>
+      <a id="SpaceTimeToSpatialReduceMethods[K,V,M[_]]:SpaceTimeToSpatialReduceMethods[K,V,M]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SpaceTimeToSpatialReduceMethods.html"><span class="name">SpaceTimeToSpatialReduceMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="M">M<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.filter.SpaceTimeToSpatialReduceMethods.K">K</span>, <span class="extype" name="geotrellis.spark.filter.SpaceTimeToSpatialReduceMethods.V">V</span>)] with <a href="../Metadata.html" class="extype" name="geotrellis.spark.Metadata">Metadata</a>[<span class="extype" name="geotrellis.spark.filter.SpaceTimeToSpatialReduceMethods.M">M</span>[<span class="extype" name="geotrellis.spark.filter.SpaceTimeToSpatialReduceMethods.K">K</span>]]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.filter.package@SpaceTimeToSpatialReduceMethods[K,V,M[_]]extendsMethodExtensions[org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M[K]]]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This exists because <code>reduceByKey</code> needs K and V to be members of
+the <code>ClassTag</code> type class, but adding that restriction to the type
+parameters of the class above would break the API.</p><div class="fullcomment"><div class="comment cmt"><p>This exists because <code>reduceByKey</code> needs K and V to be members of
+the <code>ClassTag</code> type class, but adding that restriction to the type
+parameters of the class above would break the API.  Neither method
+can be named <code>toSpatial</code> as that would hide the methods provided
+by the class above.
+</p></div></div>
     </li><li name="geotrellis.spark.filter.TileLayerRDDFilterMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="TileLayerRDDFilterMethods[K,V,M]extendsMethodExtensions[org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M]]"></a>
       <a id="TileLayerRDDFilterMethods[K,V,M]:TileLayerRDDFilterMethods[K,V,M]"></a>
