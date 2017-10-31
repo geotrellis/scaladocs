@@ -540,6 +540,24 @@ produce the original geographic extent, but a larger one.
       </a>
     </span>
       <p class="shortcomment cmt">Get the <span class="extype" name="Extent">Extent</span> corresponding to a <a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a> in some zoom level.</p>
+    </li><li name="geotrellis.spark.tiling.MapKeyTransform#keysForGeometry" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="keysForGeometry[G&lt;:geotrellis.vector.Geometry](g:G):Set[geotrellis.spark.SpatialKey]"></a>
+      <a id="keysForGeometry[G&lt;:Geometry](G):Set[SpatialKey]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">keysForGeometry</span><span class="tparams">[<span name="G">G &lt;: <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>]</span><span class="params">(<span name="g">g: <span class="extype" name="geotrellis.spark.tiling.MapKeyTransform.keysForGeometry.G">G</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.spark.tiling.MapKeyTransform@keysForGeometry[G&lt;:geotrellis.vector.Geometry](g:G):Set[geotrellis.spark.SpatialKey]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">For some given <span class="extype" name="Geometry">Geometry</span>, find the unique SpatialKeys for all Tile extents
+that it touches.</p>
     </li><li name="geotrellis.spark.tiling.MapKeyTransform#layoutCols" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="layoutCols:Int"></a>
       <a id="layoutCols:Int"></a>
@@ -575,35 +593,35 @@ produce the original geographic extent, but a larger one.
     </span>
       
     </li><li name="geotrellis.spark.tiling.MapKeyTransform#multiLineToKeys" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="multiLineToKeys(multiLine:geotrellis.vector.MultiLine):Iterator[geotrellis.spark.SpatialKey]"></a>
-      <a id="multiLineToKeys(MultiLine):Iterator[SpatialKey]"></a>
+      <a id="multiLineToKeys(multiLine:geotrellis.vector.MultiLine):Set[geotrellis.spark.SpatialKey]"></a>
+      <a id="multiLineToKeys(MultiLine):Set[SpatialKey]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">multiLineToKeys</span><span class="params">(<span name="multiLine">multiLine: <a href="../../vector/MultiLine.html" class="extype" name="geotrellis.vector.MultiLine">MultiLine</a></span>)</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[<a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a>]</span>
+        <span class="name">multiLineToKeys</span><span class="params">(<span name="multiLine">multiLine: <a href="../../vector/MultiLine.html" class="extype" name="geotrellis.vector.MultiLine">MultiLine</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.tiling.MapKeyTransform@multiLineToKeys(multiLine:geotrellis.vector.MultiLine):Iterator[geotrellis.spark.SpatialKey]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.tiling.MapKeyTransform@multiLineToKeys(multiLine:geotrellis.vector.MultiLine):Set[geotrellis.spark.SpatialKey]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
     </li><li name="geotrellis.spark.tiling.MapKeyTransform#multiPolygonToKeys" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="multiPolygonToKeys(multiPolygon:geotrellis.vector.MultiPolygon):Iterator[geotrellis.spark.SpatialKey]"></a>
-      <a id="multiPolygonToKeys(MultiPolygon):Iterator[SpatialKey]"></a>
+      <a id="multiPolygonToKeys(multiPolygon:geotrellis.vector.MultiPolygon):Set[geotrellis.spark.SpatialKey]"></a>
+      <a id="multiPolygonToKeys(MultiPolygon):Set[SpatialKey]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">multiPolygonToKeys</span><span class="params">(<span name="multiPolygon">multiPolygon: <a href="../../vector/MultiPolygon.html" class="extype" name="geotrellis.vector.MultiPolygon">MultiPolygon</a></span>)</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[<a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a>]</span>
+        <span class="name">multiPolygonToKeys</span><span class="params">(<span name="multiPolygon">multiPolygon: <a href="../../vector/MultiPolygon.html" class="extype" name="geotrellis.vector.MultiPolygon">MultiPolygon</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.tiling.MapKeyTransform@multiPolygonToKeys(multiPolygon:geotrellis.vector.MultiPolygon):Iterator[geotrellis.spark.SpatialKey]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.tiling.MapKeyTransform@multiPolygonToKeys(multiPolygon:geotrellis.vector.MultiPolygon):Set[geotrellis.spark.SpatialKey]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

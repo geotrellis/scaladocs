@@ -82,7 +82,7 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">See <a href="ClipToGrid$.html" class="extype" name="geotrellis.spark.clip.ClipToGrid">ClipToGrid</a>.</p>
     </li><li name="geotrellis.spark.clip.GeometryClipToGridMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="GeometryClipToGridMethods[G&lt;:geotrellis.vector.Geometry]extendsMethodExtensions[org.apache.spark.rdd.RDD[G]]"></a>
       <a id="GeometryClipToGridMethods[G&lt;:Geometry]:GeometryClipToGridMethods[G]"></a>
@@ -99,7 +99,7 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">See <a href="ClipToGrid$.html" class="extype" name="geotrellis.spark.clip.ClipToGrid">ClipToGrid</a>.</p>
     </li><li name="geotrellis.spark.clip.Implicits" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="ImplicitsextendsAnyRef"></a>
       <a id="Implicits:Implicits"></a>
@@ -124,7 +124,7 @@
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="geotrellis.spark.clip.ClipToGrid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.spark.clip.ClipToGrid" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ClipToGrid"></a>
       <a id="ClipToGrid:ClipToGrid"></a>
       <h4 class="signature">
@@ -140,7 +140,17 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">These functions perform the following transformation:</p><div class="fullcomment"><div class="comment cmt"><p>These functions perform the following transformation:</p><pre>RDD[Geometry] <span class="kw">=&gt;</span> RDD[(SpatialKey, Geometry)]</pre><p>such that each original <span class="extype" name="Geometry">Geometry</span> is clipped in some way. By default,
+this clips them to fit inside the <span class="extype" name="Extent">Extent</span> of each <a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a>
+they touch.</p><p>If you'd like more customized clipping behaviour, you can compose
+over the <a href="ClipToGrid$.html#clipFeatureToExtent[G&lt;:geotrellis.vector.Geometry,D](e:geotrellis.vector.Extent,feature:geotrellis.vector.Feature[G,D],preds:geotrellis.spark.clip.ClipToGrid.Predicates):Option[geotrellis.vector.Feature[geotrellis.vector.Geometry,D]]" class="extmbr" name="geotrellis.spark.clip.ClipToGrid#clipFeatureToExtent">clipFeatureToExtent</a> function below, or write your own
+entirely, while following its type signature. That can then be passed
+into the appropriate <code>apply</code> method below.</p><p>A variety of overloads are provided here to help you work with either
+<span class="extype" name="Geometry">Geometry</span> or <span class="extype" name="Feature">Feature</span>. The injected</p><pre>RDD[Geometry].clipToGrid: LayoutDefinition <span class="kw">=&gt;</span> RDD[(SpatialKey, Geometry)]</pre><p>may also be preferable to you.</p><p><b>Note:</b> If your custom clipping function relies on <a href="ClipToGrid$$Predicates.html" class="extype" name="geotrellis.spark.clip.ClipToGrid.Predicates">Predicates</a>,
+note that its method <code>coveredBy</code> will always return <code>true</code> if your Geometry
+fits inside the passed-in <span class="extype" name="Extent">Extent</span>. Please avoid writing clipping
+functions that do non-sensical things.
+</p></div></div>
     </li><li name="geotrellis.spark.clip.Implicits" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Implicits"></a>
       <a id="Implicits:Implicits"></a>
