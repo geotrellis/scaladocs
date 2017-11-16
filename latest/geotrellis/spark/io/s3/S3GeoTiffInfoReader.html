@@ -184,23 +184,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.spark.io.GeoTiffInfoReader#averagePixelSize" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="averagePixelSize:Option[Int]"></a>
-      <a id="averagePixelSize:Option[Int]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">averagePixelSize</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.S3GeoTiffInfoReader@averagePixelSize:Option[Int]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GeoTiffInfoReader</dd></dl></div>
     </li><li name="geotrellis.spark.io.s3.S3GeoTiffInfoReader#bucket" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="bucket:String"></a>
       <a id="bucket:String"></a>
@@ -292,23 +275,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.spark.io.GeoTiffInfoReader#estimatePartitionsNumber" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="estimatePartitionsNumber(partitionBytes:Long,maxTileSize:Option[Int]):Option[Int]"></a>
-      <a id="estimatePartitionsNumber(Long,Option[Int]):Option[Int]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">estimatePartitionsNumber</span><span class="params">(<span name="partitionBytes">partitionBytes: <span class="extype" name="scala.Long">Long</span></span>, <span name="maxTileSize">maxTileSize: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">None</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.S3GeoTiffInfoReader@estimatePartitionsNumber(partitionBytes:Long,maxTileSize:Option[Int]):Option[Int]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GeoTiffInfoReader</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -332,23 +298,6 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.spark.io.s3.S3GeoTiffInfoReader#geoTiffInfo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="geoTiffInfo:List[(String,geotrellis.raster.io.geotiff.reader.GeoTiffReader.GeoTiffInfo)]"></a>
-      <a id="geoTiffInfo:List[(String,GeoTiffInfo)]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">geoTiffInfo</span><span class="result">: <span class="extype" name="scala.List">List</span>[(<span class="extype" name="scala.Predef.String">String</span>, <a href="../../../raster/io/geotiff/reader/GeoTiffReader$$GeoTiffInfo.html" class="extype" name="geotrellis.raster.io.geotiff.reader.GeoTiffReader.GeoTiffInfo">GeoTiffInfo</a>)]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.S3GeoTiffInfoReader@geoTiffInfo:List[(String,geotrellis.raster.io.geotiff.reader.GeoTiffReader.GeoTiffInfo)]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.io.s3.S3GeoTiffInfoReader">S3GeoTiffInfoReader</a> → GeoTiffInfoReader</dd></dl></div>
     </li><li name="geotrellis.spark.io.s3.S3GeoTiffInfoReader#geoTiffInfoRdd" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="geoTiffInfoRdd(implicitsc:org.apache.spark.SparkContext):org.apache.spark.rdd.RDD[String]"></a>
       <a id="geoTiffInfoRdd(SparkContext):RDD[String]"></a>
@@ -536,6 +485,23 @@
       </a>
     </span>
       
+    </li><li name="geotrellis.spark.io.GeoTiffInfoReader#readWindows" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="readWindows[O,I,K,V](files:org.apache.spark.rdd.RDD[java.net.URI],uriToKey:(java.net.URI,I)=&gt;K,maxSize:Int,partitionBytes:Long,rasterReaderOptions:O,geometry:Option[geotrellis.vector.Geometry])(implicitsc:org.apache.spark.SparkContext,implicitrr:geotrellis.spark.io.RasterReader[O,(I,V)]):org.apache.spark.rdd.RDD[(K,V)]"></a>
+      <a id="readWindows[O,I,K,V](RDD[URI],(URI,I)⇒K,Int,Long,O,Option[Geometry])(SparkContext,RasterReader[O,(I,V)]):RDD[(K,V)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">readWindows</span><span class="tparams">[<span name="O">O</span>, <span name="I">I</span>, <span name="K">K</span>, <span name="V">V</span>]</span><span class="params">(<span name="files">files: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="java.net.URI">URI</span>]</span>, <span name="uriToKey">uriToKey: (<span class="extype" name="java.net.URI">URI</span>, <span class="extype" name="geotrellis.spark.io.GeoTiffInfoReader.readWindows.I">I</span>) ⇒ <span class="extype" name="geotrellis.spark.io.GeoTiffInfoReader.readWindows.K">K</span></span>, <span name="maxSize">maxSize: <span class="extype" name="scala.Int">Int</span></span>, <span name="partitionBytes">partitionBytes: <span class="extype" name="scala.Long">Long</span></span>, <span name="rasterReaderOptions">rasterReaderOptions: <span class="extype" name="geotrellis.spark.io.GeoTiffInfoReader.readWindows.O">O</span></span>, <span name="geometry">geometry: <span class="extype" name="scala.Option">Option</span>[<a href="../../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sc">sc: <span class="extype" name="org.apache.spark.SparkContext">SparkContext</span></span>, <span name="rr">rr: <a href="../RasterReader.html" class="extype" name="geotrellis.spark.io.RasterReader">RasterReader</a>[<span class="extype" name="geotrellis.spark.io.GeoTiffInfoReader.readWindows.O">O</span>, (<span class="extype" name="geotrellis.spark.io.GeoTiffInfoReader.readWindows.I">I</span>, <span class="extype" name="geotrellis.spark.io.GeoTiffInfoReader.readWindows.V">V</span>)]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.io.GeoTiffInfoReader.readWindows.K">K</span>, <span class="extype" name="geotrellis.spark.io.GeoTiffInfoReader.readWindows.V">V</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.S3GeoTiffInfoReader@readWindows[O,I,K,V](files:org.apache.spark.rdd.RDD[java.net.URI],uriToKey:(java.net.URI,I)=&gt;K,maxSize:Int,partitionBytes:Long,rasterReaderOptions:O,geometry:Option[geotrellis.vector.Geometry])(implicitsc:org.apache.spark.SparkContext,implicitrr:geotrellis.spark.io.RasterReader[O,(I,V)]):org.apache.spark.rdd.RDD[(K,V)]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GeoTiffInfoReader</dd></dl></div>
     </li><li name="geotrellis.spark.io.s3.S3GeoTiffInfoReader#streaming" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="streaming:Boolean"></a>
       <a id="streaming:Boolean"></a>
@@ -656,43 +622,6 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.spark.io.GeoTiffInfoReader#windowsByBytes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="windowsByBytes(partitionBytes:Long,maxSize:Int,geometry:Option[geotrellis.vector.Geometry])(implicitsc:org.apache.spark.SparkContext):org.apache.spark.rdd.RDD[(String,Array[geotrellis.raster.GridBounds])]"></a>
-      <a id="windowsByBytes(Long,Int,Option[Geometry])(SparkContext):RDD[(String,Array[GridBounds])]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">windowsByBytes</span><span class="params">(<span name="partitionBytes">partitionBytes: <span class="extype" name="scala.Long">Long</span></span>, <span name="maxSize">maxSize: <span class="extype" name="scala.Int">Int</span></span>, <span name="geometry">geometry: <span class="extype" name="scala.Option">Option</span>[<a href="../../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sc">sc: <span class="extype" name="org.apache.spark.SparkContext">SparkContext</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Array">Array</span>[<a href="../../../raster/GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a>])]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.S3GeoTiffInfoReader@windowsByBytes(partitionBytes:Long,maxSize:Int,geometry:Option[geotrellis.vector.Geometry])(implicitsc:org.apache.spark.SparkContext):org.apache.spark.rdd.RDD[(String,Array[geotrellis.raster.GridBounds])]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Generate an RDD of URI, GridBounds pairs.</p><div class="fullcomment"><div class="comment cmt"><p>Generate an RDD of URI, GridBounds pairs.  The URIs point to
-files and the GridBounds conform to GeoTiff segments (if
-possible).
-</p></div><dl class="paramcmts block"><dt class="param">partitionBytes</dt><dd class="cmt"><p>The desired number of bytes per partition.</p></dd><dt class="param">maxSize</dt><dd class="cmt"><p>The maximum (linear) size of any window (any GridBounds)</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>GeoTiffInfoReader</dd></dl></div>
-    </li><li name="geotrellis.spark.io.GeoTiffInfoReader#windowsCount" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="windowsCount(maxTileSize:Option[Int]):Int"></a>
-      <a id="windowsCount(Option[Int]):Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">windowsCount</span><span class="params">(<span name="maxTileSize">maxTileSize: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">None</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.S3GeoTiffInfoReader@windowsCount(maxTileSize:Option[Int]):Int" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GeoTiffInfoReader</dd></dl></div>
     </li></ol>
             </div>
 

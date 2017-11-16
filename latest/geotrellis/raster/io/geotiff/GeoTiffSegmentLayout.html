@@ -423,6 +423,57 @@ Segments are indexed in row-major order relative to the GeoTiff they comprise.
       </a>
     </span>
       <p class="shortcomment cmt">A Boolean that represents if the given GeoTiff is Tiled or not</p>
+    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#listWindows" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="listWindows(cols:Int,rows:Int):Array[geotrellis.raster.GridBounds]"></a>
+      <a id="listWindows(Int,Int):Array[GridBounds]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">listWindows</span><span class="params">(<span name="cols">cols: <span class="extype" name="scala.Int">Int</span></span>, <span name="rows">rows: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@listWindows(cols:Int,rows:Int):Array[geotrellis.raster.GridBounds]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">List all pixel windows that cover a grid of given size</p>
+    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#listWindows" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="listWindows(maxSize:Int,extent:geotrellis.vector.Extent,geometry:geotrellis.vector.Geometry):Array[geotrellis.raster.GridBounds]"></a>
+      <a id="listWindows(Int,Extent,Geometry):Array[GridBounds]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">listWindows</span><span class="params">(<span name="maxSize">maxSize: <span class="extype" name="scala.Int">Int</span></span>, <span name="extent">extent: <a href="../../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="geometry">geometry: <a href="../../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@listWindows(maxSize:Int,extent:geotrellis.vector.Extent,geometry:geotrellis.vector.Geometry):Array[geotrellis.raster.GridBounds]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">List all pixel windows that meet the given geometry</p>
+    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#listWindows" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="listWindows(maxSize:Int):Array[geotrellis.raster.GridBounds]"></a>
+      <a id="listWindows(Int):Array[GridBounds]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">listWindows</span><span class="params">(<span name="maxSize">maxSize: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@listWindows(maxSize:Int):Array[geotrellis.raster.GridBounds]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -474,6 +525,28 @@ Segments are indexed in row-major order relative to the GeoTiff they comprise.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#partitionWindowsBySegments" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="partitionWindowsBySegments(windows:Seq[geotrellis.raster.GridBounds],maxPartitionSize:Long):Array[Array[geotrellis.raster.GridBounds]]"></a>
+      <a id="partitionWindowsBySegments(Seq[GridBounds],Long):Array[Array[GridBounds]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">partitionWindowsBySegments</span><span class="params">(<span name="windows">windows: <span class="extype" name="scala.Seq">Seq</span>[<a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a>]</span>, <span name="maxPartitionSize">maxPartitionSize: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Array">Array</span>[<a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@partitionWindowsBySegments(windows:Seq[geotrellis.raster.GridBounds],maxPartitionSize:Long):Array[Array[geotrellis.raster.GridBounds]]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Partition a list of pixel windows to localize required segment reads.</p><div class="fullcomment"><div class="comment cmt"><p>Partition a list of pixel windows to localize required segment reads.
+Some segments may be required by more than one partition.
+Pixel windows outside of layout range will be filtered.
+Maximum partition size may be exceeded if any window size exceeds it.
+Windows will not be split to satisfy partition size limits.
+</p></div><dl class="paramcmts block"><dt class="param">windows</dt><dd class="cmt"><p>List of pixel windows from this layout</p></dd><dt class="param">maxPartitionSize</dt><dd class="cmt"><p>Maximum pixel count for each partition</p></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#storageMethod" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="storageMethod:geotrellis.raster.io.geotiff.StorageMethod"></a>
       <a id="storageMethod:StorageMethod"></a>

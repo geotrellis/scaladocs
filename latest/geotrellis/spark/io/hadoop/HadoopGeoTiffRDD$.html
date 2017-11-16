@@ -100,7 +100,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="HadoopGeoTiffRDD$$Options.html"><span class="name">Options</span></a><span class="params">(<span name="tiffExtensions">tiffExtensions: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="defval" name="Seq(&quot;.tif&quot;, &quot;.TIF&quot;, &quot;.tiff&quot;, &quot;.TIFF&quot;)">...</span></span>, <span name="crs">crs: <span class="extype" name="scala.Option">Option</span>[<a href="../../../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a>] = <span class="symbol">None</span></span>, <span name="timeTag">timeTag: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol"><span class="name"><a href="#GEOTIFF_TIME_TAG_DEFAULT:String(&quot;TIFFTAG_DATETIME&quot;)">GEOTIFF_TIME_TAG_DEFAULT</a></span></span></span>, <span name="timeFormat">timeFormat: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol"><span class="name"><a href="#GEOTIFF_TIME_FORMAT_DEFAULT:String(&quot;yyyy:MM:ddHH:mm:ss&quot;)">GEOTIFF_TIME_FORMAT_DEFAULT</a></span></span></span>, <span name="maxTileSize">maxTileSize: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">None</span></span>, <span name="numPartitions">numPartitions: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">None</span></span>, <span name="partitionBytes">partitionBytes: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>] = <span class="symbol">Some(128l * 1024 * 1024)</span></span>, <span name="chunkSize">chunkSize: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <a href="../RasterReader$$Options.html" class="extype" name="geotrellis.spark.io.RasterReader.Options">RasterReader.Options</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="HadoopGeoTiffRDD$$Options.html"><span class="name">Options</span></a><span class="params">(<span name="tiffExtensions">tiffExtensions: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="defval" name="Seq(&quot;.tif&quot;, &quot;.TIF&quot;, &quot;.tiff&quot;, &quot;.TIFF&quot;)">...</span></span>, <span name="crs">crs: <span class="extype" name="scala.Option">Option</span>[<a href="../../../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a>] = <span class="symbol">None</span></span>, <span name="timeTag">timeTag: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol"><span class="name"><a href="#GEOTIFF_TIME_TAG_DEFAULT:String(&quot;TIFFTAG_DATETIME&quot;)">GEOTIFF_TIME_TAG_DEFAULT</a></span></span></span>, <span name="timeFormat">timeFormat: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol"><span class="name"><a href="#GEOTIFF_TIME_FORMAT_DEFAULT:String(&quot;yyyy:MM:ddHH:mm:ss&quot;)">GEOTIFF_TIME_FORMAT_DEFAULT</a></span></span></span>, <span name="maxTileSize">maxTileSize: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">Some(DefaultMaxTileSize)</span></span>, <span name="numPartitions">numPartitions: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">None</span></span>, <span name="partitionBytes">partitionBytes: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>] = <span class="symbol">Some(DefaultPartitionBytes)</span></span>, <span name="chunkSize">chunkSize: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <a href="../RasterReader$$Options.html" class="extype" name="geotrellis.spark.io.RasterReader.Options">RasterReader.Options</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopGeoTiffRDD$@OptionsextendsRasterReader.OptionswithProductwithSerializable" title="Permalink" target="_top">
@@ -272,7 +272,11 @@
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Creates a RDD[(K, V)] whose K and V depends on the type of the GeoTiff that is going to be read in.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a RDD[(K, V)] whose K and V depends on the type of the GeoTiff that is going to be read in.
+      <p class="shortcomment cmt">Creates a RDD[(K, V)] whose K and V depends on the type of the GeoTiff that is going to be read in.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a RDD[(K, V)] whose K and V depends on the type of the GeoTiff that is going to be read in.</p><p>This function has two modes of operation:
+When options.maxTileSize is set windows will be read from GeoTiffs and their
+size and count will be balanced among partitions using partitionBytes option.
+Resulting partitions will be grouped in relation to GeoTiff segment layout.</p><p>When maxTileSize is None the GeoTiffs will be read fully and balanced among
+partitions using either numPartitions or partitionBytes option.
 </p></div><dl class="paramcmts block"><dt class="param">path</dt><dd class="cmt"><p>HDFS GeoTiff path.</p></dd><dt class="param">uriToKey</dt><dd class="cmt"><p>Function to transform input key basing on the URI information.</p></dd><dt class="param">options</dt><dd class="cmt"><p>An instance of <a href="HadoopGeoTiffRDD$$Options.html" class="extype" name="geotrellis.spark.io.hadoop.HadoopGeoTiffRDD.Options">Options</a> that contains any user defined or default settings.</p></dd><dt class="param">geometry</dt><dd class="cmt"><p>An optional geometry to filter by.  If this is provided, it is assumed that all GeoTiffs are in the same CRS, and that this geometry is in that CRS.</p></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
@@ -314,23 +318,6 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.spark.io.hadoop.HadoopGeoTiffRDD#contingencyTileSize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="contingencyTileSize:Int"></a>
-      <a id="contingencyTileSize:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">contingencyTileSize</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopGeoTiffRDD$@contingencyTileSize:Int" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>

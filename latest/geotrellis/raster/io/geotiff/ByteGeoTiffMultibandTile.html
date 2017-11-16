@@ -1205,6 +1205,24 @@ support combining a subset of the bands.</p></div><dl class="paramcmts block"><d
 the combine algorithms over BandType.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a segment combiner, which is an abstraction that allows us to generalize
 the combine algorithms over BandType.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.io.geotiff.ByteGeoTiffMultibandTile">ByteGeoTiffMultibandTile</a> → <a href="../../MacroGeotiffMultibandCombiners.html" class="extype" name="geotrellis.raster.MacroGeotiffMultibandCombiners">MacroGeotiffMultibandCombiners</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile#crop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="crop(windows:Seq[geotrellis.raster.GridBounds]):Iterator[(geotrellis.raster.GridBounds,geotrellis.raster.ArrayMultibandTile)]"></a>
+      <a id="crop(Seq[GridBounds]):Iterator[(GridBounds,ArrayMultibandTile)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">crop</span><span class="params">(<span name="windows">windows: <span class="extype" name="scala.Seq">Seq</span>[<a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[(<a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a>, <a href="../../ArrayMultibandTile.html" class="extype" name="geotrellis.raster.ArrayMultibandTile">ArrayMultibandTile</a>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.ByteGeoTiffMultibandTile@crop(windows:Seq[geotrellis.raster.GridBounds]):Iterator[(geotrellis.raster.GridBounds,geotrellis.raster.ArrayMultibandTile)]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Crop this tile to given pixel regions.</p><div class="fullcomment"><div class="comment cmt"><p>Crop this tile to given pixel regions.
+</p></div><dl class="paramcmts block"><dt class="param">windows</dt><dd class="cmt"><p>Pixel bounds specifying the crop areas</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a></dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile#crop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="crop(gridBounds:geotrellis.raster.GridBounds):geotrellis.raster.ArrayMultibandTile"></a>
       <a id="crop(GridBounds):ArrayMultibandTile"></a>
       <h4 class="signature">
@@ -1220,9 +1238,8 @@ the combine algorithms over BandType.</p></div><dl class="attributes block"> <dt
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Performs a crop on itself.</p><div class="fullcomment"><div class="comment cmt"><p>Performs a crop on itself. The returned MultibandGeoTiffTile will
-contain bands that have the same area as the inputte GridBounds.
-</p></div><dl class="paramcmts block"><dt class="param">gridBounds</dt><dd class="cmt"><p>A <a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a> that contains the area to be cropped.</p></dd><dt>returns</dt><dd class="cmt"><p>A <a href="../../ArrayMultibandTile.html" class="extype" name="geotrellis.raster.ArrayMultibandTile">ArrayMultibandTile</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a></dd></dl></div>
+      <p class="shortcomment cmt">Crop this tile to given pixel region.</p><div class="fullcomment"><div class="comment cmt"><p>Crop this tile to given pixel region.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.ByteGeoTiffSegmentCollection#decompressGeoTiffSegment" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="decompressGeoTiffSegment:(Int,Array[Byte])=&gt;geotrellis.raster.io.geotiff.ByteGeoTiffSegment"></a>
       <a id="decompressGeoTiffSegment:(Int,Array[Byte])⇒ByteGeoTiffSegment"></a>
