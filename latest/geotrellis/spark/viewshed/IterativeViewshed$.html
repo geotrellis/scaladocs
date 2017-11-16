@@ -92,33 +92,7 @@
         <div id="allMembers">
         
 
-        <div id="types" class="types members">
-              <h3>Type Members</h3>
-              <ol><li name="geotrellis.spark.viewshed.IterativeViewshed.Point6D" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Point6DextendsProductwithSerializable"></a>
-      <a id="Point6D:Point6D"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="IterativeViewshed$$Point6D.html"><span class="name">Point6D</span></a><span class="params">(<span name="x">x: <span class="extype" name="scala.Double">Double</span></span>, <span name="y">y: <span class="extype" name="scala.Double">Double</span></span>, <span name="viewHeight">viewHeight: <span class="extype" name="scala.Double">Double</span></span>, <span name="angle">angle: <span class="extype" name="scala.Double">Double</span></span>, <span name="fieldOfView">fieldOfView: <span class="extype" name="scala.Double">Double</span></span>, <span name="altitude">altitude: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@Point6DextendsProductwithSerializable" title="Permalink" target="_top">
-        <img src="../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">x:           x-coordinate (in the units used by the layer)
-y:           y-coordinate (in the units used by the layer)
-viewHeight:  view height (in units of &quot;meters&quot;) if positive then height above the surface, if negative then absolute height
-angle:       the angle in radians (about the z-axis) of the &quot;camera&quot;
-fieldOfView: the field of view of the &quot;camera&quot; in radians
-altitude:    the absolute altitude to query; if -∞ then use the terrain height
-</p>
-    </li></ol>
-            </div>
+        
 
         
 
@@ -176,18 +150,18 @@ altitude:    the absolute altitude to query; if -∞ then use the terrain height
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="geotrellis.spark.viewshed.IterativeViewshed#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply[K,V](elevation:org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[geotrellis.spark.TileLayerMetadata[K]],ps:Seq[geotrellis.spark.viewshed.IterativeViewshed.Point6D],maxDistance:Double,curvature:Boolean,operator:geotrellis.raster.viewshed.R2Viewshed.AggregationOperator,epsilon:Double)(implicitevidence$5:K=&gt;geotrellis.spark.SpatialKey,implicitevidence$6:scala.reflect.ClassTag[K],implicitevidence$7:V=&gt;geotrellis.raster.Tile):org.apache.spark.rdd.RDD[(K,geotrellis.raster.Tile)]withgeotrellis.spark.Metadata[geotrellis.spark.TileLayerMetadata[K]]"></a>
-      <a id="apply[K,V](RDD[(K,V)]withMetadata[TileLayerMetadata[K]],Seq[Point6D],Double,Boolean,AggregationOperator,Double)((K)⇒SpatialKey,ClassTag[K],(V)⇒Tile):RDD[(K,Tile)]withMetadata[TileLayerMetadata[K]]"></a>
+      <a id="apply[K,V](elevation:org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[geotrellis.spark.TileLayerMetadata[K]],ps:Seq[geotrellis.spark.viewshed.Viewpoint],maxDistance:Double,curvature:Boolean,operator:geotrellis.raster.viewshed.R2Viewshed.AggregationOperator,epsilon:Double)(implicitevidence$5:K=&gt;geotrellis.spark.SpatialKey,implicitevidence$6:scala.reflect.ClassTag[K],implicitevidence$7:V=&gt;geotrellis.raster.Tile):org.apache.spark.rdd.RDD[(K,geotrellis.raster.Tile)]withgeotrellis.spark.Metadata[geotrellis.spark.TileLayerMetadata[K]]"></a>
+      <a id="apply[K,V](RDD[(K,V)]withMetadata[TileLayerMetadata[K]],Seq[Viewpoint],Double,Boolean,AggregationOperator,Double)((K)⇒SpatialKey,ClassTag[K],(V)⇒Tile):RDD[(K,Tile)]withMetadata[TileLayerMetadata[K]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="params">(<span name="elevation">elevation: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.K">K</span>, <span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.V">V</span>)] with <a href="../Metadata.html" class="extype" name="geotrellis.spark.Metadata">Metadata</a>[<a href="../TileLayerMetadata.html" class="extype" name="geotrellis.spark.TileLayerMetadata">TileLayerMetadata</a>[<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.K">K</span>]]</span>, <span name="ps">ps: <span class="extype" name="scala.Seq">Seq</span>[<a href="IterativeViewshed$$Point6D.html" class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.Point6D">Point6D</a>]</span>, <span name="maxDistance">maxDistance: <span class="extype" name="scala.Double">Double</span></span>, <span name="curvature">curvature: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="operator">operator: <a href="../../raster/viewshed/R2Viewshed$$AggregationOperator.html" class="extype" name="geotrellis.raster.viewshed.R2Viewshed.AggregationOperator">AggregationOperator</a> = <span class="symbol"><span class="name"><a href="../../package.html">Or</a></span></span></span>, <span name="epsilon">epsilon: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">1/math.Pi</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.K">K</span>) ⇒ <a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a></span>, <span name="arg1">arg1: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.K">K</span>]</span>, <span name="arg2">arg2: (<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.V">V</span>) ⇒ <a href="../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.K">K</span>, <a href="../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>)] with <a href="../Metadata.html" class="extype" name="geotrellis.spark.Metadata">Metadata</a>[<a href="../TileLayerMetadata.html" class="extype" name="geotrellis.spark.TileLayerMetadata">TileLayerMetadata</a>[<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.K">K</span>]]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="params">(<span name="elevation">elevation: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.K">K</span>, <span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.V">V</span>)] with <a href="../Metadata.html" class="extype" name="geotrellis.spark.Metadata">Metadata</a>[<a href="../TileLayerMetadata.html" class="extype" name="geotrellis.spark.TileLayerMetadata">TileLayerMetadata</a>[<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.K">K</span>]]</span>, <span name="ps">ps: <span class="extype" name="scala.Seq">Seq</span>[<a href="Viewpoint.html" class="extype" name="geotrellis.spark.viewshed.Viewpoint">Viewpoint</a>]</span>, <span name="maxDistance">maxDistance: <span class="extype" name="scala.Double">Double</span></span>, <span name="curvature">curvature: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="operator">operator: <a href="../../raster/viewshed/R2Viewshed$$AggregationOperator.html" class="extype" name="geotrellis.raster.viewshed.R2Viewshed.AggregationOperator">AggregationOperator</a> = <span class="symbol"><span class="name"><a href="../../package.html">Or</a></span></span></span>, <span name="epsilon">epsilon: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">1/math.Pi</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.K">K</span>) ⇒ <a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a></span>, <span name="arg1">arg1: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.K">K</span>]</span>, <span name="arg2">arg2: (<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.V">V</span>) ⇒ <a href="../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.K">K</span>, <a href="../../raster/Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>)] with <a href="../Metadata.html" class="extype" name="geotrellis.spark.Metadata">Metadata</a>[<a href="../TileLayerMetadata.html" class="extype" name="geotrellis.spark.TileLayerMetadata">TileLayerMetadata</a>[<span class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.apply.K">K</span>]]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@apply[K,V](elevation:org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[geotrellis.spark.TileLayerMetadata[K]],ps:Seq[geotrellis.spark.viewshed.IterativeViewshed.Point6D],maxDistance:Double,curvature:Boolean,operator:geotrellis.raster.viewshed.R2Viewshed.AggregationOperator,epsilon:Double)(implicitevidence$5:K=&gt;geotrellis.spark.SpatialKey,implicitevidence$6:scala.reflect.ClassTag[K],implicitevidence$7:V=&gt;geotrellis.raster.Tile):org.apache.spark.rdd.RDD[(K,geotrellis.raster.Tile)]withgeotrellis.spark.Metadata[geotrellis.spark.TileLayerMetadata[K]]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@apply[K,V](elevation:org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[geotrellis.spark.TileLayerMetadata[K]],ps:Seq[geotrellis.spark.viewshed.Viewpoint],maxDistance:Double,curvature:Boolean,operator:geotrellis.raster.viewshed.R2Viewshed.AggregationOperator,epsilon:Double)(implicitevidence$5:K=&gt;geotrellis.spark.SpatialKey,implicitevidence$6:scala.reflect.ClassTag[K],implicitevidence$7:V=&gt;geotrellis.raster.Tile):org.apache.spark.rdd.RDD[(K,geotrellis.raster.Tile)]withgeotrellis.spark.Metadata[geotrellis.spark.TileLayerMetadata[K]]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -240,18 +214,18 @@ number of meters by the number of pixels.
               
         </dd></dl></div>
     </li><li name="geotrellis.spark.viewshed.IterativeViewshed#coordinatesToPoints" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="coordinatesToPoints(points:Seq[com.vividsolutions.jts.geom.Coordinate]):Seq[geotrellis.spark.viewshed.IterativeViewshed.Point6D]"></a>
-      <a id="coordinatesToPoints(Seq[Coordinate]):Seq[Point6D]"></a>
+      <a id="coordinatesToPoints(points:Seq[com.vividsolutions.jts.geom.Coordinate]):Seq[geotrellis.spark.viewshed.Viewpoint]"></a>
+      <a id="coordinatesToPoints(Seq[Coordinate]):Seq[Viewpoint]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">coordinatesToPoints</span><span class="params">(<span name="points">points: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="com.vividsolutions.jts.geom.Coordinate">Coordinate</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="IterativeViewshed$$Point6D.html" class="extype" name="geotrellis.spark.viewshed.IterativeViewshed.Point6D">Point6D</a>]</span>
+        <span class="name">coordinatesToPoints</span><span class="params">(<span name="points">points: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="com.vividsolutions.jts.geom.Coordinate">Coordinate</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="Viewpoint.html" class="extype" name="geotrellis.spark.viewshed.Viewpoint">Viewpoint</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@coordinatesToPoints(points:Seq[com.vividsolutions.jts.geom.Coordinate]):Seq[geotrellis.spark.viewshed.IterativeViewshed.Point6D]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.viewshed.IterativeViewshed$@coordinatesToPoints(points:Seq[com.vividsolutions.jts.geom.Coordinate]):Seq[geotrellis.spark.viewshed.Viewpoint]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
