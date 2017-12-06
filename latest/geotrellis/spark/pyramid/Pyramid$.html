@@ -381,7 +381,7 @@
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.pyramid.Pyramid#levelStream" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.spark.pyramid.Pyramid#levelStream" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="levelStream[K,V&lt;:geotrellis.raster.CellGrid,M](rdd:org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M],layoutScheme:geotrellis.spark.tiling.LayoutScheme,startZoom:Int,endZoom:Int,options:geotrellis.spark.pyramid.Pyramid.Options)(implicitevidence$15:geotrellis.spark.SpatialComponent[K],implicitevidence$16:scala.reflect.ClassTag[K],implicitevidence$17:scala.reflect.ClassTag[V],implicitevidence$18:V=&gt;geotrellis.raster.merge.TileMergeMethods[V],implicitevidence$19:V=&gt;geotrellis.raster.prototype.TilePrototypeMethods[V],implicitevidence$20:geotrellis.util.Component[M,geotrellis.spark.tiling.LayoutDefinition],implicitevidence$21:geotrellis.util.Component[M,geotrellis.spark.Bounds[K]]):Stream[(Int,org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M])]"></a>
       <a id="levelStream[K,V&lt;:CellGrid,M](RDD[(K,V)]withMetadata[M],LayoutScheme,Int,Int,Options)(SpatialComponent[K],ClassTag[K],ClassTag[V],(V)⇒TileMergeMethods[V],(V)⇒TilePrototypeMethods[V],Component[M,LayoutDefinition],Component[M,Bounds[K]]):Stream[(Int,RDD[(K,V)]withMetadata[M])]"></a>
       <h4 class="signature">
@@ -397,7 +397,12 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Produce all pyramid levels from start and end zoom.</p><div class="fullcomment"><div class="comment cmt"><p>Produce all pyramid levels from start and end zoom.</p><p>The first entry in the result stream is the tuple of <code>rdd</code> and <code>startZoom</code>.
+The RDDs of pyramid levels have a recursive dependency on their base RDD.
+Because RDDs are lazy take care when consuming this stream.
+Choose to either persist the base layer or trigger jobs
+in order to maximize the caching provided by the Spark BlockManager.
+</p></div><dl class="paramcmts block"><dt class="tparam">K</dt><dd class="cmt"><p>RDD key type (ex: SpatialKey)</p></dd><dt class="tparam">V</dt><dd class="cmt"><p>RDD value type (ex: Tile or MultibandTile)</p></dd><dt class="tparam">M</dt><dd class="cmt"><p>Metadata associated with the RDD[(K,V)]</p></dd><dt class="param">rdd</dt><dd class="cmt"><p>the base layer to be resampled</p></dd><dt class="param">layoutScheme</dt><dd class="cmt"><p>the scheme used to generate next pyramid level</p></dd><dt class="param">startZoom</dt><dd class="cmt"><p>the pyramid or zoom level of base layer</p></dd><dt class="param">endZoom</dt><dd class="cmt"><p>the pyramid or zoom level to stop pyramid process</p></dd><dt class="param">options</dt><dd class="cmt"><p>the options for the pyramid process</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>[up]</p></span></dd></dl></div>
     </li><li name="geotrellis.util.LazyLogging#logger" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logger:com.typesafe.scalalogging.Logger"></a>
       <a id="logger:Logger"></a>
@@ -517,7 +522,7 @@
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.pyramid.Pyramid#up" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.spark.pyramid.Pyramid#up" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="up[K,V&lt;:geotrellis.raster.CellGrid,M](rdd:org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M],layoutScheme:geotrellis.spark.tiling.LayoutScheme,zoom:Int,options:geotrellis.spark.pyramid.Pyramid.Options)(implicitevidence$1:geotrellis.spark.SpatialComponent[K],implicitevidence$2:scala.reflect.ClassTag[K],implicitevidence$3:scala.reflect.ClassTag[V],implicitevidence$4:V=&gt;geotrellis.raster.merge.TileMergeMethods[V],implicitevidence$5:V=&gt;geotrellis.raster.prototype.TilePrototypeMethods[V],implicitevidence$6:geotrellis.util.Component[M,geotrellis.spark.tiling.LayoutDefinition],implicitevidence$7:geotrellis.util.Component[M,geotrellis.spark.Bounds[K]]):(Int,org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M])"></a>
       <a id="up[K,V&lt;:CellGrid,M](RDD[(K,V)]withMetadata[M],LayoutScheme,Int,Options)(SpatialComponent[K],ClassTag[K],ClassTag[V],(V)⇒TileMergeMethods[V],(V)⇒TilePrototypeMethods[V],Component[M,LayoutDefinition],Component[M,Bounds[K]]):(Int,RDD[(K,V)]withMetadata[M])"></a>
       <h4 class="signature">
@@ -533,7 +538,10 @@
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Resample base layer to generate the next level &quot;up&quot; in the pyramid.</p><div class="fullcomment"><div class="comment cmt"><p>Resample base layer to generate the next level &quot;up&quot; in the pyramid.</p><p>When building the next pyramid level each tile is resampled individually, without sampling pixels from neighboring tiles.
+In the common case of <span class="extype" name="ZoomedLayoutScheme">ZoomedLayoutScheme</span>, used when building a power of two pyramid, this means that
+each resampled pixel is going to be equidistant to four pixels in the base layer.
+</p></div><dl class="paramcmts block"><dt class="tparam">K</dt><dd class="cmt"><p>RDD key type (ex: SpatialKey)</p></dd><dt class="tparam">V</dt><dd class="cmt"><p>RDD value type (ex: Tile or MultibandTile)</p></dd><dt class="tparam">M</dt><dd class="cmt"><p>Metadata associated with the RDD[(K,V)]</p></dd><dt class="param">rdd</dt><dd class="cmt"><p>the base layer to be resampled</p></dd><dt class="param">layoutScheme</dt><dd class="cmt"><p>the scheme used to generate next pyramid level</p></dd><dt class="param">zoom</dt><dd class="cmt"><p>the pyramid or zoom level of base layer</p></dd><dt class="param">options</dt><dd class="cmt"><p>the options for the pyramid process</p></dd></dl></div>
     </li><li name="geotrellis.spark.pyramid.Pyramid#upLevels" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="upLevels[K,V&lt;:geotrellis.raster.CellGrid,M](rdd:org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M],layoutScheme:geotrellis.spark.tiling.LayoutScheme,startZoom:Int)(f:(org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M],Int)=&gt;Unit)(implicitevidence$64:geotrellis.spark.SpatialComponent[K],implicitevidence$65:scala.reflect.ClassTag[K],implicitevidence$66:scala.reflect.ClassTag[V],implicitevidence$67:V=&gt;geotrellis.raster.merge.TileMergeMethods[V],implicitevidence$68:V=&gt;geotrellis.raster.prototype.TilePrototypeMethods[V],implicitevidence$69:geotrellis.util.Component[M,geotrellis.spark.tiling.LayoutDefinition],implicitevidence$70:geotrellis.util.Component[M,geotrellis.spark.Bounds[K]]):org.apache.spark.rdd.RDD[(K,V)]withgeotrellis.spark.Metadata[M]"></a>
       <a id="upLevels[K,V&lt;:CellGrid,M](RDD[(K,V)]withMetadata[M],LayoutScheme,Int)((RDD[(K,V)]withMetadata[M],Int)⇒Unit)(SpatialComponent[K],ClassTag[K],ClassTag[V],(V)⇒TileMergeMethods[V],(V)⇒TilePrototypeMethods[V],Component[M,LayoutDefinition],Component[M,Bounds[K]]):RDD[(K,V)]withMetadata[M]"></a>
