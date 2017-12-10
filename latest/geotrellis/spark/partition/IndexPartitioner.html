@@ -51,9 +51,10 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Uses KeyIndex to partition an RDD in memory, giving its records some spatial locality.
-When persisting an RDD partitioned by this partitioner we can safely assume that all records
-contributing to the same SFC index will reside in one partition.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Uses KeyIndex to partition an RDD in memory, giving its records
+some spatial locality.  When persisting an RDD partitioned by this
+partitioner we can safely assume that all records contributing to
+the same SFC index will reside in one partition.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="org.apache.spark.Partitioner">Partitioner</span>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
@@ -188,18 +189,18 @@ contributing to the same SFC index will reside in one partition.
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="geotrellis.spark.partition.IndexPartitioner#breaks" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="breaks:Array[Long]"></a>
-      <a id="breaks:Array[Long]"></a>
+      <a id="breaks:Array[BigInt]"></a>
+      <a id="breaks:Array[BigInt]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">breaks</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Long">Long</span>]</span>
+        <span class="name">breaks</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.BigInt">BigInt</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.partition.IndexPartitioner@breaks:Array[Long]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.partition.IndexPartitioner@breaks:Array[BigInt]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -317,8 +318,10 @@ contributing to the same SFC index will reside in one partition.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Because breaks define divisions rather than breaks all indexable keys will have a bucket.</p><div class="fullcomment"><div class="comment cmt"><p>Because breaks define divisions rather than breaks all indexable keys will have a bucket.
-Keys that are far out of bounds will be assigned to either first or last partition.
+      <p class="shortcomment cmt">Because breaks define divisions rather than breaks, all
+indexable keys will have a bucket.</p><div class="fullcomment"><div class="comment cmt"><p>Because breaks define divisions rather than breaks, all
+indexable keys will have a bucket.  Keys that are far out of
+bounds will be assigned to either first or last partition.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.partition.IndexPartitioner">IndexPartitioner</a> → Partitioner</dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
