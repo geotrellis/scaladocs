@@ -166,6 +166,46 @@
       </a>
     </span>
       <p class="shortcomment cmt">Precomputed view of tile cells as seen by <a href="#get(col:Int,row:Int):Int" class="extmbr" name="geotrellis.raster.ConstantTile#get">get</a> method</p><div class="fullcomment"><div class="comment cmt"><p>Precomputed view of tile cells as seen by <a href="#get(col:Int,row:Int):Int" class="extmbr" name="geotrellis.raster.ConstantTile#get">get</a> method</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="geotrellis.raster.ConstantTile#map" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="map(f:Int=&gt;Int):geotrellis.raster.Tile"></a>
+      <a id="map((Int)⇒Int):Tile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">map</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.ConstantTile@map(f:Int=&gt;Int):geotrellis.raster.Tile" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Map each cell in the given tile to a new one, using the given
+function.</p><div class="fullcomment"><div class="comment cmt"><p>Map each cell in the given tile to a new one, using the given
+function.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>A function from Int to Int, executed at each point of the tile</p></dd><dt>returns</dt><dd class="cmt"><p>The result, a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.ConstantTile">ConstantTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
+    </li><li name="geotrellis.raster.ConstantTile#mapDouble" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="mapDouble(f:Double=&gt;Double):geotrellis.raster.Tile"></a>
+      <a id="mapDouble((Double)⇒Double):Tile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mapDouble</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Double">Double</span>) ⇒ <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.ConstantTile@mapDouble(f:Double=&gt;Double):geotrellis.raster.Tile" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Map each cell in the given tile to a new one, using the given
+function.</p><div class="fullcomment"><div class="comment cmt"><p>Map each cell in the given tile to a new one, using the given
+function.
+</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>A function from Double to Double, executed at each point of the tile</p></dd><dt>returns</dt><dd class="cmt"><p>The result, a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.ConstantTile">ConstantTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
     </li><li name="geotrellis.raster.Tile#mutable" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="mutable:geotrellis.raster.MutableArrayTile"></a>
       <a id="mutable:MutableArrayTile"></a>
@@ -961,26 +1001,6 @@ If cell <a href="DataType.html" class="extype" name="geotrellis.raster.DataType"
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../util/LazyLogging.html" class="extype" name="geotrellis.util.LazyLogging">LazyLogging</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ConstantTile#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="map(f:Int=&gt;Int):geotrellis.raster.Tile"></a>
-      <a id="map((Int)⇒Int):Tile"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">map</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.ConstantTile@map(f:Int=&gt;Int):geotrellis.raster.Tile" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Map each cell in the given tile to a new one, using the given
-function.</p><div class="fullcomment"><div class="comment cmt"><p>Map each cell in the given tile to a new one, using the given
-function.
-</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>A function from Int to Int, executed at each point of the tile</p></dd><dt>returns</dt><dd class="cmt"><p>The result, a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.ConstantTile">ConstantTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
     </li><li name="geotrellis.raster.MappableTile#map" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="map(f:(Int,Int,Int)=&gt;Int):T"></a>
       <a id="map((Int,Int,Int)⇒Int):Tile"></a>
@@ -1001,26 +1021,6 @@ function.
 row, and value at that position and returns an integer.</p><div class="fullcomment"><div class="comment cmt"><p>Map over the tiles using a function which accepts the column,
 row, and value at that position and returns an integer.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="MappableTile.html" class="extype" name="geotrellis.raster.MappableTile">MappableTile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ConstantTile#mapDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapDouble(f:Double=&gt;Double):geotrellis.raster.Tile"></a>
-      <a id="mapDouble((Double)⇒Double):Tile"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">mapDouble</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Double">Double</span>) ⇒ <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.ConstantTile@mapDouble(f:Double=&gt;Double):geotrellis.raster.Tile" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Map each cell in the given tile to a new one, using the given
-function.</p><div class="fullcomment"><div class="comment cmt"><p>Map each cell in the given tile to a new one, using the given
-function.
-</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>A function from Double to Double, executed at each point of the tile</p></dd><dt>returns</dt><dd class="cmt"><p>The result, a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.ConstantTile">ConstantTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
     </li><li name="geotrellis.raster.MappableTile#mapDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mapDouble(f:(Int,Int,Double)=&gt;Double):T"></a>
       <a id="mapDouble((Int,Int,Double)⇒Double):Tile"></a>
