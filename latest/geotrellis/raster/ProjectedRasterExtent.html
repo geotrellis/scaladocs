@@ -1,9 +1,9 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>RasterExtent - geotrellis.raster.RasterExtent</title>
-          <meta name="description" content="RasterExtent - geotrellis.raster.RasterExtent" />
-          <meta name="keywords" content="RasterExtent geotrellis.raster.RasterExtent" />
+          <title>ProjectedRasterExtent - geotrellis.raster.ProjectedRasterExtent</title>
+          <meta name="description" content="ProjectedRasterExtent - geotrellis.raster.ProjectedRasterExtent" />
+          <meta name="keywords" content="ProjectedRasterExtent geotrellis.raster.ProjectedRasterExtent" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -16,7 +16,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../index.html';
-            var hash = 'geotrellis.raster.RasterExtent';
+            var hash = 'geotrellis.raster.ProjectedRasterExtent';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -28,14 +28,14 @@
         </head>
         <body class="type">
       <div id="definition">
-        <a href="RasterExtent$.html" title="See companion object"><img alt="Class/Object" src="../../lib/class_to_object_big.png" /></a>
+        <a href="ProjectedRasterExtent$.html" title="See companion object"><img alt="Class/Object" src="../../lib/class_to_object_big.png" /></a>
         <p id="owner"><a href="../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="package.html" class="extype" name="geotrellis.raster">raster</a></p>
-        <h1><a href="RasterExtent$.html" title="See companion object">RasterExtent</a></h1><h3><span class="morelinks"><div>
+        <h1><a href="ProjectedRasterExtent$.html" title="See companion object">ProjectedRasterExtent</a></h1><h3><span class="morelinks"><div>
             Related Docs:
-            <a href="RasterExtent$.html" title="See companion object">object RasterExtent</a>
+            <a href="ProjectedRasterExtent$.html" title="See companion object">object ProjectedRasterExtent</a>
             | <a href="package.html" class="extype" name="geotrellis.raster">package raster</a>
           </div></span></h3><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -44,48 +44,17 @@
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">case class</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">RasterExtent</span><span class="params">(<span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="cellwidth">cellwidth: <span class="extype" name="scala.Double">Double</span></span>, <span name="cellheight">cellheight: <span class="extype" name="scala.Double">Double</span></span>, <span name="cols">cols: <span class="extype" name="scala.Int">Int</span></span>, <span name="rows">rows: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a> with <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">ProjectedRasterExtent</span><span class="result"> extends <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p><a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> objects represent the geographic extent
-(envelope) of a raster.</p><p>The Raster extent has two coordinate concepts involved: map
-coordinates and grid coordinates. Map coordinates are what the
-Extent class uses, and specifies points using an X coordinate and
-a Y coordinate. The X coordinate is oriented along west to east
-such that the larger the X coordinate, the more eastern the
-point. The Y coordinate is along south to north such that the
-larger the Y coordinate, the more Northern the point.</p><p>This contrasts with the grid coordinate system. The grid
-coordinate system does not actually reference points on the map,
-but instead a cell of the raster that represents values for some
-square area of the map. The column axis is similar in that the
-number gets larger as one goes from west to east; however, the row
-axis is inverted from map coordinates: as the row number
-increases, the cell is heading south. The top row is labeled as 0,
-and the next 1, so that the highest indexed row is the southern
-most row of the raster.  A cell has a height and a width that is
-in terms of map units. You can think of it as each cell is itself
-an extent, with width cellwidth and height cellheight. When a cell
-needs to be represented or thought of as a point, the center of
-the cell will be used.  So when gridToMap is called, what is
-returned is the center point, in map coordinates.</p><p>Map points are considered to be 'inside' the cell based on these
-rules:</p><ul><li>If the point is inside the area of the cell, it is included in
-   the cell.</li><li>If the point lies on the north or west border of the cell, it
-   is included in the cell.</li><li>If the point lies on the south or east border of the cell, it
-   is not included in the cell, it is included in the next
-   southern or eastern cell, respectively.</li></ul><p>Note that based on these rules, the eastern and southern borders
-of an Extent are not actually considered to be part of the
-RasterExtent.
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a>, <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
-        </div><div class="toggleContainer block">
-            <span class="toggle">Known Subclasses</span>
-            <div class="subClasses hiddenContent"><a href="ProjectedRasterExtent.html" class="extype" name="geotrellis.raster.ProjectedRasterExtent">ProjectedRasterExtent</a></div>
-          </div></div>
+          <div class="superTypes hiddenContent"><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a>, <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
         
 
       <div id="mbrsel">
@@ -102,7 +71,7 @@ RasterExtent.
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.raster.RasterExtent"><span>RasterExtent</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="geotrellis.raster.Grid"><span>Grid</span></li><li class="in" name="geotrellis.raster.GridExtent"><span>GridExtent</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.raster.ProjectedRasterExtent"><span>ProjectedRasterExtent</span></li><li class="in" name="geotrellis.raster.RasterExtent"><span>RasterExtent</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="geotrellis.raster.Grid"><span>Grid</span></li><li class="in" name="geotrellis.raster.GridExtent"><span>GridExtent</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -121,19 +90,19 @@ RasterExtent.
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="geotrellis.raster.RasterExtent#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(extent:geotrellis.vector.Extent,cellwidth:Double,cellheight:Double,cols:Int,rows:Int):geotrellis.raster.RasterExtent"></a>
-      <a id="&lt;init&gt;:RasterExtent"></a>
+              <ol><li name="geotrellis.raster.ProjectedRasterExtent#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(projectedExtent:geotrellis.vector.ProjectedExtent,cellwidth:Double,cellheight:Double,cols:Int,rows:Int):geotrellis.raster.ProjectedRasterExtent"></a>
+      <a id="&lt;init&gt;:ProjectedRasterExtent"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">RasterExtent</span><span class="params">(<span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="cellwidth">cellwidth: <span class="extype" name="scala.Double">Double</span></span>, <span name="cellheight">cellheight: <span class="extype" name="scala.Double">Double</span></span>, <span name="cols">cols: <span class="extype" name="scala.Int">Int</span></span>, <span name="rows">rows: <span class="extype" name="scala.Int">Int</span></span>)</span>
+        <span class="name">ProjectedRasterExtent</span><span class="params">(<span name="projectedExtent">projectedExtent: <a href="../vector/ProjectedExtent.html" class="extype" name="geotrellis.vector.ProjectedExtent">ProjectedExtent</a></span>, <span name="cellwidth">cellwidth: <span class="extype" name="scala.Double">Double</span></span>, <span name="cellheight">cellheight: <span class="extype" name="scala.Double">Double</span></span>, <span name="cols">cols: <span class="extype" name="scala.Int">Int</span></span>, <span name="rows">rows: <span class="extype" name="scala.Int">Int</span></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@&lt;init&gt;(extent:geotrellis.vector.Extent,cellwidth:Double,cellheight:Double,cols:Int,rows:Int):geotrellis.raster.RasterExtent" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@&lt;init&gt;(projectedExtent:geotrellis.vector.ProjectedExtent,cellwidth:Double,cellheight:Double,cols:Int,rows:Int):geotrellis.raster.ProjectedRasterExtent" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -159,7 +128,7 @@ RasterExtent.
         <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@!=(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -176,7 +145,7 @@ RasterExtent.
         <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@##():Int" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@##():Int" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -193,7 +162,7 @@ RasterExtent.
         <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@==(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@==(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -207,10 +176,10 @@ RasterExtent.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">adjustTo</span><span class="params">(<span name="tileLayout">tileLayout: <a href="TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>
+        <span class="name">adjustTo</span><span class="params">(<span name="tileLayout">tileLayout: <a href="TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>)</span><span class="result">: <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@adjustTo(tileLayout:geotrellis.raster.TileLayout):geotrellis.raster.RasterExtent" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@adjustTo(tileLayout:geotrellis.raster.TileLayout):geotrellis.raster.RasterExtent" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -218,7 +187,7 @@ RasterExtent.
 layout.</p><div class="fullcomment"><div class="comment cmt"><p>Adjusts a raster extent so that it can encompass the tile
 layout.  Will resample the extent, but keep the resolution, and
 preserve north and west borders
-</p></div></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -231,7 +200,7 @@ preserve north and west borders
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@asInstanceOf[T0]:T0" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -248,12 +217,12 @@ preserve north and west borders
         <span class="name">cellSize</span><span class="result">: <a href="CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@cellSize:geotrellis.raster.CellSize" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@cellSize:geotrellis.raster.CellSize" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
-    </li><li name="geotrellis.raster.RasterExtent#cellheight" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.raster.ProjectedRasterExtent#cellheight" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="cellheight:Double"></a>
       <a id="cellheight:Double"></a>
       <h4 class="signature">
@@ -265,12 +234,12 @@ preserve north and west borders
         <span class="name">cellheight</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@cellheight:Double" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@cellheight:Double" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> → <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
-    </li><li name="geotrellis.raster.RasterExtent#cellwidth" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.ProjectedRasterExtent">ProjectedRasterExtent</a> → <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> → <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
+    </li><li name="geotrellis.raster.ProjectedRasterExtent#cellwidth" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="cellwidth:Double"></a>
       <a id="cellwidth:Double"></a>
       <h4 class="signature">
@@ -282,11 +251,11 @@ preserve north and west borders
         <span class="name">cellwidth</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@cellwidth:Double" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@cellwidth:Double" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> → <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.ProjectedRasterExtent">ProjectedRasterExtent</a> → <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> → <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -299,7 +268,7 @@ preserve north and west borders
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@clone():Object" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@clone():Object" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -322,11 +291,11 @@ preserve north and west borders
         <span class="name">cols</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@cols:Int" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@cols:Int" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> → <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> → <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
     </li><li name="geotrellis.raster.RasterExtent#combine" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="combine(that:geotrellis.raster.RasterExtent):geotrellis.raster.RasterExtent"></a>
       <a id="combine(RasterExtent):RasterExtent"></a>
@@ -336,18 +305,18 @@ preserve north and west borders
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">combine</span><span class="params">(<span name="that">that: <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>
+        <span class="name">combine</span><span class="params">(<span name="that">that: <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>)</span><span class="result">: <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@combine(that:geotrellis.raster.RasterExtent):geotrellis.raster.RasterExtent" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@combine(that:geotrellis.raster.RasterExtent):geotrellis.raster.RasterExtent" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Combine two different <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>s (which must have the
-same cellsizes).</p><div class="fullcomment"><div class="comment cmt"><p>Combine two different <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>s (which must have the
+      <p class="shortcomment cmt">Combine two different <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>s (which must have the
+same cellsizes).</p><div class="fullcomment"><div class="comment cmt"><p>Combine two different <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>s (which must have the
 same cellsizes).  The result is a new extent at the same
 resolution.
-</p></div></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></dd></dl></div>
     </li><li name="geotrellis.raster.GridExtent#createAlignedGridExtent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="createAlignedGridExtent(targetExtent:geotrellis.vector.Extent):geotrellis.raster.GridExtent"></a>
       <a id="createAlignedGridExtent(Extent):GridExtent"></a>
@@ -360,7 +329,7 @@ resolution.
         <span class="name">createAlignedGridExtent</span><span class="params">(<span name="targetExtent">targetExtent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span><span class="result">: <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@createAlignedGridExtent(targetExtent:geotrellis.vector.Extent):geotrellis.raster.GridExtent" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@createAlignedGridExtent(targetExtent:geotrellis.vector.Extent):geotrellis.raster.GridExtent" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -379,10 +348,10 @@ the given extent is covered, that lines up with the grid.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">createAlignedRasterExtent</span><span class="params">(<span name="targetExtent">targetExtent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>
+        <span class="name">createAlignedRasterExtent</span><span class="params">(<span name="targetExtent">targetExtent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span><span class="result">: <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@createAlignedRasterExtent(targetExtent:geotrellis.vector.Extent):geotrellis.raster.RasterExtent" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@createAlignedRasterExtent(targetExtent:geotrellis.vector.Extent):geotrellis.raster.RasterExtent" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -392,6 +361,23 @@ resolution, and grid layout.</p><p>For example, the resulting RasterExtent will 
 extent, but will have the smallest extent such that the whole of
 the given extent is covered, that lines up with the grid.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
+    </li><li name="geotrellis.raster.ProjectedRasterExtent#crs" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="crs:geotrellis.proj4.CRS"></a>
+      <a id="crs:CRS"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">crs</span><span class="result">: <a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@crs:geotrellis.proj4.CRS" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.raster.Grid#dimensions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="dimensions:(Int,Int)"></a>
       <a id="dimensions:(Int,Int)"></a>
@@ -404,7 +390,7 @@ the given extent is covered, that lines up with the grid.
         <span class="name">dimensions</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@dimensions:(Int,Int)" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@dimensions:(Int,Int)" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -421,7 +407,7 @@ the given extent is covered, that lines up with the grid.
         <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -438,7 +424,7 @@ the given extent is covered, that lines up with the grid.
         <span class="name">equals</span><span class="params">(<span name="o">o: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@equals(o:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@equals(o:Any):Boolean" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -455,11 +441,11 @@ the given extent is covered, that lines up with the grid.
         <span class="name">extent</span><span class="result">: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@extent:geotrellis.vector.Extent" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@extent:geotrellis.vector.Extent" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> → <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> → <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
     </li><li name="geotrellis.raster.GridExtent#extentFor" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="extentFor(gridBounds:geotrellis.raster.GridBounds,clamp:Boolean):geotrellis.vector.Extent"></a>
       <a id="extentFor(GridBounds,Boolean):Extent"></a>
@@ -472,7 +458,7 @@ the given extent is covered, that lines up with the grid.
         <span class="name">extentFor</span><span class="params">(<span name="gridBounds">gridBounds: <a href="GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>, <span name="clamp">clamp: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result">: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@extentFor(gridBounds:geotrellis.raster.GridBounds,clamp:Boolean):geotrellis.vector.Extent" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@extentFor(gridBounds:geotrellis.raster.GridBounds,clamp:Boolean):geotrellis.vector.Extent" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -496,7 +482,7 @@ outside of this RasterExtent's extent.
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@finalize():Unit" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@finalize():Unit" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -519,7 +505,7 @@ outside of this RasterExtent's extent.
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@getClass():Class[_]" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@getClass():Class[_]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -536,7 +522,7 @@ outside of this RasterExtent's extent.
         <span class="name">gridBounds</span><span class="result">: <a href="GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@gridBounds:geotrellis.raster.GridBounds" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@gridBounds:geotrellis.raster.GridBounds" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -553,7 +539,7 @@ outside of this RasterExtent's extent.
         <span class="name">gridBoundsFor</span><span class="params">(<span name="subExtent">subExtent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="clamp">clamp: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result">: <a href="GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@gridBoundsFor(subExtent:geotrellis.vector.Extent,clamp:Boolean):geotrellis.raster.GridBounds" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@gridBoundsFor(subExtent:geotrellis.vector.Extent,clamp:Boolean):geotrellis.raster.GridBounds" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -561,13 +547,13 @@ outside of this RasterExtent's extent.
 smallest subgrid of containing all points within the extent.</p><div class="fullcomment"><div class="comment cmt"><p>Gets the GridBounds aligned with this RasterExtent that is the
 smallest subgrid of containing all points within the extent. The
 extent is considered inclusive on it's north and west borders,
-exclusive on it's east and south borders.  See <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>
+exclusive on it's east and south borders.  See <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>
 for a discussion of grid and extent boundary concepts.</p><p>The 'clamp' flag determines whether or not to clamp the
 GridBounds to the RasterExtent; defaults to true. If false,
 GridBounds can contain negative values, or values outside of
 this RasterExtent's boundaries.
-</p></div><dl class="paramcmts block"><dt class="param">subExtent</dt><dd class="cmt"><p>The extent to get the grid bounds for</p></dd><dt class="param">clamp</dt><dd class="cmt"><p>A boolean</p></dd></dl></div>
-    </li><li name="geotrellis.raster.RasterExtent#gridColToMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+</p></div><dl class="paramcmts block"><dt class="param">subExtent</dt><dd class="cmt"><p>The extent to get the grid bounds for</p></dd><dt class="param">clamp</dt><dd class="cmt"><p>A boolean</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></dd></dl></div>
+    </li><li name="geotrellis.raster.RasterExtent#gridColToMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="gridColToMap(col:Int):Double"></a>
       <a id="gridColToMap(Int):Double"></a>
       <h4 class="signature">
@@ -579,13 +565,15 @@ this RasterExtent's boundaries.
         <span class="name">gridColToMap</span><span class="params">(<span name="col">col: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@gridColToMap(col:Int):Double" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@gridColToMap(col:Int):Double" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">For a give column, find the corresponding x-coordinate in the
-grid of the present <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>.</p>
-    </li><li name="geotrellis.raster.RasterExtent#gridRowToMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+grid of the present <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>.</p><div class="fullcomment"><div class="comment cmt"><p>For a give column, find the corresponding x-coordinate in the
+grid of the present <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></dd></dl></div>
+    </li><li name="geotrellis.raster.RasterExtent#gridRowToMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="gridRowToMap(row:Int):Double"></a>
       <a id="gridRowToMap(Int):Double"></a>
       <h4 class="signature">
@@ -597,13 +585,15 @@ grid of the present <a href="" class="extype" name="geotrellis.raster.RasterExte
         <span class="name">gridRowToMap</span><span class="params">(<span name="row">row: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@gridRowToMap(row:Int):Double" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@gridRowToMap(row:Int):Double" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">For a give row, find the corresponding y-coordinate in the grid
-of the present <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>.</p>
-    </li><li name="geotrellis.raster.RasterExtent#gridToMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+of the present <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>.</p><div class="fullcomment"><div class="comment cmt"><p>For a give row, find the corresponding y-coordinate in the grid
+of the present <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></dd></dl></div>
+    </li><li name="geotrellis.raster.RasterExtent#gridToMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="gridToMap(col:Int,row:Int):(Double,Double)"></a>
       <a id="gridToMap(Int,Int):(Double,Double)"></a>
       <h4 class="signature">
@@ -615,11 +605,12 @@ of the present <a href="" class="extype" name="geotrellis.raster.RasterExtent">R
         <span class="name">gridToMap</span><span class="params">(<span name="col">col: <span class="extype" name="scala.Int">Int</span></span>, <span name="row">row: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: (<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@gridToMap(col:Int,row:Int):(Double,Double)" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@gridToMap(col:Int,row:Int):(Double,Double)" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">The map coordinate of a grid cell is the center point.</p>
+      <p class="shortcomment cmt">The map coordinate of a grid cell is the center point.</p><div class="fullcomment"><div class="comment cmt"><p>The map coordinate of a grid cell is the center point.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></dd></dl></div>
     </li><li name="geotrellis.raster.GridExtent#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -632,7 +623,7 @@ of the present <a href="" class="extype" name="geotrellis.raster.RasterExtent">R
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@hashCode():Int" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@hashCode():Int" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -649,7 +640,7 @@ of the present <a href="" class="extype" name="geotrellis.raster.RasterExtent">R
         <span class="name">isGridExtentAlligned</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@isGridExtentAlligned():Boolean" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@isGridExtentAlligned():Boolean" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -668,12 +659,12 @@ This is true when the extent is evenly divided by cellheight and cellwidth.
         <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.raster.RasterExtent#mapToGrid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.raster.RasterExtent#mapToGrid" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mapToGrid(p:geotrellis.vector.Point):(Int,Int)"></a>
       <a id="mapToGrid(Point):(Int,Int)"></a>
       <h4 class="signature">
@@ -685,12 +676,13 @@ This is true when the extent is evenly divided by cellheight and cellwidth.
         <span class="name">mapToGrid</span><span class="params">(<span name="p">p: <a href="../vector/Point.html" class="extype" name="geotrellis.vector.Point">Point</a></span>)</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@mapToGrid(p:geotrellis.vector.Point):(Int,Int)" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@mapToGrid(p:geotrellis.vector.Point):(Int,Int)" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Convert a point to grid coordinates (col, row).</p>
-    </li><li name="geotrellis.raster.RasterExtent#mapToGrid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Convert a point to grid coordinates (col, row).</p><div class="fullcomment"><div class="comment cmt"><p>Convert a point to grid coordinates (col, row).
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></dd></dl></div>
+    </li><li name="geotrellis.raster.RasterExtent#mapToGrid" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mapToGrid(mapCoord:(Double,Double)):(Int,Int)"></a>
       <a id="mapToGrid((Double,Double)):(Int,Int)"></a>
       <h4 class="signature">
@@ -702,12 +694,13 @@ This is true when the extent is evenly divided by cellheight and cellwidth.
         <span class="name">mapToGrid</span><span class="params">(<span name="mapCoord">mapCoord: (<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>)</span>)</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@mapToGrid(mapCoord:(Double,Double)):(Int,Int)" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@mapToGrid(mapCoord:(Double,Double)):(Int,Int)" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Convert map coordinate tuple (x, y) to grid coordinates (col, row).</p>
-    </li><li name="geotrellis.raster.RasterExtent#mapToGrid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Convert map coordinate tuple (x, y) to grid coordinates (col, row).</p><div class="fullcomment"><div class="comment cmt"><p>Convert map coordinate tuple (x, y) to grid coordinates (col, row).
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></dd></dl></div>
+    </li><li name="geotrellis.raster.RasterExtent#mapToGrid" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mapToGrid(x:Double,y:Double):(Int,Int)"></a>
       <a id="mapToGrid(Double,Double):(Int,Int)"></a>
       <h4 class="signature">
@@ -719,12 +712,13 @@ This is true when the extent is evenly divided by cellheight and cellwidth.
         <span class="name">mapToGrid</span><span class="params">(<span name="x">x: <span class="extype" name="scala.Double">Double</span></span>, <span name="y">y: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@mapToGrid(x:Double,y:Double):(Int,Int)" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@mapToGrid(x:Double,y:Double):(Int,Int)" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Convert map coordinates (x, y) to grid coordinates (col, row).</p>
-    </li><li name="geotrellis.raster.RasterExtent#mapXToGrid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Convert map coordinates (x, y) to grid coordinates (col, row).</p><div class="fullcomment"><div class="comment cmt"><p>Convert map coordinates (x, y) to grid coordinates (col, row).
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></dd></dl></div>
+    </li><li name="geotrellis.raster.RasterExtent#mapXToGrid" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mapXToGrid(x:Double):Int"></a>
       <a id="mapXToGrid(Double):Int"></a>
       <h4 class="signature">
@@ -736,12 +730,13 @@ This is true when the extent is evenly divided by cellheight and cellwidth.
         <span class="name">mapXToGrid</span><span class="params">(<span name="x">x: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@mapXToGrid(x:Double):Int" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@mapXToGrid(x:Double):Int" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Convert map coordinate x to grid coordinate column.</p>
-    </li><li name="geotrellis.raster.RasterExtent#mapXToGridDouble" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Convert map coordinate x to grid coordinate column.</p><div class="fullcomment"><div class="comment cmt"><p>Convert map coordinate x to grid coordinate column.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></dd></dl></div>
+    </li><li name="geotrellis.raster.RasterExtent#mapXToGridDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mapXToGridDouble(x:Double):Double"></a>
       <a id="mapXToGridDouble(Double):Double"></a>
       <h4 class="signature">
@@ -753,12 +748,13 @@ This is true when the extent is evenly divided by cellheight and cellwidth.
         <span class="name">mapXToGridDouble</span><span class="params">(<span name="x">x: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@mapXToGridDouble(x:Double):Double" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@mapXToGridDouble(x:Double):Double" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Convert map coordinate x to grid coordinate column.</p>
-    </li><li name="geotrellis.raster.RasterExtent#mapYToGrid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Convert map coordinate x to grid coordinate column.</p><div class="fullcomment"><div class="comment cmt"><p>Convert map coordinate x to grid coordinate column.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></dd></dl></div>
+    </li><li name="geotrellis.raster.RasterExtent#mapYToGrid" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mapYToGrid(y:Double):Int"></a>
       <a id="mapYToGrid(Double):Int"></a>
       <h4 class="signature">
@@ -770,12 +766,13 @@ This is true when the extent is evenly divided by cellheight and cellwidth.
         <span class="name">mapYToGrid</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@mapYToGrid(y:Double):Int" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@mapYToGrid(y:Double):Int" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Convert map coordinate y to grid coordinate row.</p>
-    </li><li name="geotrellis.raster.RasterExtent#mapYToGridDouble" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Convert map coordinate y to grid coordinate row.</p><div class="fullcomment"><div class="comment cmt"><p>Convert map coordinate y to grid coordinate row.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></dd></dl></div>
+    </li><li name="geotrellis.raster.RasterExtent#mapYToGridDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mapYToGridDouble(y:Double):Double"></a>
       <a id="mapYToGridDouble(Double):Double"></a>
       <h4 class="signature">
@@ -787,11 +784,12 @@ This is true when the extent is evenly divided by cellheight and cellwidth.
         <span class="name">mapYToGridDouble</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@mapYToGridDouble(y:Double):Double" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@mapYToGridDouble(y:Double):Double" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Convert map coordinate y to grid coordinate row.</p>
+      <p class="shortcomment cmt">Convert map coordinate y to grid coordinate row.</p><div class="fullcomment"><div class="comment cmt"><p>Convert map coordinate y to grid coordinate row.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -804,7 +802,7 @@ This is true when the extent is evenly divided by cellheight and cellwidth.
         <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -821,7 +819,7 @@ This is true when the extent is evenly divided by cellheight and cellwidth.
         <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@notify():Unit" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@notify():Unit" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -838,12 +836,29 @@ This is true when the extent is evenly divided by cellheight and cellwidth.
         <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@notifyAll():Unit" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@notifyAll():Unit" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.raster.RasterExtent#rasterExtentFor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.raster.ProjectedRasterExtent#projectedExtent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="projectedExtent:geotrellis.vector.ProjectedExtent"></a>
+      <a id="projectedExtent:ProjectedExtent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">projectedExtent</span><span class="result">: <a href="../vector/ProjectedExtent.html" class="extype" name="geotrellis.vector.ProjectedExtent">ProjectedExtent</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@projectedExtent:geotrellis.vector.ProjectedExtent" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.RasterExtent#rasterExtentFor" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="rasterExtentFor(gridBounds:geotrellis.raster.GridBounds):geotrellis.raster.RasterExtent"></a>
       <a id="rasterExtentFor(GridBounds):RasterExtent"></a>
       <h4 class="signature">
@@ -852,15 +867,17 @@ This is true when the extent is evenly divided by cellheight and cellwidth.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">rasterExtentFor</span><span class="params">(<span name="gridBounds">gridBounds: <a href="GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>
+        <span class="name">rasterExtentFor</span><span class="params">(<span name="gridBounds">gridBounds: <a href="GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>)</span><span class="result">: <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@rasterExtentFor(gridBounds:geotrellis.raster.GridBounds):geotrellis.raster.RasterExtent" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@rasterExtentFor(gridBounds:geotrellis.raster.GridBounds):geotrellis.raster.RasterExtent" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Returns a new <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> which represents the GridBounds
-in relation to this RasterExtent.</p>
+      <p class="shortcomment cmt">Returns a new <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> which represents the GridBounds
+in relation to this RasterExtent.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a new <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> which represents the GridBounds
+in relation to this RasterExtent.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></dd></dl></div>
     </li><li name="geotrellis.raster.RasterExtent#rows" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="rows:Int"></a>
       <a id="rows:Int"></a>
@@ -873,11 +890,11 @@ in relation to this RasterExtent.</p>
         <span class="name">rows</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@rows:Int" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@rows:Int" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> → <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> → <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
     </li><li name="geotrellis.raster.Grid#size" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="size:Int"></a>
       <a id="size:Int"></a>
@@ -890,7 +907,7 @@ in relation to this RasterExtent.</p>
         <span class="name">size</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@size:Int" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@size:Int" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -908,7 +925,7 @@ in relation to this RasterExtent.</p>
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -922,10 +939,10 @@ in relation to this RasterExtent.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toRasterExtent</span><span class="params">()</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>
+        <span class="name">toRasterExtent</span><span class="params">()</span><span class="result">: <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@toRasterExtent():geotrellis.raster.RasterExtent" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@toRasterExtent():geotrellis.raster.RasterExtent" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -947,7 +964,7 @@ in relation to this RasterExtent.</p>
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@toString():String" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@toString():String" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -964,7 +981,7 @@ in relation to this RasterExtent.</p>
         <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@wait():Unit" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@wait():Unit" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -987,7 +1004,7 @@ in relation to this RasterExtent.</p>
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -1010,7 +1027,7 @@ in relation to this RasterExtent.</p>
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@wait(x$1:Long):Unit" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@wait(x$1:Long):Unit" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -1021,7 +1038,7 @@ in relation to this RasterExtent.</p>
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.raster.RasterExtent#withDimensions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.raster.RasterExtent#withDimensions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="withDimensions(targetCols:Int,targetRows:Int):geotrellis.raster.RasterExtent"></a>
       <a id="withDimensions(Int,Int):RasterExtent"></a>
       <h4 class="signature">
@@ -1030,16 +1047,18 @@ in relation to this RasterExtent.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">withDimensions</span><span class="params">(<span name="targetCols">targetCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="targetRows">targetRows: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>
+        <span class="name">withDimensions</span><span class="params">(<span name="targetCols">targetCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="targetRows">targetRows: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@withDimensions(targetCols:Int,targetRows:Int):geotrellis.raster.RasterExtent" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@withDimensions(targetCols:Int,targetRows:Int):geotrellis.raster.RasterExtent" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Returns a <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> with the same extent and the given
-number of columns and rows.</p>
-    </li><li name="geotrellis.raster.RasterExtent#withResolution" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Returns a <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> with the same extent and the given
+number of columns and rows.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> with the same extent and the given
+number of columns and rows.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></dd></dl></div>
+    </li><li name="geotrellis.raster.RasterExtent#withResolution" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="withResolution(cellSize:geotrellis.raster.CellSize):geotrellis.raster.RasterExtent"></a>
       <a id="withResolution(CellSize):RasterExtent"></a>
       <h4 class="signature">
@@ -1048,17 +1067,20 @@ number of columns and rows.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">withResolution</span><span class="params">(<span name="cellSize">cellSize: <a href="CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>
+        <span class="name">withResolution</span><span class="params">(<span name="cellSize">cellSize: <a href="CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a></span>)</span><span class="result">: <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@withResolution(cellSize:geotrellis.raster.CellSize):geotrellis.raster.RasterExtent" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@withResolution(cellSize:geotrellis.raster.CellSize):geotrellis.raster.RasterExtent" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Returns a <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> with the same extent, but a modified
+      <p class="shortcomment cmt">Returns a <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> with the same extent, but a modified
 number of columns and rows based on the given cell height and
-width.</p>
-    </li><li name="geotrellis.raster.RasterExtent#withResolution" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+width.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> with the same extent, but a modified
+number of columns and rows based on the given cell height and
+width.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></dd></dl></div>
+    </li><li name="geotrellis.raster.RasterExtent#withResolution" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="withResolution(targetCellWidth:Double,targetCellHeight:Double):geotrellis.raster.RasterExtent"></a>
       <a id="withResolution(Double,Double):RasterExtent"></a>
       <h4 class="signature">
@@ -1067,16 +1089,19 @@ width.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">withResolution</span><span class="params">(<span name="targetCellWidth">targetCellWidth: <span class="extype" name="scala.Double">Double</span></span>, <span name="targetCellHeight">targetCellHeight: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>
+        <span class="name">withResolution</span><span class="params">(<span name="targetCellWidth">targetCellWidth: <span class="extype" name="scala.Double">Double</span></span>, <span name="targetCellHeight">targetCellHeight: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterExtent@withResolution(targetCellWidth:Double,targetCellHeight:Double):geotrellis.raster.RasterExtent" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.ProjectedRasterExtent@withResolution(targetCellWidth:Double,targetCellHeight:Double):geotrellis.raster.RasterExtent" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Returns a <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> with the same extent, but a modified
+      <p class="shortcomment cmt">Returns a <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> with the same extent, but a modified
 number of columns and rows based on the given cell height and
-width.</p>
+width.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> with the same extent, but a modified
+number of columns and rows based on the given cell height and
+width.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></dd></dl></div>
     </li></ol>
             </div>
 
@@ -1086,7 +1111,9 @@ width.</p>
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.Product">
+        <div class="parent" name="geotrellis.raster.RasterExtent">
+              <h3>Inherited from <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></h3>
+            </div><div class="parent" name="scala.Product">
               <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
             </div><div class="parent" name="scala.Equals">
               <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>

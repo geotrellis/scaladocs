@@ -384,6 +384,28 @@
       </a>
     </span>
       
+    </li><li name="geotrellis.vector.ProjectedExtent#reprojectAsPolygon" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reprojectAsPolygon(dest:geotrellis.proj4.CRS,relError:Double):geotrellis.vector.Polygon"></a>
+      <a id="reprojectAsPolygon(CRS,Double):Polygon"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reprojectAsPolygon</span><span class="params">(<span name="dest">dest: <a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="relError">relError: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">0.01</span></span>)</span><span class="result">: <a href="Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vector.ProjectedExtent@reprojectAsPolygon(dest:geotrellis.proj4.CRS,relError:Double):geotrellis.vector.Polygon" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Performs adaptive refinement to produce a Polygon representation of the projected region.</p><div class="fullcomment"><div class="comment cmt"><p>Performs adaptive refinement to produce a Polygon representation of the projected region.</p><p>Generally, rectangular regions become curvilinear regions after geodetic projection.
+This function creates a polygon giving an accurate representation of the post-projection
+region.  This function does its work by recursively splitting extent edges, until the
+subdivided edge is &quot;close enough&quot; to the unrefined edge.
+</p></div><dl class="paramcmts block"><dt class="param">relError</dt><dd class="cmt"><p>A tolerance value telling how much deflection is allowed in terms of
+                  distance from the original line to the new point</p></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

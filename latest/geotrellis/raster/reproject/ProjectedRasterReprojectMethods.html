@@ -92,7 +92,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(self:geotrellis.raster.ProjectedRaster[T])(implicitev:geotrellis.raster.Raster[T]=&gt;geotrellis.raster.reproject.RasterReprojectMethods[geotrellis.raster.Raster[T]]):geotrellis.raster.reproject.ProjectedRasterReprojectMethods[T]"></a>
+      <a id="&lt;init&gt;(self:geotrellis.raster.ProjectedRaster[T]):geotrellis.raster.reproject.ProjectedRasterReprojectMethods[T]"></a>
       <a id="&lt;init&gt;:ProjectedRasterReprojectMethods[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -100,10 +100,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ProjectedRasterReprojectMethods</span><span class="params">(<span name="self">self: <a href="../ProjectedRaster.html" class="extype" name="geotrellis.raster.ProjectedRaster">ProjectedRaster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ev">ev: (<a href="../Raster.html" class="extype" name="geotrellis.raster.Raster">Raster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]) ⇒ <a href="RasterReprojectMethods.html" class="extype" name="geotrellis.raster.reproject.RasterReprojectMethods">RasterReprojectMethods</a>[<a href="../Raster.html" class="extype" name="geotrellis.raster.Raster">Raster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]]</span>)</span>
+        <span class="name">ProjectedRasterReprojectMethods</span><span class="params">(<span name="self">self: <a href="../ProjectedRaster.html" class="extype" name="geotrellis.raster.ProjectedRaster">ProjectedRaster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]</span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.reproject.ProjectedRasterReprojectMethods@&lt;init&gt;(self:geotrellis.raster.ProjectedRaster[T])(implicitev:geotrellis.raster.Raster[T]=&gt;geotrellis.raster.reproject.RasterReprojectMethods[geotrellis.raster.Raster[T]]):geotrellis.raster.reproject.ProjectedRasterReprojectMethods[T]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.reproject.ProjectedRasterReprojectMethods@&lt;init&gt;(self:geotrellis.raster.ProjectedRaster[T]):geotrellis.raster.reproject.ProjectedRasterReprojectMethods[T]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -367,70 +367,104 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods#reproject" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="reproject(gridBounds:geotrellis.raster.GridBounds,dest:geotrellis.proj4.CRS):geotrellis.raster.ProjectedRaster[T]"></a>
-      <a id="reproject(GridBounds,CRS):ProjectedRaster[T]"></a>
+    </li><li name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods#regionReproject" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="regionReproject(rasterExtent:geotrellis.raster.ProjectedRasterExtent,resampleMethod:geotrellis.raster.resample.ResampleMethod)(implicitev:geotrellis.raster.reproject.RasterRegionReproject[T]):geotrellis.raster.ProjectedRaster[T]"></a>
+      <a id="regionReproject(ProjectedRasterExtent,ResampleMethod)(RasterRegionReproject[T]):ProjectedRaster[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">reproject</span><span class="params">(<span name="gridBounds">gridBounds: <a href="../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>, <span name="dest">dest: <a href="../../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>)</span><span class="result">: <a href="../ProjectedRaster.html" class="extype" name="geotrellis.raster.ProjectedRaster">ProjectedRaster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]</span>
+        <span class="name">regionReproject</span><span class="params">(<span name="rasterExtent">rasterExtent: <a href="../ProjectedRasterExtent.html" class="extype" name="geotrellis.raster.ProjectedRasterExtent">ProjectedRasterExtent</a></span>, <span name="resampleMethod">resampleMethod: <a href="../resample/ResampleMethod.html" class="extype" name="geotrellis.raster.resample.ResampleMethod">ResampleMethod</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ev">ev: <a href="RasterRegionReproject.html" class="extype" name="geotrellis.raster.reproject.RasterRegionReproject">RasterRegionReproject</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]</span>)</span><span class="result">: <a href="../ProjectedRaster.html" class="extype" name="geotrellis.raster.ProjectedRaster">ProjectedRaster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.reproject.ProjectedRasterReprojectMethods@reproject(gridBounds:geotrellis.raster.GridBounds,dest:geotrellis.proj4.CRS):geotrellis.raster.ProjectedRaster[T]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.reproject.ProjectedRasterReprojectMethods@regionReproject(rasterExtent:geotrellis.raster.ProjectedRasterExtent,resampleMethod:geotrellis.raster.resample.ResampleMethod)(implicitev:geotrellis.raster.reproject.RasterRegionReproject[T]):geotrellis.raster.ProjectedRaster[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods#regionReproject" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="regionReproject(dest:geotrellis.proj4.CRS,rasterExtent:geotrellis.raster.RasterExtent,resampleMethod:geotrellis.raster.resample.ResampleMethod)(implicitev:geotrellis.raster.reproject.RasterRegionReproject[T]):geotrellis.raster.ProjectedRaster[T]"></a>
+      <a id="regionReproject(CRS,RasterExtent,ResampleMethod)(RasterRegionReproject[T]):ProjectedRaster[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">regionReproject</span><span class="params">(<span name="dest">dest: <a href="../../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="rasterExtent">rasterExtent: <a href="../RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>, <span name="resampleMethod">resampleMethod: <a href="../resample/ResampleMethod.html" class="extype" name="geotrellis.raster.resample.ResampleMethod">ResampleMethod</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ev">ev: <a href="RasterRegionReproject.html" class="extype" name="geotrellis.raster.reproject.RasterRegionReproject">RasterRegionReproject</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]</span>)</span><span class="result">: <a href="../ProjectedRaster.html" class="extype" name="geotrellis.raster.ProjectedRaster">ProjectedRaster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.reproject.ProjectedRasterReprojectMethods@regionReproject(dest:geotrellis.proj4.CRS,rasterExtent:geotrellis.raster.RasterExtent,resampleMethod:geotrellis.raster.resample.ResampleMethod)(implicitev:geotrellis.raster.reproject.RasterRegionReproject[T]):geotrellis.raster.ProjectedRaster[T]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
     </li><li name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods#reproject" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="reproject(gridBounds:geotrellis.raster.GridBounds,dest:geotrellis.proj4.CRS,options:geotrellis.raster.reproject.Reproject.Options):geotrellis.raster.ProjectedRaster[T]"></a>
-      <a id="reproject(GridBounds,CRS,Options):ProjectedRaster[T]"></a>
+      <a id="reproject(gridBounds:geotrellis.raster.GridBounds,dest:geotrellis.proj4.CRS)(implicitev:geotrellis.raster.Raster[T]=&gt;geotrellis.raster.reproject.RasterReprojectMethods[geotrellis.raster.Raster[T]]):geotrellis.raster.ProjectedRaster[T]"></a>
+      <a id="reproject(GridBounds,CRS)((Raster[T])⇒RasterReprojectMethods[Raster[T]]):ProjectedRaster[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">reproject</span><span class="params">(<span name="gridBounds">gridBounds: <a href="../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>, <span name="dest">dest: <a href="../../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="options">options: <a href="Reproject$$Options.html" class="extype" name="geotrellis.raster.reproject.Reproject.Options">Options</a></span>)</span><span class="result">: <a href="../ProjectedRaster.html" class="extype" name="geotrellis.raster.ProjectedRaster">ProjectedRaster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]</span>
+        <span class="name">reproject</span><span class="params">(<span name="gridBounds">gridBounds: <a href="../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>, <span name="dest">dest: <a href="../../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ev">ev: (<a href="../Raster.html" class="extype" name="geotrellis.raster.Raster">Raster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]) ⇒ <a href="RasterReprojectMethods.html" class="extype" name="geotrellis.raster.reproject.RasterReprojectMethods">RasterReprojectMethods</a>[<a href="../Raster.html" class="extype" name="geotrellis.raster.Raster">Raster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]]</span>)</span><span class="result">: <a href="../ProjectedRaster.html" class="extype" name="geotrellis.raster.ProjectedRaster">ProjectedRaster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.reproject.ProjectedRasterReprojectMethods@reproject(gridBounds:geotrellis.raster.GridBounds,dest:geotrellis.proj4.CRS,options:geotrellis.raster.reproject.Reproject.Options):geotrellis.raster.ProjectedRaster[T]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.reproject.ProjectedRasterReprojectMethods@reproject(gridBounds:geotrellis.raster.GridBounds,dest:geotrellis.proj4.CRS)(implicitev:geotrellis.raster.Raster[T]=&gt;geotrellis.raster.reproject.RasterReprojectMethods[geotrellis.raster.Raster[T]]):geotrellis.raster.ProjectedRaster[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods#reproject" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="reproject(gridBounds:geotrellis.raster.GridBounds,dest:geotrellis.proj4.CRS,options:geotrellis.raster.reproject.Reproject.Options)(implicitev:geotrellis.raster.Raster[T]=&gt;geotrellis.raster.reproject.RasterReprojectMethods[geotrellis.raster.Raster[T]]):geotrellis.raster.ProjectedRaster[T]"></a>
+      <a id="reproject(GridBounds,CRS,Options)((Raster[T])⇒RasterReprojectMethods[Raster[T]]):ProjectedRaster[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reproject</span><span class="params">(<span name="gridBounds">gridBounds: <a href="../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>, <span name="dest">dest: <a href="../../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="options">options: <a href="Reproject$$Options.html" class="extype" name="geotrellis.raster.reproject.Reproject.Options">Options</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ev">ev: (<a href="../Raster.html" class="extype" name="geotrellis.raster.Raster">Raster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]) ⇒ <a href="RasterReprojectMethods.html" class="extype" name="geotrellis.raster.reproject.RasterReprojectMethods">RasterReprojectMethods</a>[<a href="../Raster.html" class="extype" name="geotrellis.raster.Raster">Raster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]]</span>)</span><span class="result">: <a href="../ProjectedRaster.html" class="extype" name="geotrellis.raster.ProjectedRaster">ProjectedRaster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.reproject.ProjectedRasterReprojectMethods@reproject(gridBounds:geotrellis.raster.GridBounds,dest:geotrellis.proj4.CRS,options:geotrellis.raster.reproject.Reproject.Options)(implicitev:geotrellis.raster.Raster[T]=&gt;geotrellis.raster.reproject.RasterReprojectMethods[geotrellis.raster.Raster[T]]):geotrellis.raster.ProjectedRaster[T]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <p class="shortcomment cmt">Windowed</p>
     </li><li name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods#reproject" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="reproject(dest:geotrellis.proj4.CRS):geotrellis.raster.ProjectedRaster[T]"></a>
-      <a id="reproject(CRS):ProjectedRaster[T]"></a>
+      <a id="reproject(dest:geotrellis.proj4.CRS)(implicitev:geotrellis.raster.Raster[T]=&gt;geotrellis.raster.reproject.RasterReprojectMethods[geotrellis.raster.Raster[T]]):geotrellis.raster.ProjectedRaster[T]"></a>
+      <a id="reproject(CRS)((Raster[T])⇒RasterReprojectMethods[Raster[T]]):ProjectedRaster[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">reproject</span><span class="params">(<span name="dest">dest: <a href="../../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>)</span><span class="result">: <a href="../ProjectedRaster.html" class="extype" name="geotrellis.raster.ProjectedRaster">ProjectedRaster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]</span>
+        <span class="name">reproject</span><span class="params">(<span name="dest">dest: <a href="../../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ev">ev: (<a href="../Raster.html" class="extype" name="geotrellis.raster.Raster">Raster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]) ⇒ <a href="RasterReprojectMethods.html" class="extype" name="geotrellis.raster.reproject.RasterReprojectMethods">RasterReprojectMethods</a>[<a href="../Raster.html" class="extype" name="geotrellis.raster.Raster">Raster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]]</span>)</span><span class="result">: <a href="../ProjectedRaster.html" class="extype" name="geotrellis.raster.ProjectedRaster">ProjectedRaster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.reproject.ProjectedRasterReprojectMethods@reproject(dest:geotrellis.proj4.CRS):geotrellis.raster.ProjectedRaster[T]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.reproject.ProjectedRasterReprojectMethods@reproject(dest:geotrellis.proj4.CRS)(implicitev:geotrellis.raster.Raster[T]=&gt;geotrellis.raster.reproject.RasterReprojectMethods[geotrellis.raster.Raster[T]]):geotrellis.raster.ProjectedRaster[T]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
     </li><li name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods#reproject" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="reproject(dest:geotrellis.proj4.CRS,options:geotrellis.raster.reproject.Reproject.Options):geotrellis.raster.ProjectedRaster[T]"></a>
-      <a id="reproject(CRS,Options):ProjectedRaster[T]"></a>
+      <a id="reproject(dest:geotrellis.proj4.CRS,options:geotrellis.raster.reproject.Reproject.Options)(implicitev:geotrellis.raster.Raster[T]=&gt;geotrellis.raster.reproject.RasterReprojectMethods[geotrellis.raster.Raster[T]]):geotrellis.raster.ProjectedRaster[T]"></a>
+      <a id="reproject(CRS,Options)((Raster[T])⇒RasterReprojectMethods[Raster[T]]):ProjectedRaster[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">reproject</span><span class="params">(<span name="dest">dest: <a href="../../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="options">options: <a href="Reproject$$Options.html" class="extype" name="geotrellis.raster.reproject.Reproject.Options">Options</a></span>)</span><span class="result">: <a href="../ProjectedRaster.html" class="extype" name="geotrellis.raster.ProjectedRaster">ProjectedRaster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]</span>
+        <span class="name">reproject</span><span class="params">(<span name="dest">dest: <a href="../../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="options">options: <a href="Reproject$$Options.html" class="extype" name="geotrellis.raster.reproject.Reproject.Options">Options</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ev">ev: (<a href="../Raster.html" class="extype" name="geotrellis.raster.Raster">Raster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]) ⇒ <a href="RasterReprojectMethods.html" class="extype" name="geotrellis.raster.reproject.RasterReprojectMethods">RasterReprojectMethods</a>[<a href="../Raster.html" class="extype" name="geotrellis.raster.Raster">Raster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]]</span>)</span><span class="result">: <a href="../ProjectedRaster.html" class="extype" name="geotrellis.raster.ProjectedRaster">ProjectedRaster</a>[<span class="extype" name="geotrellis.raster.reproject.ProjectedRasterReprojectMethods.T">T</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.reproject.ProjectedRasterReprojectMethods@reproject(dest:geotrellis.proj4.CRS,options:geotrellis.raster.reproject.Reproject.Options):geotrellis.raster.ProjectedRaster[T]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.reproject.ProjectedRasterReprojectMethods@reproject(dest:geotrellis.proj4.CRS,options:geotrellis.raster.reproject.Reproject.Options)(implicitev:geotrellis.raster.Raster[T]=&gt;geotrellis.raster.reproject.RasterReprojectMethods[geotrellis.raster.Raster[T]]):geotrellis.raster.ProjectedRaster[T]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
