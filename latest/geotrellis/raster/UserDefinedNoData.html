@@ -45,14 +45,14 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">UserDefinedNoData</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="NoDataHandling.html" class="extype" name="geotrellis.raster.NoDataHandling">NoDataHandling</a></span>
+        <span class="name">UserDefinedNoData</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="HasNoData.html" class="extype" name="geotrellis.raster.HasNoData">HasNoData</a>[<span class="extype" name="geotrellis.raster.UserDefinedNoData.T">T</span>]</span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The <a href="" class="extype" name="geotrellis.raster.UserDefinedNoData">UserDefinedNoData</a> type, derived from <a href="NoDataHandling.html" class="extype" name="geotrellis.raster.NoDataHandling">NoDataHandling</a>.
 </p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="geotrellis.raster.UserDefinedNoData">UserDefinedNoData</a>[<span class="extype" name="geotrellis.raster.UserDefinedNoData.T">T</span>] with <a href="package.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="NoDataHandling.html" class="extype" name="geotrellis.raster.NoDataHandling">NoDataHandling</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="HasNoData.html" class="extype" name="geotrellis.raster.HasNoData">HasNoData</a>[<span class="extype" name="geotrellis.raster.UserDefinedNoData.T">T</span>], <a href="NoDataHandling.html" class="extype" name="geotrellis.raster.NoDataHandling">NoDataHandling</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
             <span class="toggle">Known Subclasses</span>
             <div class="subClasses hiddenContent"><a href="ByteUserDefinedNoDataCellType.html" class="extype" name="geotrellis.raster.ByteUserDefinedNoDataCellType">ByteUserDefinedNoDataCellType</a>, <a href="DoubleUserDefinedNoDataCellType.html" class="extype" name="geotrellis.raster.DoubleUserDefinedNoDataCellType">DoubleUserDefinedNoDataCellType</a>, <a href="FloatUserDefinedNoDataCellType.html" class="extype" name="geotrellis.raster.FloatUserDefinedNoDataCellType">FloatUserDefinedNoDataCellType</a>, <a href="IntUserDefinedNoDataCellType.html" class="extype" name="geotrellis.raster.IntUserDefinedNoDataCellType">IntUserDefinedNoDataCellType</a>, <a href="ShortUserDefinedNoDataCellType.html" class="extype" name="geotrellis.raster.ShortUserDefinedNoDataCellType">ShortUserDefinedNoDataCellType</a>, <a href="UByteUserDefinedNoDataCellType.html" class="extype" name="geotrellis.raster.UByteUserDefinedNoDataCellType">UByteUserDefinedNoDataCellType</a>, <a href="UShortUserDefinedNoDataCellType.html" class="extype" name="geotrellis.raster.UShortUserDefinedNoDataCellType">UShortUserDefinedNoDataCellType</a></div>
@@ -73,7 +73,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.raster.UserDefinedNoData"><span>UserDefinedNoData</span></li><li class="in" name="geotrellis.raster.NoDataHandling"><span>NoDataHandling</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.raster.UserDefinedNoData"><span>UserDefinedNoData</span></li><li class="in" name="geotrellis.raster.HasNoData"><span>HasNoData</span></li><li class="in" name="geotrellis.raster.NoDataHandling"><span>NoDataHandling</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -96,7 +96,7 @@
 
         <div id="values" class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="geotrellis.raster.UserDefinedNoData#noDataValue" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+              <ol><li name="geotrellis.raster.HasNoData#noDataValue" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="noDataValue:T"></a>
       <a id="noDataValue:T"></a>
       <h4 class="signature">
@@ -113,7 +113,7 @@
       </a>
     </span>
       <p class="shortcomment cmt">The no data value as represented in the JVM in the underlying cell.</p><div class="fullcomment"><div class="comment cmt"><p>The no data value as represented in the JVM in the underlying cell. If unsigned types are involved then
-this value may be an overflow representation, and  <code>widenedNoData</code> should be used.</p></div></div>
+this value may be an overflow representation, and  <code>widenedNoData</code> should be used.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HasNoData.html" class="extype" name="geotrellis.raster.HasNoData">HasNoData</a></dd></dl></div>
     </li></ol>
             </div>
 
@@ -472,7 +472,7 @@ this value may be an overflow representation, and  <code>widenedNoData</code> sh
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.raster.UserDefinedNoData#widenedNoData" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="geotrellis.raster.HasNoData#widenedNoData" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="widenedNoData(implicitev:Numeric[T]):geotrellis.raster.WidenedNoData"></a>
       <a id="widenedNoData(Numeric[T]):WidenedNoData"></a>
       <h4 class="signature">
@@ -488,7 +488,7 @@ this value may be an overflow representation, and  <code>widenedNoData</code> sh
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HasNoData.html" class="extype" name="geotrellis.raster.HasNoData">HasNoData</a></dd></dl></div>
     </li></ol>
             </div>
 
@@ -498,7 +498,9 @@ this value may be an overflow representation, and  <code>widenedNoData</code> sh
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="geotrellis.raster.NoDataHandling">
+        <div class="parent" name="geotrellis.raster.HasNoData">
+              <h3>Inherited from <a href="HasNoData.html" class="extype" name="geotrellis.raster.HasNoData">HasNoData</a>[<span class="extype" name="geotrellis.raster.UserDefinedNoData.T">T</span>]</h3>
+            </div><div class="parent" name="geotrellis.raster.NoDataHandling">
               <h3>Inherited from <a href="NoDataHandling.html" class="extype" name="geotrellis.raster.NoDataHandling">NoDataHandling</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>

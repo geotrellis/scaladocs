@@ -456,18 +456,18 @@ set of cell coordinates
     </span>
       <p class="shortcomment cmt">An encoding of the connectivity of vector tiles.</p>
     </li><li name="geotrellis.raster.ConstantNoData" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="ConstantNoDataextendsNoDataHandling"></a>
-      <a id="ConstantNoData:ConstantNoData"></a>
+      <a id="ConstantNoData[T]extendsHasNoData[T]"></a>
+      <a id="ConstantNoData[T]:ConstantNoData[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">sealed </span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="ConstantNoData.html"><span class="name">ConstantNoData</span></a><span class="result"> extends <a href="NoDataHandling.html" class="extype" name="geotrellis.raster.NoDataHandling">NoDataHandling</a></span>
+        <a href="ConstantNoData.html"><span class="name">ConstantNoData</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="HasNoData.html" class="extype" name="geotrellis.raster.HasNoData">HasNoData</a>[<span class="extype" name="geotrellis.raster.ConstantNoData.T">T</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package@ConstantNoDataextendsNoDataHandling" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.package@ConstantNoData[T]extendsHasNoData[T]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -1038,6 +1038,24 @@ These coordinates are inclusive.
 Critically while the number of cell rows and columns is implied by the constructor arguments,
 they are intentionally not expressed to avoid Int overflow for large grids.
 </p></div></div>
+    </li><li name="geotrellis.raster.HasNoData" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="HasNoData[T]extendsNoDataHandling"></a>
+      <a id="HasNoData[T]:HasNoData[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="HasNoData.html"><span class="name">HasNoData</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="NoDataHandling.html" class="extype" name="geotrellis.raster.NoDataHandling">NoDataHandling</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package@HasNoData[T]extendsNoDataHandling" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"> Base trait for all cell type having a <code>NoData</code> value
+</p>
     </li><li name="geotrellis.raster.mapalgebra.focal.hillshade.Implicits.HillshadeTuple" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="HillshadeTupleextendsAnyRef"></a>
       <a id="HillshadeTuple:HillshadeTuple"></a>
@@ -1363,7 +1381,7 @@ written to (mutated).</p>
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">The <a href="NoDataHandling.html" class="extype" name="geotrellis.raster.NoDataHandling">NoDataHandling</a>.</p>
+      <p class="shortcomment cmt">Base trait for all cell types associated with handling <code>NoData</code> values or not.</p>
     </li><li name="geotrellis.raster.NoNoData" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="NoNoDataextendsNoDataHandling"></a>
       <a id="NoNoData:NoNoData"></a>
@@ -1380,7 +1398,7 @@ written to (mutated).</p>
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">The <a href="NoNoData.html" class="extype" name="geotrellis.raster.NoNoData">NoNoData</a> type, derived from <a href="NoDataHandling.html" class="extype" name="geotrellis.raster.NoDataHandling">NoDataHandling</a>.</p>
+      <p class="shortcomment cmt">Base trait for all &quot;raw&quot; cell types, not having a <code>NoData</code> value.</p>
     </li><li name="geotrellis.raster.PixelInterleaveBandArrayTile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="PixelInterleaveBandArrayTileextendsArrayTile"></a>
       <a id="PixelInterleaveBandArrayTile:PixelInterleaveBandArrayTile"></a>
@@ -2153,7 +2171,7 @@ Tile or MultibandTile) together with some metadata.
     </span>
       
     </li><li name="geotrellis.raster.UserDefinedNoData" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="UserDefinedNoData[T]extendsNoDataHandling"></a>
+      <a id="UserDefinedNoData[T]extendsHasNoData[T]"></a>
       <a id="UserDefinedNoData[T]:UserDefinedNoData[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2161,10 +2179,10 @@ Tile or MultibandTile) together with some metadata.
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="UserDefinedNoData.html"><span class="name">UserDefinedNoData</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="NoDataHandling.html" class="extype" name="geotrellis.raster.NoDataHandling">NoDataHandling</a></span>
+        <a href="UserDefinedNoData.html"><span class="name">UserDefinedNoData</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="HasNoData.html" class="extype" name="geotrellis.raster.HasNoData">HasNoData</a>[<span class="extype" name="geotrellis.raster.UserDefinedNoData.T">T</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package@UserDefinedNoData[T]extendsNoDataHandling" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.package@UserDefinedNoData[T]extendsHasNoData[T]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -2901,7 +2919,7 @@ unsigned number rollover.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ByteConstantNoDataCellType$.html"><span class="name">ByteConstantNoDataCellType</span></a><span class="result"> extends <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> with <a href="ByteCells.html" class="extype" name="geotrellis.raster.ByteCells">ByteCells</a> with <a href="ConstantNoData.html" class="extype" name="geotrellis.raster.ConstantNoData">ConstantNoData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="ByteConstantNoDataCellType$.html"><span class="name">ByteConstantNoDataCellType</span></a><span class="result"> extends <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> with <a href="ByteCells.html" class="extype" name="geotrellis.raster.ByteCells">ByteCells</a> with <a href="ConstantNoData.html" class="extype" name="geotrellis.raster.ConstantNoData">ConstantNoData</a>[<span class="extype" name="scala.Byte">Byte</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../index.html#geotrellis.raster.package@ByteConstantNoDataCellType" title="Permalink" target="_top">
@@ -3092,7 +3110,7 @@ pattern-matching operations.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="DoubleConstantNoDataCellType$.html"><span class="name">DoubleConstantNoDataCellType</span></a><span class="result"> extends <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> with <a href="DoubleCells.html" class="extype" name="geotrellis.raster.DoubleCells">DoubleCells</a> with <a href="ConstantNoData.html" class="extype" name="geotrellis.raster.ConstantNoData">ConstantNoData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="DoubleConstantNoDataCellType$.html"><span class="name">DoubleConstantNoDataCellType</span></a><span class="result"> extends <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> with <a href="DoubleCells.html" class="extype" name="geotrellis.raster.DoubleCells">DoubleCells</a> with <a href="ConstantNoData.html" class="extype" name="geotrellis.raster.ConstantNoData">ConstantNoData</a>[<span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../index.html#geotrellis.raster.package@DoubleConstantNoDataCellType" title="Permalink" target="_top">
@@ -3194,7 +3212,7 @@ pattern-matching operations.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="FloatConstantNoDataCellType$.html"><span class="name">FloatConstantNoDataCellType</span></a><span class="result"> extends <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> with <a href="FloatCells.html" class="extype" name="geotrellis.raster.FloatCells">FloatCells</a> with <a href="ConstantNoData.html" class="extype" name="geotrellis.raster.ConstantNoData">ConstantNoData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="FloatConstantNoDataCellType$.html"><span class="name">FloatConstantNoDataCellType</span></a><span class="result"> extends <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> with <a href="FloatCells.html" class="extype" name="geotrellis.raster.FloatCells">FloatCells</a> with <a href="ConstantNoData.html" class="extype" name="geotrellis.raster.ConstantNoData">ConstantNoData</a>[<span class="extype" name="scala.Float">Float</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../index.html#geotrellis.raster.package@FloatConstantNoDataCellType" title="Permalink" target="_top">
@@ -3347,7 +3365,7 @@ pattern-matching operations.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="IntConstantNoDataCellType$.html"><span class="name">IntConstantNoDataCellType</span></a><span class="result"> extends <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> with <a href="IntCells.html" class="extype" name="geotrellis.raster.IntCells">IntCells</a> with <a href="ConstantNoData.html" class="extype" name="geotrellis.raster.ConstantNoData">ConstantNoData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="IntConstantNoDataCellType$.html"><span class="name">IntConstantNoDataCellType</span></a><span class="result"> extends <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> with <a href="IntCells.html" class="extype" name="geotrellis.raster.IntCells">IntCells</a> with <a href="ConstantNoData.html" class="extype" name="geotrellis.raster.ConstantNoData">ConstantNoData</a>[<span class="extype" name="scala.Int">Int</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../index.html#geotrellis.raster.package@IntConstantNoDataCellType" title="Permalink" target="_top">
@@ -3603,7 +3621,7 @@ suitably-tiny extents.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ShortConstantNoDataCellType$.html"><span class="name">ShortConstantNoDataCellType</span></a><span class="result"> extends <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> with <a href="ShortCells.html" class="extype" name="geotrellis.raster.ShortCells">ShortCells</a> with <a href="ConstantNoData.html" class="extype" name="geotrellis.raster.ConstantNoData">ConstantNoData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="ShortConstantNoDataCellType$.html"><span class="name">ShortConstantNoDataCellType</span></a><span class="result"> extends <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> with <a href="ShortCells.html" class="extype" name="geotrellis.raster.ShortCells">ShortCells</a> with <a href="ConstantNoData.html" class="extype" name="geotrellis.raster.ConstantNoData">ConstantNoData</a>[<span class="extype" name="scala.Short">Short</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../index.html#geotrellis.raster.package@ShortConstantNoDataCellType" title="Permalink" target="_top">
@@ -3722,7 +3740,7 @@ suitably-tiny extents.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="UByteConstantNoDataCellType$.html"><span class="name">UByteConstantNoDataCellType</span></a><span class="result"> extends <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> with <a href="UByteCells.html" class="extype" name="geotrellis.raster.UByteCells">UByteCells</a> with <a href="ConstantNoData.html" class="extype" name="geotrellis.raster.ConstantNoData">ConstantNoData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="UByteConstantNoDataCellType$.html"><span class="name">UByteConstantNoDataCellType</span></a><span class="result"> extends <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> with <a href="UByteCells.html" class="extype" name="geotrellis.raster.UByteCells">UByteCells</a> with <a href="ConstantNoData.html" class="extype" name="geotrellis.raster.ConstantNoData">ConstantNoData</a>[<span class="extype" name="scala.Byte">Byte</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../index.html#geotrellis.raster.package@UByteConstantNoDataCellType" title="Permalink" target="_top">
@@ -3807,7 +3825,7 @@ suitably-tiny extents.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="UShortConstantNoDataCellType$.html"><span class="name">UShortConstantNoDataCellType</span></a><span class="result"> extends <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> with <a href="UShortCells.html" class="extype" name="geotrellis.raster.UShortCells">UShortCells</a> with <a href="ConstantNoData.html" class="extype" name="geotrellis.raster.ConstantNoData">ConstantNoData</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="UShortConstantNoDataCellType$.html"><span class="name">UShortConstantNoDataCellType</span></a><span class="result"> extends <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> with <a href="UShortCells.html" class="extype" name="geotrellis.raster.UShortCells">UShortCells</a> with <a href="ConstantNoData.html" class="extype" name="geotrellis.raster.ConstantNoData">ConstantNoData</a>[<span class="extype" name="scala.Short">Short</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../index.html#geotrellis.raster.package@UShortConstantNoDataCellType" title="Permalink" target="_top">
