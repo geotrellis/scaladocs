@@ -89,7 +89,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.raster.io.geotiff.Float64GeoTiffTile#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(segmentBytes:geotrellis.raster.io.geotiff.SegmentBytes,decompressor:geotrellis.raster.io.geotiff.compression.Decompressor,segmentLayout:geotrellis.raster.io.geotiff.GeoTiffSegmentLayout,compression:geotrellis.raster.io.geotiff.compression.Compression,cellType:geotrellis.raster.DoubleCellswithgeotrellis.raster.NoDataHandling):geotrellis.raster.io.geotiff.Float64GeoTiffTile"></a>
+      <a id="&lt;init&gt;(segmentBytes:geotrellis.raster.io.geotiff.SegmentBytes,decompressor:geotrellis.raster.io.geotiff.compression.Decompressor,segmentLayout:geotrellis.raster.io.geotiff.GeoTiffSegmentLayout,compression:geotrellis.raster.io.geotiff.compression.Compression,cellType:geotrellis.raster.DoubleCellswithgeotrellis.raster.NoDataHandling,overviews:List[geotrellis.raster.io.geotiff.Float64GeoTiffTile]):geotrellis.raster.io.geotiff.Float64GeoTiffTile"></a>
       <a id="&lt;init&gt;:Float64GeoTiffTile"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -97,10 +97,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Float64GeoTiffTile</span><span class="params">(<span name="segmentBytes">segmentBytes: <a href="SegmentBytes.html" class="extype" name="geotrellis.raster.io.geotiff.SegmentBytes">SegmentBytes</a></span>, <span name="decompressor">decompressor: <a href="compression/Decompressor.html" class="extype" name="geotrellis.raster.io.geotiff.compression.Decompressor">Decompressor</a></span>, <span name="segmentLayout">segmentLayout: <a href="GeoTiffSegmentLayout.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout">GeoTiffSegmentLayout</a></span>, <span name="compression">compression: <a href="compression/Compression.html" class="extype" name="geotrellis.raster.io.geotiff.compression.Compression">Compression</a></span>, <span name="cellType">cellType: <a href="../../DoubleCells.html" class="extype" name="geotrellis.raster.DoubleCells">DoubleCells</a> with <a href="../../NoDataHandling.html" class="extype" name="geotrellis.raster.NoDataHandling">NoDataHandling</a></span>)</span>
+        <span class="name">Float64GeoTiffTile</span><span class="params">(<span name="segmentBytes">segmentBytes: <a href="SegmentBytes.html" class="extype" name="geotrellis.raster.io.geotiff.SegmentBytes">SegmentBytes</a></span>, <span name="decompressor">decompressor: <a href="compression/Decompressor.html" class="extype" name="geotrellis.raster.io.geotiff.compression.Decompressor">Decompressor</a></span>, <span name="segmentLayout">segmentLayout: <a href="GeoTiffSegmentLayout.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout">GeoTiffSegmentLayout</a></span>, <span name="compression">compression: <a href="compression/Compression.html" class="extype" name="geotrellis.raster.io.geotiff.compression.Compression">Compression</a></span>, <span name="cellType">cellType: <a href="../../DoubleCells.html" class="extype" name="geotrellis.raster.DoubleCells">DoubleCells</a> with <a href="../../NoDataHandling.html" class="extype" name="geotrellis.raster.NoDataHandling">NoDataHandling</a></span>, <span name="overviews">overviews: <span class="extype" name="scala.List">List</span>[<a href="" class="extype" name="geotrellis.raster.io.geotiff.Float64GeoTiffTile">Float64GeoTiffTile</a>] = <span class="symbol">Nil</span></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.Float64GeoTiffTile@&lt;init&gt;(segmentBytes:geotrellis.raster.io.geotiff.SegmentBytes,decompressor:geotrellis.raster.io.geotiff.compression.Decompressor,segmentLayout:geotrellis.raster.io.geotiff.GeoTiffSegmentLayout,compression:geotrellis.raster.io.geotiff.compression.Compression,cellType:geotrellis.raster.DoubleCellswithgeotrellis.raster.NoDataHandling):geotrellis.raster.io.geotiff.Float64GeoTiffTile" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.Float64GeoTiffTile@&lt;init&gt;(segmentBytes:geotrellis.raster.io.geotiff.SegmentBytes,decompressor:geotrellis.raster.io.geotiff.compression.Decompressor,segmentLayout:geotrellis.raster.io.geotiff.GeoTiffSegmentLayout,compression:geotrellis.raster.io.geotiff.compression.Compression,cellType:geotrellis.raster.DoubleCellswithgeotrellis.raster.NoDataHandling,overviews:List[geotrellis.raster.io.geotiff.Float64GeoTiffTile]):geotrellis.raster.io.geotiff.Float64GeoTiffTile" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -865,6 +865,40 @@ as a double, and returns nothing (presumably for side-effects).
     </span>
       <p class="shortcomment cmt">Given a col and row, find the segment that this point is within.</p><div class="fullcomment"><div class="comment cmt"><p>Given a col and row, find the segment that this point is within.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A Double that represents the segment's index</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffTile">GeoTiffTile</a> → <a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.GeoTiffTile#getOverview" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getOverview(idx:Int):geotrellis.raster.io.geotiff.GeoTiffTile"></a>
+      <a id="getOverview(Int):GeoTiffTile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getOverview</span><span class="params">(<span name="idx">idx: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffTile">GeoTiffTile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.Float64GeoTiffTile@getOverview(idx:Int):geotrellis.raster.io.geotiff.GeoTiffTile" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffTile">GeoTiffTile</a></dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.GeoTiffTile#getOverviewsCount" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getOverviewsCount:Int"></a>
+      <a id="getOverviewsCount:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getOverviewsCount</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.Float64GeoTiffTile@getOverviewsCount:Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffTile">GeoTiffTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentCollection#getSegment" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getSegment(i:Int):GeoTiffSegmentCollection.this.T"></a>
       <a id="getSegment(Int):T"></a>
@@ -1345,6 +1379,23 @@ max, to a new min and max.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.GeoTiffTile#overviews" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="overviews:List[geotrellis.raster.io.geotiff.GeoTiffTile]"></a>
+      <a id="overviews:List[GeoTiffTile]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">overviews</span><span class="result">: <span class="extype" name="scala.List">List</span>[<a href="GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffTile">GeoTiffTile</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.Float64GeoTiffTile@overviews:List[geotrellis.raster.io.geotiff.GeoTiffTile]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffTile">GeoTiffTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayoutTransform#partitionWindowsBySegments" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="partitionWindowsBySegments(windows:Seq[geotrellis.raster.GridBounds],maxPartitionSize:Long):Array[Array[geotrellis.raster.GridBounds]]"></a>
       <a id="partitionWindowsBySegments(Seq[GridBounds],Long):Array[Array[GridBounds]]"></a>

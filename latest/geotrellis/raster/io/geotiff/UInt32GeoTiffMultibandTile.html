@@ -89,7 +89,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(compressedBytes:geotrellis.raster.io.geotiff.SegmentBytes,decompressor:geotrellis.raster.io.geotiff.compression.Decompressor,segmentLayout:geotrellis.raster.io.geotiff.GeoTiffSegmentLayout,compression:geotrellis.raster.io.geotiff.compression.Compression,bandCount:Int,cellType:geotrellis.raster.FloatCellswithgeotrellis.raster.NoDataHandling):geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile"></a>
+      <a id="&lt;init&gt;(compressedBytes:geotrellis.raster.io.geotiff.SegmentBytes,decompressor:geotrellis.raster.io.geotiff.compression.Decompressor,segmentLayout:geotrellis.raster.io.geotiff.GeoTiffSegmentLayout,compression:geotrellis.raster.io.geotiff.compression.Compression,bandCount:Int,cellType:geotrellis.raster.FloatCellswithgeotrellis.raster.NoDataHandling,overviews:List[geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile]):geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile"></a>
       <a id="&lt;init&gt;:UInt32GeoTiffMultibandTile"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -97,10 +97,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">UInt32GeoTiffMultibandTile</span><span class="params">(<span name="compressedBytes">compressedBytes: <a href="SegmentBytes.html" class="extype" name="geotrellis.raster.io.geotiff.SegmentBytes">SegmentBytes</a></span>, <span name="decompressor">decompressor: <a href="compression/Decompressor.html" class="extype" name="geotrellis.raster.io.geotiff.compression.Decompressor">Decompressor</a></span>, <span name="segmentLayout">segmentLayout: <a href="GeoTiffSegmentLayout.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout">GeoTiffSegmentLayout</a></span>, <span name="compression">compression: <a href="compression/Compression.html" class="extype" name="geotrellis.raster.io.geotiff.compression.Compression">Compression</a></span>, <span name="bandCount">bandCount: <span class="extype" name="scala.Int">Int</span></span>, <span name="cellType">cellType: <a href="../../FloatCells.html" class="extype" name="geotrellis.raster.FloatCells">FloatCells</a> with <a href="../../NoDataHandling.html" class="extype" name="geotrellis.raster.NoDataHandling">NoDataHandling</a></span>)</span>
+        <span class="name">UInt32GeoTiffMultibandTile</span><span class="params">(<span name="compressedBytes">compressedBytes: <a href="SegmentBytes.html" class="extype" name="geotrellis.raster.io.geotiff.SegmentBytes">SegmentBytes</a></span>, <span name="decompressor">decompressor: <a href="compression/Decompressor.html" class="extype" name="geotrellis.raster.io.geotiff.compression.Decompressor">Decompressor</a></span>, <span name="segmentLayout">segmentLayout: <a href="GeoTiffSegmentLayout.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout">GeoTiffSegmentLayout</a></span>, <span name="compression">compression: <a href="compression/Compression.html" class="extype" name="geotrellis.raster.io.geotiff.compression.Compression">Compression</a></span>, <span name="bandCount">bandCount: <span class="extype" name="scala.Int">Int</span></span>, <span name="cellType">cellType: <a href="../../FloatCells.html" class="extype" name="geotrellis.raster.FloatCells">FloatCells</a> with <a href="../../NoDataHandling.html" class="extype" name="geotrellis.raster.NoDataHandling">NoDataHandling</a></span>, <span name="overviews">overviews: <span class="extype" name="scala.List">List</span>[<a href="" class="extype" name="geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile">UInt32GeoTiffMultibandTile</a>] = <span class="symbol">Nil</span></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile@&lt;init&gt;(compressedBytes:geotrellis.raster.io.geotiff.SegmentBytes,decompressor:geotrellis.raster.io.geotiff.compression.Decompressor,segmentLayout:geotrellis.raster.io.geotiff.GeoTiffSegmentLayout,compression:geotrellis.raster.io.geotiff.compression.Compression,bandCount:Int,cellType:geotrellis.raster.FloatCellswithgeotrellis.raster.NoDataHandling):geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile@&lt;init&gt;(compressedBytes:geotrellis.raster.io.geotiff.SegmentBytes,decompressor:geotrellis.raster.io.geotiff.compression.Decompressor,segmentLayout:geotrellis.raster.io.geotiff.GeoTiffSegmentLayout,compression:geotrellis.raster.io.geotiff.compression.Compression,bandCount:Int,cellType:geotrellis.raster.FloatCellswithgeotrellis.raster.NoDataHandling,overviews:List[geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile]):geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -1509,6 +1509,40 @@ MultibandTile starting at the given band.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile#getOverview" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getOverview(idx:Int):geotrellis.raster.io.geotiff.GeoTiffMultibandTile"></a>
+      <a id="getOverview(Int):GeoTiffMultibandTile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getOverview</span><span class="params">(<span name="idx">idx: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile@getOverview(idx:Int):geotrellis.raster.io.geotiff.GeoTiffMultibandTile" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a></dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile#getOverviewsCount" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getOverviewsCount:Int"></a>
+      <a id="getOverviewsCount:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getOverviewsCount</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile@getOverviewsCount:Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentCollection#getSegment" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getSegment(i:Int):GeoTiffSegmentCollection.this.T"></a>
       <a id="getSegment(Int):T"></a>
@@ -1905,6 +1939,23 @@ returns the results as a new MultibandTile.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile#overviews" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="overviews:List[geotrellis.raster.io.geotiff.GeoTiffMultibandTile]"></a>
+      <a id="overviews:List[GeoTiffMultibandTile]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">overviews</span><span class="result">: <span class="extype" name="scala.List">List</span>[<a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile@overviews:List[geotrellis.raster.io.geotiff.GeoTiffMultibandTile]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayoutTransform#partitionWindowsBySegments" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="partitionWindowsBySegments(windows:Seq[geotrellis.raster.GridBounds],maxPartitionSize:Long):Array[Array[geotrellis.raster.GridBounds]]"></a>
       <a id="partitionWindowsBySegments(Seq[GridBounds],Long):Array[Array[GridBounds]]"></a>
