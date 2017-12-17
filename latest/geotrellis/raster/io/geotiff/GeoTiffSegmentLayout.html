@@ -47,12 +47,12 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">GeoTiffSegmentLayout</span><span class="params">(<span name="totalCols">totalCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="totalRows">totalRows: <span class="extype" name="scala.Int">Int</span></span>, <span name="tileLayout">tileLayout: <a href="../../TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="isTiled">isTiled: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">GeoTiffSegmentLayout</span><span class="params">(<span name="totalCols">totalCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="totalRows">totalRows: <span class="extype" name="scala.Int">Int</span></span>, <span name="tileLayout">tileLayout: <a href="../../TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="storageMethod">storageMethod: <a href="StorageMethod.html" class="extype" name="geotrellis.raster.io.geotiff.StorageMethod">StorageMethod</a></span>, <span name="interleaveMethod">interleaveMethod: <a href="InterleaveMethod.html" class="extype" name="geotrellis.raster.io.geotiff.InterleaveMethod">InterleaveMethod</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This case class represents how the segments in a given <a href="GeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiff">GeoTiff</a> are arranged.
-</p></div><dl class="paramcmts block"><dt class="param">totalCols</dt><dd class="cmt"><p>The total amount of cols in the GeoTiff</p></dd><dt class="param">totalRows</dt><dd class="cmt"><p>The total amount of rows in the GeoTiff</p></dd><dt class="param">tileLayout</dt><dd class="cmt"><p>The <a href="../../TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a> of the GeoTiff</p></dd><dt class="param">isTiled</dt><dd class="cmt"><p>A Boolean that represents if the given GeoTiff is Tiled or not</p></dd><dt>returns</dt><dd class="cmt"><p>A new instance of the GeoTiffSegmentLayout case class</p></dd></dl><div class="toggleContainer block">
+</p></div><dl class="paramcmts block"><dt class="param">totalCols</dt><dd class="cmt"><p>The total amount of cols in the GeoTiff</p></dd><dt class="param">totalRows</dt><dd class="cmt"><p>The total amount of rows in the GeoTiff</p></dd><dt class="param">tileLayout</dt><dd class="cmt"><p>The <a href="../../TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a> of the GeoTiff</p></dd><dt class="param">storageMethod</dt><dd class="cmt"><p>Storage method used for the segments (tiled or striped)</p></dd><dt class="param">interleaveMethod</dt><dd class="cmt"><p>The interleave method used for segments (pixel or band)</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -92,7 +92,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(totalCols:Int,totalRows:Int,tileLayout:geotrellis.raster.TileLayout,isTiled:Boolean):geotrellis.raster.io.geotiff.GeoTiffSegmentLayout"></a>
+      <a id="&lt;init&gt;(totalCols:Int,totalRows:Int,tileLayout:geotrellis.raster.TileLayout,storageMethod:geotrellis.raster.io.geotiff.StorageMethod,interleaveMethod:geotrellis.raster.io.geotiff.InterleaveMethod):geotrellis.raster.io.geotiff.GeoTiffSegmentLayout"></a>
       <a id="&lt;init&gt;:GeoTiffSegmentLayout"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -100,14 +100,14 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">GeoTiffSegmentLayout</span><span class="params">(<span name="totalCols">totalCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="totalRows">totalRows: <span class="extype" name="scala.Int">Int</span></span>, <span name="tileLayout">tileLayout: <a href="../../TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="isTiled">isTiled: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span>
+        <span class="name">GeoTiffSegmentLayout</span><span class="params">(<span name="totalCols">totalCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="totalRows">totalRows: <span class="extype" name="scala.Int">Int</span></span>, <span name="tileLayout">tileLayout: <a href="../../TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>, <span name="storageMethod">storageMethod: <a href="StorageMethod.html" class="extype" name="geotrellis.raster.io.geotiff.StorageMethod">StorageMethod</a></span>, <span name="interleaveMethod">interleaveMethod: <a href="InterleaveMethod.html" class="extype" name="geotrellis.raster.io.geotiff.InterleaveMethod">InterleaveMethod</a></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@&lt;init&gt;(totalCols:Int,totalRows:Int,tileLayout:geotrellis.raster.TileLayout,isTiled:Boolean):geotrellis.raster.io.geotiff.GeoTiffSegmentLayout" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@&lt;init&gt;(totalCols:Int,totalRows:Int,tileLayout:geotrellis.raster.TileLayout,storageMethod:geotrellis.raster.io.geotiff.StorageMethod,interleaveMethod:geotrellis.raster.io.geotiff.InterleaveMethod):geotrellis.raster.io.geotiff.GeoTiffSegmentLayout" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">totalCols</dt><dd class="cmt"><p>The total amount of cols in the GeoTiff</p></dd><dt class="param">totalRows</dt><dd class="cmt"><p>The total amount of rows in the GeoTiff</p></dd><dt class="param">tileLayout</dt><dd class="cmt"><p>The <a href="../../TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a> of the GeoTiff</p></dd><dt class="param">isTiled</dt><dd class="cmt"><p>A Boolean that represents if the given GeoTiff is Tiled or not</p></dd></dl></div>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">totalCols</dt><dd class="cmt"><p>The total amount of cols in the GeoTiff</p></dd><dt class="param">totalRows</dt><dd class="cmt"><p>The total amount of rows in the GeoTiff</p></dd><dt class="param">tileLayout</dt><dd class="cmt"><p>The <a href="../../TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a> of the GeoTiff</p></dd><dt class="param">storageMethod</dt><dd class="cmt"><p>Storage method used for the segments (tiled or striped)</p></dd><dt class="param">interleaveMethod</dt><dd class="cmt"><p>The interleave method used for segments (pixel or band)</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -265,113 +265,40 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#getGridBounds" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getGridBounds(segmentIndex:Int,isBit:Boolean):geotrellis.raster.GridBounds"></a>
-      <a id="getGridBounds(Int,Boolean):GridBounds"></a>
+    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#hasPixelInterleave" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="hasPixelInterleave:Boolean"></a>
+      <a id="hasPixelInterleave:Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getGridBounds</span><span class="params">(<span name="segmentIndex">segmentIndex: <span class="extype" name="scala.Int">Int</span></span>, <span name="isBit">isBit: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>
+        <span class="name">hasPixelInterleave</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@getGridBounds(segmentIndex:Int,isBit:Boolean):geotrellis.raster.GridBounds" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@hasPixelInterleave:Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#getSegmentCoordinate" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getSegmentCoordinate(segmentIndex:Int):(Int,Int)"></a>
-      <a id="getSegmentCoordinate(Int):(Int,Int)"></a>
+    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#interleaveMethod" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="interleaveMethod:geotrellis.raster.io.geotiff.InterleaveMethod"></a>
+      <a id="interleaveMethod:InterleaveMethod"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">getSegmentCoordinate</span><span class="params">(<span name="segmentIndex">segmentIndex: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>
+        <span class="name">interleaveMethod</span><span class="result">: <a href="InterleaveMethod.html" class="extype" name="geotrellis.raster.io.geotiff.InterleaveMethod">InterleaveMethod</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@getSegmentCoordinate(segmentIndex:Int):(Int,Int)" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@interleaveMethod:geotrellis.raster.io.geotiff.InterleaveMethod" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#getSegmentDimensions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getSegmentDimensions(segmentIndex:Int):(Int,Int)"></a>
-      <a id="getSegmentDimensions(Int):(Int,Int)"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getSegmentDimensions</span><span class="params">(<span name="segmentIndex">segmentIndex: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@getSegmentDimensions(segmentIndex:Int):(Int,Int)" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Calculates pixel dimensions of a given segment in this layout.</p><div class="fullcomment"><div class="comment cmt"><p>Calculates pixel dimensions of a given segment in this layout.
-Segments are indexed in row-major order relative to the GeoTiff they comprise.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Tuple representing segment (cols, rows)</p></dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#getSegmentIndex" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getSegmentIndex(col:Int,row:Int):Int"></a>
-      <a id="getSegmentIndex(Int,Int):Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getSegmentIndex</span><span class="params">(<span name="col">col: <span class="extype" name="scala.Int">Int</span></span>, <span name="row">row: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@getSegmentIndex(col:Int,row:Int):Int" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Finds the corresponding segment index given GeoTiff col and row
-</p><div class="fullcomment"><div class="comment cmt"><p>Finds the corresponding segment index given GeoTiff col and row
-</p></div><dl class="paramcmts block"><dt class="param">col</dt><dd class="cmt"><p>Pixel column in overall layout</p></dd><dt class="param">row</dt><dd class="cmt"><p>Pixel row in overall layout</p></dd><dt>returns</dt><dd class="cmt"><p>The index of the segment in this layout</p></dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#getSegmentSize" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getSegmentSize(segmentIndex:Int):Int"></a>
-      <a id="getSegmentSize(Int):Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getSegmentSize</span><span class="params">(<span name="segmentIndex">segmentIndex: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@getSegmentSize(segmentIndex:Int):Int" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Calculates the total pixel count for given segment in this layout.</p><div class="fullcomment"><div class="comment cmt"><p>Calculates the total pixel count for given segment in this layout.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Pixel size of the segment</p></dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#intersectingSegments" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="intersectingSegments(bounds:geotrellis.raster.GridBounds):Array[Int]"></a>
-      <a id="intersectingSegments(GridBounds):Array[Int]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">intersectingSegments</span><span class="params">(<span name="bounds">bounds: <a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.io.geotiff.GeoTiffSegmentLayout@intersectingSegments(bounds:geotrellis.raster.GridBounds):Array[Int]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Returns all segment indices which intersect given pixel grid bounds</p>
+      <p class="shortcomment cmt">The interleave method used for segments (pixel or band)</p>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -405,14 +332,14 @@ Segments are indexed in row-major order relative to the GeoTiff they comprise.
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Determines if the GeoTiff has Striped storage</p>
+      
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#isTiled" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="isTiled:Boolean"></a>
       <a id="isTiled:Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
         <span class="name">isTiled</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
@@ -422,7 +349,7 @@ Segments are indexed in row-major order relative to the GeoTiff they comprise.
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">A Boolean that represents if the given GeoTiff is Tiled or not</p>
+      
     </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#listWindows" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="listWindows(cols:Int,rows:Int):Array[geotrellis.raster.GridBounds]"></a>
       <a id="listWindows(Int,Int):Array[GridBounds]"></a>
@@ -547,13 +474,13 @@ Pixel windows outside of layout range will be filtered.
 Maximum partition size may be exceeded if any window size exceeds it.
 Windows will not be split to satisfy partition size limits.
 </p></div><dl class="paramcmts block"><dt class="param">windows</dt><dd class="cmt"><p>List of pixel windows from this layout</p></dd><dt class="param">maxPartitionSize</dt><dd class="cmt"><p>Maximum pixel count for each partition</p></dd></dl></div>
-    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#storageMethod" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.raster.io.geotiff.GeoTiffSegmentLayout#storageMethod" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="storageMethod:geotrellis.raster.io.geotiff.StorageMethod"></a>
       <a id="storageMethod:StorageMethod"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">storageMethod</span><span class="result">: <a href="StorageMethod.html" class="extype" name="geotrellis.raster.io.geotiff.StorageMethod">StorageMethod</a></span>
@@ -563,9 +490,7 @@ Windows will not be split to satisfy partition size limits.
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Determines if the GeoTiff uses Striped or Tiled storage of data
-</p><div class="fullcomment"><div class="comment cmt"><p>Determines if the GeoTiff uses Striped or Tiled storage of data
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Returns the <a href="StorageMethod.html" class="extype" name="geotrellis.raster.io.geotiff.StorageMethod">StorageMethod</a> of the GeoTiff</p></dd></dl></div>
+      <p class="shortcomment cmt">Storage method used for the segments (tiled or striped)</p>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
