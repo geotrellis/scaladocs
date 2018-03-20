@@ -216,7 +216,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="HadoopLayerHeader.html"><span class="name">HadoopLayerHeader</span></a><span class="params">(<span name="keyClass">keyClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="valueClass">valueClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="org.apache.hadoop.fs.Path">Path</span></span>)</span><span class="result"> extends <a href="../LayerHeader.html" class="extype" name="geotrellis.spark.io.LayerHeader">LayerHeader</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="HadoopLayerHeader.html"><span class="name">HadoopLayerHeader</span></a><span class="params">(<span name="keyClass">keyClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="valueClass">valueClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="java.net.URI">URI</span></span>)</span><span class="result"> extends <a href="../LayerHeader.html" class="extype" name="geotrellis.spark.io.LayerHeader">LayerHeader</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.hadoop.package@HadoopLayerHeaderextendsLayerHeaderwithProductwithSerializable" title="Permalink" target="_top">
@@ -279,7 +279,7 @@ The uri represents Hadoop <span class="extype" name="Path">Path</span> of catalo
 <code>wasb</code> and <code>wasbs</code> provide support for the Hadoop Azure connector. Additional
 configuration is required for this.
 This Provider intentinally does not handle the <code>s3</code> scheme because the Hadoop implemintation is poor.
-That support is provided by <span class="extype" name="S3Attributestore">S3Attributestore</span>
+That support is provided by <a href="HadoopAttributeStore.html" class="extype" name="geotrellis.spark.io.hadoop.HadoopAttributeStore">HadoopAttributeStore</a>
 </p></div></div>
     </li><li name="geotrellis.spark.io.hadoop.HadoopLayerReader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="HadoopLayerReaderextendsFilteringLayerReader[geotrellis.spark.LayerId]withLazyLogging"></a>
@@ -504,22 +504,22 @@ That support is provided by <span class="extype" name="S3Attributestore">S3Attri
     </span>
       
     </li><li name="geotrellis.spark.io.hadoop.SerializableConfiguration" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="SerializableConfigurationextendsSerializable"></a>
+      <a id="SerializableConfigurationextendsSerializablewithProduct"></a>
       <a id="SerializableConfiguration:SerializableConfiguration"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">class</span>
+        <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="SerializableConfiguration.html"><span class="name">SerializableConfiguration</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="SerializableConfiguration.html"><span class="name">SerializableConfiguration</span></a><span class="params">(<span name="value">value: <span class="extype" name="org.apache.hadoop.conf.Configuration">Configuration</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span> with <span class="extype" name="scala.Product">Product</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.hadoop.package@SerializableConfigurationextendsSerializable" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.package@SerializableConfigurationextendsSerializablewithProduct" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">From Spark codebase, marked private there.</p><div class="fullcomment"><div class="comment cmt"><p>From Spark codebase, marked private there. Allows us to use the Hadoop Configuration in serializable tasks</p></div></div>
+      <p class="shortcomment cmt">From Spark codebase.</p><div class="fullcomment"><div class="comment cmt"><p>From Spark codebase. Allows us to use the Hadoop Configuration in serializable tasks</p></div></div>
     </li><li name="geotrellis.spark.io.hadoop.Implicits.withGeoTiffHadoopWriteMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="withGeoTiffHadoopWriteMethods[T&lt;:geotrellis.raster.CellGrid]extendsHadoopRasterMethods[geotrellis.raster.io.geotiff.GeoTiff[T]]"></a>
       <a id="withGeoTiffHadoopWriteMethods[T&lt;:CellGrid]:withGeoTiffHadoopWriteMethods[T]"></a>
@@ -638,7 +638,7 @@ That support is provided by <span class="extype" name="S3Attributestore">S3Attri
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="HadoopAttributeStore$.html"><span class="name">HadoopAttributeStore</span></a>
+        <a href="HadoopAttributeStore$.html"><span class="name">HadoopAttributeStore</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.hadoop.package@HadoopAttributeStore" title="Permalink" target="_top">
@@ -1037,6 +1037,23 @@ That support is provided by <span class="extype" name="S3Attributestore">S3Attri
       </a>
     </span>
       
+    </li><li name="geotrellis.spark.io.hadoop.cog" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="cog"></a>
+      <a id="cog:cog"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="cog/package.html"><span class="name">cog</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.package@cog" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.spark.io.hadoop.formats" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="formats"></a>
       <a id="formats:formats"></a>
@@ -1050,6 +1067,23 @@ That support is provided by <span class="extype" name="S3Attributestore">S3Attri
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.hadoop.package@formats" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.hadoop.geotiff" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="geotiff"></a>
+      <a id="geotiff:geotiff"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="geotiff/package.html"><span class="name">geotiff</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.package@geotiff" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

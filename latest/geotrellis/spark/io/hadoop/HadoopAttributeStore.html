@@ -53,7 +53,7 @@
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="../BlobLayerAttributeStore.html" class="extype" name="geotrellis.spark.io.BlobLayerAttributeStore">BlobLayerAttributeStore</a>, <a href="../AttributeStore.html" class="extype" name="geotrellis.spark.io.AttributeStore">AttributeStore</a>, <a href="../LayerAttributeStore.html" class="extype" name="geotrellis.spark.io.LayerAttributeStore">LayerAttributeStore</a>, <a href="../AttributeCaching.html" class="extype" name="geotrellis.spark.io.AttributeCaching">AttributeCaching</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../BlobLayerAttributeStore.html" class="extype" name="geotrellis.spark.io.BlobLayerAttributeStore">BlobLayerAttributeStore</a>, <a href="../AttributeStore.html" class="extype" name="geotrellis.spark.io.AttributeStore">AttributeStore</a>, <a href="../LayerAttributeStore.html" class="extype" name="geotrellis.spark.io.LayerAttributeStore">LayerAttributeStore</a>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="../AttributeCaching.html" class="extype" name="geotrellis.spark.io.AttributeCaching">AttributeCaching</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -71,7 +71,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.spark.io.hadoop.HadoopAttributeStore"><span>HadoopAttributeStore</span></li><li class="in" name="geotrellis.spark.io.BlobLayerAttributeStore"><span>BlobLayerAttributeStore</span></li><li class="in" name="geotrellis.spark.io.AttributeStore"><span>AttributeStore</span></li><li class="in" name="geotrellis.spark.io.LayerAttributeStore"><span>LayerAttributeStore</span></li><li class="in" name="geotrellis.spark.io.AttributeCaching"><span>AttributeCaching</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.spark.io.hadoop.HadoopAttributeStore"><span>HadoopAttributeStore</span></li><li class="in" name="geotrellis.spark.io.BlobLayerAttributeStore"><span>BlobLayerAttributeStore</span></li><li class="in" name="geotrellis.spark.io.AttributeStore"><span>AttributeStore</span></li><li class="in" name="geotrellis.spark.io.LayerAttributeStore"><span>LayerAttributeStore</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="geotrellis.spark.io.AttributeCaching"><span>AttributeCaching</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -91,7 +91,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.spark.io.hadoop.HadoopAttributeStore#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(rootPath:org.apache.hadoop.fs.Path,hadoopConfiguration:org.apache.hadoop.conf.Configuration):geotrellis.spark.io.hadoop.HadoopAttributeStore"></a>
+      <a id="&lt;init&gt;(rootPathString:String,conf:geotrellis.spark.io.hadoop.SerializableConfiguration):geotrellis.spark.io.hadoop.HadoopAttributeStore"></a>
       <a id="&lt;init&gt;:HadoopAttributeStore"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -99,10 +99,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">HadoopAttributeStore</span><span class="params">(<span name="rootPath">rootPath: <span class="extype" name="org.apache.hadoop.fs.Path">Path</span></span>, <span name="hadoopConfiguration">hadoopConfiguration: <span class="extype" name="org.apache.hadoop.conf.Configuration">Configuration</span></span>)</span>
+        <span class="name">HadoopAttributeStore</span><span class="params">(<span name="rootPathString">rootPathString: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="conf">conf: <a href="SerializableConfiguration.html" class="extype" name="geotrellis.spark.io.hadoop.SerializableConfiguration">SerializableConfiguration</a></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopAttributeStore@&lt;init&gt;(rootPath:org.apache.hadoop.fs.Path,hadoopConfiguration:org.apache.hadoop.conf.Configuration):geotrellis.spark.io.hadoop.HadoopAttributeStore" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopAttributeStore@&lt;init&gt;(rootPathString:String,conf:geotrellis.spark.io.hadoop.SerializableConfiguration):geotrellis.spark.io.hadoop.HadoopAttributeStore" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -207,7 +207,7 @@
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
         <span class="name">attributePath</span><span class="result">: <span class="extype" name="org.apache.hadoop.fs.Path">Path</span></span>
@@ -360,6 +360,23 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="geotrellis.spark.io.hadoop.HadoopAttributeStore#conf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="conf:geotrellis.spark.io.hadoop.SerializableConfiguration"></a>
+      <a id="conf:SerializableConfiguration"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">conf</span><span class="result">: <a href="SerializableConfiguration.html" class="extype" name="geotrellis.spark.io.hadoop.SerializableConfiguration">SerializableConfiguration</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopAttributeStore@conf:geotrellis.spark.io.hadoop.SerializableConfiguration" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.spark.io.AttributeStore#copy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="copy(from:geotrellis.spark.LayerId,to:geotrellis.spark.LayerId,attributes:Seq[String]):Unit"></a>
       <a id="copy(LayerId,LayerId,Seq[String]):Unit"></a>
@@ -491,13 +508,30 @@
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
         <span class="name">fs</span><span class="result">: <span class="extype" name="org.apache.hadoop.fs.FileSystem">FileSystem</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopAttributeStore@fs:org.apache.hadoop.fs.FileSystem" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.hadoop.HadoopAttributeStore#fsAndPath" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="fsAndPath:(org.apache.hadoop.fs.FileSystem,org.apache.hadoop.fs.Path)"></a>
+      <a id="fsAndPath:(FileSystem,Path)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fsAndPath</span><span class="result">: (<span class="extype" name="org.apache.hadoop.fs.FileSystem">FileSystem</span>, <span class="extype" name="org.apache.hadoop.fs.Path">Path</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopAttributeStore@fsAndPath:(org.apache.hadoop.fs.FileSystem,org.apache.hadoop.fs.Path)" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -525,7 +559,7 @@
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
         <span class="name">hadoopConfiguration</span><span class="result">: <span class="extype" name="org.apache.hadoop.conf.Configuration">Configuration</span></span>
@@ -797,13 +831,30 @@
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
         <span class="name">rootPath</span><span class="result">: <span class="extype" name="org.apache.hadoop.fs.Path">Path</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopAttributeStore@rootPath:org.apache.hadoop.fs.Path" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.hadoop.HadoopAttributeStore#rootPathString" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="rootPathString:String"></a>
+      <a id="rootPathString:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rootPathString</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.HadoopAttributeStore@rootPathString:String" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -960,6 +1011,10 @@
               <h3>Inherited from <a href="../AttributeStore.html" class="extype" name="geotrellis.spark.io.AttributeStore">AttributeStore</a></h3>
             </div><div class="parent" name="geotrellis.spark.io.LayerAttributeStore">
               <h3>Inherited from <a href="../LayerAttributeStore.html" class="extype" name="geotrellis.spark.io.LayerAttributeStore">LayerAttributeStore</a></h3>
+            </div><div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
             </div><div class="parent" name="geotrellis.spark.io.AttributeCaching">
               <h3>Inherited from <a href="../AttributeCaching.html" class="extype" name="geotrellis.spark.io.AttributeCaching">AttributeCaching</a></h3>
             </div><div class="parent" name="scala.AnyRef">
