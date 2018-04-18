@@ -53,7 +53,7 @@
 default (hard-coded) ones. Enable by adding</p><pre>jmhExtraOptions := <span class="std">Some</span>(<span class="lit">"-prof geotrellis.bench.GeotrellisFlightRecordingProfiler"</span>)</pre><p>to <code>build.sbt</code> in this sub-project.
 </p></div><dl class="attributes block"> <dt>Since</dt><dd><p>12/3/17</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="pl.project13.scala.jmh.extras.profiler.FlightRecordingProfiler">FlightRecordingProfiler</span>, <span class="extype" name="org.openjdk.jmh.profile.ExternalProfiler">ExternalProfiler</span>, <span class="extype" name="org.openjdk.jmh.profile.Profiler">Profiler</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="pl.project13.scala.jmh.extras.profiler.FlightRecordingProfiler">FlightRecordingProfiler</span>, <span class="extype" name="org.openjdk.jmh.profile.ExternalProfiler">ExternalProfiler</span>, <span class="extype" name="org.openjdk.jmh.profile.InternalProfiler">InternalProfiler</span>, <span class="extype" name="org.openjdk.jmh.profile.Profiler">Profiler</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -71,7 +71,7 @@ default (hard-coded) ones. Enable by adding</p><pre>jmhExtraOptions := <span cla
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.bench.GeotrellisFlightRecordingProfiler"><span>GeotrellisFlightRecordingProfiler</span></li><li class="in" name="pl.project13.scala.jmh.extras.profiler.FlightRecordingProfiler"><span>FlightRecordingProfiler</span></li><li class="in" name="org.openjdk.jmh.profile.ExternalProfiler"><span>ExternalProfiler</span></li><li class="in" name="org.openjdk.jmh.profile.Profiler"><span>Profiler</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.bench.GeotrellisFlightRecordingProfiler"><span>GeotrellisFlightRecordingProfiler</span></li><li class="in" name="pl.project13.scala.jmh.extras.profiler.FlightRecordingProfiler"><span>FlightRecordingProfiler</span></li><li class="in" name="org.openjdk.jmh.profile.ExternalProfiler"><span>ExternalProfiler</span></li><li class="in" name="org.openjdk.jmh.profile.InternalProfiler"><span>InternalProfiler</span></li><li class="in" name="org.openjdk.jmh.profile.Profiler"><span>Profiler</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -201,6 +201,23 @@ default (hard-coded) ones. Enable by adding</p><pre>jmhExtraOptions := <span cla
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.bench.GeotrellisFlightRecordingProfiler">GeotrellisFlightRecordingProfiler</a> → FlightRecordingProfiler → ExternalProfiler</dd></dl></div>
+    </li><li name="pl.project13.scala.jmh.extras.profiler.FlightRecordingProfiler#afterIteration" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="afterIteration(x$1:org.openjdk.jmh.infra.BenchmarkParams,x$2:org.openjdk.jmh.infra.IterationParams,x$3:org.openjdk.jmh.results.IterationResult):java.util.Collection[_&lt;:org.openjdk.jmh.results.Result]"></a>
+      <a id="afterIteration(BenchmarkParams,IterationParams,IterationResult):Collection[_&lt;:Result]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">afterIteration</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.openjdk.jmh.infra.BenchmarkParams">BenchmarkParams</span></span>, <span name="arg1">arg1: <span class="extype" name="org.openjdk.jmh.infra.IterationParams">IterationParams</span></span>, <span name="arg2">arg2: <span class="extype" name="org.openjdk.jmh.results.IterationResult">IterationResult</span></span>)</span><span class="result">: <span class="extype" name="java.util.Collection">Collection</span>[_ &lt;: <span class="extype" name="org.openjdk.jmh.results.Result">Result</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.bench.GeotrellisFlightRecordingProfiler@afterIteration(x$1:org.openjdk.jmh.infra.BenchmarkParams,x$2:org.openjdk.jmh.infra.IterationParams,x$3:org.openjdk.jmh.results.IterationResult):java.util.Collection[_&lt;:org.openjdk.jmh.results.Result]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FlightRecordingProfiler → InternalProfiler</dd></dl></div>
     </li><li name="pl.project13.scala.jmh.extras.profiler.FlightRecordingProfiler#afterTrial" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="afterTrial(x$1:org.openjdk.jmh.results.BenchmarkResult,x$2:Long,x$3:java.io.File,x$4:java.io.File):java.util.Collection[_&lt;:org.openjdk.jmh.results.Result]"></a>
       <a id="afterTrial(BenchmarkResult,Long,File,File):Collection[_&lt;:Result]"></a>
@@ -269,6 +286,23 @@ default (hard-coded) ones. Enable by adding</p><pre>jmhExtraOptions := <span cla
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="pl.project13.scala.jmh.extras.profiler.FlightRecordingProfiler#beforeIteration" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="beforeIteration(x$1:org.openjdk.jmh.infra.BenchmarkParams,x$2:org.openjdk.jmh.infra.IterationParams):Unit"></a>
+      <a id="beforeIteration(BenchmarkParams,IterationParams):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">beforeIteration</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.openjdk.jmh.infra.BenchmarkParams">BenchmarkParams</span></span>, <span name="arg1">arg1: <span class="extype" name="org.openjdk.jmh.infra.IterationParams">IterationParams</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.bench.GeotrellisFlightRecordingProfiler@beforeIteration(x$1:org.openjdk.jmh.infra.BenchmarkParams,x$2:org.openjdk.jmh.infra.IterationParams):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FlightRecordingProfiler → InternalProfiler</dd></dl></div>
     </li><li name="pl.project13.scala.jmh.extras.profiler.FlightRecordingProfiler#beforeTrial" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="beforeTrial(x$1:org.openjdk.jmh.infra.BenchmarkParams):Unit"></a>
       <a id="beforeTrial(BenchmarkParams):Unit"></a>
@@ -286,23 +320,6 @@ default (hard-coded) ones. Enable by adding</p><pre>jmhExtraOptions := <span cla
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FlightRecordingProfiler → ExternalProfiler</dd></dl></div>
-    </li><li name="pl.project13.scala.jmh.extras.profiler.FlightRecordingProfiler#checkSupport" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="checkSupport(x$1:java.util.List[String]):Boolean"></a>
-      <a id="checkSupport(List[String]):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">checkSupport</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.List">List</span>[<span class="extype" name="java.lang.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.bench.GeotrellisFlightRecordingProfiler@checkSupport(x$1:java.util.List[String]):Boolean" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FlightRecordingProfiler</dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -703,6 +720,8 @@ default (hard-coded) ones. Enable by adding</p><pre>jmhExtraOptions := <span cla
               <h3>Inherited from <span class="extype" name="pl.project13.scala.jmh.extras.profiler.FlightRecordingProfiler">FlightRecordingProfiler</span></h3>
             </div><div class="parent" name="org.openjdk.jmh.profile.ExternalProfiler">
               <h3>Inherited from <span class="extype" name="org.openjdk.jmh.profile.ExternalProfiler">ExternalProfiler</span></h3>
+            </div><div class="parent" name="org.openjdk.jmh.profile.InternalProfiler">
+              <h3>Inherited from <span class="extype" name="org.openjdk.jmh.profile.InternalProfiler">InternalProfiler</span></h3>
             </div><div class="parent" name="org.openjdk.jmh.profile.Profiler">
               <h3>Inherited from <span class="extype" name="org.openjdk.jmh.profile.Profiler">Profiler</span></h3>
             </div><div class="parent" name="scala.AnyRef">
