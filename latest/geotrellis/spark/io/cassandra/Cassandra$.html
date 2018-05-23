@@ -162,23 +162,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.spark.io.cassandra.Cassandra#cfg" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="cfg:com.typesafe.config.Config"></a>
-      <a id="cfg:Config"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">cfg</span><span class="result">: <span class="extype" name="com.typesafe.config.Config">Config</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.cassandra.Cassandra$@cfg:com.typesafe.config.Config" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -482,35 +465,137 @@
               
         </dd></dl></div>
     </li><li name="geotrellis.spark.io.cassandra.Cassandra#withBaseCassandraInstance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="withBaseCassandraInstance[K](hosts:Seq[String],username:String,password:String,replicationStrategy:String,replicationFactor:Int,localDc:String,usedHostsPerRemoteDc:Int,allowRemoteDCsForLocalConsistencyLevel:Boolean)(block:geotrellis.spark.io.cassandra.BaseCassandraInstance=&gt;K):K"></a>
-      <a id="withBaseCassandraInstance[K](Seq[String],String,String,String,Int,String,Int,Boolean)((BaseCassandraInstance)⇒K):K"></a>
+      <a id="withBaseCassandraInstance[K](hosts:Seq[String])(block:geotrellis.spark.io.cassandra.CassandraInstance=&gt;K):K"></a>
+      <a id="withBaseCassandraInstance[K](Seq[String])((CassandraInstance)⇒K):K"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">withBaseCassandraInstance</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="hosts">hosts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="username">username: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="replicationStrategy">replicationStrategy: <span class="extype" name="scala.Predef.String">String</span> = <span class="defval" name='<span class="name"><a href="">Cassandra.cfg.getString(&quot;replicationStrategy&quot;)</a></span>'>...</span></span>, <span name="replicationFactor">replicationFactor: <span class="extype" name="scala.Int">Int</span> = <span class="defval" name='<span class="name"><a href="">Cassandra.cfg.getInt(&quot;replicationFactor&quot;)</a></span>'>...</span></span>, <span name="localDc">localDc: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol"><span class="name"><a href="">Cassandra.cfg.getString(&quot;localDc&quot;)</a></span></span></span>, <span name="usedHostsPerRemoteDc">usedHostsPerRemoteDc: <span class="extype" name="scala.Int">Int</span> = <span class="defval" name='<span class="name"><a href="">Cassandra.cfg.getInt(&quot;usedHostsPerRemoteDc&quot;)</a></span>'>...</span></span>, <span name="allowRemoteDCsForLocalConsistencyLevel">allowRemoteDCsForLocalConsistencyLevel: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="defval" name='<span class="name"><a href="">Cassandra.cfg.getBoolean(&quot;allowRemoteDCsForLocalConsistencyLevel&quot;)</a></span>'>...</span></span>)</span><span class="params">(<span name="block">block: (<a href="BaseCassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.BaseCassandraInstance">BaseCassandraInstance</a>) ⇒ <span class="extype" name="geotrellis.spark.io.cassandra.Cassandra.withBaseCassandraInstance.K">K</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.spark.io.cassandra.Cassandra.withBaseCassandraInstance.K">K</span></span>
+        <span class="name">withBaseCassandraInstance</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="hosts">hosts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="params">(<span name="block">block: (<a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a>) ⇒ <span class="extype" name="geotrellis.spark.io.cassandra.Cassandra.withBaseCassandraInstance.K">K</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.spark.io.cassandra.Cassandra.withBaseCassandraInstance.K">K</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.cassandra.Cassandra$@withBaseCassandraInstance[K](hosts:Seq[String],username:String,password:String,replicationStrategy:String,replicationFactor:Int,localDc:String,usedHostsPerRemoteDc:Int,allowRemoteDCsForLocalConsistencyLevel:Boolean)(block:geotrellis.spark.io.cassandra.BaseCassandraInstance=&gt;K):K" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.cassandra.Cassandra$@withBaseCassandraInstance[K](hosts:Seq[String])(block:geotrellis.spark.io.cassandra.CassandraInstance=&gt;K):K" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.cassandra.Cassandra#withBaseCassandraInstance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withBaseCassandraInstance[K](hosts:Seq[String],username:String,password:String)(block:geotrellis.spark.io.cassandra.CassandraInstance=&gt;K):K"></a>
+      <a id="withBaseCassandraInstance[K](Seq[String],String,String)((CassandraInstance)⇒K):K"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withBaseCassandraInstance</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="hosts">hosts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="username">username: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span name="block">block: (<a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a>) ⇒ <span class="extype" name="geotrellis.spark.io.cassandra.Cassandra.withBaseCassandraInstance.K">K</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.spark.io.cassandra.Cassandra.withBaseCassandraInstance.K">K</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.cassandra.Cassandra$@withBaseCassandraInstance[K](hosts:Seq[String],username:String,password:String)(block:geotrellis.spark.io.cassandra.CassandraInstance=&gt;K):K" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.cassandra.Cassandra#withBaseCassandraInstance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withBaseCassandraInstance[K](hosts:Seq[String],cassandraConfig:geotrellis.spark.io.cassandra.conf.CassandraConfig)(block:geotrellis.spark.io.cassandra.CassandraInstance=&gt;K):K"></a>
+      <a id="withBaseCassandraInstance[K](Seq[String],CassandraConfig)((CassandraInstance)⇒K):K"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withBaseCassandraInstance</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="hosts">hosts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="cassandraConfig">cassandraConfig: <a href="conf/CassandraConfig.html" class="extype" name="geotrellis.spark.io.cassandra.conf.CassandraConfig">CassandraConfig</a></span>)</span><span class="params">(<span name="block">block: (<a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a>) ⇒ <span class="extype" name="geotrellis.spark.io.cassandra.Cassandra.withBaseCassandraInstance.K">K</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.spark.io.cassandra.Cassandra.withBaseCassandraInstance.K">K</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.cassandra.Cassandra$@withBaseCassandraInstance[K](hosts:Seq[String],cassandraConfig:geotrellis.spark.io.cassandra.conf.CassandraConfig)(block:geotrellis.spark.io.cassandra.CassandraInstance=&gt;K):K" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.cassandra.Cassandra#withBaseCassandraInstance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withBaseCassandraInstance[K](hosts:Seq[String],username:String,password:String,cassandraConfig:geotrellis.spark.io.cassandra.conf.CassandraConfig)(block:geotrellis.spark.io.cassandra.CassandraInstance=&gt;K):K"></a>
+      <a id="withBaseCassandraInstance[K](Seq[String],String,String,CassandraConfig)((CassandraInstance)⇒K):K"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withBaseCassandraInstance</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="hosts">hosts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="username">username: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="cassandraConfig">cassandraConfig: <a href="conf/CassandraConfig.html" class="extype" name="geotrellis.spark.io.cassandra.conf.CassandraConfig">CassandraConfig</a></span>)</span><span class="params">(<span name="block">block: (<a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a>) ⇒ <span class="extype" name="geotrellis.spark.io.cassandra.Cassandra.withBaseCassandraInstance.K">K</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.spark.io.cassandra.Cassandra.withBaseCassandraInstance.K">K</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.cassandra.Cassandra$@withBaseCassandraInstance[K](hosts:Seq[String],username:String,password:String,cassandraConfig:geotrellis.spark.io.cassandra.conf.CassandraConfig)(block:geotrellis.spark.io.cassandra.CassandraInstance=&gt;K):K" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
     </li><li name="geotrellis.spark.io.cassandra.Cassandra#withBaseCassandraInstanceDo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="withBaseCassandraInstanceDo[K](hosts:Seq[String],username:String,password:String,replicationStrategy:String,replicationFactor:Int,localDc:String,usedHostsPerRemoteDc:Int,allowRemoteDCsForLocalConsistencyLevel:Boolean)(block:geotrellis.spark.io.cassandra.BaseCassandraInstance=&gt;K):K"></a>
-      <a id="withBaseCassandraInstanceDo[K](Seq[String],String,String,String,Int,String,Int,Boolean)((BaseCassandraInstance)⇒K):K"></a>
+      <a id="withBaseCassandraInstanceDo[K](hosts:Seq[String],cassandraConfig:geotrellis.spark.io.cassandra.conf.CassandraConfig)(block:geotrellis.spark.io.cassandra.CassandraInstance=&gt;K):K"></a>
+      <a id="withBaseCassandraInstanceDo[K](Seq[String],CassandraConfig)((CassandraInstance)⇒K):K"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">withBaseCassandraInstanceDo</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="hosts">hosts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="username">username: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="replicationStrategy">replicationStrategy: <span class="extype" name="scala.Predef.String">String</span> = <span class="defval" name='<span class="name"><a href="">Cassandra.cfg.getString(&quot;replicationStrategy&quot;)</a></span>'>...</span></span>, <span name="replicationFactor">replicationFactor: <span class="extype" name="scala.Int">Int</span> = <span class="defval" name='<span class="name"><a href="">Cassandra.cfg.getInt(&quot;replicationFactor&quot;)</a></span>'>...</span></span>, <span name="localDc">localDc: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol"><span class="name"><a href="">Cassandra.cfg.getString(&quot;localDc&quot;)</a></span></span></span>, <span name="usedHostsPerRemoteDc">usedHostsPerRemoteDc: <span class="extype" name="scala.Int">Int</span> = <span class="defval" name='<span class="name"><a href="">Cassandra.cfg.getInt(&quot;usedHostsPerRemoteDc&quot;)</a></span>'>...</span></span>, <span name="allowRemoteDCsForLocalConsistencyLevel">allowRemoteDCsForLocalConsistencyLevel: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="defval" name='<span class="name"><a href="">Cassandra.cfg.getBoolean(&quot;allowRemoteDCsForLocalConsistencyLevel&quot;)</a></span>'>...</span></span>)</span><span class="params">(<span name="block">block: (<a href="BaseCassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.BaseCassandraInstance">BaseCassandraInstance</a>) ⇒ <span class="extype" name="geotrellis.spark.io.cassandra.Cassandra.withBaseCassandraInstanceDo.K">K</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.spark.io.cassandra.Cassandra.withBaseCassandraInstanceDo.K">K</span></span>
+        <span class="name">withBaseCassandraInstanceDo</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="hosts">hosts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="cassandraConfig">cassandraConfig: <a href="conf/CassandraConfig.html" class="extype" name="geotrellis.spark.io.cassandra.conf.CassandraConfig">CassandraConfig</a></span>)</span><span class="params">(<span name="block">block: (<a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a>) ⇒ <span class="extype" name="geotrellis.spark.io.cassandra.Cassandra.withBaseCassandraInstanceDo.K">K</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.spark.io.cassandra.Cassandra.withBaseCassandraInstanceDo.K">K</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.cassandra.Cassandra$@withBaseCassandraInstanceDo[K](hosts:Seq[String],username:String,password:String,replicationStrategy:String,replicationFactor:Int,localDc:String,usedHostsPerRemoteDc:Int,allowRemoteDCsForLocalConsistencyLevel:Boolean)(block:geotrellis.spark.io.cassandra.BaseCassandraInstance=&gt;K):K" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.cassandra.Cassandra$@withBaseCassandraInstanceDo[K](hosts:Seq[String],cassandraConfig:geotrellis.spark.io.cassandra.conf.CassandraConfig)(block:geotrellis.spark.io.cassandra.CassandraInstance=&gt;K):K" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.cassandra.Cassandra#withBaseCassandraInstanceDo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withBaseCassandraInstanceDo[K](hosts:Seq[String])(block:geotrellis.spark.io.cassandra.CassandraInstance=&gt;K):K"></a>
+      <a id="withBaseCassandraInstanceDo[K](Seq[String])((CassandraInstance)⇒K):K"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withBaseCassandraInstanceDo</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="hosts">hosts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="params">(<span name="block">block: (<a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a>) ⇒ <span class="extype" name="geotrellis.spark.io.cassandra.Cassandra.withBaseCassandraInstanceDo.K">K</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.spark.io.cassandra.Cassandra.withBaseCassandraInstanceDo.K">K</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.cassandra.Cassandra$@withBaseCassandraInstanceDo[K](hosts:Seq[String])(block:geotrellis.spark.io.cassandra.CassandraInstance=&gt;K):K" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.cassandra.Cassandra#withBaseCassandraInstanceDo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withBaseCassandraInstanceDo[K](hosts:Seq[String],username:String,password:String)(block:geotrellis.spark.io.cassandra.CassandraInstance=&gt;K):K"></a>
+      <a id="withBaseCassandraInstanceDo[K](Seq[String],String,String)((CassandraInstance)⇒K):K"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withBaseCassandraInstanceDo</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="hosts">hosts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="username">username: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span name="block">block: (<a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a>) ⇒ <span class="extype" name="geotrellis.spark.io.cassandra.Cassandra.withBaseCassandraInstanceDo.K">K</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.spark.io.cassandra.Cassandra.withBaseCassandraInstanceDo.K">K</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.cassandra.Cassandra$@withBaseCassandraInstanceDo[K](hosts:Seq[String],username:String,password:String)(block:geotrellis.spark.io.cassandra.CassandraInstance=&gt;K):K" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.cassandra.Cassandra#withBaseCassandraInstanceDo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="withBaseCassandraInstanceDo[K](hosts:Seq[String],username:String,password:String,cassandraConfig:geotrellis.spark.io.cassandra.conf.CassandraConfig)(block:geotrellis.spark.io.cassandra.CassandraInstance=&gt;K):K"></a>
+      <a id="withBaseCassandraInstanceDo[K](Seq[String],String,String,CassandraConfig)((CassandraInstance)⇒K):K"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withBaseCassandraInstanceDo</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="hosts">hosts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="username">username: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="cassandraConfig">cassandraConfig: <a href="conf/CassandraConfig.html" class="extype" name="geotrellis.spark.io.cassandra.conf.CassandraConfig">CassandraConfig</a></span>)</span><span class="params">(<span name="block">block: (<a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a>) ⇒ <span class="extype" name="geotrellis.spark.io.cassandra.Cassandra.withBaseCassandraInstanceDo.K">K</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.spark.io.cassandra.Cassandra.withBaseCassandraInstanceDo.K">K</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.cassandra.Cassandra$@withBaseCassandraInstanceDo[K](hosts:Seq[String],username:String,password:String,cassandraConfig:geotrellis.spark.io.cassandra.conf.CassandraConfig)(block:geotrellis.spark.io.cassandra.CassandraInstance=&gt;K):K" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

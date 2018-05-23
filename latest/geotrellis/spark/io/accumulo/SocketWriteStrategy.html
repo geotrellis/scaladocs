@@ -45,7 +45,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">SocketWriteStrategy</span><span class="params">(<span name="config">config: <span class="extype" name="org.apache.accumulo.core.client.BatchWriterConfig">BatchWriterConfig</span> = <span class="defval" name='<span class="name"><a href="AccumuloWriteStrategy$.html">new BatchWriterConfig().setMaxMemory(128*1024*1024).setMaxWriteThreads(AccumuloWriteStrategy.threads)</a></span>'>...</span></span>, <span name="threads">threads: <span class="extype" name="scala.Int">Int</span> = <span class="symbol"><span class="name"><a href="AccumuloWriteStrategy$.html">AccumuloWriteStrategy.threads</a></span></span></span>)</span><span class="result"> extends <a href="AccumuloWriteStrategy.html" class="extype" name="geotrellis.spark.io.accumulo.AccumuloWriteStrategy">AccumuloWriteStrategy</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">SocketWriteStrategy</span><span class="params">(<span name="config">config: <span class="extype" name="org.apache.accumulo.core.client.BatchWriterConfig">BatchWriterConfig</span> = <span class="defval" name='<span class="name"><a href="AccumuloWriteStrategy$.html">new BatchWriterConfig().setMaxMemory(128*1024*1024).setMaxWriteThreads(AccumuloWriteStrategy.defaultThreadCount)</a></span>'>...</span></span>, <span name="threads">threads: <span class="extype" name="scala.Int">Int</span> = <span class="defval" name='<span class="name"><a href="AccumuloWriteStrategy$.html">AccumuloWriteStrategy.defaultThreadCount</a></span>'>...</span></span>)</span><span class="result"> extends <a href="AccumuloWriteStrategy.html" class="extype" name="geotrellis.spark.io.accumulo.AccumuloWriteStrategy">AccumuloWriteStrategy</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -103,7 +103,7 @@ Note: this introduces higher chance of data loss due to sudden node failure.</p>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">SocketWriteStrategy</span><span class="params">(<span name="config">config: <span class="extype" name="org.apache.accumulo.core.client.BatchWriterConfig">BatchWriterConfig</span> = <span class="defval" name='<span class="name"><a href="AccumuloWriteStrategy$.html">new BatchWriterConfig().setMaxMemory(128*1024*1024).setMaxWriteThreads(AccumuloWriteStrategy.threads)</a></span>'>...</span></span>, <span name="threads">threads: <span class="extype" name="scala.Int">Int</span> = <span class="symbol"><span class="name"><a href="AccumuloWriteStrategy$.html">AccumuloWriteStrategy.threads</a></span></span></span>)</span>
+        <span class="name">SocketWriteStrategy</span><span class="params">(<span name="config">config: <span class="extype" name="org.apache.accumulo.core.client.BatchWriterConfig">BatchWriterConfig</span> = <span class="defval" name='<span class="name"><a href="AccumuloWriteStrategy$.html">new BatchWriterConfig().setMaxMemory(128*1024*1024).setMaxWriteThreads(AccumuloWriteStrategy.defaultThreadCount)</a></span>'>...</span></span>, <span name="threads">threads: <span class="extype" name="scala.Int">Int</span> = <span class="defval" name='<span class="name"><a href="AccumuloWriteStrategy$.html">AccumuloWriteStrategy.defaultThreadCount</a></span>'>...</span></span>)</span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.accumulo.SocketWriteStrategy@&lt;init&gt;(config:org.apache.accumulo.core.client.BatchWriterConfig,threads:Int):geotrellis.spark.io.accumulo.SocketWriteStrategy" title="Permalink" target="_top">
@@ -302,6 +302,23 @@ Note: this introduces higher chance of data loss due to sudden node failure.</p>
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.spark.io.accumulo.SocketWriteStrategy#kwConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="kwConfig:geotrellis.spark.util.KryoWrapper[org.apache.accumulo.core.client.BatchWriterConfig]"></a>
+      <a id="kwConfig:KryoWrapper[BatchWriterConfig]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">kwConfig</span><span class="result">: <a href="../../util/KryoWrapper.html" class="extype" name="geotrellis.spark.util.KryoWrapper">KryoWrapper</a>[<span class="extype" name="org.apache.accumulo.core.client.BatchWriterConfig">BatchWriterConfig</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.accumulo.SocketWriteStrategy@kwConfig:geotrellis.spark.util.KryoWrapper[org.apache.accumulo.core.client.BatchWriterConfig]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>

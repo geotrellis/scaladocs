@@ -45,7 +45,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">CassandraProfile</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="hosts">hosts: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="replicationStrategy">replicationStrategy: <span class="extype" name="scala.Predef.String">String</span> = <span class="defval" name='<span class="name"><a href="../../../package.html">Cassandra.cfg.getString(&quot;replicationStrategy&quot;)</a></span>'>...</span></span>, <span name="replicationFactor">replicationFactor: <span class="extype" name="scala.Int">Int</span> = <span class="defval" name='<span class="name"><a href="../../../package.html">Cassandra.cfg.getInt(&quot;replicationFactor&quot;)</a></span>'>...</span></span>, <span name="localDc">localDc: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol"><span class="name"><a href="../../../package.html">Cassandra.cfg.getString(&quot;localDc&quot;)</a></span></span></span>, <span name="usedHostsPerRemoteDc">usedHostsPerRemoteDc: <span class="extype" name="scala.Int">Int</span> = <span class="defval" name='<span class="name"><a href="../../../package.html">Cassandra.cfg.getInt(&quot;usedHostsPerRemoteDc&quot;)</a></span>'>...</span></span>, <span name="allowRemoteDCsForLocalConsistencyLevel">allowRemoteDCsForLocalConsistencyLevel: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="defval" name='<span class="name"><a href="../../../package.html">Cassandra.cfg.getBoolean(&quot;allowRemoteDCsForLocalConsistencyLevel&quot;)</a></span>'>...</span></span>)</span><span class="result"> extends <a href="BackendProfile.html" class="extype" name="geotrellis.spark.etl.config.BackendProfile">BackendProfile</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">CassandraProfile</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="hosts">hosts: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="cassandraConfig">cassandraConfig: <a href="../../io/cassandra/conf/CassandraConfig.html" class="extype" name="geotrellis.spark.io.cassandra.conf.CassandraConfig">CassandraConfig</a> = <span class="symbol"><span class="name"><a href="../../../package.html">CassandraConfig</a></span></span></span>)</span><span class="result"> extends <a href="BackendProfile.html" class="extype" name="geotrellis.spark.etl.config.BackendProfile">BackendProfile</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -89,7 +89,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.spark.etl.config.CassandraProfile#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(name:String,hosts:String,user:String,password:String,replicationStrategy:String,replicationFactor:Int,localDc:String,usedHostsPerRemoteDc:Int,allowRemoteDCsForLocalConsistencyLevel:Boolean):geotrellis.spark.etl.config.CassandraProfile"></a>
+      <a id="&lt;init&gt;(name:String,hosts:String,user:String,password:String,cassandraConfig:geotrellis.spark.io.cassandra.conf.CassandraConfig):geotrellis.spark.etl.config.CassandraProfile"></a>
       <a id="&lt;init&gt;:CassandraProfile"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -97,10 +97,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">CassandraProfile</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="hosts">hosts: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="replicationStrategy">replicationStrategy: <span class="extype" name="scala.Predef.String">String</span> = <span class="defval" name='<span class="name"><a href="../../../package.html">Cassandra.cfg.getString(&quot;replicationStrategy&quot;)</a></span>'>...</span></span>, <span name="replicationFactor">replicationFactor: <span class="extype" name="scala.Int">Int</span> = <span class="defval" name='<span class="name"><a href="../../../package.html">Cassandra.cfg.getInt(&quot;replicationFactor&quot;)</a></span>'>...</span></span>, <span name="localDc">localDc: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol"><span class="name"><a href="../../../package.html">Cassandra.cfg.getString(&quot;localDc&quot;)</a></span></span></span>, <span name="usedHostsPerRemoteDc">usedHostsPerRemoteDc: <span class="extype" name="scala.Int">Int</span> = <span class="defval" name='<span class="name"><a href="../../../package.html">Cassandra.cfg.getInt(&quot;usedHostsPerRemoteDc&quot;)</a></span>'>...</span></span>, <span name="allowRemoteDCsForLocalConsistencyLevel">allowRemoteDCsForLocalConsistencyLevel: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="defval" name='<span class="name"><a href="../../../package.html">Cassandra.cfg.getBoolean(&quot;allowRemoteDCsForLocalConsistencyLevel&quot;)</a></span>'>...</span></span>)</span>
+        <span class="name">CassandraProfile</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="hosts">hosts: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="cassandraConfig">cassandraConfig: <a href="../../io/cassandra/conf/CassandraConfig.html" class="extype" name="geotrellis.spark.io.cassandra.conf.CassandraConfig">CassandraConfig</a> = <span class="symbol"><span class="name"><a href="../../../package.html">CassandraConfig</a></span></span></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.etl.config.CassandraProfile@&lt;init&gt;(name:String,hosts:String,user:String,password:String,replicationStrategy:String,replicationFactor:Int,localDc:String,usedHostsPerRemoteDc:Int,allowRemoteDCsForLocalConsistencyLevel:Boolean):geotrellis.spark.etl.config.CassandraProfile" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.etl.config.CassandraProfile@&lt;init&gt;(name:String,hosts:String,user:String,password:String,cassandraConfig:geotrellis.spark.io.cassandra.conf.CassandraConfig):geotrellis.spark.etl.config.CassandraProfile" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -165,23 +165,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.spark.etl.config.CassandraProfile#allowRemoteDCsForLocalConsistencyLevel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="allowRemoteDCsForLocalConsistencyLevel:Boolean"></a>
-      <a id="allowRemoteDCsForLocalConsistencyLevel:Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">allowRemoteDCsForLocalConsistencyLevel</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.etl.config.CassandraProfile@allowRemoteDCsForLocalConsistencyLevel:Boolean" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -199,6 +182,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.spark.etl.config.CassandraProfile#cassandraConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="cassandraConfig:geotrellis.spark.io.cassandra.conf.CassandraConfig"></a>
+      <a id="cassandraConfig:CassandraConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cassandraConfig</span><span class="result">: <a href="../../io/cassandra/conf/CassandraConfig.html" class="extype" name="geotrellis.spark.io.cassandra.conf.CassandraConfig">CassandraConfig</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.etl.config.CassandraProfile@cassandraConfig:geotrellis.spark.io.cassandra.conf.CassandraConfig" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -330,23 +330,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.spark.etl.config.CassandraProfile#localDc" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="localDc:String"></a>
-      <a id="localDc:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">localDc</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.etl.config.CassandraProfile@localDc:String" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="geotrellis.spark.etl.config.CassandraProfile#name" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="name:String"></a>
       <a id="name:String"></a>
@@ -432,40 +415,6 @@
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.etl.config.CassandraProfile#replicationFactor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="replicationFactor:Int"></a>
-      <a id="replicationFactor:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">replicationFactor</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.etl.config.CassandraProfile@replicationFactor:Int" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.spark.etl.config.CassandraProfile#replicationStrategy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="replicationStrategy:String"></a>
-      <a id="replicationStrategy:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">replicationStrategy</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.etl.config.CassandraProfile@replicationStrategy:String" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -500,23 +449,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.etl.config.CassandraProfile">CassandraProfile</a> → <a href="BackendProfile.html" class="extype" name="geotrellis.spark.etl.config.BackendProfile">BackendProfile</a></dd></dl></div>
-    </li><li name="geotrellis.spark.etl.config.CassandraProfile#usedHostsPerRemoteDc" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="usedHostsPerRemoteDc:Int"></a>
-      <a id="usedHostsPerRemoteDc:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">usedHostsPerRemoteDc</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.etl.config.CassandraProfile@usedHostsPerRemoteDc:Int" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="geotrellis.spark.etl.config.CassandraProfile#user" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="user:String"></a>
       <a id="user:String"></a>

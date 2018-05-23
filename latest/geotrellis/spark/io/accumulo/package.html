@@ -199,7 +199,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="AccumuloLayerHeader.html"><span class="name">AccumuloLayerHeader</span></a><span class="params">(<span name="keyClass">keyClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="valueClass">valueClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tileTable">tileTable: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="../LayerHeader.html" class="extype" name="geotrellis.spark.io.LayerHeader">LayerHeader</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="AccumuloLayerHeader.html"><span class="name">AccumuloLayerHeader</span></a><span class="params">(<span name="keyClass">keyClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="valueClass">valueClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tileTable">tileTable: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="layerType">layerType: <a href="../LayerType.html" class="extype" name="geotrellis.spark.io.LayerType">LayerType</a> = <span class="symbol"><span class="name"><a href="../../../package.html">AvroLayerType</a></span></span></span>)</span><span class="result"> extends <a href="../LayerHeader.html" class="extype" name="geotrellis.spark.io.LayerHeader">LayerHeader</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.accumulo.package@AccumuloLayerHeaderextendsLayerHeaderwithProductwithSerializable" title="Permalink" target="_top">
@@ -274,23 +274,6 @@ Layers table name is required to instantiate a <a href="../LayerWriter.html" cla
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.accumulo.package@AccumuloLayerReindexerextendsLayerReindexer[geotrellis.spark.LayerId]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.spark.io.accumulo.AccumuloLayerUpdater" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="AccumuloLayerUpdaterextendsLayerUpdater[geotrellis.spark.LayerId]withLazyLogging"></a>
-      <a id="AccumuloLayerUpdater:AccumuloLayerUpdater"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="AccumuloLayerUpdater.html"><span class="name">AccumuloLayerUpdater</span></a><span class="result"> extends <a href="../LayerUpdater.html" class="extype" name="geotrellis.spark.io.LayerUpdater">LayerUpdater</a>[<a href="../../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a>] with <a href="../../../util/LazyLogging.html" class="extype" name="geotrellis.util.LazyLogging">LazyLogging</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.accumulo.package@AccumuloLayerUpdaterextendsLayerUpdater[geotrellis.spark.LayerId]withLazyLogging" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -393,7 +376,7 @@ If not specified this will default to local ('file:/') system, this is undesriab
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="SocketWriteStrategy.html"><span class="name">SocketWriteStrategy</span></a><span class="params">(<span name="config">config: <span class="extype" name="org.apache.accumulo.core.client.BatchWriterConfig">BatchWriterConfig</span> = <span class="defval" name='<span class="name"><a href="AccumuloWriteStrategy$.html">new BatchWriterConfig().setMaxMemory(128*1024*1024).setMaxWriteThreads(AccumuloWriteStrategy.threads)</a></span>'>...</span></span>, <span name="threads">threads: <span class="extype" name="scala.Int">Int</span> = <span class="symbol"><span class="name"><a href="AccumuloWriteStrategy$.html">AccumuloWriteStrategy.threads</a></span></span></span>)</span><span class="result"> extends <a href="AccumuloWriteStrategy.html" class="extype" name="geotrellis.spark.io.accumulo.AccumuloWriteStrategy">AccumuloWriteStrategy</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="SocketWriteStrategy.html"><span class="name">SocketWriteStrategy</span></a><span class="params">(<span name="config">config: <span class="extype" name="org.apache.accumulo.core.client.BatchWriterConfig">BatchWriterConfig</span> = <span class="defval" name='<span class="name"><a href="AccumuloWriteStrategy$.html">new BatchWriterConfig().setMaxMemory(128*1024*1024).setMaxWriteThreads(AccumuloWriteStrategy.defaultThreadCount)</a></span>'>...</span></span>, <span name="threads">threads: <span class="extype" name="scala.Int">Int</span> = <span class="defval" name='<span class="name"><a href="AccumuloWriteStrategy$.html">AccumuloWriteStrategy.defaultThreadCount</a></span>'>...</span></span>)</span><span class="result"> extends <a href="AccumuloWriteStrategy.html" class="extype" name="geotrellis.spark.io.accumulo.AccumuloWriteStrategy">AccumuloWriteStrategy</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.accumulo.package@SocketWriteStrategyextendsAccumuloWriteStrategywithProductwithSerializable" title="Permalink" target="_top">
@@ -635,23 +618,6 @@ Note: this introduces higher chance of data loss due to sudden node failure.</p>
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.io.accumulo.AccumuloLayerUpdater" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="AccumuloLayerUpdater"></a>
-      <a id="AccumuloLayerUpdater:AccumuloLayerUpdater"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="AccumuloLayerUpdater$.html"><span class="name">AccumuloLayerUpdater</span></a>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.accumulo.package@AccumuloLayerUpdater" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="geotrellis.spark.io.accumulo.AccumuloLayerWriter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="AccumuloLayerWriter"></a>
       <a id="AccumuloLayerWriter:AccumuloLayerWriter"></a>
@@ -784,6 +750,23 @@ Note: this introduces higher chance of data loss due to sudden node failure.</p>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.accumulo.package@columnFamily(id:geotrellis.spark.LayerId):String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.accumulo.conf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="conf"></a>
+      <a id="conf:conf"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="conf/package.html"><span class="name">conf</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.accumulo.package@conf" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

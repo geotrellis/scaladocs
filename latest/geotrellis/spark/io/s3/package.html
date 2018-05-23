@@ -218,7 +218,7 @@ Subclass must extend [readObjectRequest] method to map from S3 object requests t
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="S3GeoTiffInfoReader.html"><span class="name">S3GeoTiffInfoReader</span></a><span class="params">(<span name="bucket">bucket: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="getS3Client">getS3Client: () ⇒ <a href="S3Client.html" class="extype" name="geotrellis.spark.io.s3.S3Client">S3Client</a> = <span class="symbol"><span class="name"><a href="S3Client$.html">() =&gt; S3Client.DEFAULT</a></span></span></span>, <span name="delimiter">delimiter: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>, <span name="decompress">decompress: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="streaming">streaming: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="tiffExtensions">tiffExtensions: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="defval" name='<span class="name"><a href="S3GeoTiffRDD$.html">S3GeoTiffRDD.Options.DEFAULT.tiffExtensions</a></span>'>...</span></span>)</span><span class="result"> extends <span class="extype" name="geotrellis.spark.io.GeoTiffInfoReader">GeoTiffInfoReader</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="S3GeoTiffInfoReader.html"><span class="name">S3GeoTiffInfoReader</span></a><span class="params">(<span name="bucket">bucket: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="getS3Client">getS3Client: () ⇒ <a href="S3Client.html" class="extype" name="geotrellis.spark.io.s3.S3Client">S3Client</a> = <span class="symbol"><span class="name"><a href="S3Client$.html">() =&gt; S3Client.DEFAULT</a></span></span></span>, <span name="delimiter">delimiter: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>, <span name="streaming">streaming: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="tiffExtensions">tiffExtensions: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="defval" name='<span class="name"><a href="S3GeoTiffRDD$.html">S3GeoTiffRDD.Options.DEFAULT.tiffExtensions</a></span>'>...</span></span>)</span><span class="result"> extends <span class="extype" name="geotrellis.spark.io.GeoTiffInfoReader">GeoTiffInfoReader</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.s3.package@S3GeoTiffInfoReaderextendsGeoTiffInfoReaderwithProductwithSerializable" title="Permalink" target="_top">
@@ -308,7 +308,7 @@ AWS credentials have already been discovered and provided by the S3InputFormat.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="S3LayerHeader.html"><span class="name">S3LayerHeader</span></a><span class="params">(<span name="keyClass">keyClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="valueClass">valueClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="bucket">bucket: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="key">key: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="../LayerHeader.html" class="extype" name="geotrellis.spark.io.LayerHeader">LayerHeader</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="S3LayerHeader.html"><span class="name">S3LayerHeader</span></a><span class="params">(<span name="keyClass">keyClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="valueClass">valueClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="bucket">bucket: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="key">key: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="layerType">layerType: <a href="../LayerType.html" class="extype" name="geotrellis.spark.io.LayerType">LayerType</a> = <span class="symbol"><span class="name"><a href="../../../package.html">AvroLayerType</a></span></span></span>)</span><span class="result"> extends <a href="../LayerHeader.html" class="extype" name="geotrellis.spark.io.LayerHeader">LayerHeader</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.s3.package@S3LayerHeaderextendsLayerHeaderwithProductwithSerializable" title="Permalink" target="_top">
@@ -370,23 +370,6 @@ The uri represents S3 bucket an prefix of catalog root.
       </a>
     </span>
       <p class="shortcomment cmt">Handles reading raster RDDs and their metadata from S3.</p>
-    </li><li name="geotrellis.spark.io.s3.S3LayerUpdater" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="S3LayerUpdaterextendsLayerUpdater[geotrellis.spark.LayerId]withLazyLogging"></a>
-      <a id="S3LayerUpdater:S3LayerUpdater"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="S3LayerUpdater.html"><span class="name">S3LayerUpdater</span></a><span class="result"> extends <a href="../LayerUpdater.html" class="extype" name="geotrellis.spark.io.LayerUpdater">LayerUpdater</a>[<a href="../../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a>] with <a href="../../../util/LazyLogging.html" class="extype" name="geotrellis.util.LazyLogging">LazyLogging</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.package@S3LayerUpdaterextendsLayerUpdater[geotrellis.spark.LayerId]withLazyLogging" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="geotrellis.spark.io.s3.S3LayerWriter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="S3LayerWriterextendsLayerWriter[geotrellis.spark.LayerId]withLazyLogging"></a>
       <a id="S3LayerWriter:S3LayerWriter"></a>
@@ -913,23 +896,6 @@ TemporalMultibandGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quo
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.io.s3.S3LayerUpdater" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="S3LayerUpdater"></a>
-      <a id="S3LayerUpdater:S3LayerUpdater"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="S3LayerUpdater$.html"><span class="name">S3LayerUpdater</span></a>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.package@S3LayerUpdater" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="geotrellis.spark.io.s3.S3LayerWriter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="S3LayerWriter"></a>
       <a id="S3LayerWriter:S3LayerWriter"></a>
@@ -1028,6 +994,23 @@ TemporalMultibandGeoTiffS3InputFormat.GEOTIFF_TIME_FORMAT; default is &quot;&quo
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.s3.package@cog" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.s3.conf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="conf"></a>
+      <a id="conf:conf"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="conf/package.html"><span class="name">conf</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.s3.package@conf" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

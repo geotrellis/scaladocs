@@ -345,23 +345,25 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="geotrellis.spark.stitch.TileLayoutStitcher#stitch" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="stitch[V&lt;:geotrellis.raster.CellGrid](tiles:Iterable[(Product2[Int,Int],V)])(implicitstitcher:geotrellis.raster.stitch.Stitcher[V]):(V,geotrellis.raster.GridBounds)"></a>
-      <a id="stitch[V&lt;:CellGrid](Iterable[(Product2[Int,Int],V)])(Stitcher[V]):(V,GridBounds)"></a>
+      <a id="stitch[V&lt;:geotrellis.raster.CellGrid](tiles:Traversable[(Product2[Int,Int],V)])(implicitevidence$1:geotrellis.raster.stitch.Stitcher[V]):(V,(Int,Int),(Int,Int))"></a>
+      <a id="stitch[V&lt;:CellGrid](Traversable[(Product2[Int,Int],V)])(Stitcher[V]):(V,(Int,Int),(Int,Int))"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">stitch</span><span class="tparams">[<span name="V">V &lt;: <a href="../../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></span>]</span><span class="params">(<span name="tiles">tiles: <span class="extype" name="scala.Iterable">Iterable</span>[(<span class="extype" name="scala.Product2">Product2</span>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>], <span class="extype" name="geotrellis.spark.stitch.TileLayoutStitcher.stitch.V">V</span>)]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="stitcher">stitcher: <a href="../../raster/stitch/Stitcher.html" class="extype" name="geotrellis.raster.stitch.Stitcher">Stitcher</a>[<span class="extype" name="geotrellis.spark.stitch.TileLayoutStitcher.stitch.V">V</span>]</span>)</span><span class="result">: (<span class="extype" name="geotrellis.spark.stitch.TileLayoutStitcher.stitch.V">V</span>, <a href="../../raster/GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a>)</span>
+        <span class="name">stitch</span><span class="tparams">[<span name="V">V &lt;: <a href="../../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></span>]</span><span class="params">(<span name="tiles">tiles: <span class="extype" name="scala.Traversable">Traversable</span>[(<span class="extype" name="scala.Product2">Product2</span>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>], <span class="extype" name="geotrellis.spark.stitch.TileLayoutStitcher.stitch.V">V</span>)]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../../raster/stitch/Stitcher.html" class="extype" name="geotrellis.raster.stitch.Stitcher">Stitcher</a>[<span class="extype" name="geotrellis.spark.stitch.TileLayoutStitcher.stitch.V">V</span>]</span>)</span><span class="result">: (<span class="extype" name="geotrellis.spark.stitch.TileLayoutStitcher.stitch.V">V</span>, (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>), (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>))</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.stitch.TileLayoutStitcher$@stitch[V&lt;:geotrellis.raster.CellGrid](tiles:Iterable[(Product2[Int,Int],V)])(implicitstitcher:geotrellis.raster.stitch.Stitcher[V]):(V,geotrellis.raster.GridBounds)" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.stitch.TileLayoutStitcher$@stitch[V&lt;:geotrellis.raster.CellGrid](tiles:Traversable[(Product2[Int,Int],V)])(implicitevidence$1:geotrellis.raster.stitch.Stitcher[V]):(V,(Int,Int),(Int,Int))" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Stitches a collection of tiles keyed by (col, row) tuple into a single tile.</p><div class="fullcomment"><div class="comment cmt"><p>Stitches a collection of tiles keyed by (col, row) tuple into a single tile.
-Makes the assumption that all tiles are of equal size such that they can be placed in a grid layout.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>An option of stitched tile and the GridBounds of keys used to construct it.</p></dd></dl></div>
+      <p class="shortcomment cmt">Stitches a collection of spatially-keyed tiles into a single tile.</p><div class="fullcomment"><div class="comment cmt"><p>Stitches a collection of spatially-keyed tiles into a single tile.  Assumes that all
+tiles in a given column (row) have the same width (height).
+</p></div><dl class="paramcmts block"><dt class="param">tiles</dt><dd class="cmt"><p>A traversable collection of (key, tile) pairs</p></dd><dt>returns</dt><dd class="cmt"><p>A tuple with the stitched tile, the key of the upper left tile
+                      of the layout, and the width and height of that spatial key</p></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

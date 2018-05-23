@@ -1469,6 +1469,48 @@
       </a>
     </span>
       
+    </li><li name="geotrellis.vector.ProjectGeometry" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ProjectGeometry[G&lt;:geotrellis.vector.Geometry]extendsAnyRef"></a>
+      <a id="ProjectGeometry[G&lt;:Geometry]:ProjectGeometry[G]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$ProjectGeometry.html"><span class="name">ProjectGeometry</span></a><span class="tparams">[<span name="G">G &lt;: <a href="Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vector.package@ProjectGeometry[G&lt;:geotrellis.vector.Geometry]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.vector.Projected" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Projected[+G&lt;:geotrellis.vector.Geometry]extendsProductwithSerializable"></a>
+      <a id="Projected[+G&lt;:Geometry]:Projected[G]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Projected.html"><span class="name">Projected</span></a><span class="tparams">[<span name="G">+G &lt;: <a href="Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>]</span><span class="params">(<span name="geom">geom: <span class="extype" name="geotrellis.vector.Projected.G">G</span></span>, <span name="srid">srid: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vector.package@Projected[+G&lt;:geotrellis.vector.Geometry]extendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A case class which represents Geometry with an SRID.</p><div class="fullcomment"><div class="comment cmt"><p>A case class which represents Geometry with an SRID.
+</p></div><dl class="attributes block"> <div class="block">Example:
+               <ol><li class="cmt"><p></p><pre><span class="kw">import</span> geotrellis.proj4._
+<span class="kw">val</span> projected = Point(<span class="num">1</span>,<span class="num">1</span>).withSRID(<span class="num">4326</span>)  <span class="cmt">// LatLng, trust me</span>
+<span class="kw">val</span> projected = projected.reproject(LatLng, WebMercator)(<span class="num">3857</span>)</pre></li></ol>
+            </div><dt>Note</dt><dd><span class="cmt"><p>This exists because PostGIS requires an SRID to be stored
+      with the Geometry and the decision has been made not to encapsulate
+      SRID semantics in the Geometry hierarchy for the moment.</p></span>, <span class="cmt"><p>It is up to the application developer to ensure that
+      the SRID parameter stays semantically consistent.</p></span></dd></dl></div>
     </li><li name="geotrellis.vector.ProjectedExtent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ProjectedExtentextendsProductwithSerializable"></a>
       <a id="ProjectedExtent:ProjectedExtent"></a>
@@ -2135,7 +2177,7 @@
     </span>
       <p class="shortcomment cmt">The algorithms herein are all implemented in JTS, but the wrapper methods
 here make it straightforward to call them with geotrellis.vector classes.</p>
-    </li><li name="geotrellis.vector.voronoi.Implicits.withDelaunayTriangulationArrayMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.vector.triangulation.Implicits.withDelaunayTriangulationArrayMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="withDelaunayTriangulationArrayMethodsextendsDelaunayTriangulationArrayMethods"></a>
       <a id="withDelaunayTriangulationArrayMethods:withDelaunayTriangulationArrayMethods"></a>
       <h4 class="signature">
@@ -2144,15 +2186,32 @@ here make it straightforward to call them with geotrellis.vector classes.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="voronoi/Implicits$withDelaunayTriangulationArrayMethods.html"><span class="name">withDelaunayTriangulationArrayMethods</span></a><span class="result"> extends <a href="voronoi/DelaunayTriangulationArrayMethods.html" class="extype" name="geotrellis.vector.voronoi.DelaunayTriangulationArrayMethods">DelaunayTriangulationArrayMethods</a></span>
+        <a href="triangulation/Implicits$withDelaunayTriangulationArrayMethods.html"><span class="name">withDelaunayTriangulationArrayMethods</span></a><span class="result"> extends <a href="triangulation/DelaunayTriangulationArrayMethods.html" class="extype" name="geotrellis.vector.triangulation.DelaunayTriangulationArrayMethods">DelaunayTriangulationArrayMethods</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Implicits@withDelaunayTriangulationArrayMethodsextendsDelaunayTriangulationArrayMethods" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.vector.triangulation.Implicits@withDelaunayTriangulationArrayMethodsextendsDelaunayTriangulationArrayMethods" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="triangulation/Implicits.html" class="extype" name="geotrellis.vector.triangulation.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.vector.voronoi.Implicits.withDelaunayTriangulationCoordinateMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withDelaunayTriangulationCoordinateMethodsextendsDelaunayTriangulationCoordinateMethods"></a>
+      <a id="withDelaunayTriangulationCoordinateMethods:withDelaunayTriangulationCoordinateMethods"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="voronoi/Implicits$withDelaunayTriangulationCoordinateMethods.html"><span class="name">withDelaunayTriangulationCoordinateMethods</span></a><span class="result"> extends <a href="voronoi/DelaunayTriangulationCoordinateMethods.html" class="extype" name="geotrellis.vector.voronoi.DelaunayTriangulationCoordinateMethods">DelaunayTriangulationCoordinateMethods</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.vector.voronoi.Implicits@withDelaunayTriangulationCoordinateMethodsextendsDelaunayTriangulationCoordinateMethods" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="voronoi/Implicits.html" class="extype" name="geotrellis.vector.voronoi.Implicits">Implicits</a></dd></dl></div>
-    </li><li name="geotrellis.vector.voronoi.Implicits.withDelaunayTriangulationMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="geotrellis.vector.triangulation.Implicits.withDelaunayTriangulationMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="withDelaunayTriangulationMethodsextendsDelaunayTriangulationMethods"></a>
       <a id="withDelaunayTriangulationMethods:withDelaunayTriangulationMethods"></a>
       <h4 class="signature">
@@ -2161,14 +2220,14 @@ here make it straightforward to call them with geotrellis.vector classes.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="voronoi/Implicits$withDelaunayTriangulationMethods.html"><span class="name">withDelaunayTriangulationMethods</span></a><span class="result"> extends <a href="voronoi/DelaunayTriangulationMethods.html" class="extype" name="geotrellis.vector.voronoi.DelaunayTriangulationMethods">DelaunayTriangulationMethods</a></span>
+        <a href="triangulation/Implicits$withDelaunayTriangulationMethods.html"><span class="name">withDelaunayTriangulationMethods</span></a><span class="result"> extends <a href="triangulation/DelaunayTriangulationMethods.html" class="extype" name="geotrellis.vector.triangulation.DelaunayTriangulationMethods">DelaunayTriangulationMethods</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Implicits@withDelaunayTriangulationMethodsextendsDelaunayTriangulationMethods" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.vector.triangulation.Implicits@withDelaunayTriangulationMethodsextendsDelaunayTriangulationMethods" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="voronoi/Implicits.html" class="extype" name="geotrellis.vector.voronoi.Implicits">Implicits</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="triangulation/Implicits.html" class="extype" name="geotrellis.vector.triangulation.Implicits">Implicits</a></dd></dl></div>
     </li><li name="geotrellis.vector.triangulation.Implicits.withDelaunayTriangulationMultiPointMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="withDelaunayTriangulationMultiPointMethodsextendsDelaunayTriangulationMultiPointMethods"></a>
       <a id="withDelaunayTriangulationMultiPointMethods:withDelaunayTriangulationMultiPointMethods"></a>
@@ -2186,53 +2245,36 @@ here make it straightforward to call them with geotrellis.vector classes.</p>
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="triangulation/Implicits.html" class="extype" name="geotrellis.vector.triangulation.Implicits">Implicits</a></dd></dl></div>
-    </li><li name="geotrellis.vector.voronoi.Implicits.withFastVoronoiDiagramArrayMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="withFastVoronoiDiagramArrayMethodsextendsFastVoronoiDiagramArrayMethods"></a>
-      <a id="withFastVoronoiDiagramArrayMethods:withFastVoronoiDiagramArrayMethods"></a>
+    </li><li name="geotrellis.vector.voronoi.Implicits.withDelaunayTriangulationPointArrayMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withDelaunayTriangulationPointArrayMethodsextendsDelaunayTriangulationArrayMethods"></a>
+      <a id="withDelaunayTriangulationPointArrayMethods:withDelaunayTriangulationPointArrayMethods"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="voronoi/Implicits$withFastVoronoiDiagramArrayMethods.html"><span class="name">withFastVoronoiDiagramArrayMethods</span></a><span class="result"> extends <a href="voronoi/FastVoronoiDiagramArrayMethods.html" class="extype" name="geotrellis.vector.voronoi.FastVoronoiDiagramArrayMethods">FastVoronoiDiagramArrayMethods</a></span>
+        <a href="voronoi/Implicits$withDelaunayTriangulationPointArrayMethods.html"><span class="name">withDelaunayTriangulationPointArrayMethods</span></a><span class="result"> extends <a href="voronoi/DelaunayTriangulationArrayMethods.html" class="extype" name="geotrellis.vector.voronoi.DelaunayTriangulationArrayMethods">DelaunayTriangulationArrayMethods</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Implicits@withFastVoronoiDiagramArrayMethodsextendsFastVoronoiDiagramArrayMethods" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.vector.voronoi.Implicits@withDelaunayTriangulationPointArrayMethodsextendsDelaunayTriangulationArrayMethods" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="voronoi/Implicits.html" class="extype" name="geotrellis.vector.voronoi.Implicits">Implicits</a></dd></dl></div>
-    </li><li name="geotrellis.vector.voronoi.Implicits.withFastVoronoiDiagramMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="withFastVoronoiDiagramMethodsextendsFastVoronoiDiagramMethods"></a>
-      <a id="withFastVoronoiDiagramMethods:withFastVoronoiDiagramMethods"></a>
+    </li><li name="geotrellis.vector.voronoi.Implicits.withDelaunayTriangulationPointMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withDelaunayTriangulationPointMethodsextendsDelaunayTriangulationPointMethods"></a>
+      <a id="withDelaunayTriangulationPointMethods:withDelaunayTriangulationPointMethods"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="voronoi/Implicits$withFastVoronoiDiagramMethods.html"><span class="name">withFastVoronoiDiagramMethods</span></a><span class="result"> extends <a href="voronoi/FastVoronoiDiagramMethods.html" class="extype" name="geotrellis.vector.voronoi.FastVoronoiDiagramMethods">FastVoronoiDiagramMethods</a></span>
+        <a href="voronoi/Implicits$withDelaunayTriangulationPointMethods.html"><span class="name">withDelaunayTriangulationPointMethods</span></a><span class="result"> extends <a href="voronoi/DelaunayTriangulationPointMethods.html" class="extype" name="geotrellis.vector.voronoi.DelaunayTriangulationPointMethods">DelaunayTriangulationPointMethods</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Implicits@withFastVoronoiDiagramMethodsextendsFastVoronoiDiagramMethods" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="voronoi/Implicits.html" class="extype" name="geotrellis.vector.voronoi.Implicits">Implicits</a></dd></dl></div>
-    </li><li name="geotrellis.vector.voronoi.Implicits.withFastVoronoiDiagramMultiPointMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="withFastVoronoiDiagramMultiPointMethodsextendsFastVoronoiDiagramMultiPointMethods"></a>
-      <a id="withFastVoronoiDiagramMultiPointMethods:withFastVoronoiDiagramMultiPointMethods"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="voronoi/Implicits$withFastVoronoiDiagramMultiPointMethods.html"><span class="name">withFastVoronoiDiagramMultiPointMethods</span></a><span class="result"> extends <a href="voronoi/FastVoronoiDiagramMultiPointMethods.html" class="extype" name="geotrellis.vector.voronoi.FastVoronoiDiagramMultiPointMethods">FastVoronoiDiagramMultiPointMethods</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Implicits@withFastVoronoiDiagramMultiPointMethodsextendsFastVoronoiDiagramMultiPointMethods" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.vector.voronoi.Implicits@withDelaunayTriangulationPointMethodsextendsDelaunayTriangulationPointMethods" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -2254,36 +2296,87 @@ here make it straightforward to call them with geotrellis.vector classes.</p>
       </a>
     </span>
       
-    </li><li name="geotrellis.vector.voronoi.Implicits.withVoronoiDiagramArrayMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="withVoronoiDiagramArrayMethodsextendsVoronoiDiagramArrayMethods"></a>
-      <a id="withVoronoiDiagramArrayMethods:withVoronoiDiagramArrayMethods"></a>
+    </li><li name="geotrellis.vector.voronoi.Implicits.withVoronoiDiagramCoordinateArrayMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withVoronoiDiagramCoordinateArrayMethodsextendsVoronoiDiagramCoordinateArrayMethods"></a>
+      <a id="withVoronoiDiagramCoordinateArrayMethods:withVoronoiDiagramCoordinateArrayMethods"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="voronoi/Implicits$withVoronoiDiagramArrayMethods.html"><span class="name">withVoronoiDiagramArrayMethods</span></a><span class="result"> extends <a href="voronoi/VoronoiDiagramArrayMethods.html" class="extype" name="geotrellis.vector.voronoi.VoronoiDiagramArrayMethods">VoronoiDiagramArrayMethods</a></span>
+        <a href="voronoi/Implicits$withVoronoiDiagramCoordinateArrayMethods.html"><span class="name">withVoronoiDiagramCoordinateArrayMethods</span></a><span class="result"> extends <a href="voronoi/VoronoiDiagramCoordinateArrayMethods.html" class="extype" name="geotrellis.vector.voronoi.VoronoiDiagramCoordinateArrayMethods">VoronoiDiagramCoordinateArrayMethods</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Implicits@withVoronoiDiagramArrayMethodsextendsVoronoiDiagramArrayMethods" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.vector.voronoi.Implicits@withVoronoiDiagramCoordinateArrayMethodsextendsVoronoiDiagramCoordinateArrayMethods" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="voronoi/Implicits.html" class="extype" name="geotrellis.vector.voronoi.Implicits">Implicits</a></dd></dl></div>
-    </li><li name="geotrellis.vector.voronoi.Implicits.withVoronoiDiagramMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="withVoronoiDiagramMethodsextendsVoronoiDiagramMethods"></a>
-      <a id="withVoronoiDiagramMethods:withVoronoiDiagramMethods"></a>
+    </li><li name="geotrellis.vector.voronoi.Implicits.withVoronoiDiagramCoordinateMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withVoronoiDiagramCoordinateMethodsextendsVoronoiDiagramCoordinateMethods"></a>
+      <a id="withVoronoiDiagramCoordinateMethods:withVoronoiDiagramCoordinateMethods"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="voronoi/Implicits$withVoronoiDiagramMethods.html"><span class="name">withVoronoiDiagramMethods</span></a><span class="result"> extends <a href="voronoi/VoronoiDiagramMethods.html" class="extype" name="geotrellis.vector.voronoi.VoronoiDiagramMethods">VoronoiDiagramMethods</a></span>
+        <a href="voronoi/Implicits$withVoronoiDiagramCoordinateMethods.html"><span class="name">withVoronoiDiagramCoordinateMethods</span></a><span class="result"> extends <a href="voronoi/VoronoiDiagramCoordinateMethods.html" class="extype" name="geotrellis.vector.voronoi.VoronoiDiagramCoordinateMethods">VoronoiDiagramCoordinateMethods</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.vector.voronoi.Implicits@withVoronoiDiagramMethodsextendsVoronoiDiagramMethods" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.vector.voronoi.Implicits@withVoronoiDiagramCoordinateMethodsextendsVoronoiDiagramCoordinateMethods" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="voronoi/Implicits.html" class="extype" name="geotrellis.vector.voronoi.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.vector.voronoi.Implicits.withVoronoiDiagramMultiPointMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withVoronoiDiagramMultiPointMethodsextendsVoronoiDiagramMultiPointMethods"></a>
+      <a id="withVoronoiDiagramMultiPointMethods:withVoronoiDiagramMultiPointMethods"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="voronoi/Implicits$withVoronoiDiagramMultiPointMethods.html"><span class="name">withVoronoiDiagramMultiPointMethods</span></a><span class="result"> extends <a href="voronoi/VoronoiDiagramMultiPointMethods.html" class="extype" name="geotrellis.vector.voronoi.VoronoiDiagramMultiPointMethods">VoronoiDiagramMultiPointMethods</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.vector.voronoi.Implicits@withVoronoiDiagramMultiPointMethodsextendsVoronoiDiagramMultiPointMethods" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="voronoi/Implicits.html" class="extype" name="geotrellis.vector.voronoi.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.vector.voronoi.Implicits.withVoronoiDiagramPointArrayMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withVoronoiDiagramPointArrayMethodsextendsVoronoiDiagramPointArrayMethods"></a>
+      <a id="withVoronoiDiagramPointArrayMethods:withVoronoiDiagramPointArrayMethods"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="voronoi/Implicits$withVoronoiDiagramPointArrayMethods.html"><span class="name">withVoronoiDiagramPointArrayMethods</span></a><span class="result"> extends <a href="voronoi/VoronoiDiagramPointArrayMethods.html" class="extype" name="geotrellis.vector.voronoi.VoronoiDiagramPointArrayMethods">VoronoiDiagramPointArrayMethods</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.vector.voronoi.Implicits@withVoronoiDiagramPointArrayMethodsextendsVoronoiDiagramPointArrayMethods" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="voronoi/Implicits.html" class="extype" name="geotrellis.vector.voronoi.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.vector.voronoi.Implicits.withVoronoiDiagramPointMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withVoronoiDiagramPointMethodsextendsVoronoiDiagramPointMethods"></a>
+      <a id="withVoronoiDiagramPointMethods:withVoronoiDiagramPointMethods"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="voronoi/Implicits$withVoronoiDiagramPointMethods.html"><span class="name">withVoronoiDiagramPointMethods</span></a><span class="result"> extends <a href="voronoi/VoronoiDiagramPointMethods.html" class="extype" name="geotrellis.vector.voronoi.VoronoiDiagramPointMethods">VoronoiDiagramPointMethods</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.vector.voronoi.Implicits@withVoronoiDiagramPointMethodsextendsVoronoiDiagramPointMethods" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -2363,6 +2456,23 @@ here make it straightforward to call them with geotrellis.vector classes.</p>
       </a>
     </span>
       <p class="shortcomment cmt">Feature companion object</p>
+    </li><li name="geotrellis.vector.GeomFactory" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GeomFactory"></a>
+      <a id="GeomFactory:GeomFactory"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GeomFactory$.html"><span class="name">GeomFactory</span></a><span class="result"> extends <a href="../util/LazyLogging.html" class="extype" name="geotrellis.util.LazyLogging">LazyLogging</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vector.package@GeomFactory" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.vector.Geometry" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Geometry"></a>
       <a id="Geometry:Geometry"></a>
@@ -3366,6 +3476,23 @@ here make it straightforward to call them with geotrellis.vector classes.</p>
       </a>
     </span>
       
+    </li><li name="geotrellis.vector.Projected" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Projected"></a>
+      <a id="Projected:Projected"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Projected$.html"><span class="name">Projected</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vector.package@Projected" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.vector.ProjectedExtent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ProjectedExtent"></a>
       <a id="ProjectedExtent:ProjectedExtent"></a>
@@ -3617,6 +3744,23 @@ here make it straightforward to call them with geotrellis.vector classes.</p>
       </span>
       </h4><span class="permalink">
       <a href="../../index.html#geotrellis.vector.package@arrayPolygonToMultiPolygon(ps:Array[geotrellis.vector.Polygon]):geotrellis.vector.MultiPolygon" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.vector.conf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="conf"></a>
+      <a id="conf:conf"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="conf/package.html"><span class="name">conf</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.vector.package@conf" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

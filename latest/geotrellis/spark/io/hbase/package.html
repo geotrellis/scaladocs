@@ -131,7 +131,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="HBaseInstance.html"><span class="name">HBaseInstance</span></a><span class="params">(<span name="zookeepers">zookeepers: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="master">master: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="clientPort">clientPort: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;2181&quot;</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span> with <span class="extype" name="scala.Product">Product</span></span>
+        <a href="HBaseInstance.html"><span class="name">HBaseInstance</span></a><span class="params">(<span name="configuration">configuration: <a href="../hadoop/SerializableConfiguration.html" class="extype" name="geotrellis.spark.io.hadoop.SerializableConfiguration">SerializableConfiguration</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span> with <span class="extype" name="scala.Product">Product</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.hbase.package@HBaseInstanceextendsSerializablewithProduct" title="Permalink" target="_top">
@@ -182,7 +182,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="HBaseLayerHeader.html"><span class="name">HBaseLayerHeader</span></a><span class="params">(<span name="keyClass">keyClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="valueClass">valueClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tileTable">tileTable: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="../LayerHeader.html" class="extype" name="geotrellis.spark.io.LayerHeader">LayerHeader</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="HBaseLayerHeader.html"><span class="name">HBaseLayerHeader</span></a><span class="params">(<span name="keyClass">keyClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="valueClass">valueClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tileTable">tileTable: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="layerType">layerType: <a href="../LayerType.html" class="extype" name="geotrellis.spark.io.LayerType">LayerType</a> = <span class="symbol"><span class="name"><a href="../../../package.html">AvroLayerType</a></span></span></span>)</span><span class="result"> extends <a href="../LayerHeader.html" class="extype" name="geotrellis.spark.io.LayerHeader">LayerHeader</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.hbase.package@HBaseLayerHeaderextendsLayerHeaderwithProductwithSerializable" title="Permalink" target="_top">
@@ -257,23 +257,6 @@ Layers table name is required to instantiate a <a href="../LayerWriter.html" cla
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.hbase.package@HBaseLayerReindexerextendsLayerReindexer[geotrellis.spark.LayerId]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.spark.io.hbase.HBaseLayerUpdater" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="HBaseLayerUpdaterextendsLayerUpdater[geotrellis.spark.LayerId]withLazyLogging"></a>
-      <a id="HBaseLayerUpdater:HBaseLayerUpdater"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="HBaseLayerUpdater.html"><span class="name">HBaseLayerUpdater</span></a><span class="result"> extends <a href="../LayerUpdater.html" class="extype" name="geotrellis.spark.io.LayerUpdater">LayerUpdater</a>[<a href="../../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a>] with <a href="../../../util/LazyLogging.html" class="extype" name="geotrellis.util.LazyLogging">LazyLogging</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.hbase.package@HBaseLayerUpdaterextendsLayerUpdater[geotrellis.spark.LayerId]withLazyLogging" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -506,23 +489,6 @@ Layers table name is required to instantiate a <a href="../LayerWriter.html" cla
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.io.hbase.HBaseLayerUpdater" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="HBaseLayerUpdater"></a>
-      <a id="HBaseLayerUpdater:HBaseLayerUpdater"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="HBaseLayerUpdater$.html"><span class="name">HBaseLayerUpdater</span></a>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.hbase.package@HBaseLayerUpdater" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="geotrellis.spark.io.hbase.HBaseLayerWriter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="HBaseLayerWriter"></a>
       <a id="HBaseLayerWriter:HBaseLayerWriter"></a>
@@ -587,6 +553,23 @@ Layers table name is required to instantiate a <a href="../LayerWriter.html" cla
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.hbase.package@HBaseValueReader" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.hbase.conf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="conf"></a>
+      <a id="conf:conf"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="conf/package.html"><span class="name">conf</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.hbase.package@conf" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

@@ -97,7 +97,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="BaseCassandraInstance.html"><span class="name">BaseCassandraInstance</span></a><span class="params">(<span name="hosts">hosts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="username">username: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="replicationStrategy">replicationStrategy: <span class="extype" name="scala.Predef.String">String</span> = <span class="defval" name='<span class="name"><a href="Cassandra$.html">Cassandra.cfg.getString(&quot;replicationStrategy&quot;)</a></span>'>...</span></span>, <span name="replicationFactor">replicationFactor: <span class="extype" name="scala.Int">Int</span> = <span class="defval" name='<span class="name"><a href="Cassandra$.html">Cassandra.cfg.getInt(&quot;replicationFactor&quot;)</a></span>'>...</span></span>, <span name="localDc">localDc: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol"><span class="name"><a href="Cassandra$.html">Cassandra.cfg.getString(&quot;localDc&quot;)</a></span></span></span>, <span name="usedHostsPerRemoteDc">usedHostsPerRemoteDc: <span class="extype" name="scala.Int">Int</span> = <span class="defval" name='<span class="name"><a href="Cassandra$.html">Cassandra.cfg.getInt(&quot;usedHostsPerRemoteDc&quot;)</a></span>'>...</span></span>, <span name="allowRemoteDCsForLocalConsistencyLevel">allowRemoteDCsForLocalConsistencyLevel: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="defval" name='<span class="name"><a href="Cassandra$.html">Cassandra.cfg.getBoolean(&quot;allowRemoteDCsForLocalConsistencyLevel&quot;)</a></span>'>...</span></span>)</span><span class="result"> extends <a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="BaseCassandraInstance.html"><span class="name">BaseCassandraInstance</span></a><span class="params">(<span name="getCluster">getCluster: () ⇒ <span class="extype" name="com.datastax.driver.core.Cluster">Cluster</span></span>, <span name="cassandraConfig">cassandraConfig: <a href="conf/CassandraConfig.html" class="extype" name="geotrellis.spark.io.cassandra.conf.CassandraConfig">CassandraConfig</a></span>)</span><span class="result"> extends <a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.cassandra.package@BaseCassandraInstanceextendsCassandraInstancewithProductwithSerializable" title="Permalink" target="_top">
@@ -216,7 +216,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="CassandraLayerHeader.html"><span class="name">CassandraLayerHeader</span></a><span class="params">(<span name="keyClass">keyClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="valueClass">valueClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="keyspace">keyspace: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tileTable">tileTable: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="../LayerHeader.html" class="extype" name="geotrellis.spark.io.LayerHeader">LayerHeader</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="CassandraLayerHeader.html"><span class="name">CassandraLayerHeader</span></a><span class="params">(<span name="keyClass">keyClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="valueClass">valueClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="keyspace">keyspace: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tileTable">tileTable: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="layerType">layerType: <a href="../LayerType.html" class="extype" name="geotrellis.spark.io.LayerType">LayerType</a> = <span class="symbol"><span class="name"><a href="../../../package.html">AvroLayerType</a></span></span></span>)</span><span class="result"> extends <a href="../LayerHeader.html" class="extype" name="geotrellis.spark.io.LayerHeader">LayerHeader</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.cassandra.package@CassandraLayerHeaderextendsLayerHeaderwithProductwithSerializable" title="Permalink" target="_top">
@@ -295,23 +295,6 @@ Layers table name is required to instantiate a <a href="../LayerWriter.html" cla
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.io.cassandra.CassandraLayerUpdater" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="CassandraLayerUpdaterextendsLayerUpdater[geotrellis.spark.LayerId]withLazyLogging"></a>
-      <a id="CassandraLayerUpdater:CassandraLayerUpdater"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="CassandraLayerUpdater.html"><span class="name">CassandraLayerUpdater</span></a><span class="result"> extends <a href="../LayerUpdater.html" class="extype" name="geotrellis.spark.io.LayerUpdater">LayerUpdater</a>[<a href="../../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a>] with <a href="../../../util/LazyLogging.html" class="extype" name="geotrellis.util.LazyLogging">LazyLogging</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.cassandra.package@CassandraLayerUpdaterextendsLayerUpdater[geotrellis.spark.LayerId]withLazyLogging" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="geotrellis.spark.io.cassandra.CassandraLayerWriter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CassandraLayerWriterextendsLayerWriter[geotrellis.spark.LayerId]withLazyLogging"></a>
       <a id="CassandraLayerWriter:CassandraLayerWriter"></a>
@@ -353,7 +336,24 @@ Layers table name is required to instantiate a <a href="../LayerWriter.html" cla
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="geotrellis.spark.io.cassandra.Cassandra" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.spark.io.cassandra.BaseCassandraInstance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BaseCassandraInstance"></a>
+      <a id="BaseCassandraInstance:BaseCassandraInstance"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BaseCassandraInstance$.html"><span class="name">BaseCassandraInstance</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.cassandra.package@BaseCassandraInstance" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.cassandra.Cassandra" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Cassandra"></a>
       <a id="Cassandra:Cassandra"></a>
       <h4 class="signature">
@@ -540,23 +540,6 @@ Layers table name is required to instantiate a <a href="../LayerWriter.html" cla
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.io.cassandra.CassandraLayerUpdater" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="CassandraLayerUpdater"></a>
-      <a id="CassandraLayerUpdater:CassandraLayerUpdater"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="CassandraLayerUpdater$.html"><span class="name">CassandraLayerUpdater</span></a>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.cassandra.package@CassandraLayerUpdater" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="geotrellis.spark.io.cassandra.CassandraLayerWriter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CassandraLayerWriter"></a>
       <a id="CassandraLayerWriter:CassandraLayerWriter"></a>
@@ -638,6 +621,23 @@ Layers table name is required to instantiate a <a href="../LayerWriter.html" cla
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.cassandra.package@bigToBig(i:BigInt):java.math.BigInteger" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.cassandra.conf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="conf"></a>
+      <a id="conf:conf"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="conf/package.html"><span class="name">conf</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.cassandra.package@conf" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

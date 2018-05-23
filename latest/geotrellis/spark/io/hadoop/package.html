@@ -165,7 +165,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="HadoopGeoTiffInfoReader.html"><span class="name">HadoopGeoTiffInfoReader</span></a><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="config">config: <a href="SerializableConfiguration.html" class="extype" name="geotrellis.spark.io.hadoop.SerializableConfiguration">SerializableConfiguration</a></span>, <span name="tiffExtensions">tiffExtensions: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="defval" name='<span class="name"><a href="HadoopGeoTiffRDD$.html">HadoopGeoTiffRDD.Options.DEFAULT.tiffExtensions</a></span>'>...</span></span>, <span name="decompress">decompress: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="streaming">streaming: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result"> extends <span class="extype" name="geotrellis.spark.io.GeoTiffInfoReader">GeoTiffInfoReader</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="HadoopGeoTiffInfoReader.html"><span class="name">HadoopGeoTiffInfoReader</span></a><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="config">config: <a href="SerializableConfiguration.html" class="extype" name="geotrellis.spark.io.hadoop.SerializableConfiguration">SerializableConfiguration</a></span>, <span name="tiffExtensions">tiffExtensions: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="defval" name='<span class="name"><a href="HadoopGeoTiffRDD$.html">HadoopGeoTiffRDD.Options.DEFAULT.tiffExtensions</a></span>'>...</span></span>, <span name="streaming">streaming: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result"> extends <span class="extype" name="geotrellis.spark.io.GeoTiffInfoReader">GeoTiffInfoReader</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.hadoop.package@HadoopGeoTiffInfoReaderextendsGeoTiffInfoReaderwithProductwithSerializable" title="Permalink" target="_top">
@@ -216,7 +216,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="HadoopLayerHeader.html"><span class="name">HadoopLayerHeader</span></a><span class="params">(<span name="keyClass">keyClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="valueClass">valueClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="java.net.URI">URI</span></span>)</span><span class="result"> extends <a href="../LayerHeader.html" class="extype" name="geotrellis.spark.io.LayerHeader">LayerHeader</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="HadoopLayerHeader.html"><span class="name">HadoopLayerHeader</span></a><span class="params">(<span name="keyClass">keyClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="valueClass">valueClass: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="java.net.URI">URI</span></span>, <span name="layerType">layerType: <a href="../LayerType.html" class="extype" name="geotrellis.spark.io.LayerType">LayerType</a> = <span class="symbol"><span class="name"><a href="../../../package.html">AvroLayerType</a></span></span></span>)</span><span class="result"> extends <a href="../LayerHeader.html" class="extype" name="geotrellis.spark.io.LayerHeader">LayerHeader</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.hadoop.package@HadoopLayerHeaderextendsLayerHeaderwithProductwithSerializable" title="Permalink" target="_top">
@@ -298,23 +298,6 @@ That support is provided by <a href="HadoopAttributeStore.html" class="extype" n
       </a>
     </span>
       <p class="shortcomment cmt">Handles reading raster RDDs and their metadata from S3.</p>
-    </li><li name="geotrellis.spark.io.hadoop.HadoopLayerUpdater" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="HadoopLayerUpdaterextendsLayerUpdater[geotrellis.spark.LayerId]withLazyLogging"></a>
-      <a id="HadoopLayerUpdater:HadoopLayerUpdater"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="HadoopLayerUpdater.html"><span class="name">HadoopLayerUpdater</span></a><span class="result"> extends <a href="../LayerUpdater.html" class="extype" name="geotrellis.spark.io.LayerUpdater">LayerUpdater</a>[<a href="../../LayerId.html" class="extype" name="geotrellis.spark.LayerId">LayerId</a>] with <a href="../../../util/LazyLogging.html" class="extype" name="geotrellis.util.LazyLogging">LazyLogging</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.hadoop.package@HadoopLayerUpdaterextendsLayerUpdater[geotrellis.spark.LayerId]withLazyLogging" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="geotrellis.spark.io.hadoop.HadoopLayerWriter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="HadoopLayerWriterextendsLayerWriter[geotrellis.spark.LayerId]withLazyLogging"></a>
       <a id="HadoopLayerWriter:HadoopLayerWriter"></a>
@@ -850,23 +833,6 @@ That support is provided by <a href="HadoopAttributeStore.html" class="extype" n
       </a>
     </span>
       
-    </li><li name="geotrellis.spark.io.hadoop.HadoopLayerUpdater" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="HadoopLayerUpdater"></a>
-      <a id="HadoopLayerUpdater:HadoopLayerUpdater"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="HadoopLayerUpdater$.html"><span class="name">HadoopLayerUpdater</span></a>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.hadoop.package@HadoopLayerUpdater" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="geotrellis.spark.io.hadoop.HadoopLayerWriter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="HadoopLayerWriter"></a>
       <a id="HadoopLayerWriter:HadoopLayerWriter"></a>
@@ -1050,6 +1016,23 @@ That support is provided by <a href="HadoopAttributeStore.html" class="extype" n
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.hadoop.package@cog" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.io.hadoop.conf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="conf"></a>
+      <a id="conf:conf"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="conf/package.html"><span class="name">conf</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.hadoop.package@conf" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

@@ -340,24 +340,24 @@ of the two given extents are filled-in with data from the other
 tile.  A new MutlibandTile is returned.
 </p></div><dl class="paramcmts block"><dt class="param">extent</dt><dd class="cmt"><p>The extent of this MultiBandTile</p></dd><dt class="param">otherExtent</dt><dd class="cmt"><p>The extent of the other MultiBandTile</p></dd><dt class="param">other</dt><dd class="cmt"><p>The other MultiBandTile</p></dd><dt class="param">method</dt><dd class="cmt"><p>The resampling method</p></dd><dt>returns</dt><dd class="cmt"><p>A new MultiBandTile, the result of the merge</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.merge.MultibandTileMergeMethods">MultibandTileMergeMethods</a> → <a href="TileMergeMethods.html" class="extype" name="geotrellis.raster.merge.TileMergeMethods">TileMergeMethods</a></dd></dl></div>
     </li><li name="geotrellis.raster.merge.MultibandTileMergeMethods#merge" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="merge(other:geotrellis.raster.MultibandTile):geotrellis.raster.MultibandTile"></a>
-      <a id="merge(MultibandTile):MultibandTile"></a>
+      <a id="merge(other:geotrellis.raster.MultibandTile,baseCol:Int,baseRow:Int):geotrellis.raster.MultibandTile"></a>
+      <a id="merge(MultibandTile,Int,Int):MultibandTile"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">merge</span><span class="params">(<span name="other">other: <a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></span>)</span><span class="result">: <a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></span>
+        <span class="name">merge</span><span class="params">(<span name="other">other: <a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></span>, <span name="baseCol">baseCol: <span class="extype" name="scala.Int">Int</span></span>, <span name="baseRow">baseRow: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.raster.merge.MultibandTileMergeMethods@merge(other:geotrellis.raster.MultibandTile):geotrellis.raster.MultibandTile" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.raster.merge.MultibandTileMergeMethods@merge(other:geotrellis.raster.MultibandTile,baseCol:Int,baseRow:Int):geotrellis.raster.MultibandTile" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Merge the respective bands of this MultibandTile and the other
-one.</p><div class="fullcomment"><div class="comment cmt"><p>Merge the respective bands of this MultibandTile and the other
-one.</p></div><dl class="paramcmts block"><dt class="param">other</dt><dd class="cmt"><p>The other Tile</p></dd><dt>returns</dt><dd class="cmt"><p>A new Tile, the result of the merge</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.merge.MultibandTileMergeMethods">MultibandTileMergeMethods</a> → <a href="TileMergeMethods.html" class="extype" name="geotrellis.raster.merge.TileMergeMethods">TileMergeMethods</a></dd></dl></div>
+      <p class="shortcomment cmt">Merge this <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> with the other.</p><div class="fullcomment"><div class="comment cmt"><p>Merge this <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> with the other.  Places the content of the (i, j)th pixel
+of other into the (col + i, row + j)th pixel of the result.
+</p></div><dl class="paramcmts block"><dt class="param">other</dt><dd class="cmt"><p>The other Tile</p></dd><dt>returns</dt><dd class="cmt"><p>The result of the merge</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.merge.MultibandTileMergeMethods">MultibandTileMergeMethods</a> → <a href="TileMergeMethods.html" class="extype" name="geotrellis.raster.merge.TileMergeMethods">TileMergeMethods</a></dd></dl></div>
     </li><li name="geotrellis.raster.merge.TileMergeMethods#merge" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="merge(extent:geotrellis.vector.Extent,otherExtent:geotrellis.vector.Extent,other:T):T"></a>
       <a id="merge(Extent,Extent,MultibandTile):MultibandTile"></a>
@@ -379,6 +379,26 @@ present tile that contain NODATA and are in the intersection of
 the two given extents are filled-in with data from the other
 tile.  A new Tile is returned.
 </p></div><dl class="paramcmts block"><dt class="param">extent</dt><dd class="cmt"><p>The extent of this Tile</p></dd><dt class="param">otherExtent</dt><dd class="cmt"><p>The extent of the other Tile</p></dd><dt class="param">other</dt><dd class="cmt"><p>The other Tile</p></dd><dt>returns</dt><dd class="cmt"><p>A new Tile, the result of the merge</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="TileMergeMethods.html" class="extype" name="geotrellis.raster.merge.TileMergeMethods">TileMergeMethods</a></dd></dl></div>
+    </li><li name="geotrellis.raster.merge.TileMergeMethods#merge" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="merge(other:T):T"></a>
+      <a id="merge(MultibandTile):MultibandTile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">merge</span><span class="params">(<span name="other">other: <a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></span>)</span><span class="result">: <a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.merge.MultibandTileMergeMethods@merge(other:T):T" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Merge this <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> with the other one.</p><div class="fullcomment"><div class="comment cmt"><p>Merge this <a href="../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> with the other one.  All places in the
+present tile that contain NODATA are filled-in with data from
+the other tile.  A new Tile is returned.
+</p></div><dl class="paramcmts block"><dt class="param">other</dt><dd class="cmt"><p>The other Tile</p></dd><dt>returns</dt><dd class="cmt"><p>A new Tile, the result of the merge</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="TileMergeMethods.html" class="extype" name="geotrellis.raster.merge.TileMergeMethods">TileMergeMethods</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>

@@ -28,10 +28,12 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img alt="Class" src="../../../../lib/class_big.png" />
+        <a href="BaseCassandraInstance$.html" title="See companion object"><img alt="Class/Object" src="../../../../lib/class_to_object_big.png" /></a>
         <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.spark">spark</a>.<a href="../package.html" class="extype" name="geotrellis.spark.io">io</a>.<a href="package.html" class="extype" name="geotrellis.spark.io.cassandra">cassandra</a></p>
-        <h1>BaseCassandraInstance</h1><h3><span class="morelinks"><div>Related Doc:
-            <a href="package.html" class="extype" name="geotrellis.spark.io.cassandra">package cassandra</a>
+        <h1><a href="BaseCassandraInstance$.html" title="See companion object">BaseCassandraInstance</a></h1><h3><span class="morelinks"><div>
+            Related Docs:
+            <a href="BaseCassandraInstance$.html" title="See companion object">object BaseCassandraInstance</a>
+            | <a href="package.html" class="extype" name="geotrellis.spark.io.cassandra">package cassandra</a>
           </div></span></h3><span class="permalink">
       <a href="../../../../index.html#geotrellis.spark.io.cassandra.BaseCassandraInstance" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
@@ -45,7 +47,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">BaseCassandraInstance</span><span class="params">(<span name="hosts">hosts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="username">username: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="replicationStrategy">replicationStrategy: <span class="extype" name="scala.Predef.String">String</span> = <span class="defval" name='<span class="name"><a href="Cassandra$.html">Cassandra.cfg.getString(&quot;replicationStrategy&quot;)</a></span>'>...</span></span>, <span name="replicationFactor">replicationFactor: <span class="extype" name="scala.Int">Int</span> = <span class="defval" name='<span class="name"><a href="Cassandra$.html">Cassandra.cfg.getInt(&quot;replicationFactor&quot;)</a></span>'>...</span></span>, <span name="localDc">localDc: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol"><span class="name"><a href="Cassandra$.html">Cassandra.cfg.getString(&quot;localDc&quot;)</a></span></span></span>, <span name="usedHostsPerRemoteDc">usedHostsPerRemoteDc: <span class="extype" name="scala.Int">Int</span> = <span class="defval" name='<span class="name"><a href="Cassandra$.html">Cassandra.cfg.getInt(&quot;usedHostsPerRemoteDc&quot;)</a></span>'>...</span></span>, <span name="allowRemoteDCsForLocalConsistencyLevel">allowRemoteDCsForLocalConsistencyLevel: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="defval" name='<span class="name"><a href="Cassandra$.html">Cassandra.cfg.getBoolean(&quot;allowRemoteDCsForLocalConsistencyLevel&quot;)</a></span>'>...</span></span>)</span><span class="result"> extends <a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">BaseCassandraInstance</span><span class="params">(<span name="getCluster">getCluster: () ⇒ <span class="extype" name="com.datastax.driver.core.Cluster">Cluster</span></span>, <span name="cassandraConfig">cassandraConfig: <a href="conf/CassandraConfig.html" class="extype" name="geotrellis.spark.io.cassandra.conf.CassandraConfig">CassandraConfig</a></span>)</span><span class="result"> extends <a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -89,7 +91,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.spark.io.cassandra.BaseCassandraInstance#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(hosts:Seq[String],username:String,password:String,replicationStrategy:String,replicationFactor:Int,localDc:String,usedHostsPerRemoteDc:Int,allowRemoteDCsForLocalConsistencyLevel:Boolean):geotrellis.spark.io.cassandra.BaseCassandraInstance"></a>
+      <a id="&lt;init&gt;(getCluster:()=&gt;com.datastax.driver.core.Cluster,cassandraConfig:geotrellis.spark.io.cassandra.conf.CassandraConfig):geotrellis.spark.io.cassandra.BaseCassandraInstance"></a>
       <a id="&lt;init&gt;:BaseCassandraInstance"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -97,10 +99,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">BaseCassandraInstance</span><span class="params">(<span name="hosts">hosts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="username">username: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="replicationStrategy">replicationStrategy: <span class="extype" name="scala.Predef.String">String</span> = <span class="defval" name='<span class="name"><a href="Cassandra$.html">Cassandra.cfg.getString(&quot;replicationStrategy&quot;)</a></span>'>...</span></span>, <span name="replicationFactor">replicationFactor: <span class="extype" name="scala.Int">Int</span> = <span class="defval" name='<span class="name"><a href="Cassandra$.html">Cassandra.cfg.getInt(&quot;replicationFactor&quot;)</a></span>'>...</span></span>, <span name="localDc">localDc: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol"><span class="name"><a href="Cassandra$.html">Cassandra.cfg.getString(&quot;localDc&quot;)</a></span></span></span>, <span name="usedHostsPerRemoteDc">usedHostsPerRemoteDc: <span class="extype" name="scala.Int">Int</span> = <span class="defval" name='<span class="name"><a href="Cassandra$.html">Cassandra.cfg.getInt(&quot;usedHostsPerRemoteDc&quot;)</a></span>'>...</span></span>, <span name="allowRemoteDCsForLocalConsistencyLevel">allowRemoteDCsForLocalConsistencyLevel: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="defval" name='<span class="name"><a href="Cassandra$.html">Cassandra.cfg.getBoolean(&quot;allowRemoteDCsForLocalConsistencyLevel&quot;)</a></span>'>...</span></span>)</span>
+        <span class="name">BaseCassandraInstance</span><span class="params">(<span name="getCluster">getCluster: () ⇒ <span class="extype" name="com.datastax.driver.core.Cluster">Cluster</span></span>, <span name="cassandraConfig">cassandraConfig: <a href="conf/CassandraConfig.html" class="extype" name="geotrellis.spark.io.cassandra.conf.CassandraConfig">CassandraConfig</a></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.cassandra.BaseCassandraInstance@&lt;init&gt;(hosts:Seq[String],username:String,password:String,replicationStrategy:String,replicationFactor:Int,localDc:String,usedHostsPerRemoteDc:Int,allowRemoteDCsForLocalConsistencyLevel:Boolean):geotrellis.spark.io.cassandra.BaseCassandraInstance" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.cassandra.BaseCassandraInstance@&lt;init&gt;(getCluster:()=&gt;com.datastax.driver.core.Cluster,cassandraConfig:geotrellis.spark.io.cassandra.conf.CassandraConfig):geotrellis.spark.io.cassandra.BaseCassandraInstance" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -165,23 +167,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.spark.io.cassandra.BaseCassandraInstance#allowRemoteDCsForLocalConsistencyLevel" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="allowRemoteDCsForLocalConsistencyLevel:Boolean"></a>
-      <a id="allowRemoteDCsForLocalConsistencyLevel:Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">allowRemoteDCsForLocalConsistencyLevel</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.cassandra.BaseCassandraInstance@allowRemoteDCsForLocalConsistencyLevel:Boolean" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.io.cassandra.BaseCassandraInstance">BaseCassandraInstance</a> → <a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -199,6 +184,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="geotrellis.spark.io.cassandra.BaseCassandraInstance#cassandraConfig" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="cassandraConfig:geotrellis.spark.io.cassandra.conf.CassandraConfig"></a>
+      <a id="cassandraConfig:CassandraConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cassandraConfig</span><span class="result">: <a href="conf/CassandraConfig.html" class="extype" name="geotrellis.spark.io.cassandra.conf.CassandraConfig">CassandraConfig</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.io.cassandra.BaseCassandraInstance@cassandraConfig:geotrellis.spark.io.cassandra.conf.CassandraConfig" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.io.cassandra.BaseCassandraInstance">BaseCassandraInstance</a> → <a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -347,40 +349,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.spark.io.cassandra.CassandraInstance#getCluster" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getCluster:com.datastax.driver.core.Cluster"></a>
-      <a id="getCluster:Cluster"></a>
+    </li><li name="geotrellis.spark.io.cassandra.BaseCassandraInstance#getCluster" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getCluster:()=&gt;com.datastax.driver.core.Cluster"></a>
+      <a id="getCluster:()⇒Cluster"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">getCluster</span><span class="result">: <span class="extype" name="com.datastax.driver.core.Cluster">Cluster</span></span>
+        <span class="name">getCluster</span><span class="result">: () ⇒ <span class="extype" name="com.datastax.driver.core.Cluster">Cluster</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.cassandra.BaseCassandraInstance@getCluster:com.datastax.driver.core.Cluster" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.spark.io.cassandra.BaseCassandraInstance@getCluster:()=&gt;com.datastax.driver.core.Cluster" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Functions to get cluster / session for custom logic, where function wrapping can have an impact on speed</p><div class="fullcomment"><div class="comment cmt"><p>Functions to get cluster / session for custom logic, where function wrapping can have an impact on speed</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a></dd></dl></div>
-    </li><li name="geotrellis.spark.io.cassandra.CassandraInstance#getLoadBalancingPolicy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getLoadBalancingPolicy:com.datastax.driver.core.policies.TokenAwarePolicy"></a>
-      <a id="getLoadBalancingPolicy:TokenAwarePolicy"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getLoadBalancingPolicy</span><span class="result">: <span class="extype" name="com.datastax.driver.core.policies.TokenAwarePolicy">TokenAwarePolicy</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.cassandra.BaseCassandraInstance@getLoadBalancingPolicy:com.datastax.driver.core.policies.TokenAwarePolicy" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a></dd></dl></div>
+      <p class="shortcomment cmt">Functions to get cluster / session for custom logic, where function wrapping can have an impact on speed</p><div class="fullcomment"><div class="comment cmt"><p>Functions to get cluster / session for custom logic, where function wrapping can have an impact on speed</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.io.cassandra.BaseCassandraInstance">BaseCassandraInstance</a> → <a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a></dd></dl></div>
     </li><li name="geotrellis.spark.io.cassandra.CassandraInstance#getSession" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getSession:com.datastax.driver.core.Session"></a>
       <a id="getSession:Session"></a>
@@ -398,23 +383,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a></dd></dl></div>
-    </li><li name="geotrellis.spark.io.cassandra.BaseCassandraInstance#hosts" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="hosts:Seq[String]"></a>
-      <a id="hosts:Seq[String]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">hosts</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.cassandra.BaseCassandraInstance@hosts:Seq[String]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.io.cassandra.BaseCassandraInstance">BaseCassandraInstance</a> → <a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -432,23 +400,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.spark.io.cassandra.BaseCassandraInstance#localDc" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="localDc:String"></a>
-      <a id="localDc:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">localDc</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.cassandra.BaseCassandraInstance@localDc:String" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.io.cassandra.BaseCassandraInstance">BaseCassandraInstance</a> → <a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -500,40 +451,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.spark.io.cassandra.BaseCassandraInstance#password" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="password:String"></a>
-      <a id="password:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">password</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.cassandra.BaseCassandraInstance@password:String" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.io.cassandra.BaseCassandraInstance">BaseCassandraInstance</a> → <a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a></dd></dl></div>
-    </li><li name="geotrellis.spark.io.cassandra.CassandraInstance#port" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="port:Int"></a>
-      <a id="port:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">port</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.cassandra.BaseCassandraInstance@port:Int" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a></dd></dl></div>
     </li><li name="geotrellis.spark.io.cassandra.CassandraInstance#registerBigInteger" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="registerBigInteger():Unit"></a>
       <a id="registerBigInteger():Unit"></a>
@@ -551,40 +468,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a></dd></dl></div>
-    </li><li name="geotrellis.spark.io.cassandra.BaseCassandraInstance#replicationFactor" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="replicationFactor:Int"></a>
-      <a id="replicationFactor:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">replicationFactor</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.cassandra.BaseCassandraInstance@replicationFactor:Int" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.io.cassandra.BaseCassandraInstance">BaseCassandraInstance</a> → <a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a></dd></dl></div>
-    </li><li name="geotrellis.spark.io.cassandra.BaseCassandraInstance#replicationStrategy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="replicationStrategy:String"></a>
-      <a id="replicationStrategy:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">replicationStrategy</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.cassandra.BaseCassandraInstance@replicationStrategy:String" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.io.cassandra.BaseCassandraInstance">BaseCassandraInstance</a> → <a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a></dd></dl></div>
     </li><li name="geotrellis.spark.io.cassandra.CassandraInstance#session" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="session:com.datastax.driver.core.Session"></a>
       <a id="session:Session"></a>
@@ -619,40 +502,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.spark.io.cassandra.BaseCassandraInstance#usedHostsPerRemoteDc" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="usedHostsPerRemoteDc:Int"></a>
-      <a id="usedHostsPerRemoteDc:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">usedHostsPerRemoteDc</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.cassandra.BaseCassandraInstance@usedHostsPerRemoteDc:Int" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.io.cassandra.BaseCassandraInstance">BaseCassandraInstance</a> → <a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a></dd></dl></div>
-    </li><li name="geotrellis.spark.io.cassandra.BaseCassandraInstance#username" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="username:String"></a>
-      <a id="username:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">username</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.cassandra.BaseCassandraInstance@username:String" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.io.cassandra.BaseCassandraInstance">BaseCassandraInstance</a> → <a href="CassandraInstance.html" class="extype" name="geotrellis.spark.io.cassandra.CassandraInstance">CassandraInstance</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
