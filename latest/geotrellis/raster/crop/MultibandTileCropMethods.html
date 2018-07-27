@@ -247,9 +247,9 @@ return a new MultibandTile.
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Given a <a href="../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a> and some cropping options, crop the
-<a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a> and return a new MultibandTile.</p><div class="fullcomment"><div class="comment cmt"><p>Given a <a href="../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a> and some cropping options, crop the
-<a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a> and return a new MultibandTile.
+      <p class="shortcomment cmt">Crops this <a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a> to the given region using methods
+specified in the cropping options.</p><div class="fullcomment"><div class="comment cmt"><p>Crops this <a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a> to the given region using methods
+specified in the cropping options.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.crop.MultibandTileCropMethods">MultibandTileCropMethods</a> → <a href="CropMethods.html" class="extype" name="geotrellis.raster.crop.CropMethods">CropMethods</a></dd></dl></div>
     </li><li name="geotrellis.raster.crop.TileCropMethods#crop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="crop(srcExtent:geotrellis.vector.Extent,extent:geotrellis.vector.Extent):T"></a>
@@ -383,6 +383,42 @@ some cropping options, crop.
     </span>
       <p class="shortcomment cmt">Given a <a href="../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a>, crop.</p><div class="fullcomment"><div class="comment cmt"><p>Given a <a href="../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a>, crop.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="CropMethods.html" class="extype" name="geotrellis.raster.crop.CropMethods">CropMethods</a></dd></dl></div>
+    </li><li name="geotrellis.raster.crop.MultibandTileCropMethods#cropBands" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="cropBands(gb:geotrellis.raster.GridBounds,targetBands:Seq[Int]):geotrellis.raster.MultibandTile"></a>
+      <a id="cropBands(GridBounds,Seq[Int]):MultibandTile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cropBands</span><span class="params">(<span name="gb">gb: <a href="../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>, <span name="targetBands">targetBands: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.crop.MultibandTileCropMethods@cropBands(gb:geotrellis.raster.GridBounds,targetBands:Seq[Int]):geotrellis.raster.MultibandTile" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Crops this <a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a> such that the output will contain
+only the given region and bands specified.</p>
+    </li><li name="geotrellis.raster.crop.MultibandTileCropMethods#cropBands" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="cropBands(gb:geotrellis.raster.GridBounds,targetBands:Seq[Int],options:geotrellis.raster.crop.Crop.Options):geotrellis.raster.MultibandTile"></a>
+      <a id="cropBands(GridBounds,Seq[Int],Options):MultibandTile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cropBands</span><span class="params">(<span name="gb">gb: <a href="../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a></span>, <span name="targetBands">targetBands: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="options">options: <a href="Crop$$Options.html" class="extype" name="geotrellis.raster.crop.Crop.Options">Options</a></span>)</span><span class="result">: <a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.crop.MultibandTileCropMethods@cropBands(gb:geotrellis.raster.GridBounds,targetBands:Seq[Int],options:geotrellis.raster.crop.Crop.Options):geotrellis.raster.MultibandTile" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Given a <a href="../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a>, a sequence of bands indexes,  and some cropping options, crop the
+<a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a> and return a new MultibandTile that contains the target area and bands.</p>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
