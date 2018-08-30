@@ -231,24 +231,6 @@
     </span>
       
     </li><li name="geotrellis.spark.io.s3.S3GeoTiffRDD#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply[I,K,V](objectRequestsToDimensions:org.apache.spark.rdd.RDD[(com.amazonaws.services.s3.model.GetObjectRequest,(Int,Int))],uriToKey:(java.net.URI,I)=&gt;K,options:geotrellis.spark.io.s3.S3GeoTiffRDD.Options,sourceGeoTiffInfo:=&gt;geotrellis.spark.io.GeoTiffInfoReader)(implicitrr:geotrellis.spark.io.RasterReader[geotrellis.spark.io.s3.S3GeoTiffRDD.Options,(I,V)]):org.apache.spark.rdd.RDD[(K,V)]"></a>
-      <a id="apply[I,K,V](RDD[(GetObjectRequest,(Int,Int))],(URI,I)⇒K,Options,⇒GeoTiffInfoReader)(RasterReader[Options,(I,V)]):RDD[(K,V)]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="I">I</span>, <span name="K">K</span>, <span name="V">V</span>]</span><span class="params">(<span name="objectRequestsToDimensions">objectRequestsToDimensions: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="com.amazonaws.services.s3.model.GetObjectRequest">GetObjectRequest</span>, (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>))]</span>, <span name="uriToKey">uriToKey: (<span class="extype" name="java.net.URI">URI</span>, <span class="extype" name="geotrellis.spark.io.s3.S3GeoTiffRDD.apply.I">I</span>) ⇒ <span class="extype" name="geotrellis.spark.io.s3.S3GeoTiffRDD.apply.K">K</span></span>, <span name="options">options: <a href="S3GeoTiffRDD$$Options.html" class="extype" name="geotrellis.spark.io.s3.S3GeoTiffRDD.Options">Options</a></span>, <span name="sourceGeoTiffInfo">sourceGeoTiffInfo: ⇒ <span class="extype" name="geotrellis.spark.io.GeoTiffInfoReader">GeoTiffInfoReader</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="rr">rr: <a href="../RasterReader.html" class="extype" name="geotrellis.spark.io.RasterReader">RasterReader</a>[<a href="S3GeoTiffRDD$$Options.html" class="extype" name="geotrellis.spark.io.s3.S3GeoTiffRDD.Options">Options</a>, (<span class="extype" name="geotrellis.spark.io.s3.S3GeoTiffRDD.apply.I">I</span>, <span class="extype" name="geotrellis.spark.io.s3.S3GeoTiffRDD.apply.V">V</span>)]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.io.s3.S3GeoTiffRDD.apply.K">K</span>, <span class="extype" name="geotrellis.spark.io.s3.S3GeoTiffRDD.apply.V">V</span>)]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.spark.io.s3.S3GeoTiffRDD$@apply[I,K,V](objectRequestsToDimensions:org.apache.spark.rdd.RDD[(com.amazonaws.services.s3.model.GetObjectRequest,(Int,Int))],uriToKey:(java.net.URI,I)=&gt;K,options:geotrellis.spark.io.s3.S3GeoTiffRDD.Options,sourceGeoTiffInfo:=&gt;geotrellis.spark.io.GeoTiffInfoReader)(implicitrr:geotrellis.spark.io.RasterReader[geotrellis.spark.io.s3.S3GeoTiffRDD.Options,(I,V)]):org.apache.spark.rdd.RDD[(K,V)]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Creates a RDD[(K, V)] whose K and V depends on the type of the GeoTiff that is going to be read in.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a RDD[(K, V)] whose K and V depends on the type of the GeoTiff that is going to be read in.
-</p></div><dl class="paramcmts block"><dt class="param">objectRequestsToDimensions</dt><dd class="cmt"><p>A RDD of GetObjectRequest of a given GeoTiff and its cols and rows as a (Int, Int).</p></dd><dt class="param">uriToKey</dt><dd class="cmt"><p>function to transform input key basing on the URI information.</p></dd><dt class="param">options</dt><dd class="cmt"><p>An instance of <a href="S3GeoTiffRDD$$Options.html" class="extype" name="geotrellis.spark.io.s3.S3GeoTiffRDD.Options">Options</a> that contains any user defined or default settings.</p></dd></dl></div>
-    </li><li name="geotrellis.spark.io.s3.S3GeoTiffRDD#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="apply[K,V](bucket:String,prefix:String,options:geotrellis.spark.io.s3.S3GeoTiffRDD.Options)(implicitsc:org.apache.spark.SparkContext,implicitrr:geotrellis.spark.io.RasterReader[geotrellis.spark.io.s3.S3GeoTiffRDD.Options,(K,V)]):org.apache.spark.rdd.RDD[(K,V)]"></a>
       <a id="apply[K,V](String,String,Options)(SparkContext,RasterReader[Options,(K,V)]):RDD[(K,V)]"></a>
       <h4 class="signature">
