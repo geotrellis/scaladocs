@@ -45,7 +45,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">IOBackoff</span><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">IOBackoff</span><span class="tparams">[<span name="A">A</span>, <span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
@@ -89,18 +89,18 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.spark.util.TaskUtils.IOBackoff#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(ioa:cats.effect.IO[A]):geotrellis.spark.util.TaskUtils.IOBackoff[A]"></a>
-      <a id="&lt;init&gt;:IOBackoff[A]"></a>
+      <a id="&lt;init&gt;(ioa:F[A])(implicitevidence$1:cats.effect.Effect[F],implicitevidence$2:cats.effect.Timer[F],implicitevidence$3:cats.effect.Sync[F]):geotrellis.spark.util.TaskUtils.IOBackoff[A,F]"></a>
+      <a id="&lt;init&gt;:IOBackoff[A,F]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">IOBackoff</span><span class="params">(<span name="ioa">ioa: <span class="extype" name="cats.effect.IO">IO</span>[<span class="extype" name="geotrellis.spark.util.TaskUtils.IOBackoff.A">A</span>]</span>)</span>
+        <span class="name">IOBackoff</span><span class="params">(<span name="ioa">ioa: <span class="extype" name="geotrellis.spark.util.TaskUtils.IOBackoff.F">F</span>[<span class="extype" name="geotrellis.spark.util.TaskUtils.IOBackoff.A">A</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="cats.effect.Effect">Effect</span>[<span class="extype" name="geotrellis.spark.util.TaskUtils.IOBackoff.F">F</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cats.effect.Timer">Timer</span>[<span class="extype" name="geotrellis.spark.util.TaskUtils.IOBackoff.F">F</span>]</span>, <span name="arg2">arg2: <span class="extype" name="cats.effect.Sync">Sync</span>[<span class="extype" name="geotrellis.spark.util.TaskUtils.IOBackoff.F">F</span>]</span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.util.TaskUtils$$IOBackoff@&lt;init&gt;(ioa:cats.effect.IO[A]):geotrellis.spark.util.TaskUtils.IOBackoff[A]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.util.TaskUtils$$IOBackoff@&lt;init&gt;(ioa:F[A])(implicitevidence$1:cats.effect.Effect[F],implicitevidence$2:cats.effect.Timer[F],implicitevidence$3:cats.effect.Sync[F]):geotrellis.spark.util.TaskUtils.IOBackoff[A,F]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -365,18 +365,18 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="geotrellis.spark.util.TaskUtils.IOBackoff#retryEBO" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="retryEBO(p:Throwable=&gt;Boolean)(implicittimer:cats.effect.Timer[cats.effect.IO]):cats.effect.IO[A]"></a>
-      <a id="retryEBO((Throwable)⇒Boolean)(Timer[IO]):IO[A]"></a>
+      <a id="retryEBO(p:Throwable=&gt;Boolean):F[A]"></a>
+      <a id="retryEBO((Throwable)⇒Boolean):F[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">retryEBO</span><span class="params">(<span name="p">p: (<span class="extype" name="scala.Throwable">Throwable</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="timer">timer: <span class="extype" name="cats.effect.Timer">Timer</span>[<span class="extype" name="cats.effect.IO">IO</span>]</span>)</span><span class="result">: <span class="extype" name="cats.effect.IO">IO</span>[<span class="extype" name="geotrellis.spark.util.TaskUtils.IOBackoff.A">A</span>]</span>
+        <span class="name">retryEBO</span><span class="params">(<span name="p">p: (<span class="extype" name="scala.Throwable">Throwable</span>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="geotrellis.spark.util.TaskUtils.IOBackoff.F">F</span>[<span class="extype" name="geotrellis.spark.util.TaskUtils.IOBackoff.A">A</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.util.TaskUtils$$IOBackoff@retryEBO(p:Throwable=&gt;Boolean)(implicittimer:cats.effect.Timer[cats.effect.IO]):cats.effect.IO[A]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.util.TaskUtils$$IOBackoff@retryEBO(p:Throwable=&gt;Boolean):F[A]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
