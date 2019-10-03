@@ -1,0 +1,430 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>internal - geotrellis.vectortile.protobuf.internal</title>
+          <meta name="description" content="internal - geotrellis.vectortile.protobuf.internal" />
+          <meta name="keywords" content="internal geotrellis.vectortile.protobuf.internal" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'geotrellis.vectortile.protobuf.internal.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.vectortile">vectortile</a>.<a href="../package.html" class="extype" name="geotrellis.vectortile.protobuf">protobuf</a></p>
+        <h1>internal</h1><span class="permalink">
+      <a href="../../../../index.html#geotrellis.vectortile.protobuf.internal.package" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">internal</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By Inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="geotrellis.vectortile.protobuf.internal"><span>internal</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show All</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="geotrellis.vectortile.protobuf.internal.Command" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="CommandextendsSerializable"></a>
+      <a id="Command:Command"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Command.html"><span class="name">Command</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.vectortile.protobuf.internal.package@CommandextendsSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">VectorTile geometries are stored as packed lists of &quot;Command Integers&quot;.</p><div class="fullcomment"><div class="comment cmt"><p>VectorTile geometries are stored as packed lists of &quot;Command Integers&quot;.
+There are currently three legal Commands: MoveTo, LineTo, and ClosePath.
+Each adhere to the following format:</p><pre>[ ... <span class="num">00000</span> | <span class="num">000</span> ]
+-------------------
+      |        |
+      |        --- The <span class="lit">"Command ID"</span>. MoveTo: <span class="num">001</span> (<span class="num">1</span>)
+      |                              LineTo: <span class="num">010</span> (<span class="num">2</span>)
+      |                              ClosePath: <span class="num">111</span> (<span class="num">7</span>)
+      |
+      --- The remaining <span class="num">29</span> bits are the <span class="lit">"Parameter Count"</span>.
+          This indicates the number of _pairs_ of ints
+          that follow that should be interpreted as Z-encoded
+          deltas from the current <span class="lit">"cursor"</span>.</pre><p>The &quot;cursor&quot; is the location of the current vertex being considered,
+and it starts at (0,0) for each Feature. As MoveTo and LineTo commands
+are read, the cursor moves according the list of parsed delta pairs.
+ClosePath does not move the cursor, but may in future versions of the spec.</p><p>Caveats:</p><ul><li>Point features, whether single or multi, will always consist of a single MoveTo.</li><li>Any Polygon in a Polygon feature must have a LineTo with a count of at least 2.</li><li>ClosePath must always have a parameter count of 1.
+</li></ul></div></div>
+    </li><li name="geotrellis.vectortile.protobuf.internal.CommandError" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CommandErrorextendsExceptionwithProductwithSerializable"></a>
+      <a id="CommandError:CommandError"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$CommandError.html"><span class="name">CommandError</span></a><span class="params">(<span name="id">id: <span class="extype" name="scala.Int">Int</span></span>, <span name="count">count: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.vectortile.protobuf.internal.package@CommandErrorextendsExceptionwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">If some invalid combination of command id and parameter count are given.</p>
+    </li><li name="geotrellis.vectortile.protobuf.internal.CommandSequenceError" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CommandSequenceErrorextendsExceptionwithProductwithSerializable"></a>
+      <a id="CommandSequenceError:CommandSequenceError"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$CommandSequenceError.html"><span class="name">CommandSequenceError</span></a><span class="params">(<span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.vectortile.protobuf.internal.package@CommandSequenceErrorextendsExceptionwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">If an sequence of Commands is given that does not conform to what the
+Point, LineString, and Polygon decoders expect.</p>
+    </li><li name="geotrellis.vectortile.protobuf.internal.LineTo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LineToextendsCommandwithProductwithSerializable"></a>
+      <a id="LineTo:LineTo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="LineTo.html"><span class="name">LineTo</span></a><span class="params">(<span name="deltas">deltas: <span class="extype" name="scala.Array">Array</span>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>)</span><span class="result"> extends <a href="Command.html" class="extype" name="geotrellis.vectortile.protobuf.internal.Command">Command</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.vectortile.protobuf.internal.package@LineToextendsCommandwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"><code>LineTo</code> indicates that a LineString should be continued from the current
+cursor.</p>
+    </li><li name="geotrellis.vectortile.protobuf.internal.MoveTo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="MoveToextendsCommandwithProductwithSerializable"></a>
+      <a id="MoveTo:MoveTo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MoveTo.html"><span class="name">MoveTo</span></a><span class="params">(<span name="deltas">deltas: <span class="extype" name="scala.Array">Array</span>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>)</span><span class="result"> extends <a href="Command.html" class="extype" name="geotrellis.vectortile.protobuf.internal.Command">Command</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.vectortile.protobuf.internal.package@MoveToextendsCommandwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"><code>MoveTo</code> signals a series of moves from the current cursor (default of <code>(0,0)</code>).</p><div class="fullcomment"><div class="comment cmt"><p><code>MoveTo</code> signals a series of moves from the current cursor (default of <code>(0,0)</code>).
+The parameter pairs that follow don't represent a point to move to,
+but instead are deltas from the current cursor.
+</p></div></div>
+    </li><li name="geotrellis.vectortile.protobuf.internal.ProtobufGeom" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ProtobufGeom[G1&lt;:geotrellis.vector.Geometry,G2&lt;:geotrellis.vector.MultiGeometry]extendsSerializable"></a>
+      <a id="ProtobufGeom[G1&lt;:Geometry,G2&lt;:MultiGeometry]:ProtobufGeom[G1,G2]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ProtobufGeom.html"><span class="name">ProtobufGeom</span></a><span class="tparams">[<span name="G1">G1 &lt;: <a href="../../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>, <span name="G2">G2 &lt;: <a href="../../../vector/MultiGeometry.html" class="extype" name="geotrellis.vector.MultiGeometry">MultiGeometry</a></span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.vectortile.protobuf.internal.package@ProtobufGeom[G1&lt;:geotrellis.vector.Geometry,G2&lt;:geotrellis.vector.MultiGeometry]extendsSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An isomorphism for any Geotrellis geometry type that can convert
+between a collection of Command Integers.</p><div class="fullcomment"><div class="comment cmt"><p>An isomorphism for any Geotrellis geometry type that can convert
+between a collection of Command Integers. As of version 2.1 of
+the VectorTile spec, there is no explicit difference between single
+and multi geometries. When there eventually is, this trait will have to be
+split to provide separate instances for both the single and multi forms.</p><p>Since we assume that all VectorTiles implicitely exist in some CRS,
+we ask for the top-left corner of the current Tile's extent, as well
+as its resolution in order to perform the transformation into CRS space.</p><p>Instances of this trait can be found in the package object.</p><p>Usage:</p><pre><span class="kw">val</span> topLeft: Point = ...
+<span class="kw">val</span> resolution: <span class="std">Double</span> = ...
+
+implicitly[ProtobufGeom[Point, MultiPoint]].fromCommands(Command.commands(<span class="std">Seq</span>(<span class="num">9</span>,<span class="num">2</span>,<span class="num">2</span>)), topLeft, resolution)</pre></div></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="geotrellis.vectortile.protobuf.internal.ClosePath" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ClosePath"></a>
+      <a id="ClosePath:ClosePath"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ClosePath$.html"><span class="name">ClosePath</span></a><span class="result"> extends <a href="Command.html" class="extype" name="geotrellis.vectortile.protobuf.internal.Command">Command</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.vectortile.protobuf.internal.package@ClosePath" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Signals the end of a Polygon.</p><div class="fullcomment"><div class="comment cmt"><p>Signals the end of a Polygon. Never has parameters, and doesn't move the cursor.</p></div></div>
+    </li><li name="geotrellis.vectortile.protobuf.internal.Command" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Command"></a>
+      <a id="Command:Command"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Command$.html"><span class="name">Command</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.vectortile.protobuf.internal.package@Command" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Contains convenience functions for handling <a href="Command.html" class="extype" name="geotrellis.vectortile.protobuf.internal.Command">Command</a>s.</p>
+    </li><li name="geotrellis.vectortile.protobuf.internal#fromProjection" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fromProjection(point:geotrellis.vector.Point,topLeft:geotrellis.vector.Point,resolution:Double):(Int,Int)"></a>
+      <a id="fromProjection(Point,Point,Double):(Int,Int)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fromProjection</span><span class="params">(<span name="point">point: <a href="../../../vector/Point.html" class="extype" name="geotrellis.vector.Point">Point</a></span>, <span name="topLeft">topLeft: <a href="../../../vector/Point.html" class="extype" name="geotrellis.vector.Point">Point</a></span>, <span name="resolution">resolution: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.vectortile.protobuf.internal.package@fromProjection(point:geotrellis.vector.Point,topLeft:geotrellis.vector.Point,resolution:Double):(Int,Int)" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Translate <span class="extype" name="Point">Point</span> coordinates within a CRS to those of a fixed
+VectorTile grid.</p><div class="fullcomment"><div class="comment cmt"><p>Translate <span class="extype" name="Point">Point</span> coordinates within a CRS to those of a fixed
+VectorTile grid. The reverse of <a href="#toProjection(point:(Int,Int),topLeft:geotrellis.vector.Point,resolution:Double):geotrellis.vector.Point" class="extmbr" name="geotrellis.vectortile.protobuf.internal#toProjection">toProjection</a>.
+</p></div><dl class="paramcmts block"><dt class="param">point</dt><dd class="cmt"><p>The <span class="extype" name="Point">Point</span> in CRS space.</p></dd><dt class="param">topLeft</dt><dd class="cmt"><p>The CRS coordinates of the top-left corner of this Tile.</p></dd><dt class="param">resolution</dt><dd class="cmt"><p>How much of the CRS's units are covered by a single VT grid coordinate.</p></dd><dt>returns</dt><dd class="cmt"><p>Grid coordinates in VectorTile space.</p></dd></dl></div>
+    </li><li name="geotrellis.vectortile.protobuf.internal#protoLine" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="protoLine:geotrellis.vectortile.protobuf.internal.ProtobufGeom[geotrellis.vector.Line,geotrellis.vector.MultiLine]"></a>
+      <a id="protoLine:ProtobufGeom[Line,MultiLine]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">protoLine</span><span class="result">: <a href="ProtobufGeom.html" class="extype" name="geotrellis.vectortile.protobuf.internal.ProtobufGeom">ProtobufGeom</a>[<a href="../../../vector/Line.html" class="extype" name="geotrellis.vector.Line">Line</a>, <a href="../../../vector/MultiLine.html" class="extype" name="geotrellis.vector.MultiLine">MultiLine</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.vectortile.protobuf.internal.package@protoLine:geotrellis.vectortile.protobuf.internal.ProtobufGeom[geotrellis.vector.Line,geotrellis.vector.MultiLine]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Instance definition of the ProtobufGeom typeclass for Lines.</p>
+    </li><li name="geotrellis.vectortile.protobuf.internal#protoPoint" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="protoPoint:geotrellis.vectortile.protobuf.internal.ProtobufGeom[geotrellis.vector.Point,geotrellis.vector.MultiPoint]"></a>
+      <a id="protoPoint:ProtobufGeom[Point,MultiPoint]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">protoPoint</span><span class="result">: <a href="ProtobufGeom.html" class="extype" name="geotrellis.vectortile.protobuf.internal.ProtobufGeom">ProtobufGeom</a>[<a href="../../../vector/Point.html" class="extype" name="geotrellis.vector.Point">Point</a>, <a href="../../../vector/MultiPoint.html" class="extype" name="geotrellis.vector.MultiPoint">MultiPoint</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.vectortile.protobuf.internal.package@protoPoint:geotrellis.vectortile.protobuf.internal.ProtobufGeom[geotrellis.vector.Point,geotrellis.vector.MultiPoint]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Instance definition of the ProtobufGeom typeclass for Points.</p>
+    </li><li name="geotrellis.vectortile.protobuf.internal#protoPolygon" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="protoPolygon:geotrellis.vectortile.protobuf.internal.ProtobufGeom[geotrellis.vector.Polygon,geotrellis.vector.MultiPolygon]"></a>
+      <a id="protoPolygon:ProtobufGeom[Polygon,MultiPolygon]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">protoPolygon</span><span class="result">: <a href="ProtobufGeom.html" class="extype" name="geotrellis.vectortile.protobuf.internal.ProtobufGeom">ProtobufGeom</a>[<a href="../../../vector/Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a>, <a href="../../../vector/MultiPolygon.html" class="extype" name="geotrellis.vector.MultiPolygon">MultiPolygon</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.vectortile.protobuf.internal.package@protoPolygon:geotrellis.vectortile.protobuf.internal.ProtobufGeom[geotrellis.vector.Polygon,geotrellis.vector.MultiPolygon]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Instance definition of the ProtobufGeom typeclass for Polygons.</p>
+    </li><li name="geotrellis.vectortile.protobuf.internal#protoVal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="protoVal(value:geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Value):geotrellis.vectortile.protobuf.Value"></a>
+      <a id="protoVal(internal.vector_tile.Tile.Value):Value"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">protoVal</span><span class="params">(<span name="value">value: <a href="vector_tile/Tile$$Value.html" class="extype" name="geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Value">internal.vector_tile.Tile.Value</a></span>)</span><span class="result">: <a href="../Value.html" class="extype" name="geotrellis.vectortile.protobuf.Value">Value</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.vectortile.protobuf.internal.package@protoVal(value:geotrellis.vectortile.protobuf.internal.vector_tile.Tile.Value):geotrellis.vectortile.protobuf.Value" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Automatically convert mid-level Protobuf Values into a high-level <a href="../Value.html" class="extype" name="geotrellis.vectortile.protobuf.Value">Value</a>.</p>
+    </li><li name="geotrellis.vectortile.protobuf.internal#toProjection" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toProjection(point:(Int,Int),topLeft:geotrellis.vector.Point,resolution:Double):geotrellis.vector.Point"></a>
+      <a id="toProjection((Int,Int),Point,Double):Point"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toProjection</span><span class="params">(<span name="point">point: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>, <span name="topLeft">topLeft: <a href="../../../vector/Point.html" class="extype" name="geotrellis.vector.Point">Point</a></span>, <span name="resolution">resolution: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="../../../vector/Point.html" class="extype" name="geotrellis.vector.Point">Point</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.vectortile.protobuf.internal.package@toProjection(point:(Int,Int),topLeft:geotrellis.vector.Point,resolution:Double):geotrellis.vector.Point" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Translate coordinates in VectorTile grid space into real CRS coordinates.</p><div class="fullcomment"><div class="comment cmt"><p>Translate coordinates in VectorTile grid space into real CRS coordinates.
+</p></div><dl class="paramcmts block"><dt class="param">point</dt><dd class="cmt"><p>A point in a VectorTile geometry, in grid coordinates.</p></dd><dt class="param">topLeft</dt><dd class="cmt"><p>The location in the current CRS of the top-left corner of this Tile.</p></dd><dt class="param">resolution</dt><dd class="cmt"><p>How much of the CRS's units are covered by a single VT grid coordinate.</p></dd><dt>returns</dt><dd class="cmt"><p>The <span class="extype" name="Point">Point</span> projected into the CRS.</p><h5>Translation Logic</h5><p>Extents always exist in <i>some</i> CRS. Below is information for
+determining values related to translating fixed VectorTile grid
+coordinates into map coordinates within the implied CRS.
+You can find resolution this way. Let:</p><pre>G := Height of grid (# number of cell rows)
+T := Height of a Tile (default <span class="num">4096</span>)
+E := Height of the Extent</pre><p>Then the resolution </p><pre>R = E / (G * T)</pre><p>This actually allows same-Tile Layers with different integer <code>extent</code> values
+to make sense!
+<b>Finding the top-left corner</b></p><pre>X = xmin + (R * T * SpatialKeyX)
+Y = ymax - (R * T * SpatialKeyY)</pre><p>Resolution and the top-left corner only need to be calculated once per Layer.
+<b>Shifting the VT grid points</b></p><pre>vtX = X + (R * tileX)
+vtY = Y - (R * tileY)</pre></dd></dl></div>
+    </li><li name="geotrellis.vectortile.protobuf.internal.vector_tile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="vector_tile"></a>
+      <a id="vector_tile:vector_tile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="vector_tile/package.html"><span class="name">vector_tile</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.vectortile.protobuf.internal.package@vector_tile" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>
