@@ -139,6 +139,23 @@
       </a>
     </span>
       
+    </li><li name="geotrellis.layer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="layer"></a>
+      <a id="layer:layer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="layer/package.html"><span class="name">layer</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#geotrellis.package@layer" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.macros" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="macros"></a>
       <a id="macros:macros"></a>
@@ -207,23 +224,6 @@
       </a>
     </span>
       
-    </li><li name="geotrellis.slick" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="slick"></a>
-      <a id="slick:slick"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a href="slick/package.html"><span class="name">slick</span></a>
-      </span>
-      </h4><span class="permalink">
-      <a href="../index.html#geotrellis.package@slick" title="Permalink" target="_top">
-        <img src="../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="geotrellis.spark" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="spark"></a>
       <a id="spark:spark"></a>
@@ -237,6 +237,23 @@
       </span>
       </h4><span class="permalink">
       <a href="../index.html#geotrellis.package@spark" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.store" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="store"></a>
+      <a id="store:store"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="store/package.html"><span class="name">store</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#geotrellis.package@store" title="Permalink" target="_top">
         <img src="../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -300,7 +317,7 @@ decode and encode data according to
 <a href="https://github.com/mapbox/vector-tile-spec/blob/master/2.1/vector_tile.proto" target="_blank">this <i>.proto</i> schema</a>.</p><h4>What is this package?</h4><p><i>geotrellis-vectortile</i> is a high-performance implementation of
 <b>Version 2.1</b> of the VectorTile spec. It features:</p><ul><li>Decoding of <b>Version 2</b> VectorTiles from Protobuf byte data into useful GeoTrellis types.</li><li>Lazy decoding of Geometries. Only parse what you need!</li></ul><h4>Using this Package</h4><h5>Modules</h5><p>Users of this library need only pay attention to <a href="vectortile/package.html" class="extype" name="geotrellis.vectortile">geotrellis.vectortile</a>.
 Any classes in the <i>internal.*</i> submodules are unique to the machinery
-of VectorTile {de,en}coding, and can be safely ignored.</p><h5>Types</h5><p>The central type is the <a href="vectortile/VectorTile.html" class="extype" name="geotrellis.vectortile.VectorTile">VectorTile</a> class. Its companion object can
+of VectorTile {de,en}coding, and can be safely ignored.</p><h5>Types</h5><p>The central type is the <a href="vectortile/VectorTile.html" class="extype" name="geotrellis.vectortile.VectorTile">geotrellis.vectortile.VectorTile</a> class. Its companion object can
 be used to construct VectorTiles from raw byte data:</p><pre><span class="kw">import</span> geotrellis.spark.SpatialKey
 <span class="kw">import</span> geotrellis.spark.tiling.LayoutDefinition
 <span class="kw">import</span> geotrellis.vector.Extent
@@ -322,7 +339,7 @@ A Scala Map requires more rigidity (for the better), and so we use
 <a href="vectortile/Value.html" class="extype" name="geotrellis.vectortile.Value">geotrellis.vectortile.Value</a> to guarantee type safety.</p><h4>Implementation Assumptions</h4><p>This particular implementation of the VectorTile spec makes the following
 assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordinate Reference
     system. That is, there is no such thing as a &quot;projectionless&quot; VectorTile.
-    When decoding a VectorTile, we must provide a GeoTrellis <span class="extype" name="Extent">Extent</span> that
+    When decoding a VectorTile, we must provide a GeoTrellis <a href="vector/Extent.html" class="extype" name="geotrellis.vector.Extent">geotrellis.vector.Extent</a> that
     represents the Tile's area on a map.
     With this, the grid coordinates stored in the VectorTile's Geometry are
     shifted from their

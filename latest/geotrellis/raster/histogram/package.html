@@ -94,7 +94,7 @@ integer data.
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="Histogram.html"><span class="name">Histogram</span></a><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="scala.AnyVal">AnyVal</span></span>]</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="Histogram.html"><span class="name">Histogram</span></a><span class="tparams">[<span name="T">T &lt;: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyVal" class="extype" target="_top">AnyVal</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.raster.histogram.package@Histogram[T&lt;:AnyVal]extendsSerializable" title="Permalink" target="_top">
@@ -111,7 +111,7 @@ integer data.
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="IntHistogram.html"><span class="name">IntHistogram</span></a><span class="result"> extends <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+        <a href="IntHistogram.html"><span class="name">IntHistogram</span></a><span class="result"> extends <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.raster.histogram.package@IntHistogramextendsHistogram[Int]" title="Permalink" target="_top">
@@ -128,7 +128,7 @@ integer data.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="MutableHistogram.html"><span class="name">MutableHistogram</span></a><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="scala.AnyVal">AnyVal</span></span>]</span><span class="result"> extends <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span>]</span>
+        <a href="MutableHistogram.html"><span class="name">MutableHistogram</span></a><span class="tparams">[<span name="T">T &lt;: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyVal" class="extype" target="_top">AnyVal</a></span>]</span><span class="result"> extends <a href="Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="geotrellis.raster.histogram.MutableHistogram.T">T</span>]</span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.raster.histogram.package@MutableHistogram[T&lt;:AnyVal]extendsHistogram[T]" title="Permalink" target="_top">
@@ -145,7 +145,7 @@ integer data.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="MutableIntHistogram.html"><span class="name">MutableIntHistogram</span></a><span class="result"> extends <a href="MutableHistogram.html" class="extype" name="geotrellis.raster.histogram.MutableHistogram">MutableHistogram</a>[<span class="extype" name="scala.Int">Int</span>] with <a href="IntHistogram.html" class="extype" name="geotrellis.raster.histogram.IntHistogram">IntHistogram</a></span>
+        <a href="MutableIntHistogram.html"><span class="name">MutableIntHistogram</span></a><span class="result"> extends <a href="MutableHistogram.html" class="extype" name="geotrellis.raster.histogram.MutableHistogram">MutableHistogram</a>[<a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a>] with <a href="IntHistogram.html" class="extype" name="geotrellis.raster.histogram.IntHistogram">IntHistogram</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.raster.histogram.package@MutableIntHistogramextendsMutableHistogram[Int]withIntHistogram" title="Permalink" target="_top">
@@ -162,7 +162,7 @@ integer data.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="StreamingHistogram.html"><span class="name">StreamingHistogram</span></a><span class="result"> extends <a href="MutableHistogram.html" class="extype" name="geotrellis.raster.histogram.MutableHistogram">MutableHistogram</a>[<span class="extype" name="scala.Double">Double</span>]</span>
+        <a href="StreamingHistogram.html"><span class="name">StreamingHistogram</span></a><span class="result"> extends <a href="MutableHistogram.html" class="extype" name="geotrellis.raster.histogram.MutableHistogram">MutableHistogram</a>[<a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.raster.histogram.package@StreamingHistogramextendsMutableHistogram[Double]" title="Permalink" target="_top">
@@ -171,7 +171,9 @@ integer data.
     </span>
       <p class="shortcomment cmt">Ben-Haim, Yael, and Elad Tom-Tov.</p><div class="fullcomment"><div class="comment cmt"><p>Ben-Haim, Yael, and Elad Tom-Tov. &quot;A streaming parallel decision
 tree algorithm.&quot;  The Journal of Machine Learning Research 11
-(2010): 849-872.
+(2010): 849-872.</p><p>NOTE: The order in which values are counted could affect Bucket
+distribution and counts as StreamingHistogram instances are merged,
+due to the way in which bucket boundaries are defined.
 </p></div></div>
     </li></ol>
             </div>
@@ -206,7 +208,7 @@ tree algorithm.&quot;  The Journal of Machine Learning Research 11
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="FastMapHistogram$.html"><span class="name">FastMapHistogram</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="FastMapHistogram$.html"><span class="name">FastMapHistogram</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.raster.histogram.package@FastMapHistogram" title="Permalink" target="_top">
@@ -223,7 +225,7 @@ tree algorithm.&quot;  The Journal of Machine Learning Research 11
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="IntHistogram$.html"><span class="name">IntHistogram</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="IntHistogram$.html"><span class="name">IntHistogram</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.raster.histogram.package@IntHistogram" title="Permalink" target="_top">
@@ -240,7 +242,7 @@ tree algorithm.&quot;  The Journal of Machine Learning Research 11
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="StreamingHistogram$.html"><span class="name">StreamingHistogram</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="StreamingHistogram$.html"><span class="name">StreamingHistogram</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.raster.histogram.package@StreamingHistogram" title="Permalink" target="_top">

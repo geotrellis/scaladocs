@@ -66,7 +66,57 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="geotrellis.raster.summary.MultibandTileSummaryMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.raster.summary.GridVisitor" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="GridVisitor[-T&lt;:geotrellis.raster.Grid[Int],+R]extendsSerializable"></a>
+      <a id="GridVisitor[-T&lt;:Grid[Int],+R]:GridVisitor[T,R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="GridVisitor.html"><span class="name">GridVisitor</span></a><span class="tparams">[<span name="T">-T &lt;: <a href="../Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a>[<a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>, <span name="R">+R</span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.summary.package@GridVisitor[-T&lt;:geotrellis.raster.Grid[Int],+R]extendsSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Visitor used to reduce values in a two-dimensional grid T to a single result R</p><div class="fullcomment"><div class="comment cmt"><p>Visitor used to reduce values in a two-dimensional grid T to a single result R</p><p>The user should implement concrete subclasses that update the value of <code>result</code> as
+necessary on each call to <code>visit(raster: T, col: Int, row: Int)</code>.
+</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>User implementations intended to be used with
+      <code>geotrellis.spark.summary.polygonal.RDDPolygonalSummary</code> must have a
+      zero argument constructor so that new instances can be instantiated
+      automatically.
+GridVisitor is contravariant in T and covariant in R in the same fashion as Function1.
+This allows more generic concrete Visitor class implementations
+to satisfy type constraints for T at the call site, and the inverse is true for R. As a
+contrived example using GeoTrellis types, where Raster is a subtype of CellGrid:
+val DoubleVisitor: GridVisitor[CellGrid[Int], Double] = ???
+def usesRaster(visitor: GridVisitor[Raster[Tile]], Any]): Unit = ???
+usesRaster(DoubleVisitor)
+will compile. For an alternate explanation on covariance and contravariance that might help
+to clarify this, see:
+- https://stackoverflow.com/a/10604305
+- https://stackoverflow.com/a/38577878</p></span>, <span class="cmt"><p>Be sure to handle the empty state. This could occur if no points in T are ever visited.</p></span></dd></dl></div>
+    </li><li name="geotrellis.raster.summary.Implicits" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ImplicitsextendsAnyRef"></a>
+      <a id="Implicits:Implicits"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Implicits.html"><span class="name">Implicits</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.summary.package@ImplicitsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.summary.MultibandTileSummaryMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="MultibandTileSummaryMethodsextendsMethodExtensions[geotrellis.raster.MultibandTile]"></a>
       <a id="MultibandTileSummaryMethods:MultibandTileSummaryMethods"></a>
       <h4 class="signature">
@@ -83,6 +133,28 @@
       </a>
     </span>
       <p class="shortcomment cmt">Trait containing <a href="../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a> extension methods for summaries.</p>
+    </li><li name="geotrellis.raster.summary.PolygonalSummaryBench" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PolygonalSummaryBenchextendsAnyRef"></a>
+      <a id="PolygonalSummaryBench:PolygonalSummaryBench"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="PolygonalSummaryBench.html"><span class="name">PolygonalSummaryBench</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.summary.package@PolygonalSummaryBenchextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@BenchmarkMode</span><span class="args">()</span>
+              
+                <span class="name">@State</span><span class="args">()</span>
+              
+        </dd></dl></div>
     </li><li name="geotrellis.raster.summary.SinglebandTileSummaryMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="SinglebandTileSummaryMethodsextendsMethodExtensions[geotrellis.raster.Tile]"></a>
       <a id="SinglebandTileSummaryMethods:SinglebandTileSummaryMethods"></a>
@@ -109,7 +181,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Statistics.html"><span class="name">Statistics</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="dataCells">dataCells: <span class="extype" name="scala.Long">Long</span> = <span class="symbol">0</span></span>, <span name="mean">mean: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">Double.NaN</span></span>, <span name="median">median: <span class="extype" name="geotrellis.raster.summary.Statistics.T">T</span></span>, <span name="mode">mode: <span class="extype" name="geotrellis.raster.summary.Statistics.T">T</span></span>, <span name="stddev">stddev: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">Double.NaN</span></span>, <span name="zmin">zmin: <span class="extype" name="geotrellis.raster.summary.Statistics.T">T</span></span>, <span name="zmax">zmax: <span class="extype" name="geotrellis.raster.summary.Statistics.T">T</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="Statistics.html"><span class="name">Statistics</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="dataCells">dataCells: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Long" class="extype" target="_top">Long</a> = <span class="symbol">0</span></span>, <span name="mean">mean: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Double" class="extype" target="_top">Double</a> = <span class="symbol">Double.NaN</span></span>, <span name="median">median: <span class="extype" name="geotrellis.raster.summary.Statistics.T">T</span></span>, <span name="mode">mode: <span class="extype" name="geotrellis.raster.summary.Statistics.T">T</span></span>, <span name="stddev">stddev: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Double" class="extype" target="_top">Double</a> = <span class="symbol">Double.NaN</span></span>, <span name="zmin">zmin: <span class="extype" name="geotrellis.raster.summary.Statistics.T">T</span></span>, <span name="zmax">zmax: <span class="extype" name="geotrellis.raster.summary.Statistics.T">T</span></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.raster.summary.package@Statistics[T]extendsProductwithSerializable" title="Permalink" target="_top">
@@ -125,7 +197,41 @@ region.</p>
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="geotrellis.raster.summary.Statistics" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="geotrellis.raster.summary.GridVisitor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GridVisitor"></a>
+      <a id="GridVisitor:GridVisitor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GridVisitor$.html"><span class="name">GridVisitor</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.summary.package@GridVisitor" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.summary.Implicits" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Implicits"></a>
+      <a id="Implicits:Implicits"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Implicits$.html"><span class="name">Implicits</span></a><span class="result"> extends <a href="Implicits.html" class="extype" name="geotrellis.raster.summary.Implicits">Implicits</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.summary.package@Implicits" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.summary.Statistics" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="Statistics"></a>
       <a id="Statistics:Statistics"></a>
       <h4 class="signature">
@@ -134,7 +240,7 @@ region.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="Statistics$.html"><span class="name">Statistics</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="Statistics$.html"><span class="name">Statistics</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.raster.summary.package@Statistics" title="Permalink" target="_top">
@@ -157,6 +263,23 @@ for generating empty Statistics objects.
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.raster.summary.package@polygonal" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.summary.types" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="types"></a>
+      <a id="types:types"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="types/package.html"><span class="name">types</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#geotrellis.raster.summary.package@types" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

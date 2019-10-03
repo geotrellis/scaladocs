@@ -1,0 +1,355 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>cog - geotrellis.spark.store.cog</title>
+          <meta name="description" content="cog - geotrellis.spark.store.cog" />
+          <meta name="keywords" content="cog geotrellis.spark.store.cog" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'geotrellis.spark.store.cog.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="geotrellis">geotrellis</a>.<a href="../../package.html" class="extype" name="geotrellis.spark">spark</a>.<a href="../package.html" class="extype" name="geotrellis.spark.store">store</a></p>
+        <h1>cog</h1><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.store.cog.package" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cog</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="Implicits.html" class="extype" name="geotrellis.spark.store.cog.Implicits">Implicits</a>, <a href="vrt/Implicits.html" class="extype" name="geotrellis.spark.store.cog.vrt.Implicits">cog.vrt.Implicits</a>, <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By Inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="geotrellis.spark.store.cog"><span>cog</span></li><li class="in" name="geotrellis.spark.store.cog.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.spark.store.cog.vrt.Implicits"><span>Implicits</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show All</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="geotrellis.spark.store.cog.COGLayer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="COGLayer[K,T&lt;:geotrellis.raster.CellGrid[Int]]extendsProductwithSerializable"></a>
+      <a id="COGLayer[K,T&lt;:CellGrid[Int]]:COGLayer[K,T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="COGLayer.html"><span class="name">COGLayer</span></a><span class="tparams">[<span name="K">K</span>, <span name="T">T &lt;: <a href="../../../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a>[<a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>]</span><span class="params">(<span name="layers">layers: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../../../store/cog/ZoomRange.html" class="extype" name="geotrellis.store.cog.ZoomRange">ZoomRange</a>, <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.store.cog.COGLayer.K">K</span>, <a href="../../../raster/io/geotiff/GeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiff">GeoTiff</a>[<span class="extype" name="geotrellis.spark.store.cog.COGLayer.T">T</span>])]]</span>, <span name="metadata">metadata: <a href="../../../store/cog/COGLayerMetadata.html" class="extype" name="geotrellis.store.cog.COGLayerMetadata">COGLayerMetadata</a>[<span class="extype" name="geotrellis.spark.store.cog.COGLayer.K">K</span>]</span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.store.cog.package@COGLayer[K,T&lt;:geotrellis.raster.CellGrid[Int]]extendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.store.cog.COGLayerReader" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="COGLayerReader[ID]extendsSerializable"></a>
+      <a id="COGLayerReader[ID]:COGLayerReader[ID]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="COGLayerReader.html"><span class="name">COGLayerReader</span></a><span class="tparams">[<span name="ID">ID</span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.store.cog.package@COGLayerReader[ID]extendsSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.store.cog.COGLayerReaderProvider" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="COGLayerReaderProviderextendsAnyRef"></a>
+      <a id="COGLayerReaderProvider:COGLayerReaderProvider"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="COGLayerReaderProvider.html"><span class="name">COGLayerReaderProvider</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.store.cog.package@COGLayerReaderProviderextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.store.cog.COGLayerWriter" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="COGLayerWriterextendsLazyLoggingwithSerializable"></a>
+      <a id="COGLayerWriter:COGLayerWriter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="COGLayerWriter.html"><span class="name">COGLayerWriter</span></a><span class="result"> extends <span class="extype" name="com.typesafe.scalalogging.LazyLogging">LazyLogging</span> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.store.cog.package@COGLayerWriterextendsLazyLoggingwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.store.cog.COGLayerWriterProvider" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="COGLayerWriterProviderextendsAnyRef"></a>
+      <a id="COGLayerWriterProvider:COGLayerWriterProvider"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="COGLayerWriterProvider.html"><span class="name">COGLayerWriterProvider</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.store.cog.package@COGLayerWriterProviderextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.store.cog.Implicits" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ImplicitsextendsImplicits"></a>
+      <a id="Implicits:Implicits"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Implicits.html"><span class="name">Implicits</span></a><span class="result"> extends <a href="vrt/Implicits.html" class="extype" name="geotrellis.spark.store.cog.vrt.Implicits">cog.vrt.Implicits</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.store.cog.package@ImplicitsextendsImplicits" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.store.cog.Implicits.withCOGLayerWriteMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withCOGLayerWriteMethods[K,V&lt;:geotrellis.raster.CellGrid[Int]]extendsMethodExtensions[org.apache.spark.rdd.RDD[(K,geotrellis.raster.io.geotiff.GeoTiff[V])]]"></a>
+      <a id="withCOGLayerWriteMethods[K,V&lt;:CellGrid[Int]]:withCOGLayerWriteMethods[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Implicits$withCOGLayerWriteMethods.html"><span class="name">withCOGLayerWriteMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V &lt;: <a href="../../../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a>[<a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>]</span><span class="result"> extends <a href="../../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="geotrellis.spark.store.cog.Implicits.withCOGLayerWriteMethods.K">K</span>, <a href="../../../raster/io/geotiff/GeoTiff.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiff">GeoTiff</a>[<span class="extype" name="geotrellis.spark.store.cog.Implicits.withCOGLayerWriteMethods.V">V</span>])]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.store.cog.Implicits@withCOGLayerWriteMethods[K,V&lt;:geotrellis.raster.CellGrid[Int]]extendsMethodExtensions[org.apache.spark.rdd.RDD[(K,geotrellis.raster.io.geotiff.GeoTiff[V])]]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Implicits.html" class="extype" name="geotrellis.spark.store.cog.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.spark.store.cog.vrt.Implicits.withVRTMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withVRTMethodsextendsMethodExtensions[geotrellis.store.cog.vrt.VRT]"></a>
+      <a id="withVRTMethods:withVRTMethods"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="vrt/Implicits$withVRTMethods.html"><span class="name">withVRTMethods</span></a><span class="result"> extends <a href="../../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<a href="../../../store/cog/vrt/VRT.html" class="extype" name="geotrellis.store.cog.vrt.VRT">VRT</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#geotrellis.spark.store.cog.vrt.Implicits@withVRTMethodsextendsMethodExtensions[geotrellis.store.cog.vrt.VRT]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="vrt/Implicits.html" class="extype" name="geotrellis.spark.store.cog.vrt.Implicits">Implicits</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="geotrellis.spark.store.cog.COGLayer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="COGLayer"></a>
+      <a id="COGLayer:COGLayer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="COGLayer$.html"><span class="name">COGLayer</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.store.cog.package@COGLayer" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.store.cog.COGLayerReader" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="COGLayerReader"></a>
+      <a id="COGLayerReader:COGLayerReader"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="COGLayerReader$.html"><span class="name">COGLayerReader</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.store.cog.package@COGLayerReader" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.store.cog.COGLayerWriter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="COGLayerWriter"></a>
+      <a id="COGLayerWriter:COGLayerWriter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="COGLayerWriter$.html"><span class="name">COGLayerWriter</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.store.cog.package@COGLayerWriter" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.store.cog.Implicits" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Implicits"></a>
+      <a id="Implicits:Implicits"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Implicits$.html"><span class="name">Implicits</span></a><span class="result"> extends <a href="Implicits.html" class="extype" name="geotrellis.spark.store.cog.Implicits">Implicits</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.store.cog.package@Implicits" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.spark.store.cog.vrt" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="vrt"></a>
+      <a id="vrt:vrt"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="vrt/package.html"><span class="name">vrt</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.spark.store.cog.package@vrt" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="geotrellis.spark.store.cog.Implicits">
+              <h3>Inherited from <a href="Implicits.html" class="extype" name="geotrellis.spark.store.cog.Implicits">Implicits</a></h3>
+            </div><div class="parent" name="geotrellis.spark.store.cog.vrt.Implicits">
+              <h3>Inherited from <a href="vrt/Implicits.html" class="extype" name="geotrellis.spark.store.cog.vrt.Implicits">cog.vrt.Implicits</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

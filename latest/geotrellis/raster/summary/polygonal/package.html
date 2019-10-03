@@ -47,13 +47,35 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"></div>
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="Implicits.html" class="extype" name="geotrellis.raster.summary.polygonal.Implicits">Implicits</a>, <a href="PolygonalSummary$$ToPolygonalSummaryMethods.html" class="extype" name="geotrellis.raster.summary.polygonal.PolygonalSummary.ToPolygonalSummaryMethods">ToPolygonalSummaryMethods</a>, <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+        </div></div>
         
 
       <div id="mbrsel">
         <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
-        
-        
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By Inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="geotrellis.raster.summary.polygonal"><span>polygonal</span></li><li class="in" name="geotrellis.raster.summary.polygonal.Implicits"><span>Implicits</span></li><li class="in" name="geotrellis.raster.summary.polygonal.PolygonalSummary.ToPolygonalSummaryMethods"><span>ToPolygonalSummaryMethods</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show All</span></li>
+            </ol>
+          </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
             <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
@@ -75,7 +97,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="Implicits.html"><span class="name">Implicits</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="Implicits.html"><span class="name">Implicits</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@ImplicitsextendsAnyRef" title="Permalink" target="_top">
@@ -83,93 +105,61 @@
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.summary.polygonal.MeanResult" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MeanResultextendsProductwithSerializable"></a>
-      <a id="MeanResult:MeanResult"></a>
+    </li><li name="geotrellis.raster.summary.polygonal.PolygonalSummaryResult" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="PolygonalSummaryResult[+A]extendsAnyRef"></a>
+      <a id="PolygonalSummaryResult[+A]:PolygonalSummaryResult[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="PolygonalSummaryResult.html"><span class="name">PolygonalSummaryResult</span></a><span class="tparams">[<span name="A">+A</span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@PolygonalSummaryResult[+A]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A Result ADT returned by <a href="PolygonalSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.PolygonalSummary">PolygonalSummary</a> operations</p><div class="fullcomment"><div class="comment cmt"><p>A Result ADT returned by <a href="PolygonalSummary$.html" class="extype" name="geotrellis.raster.summary.polygonal.PolygonalSummary">PolygonalSummary</a> operations</p><p>There are two result types, <a href="NoIntersection$.html" class="extype" name="geotrellis.raster.summary.polygonal.NoIntersection">NoIntersection</a> and <a href="Summary.html" class="extype" name="geotrellis.raster.summary.polygonal.Summary">Summary</a>.
+This ADT will always return Summary if the Raster and Polygon intersect.
+Otherwise, NoIntersection will be returned.</p><p>Provides helpers to convert to Option and Either if you don't need to match
+on result type.
+</p></div></div>
+    </li><li name="geotrellis.raster.summary.polygonal.Summary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Summary[A]extendsPolygonalSummaryResult[A]withProductwithSerializable"></a>
+      <a id="Summary[A]:Summary[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="MeanResult.html"><span class="name">MeanResult</span></a><span class="params">(<span name="sum">sum: <span class="extype" name="scala.Double">Double</span></span>, <span name="count">count: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="Summary.html"><span class="name">Summary</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="value">value: <span class="extype" name="geotrellis.raster.summary.polygonal.Summary.A">A</span></span>)</span><span class="result"> extends <a href="PolygonalSummaryResult.html" class="extype" name="geotrellis.raster.summary.polygonal.PolygonalSummaryResult">PolygonalSummaryResult</a>[<span class="extype" name="geotrellis.raster.summary.polygonal.Summary.A">A</span>] with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@MeanResultextendsProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@Summary[A]extendsPolygonalSummaryResult[A]withProductwithSerializable" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="MultibandTilePolygonalSummaryHandler[T]extendsPolygonalSummaryHandler[geotrellis.vector.Polygon,geotrellis.raster.MultibandTile,T]"></a>
-      <a id="MultibandTilePolygonalSummaryHandler[T]:MultibandTilePolygonalSummaryHandler[T]"></a>
+    </li><li name="geotrellis.raster.summary.polygonal.PolygonalSummary.ToPolygonalSummaryMethods.withPolygonalSummaryMethods" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withPolygonalSummaryMethods[A&lt;:geotrellis.raster.Grid[Int]]extendsPolygonalSummary.PolygonalSummaryMethods[A]"></a>
+      <a id="withPolygonalSummaryMethods[A&lt;:Grid[Int]]:withPolygonalSummaryMethods[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="MultibandTilePolygonalSummaryHandler.html"><span class="name">MultibandTilePolygonalSummaryHandler</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../../../vector/summary/polygonal/PolygonalSummaryHandler.html" class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler">PolygonalSummaryHandler</a>[<a href="../../../vector/Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a>, <a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>, <span class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler.T">T</span>]</span>
+        <a href="PolygonalSummary$$ToPolygonalSummaryMethods$withPolygonalSummaryMethods.html"><span class="name">withPolygonalSummaryMethods</span></a><span class="tparams">[<span name="A">A &lt;: <a href="../../Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a>[<a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>]</span><span class="result"> extends <a href="PolygonalSummary$$PolygonalSummaryMethods.html" class="extype" name="geotrellis.raster.summary.polygonal.PolygonalSummary.PolygonalSummaryMethods">PolygonalSummaryMethods</a>[<span class="extype" name="geotrellis.raster.summary.polygonal.PolygonalSummary.ToPolygonalSummaryMethods.withPolygonalSummaryMethods.A">A</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@MultibandTilePolygonalSummaryHandler[T]extendsPolygonalSummaryHandler[geotrellis.vector.Polygon,geotrellis.raster.MultibandTile,T]" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.PolygonalSummary$$ToPolygonalSummaryMethods@withPolygonalSummaryMethods[A&lt;:geotrellis.raster.Grid[Int]]extendsPolygonalSummary.PolygonalSummaryMethods[A]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Base trait for tile polygonal summary handlers.</p>
-    </li><li name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="MultibandTilePolygonalSummaryMethodsextendsMethodExtensions[geotrellis.raster.MultibandTile]"></a>
-      <a id="MultibandTilePolygonalSummaryMethods:MultibandTilePolygonalSummaryMethods"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="MultibandTilePolygonalSummaryMethods.html"><span class="name">MultibandTilePolygonalSummaryMethods</span></a><span class="result"> extends <a href="../../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<a href="../../MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@MultibandTilePolygonalSummaryMethodsextendsMethodExtensions[geotrellis.raster.MultibandTile]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Trait containing extension methods for doing polygonal summaries
-on tiles.</p>
-    </li><li name="geotrellis.raster.summary.polygonal.SinglebandTilePolygonalSummaryMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="SinglebandTilePolygonalSummaryMethodsextendsMethodExtensions[geotrellis.raster.Tile]"></a>
-      <a id="SinglebandTilePolygonalSummaryMethods:SinglebandTilePolygonalSummaryMethods"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="SinglebandTilePolygonalSummaryMethods.html"><span class="name">SinglebandTilePolygonalSummaryMethods</span></a><span class="result"> extends <a href="../../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@SinglebandTilePolygonalSummaryMethodsextendsMethodExtensions[geotrellis.raster.Tile]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Trait containing extension methods for doing polygonal summaries
-on tiles.</p>
-    </li><li name="geotrellis.raster.summary.polygonal.TilePolygonalSummaryHandler" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="TilePolygonalSummaryHandler[T]extendsPolygonalSummaryHandler[geotrellis.vector.Polygon,geotrellis.raster.Tile,T]"></a>
-      <a id="TilePolygonalSummaryHandler[T]:TilePolygonalSummaryHandler[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="TilePolygonalSummaryHandler.html"><span class="name">TilePolygonalSummaryHandler</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../../../vector/summary/polygonal/PolygonalSummaryHandler.html" class="extype" name="geotrellis.vector.summary.polygonal.PolygonalSummaryHandler">PolygonalSummaryHandler</a>[<a href="../../../vector/Polygon.html" class="extype" name="geotrellis.vector.Polygon">Polygon</a>, <a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>, <span class="extype" name="geotrellis.raster.summary.polygonal.TilePolygonalSummaryHandler.T">T</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@TilePolygonalSummaryHandler[T]extendsPolygonalSummaryHandler[geotrellis.vector.Polygon,geotrellis.raster.Tile,T]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Base trait for tile polygonal summary handlers.</p>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PolygonalSummary$$ToPolygonalSummaryMethods.html" class="extype" name="geotrellis.raster.summary.polygonal.PolygonalSummary.ToPolygonalSummaryMethods">ToPolygonalSummaryMethods</a></dd></dl></div>
     </li></ol>
             </div>
 
@@ -177,24 +167,7 @@ on tiles.</p>
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="geotrellis.raster.summary.polygonal.DoubleHistogramSummary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="DoubleHistogramSummary"></a>
-      <a id="DoubleHistogramSummary:DoubleHistogramSummary"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="DoubleHistogramSummary$.html"><span class="name">DoubleHistogramSummary</span></a><span class="result"> extends <a href="TilePolygonalSummaryHandler.html" class="extype" name="geotrellis.raster.summary.polygonal.TilePolygonalSummaryHandler">TilePolygonalSummaryHandler</a>[<a href="../../histogram/Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@DoubleHistogramSummary" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.summary.polygonal.Implicits" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="geotrellis.raster.summary.polygonal.Implicits" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Implicits"></a>
       <a id="Implicits:Implicits"></a>
       <h4 class="signature">
@@ -211,314 +184,91 @@ on tiles.</p>
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.summary.polygonal.IntHistogramSummary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="IntHistogramSummary"></a>
-      <a id="IntHistogramSummary:IntHistogramSummary"></a>
+    </li><li name="geotrellis.raster.summary.polygonal.NoIntersection" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NoIntersection"></a>
+      <a id="NoIntersection:NoIntersection"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="IntHistogramSummary$.html"><span class="name">IntHistogramSummary</span></a><span class="result"> extends <a href="TilePolygonalSummaryHandler.html" class="extype" name="geotrellis.raster.summary.polygonal.TilePolygonalSummaryHandler">TilePolygonalSummaryHandler</a>[<a href="../../histogram/Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="scala.Int">Int</span>]]</span>
+        <a href="NoIntersection$.html"><span class="name">NoIntersection</span></a><span class="result"> extends <a href="PolygonalSummaryResult.html" class="extype" name="geotrellis.raster.summary.polygonal.PolygonalSummaryResult">PolygonalSummaryResult</a>[<a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Nothing" class="extype" target="_top">Nothing</a>] with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@IntHistogramSummary" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@NoIntersection" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.summary.polygonal.MaxDoubleSummary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MaxDoubleSummary"></a>
-      <a id="MaxDoubleSummary:MaxDoubleSummary"></a>
+    </li><li name="geotrellis.raster.summary.polygonal.PolygonalSummary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PolygonalSummary"></a>
+      <a id="PolygonalSummary:PolygonalSummary"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="MaxDoubleSummary$.html"><span class="name">MaxDoubleSummary</span></a><span class="result"> extends <a href="TilePolygonalSummaryHandler.html" class="extype" name="geotrellis.raster.summary.polygonal.TilePolygonalSummaryHandler">TilePolygonalSummaryHandler</a>[<span class="extype" name="scala.Double">Double</span>]</span>
+        <a href="PolygonalSummary$.html"><span class="name">PolygonalSummary</span></a>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@MaxDoubleSummary" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@PolygonalSummary" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.summary.polygonal.MaxSummary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MaxSummary"></a>
-      <a id="MaxSummary:MaxSummary"></a>
+    </li><li name="geotrellis.raster.summary.polygonal.PolygonalSummaryResult" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PolygonalSummaryResult"></a>
+      <a id="PolygonalSummaryResult:PolygonalSummaryResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="MaxSummary$.html"><span class="name">MaxSummary</span></a><span class="result"> extends <a href="TilePolygonalSummaryHandler.html" class="extype" name="geotrellis.raster.summary.polygonal.TilePolygonalSummaryHandler">TilePolygonalSummaryHandler</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+        <a href="PolygonalSummaryResult$.html"><span class="name">PolygonalSummaryResult</span></a>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@MaxSummary" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@PolygonalSummaryResult" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.summary.polygonal.MeanResult" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MeanResult"></a>
-      <a id="MeanResult:MeanResult"></a>
+    </li><li name="geotrellis.raster.summary.polygonal.Implicits#rasterHasRasterExtent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="rasterHasRasterExtent[T&lt;:geotrellis.raster.CellGrid[Int]]:geotrellis.util.GetComponent[geotrellis.raster.Raster[T],geotrellis.raster.RasterExtent]"></a>
+      <a id="rasterHasRasterExtent[T&lt;:CellGrid[Int]]:GetComponent[Raster[T],RasterExtent]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rasterHasRasterExtent</span><span class="tparams">[<span name="T">T &lt;: <a href="../../CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a>[<a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>]</span><span class="result">: <a href="../../../util/GetComponent.html" class="extype" name="geotrellis.util.GetComponent">GetComponent</a>[<a href="../../Raster.html" class="extype" name="geotrellis.raster.Raster">Raster</a>[<span class="extype" name="geotrellis.raster.summary.polygonal.Implicits.rasterHasRasterExtent.T">T</span>], <a href="../../RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@rasterHasRasterExtent[T&lt;:geotrellis.raster.CellGrid[Int]]:geotrellis.util.GetComponent[geotrellis.raster.Raster[T],geotrellis.raster.RasterExtent]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Implicits.html" class="extype" name="geotrellis.raster.summary.polygonal.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.raster.summary.polygonal.visitors" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="visitors"></a>
+      <a id="visitors:visitors"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">object</span>
+        <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a href="MeanResult$.html"><span class="name">MeanResult</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="visitors/package.html"><span class="name">visitors</span></a>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@MeanResult" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@visitors" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.summary.polygonal.MeanSummary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MeanSummary"></a>
-      <a id="MeanSummary:MeanSummary"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="MeanSummary$.html"><span class="name">MeanSummary</span></a><span class="result"> extends <a href="TilePolygonalSummaryHandler.html" class="extype" name="geotrellis.raster.summary.polygonal.TilePolygonalSummaryHandler">TilePolygonalSummaryHandler</a>[<a href="MeanResult.html" class="extype" name="geotrellis.raster.summary.polygonal.MeanResult">MeanResult</a>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@MeanSummary" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.summary.polygonal.MinDoubleSummary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MinDoubleSummary"></a>
-      <a id="MinDoubleSummary:MinDoubleSummary"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="MinDoubleSummary$.html"><span class="name">MinDoubleSummary</span></a><span class="result"> extends <a href="TilePolygonalSummaryHandler.html" class="extype" name="geotrellis.raster.summary.polygonal.TilePolygonalSummaryHandler">TilePolygonalSummaryHandler</a>[<span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@MinDoubleSummary" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.summary.polygonal.MinSummary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MinSummary"></a>
-      <a id="MinSummary:MinSummary"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="MinSummary$.html"><span class="name">MinSummary</span></a><span class="result"> extends <a href="TilePolygonalSummaryHandler.html" class="extype" name="geotrellis.raster.summary.polygonal.TilePolygonalSummaryHandler">TilePolygonalSummaryHandler</a>[<span class="extype" name="scala.Int">Int</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@MinSummary" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.summary.polygonal.MultibandTileDoubleHistogramSummary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MultibandTileDoubleHistogramSummary"></a>
-      <a id="MultibandTileDoubleHistogramSummary:MultibandTileDoubleHistogramSummary"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="MultibandTileDoubleHistogramSummary$.html"><span class="name">MultibandTileDoubleHistogramSummary</span></a><span class="result"> extends <a href="MultibandTilePolygonalSummaryHandler.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler">MultibandTilePolygonalSummaryHandler</a>[<span class="extype" name="scala.Array">Array</span>[<a href="../../histogram/Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="scala.Double">Double</span>]]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@MultibandTileDoubleHistogramSummary" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.summary.polygonal.MultibandTileIntHistogramSummary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MultibandTileIntHistogramSummary"></a>
-      <a id="MultibandTileIntHistogramSummary:MultibandTileIntHistogramSummary"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="MultibandTileIntHistogramSummary$.html"><span class="name">MultibandTileIntHistogramSummary</span></a><span class="result"> extends <a href="MultibandTilePolygonalSummaryHandler.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler">MultibandTilePolygonalSummaryHandler</a>[<span class="extype" name="scala.Array">Array</span>[<a href="../../histogram/Histogram.html" class="extype" name="geotrellis.raster.histogram.Histogram">Histogram</a>[<span class="extype" name="scala.Int">Int</span>]]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@MultibandTileIntHistogramSummary" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.summary.polygonal.MultibandTileMaxDoubleSummary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MultibandTileMaxDoubleSummary"></a>
-      <a id="MultibandTileMaxDoubleSummary:MultibandTileMaxDoubleSummary"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="MultibandTileMaxDoubleSummary$.html"><span class="name">MultibandTileMaxDoubleSummary</span></a><span class="result"> extends <a href="MultibandTilePolygonalSummaryHandler.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler">MultibandTilePolygonalSummaryHandler</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@MultibandTileMaxDoubleSummary" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.summary.polygonal.MultibandTileMaxSummary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MultibandTileMaxSummary"></a>
-      <a id="MultibandTileMaxSummary:MultibandTileMaxSummary"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="MultibandTileMaxSummary$.html"><span class="name">MultibandTileMaxSummary</span></a><span class="result"> extends <a href="MultibandTilePolygonalSummaryHandler.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler">MultibandTilePolygonalSummaryHandler</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@MultibandTileMaxSummary" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.summary.polygonal.MultibandTileMeanSummary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MultibandTileMeanSummary"></a>
-      <a id="MultibandTileMeanSummary:MultibandTileMeanSummary"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="MultibandTileMeanSummary$.html"><span class="name">MultibandTileMeanSummary</span></a><span class="result"> extends <a href="MultibandTilePolygonalSummaryHandler.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler">MultibandTilePolygonalSummaryHandler</a>[<span class="extype" name="scala.Array">Array</span>[<a href="MeanResult.html" class="extype" name="geotrellis.raster.summary.polygonal.MeanResult">MeanResult</a>]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@MultibandTileMeanSummary" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.summary.polygonal.MultibandTileMinDoubleSummary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MultibandTileMinDoubleSummary"></a>
-      <a id="MultibandTileMinDoubleSummary:MultibandTileMinDoubleSummary"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="MultibandTileMinDoubleSummary$.html"><span class="name">MultibandTileMinDoubleSummary</span></a><span class="result"> extends <a href="MultibandTilePolygonalSummaryHandler.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler">MultibandTilePolygonalSummaryHandler</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@MultibandTileMinDoubleSummary" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.summary.polygonal.MultibandTileMinSummary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MultibandTileMinSummary"></a>
-      <a id="MultibandTileMinSummary:MultibandTileMinSummary"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="MultibandTileMinSummary$.html"><span class="name">MultibandTileMinSummary</span></a><span class="result"> extends <a href="MultibandTilePolygonalSummaryHandler.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler">MultibandTilePolygonalSummaryHandler</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@MultibandTileMinSummary" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.summary.polygonal.MultibandTileSumDoubleSummary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MultibandTileSumDoubleSummary"></a>
-      <a id="MultibandTileSumDoubleSummary:MultibandTileSumDoubleSummary"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="MultibandTileSumDoubleSummary$.html"><span class="name">MultibandTileSumDoubleSummary</span></a><span class="result"> extends <a href="MultibandTilePolygonalSummaryHandler.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler">MultibandTilePolygonalSummaryHandler</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@MultibandTileSumDoubleSummary" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.summary.polygonal.MultibandTileSumSummary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MultibandTileSumSummary"></a>
-      <a id="MultibandTileSumSummary:MultibandTileSumSummary"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="MultibandTileSumSummary$.html"><span class="name">MultibandTileSumSummary</span></a><span class="result"> extends <a href="MultibandTilePolygonalSummaryHandler.html" class="extype" name="geotrellis.raster.summary.polygonal.MultibandTilePolygonalSummaryHandler">MultibandTilePolygonalSummaryHandler</a>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Long">Long</span>]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@MultibandTileSumSummary" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.summary.polygonal.SumDoubleSummary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="SumDoubleSummary"></a>
-      <a id="SumDoubleSummary:SumDoubleSummary"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="SumDoubleSummary$.html"><span class="name">SumDoubleSummary</span></a><span class="result"> extends <a href="TilePolygonalSummaryHandler.html" class="extype" name="geotrellis.raster.summary.polygonal.TilePolygonalSummaryHandler">TilePolygonalSummaryHandler</a>[<span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@SumDoubleSummary" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Object containing functions for doing sum operations on
-<a href="../../Raster.html" class="extype" name="geotrellis.raster.Raster">Raster</a>s.</p>
-    </li><li name="geotrellis.raster.summary.polygonal.SumSummary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="SumSummary"></a>
-      <a id="SumSummary:SumSummary"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="SumSummary$.html"><span class="name">SumSummary</span></a><span class="result"> extends <a href="TilePolygonalSummaryHandler.html" class="extype" name="geotrellis.raster.summary.polygonal.TilePolygonalSummaryHandler">TilePolygonalSummaryHandler</a>[<span class="extype" name="scala.Long">Long</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.summary.polygonal.package@SumSummary" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">Object containing functions for doing sum operations on
-<a href="../../Raster.html" class="extype" name="geotrellis.raster.Raster">Raster</a>s.</p>
     </li></ol>
             </div>
 
@@ -528,7 +278,15 @@ on tiles.</p>
         </div>
 
         <div id="inheritedMembers">
-        
+        <div class="parent" name="geotrellis.raster.summary.polygonal.Implicits">
+              <h3>Inherited from <a href="Implicits.html" class="extype" name="geotrellis.raster.summary.polygonal.Implicits">Implicits</a></h3>
+            </div><div class="parent" name="geotrellis.raster.summary.polygonal.PolygonalSummary.ToPolygonalSummaryMethods">
+              <h3>Inherited from <a href="PolygonalSummary$$ToPolygonalSummaryMethods.html" class="extype" name="geotrellis.raster.summary.polygonal.PolygonalSummary.ToPolygonalSummaryMethods">ToPolygonalSummaryMethods</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
+            </div>
         
         </div>
 

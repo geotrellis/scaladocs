@@ -75,7 +75,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="FeatureClipToGridMethods.html"><span class="name">FeatureClipToGridMethods</span></a><span class="tparams">[<span name="G">G &lt;: <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>, <span name="D">D</span>]</span><span class="result"> extends <a href="../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<span class="extype" name="geotrellis.spark.clip.FeatureClipToGridMethods.G">G</span>, <span class="extype" name="geotrellis.spark.clip.FeatureClipToGridMethods.D">D</span>]]]</span>
+        <a href="FeatureClipToGridMethods.html"><span class="name">FeatureClipToGridMethods</span></a><span class="tparams">[<span name="G">G &lt;: <a href="../../vector/package.html#Geometry=org.locationtech.jts.geom.Geometry" class="extmbr" name="geotrellis.vector.Geometry">Geometry</a></span>, <span name="D">D</span>]</span><span class="result"> extends <a href="../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<span class="extype" name="geotrellis.spark.clip.FeatureClipToGridMethods.G">G</span>, <span class="extype" name="geotrellis.spark.clip.FeatureClipToGridMethods.D">D</span>]]]</span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.clip.package@FeatureClipToGridMethods[G&lt;:geotrellis.vector.Geometry,D]extendsMethodExtensions[org.apache.spark.rdd.RDD[geotrellis.vector.Feature[G,D]]]" title="Permalink" target="_top">
@@ -92,7 +92,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="GeometryClipToGridMethods.html"><span class="name">GeometryClipToGridMethods</span></a><span class="tparams">[<span name="G">G &lt;: <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>]</span><span class="result"> extends <a href="../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="geotrellis.spark.clip.GeometryClipToGridMethods.G">G</span>]]</span>
+        <a href="GeometryClipToGridMethods.html"><span class="name">GeometryClipToGridMethods</span></a><span class="tparams">[<span name="G">G &lt;: <a href="../../vector/package.html#Geometry=org.locationtech.jts.geom.Geometry" class="extmbr" name="geotrellis.vector.Geometry">Geometry</a></span>]</span><span class="result"> extends <a href="../../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="geotrellis.spark.clip.GeometryClipToGridMethods.G">G</span>]]</span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.clip.package@GeometryClipToGridMethods[G&lt;:geotrellis.vector.Geometry]extendsMethodExtensions[org.apache.spark.rdd.RDD[G]]" title="Permalink" target="_top">
@@ -109,7 +109,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="Implicits.html"><span class="name">Implicits</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a href="Implicits.html"><span class="name">Implicits</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.clip.package@ImplicitsextendsAnyRef" title="Permalink" target="_top">
@@ -141,7 +141,7 @@
       </a>
     </span>
       <p class="shortcomment cmt">These functions perform the following transformation:</p><div class="fullcomment"><div class="comment cmt"><p>These functions perform the following transformation:</p><pre>RDD[Geometry] <span class="kw">=&gt;</span> RDD[(SpatialKey, Geometry)]</pre><p>such that each original <span class="extype" name="Geometry">Geometry</span> is clipped in some way. By default,
-this clips them to fit inside the <span class="extype" name="Extent">Extent</span> of each <a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a>
+this clips them to fit inside the <span class="extype" name="Extent">Extent</span> of each <span class="extype" name="SpatialKey">SpatialKey</span>
 they touch.</p><p>If you'd like more customized clipping behaviour, you can compose
 over the <a href="ClipToGrid$.html#clipFeatureToExtent[G&lt;:geotrellis.vector.Geometry,D](e:geotrellis.vector.Extent,feature:geotrellis.vector.Feature[G,D],preds:geotrellis.spark.clip.ClipToGrid.Predicates):Option[geotrellis.vector.Feature[geotrellis.vector.Geometry,D]]" class="extmbr" name="geotrellis.spark.clip.ClipToGrid#clipFeatureToExtent">clipFeatureToExtent</a> function below, or write your own
 entirely, while following its type signature. That can then be passed

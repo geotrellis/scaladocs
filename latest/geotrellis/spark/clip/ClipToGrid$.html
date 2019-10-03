@@ -50,7 +50,7 @@
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>These functions perform the following transformation:</p><pre>RDD[Geometry] <span class="kw">=&gt;</span> RDD[(SpatialKey, Geometry)]</pre><p>such that each original <span class="extype" name="Geometry">Geometry</span> is clipped in some way. By default,
-this clips them to fit inside the <span class="extype" name="Extent">Extent</span> of each <a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a>
+this clips them to fit inside the <span class="extype" name="Extent">Extent</span> of each <span class="extype" name="SpatialKey">SpatialKey</span>
 they touch.</p><p>If you'd like more customized clipping behaviour, you can compose
 over the <a href="#clipFeatureToExtent[G&lt;:geotrellis.vector.Geometry,D](e:geotrellis.vector.Extent,feature:geotrellis.vector.Feature[G,D],preds:geotrellis.spark.clip.ClipToGrid.Predicates):Option[geotrellis.vector.Feature[geotrellis.vector.Geometry,D]]" class="extmbr" name="geotrellis.spark.clip.ClipToGrid#clipFeatureToExtent">clipFeatureToExtent</a> function below, or write your own
 entirely, while following its type signature. That can then be passed
@@ -61,7 +61,7 @@ fits inside the passed-in <span class="extype" name="Extent">Extent</span>. Plea
 functions that do non-sensical things.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
         
 
@@ -109,7 +109,7 @@ functions that do non-sensical things.
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="ClipToGrid$$Predicates.html"><span class="name">Predicates</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="ClipToGrid$$Predicates.html"><span class="name">Predicates</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@PredicatesextendsSerializable" title="Permalink" target="_top">
@@ -135,7 +135,7 @@ for ClipToGrid methods.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@!=(x$1:Any):Boolean" title="Permalink" target="_top">
@@ -152,7 +152,7 @@ for ClipToGrid methods.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@##():Int" title="Permalink" target="_top">
@@ -169,7 +169,7 @@ for ClipToGrid methods.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@==(x$1:Any):Boolean" title="Permalink" target="_top">
@@ -178,7 +178,7 @@ for ClipToGrid methods.</p>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="geotrellis.spark.clip.ClipToGrid#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[G&lt;:geotrellis.vector.Geometry,D](rdd:org.apache.spark.rdd.RDD[geotrellis.vector.Feature[G,D]],layout:geotrellis.spark.tiling.LayoutDefinition,clipFeature:(geotrellis.vector.Extent,geotrellis.vector.Feature[G,D],geotrellis.spark.clip.ClipToGrid.Predicates)=&gt;Option[geotrellis.vector.Feature[geotrellis.vector.Geometry,D]]):org.apache.spark.rdd.RDD[(geotrellis.spark.SpatialKey,geotrellis.vector.Feature[geotrellis.vector.Geometry,D])]"></a>
+      <a id="apply[G&lt;:geotrellis.vector.Geometry,D](rdd:org.apache.spark.rdd.RDD[geotrellis.vector.Feature[G,D]],layout:geotrellis.layer.LayoutDefinition,clipFeature:(geotrellis.vector.Extent,geotrellis.vector.Feature[G,D],geotrellis.spark.clip.ClipToGrid.Predicates)=&gt;Option[geotrellis.vector.Feature[geotrellis.vector.Geometry,D]]):org.apache.spark.rdd.RDD[(geotrellis.layer.SpatialKey,geotrellis.vector.Feature[geotrellis.vector.Geometry,D])]"></a>
       <a id="apply[G&lt;:Geometry,D](RDD[Feature[G,D]],LayoutDefinition,(Extent,Feature[G,D],Predicates)⇒Option[Feature[Geometry,D]]):RDD[(SpatialKey,Feature[Geometry,D])]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -186,10 +186,10 @@ for ClipToGrid methods.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="G">G &lt;: <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>, <span name="D">D</span>]</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.G">G</span>, <span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.D">D</span>]]</span>, <span name="layout">layout: <a href="../tiling/LayoutDefinition.html" class="extype" name="geotrellis.spark.tiling.LayoutDefinition">LayoutDefinition</a></span>, <span name="clipFeature">clipFeature: (<a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>, <a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.G">G</span>, <span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.D">D</span>], <a href="ClipToGrid$$Predicates.html" class="extype" name="geotrellis.spark.clip.ClipToGrid.Predicates">Predicates</a>) ⇒ <span class="extype" name="scala.Option">Option</span>[<a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a>, <span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.D">D</span>]]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a>, <a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a>, <span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.D">D</span>])]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="G">G &lt;: <a href="../../vector/package.html#Geometry=org.locationtech.jts.geom.Geometry" class="extmbr" name="geotrellis.vector.Geometry">Geometry</a></span>, <span name="D">D</span>]</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.G">G</span>, <span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.D">D</span>]]</span>, <span name="layout">layout: <a href="../../layer/LayoutDefinition.html" class="extype" name="geotrellis.layer.LayoutDefinition">LayoutDefinition</a></span>, <span name="clipFeature">clipFeature: (<a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>, <a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.G">G</span>, <span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.D">D</span>], <a href="ClipToGrid$$Predicates.html" class="extype" name="geotrellis.spark.clip.ClipToGrid.Predicates">Predicates</a>) ⇒ <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../../vector/package.html#Geometry=org.locationtech.jts.geom.Geometry" class="extmbr" name="geotrellis.vector.Geometry">Geometry</a>, <span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.D">D</span>]]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<a href="../../layer/SpatialKey.html" class="extype" name="geotrellis.layer.SpatialKey">SpatialKey</a>, <a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../../vector/package.html#Geometry=org.locationtech.jts.geom.Geometry" class="extmbr" name="geotrellis.vector.Geometry">Geometry</a>, <span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.D">D</span>])]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@apply[G&lt;:geotrellis.vector.Geometry,D](rdd:org.apache.spark.rdd.RDD[geotrellis.vector.Feature[G,D]],layout:geotrellis.spark.tiling.LayoutDefinition,clipFeature:(geotrellis.vector.Extent,geotrellis.vector.Feature[G,D],geotrellis.spark.clip.ClipToGrid.Predicates)=&gt;Option[geotrellis.vector.Feature[geotrellis.vector.Geometry,D]]):org.apache.spark.rdd.RDD[(geotrellis.spark.SpatialKey,geotrellis.vector.Feature[geotrellis.vector.Geometry,D])]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@apply[G&lt;:geotrellis.vector.Geometry,D](rdd:org.apache.spark.rdd.RDD[geotrellis.vector.Feature[G,D]],layout:geotrellis.layer.LayoutDefinition,clipFeature:(geotrellis.vector.Extent,geotrellis.vector.Feature[G,D],geotrellis.spark.clip.ClipToGrid.Predicates)=&gt;Option[geotrellis.vector.Feature[geotrellis.vector.Geometry,D]]):org.apache.spark.rdd.RDD[(geotrellis.layer.SpatialKey,geotrellis.vector.Feature[geotrellis.vector.Geometry,D])]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -198,7 +198,7 @@ which intersect it, where the SpatialKeys map to the
 given <span class="extype" name="LayoutDefinition">LayoutDefinition</span>, using the given method
 to clip each geometry to the extent.</p>
     </li><li name="geotrellis.spark.clip.ClipToGrid#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[G&lt;:geotrellis.vector.Geometry,D](rdd:org.apache.spark.rdd.RDD[geotrellis.vector.Feature[G,D]],layout:geotrellis.spark.tiling.LayoutDefinition):org.apache.spark.rdd.RDD[(geotrellis.spark.SpatialKey,geotrellis.vector.Feature[geotrellis.vector.Geometry,D])]"></a>
+      <a id="apply[G&lt;:geotrellis.vector.Geometry,D](rdd:org.apache.spark.rdd.RDD[geotrellis.vector.Feature[G,D]],layout:geotrellis.layer.LayoutDefinition):org.apache.spark.rdd.RDD[(geotrellis.layer.SpatialKey,geotrellis.vector.Feature[geotrellis.vector.Geometry,D])]"></a>
       <a id="apply[G&lt;:Geometry,D](RDD[Feature[G,D]],LayoutDefinition):RDD[(SpatialKey,Feature[Geometry,D])]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -206,10 +206,10 @@ to clip each geometry to the extent.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="G">G &lt;: <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>, <span name="D">D</span>]</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.G">G</span>, <span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.D">D</span>]]</span>, <span name="layout">layout: <a href="../tiling/LayoutDefinition.html" class="extype" name="geotrellis.spark.tiling.LayoutDefinition">LayoutDefinition</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a>, <a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a>, <span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.D">D</span>])]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="G">G &lt;: <a href="../../vector/package.html#Geometry=org.locationtech.jts.geom.Geometry" class="extmbr" name="geotrellis.vector.Geometry">Geometry</a></span>, <span name="D">D</span>]</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.G">G</span>, <span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.D">D</span>]]</span>, <span name="layout">layout: <a href="../../layer/LayoutDefinition.html" class="extype" name="geotrellis.layer.LayoutDefinition">LayoutDefinition</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<a href="../../layer/SpatialKey.html" class="extype" name="geotrellis.layer.SpatialKey">SpatialKey</a>, <a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../../vector/package.html#Geometry=org.locationtech.jts.geom.Geometry" class="extmbr" name="geotrellis.vector.Geometry">Geometry</a>, <span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.D">D</span>])]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@apply[G&lt;:geotrellis.vector.Geometry,D](rdd:org.apache.spark.rdd.RDD[geotrellis.vector.Feature[G,D]],layout:geotrellis.spark.tiling.LayoutDefinition):org.apache.spark.rdd.RDD[(geotrellis.spark.SpatialKey,geotrellis.vector.Feature[geotrellis.vector.Geometry,D])]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@apply[G&lt;:geotrellis.vector.Geometry,D](rdd:org.apache.spark.rdd.RDD[geotrellis.vector.Feature[G,D]],layout:geotrellis.layer.LayoutDefinition):org.apache.spark.rdd.RDD[(geotrellis.layer.SpatialKey,geotrellis.vector.Feature[geotrellis.vector.Geometry,D])]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -218,7 +218,7 @@ which intersect it, where the SpatialKeys map to the
 given <span class="extype" name="LayoutDefinition">LayoutDefinition</span>, using the given method
 to clip each geometry to the extent.</p>
     </li><li name="geotrellis.spark.clip.ClipToGrid#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[G&lt;:geotrellis.vector.Geometry](rdd:org.apache.spark.rdd.RDD[G],layout:geotrellis.spark.tiling.LayoutDefinition,clipGeom:(geotrellis.vector.Extent,G,geotrellis.spark.clip.ClipToGrid.Predicates)=&gt;Option[geotrellis.vector.Geometry])(implicitd:DummyImplicit):org.apache.spark.rdd.RDD[(geotrellis.spark.SpatialKey,geotrellis.vector.Geometry)]"></a>
+      <a id="apply[G&lt;:geotrellis.vector.Geometry](rdd:org.apache.spark.rdd.RDD[G],layout:geotrellis.layer.LayoutDefinition,clipGeom:(geotrellis.vector.Extent,G,geotrellis.spark.clip.ClipToGrid.Predicates)=&gt;Option[geotrellis.vector.Geometry])(implicitd:DummyImplicit):org.apache.spark.rdd.RDD[(geotrellis.layer.SpatialKey,geotrellis.vector.Geometry)]"></a>
       <a id="apply[G&lt;:Geometry](RDD[G],LayoutDefinition,(Extent,G,Predicates)⇒Option[Geometry])(DummyImplicit):RDD[(SpatialKey,Geometry)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -226,10 +226,10 @@ to clip each geometry to the extent.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="G">G &lt;: <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>]</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.G">G</span>]</span>, <span name="layout">layout: <a href="../tiling/LayoutDefinition.html" class="extype" name="geotrellis.spark.tiling.LayoutDefinition">LayoutDefinition</a></span>, <span name="clipGeom">clipGeom: (<a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>, <span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.G">G</span>, <a href="ClipToGrid$$Predicates.html" class="extype" name="geotrellis.spark.clip.ClipToGrid.Predicates">Predicates</a>) ⇒ <span class="extype" name="scala.Option">Option</span>[<a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a>, <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a>)]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="G">G &lt;: <a href="../../vector/package.html#Geometry=org.locationtech.jts.geom.Geometry" class="extmbr" name="geotrellis.vector.Geometry">Geometry</a></span>]</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.G">G</span>]</span>, <span name="layout">layout: <a href="../../layer/LayoutDefinition.html" class="extype" name="geotrellis.layer.LayoutDefinition">LayoutDefinition</a></span>, <span name="clipGeom">clipGeom: (<a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a>, <span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.G">G</span>, <a href="ClipToGrid$$Predicates.html" class="extype" name="geotrellis.spark.clip.ClipToGrid.Predicates">Predicates</a>) ⇒ <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="../../vector/package.html#Geometry=org.locationtech.jts.geom.Geometry" class="extmbr" name="geotrellis.vector.Geometry">Geometry</a>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<a href="../../layer/SpatialKey.html" class="extype" name="geotrellis.layer.SpatialKey">SpatialKey</a>, <a href="../../vector/package.html#Geometry=org.locationtech.jts.geom.Geometry" class="extmbr" name="geotrellis.vector.Geometry">Geometry</a>)]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@apply[G&lt;:geotrellis.vector.Geometry](rdd:org.apache.spark.rdd.RDD[G],layout:geotrellis.spark.tiling.LayoutDefinition,clipGeom:(geotrellis.vector.Extent,G,geotrellis.spark.clip.ClipToGrid.Predicates)=&gt;Option[geotrellis.vector.Geometry])(implicitd:DummyImplicit):org.apache.spark.rdd.RDD[(geotrellis.spark.SpatialKey,geotrellis.vector.Geometry)]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@apply[G&lt;:geotrellis.vector.Geometry](rdd:org.apache.spark.rdd.RDD[G],layout:geotrellis.layer.LayoutDefinition,clipGeom:(geotrellis.vector.Extent,G,geotrellis.spark.clip.ClipToGrid.Predicates)=&gt;Option[geotrellis.vector.Geometry])(implicitd:DummyImplicit):org.apache.spark.rdd.RDD[(geotrellis.layer.SpatialKey,geotrellis.vector.Geometry)]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -238,7 +238,7 @@ which intersect it, where the SpatialKeys map to the
 given <span class="extype" name="LayoutDefinition">LayoutDefinition</span>, using the given method
 to clip each geometry to the extent.</p>
     </li><li name="geotrellis.spark.clip.ClipToGrid#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[G&lt;:geotrellis.vector.Geometry](rdd:org.apache.spark.rdd.RDD[G],layout:geotrellis.spark.tiling.LayoutDefinition)(implicitd:DummyImplicit):org.apache.spark.rdd.RDD[(geotrellis.spark.SpatialKey,geotrellis.vector.Geometry)]"></a>
+      <a id="apply[G&lt;:geotrellis.vector.Geometry](rdd:org.apache.spark.rdd.RDD[G],layout:geotrellis.layer.LayoutDefinition)(implicitd:DummyImplicit):org.apache.spark.rdd.RDD[(geotrellis.layer.SpatialKey,geotrellis.vector.Geometry)]"></a>
       <a id="apply[G&lt;:Geometry](RDD[G],LayoutDefinition)(DummyImplicit):RDD[(SpatialKey,Geometry)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -246,10 +246,10 @@ to clip each geometry to the extent.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="G">G &lt;: <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>]</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.G">G</span>]</span>, <span name="layout">layout: <a href="../tiling/LayoutDefinition.html" class="extype" name="geotrellis.spark.tiling.LayoutDefinition">LayoutDefinition</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<a href="../SpatialKey.html" class="extype" name="geotrellis.spark.SpatialKey">SpatialKey</a>, <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a>)]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="G">G &lt;: <a href="../../vector/package.html#Geometry=org.locationtech.jts.geom.Geometry" class="extmbr" name="geotrellis.vector.Geometry">Geometry</a></span>]</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="geotrellis.spark.clip.ClipToGrid.apply.G">G</span>]</span>, <span name="layout">layout: <a href="../../layer/LayoutDefinition.html" class="extype" name="geotrellis.layer.LayoutDefinition">LayoutDefinition</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="d">d: <span class="extype" name="scala.Predef.DummyImplicit">DummyImplicit</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<a href="../../layer/SpatialKey.html" class="extype" name="geotrellis.layer.SpatialKey">SpatialKey</a>, <a href="../../vector/package.html#Geometry=org.locationtech.jts.geom.Geometry" class="extmbr" name="geotrellis.vector.Geometry">Geometry</a>)]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@apply[G&lt;:geotrellis.vector.Geometry](rdd:org.apache.spark.rdd.RDD[G],layout:geotrellis.spark.tiling.LayoutDefinition)(implicitd:DummyImplicit):org.apache.spark.rdd.RDD[(geotrellis.spark.SpatialKey,geotrellis.vector.Geometry)]" title="Permalink" target="_top">
+      <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@apply[G&lt;:geotrellis.vector.Geometry](rdd:org.apache.spark.rdd.RDD[G],layout:geotrellis.layer.LayoutDefinition)(implicitd:DummyImplicit):org.apache.spark.rdd.RDD[(geotrellis.layer.SpatialKey,geotrellis.vector.Geometry)]" title="Permalink" target="_top">
         <img src="../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -282,7 +282,7 @@ given <span class="extype" name="LayoutDefinition">LayoutDefinition</span>.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clipFeatureToExtent</span><span class="tparams">[<span name="G">G &lt;: <a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a></span>, <span name="D">D</span>]</span><span class="params">(<span name="e">e: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="feature">feature: <a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<span class="extype" name="geotrellis.spark.clip.ClipToGrid.clipFeatureToExtent.G">G</span>, <span class="extype" name="geotrellis.spark.clip.ClipToGrid.clipFeatureToExtent.D">D</span>]</span>, <span name="preds">preds: <a href="ClipToGrid$$Predicates.html" class="extype" name="geotrellis.spark.clip.ClipToGrid.Predicates">Predicates</a></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../../vector/Geometry.html" class="extype" name="geotrellis.vector.Geometry">Geometry</a>, <span class="extype" name="geotrellis.spark.clip.ClipToGrid.clipFeatureToExtent.D">D</span>]]</span>
+        <span class="name">clipFeatureToExtent</span><span class="tparams">[<span name="G">G &lt;: <a href="../../vector/package.html#Geometry=org.locationtech.jts.geom.Geometry" class="extmbr" name="geotrellis.vector.Geometry">Geometry</a></span>, <span name="D">D</span>]</span><span class="params">(<span name="e">e: <a href="../../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="feature">feature: <a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<span class="extype" name="geotrellis.spark.clip.ClipToGrid.clipFeatureToExtent.G">G</span>, <span class="extype" name="geotrellis.spark.clip.ClipToGrid.clipFeatureToExtent.D">D</span>]</span>, <span name="preds">preds: <a href="ClipToGrid$$Predicates.html" class="extype" name="geotrellis.spark.clip.ClipToGrid.Predicates">Predicates</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="../../vector/Feature.html" class="extype" name="geotrellis.vector.Feature">Feature</a>[<a href="../../vector/package.html#Geometry=org.locationtech.jts.geom.Geometry" class="extmbr" name="geotrellis.vector.Geometry">Geometry</a>, <span class="extype" name="geotrellis.spark.clip.ClipToGrid.clipFeatureToExtent.D">D</span>]]</span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@clipFeatureToExtent[G&lt;:geotrellis.vector.Geometry,D](e:geotrellis.vector.Extent,feature:geotrellis.vector.Feature[G,D],preds:geotrellis.spark.clip.ClipToGrid.Predicates):Option[geotrellis.vector.Feature[geotrellis.vector.Geometry,D]]" title="Permalink" target="_top">
@@ -300,7 +300,7 @@ to avoid doing intersections where unnecessary.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@clone():Object" title="Permalink" target="_top">
@@ -323,7 +323,7 @@ to avoid doing intersections where unnecessary.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
@@ -340,7 +340,7 @@ to avoid doing intersections where unnecessary.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@equals(x$1:Any):Boolean" title="Permalink" target="_top">
@@ -357,7 +357,7 @@ to avoid doing intersections where unnecessary.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@finalize():Unit" title="Permalink" target="_top">
@@ -397,7 +397,7 @@ to avoid doing intersections where unnecessary.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@hashCode():Int" title="Permalink" target="_top">
@@ -414,7 +414,7 @@ to avoid doing intersections where unnecessary.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
@@ -431,7 +431,7 @@ to avoid doing intersections where unnecessary.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
@@ -448,7 +448,7 @@ to avoid doing intersections where unnecessary.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@notify():Unit" title="Permalink" target="_top">
@@ -465,7 +465,7 @@ to avoid doing intersections where unnecessary.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@notifyAll():Unit" title="Permalink" target="_top">
@@ -516,7 +516,7 @@ to avoid doing intersections where unnecessary.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@wait():Unit" title="Permalink" target="_top">
@@ -539,7 +539,7 @@ to avoid doing intersections where unnecessary.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
@@ -562,7 +562,7 @@ to avoid doing intersections where unnecessary.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../index.html#geotrellis.spark.clip.ClipToGrid$@wait(x$1:Long):Unit" title="Permalink" target="_top">
@@ -586,9 +586,9 @@ to avoid doing intersections where unnecessary.</p>
 
         <div id="inheritedMembers">
         <div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
             </div>
         
         </div>

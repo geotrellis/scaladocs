@@ -75,7 +75,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="ShardingKeyIndex.html"><span class="name">ShardingKeyIndex</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="../../../spark/io/index/KeyIndex.html" class="extype" name="geotrellis.spark.io.index.KeyIndex">KeyIndex</a>[<span class="extype" name="geotrellis.doc.examples.spark.ShardingKeyIndex.K">K</span>]</span>
+        <a href="ShardingKeyIndex.html"><span class="name">ShardingKeyIndex</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="../../../store/index/KeyIndex.html" class="extype" name="geotrellis.store.index.KeyIndex">KeyIndex</a>[<span class="extype" name="geotrellis.doc.examples.spark.ShardingKeyIndex.K">K</span>]</span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.doc.examples.spark.package@ShardingKeyIndex[K]extendsKeyIndex[K]" title="Permalink" target="_top">
@@ -91,23 +91,6 @@ and since we use a round-robin approach to generate prefixes, this distributes
 spatially close indices across different shards, and thus helps avoid hot spots.</p><h4>Assumptions</h4><ul><li>The given shard count will be between 1 and 8.</li><li>The <i>inner</i> index will produce a value less than 2^60 for any
     given key.
 </li></ul></div></div>
-    </li><li name="geotrellis.doc.examples.spark.ShardingKeyIndexFormat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ShardingKeyIndexFormat[K]extendsRootJsonFormat[geotrellis.doc.examples.spark.ShardingKeyIndex[K]]"></a>
-      <a id="ShardingKeyIndexFormat[K]:ShardingKeyIndexFormat[K]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="ShardingKeyIndexFormat.html"><span class="name">ShardingKeyIndexFormat</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <span class="extype" name="spray.json.RootJsonFormat">RootJsonFormat</span>[<a href="ShardingKeyIndex.html" class="extype" name="geotrellis.doc.examples.spark.ShardingKeyIndex">ShardingKeyIndex</a>[<span class="extype" name="geotrellis.doc.examples.spark.ShardingKeyIndexFormat.K">K</span>]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.doc.examples.spark.package@ShardingKeyIndexFormat[K]extendsRootJsonFormat[geotrellis.doc.examples.spark.ShardingKeyIndex[K]]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">A standard JsonFormat for <a href="ShardingKeyIndex.html" class="extype" name="geotrellis.doc.examples.spark.ShardingKeyIndex">ShardingKeyIndex</a>, parameterized on the key type <i>K</i>.</p>
     </li><li name="geotrellis.doc.examples.spark.ShardingKeyIndexRegistrator" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ShardingKeyIndexRegistratorextendsKeyIndexRegistrator"></a>
       <a id="ShardingKeyIndexRegistrator:ShardingKeyIndexRegistrator"></a>
@@ -117,15 +100,15 @@ spatially close indices across different shards, and thus helps avoid hot spots.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="ShardingKeyIndexRegistrator.html"><span class="name">ShardingKeyIndexRegistrator</span></a><span class="result"> extends <a href="../../../spark/io/json/KeyIndexRegistrator.html" class="extype" name="geotrellis.spark.io.json.KeyIndexRegistrator">KeyIndexRegistrator</a></span>
+        <a href="ShardingKeyIndexRegistrator.html"><span class="name">ShardingKeyIndexRegistrator</span></a><span class="result"> extends <a href="../../../store/json/KeyIndexRegistrator.html" class="extype" name="geotrellis.store.json.KeyIndexRegistrator">KeyIndexRegistrator</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.doc.examples.spark.package@ShardingKeyIndexRegistratorextendsKeyIndexRegistrator" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Register <a href="ShardingKeyIndex.html" class="extype" name="geotrellis.doc.examples.spark.ShardingKeyIndex">ShardingKeyIndex</a>'s <span class="extype" name="JsonFormat">JsonFormat</span> with the central GeoTrellis
-<span class="extype" name="KeyIndex">KeyIndex</span> JsonFormat registry.</p><div class="fullcomment"><div class="comment cmt"><p>Register <a href="ShardingKeyIndex.html" class="extype" name="geotrellis.doc.examples.spark.ShardingKeyIndex">ShardingKeyIndex</a>'s <span class="extype" name="JsonFormat">JsonFormat</span> with the central GeoTrellis
+      <p class="shortcomment cmt">Register <a href="ShardingKeyIndex.html" class="extype" name="geotrellis.doc.examples.spark.ShardingKeyIndex">ShardingKeyIndex</a>'s Codecs with the central GeoTrellis
+<span class="extype" name="KeyIndex">KeyIndex</span> JsonFormat registry.</p><div class="fullcomment"><div class="comment cmt"><p>Register <a href="ShardingKeyIndex.html" class="extype" name="geotrellis.doc.examples.spark.ShardingKeyIndex">ShardingKeyIndex</a>'s Codecs with the central GeoTrellis
 <span class="extype" name="KeyIndex">KeyIndex</span> JsonFormat registry.</p><p>Q: Why do we need to do this?</p><p>A: The <span class="extype" name="KeyIndex">KeyIndex</span> trait is critical to Tile layer IO. However,
 it is always used generically, without any class depending on KeyIndex's subtypes
 directly. This is advantageous, as the user never needs to externally keep track of
@@ -143,7 +126,7 @@ the burden of complexity to the benefit of our users.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="VoxelKey.html"><span class="name">VoxelKey</span></a><span class="params">(<span name="x">x: <span class="extype" name="scala.Int">Int</span></span>, <span name="y">y: <span class="extype" name="scala.Int">Int</span></span>, <span name="z">z: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="VoxelKey.html"><span class="name">VoxelKey</span></a><span class="params">(<span name="x">x: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="y">y: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="z">z: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.doc.examples.spark.package@VoxelKeyextendsProductwithSerializable" title="Permalink" target="_top">
@@ -160,7 +143,7 @@ the burden of complexity to the benefit of our users.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="ZVoxelKeyIndex.html"><span class="name">ZVoxelKeyIndex</span></a><span class="result"> extends <a href="../../../spark/io/index/KeyIndex.html" class="extype" name="geotrellis.spark.io.index.KeyIndex">KeyIndex</a>[<a href="VoxelKey.html" class="extype" name="geotrellis.doc.examples.spark.VoxelKey">VoxelKey</a>]</span>
+        <a href="ZVoxelKeyIndex.html"><span class="name">ZVoxelKeyIndex</span></a><span class="result"> extends <a href="../../../store/index/KeyIndex.html" class="extype" name="geotrellis.store.index.KeyIndex">KeyIndex</a>[<a href="VoxelKey.html" class="extype" name="geotrellis.doc.examples.spark.VoxelKey">VoxelKey</a>]</span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.doc.examples.spark.package@ZVoxelKeyIndexextendsKeyIndex[geotrellis.doc.examples.spark.VoxelKey]" title="Permalink" target="_top">
@@ -168,23 +151,6 @@ the burden of complexity to the benefit of our users.
       </a>
     </span>
       <p class="shortcomment cmt">A <span class="extype" name="KeyIndex">KeyIndex</span> based on <a href="VoxelKey.html" class="extype" name="geotrellis.doc.examples.spark.VoxelKey">VoxelKey</a>.</p>
-    </li><li name="geotrellis.doc.examples.spark.ZVoxelKeyIndexFormat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ZVoxelKeyIndexFormatextendsRootJsonFormat[geotrellis.doc.examples.spark.ZVoxelKeyIndex]"></a>
-      <a id="ZVoxelKeyIndexFormat:ZVoxelKeyIndexFormat"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="ZVoxelKeyIndexFormat.html"><span class="name">ZVoxelKeyIndexFormat</span></a><span class="result"> extends <span class="extype" name="spray.json.RootJsonFormat">RootJsonFormat</span>[<a href="ZVoxelKeyIndex.html" class="extype" name="geotrellis.doc.examples.spark.ZVoxelKeyIndex">ZVoxelKeyIndex</a>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.doc.examples.spark.package@ZVoxelKeyIndexFormatextendsRootJsonFormat[geotrellis.doc.examples.spark.ZVoxelKeyIndex]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      <p class="shortcomment cmt">A <span class="extype" name="JsonFormat">JsonFormat</span> for <a href="ZVoxelKeyIndex.html" class="extype" name="geotrellis.doc.examples.spark.ZVoxelKeyIndex">ZVoxelKeyIndex</a>.</p>
     </li><li name="geotrellis.doc.examples.spark.ZVoxelKeyIndexRegistrator" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ZVoxelKeyIndexRegistratorextendsKeyIndexRegistrator"></a>
       <a id="ZVoxelKeyIndexRegistrator:ZVoxelKeyIndexRegistrator"></a>
@@ -194,14 +160,14 @@ the burden of complexity to the benefit of our users.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="ZVoxelKeyIndexRegistrator.html"><span class="name">ZVoxelKeyIndexRegistrator</span></a><span class="result"> extends <a href="../../../spark/io/json/KeyIndexRegistrator.html" class="extype" name="geotrellis.spark.io.json.KeyIndexRegistrator">KeyIndexRegistrator</a></span>
+        <a href="ZVoxelKeyIndexRegistrator.html"><span class="name">ZVoxelKeyIndexRegistrator</span></a><span class="result"> extends <a href="../../../store/json/KeyIndexRegistrator.html" class="extype" name="geotrellis.store.json.KeyIndexRegistrator">KeyIndexRegistrator</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.doc.examples.spark.package@ZVoxelKeyIndexRegistratorextendsKeyIndexRegistrator" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">Register this JsonFormat with Geotrellis's central registrator.</p><div class="fullcomment"><div class="comment cmt"><p>Register this JsonFormat with Geotrellis's central registrator.
+      <p class="shortcomment cmt">Register these Json codecs with Geotrellis's central registrator.</p><div class="fullcomment"><div class="comment cmt"><p>Register these Json codecs with Geotrellis's central registrator.
 For more information on why this is necessary, see <i>ShardingKeyIndex.scala</i>.
 </p></div></div>
     </li></ol>
@@ -245,6 +211,40 @@ For more information on why this is necessary, see <i>ShardingKeyIndex.scala</i>
       </a>
     </span>
       
+    </li><li name="geotrellis.doc.examples.spark.PolygonalSummaryExamples" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PolygonalSummaryExamples"></a>
+      <a id="PolygonalSummaryExamples:PolygonalSummaryExamples"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PolygonalSummaryExamples$.html"><span class="name">PolygonalSummaryExamples</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.package@PolygonalSummaryExamples" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.doc.examples.spark.ShardingKeyIndex" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ShardingKeyIndex"></a>
+      <a id="ShardingKeyIndex:ShardingKeyIndex"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ShardingKeyIndex$.html"><span class="name">ShardingKeyIndex</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.package@ShardingKeyIndex" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.doc.examples.spark.SparkExamples" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="SparkExamples"></a>
       <a id="SparkExamples:SparkExamples"></a>
@@ -271,7 +271,7 @@ For more information on why this is necessary, see <i>ShardingKeyIndex.scala</i>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="VoxelKey$.html"><span class="name">VoxelKey</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="VoxelKey$.html"><span class="name">VoxelKey</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.doc.examples.spark.package@VoxelKey" title="Permalink" target="_top">
@@ -281,6 +281,23 @@ For more information on why this is necessary, see <i>ShardingKeyIndex.scala</i>
       <p class="shortcomment cmt">Typeclass instances.</p><div class="fullcomment"><div class="comment cmt"><p>Typeclass instances. These (particularly <a href="VoxelKey$$Boundable$.html" class="extype" name="geotrellis.doc.examples.spark.VoxelKey.Boundable">Boundable</a>) are necessary
 for when a layer's key type is parameterized as <i>K</i>.
 </p></div></div>
+    </li><li name="geotrellis.doc.examples.spark.ZVoxelKeyIndex" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ZVoxelKeyIndex"></a>
+      <a id="ZVoxelKeyIndex:ZVoxelKeyIndex"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ZVoxelKeyIndex$.html"><span class="name">ZVoxelKeyIndex</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#geotrellis.doc.examples.spark.package@ZVoxelKeyIndex" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li></ol>
             </div>
 

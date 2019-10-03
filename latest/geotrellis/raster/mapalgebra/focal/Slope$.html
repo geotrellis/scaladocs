@@ -54,7 +54,7 @@ change of elevation from a raster cell to any immediate neighbor. It uses Horn's
 for computing slope.</p><p>As with aspect, slope is calculated from estimates of the partial derivatives dz / dx and dz / dy.</p><p>Slope is computed in degrees from horizontal.</p><p>The use of a z-factor is essential for correct slope calculations when the surface z units are expressed in units different from the ground x,y units.</p><p>If Slope operations encounters NoData in its neighborhood, that neighborhood cell well be treated as having
 the same elevation as the focal cell.</p><p>The expression for slope is:</p><pre><span class="kw">val</span> slope = atan(sqrt(pow(`dz / dy`, <span class="num">2</span>) * pow(`dz / dx`, <span class="num">2</span>)))</pre></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
         
 
@@ -106,7 +106,7 @@ the same elevation as the focal cell.</p><p>The expression for slope is:</p><pre
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.Slope$@!=(x$1:Any):Boolean" title="Permalink" target="_top">
@@ -123,7 +123,7 @@ the same elevation as the focal cell.</p><p>The expression for slope is:</p><pre
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.Slope$@##():Int" title="Permalink" target="_top">
@@ -140,7 +140,7 @@ the same elevation as the focal cell.</p><p>The expression for slope is:</p><pre
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.Slope$@==(x$1:Any):Boolean" title="Permalink" target="_top">
@@ -149,18 +149,18 @@ the same elevation as the focal cell.</p><p>The expression for slope is:</p><pre
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="geotrellis.raster.mapalgebra.focal.Slope#apply" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply(r:geotrellis.raster.Tile,n:geotrellis.raster.mapalgebra.focal.Neighborhood,bounds:Option[geotrellis.raster.GridBounds],cs:geotrellis.raster.CellSize,z:Double,target:geotrellis.raster.mapalgebra.focal.TargetCell):geotrellis.raster.Tile"></a>
-      <a id="apply(Tile,Neighborhood,Option[GridBounds],CellSize,Double,TargetCell):Tile"></a>
+      <a id="apply(r:geotrellis.raster.Tile,n:geotrellis.raster.mapalgebra.focal.Neighborhood,bounds:Option[geotrellis.raster.GridBounds[Int]],cs:geotrellis.raster.CellSize,z:Double,target:geotrellis.raster.mapalgebra.focal.TargetCell):geotrellis.raster.Tile"></a>
+      <a id="apply(Tile,Neighborhood,Option[GridBounds[Int]],CellSize,Double,TargetCell):Tile"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="r">r: <a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>, <span name="n">n: <a href="Neighborhood.html" class="extype" name="geotrellis.raster.mapalgebra.focal.Neighborhood">Neighborhood</a></span>, <span name="bounds">bounds: <span class="extype" name="scala.Option">Option</span>[<a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a>]</span>, <span name="cs">cs: <a href="../../CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a></span>, <span name="z">z: <span class="extype" name="scala.Double">Double</span></span>, <span name="target">target: <a href="TargetCell.html" class="extype" name="geotrellis.raster.mapalgebra.focal.TargetCell">TargetCell</a> = <span class="symbol"><span class="name"><a href="TargetCell$.html">TargetCell.All</a></span></span></span>)</span><span class="result">: <a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
+        <span class="name">apply</span><span class="params">(<span name="r">r: <a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>, <span name="n">n: <a href="Neighborhood.html" class="extype" name="geotrellis.raster.mapalgebra.focal.Neighborhood">Neighborhood</a></span>, <span name="bounds">bounds: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="../../GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a>[<a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a>]]</span>, <span name="cs">cs: <a href="../../CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a></span>, <span name="z">z: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Double" class="extype" target="_top">Double</a></span>, <span name="target">target: <a href="TargetCell.html" class="extype" name="geotrellis.raster.mapalgebra.focal.TargetCell">TargetCell</a> = <span class="symbol"><span class="name"><a href="TargetCell$.html">TargetCell.All</a></span></span></span>)</span><span class="result">: <a href="../../Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.Slope$@apply(r:geotrellis.raster.Tile,n:geotrellis.raster.mapalgebra.focal.Neighborhood,bounds:Option[geotrellis.raster.GridBounds],cs:geotrellis.raster.CellSize,z:Double,target:geotrellis.raster.mapalgebra.focal.TargetCell):geotrellis.raster.Tile" title="Permalink" target="_top">
+      <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.Slope$@apply(r:geotrellis.raster.Tile,n:geotrellis.raster.mapalgebra.focal.Neighborhood,bounds:Option[geotrellis.raster.GridBounds[Int]],cs:geotrellis.raster.CellSize,z:Double,target:geotrellis.raster.mapalgebra.focal.TargetCell):geotrellis.raster.Tile" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -191,7 +191,7 @@ the same elevation as the focal cell.</p><p>The expression for slope is:</p><pre
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.Slope$@clone():Object" title="Permalink" target="_top">
@@ -214,7 +214,7 @@ the same elevation as the focal cell.</p><p>The expression for slope is:</p><pre
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.Slope$@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
@@ -231,7 +231,7 @@ the same elevation as the focal cell.</p><p>The expression for slope is:</p><pre
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.Slope$@equals(x$1:Any):Boolean" title="Permalink" target="_top">
@@ -248,7 +248,7 @@ the same elevation as the focal cell.</p><p>The expression for slope is:</p><pre
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.Slope$@finalize():Unit" title="Permalink" target="_top">
@@ -288,7 +288,7 @@ the same elevation as the focal cell.</p><p>The expression for slope is:</p><pre
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.Slope$@hashCode():Int" title="Permalink" target="_top">
@@ -305,7 +305,7 @@ the same elevation as the focal cell.</p><p>The expression for slope is:</p><pre
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.Slope$@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
@@ -322,7 +322,7 @@ the same elevation as the focal cell.</p><p>The expression for slope is:</p><pre
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.Slope$@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
@@ -339,7 +339,7 @@ the same elevation as the focal cell.</p><p>The expression for slope is:</p><pre
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.Slope$@notify():Unit" title="Permalink" target="_top">
@@ -356,7 +356,7 @@ the same elevation as the focal cell.</p><p>The expression for slope is:</p><pre
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.Slope$@notifyAll():Unit" title="Permalink" target="_top">
@@ -407,7 +407,7 @@ the same elevation as the focal cell.</p><p>The expression for slope is:</p><pre
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.Slope$@wait():Unit" title="Permalink" target="_top">
@@ -430,7 +430,7 @@ the same elevation as the focal cell.</p><p>The expression for slope is:</p><pre
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.Slope$@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
@@ -453,7 +453,7 @@ the same elevation as the focal cell.</p><p>The expression for slope is:</p><pre
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../../../index.html#geotrellis.raster.mapalgebra.focal.Slope$@wait(x$1:Long):Unit" title="Permalink" target="_top">
@@ -477,9 +477,9 @@ the same elevation as the focal cell.</p><p>The expression for slope is:</p><pre
 
         <div id="inheritedMembers">
         <div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
             </div>
         
         </div>
