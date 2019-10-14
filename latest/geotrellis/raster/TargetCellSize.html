@@ -45,13 +45,19 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">TargetCellSize</span><span class="tparams">[<span name="N">N</span>]</span><span class="params">(<span name="cellSize">cellSize: <a href="CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="evidence$4">evidence$4: <span class="extype" name="spire.math.Integral">Integral</span>[<span class="extype" name="geotrellis.raster.TargetCellSize.N">N</span>]</span>)</span><span class="result"> extends <a href="ResampleGrid.html" class="extype" name="geotrellis.raster.ResampleGrid">ResampleGrid</a>[<span class="extype" name="geotrellis.raster.TargetCellSize.N">N</span>] with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <span class="name">TargetCellSize</span><span class="params">(<span name="cellSize">cellSize: <a href="CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a></span>)</span><span class="result"> extends <a href="ResampleTarget.html" class="extype" name="geotrellis.raster.ResampleTarget">ResampleTarget</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Resample, aiming for a grid which has the provided <a href="CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a>
+</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Targetting a specific size for each cell in the grid has consequences for the
+<span class="extype" name="Extent">Extent</span> because e.g. an extent's width *must* be evenly divisible by the width of
+the cells within it. Consequently, we have two options: either modify the resolution
+to accomodate the output extent or modify the overall extent to preserve the desired
+output resolution. Fine grained constraints on both resolution and extent will currently
+need to be managed manually.</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a>, <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Equals" class="extype" target="_top">Equals</a>, <a href="ResampleGrid.html" class="extype" name="geotrellis.raster.ResampleGrid">ResampleGrid</a>[<span class="extype" name="geotrellis.raster.TargetCellSize.N">N</span>], <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a>, <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Equals" class="extype" target="_top">Equals</a>, <a href="ResampleTarget.html" class="extype" name="geotrellis.raster.ResampleTarget">ResampleTarget</a>, <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
         
 
@@ -69,7 +75,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="geotrellis.raster.TargetCellSize"><span>TargetCellSize</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="geotrellis.raster.ResampleGrid"><span>ResampleGrid</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="geotrellis.raster.TargetCellSize"><span>TargetCellSize</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="geotrellis.raster.ResampleTarget"><span>ResampleTarget</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -89,18 +95,18 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="geotrellis.raster.TargetCellSize#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(cellSize:geotrellis.raster.CellSize)(implicitevidence$4:spire.math.Integral[N]):geotrellis.raster.TargetCellSize[N]"></a>
-      <a id="&lt;init&gt;:TargetCellSize[N]"></a>
+      <a id="&lt;init&gt;(cellSize:geotrellis.raster.CellSize):geotrellis.raster.TargetCellSize"></a>
+      <a id="&lt;init&gt;:TargetCellSize"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">TargetCellSize</span><span class="params">(<span name="cellSize">cellSize: <a href="CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="spire.math.Integral">Integral</span>[<span class="extype" name="geotrellis.raster.TargetCellSize.N">N</span>]</span>)</span>
+        <span class="name">TargetCellSize</span><span class="params">(<span name="cellSize">cellSize: <a href="CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.TargetCellSize@&lt;init&gt;(cellSize:geotrellis.raster.CellSize)(implicitevidence$4:spire.math.Integral[N]):geotrellis.raster.TargetCellSize[N]" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.TargetCellSize@&lt;init&gt;(cellSize:geotrellis.raster.CellSize):geotrellis.raster.TargetCellSize" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -166,22 +172,22 @@
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="geotrellis.raster.TargetCellSize#apply" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply(source:=&gt;geotrellis.raster.GridExtent[N]):geotrellis.raster.GridExtent[N]"></a>
-      <a id="apply(⇒GridExtent[N]):GridExtent[N]"></a>
+      <a id="apply[N](source:=&gt;geotrellis.raster.GridExtent[N])(implicitevidence$5:spire.math.Integral[N]):geotrellis.raster.GridExtent[N]"></a>
+      <a id="apply[N](⇒GridExtent[N])(Integral[N]):GridExtent[N]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="source">source: ⇒ <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>[<span class="extype" name="geotrellis.raster.TargetCellSize.N">N</span>]</span>)</span><span class="result">: <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>[<span class="extype" name="geotrellis.raster.TargetCellSize.N">N</span>]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="N">N</span>]</span><span class="params">(<span name="source">source: ⇒ <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>[<span class="extype" name="geotrellis.raster.TargetCellSize.apply.N">N</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="spire.math.Integral">Integral</span>[<span class="extype" name="geotrellis.raster.TargetCellSize.apply.N">N</span>]</span>)</span><span class="result">: <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>[<span class="extype" name="geotrellis.raster.TargetCellSize.apply.N">N</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.TargetCellSize@apply(source:=&gt;geotrellis.raster.GridExtent[N]):geotrellis.raster.GridExtent[N]" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.TargetCellSize@apply[N](source:=&gt;geotrellis.raster.GridExtent[N])(implicitevidence$5:spire.math.Integral[N]):geotrellis.raster.GridExtent[N]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.TargetCellSize">TargetCellSize</a> → <a href="ResampleGrid.html" class="extype" name="geotrellis.raster.ResampleGrid">ResampleGrid</a></dd></dl></div>
+      <p class="shortcomment cmt">Provided a gridextent, construct a new <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a> that satisfies target constraint(s)</p><div class="fullcomment"><div class="comment cmt"><p>Provided a gridextent, construct a new <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a> that satisfies target constraint(s)</p></div><dl class="paramcmts block"><dt class="param">source</dt><dd class="cmt"><p>a grid extent to be reshaped; call by name as it does not need to be called in all cases</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.TargetCellSize">TargetCellSize</a> → <a href="ResampleTarget.html" class="extype" name="geotrellis.raster.ResampleTarget">ResampleTarget</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -467,8 +473,8 @@
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a></h3>
             </div><div class="parent" name="scala.Equals">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Equals" class="extype" target="_top">Equals</a></h3>
-            </div><div class="parent" name="geotrellis.raster.ResampleGrid">
-              <h3>Inherited from <a href="ResampleGrid.html" class="extype" name="geotrellis.raster.ResampleGrid">ResampleGrid</a>[<span class="extype" name="geotrellis.raster.TargetCellSize.N">N</span>]</h3>
+            </div><div class="parent" name="geotrellis.raster.ResampleTarget">
+              <h3>Inherited from <a href="ResampleTarget.html" class="extype" name="geotrellis.raster.ResampleTarget">ResampleTarget</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">

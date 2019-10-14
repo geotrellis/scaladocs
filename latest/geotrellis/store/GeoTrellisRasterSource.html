@@ -974,18 +974,18 @@ May return None if the requested extent does not overlap the raster extent.</p><
     </span>
       
     </li><li name="geotrellis.raster.RasterSource#reproject" visbl="pub" data-isabs="false" fullComment="yes" group="reproject">
-      <a id="reproject(targetCRS:geotrellis.proj4.CRS,resampleGrid:geotrellis.raster.ResampleGrid[Long],method:geotrellis.raster.ResampleMethod,strategy:geotrellis.raster.io.geotiff.OverviewStrategy):geotrellis.raster.RasterSource"></a>
-      <a id="reproject(CRS,ResampleGrid[Long],ResampleMethod,OverviewStrategy):RasterSource"></a>
+      <a id="reproject(targetCRS:geotrellis.proj4.CRS,resampleTarget:geotrellis.raster.ResampleTarget,method:geotrellis.raster.ResampleMethod,strategy:geotrellis.raster.io.geotiff.OverviewStrategy):geotrellis.raster.RasterSource"></a>
+      <a id="reproject(CRS,ResampleTarget,ResampleMethod,OverviewStrategy):RasterSource"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">reproject</span><span class="params">(<span name="targetCRS">targetCRS: <a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="resampleGrid">resampleGrid: <a href="../raster/ResampleGrid.html" class="extype" name="geotrellis.raster.ResampleGrid">ResampleGrid</a>[<a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Long" class="extype" target="_top">Long</a>] = <span class="symbol"><span class="name"><a href="../raster/IdentityResampleGrid$.html">IdentityResampleGrid</a></span></span></span>, <span name="method">method: <a href="../raster/package.html#ResampleMethod=geotrellis.raster.resample.ResampleMethod" class="extmbr" name="geotrellis.raster.ResampleMethod">ResampleMethod</a> = <span class="symbol"><span class="name"><a href="../package.html">NearestNeighbor</a></span></span></span>, <span name="strategy">strategy: <a href="../raster/io/geotiff/OverviewStrategy.html" class="extype" name="geotrellis.raster.io.geotiff.OverviewStrategy">OverviewStrategy</a> = <span class="symbol"><span class="name"><a href="../package.html">AutoHigherResolution</a></span></span></span>)</span><span class="result">: <a href="../raster/RasterSource.html" class="extype" name="geotrellis.raster.RasterSource">RasterSource</a></span>
+        <span class="name">reproject</span><span class="params">(<span name="targetCRS">targetCRS: <a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="resampleTarget">resampleTarget: <a href="../raster/ResampleTarget.html" class="extype" name="geotrellis.raster.ResampleTarget">ResampleTarget</a> = <span class="symbol"><span class="name"><a href="../raster/DefaultTarget$.html">DefaultTarget</a></span></span></span>, <span name="method">method: <a href="../raster/package.html#ResampleMethod=geotrellis.raster.resample.ResampleMethod" class="extmbr" name="geotrellis.raster.ResampleMethod">ResampleMethod</a> = <span class="symbol"><span class="name"><a href="../package.html">NearestNeighbor</a></span></span></span>, <span name="strategy">strategy: <a href="../raster/io/geotiff/OverviewStrategy.html" class="extype" name="geotrellis.raster.io.geotiff.OverviewStrategy">OverviewStrategy</a> = <span class="symbol"><span class="name"><a href="../package.html">AutoHigherResolution</a></span></span></span>)</span><span class="result">: <a href="../raster/RasterSource.html" class="extype" name="geotrellis.raster.RasterSource">RasterSource</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.store.GeoTrellisRasterSource@reproject(targetCRS:geotrellis.proj4.CRS,resampleGrid:geotrellis.raster.ResampleGrid[Long],method:geotrellis.raster.ResampleMethod,strategy:geotrellis.raster.io.geotiff.OverviewStrategy):geotrellis.raster.RasterSource" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.store.GeoTrellisRasterSource@reproject(targetCRS:geotrellis.proj4.CRS,resampleTarget:geotrellis.raster.ResampleTarget,method:geotrellis.raster.ResampleMethod,strategy:geotrellis.raster.io.geotiff.OverviewStrategy):geotrellis.raster.RasterSource" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -1029,35 +1029,35 @@ Resulting extent is the extent of the minimum enclosing pixel region
 The extent of the result is also taken from given <a href="../raster/RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>,
   this region may be larger or smaller than the footprint of the data</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../raster/RasterSource.html" class="extype" name="geotrellis.raster.RasterSource">RasterSource</a></dd></dl></div>
     </li><li name="geotrellis.store.GeoTrellisRasterSource#reprojection" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="reprojection(targetCRS:geotrellis.proj4.CRS,resampleGrid:geotrellis.raster.ResampleGrid[Long],method:geotrellis.raster.resample.ResampleMethod,strategy:geotrellis.raster.io.geotiff.OverviewStrategy):geotrellis.raster.RasterSource"></a>
-      <a id="reprojection(CRS,ResampleGrid[Long],ResampleMethod,OverviewStrategy):RasterSource"></a>
+      <a id="reprojection(targetCRS:geotrellis.proj4.CRS,resampleTarget:geotrellis.raster.ResampleTarget,method:geotrellis.raster.resample.ResampleMethod,strategy:geotrellis.raster.io.geotiff.OverviewStrategy):geotrellis.raster.RasterSource"></a>
+      <a id="reprojection(CRS,ResampleTarget,ResampleMethod,OverviewStrategy):RasterSource"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">reprojection</span><span class="params">(<span name="targetCRS">targetCRS: <a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="resampleGrid">resampleGrid: <a href="../raster/ResampleGrid.html" class="extype" name="geotrellis.raster.ResampleGrid">ResampleGrid</a>[<a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Long" class="extype" target="_top">Long</a>] = <span class="symbol"><span class="name"><a href="../package.html">IdentityResampleGrid</a></span></span></span>, <span name="method">method: <a href="../raster/resample/ResampleMethod.html" class="extype" name="geotrellis.raster.resample.ResampleMethod">ResampleMethod</a> = <span class="symbol"><span class="name"><a href="../package.html">NearestNeighbor</a></span></span></span>, <span name="strategy">strategy: <a href="../raster/io/geotiff/OverviewStrategy.html" class="extype" name="geotrellis.raster.io.geotiff.OverviewStrategy">OverviewStrategy</a> = <span class="symbol"><span class="name"><a href="../package.html">AutoHigherResolution</a></span></span></span>)</span><span class="result">: <a href="../raster/RasterSource.html" class="extype" name="geotrellis.raster.RasterSource">RasterSource</a></span>
+        <span class="name">reprojection</span><span class="params">(<span name="targetCRS">targetCRS: <a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="resampleTarget">resampleTarget: <a href="../raster/ResampleTarget.html" class="extype" name="geotrellis.raster.ResampleTarget">ResampleTarget</a> = <span class="symbol"><span class="name"><a href="../package.html">DefaultTarget</a></span></span></span>, <span name="method">method: <a href="../raster/resample/ResampleMethod.html" class="extype" name="geotrellis.raster.resample.ResampleMethod">ResampleMethod</a> = <span class="symbol"><span class="name"><a href="../package.html">NearestNeighbor</a></span></span></span>, <span name="strategy">strategy: <a href="../raster/io/geotiff/OverviewStrategy.html" class="extype" name="geotrellis.raster.io.geotiff.OverviewStrategy">OverviewStrategy</a> = <span class="symbol"><span class="name"><a href="../package.html">AutoHigherResolution</a></span></span></span>)</span><span class="result">: <a href="../raster/RasterSource.html" class="extype" name="geotrellis.raster.RasterSource">RasterSource</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.store.GeoTrellisRasterSource@reprojection(targetCRS:geotrellis.proj4.CRS,resampleGrid:geotrellis.raster.ResampleGrid[Long],method:geotrellis.raster.resample.ResampleMethod,strategy:geotrellis.raster.io.geotiff.OverviewStrategy):geotrellis.raster.RasterSource" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.store.GeoTrellisRasterSource@reprojection(targetCRS:geotrellis.proj4.CRS,resampleTarget:geotrellis.raster.ResampleTarget,method:geotrellis.raster.resample.ResampleMethod,strategy:geotrellis.raster.io.geotiff.OverviewStrategy):geotrellis.raster.RasterSource" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.store.GeoTrellisRasterSource">GeoTrellisRasterSource</a> → <a href="../raster/RasterSource.html" class="extype" name="geotrellis.raster.RasterSource">RasterSource</a></dd></dl></div>
     </li><li name="geotrellis.store.GeoTrellisRasterSource#resample" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="resample(resampleGrid:geotrellis.raster.ResampleGrid[Long],method:geotrellis.raster.resample.ResampleMethod,strategy:geotrellis.raster.io.geotiff.OverviewStrategy):geotrellis.raster.RasterSource"></a>
-      <a id="resample(ResampleGrid[Long],ResampleMethod,OverviewStrategy):RasterSource"></a>
+      <a id="resample(resampleTarget:geotrellis.raster.ResampleTarget,method:geotrellis.raster.resample.ResampleMethod,strategy:geotrellis.raster.io.geotiff.OverviewStrategy):geotrellis.raster.RasterSource"></a>
+      <a id="resample(ResampleTarget,ResampleMethod,OverviewStrategy):RasterSource"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">resample</span><span class="params">(<span name="resampleGrid">resampleGrid: <a href="../raster/ResampleGrid.html" class="extype" name="geotrellis.raster.ResampleGrid">ResampleGrid</a>[<a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Long" class="extype" target="_top">Long</a>]</span>, <span name="method">method: <a href="../raster/resample/ResampleMethod.html" class="extype" name="geotrellis.raster.resample.ResampleMethod">ResampleMethod</a></span>, <span name="strategy">strategy: <a href="../raster/io/geotiff/OverviewStrategy.html" class="extype" name="geotrellis.raster.io.geotiff.OverviewStrategy">OverviewStrategy</a></span>)</span><span class="result">: <a href="../raster/RasterSource.html" class="extype" name="geotrellis.raster.RasterSource">RasterSource</a></span>
+        <span class="name">resample</span><span class="params">(<span name="resampleTarget">resampleTarget: <a href="../raster/ResampleTarget.html" class="extype" name="geotrellis.raster.ResampleTarget">ResampleTarget</a></span>, <span name="method">method: <a href="../raster/resample/ResampleMethod.html" class="extype" name="geotrellis.raster.resample.ResampleMethod">ResampleMethod</a></span>, <span name="strategy">strategy: <a href="../raster/io/geotiff/OverviewStrategy.html" class="extype" name="geotrellis.raster.io.geotiff.OverviewStrategy">OverviewStrategy</a></span>)</span><span class="result">: <a href="../raster/RasterSource.html" class="extype" name="geotrellis.raster.RasterSource">RasterSource</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.store.GeoTrellisRasterSource@resample(resampleGrid:geotrellis.raster.ResampleGrid[Long],method:geotrellis.raster.resample.ResampleMethod,strategy:geotrellis.raster.io.geotiff.OverviewStrategy):geotrellis.raster.RasterSource" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.store.GeoTrellisRasterSource@resample(resampleTarget:geotrellis.raster.ResampleTarget,method:geotrellis.raster.resample.ResampleMethod,strategy:geotrellis.raster.io.geotiff.OverviewStrategy):geotrellis.raster.RasterSource" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>

@@ -674,23 +674,6 @@ a cell type of the target cell type.
     </span>
       <p class="shortcomment cmt">A tile that wraps another tile.</p><div class="fullcomment"><div class="comment cmt"><p>A tile that wraps another tile. Originally intended for delayed reading, but useful in other special use cases.
 </p></div><dl class="attributes block"> <dt>Since</dt><dd><p>8/22/18</p></dd></dl></div>
-    </li><li name="geotrellis.raster.Dimensions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Dimensions[N]extendsResampleGrid[N]withProductwithSerializable"></a>
-      <a id="Dimensions[N]:Dimensions[N]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="Dimensions.html"><span class="name">Dimensions</span></a><span class="tparams">[<span name="N">N</span>]</span><span class="params">(<span name="cols">cols: <span class="extype" name="geotrellis.raster.Dimensions.N">N</span></span>, <span name="rows">rows: <span class="extype" name="geotrellis.raster.Dimensions.N">N</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="evidence$1">evidence$1: <span class="extype" name="spire.math.Integral">Integral</span>[<span class="extype" name="geotrellis.raster.Dimensions.N">N</span>]</span>)</span><span class="result"> extends <a href="ResampleGrid.html" class="extype" name="geotrellis.raster.ResampleGrid">ResampleGrid</a>[<span class="extype" name="geotrellis.raster.Dimensions.N">N</span>] with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package@Dimensions[N]extendsResampleGrid[N]withProductwithSerializable" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="geotrellis.raster.DoubleArrayFiller" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DoubleArrayFillerextendsAnyVal"></a>
       <a id="DoubleArrayFiller:DoubleArrayFiller"></a>
@@ -1884,23 +1867,6 @@ Some initilization step is expected to provide metadata about source raster
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.ResampleGrid" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="ResampleGrid[N]extendsAnyRef"></a>
-      <a id="ResampleGrid[N]:ResampleGrid[N]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">sealed </span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="ResampleGrid.html"><span class="name">ResampleGrid</span></a><span class="tparams">[<span name="N">N</span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package@ResampleGrid[N]extendsAnyRef" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="geotrellis.raster.ResampleMethod" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ResampleMethod=geotrellis.raster.resample.ResampleMethod"></a>
       <a id="ResampleMethod:ResampleMethod"></a>
@@ -1918,6 +1884,27 @@ Some initilization step is expected to provide metadata about source raster
       </a>
     </span>
       
+    </li><li name="geotrellis.raster.ResampleTarget" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ResampleTargetextendsAnyRef"></a>
+      <a id="ResampleTarget:ResampleTarget"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ResampleTarget.html"><span class="name">ResampleTarget</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package@ResampleTargetextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"> A strategy to use when constructing a grid that will be used during resampling</p><div class="fullcomment"><div class="comment cmt"><p> A strategy to use when constructing a grid that will be used during resampling</p><p> Various tradeoffs exist when attempting to resize an image. Subclasses of ResampleTarget
+ encode these various tradeoffs in terms of the proportions/alignment desired at the end
+ of resampling. E.g. <a href="TargetCellSize.html" class="extype" name="geotrellis.raster.TargetCellSize">TargetCellSize</a> tells any resampling function to resample in such
+ a way as to approximately match the specified <a href="CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a> in any resulting operations.
+</p></div></div>
     </li><li name="geotrellis.raster.SegmentCombiner" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="SegmentCombinerextendsAnyRef"></a>
       <a id="SegmentCombiner:SegmentCombiner"></a>
@@ -2193,6 +2180,25 @@ us to abstract over each of the combine functions</p>
       </a>
     </span>
       
+    </li><li name="geotrellis.raster.TargetAlignment" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TargetAlignmentextendsResampleTargetwithProductwithSerializable"></a>
+      <a id="TargetAlignment:TargetAlignment"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="TargetAlignment.html"><span class="name">TargetAlignment</span></a><span class="params">(<span name="grid">grid: <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>[_]</span>)</span><span class="result"> extends <a href="ResampleTarget.html" class="extype" name="geotrellis.raster.ResampleTarget">ResampleTarget</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package@TargetAlignmentextendsResampleTargetwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Snap to a target grid - useful prior to comparison between rasters
+as a means of ensuring clear correspondence between underlying cell values
+</p>
     </li><li name="geotrellis.raster.TargetCell" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="TargetCell=geotrellis.raster.mapalgebra.focal.TargetCell"></a>
       <a id="TargetCell:TargetCell"></a>
@@ -2210,23 +2216,30 @@ us to abstract over each of the combine functions</p>
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.TargetCellSize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="TargetCellSize[N]extendsResampleGrid[N]withProductwithSerializable"></a>
-      <a id="TargetCellSize[N]:TargetCellSize[N]"></a>
+    </li><li name="geotrellis.raster.TargetCellSize" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TargetCellSizeextendsResampleTargetwithProductwithSerializable"></a>
+      <a id="TargetCellSize:TargetCellSize"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="TargetCellSize.html"><span class="name">TargetCellSize</span></a><span class="tparams">[<span name="N">N</span>]</span><span class="params">(<span name="cellSize">cellSize: <a href="CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="evidence$4">evidence$4: <span class="extype" name="spire.math.Integral">Integral</span>[<span class="extype" name="geotrellis.raster.TargetCellSize.N">N</span>]</span>)</span><span class="result"> extends <a href="ResampleGrid.html" class="extype" name="geotrellis.raster.ResampleGrid">ResampleGrid</a>[<span class="extype" name="geotrellis.raster.TargetCellSize.N">N</span>] with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <a href="TargetCellSize.html"><span class="name">TargetCellSize</span></a><span class="params">(<span name="cellSize">cellSize: <a href="CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a></span>)</span><span class="result"> extends <a href="ResampleTarget.html" class="extype" name="geotrellis.raster.ResampleTarget">ResampleTarget</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package@TargetCellSize[N]extendsResampleGrid[N]withProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.package@TargetCellSizeextendsResampleTargetwithProductwithSerializable" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Resample, aiming for a grid which has the provided <a href="CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a>
+</p><div class="fullcomment"><div class="comment cmt"><p>Resample, aiming for a grid which has the provided <a href="CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a>
+</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Targetting a specific size for each cell in the grid has consequences for the
+<span class="extype" name="Extent">Extent</span> because e.g. an extent's width *must* be evenly divisible by the width of
+the cells within it. Consequently, we have two options: either modify the resolution
+to accomodate the output extent or modify the overall extent to preserve the desired
+output resolution. Fine grained constraints on both resolution and extent will currently
+need to be managed manually.</p></span></dd></dl></div>
     </li><li name="geotrellis.raster.TargetCellType" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="TargetCellTypeextendsAnyRef"></a>
       <a id="TargetCellType:TargetCellType"></a>
@@ -2244,40 +2257,40 @@ us to abstract over each of the combine functions</p>
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.TargetGrid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="TargetGrid[N]extendsResampleGrid[N]withProductwithSerializable"></a>
-      <a id="TargetGrid[N]:TargetGrid[N]"></a>
+    </li><li name="geotrellis.raster.TargetDimensions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TargetDimensionsextendsResampleTargetwithProductwithSerializable"></a>
+      <a id="TargetDimensions:TargetDimensions"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="TargetGrid.html"><span class="name">TargetGrid</span></a><span class="tparams">[<span name="N">N</span>]</span><span class="params">(<span name="grid">grid: <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>[<a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Long" class="extype" target="_top">Long</a>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="evidence$2">evidence$2: <span class="extype" name="spire.math.Integral">Integral</span>[<span class="extype" name="geotrellis.raster.TargetGrid.N">N</span>]</span>)</span><span class="result"> extends <a href="ResampleGrid.html" class="extype" name="geotrellis.raster.ResampleGrid">ResampleGrid</a>[<span class="extype" name="geotrellis.raster.TargetGrid.N">N</span>] with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <a href="TargetDimensions.html"><span class="name">TargetDimensions</span></a><span class="params">(<span name="cols">cols: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="rows">rows: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result"> extends <a href="ResampleTarget.html" class="extype" name="geotrellis.raster.ResampleTarget">ResampleTarget</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package@TargetGrid[N]extendsResampleGrid[N]withProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.package@TargetDimensionsextendsResampleTargetwithProductwithSerializable" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Resample, aiming for a specific number of cell columns/rows</p>
     </li><li name="geotrellis.raster.TargetRegion" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="TargetRegion[N]extendsResampleGrid[N]withProductwithSerializable"></a>
-      <a id="TargetRegion[N]:TargetRegion[N]"></a>
+      <a id="TargetRegionextendsResampleTargetwithProductwithSerializable"></a>
+      <a id="TargetRegion:TargetRegion"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="TargetRegion.html"><span class="name">TargetRegion</span></a><span class="tparams">[<span name="N">N</span>]</span><span class="params">(<span name="region">region: <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>[<span class="extype" name="geotrellis.raster.TargetRegion.N">N</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="evidence$3">evidence$3: <span class="extype" name="spire.math.Integral">Integral</span>[<span class="extype" name="geotrellis.raster.TargetRegion.N">N</span>]</span>)</span><span class="result"> extends <a href="ResampleGrid.html" class="extype" name="geotrellis.raster.ResampleGrid">ResampleGrid</a>[<span class="extype" name="geotrellis.raster.TargetRegion.N">N</span>] with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <a href="TargetRegion.html"><span class="name">TargetRegion</span></a><span class="params">(<span name="region">region: <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>[_]</span>)</span><span class="result"> extends <a href="ResampleTarget.html" class="extype" name="geotrellis.raster.ResampleTarget">ResampleTarget</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package@TargetRegion[N]extendsResampleGrid[N]withProductwithSerializable" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.package@TargetRegionextendsResampleTargetwithProductwithSerializable" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Resample, sampling values into a user-supplied <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></p>
     </li><li name="geotrellis.raster.Tile" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="TileextendsCellGrid[Int]withIterableTilewithMappableTile[geotrellis.raster.Tile]"></a>
       <a id="Tile:Tile"></a>
@@ -4745,6 +4758,25 @@ pattern-matching operations.
       </a>
     </span>
       <p class="shortcomment cmt">The companion object for the <a href="CroppedTile.html" class="extype" name="geotrellis.raster.CroppedTile">CroppedTile</a> type.</p>
+    </li><li name="geotrellis.raster.DefaultTarget" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DefaultTarget"></a>
+      <a id="DefaultTarget:DefaultTarget"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DefaultTarget$.html"><span class="name">DefaultTarget</span></a><span class="result"> extends <a href="ResampleTarget.html" class="extype" name="geotrellis.raster.ResampleTarget">ResampleTarget</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package@DefaultTarget" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The default resample target is used during reprojection.</p><div class="fullcomment"><div class="comment cmt"><p>The default resample target is used during reprojection.
+A heuristic will be used to determine the best target proportions
+</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>If used as target of resample operation it acts as identity operation.</p></span></dd></dl></div>
     </li><li name="geotrellis.raster.DoubleArrayTile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DoubleArrayTile"></a>
       <a id="DoubleArrayTile:DoubleArrayTile"></a>
@@ -5064,23 +5096,6 @@ pattern-matching operations.
       </span>
       </h4><span class="permalink">
       <a href="../../index.html#geotrellis.raster.package@GridExtent" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
-    </li><li name="geotrellis.raster.IdentityResampleGrid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="IdentityResampleGrid"></a>
-      <a id="IdentityResampleGrid:IdentityResampleGrid"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="IdentityResampleGrid$.html"><span class="name">IdentityResampleGrid</span></a><span class="result"> extends <a href="ResampleGrid.html" class="extype" name="geotrellis.raster.ResampleGrid">ResampleGrid</a>[<a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Long" class="extype" target="_top">Long</a>] with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package@IdentityResampleGrid" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -5545,23 +5560,6 @@ suitably-tiny extents.</p>
       </a>
     </span>
       
-    </li><li name="geotrellis.raster.ResampleGrid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ResampleGrid"></a>
-      <a id="ResampleGrid:ResampleGrid"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="ResampleGrid$.html"><span class="name">ResampleGrid</span></a>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.package@ResampleGrid" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" alt="Permalink" />
-      </a>
-    </span>
-      
     </li><li name="geotrellis.raster.ResampleMethods" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ResampleMethods"></a>
       <a id="ResampleMethods:ResampleMethods"></a>
@@ -5575,6 +5573,23 @@ suitably-tiny extents.</p>
       </span>
       </h4><span class="permalink">
       <a href="../../index.html#geotrellis.raster.package@ResampleMethods" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="geotrellis.raster.ResampleTarget" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ResampleTarget"></a>
+      <a id="ResampleTarget:ResampleTarget"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ResampleTarget$.html"><span class="name">ResampleTarget</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package@ResampleTarget" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
