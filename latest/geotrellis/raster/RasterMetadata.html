@@ -218,25 +218,25 @@ a metadata that is valid for the entire source and for the zero band
     </span>
       <p class="shortcomment cmt">Source name, that can be a path or any name that is associated with Raster</p>
     </li><li name="geotrellis.raster.RasterMetadata#resolutions" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="resolutions:List[geotrellis.raster.GridExtent[Long]]"></a>
-      <a id="resolutions:List[GridExtent[Long]]"></a>
+      <a id="resolutions:List[geotrellis.raster.CellSize]"></a>
+      <a id="resolutions:List[CellSize]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">resolutions</span><span class="result">: <span class="extype" name="scala.List">List</span>[<a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>[<a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Long" class="extype" target="_top">Long</a>]]</span>
+        <span class="name">resolutions</span><span class="result">: <span class="extype" name="scala.List">List</span>[<a href="CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../index.html#geotrellis.raster.RasterMetadata@resolutions:List[geotrellis.raster.GridExtent[Long]]" title="Permalink" target="_top">
+      <a href="../../index.html#geotrellis.raster.RasterMetadata@resolutions:List[geotrellis.raster.CellSize]" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
-      <p class="shortcomment cmt">All available resolutions for this raster source</p><div class="fullcomment"><div class="comment cmt"><p>All available resolutions for this raster source</p><ul><li> For base <a href="RasterSource.html" class="extype" name="geotrellis.raster.RasterSource">RasterSource</a> instance this will be resolutions of available overviews.</li><li> For reprojected <a href="RasterSource.html" class="extype" name="geotrellis.raster.RasterSource">RasterSource</a> these resolutions represent an estimate where
+      <p class="shortcomment cmt">All available overview resolutions for this raster source</p><div class="fullcomment"><div class="comment cmt"><p>All available overview resolutions for this raster source</p><ul><li> For base <a href="RasterSource.html" class="extype" name="geotrellis.raster.RasterSource">RasterSource</a> instance this will be resolutions of available overviews.</li><li> For reprojected <a href="RasterSource.html" class="extype" name="geotrellis.raster.RasterSource">RasterSource</a> these resolutions represent an estimate where
      each cell in target CRS has <i>approximately</i> the same geographic coverage as a cell in the source CRS.</li></ul><p>When reading raster data the underlying implementation will have to sample from one of these resolutions.
 It is possible that a read request for a small bounding box will results in significant IO request when the target
-cell size is much larger than closest available resolution.</p><p><u>Note</u>: It is expected but not guaranteed that the extent each <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a> in this list will be the same.
+cell size is much larger than closest available resolution.
 </p></div></div>
     </li></ol>
             </div>

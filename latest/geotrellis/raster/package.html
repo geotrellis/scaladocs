@@ -674,6 +674,23 @@ a cell type of the target cell type.
     </span>
       <p class="shortcomment cmt">A tile that wraps another tile.</p><div class="fullcomment"><div class="comment cmt"><p>A tile that wraps another tile. Originally intended for delayed reading, but useful in other special use cases.
 </p></div><dl class="attributes block"> <dt>Since</dt><dd><p>8/22/18</p></dd></dl></div>
+    </li><li name="geotrellis.raster.Dimensions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Dimensions[N]extendsProduct2[N,N]withSerializablewithProduct"></a>
+      <a id="Dimensions[N]:Dimensions[N]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Dimensions.html"><span class="name">Dimensions</span></a><span class="tparams">[<span name="N">N</span>]</span><span class="params">(<span name="cols">cols: <span class="extype" name="geotrellis.raster.Dimensions.N">N</span></span>, <span name="rows">rows: <span class="extype" name="geotrellis.raster.Dimensions.N">N</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="evidence$1">evidence$1: <span class="extype" name="spire.math.Integral">Integral</span>[<span class="extype" name="geotrellis.raster.Dimensions.N">N</span>]</span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product2" class="extype" target="_top">Product2</a>[<span class="extype" name="geotrellis.raster.Dimensions.N">N</span>, <span class="extype" name="geotrellis.raster.Dimensions.N">N</span>] with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package@Dimensions[N]extendsProduct2[N,N]withSerializablewithProduct" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.raster.DoubleArrayFiller" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DoubleArrayFillerextendsAnyVal"></a>
       <a id="DoubleArrayFiller:DoubleArrayFiller"></a>
@@ -1449,7 +1466,7 @@ they are intentionally not expressed to avoid Int overflow for large grids.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="MosaicMetadata.html"><span class="name">MosaicMetadata</span></a><span class="params">(<span name="name">name: <a href="SourceName.html" class="extype" name="geotrellis.raster.SourceName">SourceName</a></span>, <span name="crs">crs: <a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="bandCount">bandCount: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="cellType">cellType: <a href="#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>, <span name="gridExtent">gridExtent: <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>[<a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Long" class="extype" target="_top">Long</a>]</span>, <span name="resolutions">resolutions: <span class="extype" name="scala.List">List</span>[<a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>[<a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Long" class="extype" target="_top">Long</a>]]</span>, <span name="list">list: <a href="http://typelevel.org/cats/api/index.html#cats.data.NonEmptyList" class="extype" target="_top">NonEmptyList</a>[<a href="RasterMetadata.html" class="extype" name="geotrellis.raster.RasterMetadata">RasterMetadata</a>]</span>)</span><span class="result"> extends <a href="RasterMetadata.html" class="extype" name="geotrellis.raster.RasterMetadata">RasterMetadata</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <a href="MosaicMetadata.html"><span class="name">MosaicMetadata</span></a><span class="params">(<span name="name">name: <a href="SourceName.html" class="extype" name="geotrellis.raster.SourceName">SourceName</a></span>, <span name="crs">crs: <a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="bandCount">bandCount: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="cellType">cellType: <a href="#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>, <span name="gridExtent">gridExtent: <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>[<a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Long" class="extype" target="_top">Long</a>]</span>, <span name="resolutions">resolutions: <span class="extype" name="scala.List">List</span>[<a href="CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a>]</span>, <span name="list">list: <a href="http://typelevel.org/cats/api/index.html#cats.data.NonEmptyList" class="extype" target="_top">NonEmptyList</a>[<a href="RasterMetadata.html" class="extype" name="geotrellis.raster.RasterMetadata">RasterMetadata</a>]</span>)</span><span class="result"> extends <a href="RasterMetadata.html" class="extype" name="geotrellis.raster.RasterMetadata">RasterMetadata</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4><span class="permalink">
       <a href="../../index.html#geotrellis.raster.package@MosaicMetadataextendsRasterMetadatawithProductwithSerializable" title="Permalink" target="_top">
@@ -4777,6 +4794,23 @@ pattern-matching operations.
       <p class="shortcomment cmt">The default resample target is used during reprojection.</p><div class="fullcomment"><div class="comment cmt"><p>The default resample target is used during reprojection.
 A heuristic will be used to determine the best target proportions
 </p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>If used as target of resample operation it acts as identity operation.</p></span></dd></dl></div>
+    </li><li name="geotrellis.raster.Dimensions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Dimensions"></a>
+      <a id="Dimensions:Dimensions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Dimensions$.html"><span class="name">Dimensions</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#geotrellis.raster.package@Dimensions" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="geotrellis.raster.DoubleArrayTile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DoubleArrayTile"></a>
       <a id="DoubleArrayTile:DoubleArrayTile"></a>
