@@ -1980,10 +1980,10 @@ May return None if the requested extent does not overlap the raster extent.</p><
         <span class="name">resolutions</span><span class="result">: <span class="extype" name="scala.List">List</span>[<a href="CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a>]</span>
       </span>
       
-      <p class="shortcomment cmt">All available overview resolutions for this raster source</p><div class="fullcomment"><div class="comment cmt"><p>All available overview resolutions for this raster source</p><ul><li> For base <a href="" class="extype" name="geotrellis.raster.RasterSource">RasterSource</a> instance this will be resolutions of available overviews.</li><li> For reprojected <a href="" class="extype" name="geotrellis.raster.RasterSource">RasterSource</a> these resolutions represent an estimate where
+      <p class="shortcomment cmt">All available overview resolutions for this raster source</p><div class="fullcomment"><div class="comment cmt"><p>All available overview resolutions for this raster source</p><ul><li> For base <a href="" class="extype" name="geotrellis.raster.RasterSource">RasterSource</a> instance this will be resolutions of available overviews including the base resolution.</li><li> For reprojected <a href="" class="extype" name="geotrellis.raster.RasterSource">RasterSource</a> these resolutions represent an estimate where
      each cell in target CRS has <i>approximately</i> the same geographic coverage as a cell in the source CRS.</li></ul><p>When reading raster data the underlying implementation will have to sample from one of these resolutions.
 It is possible that a read request for a small bounding box will results in significant IO request when the target
-cell size is much larger than closest available resolution.
+cell size is much larger than closest available resolution.</p><p>Warning: the behavior of this function may slightly vary, depending on the implementation.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RasterMetadata.html" class="extype" name="geotrellis.raster.RasterMetadata">RasterMetadata</a></dd></dl></div>
     </li></ol>
             </div>
