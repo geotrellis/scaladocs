@@ -326,7 +326,7 @@
       
       <p class="shortcomment cmt">Use this partitioner as a partitioner for rdd.</p><div class="fullcomment"><div class="comment cmt"><p>Use this partitioner as a partitioner for rdd.
 The rdd may have a SpacePartitioner already.
-If it is in sync with Bounds in the Metadata we assume it to be valid .
+If it is in sync with Bounds in the Metadata and PartitionIndex we assume it to be valid .
 Otherwise we assume it has degraded to be a hash partitioner and we must perform a shuffle.
 </p></div></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -474,6 +474,39 @@ Otherwise we assume it has degraded to be a hash partitioner and we must perform
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.spark.partition.SpacePartitioner">SpacePartitioner</a> → Partitioner</dd></dl></div>
+    </li><li name="geotrellis.spark.partition.SpacePartitioner#hasSameIndex" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="hasSameIndex(other:geotrellis.spark.partition.SpacePartitioner[K]):Boolean"></a><a id="hasSameIndex(SpacePartitioner[K]):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../geotrellis/spark/partition/SpacePartitioner.html#hasSameIndex(other:geotrellis.spark.partition.SpacePartitioner[K]):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hasSameIndex</span><span class="params">(<span name="other">other: <a href="" class="extype" name="geotrellis.spark.partition.SpacePartitioner">SpacePartitioner</a>[<span class="extype" name="geotrellis.spark.partition.SpacePartitioner.K">K</span>]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Is another space partitioner compatible in the sense of key to index mapping?
+</p>
+    </li><li name="geotrellis.spark.partition.SpacePartitioner#index" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="index:geotrellis.spark.partition.PartitionerIndex[K]"></a><a id="index:PartitionerIndex[K]"></a>
+      <span class="permalink">
+      <a href="../../../geotrellis/spark/partition/SpacePartitioner.html#index:geotrellis.spark.partition.PartitionerIndex[K]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">index</span><span class="result">: <a href="PartitionerIndex.html" class="extype" name="geotrellis.spark.partition.PartitionerIndex">PartitionerIndex</a>[<span class="extype" name="geotrellis.spark.partition.SpacePartitioner.K">K</span>]</span>
+      </span>
+      
+      
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -575,7 +608,8 @@ Otherwise we assume it has degraded to be a hash partitioner and we must perform
         <span class="name">regionIndex</span><span class="params">(<span name="region">region: <span class="extype" name="scala.BigInt">BigInt</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>
       </span>
       
-      
+      <p class="shortcomment cmt">Map given spatial region index to offset in region array (aka partition id)
+</p>
     </li><li name="geotrellis.spark.partition.SpacePartitioner#regions" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="regions:Array[BigInt]"></a>
       <span class="permalink">
