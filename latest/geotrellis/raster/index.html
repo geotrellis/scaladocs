@@ -2938,7 +2938,8 @@ These coordinates are inclusive.
       
       <p class="shortcomment cmt">Represents an abstract grid over geographic extent.</p><div class="fullcomment"><div class="comment cmt"><p>Represents an abstract grid over geographic extent.
 Critically while the number of cell rows and columns is implied by the constructor arguments,
-they are intentionally not expressed to avoid Int overflow for large grids.
+they are intentionally not expressed to avoid Int overflow for large grids.</p><p>The constructor will throw <span class="extype" name="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException</span> if the provided extent and cell size do not match the
+provided cols and rows (dimensions).
 </p></div></div>
     </li><li name="geotrellis.raster.HasNoData" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="HasNoData[T]extendsNoDataHandling"></a><a id="HasNoData[T]:HasNoData[T]"></a>

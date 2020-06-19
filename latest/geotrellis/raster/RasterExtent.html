@@ -2005,8 +2005,8 @@ resolution.
         <span class="name">combine</span><span class="params">(<span name="that">that: <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>[<a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>)</span><span class="result">: <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>[<a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>
       </span>
       
-      <p class="shortcomment cmt">Combine two different <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>s (which must have the
-same cellsizes).</p><div class="fullcomment"><div class="comment cmt"><p>Combine two different <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>s (which must have the
+      <p class="shortcomment cmt">Combine two different GridExtents (which must have the
+same cellsizes).</p><div class="fullcomment"><div class="comment cmt"><p>Combine two different GridExtents (which must have the
 same cellsizes).  The result is a new extent at the same
 resolution.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
@@ -2070,8 +2070,8 @@ the grid and also covers <code><code>targetExtent</code></code>.
         <span class="name">createAlignedRasterExtent</span><span class="params">(<span name="targetExtent">targetExtent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>)</span><span class="result">: <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a></span>
       </span>
       
-      <p class="shortcomment cmt">Returns a RasterExtent that lines up with this RasterExtent's
-resolution, and grid layout.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a RasterExtent that lines up with this RasterExtent's
+      <p class="shortcomment cmt">Returns a <a href="" class="extype" name="geotrellis.raster.RasterExtent">geotrellis.raster.RasterExtent</a> that lines up with this RasterExtent's
+resolution, and grid layout.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a <a href="" class="extype" name="geotrellis.raster.RasterExtent">geotrellis.raster.RasterExtent</a> that lines up with this RasterExtent's
 resolution, and grid layout.</p><p>For example, the resulting RasterExtent will not have the given
 extent, but will have the smallest extent such that the whole of
 the given extent is covered, that lines up with the grid.
@@ -2156,12 +2156,12 @@ the given extent is covered, that lines up with the grid.
       </span>
       
       <p class="shortcomment cmt">Gets the Extent that matches the grid bounds passed in, aligned
-with this RasterExtent.</p><div class="fullcomment"><div class="comment cmt"><p>Gets the Extent that matches the grid bounds passed in, aligned
-with this RasterExtent.</p><p>The 'clamp' parameter determines whether or not to clamp the
-Extent to the extent of this RasterExtent; defaults to true. If
+with this GridExtent.</p><div class="fullcomment"><div class="comment cmt"><p>Gets the Extent that matches the grid bounds passed in, aligned
+with this GridExtent.</p><p>The 'clamp' parameter determines whether or not to clamp the
+Extent to the extent of this GridExtent; defaults to true. If
 true, the returned extent will be contained by this
-RasterExtent's extent, if false, the Extent returned can be
-outside of this RasterExtent's extent.
+GridExtent's extent, if false, the Extent returned can be
+outside of this GridExtent's extent.
 </p></div><dl class="paramcmts block"><dt class="param">cellBounds</dt><dd class="cmt"><p>The extent to get the grid bounds for</p></dd><dt class="param">clamp</dt><dd class="cmt"><p>A boolean which controlls the clamping behvior</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
@@ -2219,15 +2219,15 @@ outside of this RasterExtent's extent.
         <span class="name">gridBoundsFor</span><span class="params">(<span name="subExtent">subExtent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="clamp">clamp: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a> = <span class="symbol">true</span></span>)</span><span class="result">: <a href="GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a>[<a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>
       </span>
       
-      <p class="shortcomment cmt">Gets the GridBounds aligned with this RasterExtent that is the
-smallest subgrid containing all points within the extent.</p><div class="fullcomment"><div class="comment cmt"><p>Gets the GridBounds aligned with this RasterExtent that is the
+      <p class="shortcomment cmt">Gets the GridBounds aligned with this GridExtent that is the
+smallest subgrid containing all points within the extent.</p><div class="fullcomment"><div class="comment cmt"><p>Gets the GridBounds aligned with this GridExtent that is the
 smallest subgrid containing all points within the extent. The
 extent is considered inclusive on it's north and west borders,
-exclusive on it's east and south borders.  See <a href="" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>
+exclusive on it's east and south borders.  See <a href="" class="extype" name="geotrellis.raster.RasterExtent">geotrellis.raster.RasterExtent</a>
 for a discussion of grid and extent boundary concepts.</p><p>The 'clamp' flag determines whether or not to clamp the
 GridBounds to the RasterExtent; defaults to true. If false,
 GridBounds can contain negative values, or values outside of
-this RasterExtent's boundaries.
+this GridExtent's boundaries.
 </p></div><dl class="paramcmts block"><dt class="param">subExtent</dt><dd class="cmt"><p>The extent to get the grid bounds for</p></dd><dt class="param">clamp</dt><dd class="cmt"><p>A boolean</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
     </li><li name="geotrellis.raster.GridExtent#gridColToMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="gridColToMap(col:N):Double"></a><a id="gridColToMap(Int):Double"></a>
@@ -2244,7 +2244,7 @@ this RasterExtent's boundaries.
         <span class="name">gridColToMap</span><span class="params">(<span name="col">col: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>
       </span>
       
-      <p class="shortcomment cmt">For a give column, find the corresponding x-coordinate in the grid of the present <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>.</p><div class="fullcomment"><div class="comment cmt"><p>For a give column, find the corresponding x-coordinate in the grid of the present <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
+      <p class="shortcomment cmt">For a given column, find the corresponding x-coordinate in the grid of the present GridExtent.</p><div class="fullcomment"><div class="comment cmt"><p>For a given column, find the corresponding x-coordinate in the grid of the present GridExtent.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
     </li><li name="geotrellis.raster.GridExtent#gridRowToMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="gridRowToMap(row:N):Double"></a><a id="gridRowToMap(Int):Double"></a>
       <span class="permalink">
@@ -2260,7 +2260,7 @@ this RasterExtent's boundaries.
         <span class="name">gridRowToMap</span><span class="params">(<span name="row">row: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>
       </span>
       
-      <p class="shortcomment cmt">For a give row, find the corresponding y-coordinate in the grid of the present <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>.</p><div class="fullcomment"><div class="comment cmt"><p>For a give row, find the corresponding y-coordinate in the grid of the present <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
+      <p class="shortcomment cmt">For a given row, find the corresponding y-coordinate in the grid of the present GridExtent.</p><div class="fullcomment"><div class="comment cmt"><p>For a given row, find the corresponding y-coordinate in the grid of the present GridExtent.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a></dd></dl></div>
     </li><li name="geotrellis.raster.GridExtent#gridToMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="gridToMap(col:N,row:N):(Double,Double)"></a><a id="gridToMap(Int,Int):(Double,Double)"></a>
       <span class="permalink">
