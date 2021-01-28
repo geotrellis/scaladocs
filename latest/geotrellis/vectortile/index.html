@@ -365,7 +365,11 @@ details internal to the VectorTile encoding/decoding process.</p>
                         <a class="class" href="MVTFeature.html" title="A case class that conforms to the Mapbox Vector Tile 2.0 specification"></a>
                         <a href="MVTFeature.html" title="A case class that conforms to the Mapbox Vector Tile 2.0 specification">MVTFeature</a>
                       </li><li class="current-entities indented2">
-                        <span class="separator"></span>
+                        <a class="object" href="MVTFeatures$.html" title=""></a>
+                        <a class="class" href="MVTFeatures.html" title="Container case class for collections of MVTFeatures"></a>
+                        <a href="MVTFeatures.html" title="Container case class for collections of MVTFeatures">MVTFeatures</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="StrictLayer$.html" title=""></a>
                         <a class="class" href="StrictLayer.html" title="A Layer crafted through some strict ingest process."></a>
                         <a href="StrictLayer.html" title="A Layer crafted through some strict ingest process.">StrictLayer</a>
                       </li><li class="current-entities indented2">
@@ -586,6 +590,26 @@ lazily, making for very fast extraction of single features/geometries.</p></div>
 objects to MVTFeatures so that they can be written to mvts using
 <a href="VectorTile.html" class="extype" name="geotrellis.vectortile.VectorTile">VectorTile</a>.</p><p>https://docs.mapbox.com/vector-tiles/specification/
 </p></div></div>
+    </li><li name="geotrellis.vectortile.MVTFeatures" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="MVTFeaturesextendsProductwithSerializable"></a><a id="MVTFeatures:MVTFeatures"></a>
+      <span class="permalink">
+      <a href="../../geotrellis/vectortile/MVTFeatures.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Container case class for collections of MVTFeatures" href="MVTFeatures.html"><span class="name">MVTFeatures</span></a><span class="params">(<span name="points">points: <span class="extype" name="scala.Seq">Seq</span>[<a href="MVTFeature.html" class="extype" name="geotrellis.vectortile.MVTFeature">MVTFeature</a>[<a href="../vector/index.html#Point=org.locationtech.jts.geom.Point" class="extmbr" name="geotrellis.vector.Point">Point</a>]]</span>, <span name="multiPoints">multiPoints: <span class="extype" name="scala.Seq">Seq</span>[<a href="MVTFeature.html" class="extype" name="geotrellis.vectortile.MVTFeature">MVTFeature</a>[<a href="../vector/index.html#MultiPoint=org.locationtech.jts.geom.MultiPoint" class="extmbr" name="geotrellis.vector.MultiPoint">MultiPoint</a>]]</span>, <span name="lines">lines: <span class="extype" name="scala.Seq">Seq</span>[<a href="MVTFeature.html" class="extype" name="geotrellis.vectortile.MVTFeature">MVTFeature</a>[<a href="../vector/index.html#LineString=org.locationtech.jts.geom.LineString" class="extmbr" name="geotrellis.vector.LineString">LineString</a>]]</span>, <span name="multiLines">multiLines: <span class="extype" name="scala.Seq">Seq</span>[<a href="MVTFeature.html" class="extype" name="geotrellis.vectortile.MVTFeature">MVTFeature</a>[<a href="../vector/index.html#MultiLineString=org.locationtech.jts.geom.MultiLineString" class="extmbr" name="geotrellis.vector.MultiLineString">MultiLineString</a>]]</span>, <span name="polygons">polygons: <span class="extype" name="scala.Seq">Seq</span>[<a href="MVTFeature.html" class="extype" name="geotrellis.vectortile.MVTFeature">MVTFeature</a>[<a href="../vector/index.html#Polygon=org.locationtech.jts.geom.Polygon" class="extmbr" name="geotrellis.vector.Polygon">Polygon</a>]]</span>, <span name="multiPolygons">multiPolygons: <span class="extype" name="scala.Seq">Seq</span>[<a href="MVTFeature.html" class="extype" name="geotrellis.vectortile.MVTFeature">MVTFeature</a>[<a href="../vector/index.html#MultiPolygon=org.locationtech.jts.geom.MultiPolygon" class="extmbr" name="geotrellis.vector.MultiPolygon">MultiPolygon</a>]]</span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.12/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.12/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Container case class for collections of <a href="MVTFeature.html" class="extype" name="geotrellis.vectortile.MVTFeature">MVTFeature</a>s</p><div class="fullcomment"><div class="comment cmt"><p>Container case class for collections of <a href="MVTFeature.html" class="extype" name="geotrellis.vectortile.MVTFeature">MVTFeature</a>s</p><p>This is separated for ease of use when reading geometries from
+places. With the <code>Monoid</code> instance for <code>MVTFeatures</code>, each geometry
+can be lifted into a seq in the relevant attribute, and then
+the separate <code>MVTFeatures</code> case classes can all be combined.
+</p></div></div>
     </li><li name="geotrellis.vectortile.StrictLayer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="StrictLayerextendsLayerwithProductwithSerializable"></a><a id="StrictLayer:StrictLayer"></a>
       <span class="permalink">
@@ -598,7 +622,7 @@ objects to MVTFeatures so that they can be written to mvts using
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="A Layer crafted through some strict ingest process." href="StrictLayer.html"><span class="name">StrictLayer</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tileWidth">tileWidth: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="version">version: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="tileExtent">tileExtent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="points">points: <span class="extype" name="scala.Seq">Seq</span>[<a href="MVTFeature.html" class="extype" name="geotrellis.vectortile.MVTFeature">MVTFeature</a>[<a href="../vector/index.html#Point=org.locationtech.jts.geom.Point" class="extmbr" name="geotrellis.vector.Point">Point</a>]]</span>, <span name="multiPoints">multiPoints: <span class="extype" name="scala.Seq">Seq</span>[<a href="MVTFeature.html" class="extype" name="geotrellis.vectortile.MVTFeature">MVTFeature</a>[<a href="../vector/index.html#MultiPoint=org.locationtech.jts.geom.MultiPoint" class="extmbr" name="geotrellis.vector.MultiPoint">MultiPoint</a>]]</span>, <span name="lines">lines: <span class="extype" name="scala.Seq">Seq</span>[<a href="MVTFeature.html" class="extype" name="geotrellis.vectortile.MVTFeature">MVTFeature</a>[<a href="../vector/index.html#LineString=org.locationtech.jts.geom.LineString" class="extmbr" name="geotrellis.vector.LineString">LineString</a>]]</span>, <span name="multiLines">multiLines: <span class="extype" name="scala.Seq">Seq</span>[<a href="MVTFeature.html" class="extype" name="geotrellis.vectortile.MVTFeature">MVTFeature</a>[<a href="../vector/index.html#MultiLineString=org.locationtech.jts.geom.MultiLineString" class="extmbr" name="geotrellis.vector.MultiLineString">MultiLineString</a>]]</span>, <span name="polygons">polygons: <span class="extype" name="scala.Seq">Seq</span>[<a href="MVTFeature.html" class="extype" name="geotrellis.vectortile.MVTFeature">MVTFeature</a>[<a href="../vector/index.html#Polygon=org.locationtech.jts.geom.Polygon" class="extmbr" name="geotrellis.vector.Polygon">Polygon</a>]]</span>, <span name="multiPolygons">multiPolygons: <span class="extype" name="scala.Seq">Seq</span>[<a href="MVTFeature.html" class="extype" name="geotrellis.vectortile.MVTFeature">MVTFeature</a>[<a href="../vector/index.html#MultiPolygon=org.locationtech.jts.geom.MultiPolygon" class="extmbr" name="geotrellis.vector.MultiPolygon">MultiPolygon</a>]]</span>)</span><span class="result"> extends <a href="Layer.html" class="extype" name="geotrellis.vectortile.Layer">Layer</a> with <a href="https://www.scala-lang.org/api/2.12.12/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.12/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="A Layer crafted through some strict ingest process." href="StrictLayer.html"><span class="name">StrictLayer</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tileWidth">tileWidth: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="version">version: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="tileExtent">tileExtent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="mvtFeatures">mvtFeatures: <a href="MVTFeatures.html" class="extype" name="geotrellis.vectortile.MVTFeatures">MVTFeatures</a></span>)</span><span class="result"> extends <a href="Layer.html" class="extype" name="geotrellis.vectortile.Layer">Layer</a> with <a href="https://www.scala-lang.org/api/2.12.12/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.12/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">A <a href="Layer.html" class="extype" name="geotrellis.vectortile.Layer">Layer</a> crafted through some strict ingest process.</p><div class="fullcomment"><div class="comment cmt"><p>A <a href="Layer.html" class="extype" name="geotrellis.vectortile.Layer">Layer</a> crafted through some strict ingest process.</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
@@ -806,6 +830,38 @@ they can search through the Tile quickly.</p><pre><span class="kw">import</span>
       </span>
       <span class="symbol">
         <a title="" href="MVTFeature$.html"><span class="name">MVTFeature</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.12/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      
+    </li><li name="geotrellis.vectortile.MVTFeatures" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MVTFeatures"></a><a id="MVTFeatures:MVTFeatures"></a>
+      <span class="permalink">
+      <a href="../../geotrellis/vectortile/MVTFeatures$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="MVTFeatures$.html"><span class="name">MVTFeatures</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.12/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      
+    </li><li name="geotrellis.vectortile.StrictLayer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StrictLayer"></a><a id="StrictLayer:StrictLayer"></a>
+      <span class="permalink">
+      <a href="../../geotrellis/vectortile/StrictLayer$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="StrictLayer$.html"><span class="name">StrictLayer</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.12/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
