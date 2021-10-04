@@ -719,6 +719,10 @@
                         <a href="BitConstantTile.html" title="The BitConstantTile type.">BitConstantTile</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="class" href="BufferTile.html" title="When combined with another BufferTile the two tiles will be aligned on (0, 0) pixel of tile center."></a>
+                        <a href="BufferTile.html" title="When combined with another BufferTile the two tiles will be aligned on (0, 0) pixel of tile center.">BufferTile</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="class" href="package$$ByteArrayFiller.html" title=""></a>
                         <a href="package$$ByteArrayFiller.html" title="">ByteArrayFiller</a>
                       </li><li class="current-entities indented2">
@@ -1361,6 +1365,10 @@
                         <span class="separator"></span>
                         <a class="trait" href="WidenedNoData.html" title="Container for NoData value using wider word size than declared to handled unsigned number rollover."></a>
                         <a href="WidenedNoData.html" title="Container for NoData value using wider word size than declared to handled unsigned number rollover.">WidenedNoData</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="mapalgebra/focal/Implicits$withBufferTileFocalMethods.html" title=""></a>
+                        <a href="mapalgebra/focal/Implicits$withBufferTileFocalMethods.html" title="">withBufferTileFocalMethods</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="Implicits$withCellFeaturesMethods.html" title=""></a>
@@ -2031,6 +2039,27 @@ both need to allocate an Array[Byte] with length=1.
       </span>
       
       <p class="shortcomment cmt">The <a href="BitConstantTile.html" class="extype" name="geotrellis.raster.BitConstantTile">BitConstantTile</a> type.</p>
+    </li><li name="geotrellis.raster.BufferTile" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BufferTileextendsTilewithProductwithSerializable"></a><a id="BufferTile:BufferTile"></a>
+      <span class="permalink">
+      <a href="../../geotrellis/raster/BufferTile.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="When combined with another BufferTile the two tiles will be aligned on (0, 0) pixel of tile center." href="BufferTile.html"><span class="name">BufferTile</span></a><span class="params">(<span name="sourceTile">sourceTile: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>, <span name="gridBounds">gridBounds: <a href="GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a>[<a href="https://www.scala-lang.org/api/2.12.14/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>)</span><span class="result"> extends <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> with <a href="https://www.scala-lang.org/api/2.12.14/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.14/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">When combined with another BufferTile the two tiles will be aligned on (0, 0) pixel of tile center.</p><div class="fullcomment"><div class="comment cmt"><p>When combined with another BufferTile the two tiles will be aligned on (0, 0) pixel of tile center.
+The operation will be carried over all overlapping pixels.
+For instance: combining a tile padded with 5 pixels on all sides with tile padded with 3 pixels on all sides will
+result in buffer tile with 3 pixel padding on all sides.</p><p>When combined with another BufferTile the operation will be executed over the maximum shared in</p><p>Behaves like a regular tile within the gridBounds. The access to the buffer is achieved through the direct
+access to the sourceTile or via the mapTile function that maps over the sourceTile.
+</p></div></div>
     </li><li name="geotrellis.raster.ByteArrayFiller" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ByteArrayFillerextendsAnyVal"></a><a id="ByteArrayFiller:ByteArrayFiller"></a>
       <span class="permalink">
@@ -4922,6 +4951,22 @@ unsigned number rollover.</p>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="interpolation/Implicits.html" class="extype" name="geotrellis.raster.interpolation.Implicits">Implicits</a></dd></dl></div>
+    </li><li name="geotrellis.raster.mapalgebra.focal.Implicits.withBufferTileFocalMethods" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="withBufferTileFocalMethodsextendsBufferTileFocalMethods"></a><a id="withBufferTileFocalMethods:withBufferTileFocalMethods"></a>
+      <span class="permalink">
+      <a href="../../geotrellis/raster/mapalgebra/focal/Implicits$withBufferTileFocalMethods.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="mapalgebra/focal/Implicits$withBufferTileFocalMethods.html"><span class="name">withBufferTileFocalMethods</span></a><span class="result"> extends <a href="mapalgebra/focal/BufferTileFocalMethods.html" class="extype" name="geotrellis.raster.mapalgebra.focal.BufferTileFocalMethods">BufferTileFocalMethods</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="mapalgebra/focal/Implicits.html" class="extype" name="geotrellis.raster.mapalgebra.focal.Implicits">Implicits</a></dd></dl></div>
     </li><li name="geotrellis.raster.mapalgebra.focal.Implicits.withTileFocalMethods" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="withTileFocalMethodsextendsFocalMethods"></a><a id="withTileFocalMethods:withTileFocalMethods"></a>
       <span class="permalink">
