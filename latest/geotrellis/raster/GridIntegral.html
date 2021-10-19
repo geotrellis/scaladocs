@@ -655,8 +655,8 @@
                         <a href="ByteConstantTile.html" title="The ByteConstantTile type.">ByteConstantTile</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="class" href="" title="A ByteRawArrayTile, created from the given array, with the given number of columns and rows."></a>
-                        <a href="" title="A ByteRawArrayTile, created from the given array, with the given number of columns and rows.">ByteRawArrayTile</a>
+                        <a class="class" href="ByteRawArrayTile.html" title="A ByteRawArrayTile, created from the given array, with the given number of columns and rows."></a>
+                        <a href="ByteRawArrayTile.html" title="A ByteRawArrayTile, created from the given array, with the given number of columns and rows.">ByteRawArrayTile</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="ByteUserDefinedNoDataArrayTile.html" title="A ByteUserDefinedNoDataArrayTile, created from the given array, with the given number of columns and rows."></a>
@@ -867,8 +867,8 @@
                         <a href="GridExtent.html" title="Represents an abstract grid over geographic extent.">GridExtent</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="class" href="GridIntegral.html" title=""></a>
-                        <a href="GridIntegral.html" title="">GridIntegral</a>
+                        <a class="class" href="" title=""></a>
+                        <a href="" title="">GridIntegral</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="HasNoData.html" title="Base trait for all cell type having a NoData value"></a>
@@ -1642,8 +1642,8 @@
       <div id="definition">
         <div class="big-circle class">c</div>
         <p id="owner"><a href="../index.html" class="extype" name="geotrellis">geotrellis</a>.<a href="index.html" class="extype" name="geotrellis.raster">raster</a></p>
-        <h1>ByteRawArrayTile<span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html" title="Permalink">
+        <h1>GridIntegral<span class="permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
@@ -1652,23 +1652,26 @@
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">case class</span>
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">ByteRawArrayTile</span><span class="params">(<span name="arr">arr: <a href="https://www.scala-lang.org/api/2.12.15/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Byte.html#scala.Byte" class="extype" name="scala.Byte">Byte</a>]</span>, <span name="cols">cols: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="rows">rows: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result"> extends <a href="ByteArrayTile.html" class="extype" name="geotrellis.raster.ByteArrayTile">ByteArrayTile</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <span class="name">GridIntegral</span><span class="tparams">[<span name="N">N</span>]</span><span class="result"> extends <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a>[<span class="extype" name="geotrellis.raster.GridIntegral.N">N</span>]</span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A <a href="" class="extype" name="geotrellis.raster.ByteRawArrayTile">ByteRawArrayTile</a>, created from the given array, with the
-given number of columns and rows.
-</p></div><dl class="paramcmts block"><dt class="param">arr</dt><dd class="cmt"><p>The array of bytes from which to initialize the tile</p></dd><dt class="param">cols</dt><dd class="cmt"><p>The number of columns</p></dd><dt class="param">rows</dt><dd class="cmt"><p>The number of rows</p></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Equals.html#scala.Equals" class="extype" name="scala.Equals">Equals</a>, <a href="ByteArrayTile.html" class="extype" name="geotrellis.raster.ByteArrayTile">ByteArrayTile</a>, <a href="MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a>, <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>, <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>, <a href="MappableTile.html" class="extype" name="geotrellis.raster.MappableTile">MappableTile</a>[<a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>], <a href="../macros/MacroMappableTile.html" class="extype" name="geotrellis.macros.MacroMappableTile">MacroMappableTile</a>[<a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>], <a href="IterableTile.html" class="extype" name="geotrellis.raster.IterableTile">IterableTile</a>, <a href="../macros/MacroIterableTile.html" class="extype" name="geotrellis.macros.MacroIterableTile">MacroIterableTile</a>, <a href="CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>], <a href="GridIntegral.html" class="extype" name="geotrellis.raster.GridIntegral">GridIntegral</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>], <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>], <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
-        </div></div>
+          <div class="superTypes hiddenContent"><a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a>[<span class="extype" name="geotrellis.raster.GridIntegral.N">N</span>], <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+        </div><div class="toggleContainer block">
+            <span class="toggle">
+              Known Subclasses
+            </span>
+            <div class="subClasses hiddenContent"><a href="../layer/LayoutDefinition.html" class="extype" name="geotrellis.layer.LayoutDefinition">LayoutDefinition</a>, <a href="ArrayMultibandTile.html" class="extype" name="geotrellis.raster.ArrayMultibandTile">ArrayMultibandTile</a>, <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>, <a href="BitArrayTile.html" class="extype" name="geotrellis.raster.BitArrayTile">BitArrayTile</a>, <a href="BitConstantTile.html" class="extype" name="geotrellis.raster.BitConstantTile">BitConstantTile</a>, <a href="BufferTile.html" class="extype" name="geotrellis.raster.BufferTile">BufferTile</a>, <a href="ByteArrayTile.html" class="extype" name="geotrellis.raster.ByteArrayTile">ByteArrayTile</a>, <a href="ByteConstantNoDataArrayTile.html" class="extype" name="geotrellis.raster.ByteConstantNoDataArrayTile">ByteConstantNoDataArrayTile</a>, <a href="ByteConstantTile.html" class="extype" name="geotrellis.raster.ByteConstantTile">ByteConstantTile</a>, <a href="ByteRawArrayTile.html" class="extype" name="geotrellis.raster.ByteRawArrayTile">ByteRawArrayTile</a>, <a href="ByteUserDefinedNoDataArrayTile.html" class="extype" name="geotrellis.raster.ByteUserDefinedNoDataArrayTile">ByteUserDefinedNoDataArrayTile</a>, <a href="CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a>, <a href="CompositeTile.html" class="extype" name="geotrellis.raster.CompositeTile">CompositeTile</a>, <a href="ConstantTile.html" class="extype" name="geotrellis.raster.ConstantTile">ConstantTile</a>, <a href="CroppedTile.html" class="extype" name="geotrellis.raster.CroppedTile">CroppedTile</a>, <a href="DelayedConversionMultibandTile.html" class="extype" name="geotrellis.raster.DelayedConversionMultibandTile">DelayedConversionMultibandTile</a>, <a href="DelayedConversionTile.html" class="extype" name="geotrellis.raster.DelayedConversionTile">DelayedConversionTile</a>, <a href="DelegatingTile.html" class="extype" name="geotrellis.raster.DelegatingTile">DelegatingTile</a>, <a href="DoubleArrayTile.html" class="extype" name="geotrellis.raster.DoubleArrayTile">DoubleArrayTile</a>, <a href="DoubleConstantNoDataArrayTile.html" class="extype" name="geotrellis.raster.DoubleConstantNoDataArrayTile">DoubleConstantNoDataArrayTile</a>, <a href="DoubleConstantTile.html" class="extype" name="geotrellis.raster.DoubleConstantTile">DoubleConstantTile</a>, <a href="DoubleRawArrayTile.html" class="extype" name="geotrellis.raster.DoubleRawArrayTile">DoubleRawArrayTile</a>, <a href="DoubleUserDefinedNoDataArrayTile.html" class="extype" name="geotrellis.raster.DoubleUserDefinedNoDataArrayTile">DoubleUserDefinedNoDataArrayTile</a>, <a href="FloatArrayTile.html" class="extype" name="geotrellis.raster.FloatArrayTile">FloatArrayTile</a>, <a href="FloatConstantNoDataArrayTile.html" class="extype" name="geotrellis.raster.FloatConstantNoDataArrayTile">FloatConstantNoDataArrayTile</a>, <a href="FloatConstantTile.html" class="extype" name="geotrellis.raster.FloatConstantTile">FloatConstantTile</a>, <a href="FloatRawArrayTile.html" class="extype" name="geotrellis.raster.FloatRawArrayTile">FloatRawArrayTile</a>, <a href="FloatUserDefinedNoDataArrayTile.html" class="extype" name="geotrellis.raster.FloatUserDefinedNoDataArrayTile">FloatUserDefinedNoDataArrayTile</a>, <a href="GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>, <a href="IntArrayTile.html" class="extype" name="geotrellis.raster.IntArrayTile">IntArrayTile</a>, <a href="IntConstantNoDataArrayTile.html" class="extype" name="geotrellis.raster.IntConstantNoDataArrayTile">IntConstantNoDataArrayTile</a>, <a href="IntConstantTile.html" class="extype" name="geotrellis.raster.IntConstantTile">IntConstantTile</a>, <a href="IntRawArrayTile.html" class="extype" name="geotrellis.raster.IntRawArrayTile">IntRawArrayTile</a>, <a href="IntUserDefinedNoDataArrayTile.html" class="extype" name="geotrellis.raster.IntUserDefinedNoDataArrayTile">IntUserDefinedNoDataArrayTile</a>, <a href="MosaicRasterSource.html" class="extype" name="geotrellis.raster.MosaicRasterSource">MosaicRasterSource</a>, <a href="MultibandTile.html" class="extype" name="geotrellis.raster.MultibandTile">MultibandTile</a>, <a href="MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a>, <a href="PaddedTile.html" class="extype" name="geotrellis.raster.PaddedTile">PaddedTile</a>, <a href="PixelInterleaveBandArrayTile.html" class="extype" name="geotrellis.raster.PixelInterleaveBandArrayTile">PixelInterleaveBandArrayTile</a>, <a href="ProjectedRasterExtent.html" class="extype" name="geotrellis.raster.ProjectedRasterExtent">ProjectedRasterExtent</a>, <a href="Raster.html" class="extype" name="geotrellis.raster.Raster">Raster</a>, <a href="RasterExtent.html" class="extype" name="geotrellis.raster.RasterExtent">RasterExtent</a>, <a href="RasterRegion.html" class="extype" name="geotrellis.raster.RasterRegion">RasterRegion</a>, <a href="RasterRegion$$GridBoundsRasterRegion.html" class="extype" name="geotrellis.raster.RasterRegion.GridBoundsRasterRegion">GridBoundsRasterRegion</a>, <a href="RasterSource.html" class="extype" name="geotrellis.raster.RasterSource">RasterSource</a>, <a href="ShortArrayTile.html" class="extype" name="geotrellis.raster.ShortArrayTile">ShortArrayTile</a>, <a href="ShortConstantNoDataArrayTile.html" class="extype" name="geotrellis.raster.ShortConstantNoDataArrayTile">ShortConstantNoDataArrayTile</a>, <a href="ShortConstantTile.html" class="extype" name="geotrellis.raster.ShortConstantTile">ShortConstantTile</a>, <a href="ShortRawArrayTile.html" class="extype" name="geotrellis.raster.ShortRawArrayTile">ShortRawArrayTile</a>, <a href="ShortUserDefinedNoDataArrayTile.html" class="extype" name="geotrellis.raster.ShortUserDefinedNoDataArrayTile">ShortUserDefinedNoDataArrayTile</a>, <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>, <a href="TileFeature.html" class="extype" name="geotrellis.raster.TileFeature">TileFeature</a>, <a href="UByteArrayTile.html" class="extype" name="geotrellis.raster.UByteArrayTile">UByteArrayTile</a>, <a href="UByteConstantNoDataArrayTile.html" class="extype" name="geotrellis.raster.UByteConstantNoDataArrayTile">UByteConstantNoDataArrayTile</a>, <a href="UByteConstantTile.html" class="extype" name="geotrellis.raster.UByteConstantTile">UByteConstantTile</a>, <a href="UByteRawArrayTile.html" class="extype" name="geotrellis.raster.UByteRawArrayTile">UByteRawArrayTile</a>, <a href="UByteUserDefinedNoDataArrayTile.html" class="extype" name="geotrellis.raster.UByteUserDefinedNoDataArrayTile">UByteUserDefinedNoDataArrayTile</a>, <a href="UShortArrayTile.html" class="extype" name="geotrellis.raster.UShortArrayTile">UShortArrayTile</a>, <a href="UShortConstantNoDataArrayTile.html" class="extype" name="geotrellis.raster.UShortConstantNoDataArrayTile">UShortConstantNoDataArrayTile</a>, <a href="UShortConstantTile.html" class="extype" name="geotrellis.raster.UShortConstantTile">UShortConstantTile</a>, <a href="UShortRawArrayTile.html" class="extype" name="geotrellis.raster.UShortRawArrayTile">UShortRawArrayTile</a>, <a href="UShortUserDefinedNoDataArrayTile.html" class="extype" name="geotrellis.raster.UShortUserDefinedNoDataArrayTile">UShortUserDefinedNoDataArrayTile</a>, <a href="gdal/GDALRasterSource.html" class="extype" name="geotrellis.raster.gdal.GDALRasterSource">GDALRasterSource</a>, <a href="geotiff/GeoTiffRasterSource.html" class="extype" name="geotrellis.raster.geotiff.GeoTiffRasterSource">GeoTiffRasterSource</a>, <a href="geotiff/GeoTiffReprojectRasterSource.html" class="extype" name="geotrellis.raster.geotiff.GeoTiffReprojectRasterSource">GeoTiffReprojectRasterSource</a>, <a href="geotiff/GeoTiffResampleRasterSource.html" class="extype" name="geotrellis.raster.geotiff.GeoTiffResampleRasterSource">GeoTiffResampleRasterSource</a>, <a href="io/geotiff/BitGeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.BitGeoTiffMultibandTile">BitGeoTiffMultibandTile</a>, <a href="io/geotiff/BitGeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.BitGeoTiffTile">BitGeoTiffTile</a>, <a href="io/geotiff/ByteGeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.ByteGeoTiffMultibandTile">ByteGeoTiffMultibandTile</a>, <a href="io/geotiff/ByteGeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.ByteGeoTiffTile">ByteGeoTiffTile</a>, <a href="io/geotiff/Float32GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.Float32GeoTiffMultibandTile">Float32GeoTiffMultibandTile</a>, <a href="io/geotiff/Float32GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.Float32GeoTiffTile">Float32GeoTiffTile</a>, <a href="io/geotiff/Float64GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.Float64GeoTiffMultibandTile">Float64GeoTiffMultibandTile</a>, <a href="io/geotiff/Float64GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.Float64GeoTiffTile">Float64GeoTiffTile</a>, <a href="io/geotiff/GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffMultibandTile">GeoTiffMultibandTile</a>, <a href="io/geotiff/GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.GeoTiffTile">GeoTiffTile</a>, <a href="io/geotiff/Int16GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.Int16GeoTiffMultibandTile">Int16GeoTiffMultibandTile</a>, <a href="io/geotiff/Int16GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.Int16GeoTiffTile">Int16GeoTiffTile</a>, <a href="io/geotiff/Int32GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.Int32GeoTiffMultibandTile">Int32GeoTiffMultibandTile</a>, <a href="io/geotiff/Int32GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.Int32GeoTiffTile">Int32GeoTiffTile</a>, <a href="io/geotiff/UByteGeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.UByteGeoTiffMultibandTile">UByteGeoTiffMultibandTile</a>, <a href="io/geotiff/UByteGeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.UByteGeoTiffTile">UByteGeoTiffTile</a>, <a href="io/geotiff/UInt16GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.UInt16GeoTiffMultibandTile">UInt16GeoTiffMultibandTile</a>, <a href="io/geotiff/UInt16GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.UInt16GeoTiffTile">UInt16GeoTiffTile</a>, <a href="io/geotiff/UInt32GeoTiffMultibandTile.html" class="extype" name="geotrellis.raster.io.geotiff.UInt32GeoTiffMultibandTile">UInt32GeoTiffMultibandTile</a>, <a href="io/geotiff/UInt32GeoTiffTile.html" class="extype" name="geotrellis.raster.io.geotiff.UInt32GeoTiffTile">UInt32GeoTiffTile</a>, <a href="../store/GeoTrellisRasterSource.html" class="extype" name="geotrellis.store.GeoTrellisRasterSource">GeoTrellisRasterSource</a>, <a href="../store/GeoTrellisReprojectRasterSource.html" class="extype" name="geotrellis.store.GeoTrellisReprojectRasterSource">GeoTrellisReprojectRasterSource</a>, <a href="../store/GeoTrellisResampleRasterSource.html" class="extype" name="geotrellis.store.GeoTrellisResampleRasterSource">GeoTrellisResampleRasterSource</a></div>
+          </div></div>
         
 
       <div id="mbrsel">
@@ -1693,7 +1696,7 @@ given number of columns and rows.
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="geotrellis.raster.ByteRawArrayTile"><span>ByteRawArrayTile</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="geotrellis.raster.ByteArrayTile"><span>ByteArrayTile</span></li><li class="in" name="geotrellis.raster.MutableArrayTile"><span>MutableArrayTile</span></li><li class="in" name="geotrellis.raster.ArrayTile"><span>ArrayTile</span></li><li class="in" name="geotrellis.raster.Tile"><span>Tile</span></li><li class="in" name="geotrellis.raster.MappableTile"><span>MappableTile</span></li><li class="in" name="geotrellis.macros.MacroMappableTile"><span>MacroMappableTile</span></li><li class="in" name="geotrellis.raster.IterableTile"><span>IterableTile</span></li><li class="in" name="geotrellis.macros.MacroIterableTile"><span>MacroIterableTile</span></li><li class="in" name="geotrellis.raster.CellGrid"><span>CellGrid</span></li><li class="in" name="geotrellis.raster.GridIntegral"><span>GridIntegral</span></li><li class="in" name="geotrellis.raster.Grid"><span>Grid</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="geotrellis.raster.GridIntegral"><span>GridIntegral</span></li><li class="in" name="geotrellis.raster.Grid"><span>Grid</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -1713,10 +1716,10 @@ given number of columns and rows.
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="geotrellis.raster.ByteRawArrayTile#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(arr:Array[Byte],cols:Int,rows:Int):geotrellis.raster.ByteRawArrayTile"></a><a id="&lt;init&gt;:ByteRawArrayTile"></a>
+              <ol><li name="geotrellis.raster.GridIntegral#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;()(implicitevidence$1:spire.math.Integral[N]):geotrellis.raster.GridIntegral[N]"></a><a id="&lt;init&gt;:GridIntegral[N]"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#&lt;init&gt;(arr:Array[Byte],cols:Int,rows:Int):geotrellis.raster.ByteRawArrayTile" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#&lt;init&gt;()(implicitevidence$1:spire.math.Integral[N]):geotrellis.raster.GridIntegral[N]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1725,24 +1728,59 @@ given number of columns and rows.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ByteRawArrayTile</span><span class="params">(<span name="arr">arr: <a href="https://www.scala-lang.org/api/2.12.15/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Byte.html#scala.Byte" class="extype" name="scala.Byte">Byte</a>]</span>, <span name="cols">cols: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="rows">rows: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span>
+        <span class="name">GridIntegral</span><span class="params">()</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="spire.math.Integral">Integral</span>[<span class="extype" name="geotrellis.raster.GridIntegral.N">N</span>]</span>)</span>
       </span>
       
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">arr</dt><dd class="cmt"><p>The array of bytes from which to initialize the tile</p></dd><dt class="param">cols</dt><dd class="cmt"><p>The number of columns</p></dd><dt class="param">rows</dt><dd class="cmt"><p>The number of rows</p></dd></dl></div>
+      
     </li></ol>
             </div>
 
         
 
-        
+        <div class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="geotrellis.raster.Grid#cols" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="cols:N"></a>
+      <span class="permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#cols:N" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cols</span><span class="result">: <span class="extype" name="geotrellis.raster.GridIntegral.N">N</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
+    </li><li name="geotrellis.raster.Grid#rows" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="rows:N"></a>
+      <span class="permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#rows:N" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rows</span><span class="result">: <span class="extype" name="geotrellis.raster.GridIntegral.N">N</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
+    </li></ol>
+            </div>
 
         <div class="values members">
-              <h3>Value Members</h3>
+              <h3>Concrete Value Members</h3>
               <ol>
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1758,7 +1796,7 @@ given number of columns and rows.
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html###():Int" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1774,7 +1812,7 @@ given number of columns and rows.
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1787,76 +1825,10 @@ given number of columns and rows.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.raster.ByteRawArrayTile#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply(i:Int):Int"></a><a id="apply(Int):Int"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#apply(i:Int):Int" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="i">i: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Get the datum at the specified index.</p><div class="fullcomment"><div class="comment cmt"><p>Get the datum at the specified index.
-</p></div><dl class="paramcmts block"><dt class="param">i</dt><dd class="cmt"><p>The index of the datum</p></dd><dt>returns</dt><dd class="cmt"><p>The datum</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.ByteRawArrayTile">ByteRawArrayTile</a> → <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ByteRawArrayTile#applyDouble" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="applyDouble(i:Int):Double"></a><a id="applyDouble(Int):Double"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#applyDouble(i:Int):Double" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">applyDouble</span><span class="params">(<span name="i">i: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Get the datum at the specified index.</p><div class="fullcomment"><div class="comment cmt"><p>Get the datum at the specified index.
-</p></div><dl class="paramcmts block"><dt class="param">i</dt><dd class="cmt"><p>The index of the datum</p></dd><dt>returns</dt><dd class="cmt"><p>The datum</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.ByteRawArrayTile">ByteRawArrayTile</a> → <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ByteRawArrayTile#arr" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="arr:Array[Byte]"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#arr:Array[Byte]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">arr</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Byte.html#scala.Byte" class="extype" name="scala.Byte">Byte</a>]</span>
-      </span>
-      
-      
-    </li><li name="geotrellis.raster.ByteArrayTile#array" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="array:Array[Byte]"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#array:Array[Byte]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">array</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Byte.html#scala.Byte" class="extype" name="scala.Byte">Byte</a>]</span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ByteArrayTile.html" class="extype" name="geotrellis.raster.ByteArrayTile">ByteArrayTile</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1869,26 +1841,10 @@ given number of columns and rows.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.raster.ByteRawArrayTile#cellType" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="cellType:geotrellis.raster.ByteCellType.type"></a><a id="cellType:ByteCellType.type"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#cellType:geotrellis.raster.ByteCellType.type" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">cellType</span><span class="result">: <a href="ByteCellType$.html" class="extype" name="geotrellis.raster.ByteCellType">ByteCellType</a>.type</span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.ByteRawArrayTile">ByteRawArrayTile</a> → <a href="ByteArrayTile.html" class="extype" name="geotrellis.raster.ByteArrayTile">ByteArrayTile</a> → <a href="CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#clone():Object" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1909,146 +1865,10 @@ given number of columns and rows.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.raster.ByteRawArrayTile#cols" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="cols:Int"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#cols:Int" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">cols</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.ByteRawArrayTile">ByteRawArrayTile</a> → <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#combine" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="combine(other:geotrellis.raster.Tile)(f:(Int,Int)=&gt;Int):geotrellis.raster.Tile"></a><a id="combine(Tile)((Int,Int)⇒Int):Tile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#combine(other:geotrellis.raster.Tile)(f:(Int,Int)=&gt;Int):geotrellis.raster.Tile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">combine</span><span class="params">(<span name="other">other: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>)</span><span class="params">(<span name="f">f: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Combine the cells of an <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> and a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> into a new
-Tile using the given function.</p><div class="fullcomment"><div class="comment cmt"><p>Combine the cells of an <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> and a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> into a new
-Tile using the given function. For every (x, y) cell coordinate,
-get each of the Tiles' integer value, map them to a new value,
-and assign it to the output's (x, y) cell.
-</p></div><dl class="paramcmts block"><dt class="param">other</dt><dd class="cmt"><p>The other Tile</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function from (Int, Int) to Int</p></dd><dt>returns</dt><dd class="cmt"><p>The result, an Tile</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#combine" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="combine(other:geotrellis.raster.ArrayTile)(f:(Int,Int)=&gt;Int):geotrellis.raster.ArrayTile"></a><a id="combine(ArrayTile)((Int,Int)⇒Int):ArrayTile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#combine(other:geotrellis.raster.ArrayTile)(f:(Int,Int)=&gt;Int):geotrellis.raster.ArrayTile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">combine</span><span class="params">(<span name="other">other: <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a></span>)</span><span class="params">(<span name="f">f: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Combine two <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>s' cells into new cells using the given
-integer function.</p><div class="fullcomment"><div class="comment cmt"><p>Combine two <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>s' cells into new cells using the given
-integer function. For every (x, y) cell coordinate, get each of
-the ArrayTiles' integer values, map them to a new value, and
-assign it to the output's (x, y) cell.
-</p></div><dl class="paramcmts block"><dt class="param">other</dt><dd class="cmt"><p>The other ArrayTile</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function from (Int, Int) to Int</p></dd><dt>returns</dt><dd class="cmt"><p>The result, an ArrayTile</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#combineDouble" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="combineDouble(other:geotrellis.raster.Tile)(f:(Double,Double)=&gt;Double):geotrellis.raster.Tile"></a><a id="combineDouble(Tile)((Double,Double)⇒Double):Tile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#combineDouble(other:geotrellis.raster.Tile)(f:(Double,Double)=&gt;Double):geotrellis.raster.Tile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">combineDouble</span><span class="params">(<span name="other">other: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>)</span><span class="params">(<span name="f">f: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Combine the cells of an <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> and a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> into a new
-Tile using the given function.</p><div class="fullcomment"><div class="comment cmt"><p>Combine the cells of an <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> and a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> into a new
-Tile using the given function. For every (x, y) cell coordinate,
-get tiles' double values, map them to a new value, and assign it
-to the output's (x, y) cell.
-</p></div><dl class="paramcmts block"><dt class="param">other</dt><dd class="cmt"><p>The other Tile</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function from (Double, Double) to Double</p></dd><dt>returns</dt><dd class="cmt"><p>The result, an Tile</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#combineDouble" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="combineDouble(other:geotrellis.raster.ArrayTile)(f:(Double,Double)=&gt;Double):geotrellis.raster.ArrayTile"></a><a id="combineDouble(ArrayTile)((Double,Double)⇒Double):ArrayTile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#combineDouble(other:geotrellis.raster.ArrayTile)(f:(Double,Double)=&gt;Double):geotrellis.raster.ArrayTile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">combineDouble</span><span class="params">(<span name="other">other: <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a></span>)</span><span class="params">(<span name="f">f: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>)</span><span class="result">: <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Combine two <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>s' cells into new cells using the given
-double function.</p><div class="fullcomment"><div class="comment cmt"><p>Combine two <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>s' cells into new cells using the given
-double function. For every (x, y) cell coordinate, get each of
-the ArrayTiles' double values, map them to a new value, and
-assign it to the output's (x, y) cell.
-</p></div><dl class="paramcmts block"><dt class="param">other</dt><dd class="cmt"><p>The other ArrayTile</p></dd><dt class="param">f</dt><dd class="cmt"><p>A function from (Double, Double) to Double</p></dd><dt>returns</dt><dd class="cmt"><p>The result, an ArrayTile</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#convert" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="convert(targetCellType:geotrellis.raster.CellType):geotrellis.raster.ArrayTile"></a><a id="convert(CellType):ArrayTile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#convert(targetCellType:geotrellis.raster.CellType):geotrellis.raster.ArrayTile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">convert</span><span class="params">(<span name="targetCellType">targetCellType: <a href="index.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>)</span><span class="result">: <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Returns a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> equivalent to this <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>, except with
-cells of the given type.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> equivalent to this <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>, except with
-cells of the given type.
-</p></div><dl class="paramcmts block"><dt class="param">targetCellType</dt><dd class="cmt"><p>The type of cells that the result should have</p></dd><dt>returns</dt><dd class="cmt"><p>The new Tile</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ByteArrayTile#copy" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="copy:geotrellis.raster.ByteArrayTile"></a><a id="copy:ByteArrayTile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#copy:geotrellis.raster.ByteArrayTile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">copy</span><span class="result">: <a href="ByteArrayTile.html" class="extype" name="geotrellis.raster.ByteArrayTile">ByteArrayTile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Return a copy of the present <a href="ByteArrayTile.html" class="extype" name="geotrellis.raster.ByteArrayTile">ByteArrayTile</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Return a copy of the present <a href="ByteArrayTile.html" class="extype" name="geotrellis.raster.ByteArrayTile">ByteArrayTile</a>.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The copy</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ByteArrayTile.html" class="extype" name="geotrellis.raster.ByteArrayTile">ByteArrayTile</a> → <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.GridIntegral#dimensions" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dimensions:geotrellis.raster.Dimensions[N]"></a><a id="dimensions:Dimensions[Int]"></a>
+      <a id="dimensions:geotrellis.raster.Dimensions[N]"></a><a id="dimensions:Dimensions[N]"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#dimensions:geotrellis.raster.Dimensions[N]" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#dimensions:geotrellis.raster.Dimensions[N]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2057,112 +1877,14 @@ cells of the given type.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">dimensions</span><span class="result">: <a href="Dimensions.html" class="extype" name="geotrellis.raster.Dimensions">Dimensions</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>
+        <span class="name">dimensions</span><span class="result">: <a href="Dimensions.html" class="extype" name="geotrellis.raster.Dimensions">Dimensions</a>[<span class="extype" name="geotrellis.raster.GridIntegral.N">N</span>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridIntegral.html" class="extype" name="geotrellis.raster.GridIntegral">GridIntegral</a> → <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
-    </li><li name="geotrellis.raster.Tile#downsample" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="downsample(newCols:Int,newRows:Int)(f:geotrellis.raster.CellSet=&gt;Int):geotrellis.raster.Tile"></a><a id="downsample(Int,Int)((CellSet)⇒Int):Tile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#downsample(newCols:Int,newRows:Int)(f:geotrellis.raster.CellSet=&gt;Int):geotrellis.raster.Tile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">downsample</span><span class="params">(<span name="newCols">newCols: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="newRows">newRows: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="f">f: (<a href="CellSet.html" class="extype" name="geotrellis.raster.CellSet">CellSet</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Reduce the resolution of the present <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> to the given
-number of columns and rows.</p><div class="fullcomment"><div class="comment cmt"><p>Reduce the resolution of the present <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> to the given
-number of columns and rows.  A new Tile is returned.
-</p></div><dl class="paramcmts block"><dt class="param">newCols</dt><dd class="cmt"><p>The number of columns in the new Tile</p></dd><dt class="param">newRows</dt><dd class="cmt"><p>The number of rows in the new Tile</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.Tile#dualCombine" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dualCombine(r2:geotrellis.raster.Tile)(f:(Int,Int)=&gt;Int)(g:(Double,Double)=&gt;Double):geotrellis.raster.Tile"></a><a id="dualCombine(Tile)((Int,Int)⇒Int)((Double,Double)⇒Double):Tile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#dualCombine(r2:geotrellis.raster.Tile)(f:(Int,Int)=&gt;Int)(g:(Double,Double)=&gt;Double):geotrellis.raster.Tile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dualCombine</span><span class="params">(<span name="r2">r2: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>)</span><span class="params">(<span name="f">f: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="g">g: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Combine two <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>s together using one of two given functions.</p><div class="fullcomment"><div class="comment cmt"><p>Combine two <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>s together using one of two given functions.
-If the union of the types of the two cells is floating-point,
-then the floating function is used, otherwise the integer
-function is used.
-</p></div><dl class="paramcmts block"><dt class="param">r2</dt><dd class="cmt"><p>The tile to combine with the present one</p></dd><dt class="param">f</dt><dd class="cmt"><p>The integer function</p></dd><dt class="param">g</dt><dd class="cmt"><p>The double function</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.Tile#dualForeach" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dualForeach(f:Int=&gt;Unit)(g:Double=&gt;Unit):Unit"></a><a id="dualForeach((Int)⇒Unit)((Double)⇒Unit):Unit"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#dualForeach(f:Int=&gt;Unit)(g:Double=&gt;Unit):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dualForeach</span><span class="params">(<span name="f">f: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>)</span><span class="params">(<span name="g">g: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Execute a function at each pixel of a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Execute a function at each pixel of a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>.  Two functions
-are given: an integer version which is used if the tile is an
-integer-tile, and the other in the case of a floating-tile.
-</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>A function from Int to Unit</p></dd><dt class="param">g</dt><dd class="cmt"><p>A function from Double to Unit</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.Tile#dualMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dualMap(f:Int=&gt;Int)(g:Double=&gt;Double):geotrellis.raster.Tile"></a><a id="dualMap((Int)⇒Int)((Double)⇒Double):Tile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#dualMap(f:Int=&gt;Int)(g:Double=&gt;Double):geotrellis.raster.Tile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dualMap</span><span class="params">(<span name="f">f: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="g">g: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Map one of the two given functions across the <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> to
-produce a new one.</p><div class="fullcomment"><div class="comment cmt"><p>Map one of the two given functions across the <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> to
-produce a new one.  One of the functions is from Int to Int, and
-the other from Double to Double.
-</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>A function from Int to Int</p></dd><dt class="param">g</dt><dd class="cmt"><p>A function from Double to Double</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.Tile#dualMapIfSet" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dualMapIfSet(f:Int=&gt;Int)(g:Double=&gt;Double):geotrellis.raster.Tile"></a><a id="dualMapIfSet((Int)⇒Int)((Double)⇒Double):Tile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#dualMapIfSet(f:Int=&gt;Int)(g:Double=&gt;Double):geotrellis.raster.Tile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dualMapIfSet</span><span class="params">(<span name="f">f: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="g">g: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Conditionally map across the <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> with one of two functions,
-depending on whether the tile is an integer- or a floating-tile.</p><div class="fullcomment"><div class="comment cmt"><p>Conditionally map across the <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> with one of two functions,
-depending on whether the tile is an integer- or a floating-tile.
-A pixel is mapped only if it is set.
-</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>A function from Int to Int</p></dd><dt class="param">g</dt><dd class="cmt"><p>A function from Double to Double</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.GridIntegral">GridIntegral</a> → <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2175,10 +1897,10 @@ A pixel is mapped only if it is set.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(other:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#equals(other:Any):Boolean" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#equals(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2187,17 +1909,14 @@ A pixel is mapped only if it is set.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="other">other: <a href="https://www.scala-lang.org/api/2.12.15/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.15/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
-      <p class="shortcomment cmt">Check for equality between the present <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> and any
-other object.</p><div class="fullcomment"><div class="comment cmt"><p>Check for equality between the present <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> and any
-other object.
-</p></div><dl class="paramcmts block"><dt class="param">other</dt><dd class="cmt"><p>The other object</p></dd><dt>returns</dt><dd class="cmt"><p>A boolean</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#finalize():Unit" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2216,173 +1935,10 @@ other object.
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.raster.Tile#findMinMax" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="findMinMax:(Int,Int)"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#findMinMax:(Int,Int)" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">findMinMax</span><span class="result">: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>)</span>
-      </span>
-      
-      <p class="shortcomment cmt">Return tuple of highest and lowest value in raster.</p><div class="fullcomment"><div class="comment cmt"><p>Return tuple of highest and lowest value in raster.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd><dt>Note</dt><dd><span class="cmt"><p>Currently does not support double valued raster data types
-      (FloatConstantNoDataCellType,
-      DoubleConstantNoDataCellType). Calling findMinMax on
-      rasters of those types will give the integer min and max
-      of the rounded values of their cells.</p></span></dd></dl></div>
-    </li><li name="geotrellis.raster.Tile#findMinMaxDouble" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="findMinMaxDouble:(Double,Double)"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#findMinMaxDouble:(Double,Double)" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">findMinMaxDouble</span><span class="result">: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>)</span>
-      </span>
-      
-      <p class="shortcomment cmt">Return tuple of highest and lowest value in raster.</p><div class="fullcomment"><div class="comment cmt"><p>Return tuple of highest and lowest value in raster.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#foreach" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="foreach(f:Int=&gt;Unit):Unit"></a><a id="foreach((Int)⇒Unit):Unit"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#foreach(f:Int=&gt;Unit):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">foreach</span><span class="params">(<span name="f">f: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Execute a function on each cell of the <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Execute a function on each cell of the <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>.
-</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>A function from Int to Unit.  Presumably, the function is executed for side-effects.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.IterableTile#foreach" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="foreach(f:(Int,Int,Int)=&gt;Unit):Unit"></a><a id="foreach((Int,Int,Int)⇒Unit):Unit"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#foreach(f:(Int,Int,Int)=&gt;Unit):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">macro </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">foreach</span><span class="params">(<span name="f">f: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Execute the given function 'f' at every location in the tile.</p><div class="fullcomment"><div class="comment cmt"><p>Execute the given function 'f' at every location in the tile.
-The function 'f' takes the column, row, and value and returns
-nothing (presumably for side-effects).
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="IterableTile.html" class="extype" name="geotrellis.raster.IterableTile">IterableTile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#foreachDouble" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="foreachDouble(f:Double=&gt;Unit):Unit"></a><a id="foreachDouble((Double)⇒Unit):Unit"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#foreachDouble(f:Double=&gt;Unit):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">foreachDouble</span><span class="params">(<span name="f">f: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Execute a function on each cell of the <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Execute a function on each cell of the <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>.
-</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>A function from Double to Unit.  Presumably, the function is executed for side-effects.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.IterableTile#foreachDouble" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="foreachDouble(f:(Int,Int,Double)=&gt;Unit):Unit"></a><a id="foreachDouble((Int,Int,Double)⇒Unit):Unit"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#foreachDouble(f:(Int,Int,Double)=&gt;Unit):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">macro </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">foreachDouble</span><span class="params">(<span name="f">f: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Execute the given function 'f' at every location in the tile.</p><div class="fullcomment"><div class="comment cmt"><p>Execute the given function 'f' at every location in the tile.
-The function 'f' takes the column, row, and value, the last one
-as a double, and returns nothing (presumably for side-effects).
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="IterableTile.html" class="extype" name="geotrellis.raster.IterableTile">IterableTile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#foreachDoubleVisitor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="foreachDoubleVisitor(visitor:geotrellis.raster.DoubleTileVisitor):Unit"></a><a id="foreachDoubleVisitor(DoubleTileVisitor):Unit"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#foreachDoubleVisitor(visitor:geotrellis.raster.DoubleTileVisitor):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">foreachDoubleVisitor</span><span class="params">(<span name="visitor">visitor: <a href="index.html#DoubleTileVisitor=geotrellis.macros.DoubleTileVisitor" class="extmbr" name="geotrellis.raster.DoubleTileVisitor">DoubleTileVisitor</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Execute an <a href="index.html#DoubleTileVisitor=geotrellis.macros.DoubleTileVisitor" class="extmbr" name="geotrellis.raster.DoubleTileVisitor">DoubleTileVisitor</a> at each cell of the <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Execute an <a href="index.html#DoubleTileVisitor=geotrellis.macros.DoubleTileVisitor" class="extmbr" name="geotrellis.raster.DoubleTileVisitor">DoubleTileVisitor</a> at each cell of the <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>.
-</p></div><dl class="paramcmts block"><dt class="param">visitor</dt><dd class="cmt"><p>A DoubleTileVisitor</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> → <a href="../macros/MacroIterableTile.html" class="extype" name="geotrellis.macros.MacroIterableTile">MacroIterableTile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#foreachIntVisitor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="foreachIntVisitor(visitor:geotrellis.raster.IntTileVisitor):Unit"></a><a id="foreachIntVisitor(IntTileVisitor):Unit"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#foreachIntVisitor(visitor:geotrellis.raster.IntTileVisitor):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">foreachIntVisitor</span><span class="params">(<span name="visitor">visitor: <a href="index.html#IntTileVisitor=geotrellis.macros.IntTileVisitor" class="extmbr" name="geotrellis.raster.IntTileVisitor">IntTileVisitor</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Execute an <a href="index.html#IntTileVisitor=geotrellis.macros.IntTileVisitor" class="extmbr" name="geotrellis.raster.IntTileVisitor">IntTileVisitor</a> at each cell of the <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Execute an <a href="index.html#IntTileVisitor=geotrellis.macros.IntTileVisitor" class="extmbr" name="geotrellis.raster.IntTileVisitor">IntTileVisitor</a> at each cell of the <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>.
-</p></div><dl class="paramcmts block"><dt class="param">visitor</dt><dd class="cmt"><p>An IntTileVisitor</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> → <a href="../macros/MacroIterableTile.html" class="extype" name="geotrellis.macros.MacroIterableTile">MacroIterableTile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#get" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="get(col:Int,row:Int):Int"></a><a id="get(Int,Int):Int"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#get(col:Int,row:Int):Int" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">get</span><span class="params">(<span name="col">col: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="row">row: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Fetch the datum at the given column and row of the
-<a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Fetch the datum at the given column and row of the
-<a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>.
-</p></div><dl class="paramcmts block"><dt class="param">col</dt><dd class="cmt"><p>The column</p></dd><dt class="param">row</dt><dd class="cmt"><p>The row</p></dd><dt>returns</dt><dd class="cmt"><p>The Int datum found at the given location</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#getClass():Class[_]" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2398,10 +1954,10 @@ as a double, and returns nothing (presumably for side-effects).
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#getDouble" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getDouble(col:Int,row:Int):Double"></a><a id="getDouble(Int,Int):Double"></a>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#getDouble(col:Int,row:Int):Double" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#hashCode():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2410,36 +1966,17 @@ as a double, and returns nothing (presumably for side-effects).
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getDouble</span><span class="params">(<span name="col">col: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="row">row: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
-      <p class="shortcomment cmt">Fetch the datum at the given column and row of the
-<a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Fetch the datum at the given column and row of the
-<a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>.
-</p></div><dl class="paramcmts block"><dt class="param">col</dt><dd class="cmt"><p>The column</p></dd><dt class="param">row</dt><dd class="cmt"><p>The row</p></dd><dt>returns</dt><dd class="cmt"><p>The Double datum found at the given location</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ByteArrayTile#interpretAs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="interpretAs(newCellType:geotrellis.raster.CellType):geotrellis.raster.Tile"></a><a id="interpretAs(CellType):Tile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#interpretAs(newCellType:geotrellis.raster.CellType):geotrellis.raster.Tile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">interpretAs</span><span class="params">(<span name="newCellType">newCellType: <a href="index.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Changes the interpretation of the tile cells through changing NoData handling and optionally cell data type.</p><div class="fullcomment"><div class="comment cmt"><p>Changes the interpretation of the tile cells through changing NoData handling and optionally cell data type.
-If <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> portion of the <a href="index.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a> is unchanged the tile data is not duplicated through conversion.
-If cell <a href="DataType.html" class="extype" name="geotrellis.raster.DataType">DataType</a> conversion is required it is done in a naive way, without considering NoData handling.
-</p></div><dl class="paramcmts block"><dt class="param">newCellType</dt><dd class="cmt"><p>CellType to be used in interpreting existing cells</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ByteArrayTile.html" class="extype" name="geotrellis.raster.ByteArrayTile">ByteArrayTile</a> → <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2452,196 +1989,10 @@ If cell <a href="DataType.html" class="extype" name="geotrellis.raster.DataType"
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="geotrellis.raster.Tile#isNoDataTile" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="isNoDataTile:Boolean"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#isNoDataTile:Boolean" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isNoDataTile</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#map" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="map(f:Int=&gt;Int):geotrellis.raster.Tile"></a><a id="map((Int)⇒Int):Tile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#map(f:Int=&gt;Int):geotrellis.raster.Tile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">map</span><span class="params">(<span name="f">f: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Map each cell in the given tile to a new one, using the given
-function.</p><div class="fullcomment"><div class="comment cmt"><p>Map each cell in the given tile to a new one, using the given
-function.
-</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>A function from Int to Int, executed at each point of the tile</p></dd><dt>returns</dt><dd class="cmt"><p>The result, a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.MappableTile#map" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="map(f:(Int,Int,Int)=&gt;Int):T"></a><a id="map((Int,Int,Int)⇒Int):Tile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#map(f:(Int,Int,Int)=&gt;Int):T" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">macro </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">map</span><span class="params">(<span name="f">f: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Map over the tiles using a function which accepts the column,
-row, and value at that position and returns an integer.</p><div class="fullcomment"><div class="comment cmt"><p>Map over the tiles using a function which accepts the column,
-row, and value at that position and returns an integer.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="MappableTile.html" class="extype" name="geotrellis.raster.MappableTile">MappableTile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#mapDouble" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapDouble(f:Double=&gt;Double):geotrellis.raster.Tile"></a><a id="mapDouble((Double)⇒Double):Tile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#mapDouble(f:Double=&gt;Double):geotrellis.raster.Tile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">mapDouble</span><span class="params">(<span name="f">f: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Map each cell in the given tile to a new one, using the given
-function.</p><div class="fullcomment"><div class="comment cmt"><p>Map each cell in the given tile to a new one, using the given
-function.
-</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>A function from Double to Double, executed at each point of the tile</p></dd><dt>returns</dt><dd class="cmt"><p>The result, a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.MappableTile#mapDouble" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapDouble(f:(Int,Int,Double)=&gt;Double):T"></a><a id="mapDouble((Int,Int,Double)⇒Double):Tile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#mapDouble(f:(Int,Int,Double)=&gt;Double):T" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">macro </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">mapDouble</span><span class="params">(<span name="f">f: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Map over the tiles using a function which accepts the column,
-row, and value at that position and returns a double.</p><div class="fullcomment"><div class="comment cmt"><p>Map over the tiles using a function which accepts the column,
-row, and value at that position and returns a double.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="MappableTile.html" class="extype" name="geotrellis.raster.MappableTile">MappableTile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#mapDoubleMapper" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapDoubleMapper(mapper:geotrellis.raster.DoubleTileMapper):geotrellis.raster.Tile"></a><a id="mapDoubleMapper(DoubleTileMapper):Tile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#mapDoubleMapper(mapper:geotrellis.raster.DoubleTileMapper):geotrellis.raster.Tile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">mapDoubleMapper</span><span class="params">(<span name="mapper">mapper: <a href="index.html#DoubleTileMapper=geotrellis.macros.DoubleTileMapper" class="extmbr" name="geotrellis.raster.DoubleTileMapper">DoubleTileMapper</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Map an <a href="index.html#DoubleTileMapper=geotrellis.macros.DoubleTileMapper" class="extmbr" name="geotrellis.raster.DoubleTileMapper">DoubleTileMapper</a> over the present tile.</p><div class="fullcomment"><div class="comment cmt"><p>Map an <a href="index.html#DoubleTileMapper=geotrellis.macros.DoubleTileMapper" class="extmbr" name="geotrellis.raster.DoubleTileMapper">DoubleTileMapper</a> over the present tile.
-</p></div><dl class="paramcmts block"><dt class="param">mapper</dt><dd class="cmt"><p>The mapper</p></dd><dt>returns</dt><dd class="cmt"><p>The result, a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> → <a href="../macros/MacroMappableTile.html" class="extype" name="geotrellis.macros.MacroMappableTile">MacroMappableTile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.Tile#mapIfSet" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapIfSet(f:Int=&gt;Int):geotrellis.raster.Tile"></a><a id="mapIfSet((Int)⇒Int):Tile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#mapIfSet(f:Int=&gt;Int):geotrellis.raster.Tile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">mapIfSet</span><span class="params">(<span name="f">f: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Conditionally execute (or don't) the given function at each
-pixel of a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>, depending on whether that pixel is NODATA or
-not.</p><div class="fullcomment"><div class="comment cmt"><p>Conditionally execute (or don't) the given function at each
-pixel of a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>, depending on whether that pixel is NODATA or
-not.  The result of the mapping is returned as a tile.
-</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>A function from Int to Int</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.Tile#mapIfSetDouble" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapIfSetDouble(f:Double=&gt;Double):geotrellis.raster.Tile"></a><a id="mapIfSetDouble((Double)⇒Double):Tile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#mapIfSetDouble(f:Double=&gt;Double):geotrellis.raster.Tile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">mapIfSetDouble</span><span class="params">(<span name="f">f: (<a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Conditionally execute (or don't) the given function at each
-pixel of a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>, depending on whether that pixel is NODATA or
-not.</p><div class="fullcomment"><div class="comment cmt"><p>Conditionally execute (or don't) the given function at each
-pixel of a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>, depending on whether that pixel is NODATA or
-not.  The result of the mapping is returned as a tile.
-</p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>A function from Double to Double</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#mapIntMapper" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapIntMapper(mapper:geotrellis.raster.IntTileMapper):geotrellis.raster.Tile"></a><a id="mapIntMapper(IntTileMapper):Tile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#mapIntMapper(mapper:geotrellis.raster.IntTileMapper):geotrellis.raster.Tile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">mapIntMapper</span><span class="params">(<span name="mapper">mapper: <a href="index.html#IntTileMapper=geotrellis.macros.IntTileMapper" class="extmbr" name="geotrellis.raster.IntTileMapper">IntTileMapper</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Map an <a href="index.html#IntTileMapper=geotrellis.macros.IntTileMapper" class="extmbr" name="geotrellis.raster.IntTileMapper">IntTileMapper</a> over the present tile.</p><div class="fullcomment"><div class="comment cmt"><p>Map an <a href="index.html#IntTileMapper=geotrellis.macros.IntTileMapper" class="extmbr" name="geotrellis.raster.IntTileMapper">IntTileMapper</a> over the present tile.
-</p></div><dl class="paramcmts block"><dt class="param">mapper</dt><dd class="cmt"><p>The mapper</p></dd><dt>returns</dt><dd class="cmt"><p>The result, a <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> → <a href="../macros/MacroMappableTile.html" class="extype" name="geotrellis.macros.MacroMappableTile">MacroMappableTile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.MutableArrayTile#mutable" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mutable:geotrellis.raster.MutableArrayTile"></a><a id="mutable:MutableArrayTile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#mutable:geotrellis.raster.MutableArrayTile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">mutable</span><span class="result">: <a href="MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Returns a mutable instance of this tile.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a mutable instance of this tile.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd><dt>Note</dt><dd><span class="cmt"><p>When the underlying class is an instance of <a href="MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a> it will return itself without performing a copy.
-      This is used internally as a performance optimization when the ownership of the tile is controlled.</p></span></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2654,48 +2005,10 @@ not.  The result of the mapping is returned as a tile.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.raster.Tile#normalize" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="normalize(oldMin:Double,oldMax:Double,newMin:Double,newMax:Double):geotrellis.raster.Tile"></a><a id="normalize(Double,Double,Double,Double):Tile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#normalize(oldMin:Double,oldMax:Double,newMin:Double,newMax:Double):geotrellis.raster.Tile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">normalize</span><span class="params">(<span name="oldMin">oldMin: <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>, <span name="oldMax">oldMax: <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>, <span name="newMin">newMin: <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>, <span name="newMax">newMax: <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Normalizes the values of this raster, given the current min and
-max, to a new min and max.</p><div class="fullcomment"><div class="comment cmt"><p>Normalizes the values of this raster, given the current min and
-max, to a new min and max.
-</p></div><dl class="paramcmts block"><dt class="param">oldMin</dt><dd class="cmt"><p>Old minimum value</p></dd><dt class="param">oldMax</dt><dd class="cmt"><p>Old maximum value</p></dd><dt class="param">newMin</dt><dd class="cmt"><p>New minimum value</p></dd><dt class="param">newMax</dt><dd class="cmt"><p>New maximum value</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.Tile#normalize" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="normalize(oldMin:Int,oldMax:Int,newMin:Int,newMax:Int):geotrellis.raster.Tile"></a><a id="normalize(Int,Int,Int,Int):Tile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#normalize(oldMin:Int,oldMax:Int,newMin:Int,newMax:Int):geotrellis.raster.Tile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">normalize</span><span class="params">(<span name="oldMin">oldMin: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="oldMax">oldMax: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="newMin">newMin: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="newMax">newMax: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Normalizes the values of this raster, given the current min and
-max, to a new min and max.</p><div class="fullcomment"><div class="comment cmt"><p>Normalizes the values of this raster, given the current min and
-max, to a new min and max.
-</p></div><dl class="paramcmts block"><dt class="param">oldMin</dt><dd class="cmt"><p>Old minimum value</p></dd><dt class="param">oldMax</dt><dd class="cmt"><p>Old maximum value</p></dd><dt class="param">newMin</dt><dd class="cmt"><p>New minimum value</p></dd><dt class="param">newMax</dt><dd class="cmt"><p>New maximum value</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#notify():Unit" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2714,7 +2027,7 @@ max, to a new min and max.
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#notifyAll():Unit" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2730,102 +2043,10 @@ max, to a new min and max.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.raster.Tile#rescale" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="rescale(newMin:Double,newMax:Double):geotrellis.raster.Tile"></a><a id="rescale(Double,Double):Tile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#rescale(newMin:Double,newMax:Double):geotrellis.raster.Tile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">rescale</span><span class="params">(<span name="newMin">newMin: <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>, <span name="newMax">newMax: <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Rescale the values in this <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> so that they are between the
-two given values.</p><div class="fullcomment"><div class="comment cmt"><p>Rescale the values in this <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> so that they are between the
-two given values.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.Tile#rescale" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="rescale(newMin:Int,newMax:Int):geotrellis.raster.Tile"></a><a id="rescale(Int,Int):Tile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#rescale(newMin:Int,newMax:Int):geotrellis.raster.Tile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">rescale</span><span class="params">(<span name="newMin">newMin: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="newMax">newMax: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Rescale the values in this <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> so that they are between the
-two given values.</p><div class="fullcomment"><div class="comment cmt"><p>Rescale the values in this <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> so that they are between the
-two given values.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ByteRawArrayTile#rows" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="rows:Int"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#rows:Int" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">rows</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.ByteRawArrayTile">ByteRawArrayTile</a> → <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
-    </li><li name="geotrellis.raster.MutableArrayTile#set" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="set(col:Int,row:Int,value:Int):Unit"></a><a id="set(Int,Int,Int):Unit"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#set(col:Int,row:Int,value:Int):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">set</span><span class="params">(<span name="col">col: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="row">row: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="value">value: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Set the value of the raster at the given column and row with the
-given value.</p><div class="fullcomment"><div class="comment cmt"><p>Set the value of the raster at the given column and row with the
-given value.
-</p></div><dl class="paramcmts block"><dt class="param">col</dt><dd class="cmt"><p>The column</p></dd><dt class="param">row</dt><dd class="cmt"><p>The row</p></dd><dt class="param">value</dt><dd class="cmt"><p>The value</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.MutableArrayTile#setDouble" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="setDouble(col:Int,row:Int,value:Double):Unit"></a><a id="setDouble(Int,Int,Double):Unit"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#setDouble(col:Int,row:Int,value:Double):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setDouble</span><span class="params">(<span name="col">col: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="row">row: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="value">value: <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Set the value of the raster at the given column and row with the
-given value.</p><div class="fullcomment"><div class="comment cmt"><p>Set the value of the raster at the given column and row with the
-given value.
-</p></div><dl class="paramcmts block"><dt class="param">col</dt><dd class="cmt"><p>The column</p></dd><dt class="param">row</dt><dd class="cmt"><p>The row</p></dd><dt class="param">value</dt><dd class="cmt"><p>The value</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a></dd></dl></div>
     </li><li name="geotrellis.raster.GridIntegral#size" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="size:N"></a><a id="size:Int"></a>
+      <a id="size:N"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#size:N" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#size:N" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2834,14 +2055,14 @@ given value.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">size</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">size</span><span class="result">: <span class="extype" name="geotrellis.raster.GridIntegral.N">N</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="GridIntegral.html" class="extype" name="geotrellis.raster.GridIntegral">GridIntegral</a> → <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.GridIntegral">GridIntegral</a> → <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2854,118 +2075,10 @@ given value.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#toArray" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toArray():Array[Int]"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#toArray():Array[Int]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toArray</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Return a copy of the underlying array of the present
-<a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Return a copy of the underlying array of the present
-<a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The copy as an Array[Int]</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#toArrayDouble" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toArrayDouble():Array[Double]"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#toArrayDouble():Array[Double]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toArrayDouble</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Return a copy of the underlying array of the present
-<a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Return a copy of the underlying array of the present
-<a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a>.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The copy as an Array[Double]</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#toArrayTile" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toArrayTile():geotrellis.raster.ArrayTile"></a><a id="toArrayTile():ArrayTile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#toArrayTile():geotrellis.raster.ArrayTile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toArrayTile</span><span class="params">()</span><span class="result">: <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Return the <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> equivalent of this ArrayTile.</p><div class="fullcomment"><div class="comment cmt"><p>Return the <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> equivalent of this ArrayTile.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The object on which the method was invoked</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ByteArrayTile#toBytes" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toBytes():Array[Byte]"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#toBytes():Array[Byte]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toBytes</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Byte.html#scala.Byte" class="extype" name="scala.Byte">Byte</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Convert the present <a href="ByteArrayTile.html" class="extype" name="geotrellis.raster.ByteArrayTile">ByteArrayTile</a> to an array of bytes and
-return that array.</p><div class="fullcomment"><div class="comment cmt"><p>Convert the present <a href="ByteArrayTile.html" class="extype" name="geotrellis.raster.ByteArrayTile">ByteArrayTile</a> to an array of bytes and
-return that array.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>An array of bytes</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ByteArrayTile.html" class="extype" name="geotrellis.raster.ByteArrayTile">ByteArrayTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#toList" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toList:List[Int]"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#toList:List[Int]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toList</span><span class="result">: <span class="extype" name="scala.List">List</span>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Return the underlying array of this <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> as a list.</p><div class="fullcomment"><div class="comment cmt"><p>Return the underlying array of this <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> as a list.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The list</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#toListDouble" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toListDouble:List[Double]"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#toListDouble:List[Double]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toListDouble</span><span class="result">: <span class="extype" name="scala.List">List</span>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Return the under-laying array of this <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> as a list.</p><div class="fullcomment"><div class="comment cmt"><p>Return the under-laying array of this <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> as a list.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The list</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ArrayTile#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#toString():String" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#toString():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2974,67 +2087,14 @@ return that array.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> → AnyRef → Any</dd></dl></div>
-    </li><li name="geotrellis.raster.ByteRawArrayTile#update" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="update(i:Int,z:Int):Unit"></a><a id="update(Int,Int):Unit"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#update(i:Int,z:Int):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">update</span><span class="params">(<span name="i">i: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="z">z: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Update the datum at the specified index.</p><div class="fullcomment"><div class="comment cmt"><p>Update the datum at the specified index.
-</p></div><dl class="paramcmts block"><dt class="param">i</dt><dd class="cmt"><p>The index of the datum</p></dd><dt class="param">z</dt><dd class="cmt"><p>The datum</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.ByteRawArrayTile">ByteRawArrayTile</a> → <a href="MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.MutableArrayTile#update" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="update(colOffset:Int,rowOffset:Int,update:geotrellis.raster.Tile):Unit"></a><a id="update(Int,Int,Tile):Unit"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#update(colOffset:Int,rowOffset:Int,update:geotrellis.raster.Tile):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">update</span><span class="params">(<span name="colOffset">colOffset: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="rowOffset">rowOffset: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="update">update: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Paste the given <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> into the present one starting at the
-given column and row offsets.</p><div class="fullcomment"><div class="comment cmt"><p>Paste the given <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> into the present one starting at the
-given column and row offsets.
-</p></div><dl class="paramcmts block"><dt class="param">colOffset</dt><dd class="cmt"><p>The column offset</p></dd><dt class="param">rowOffset</dt><dd class="cmt"><p>The row offset</p></dd><dt class="param">update</dt><dd class="cmt"><p>The source tile</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a></dd></dl></div>
-    </li><li name="geotrellis.raster.ByteRawArrayTile#updateDouble" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="updateDouble(i:Int,z:Double):Unit"></a><a id="updateDouble(Int,Double):Unit"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#updateDouble(i:Int,z:Double):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">updateDouble</span><span class="params">(<span name="i">i: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="z">z: <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Update the datum at the specified index.</p><div class="fullcomment"><div class="comment cmt"><p>Update the datum at the specified index.
-</p></div><dl class="paramcmts block"><dt class="param">i</dt><dd class="cmt"><p>The index of the datum</p></dd><dt class="param">z</dt><dd class="cmt"><p>The datum</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.ByteRawArrayTile">ByteRawArrayTile</a> → <a href="MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#wait():Unit" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -3056,7 +2116,7 @@ given column and row offsets.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -3078,7 +2138,7 @@ given column and row offsets.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -3099,22 +2159,6 @@ given column and row offsets.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="geotrellis.raster.ByteArrayTile#withNoData" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="withNoData(noDataValue:Option[Double]):geotrellis.raster.Tile"></a><a id="withNoData(Option[Double]):Tile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/raster/ByteRawArrayTile.html#withNoData(noDataValue:Option[Double]):geotrellis.raster.Tile" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">withNoData</span><span class="params">(<span name="noDataValue">noDataValue: <a href="https://www.scala-lang.org/api/2.12.15/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>]</span>)</span><span class="result">: <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ByteArrayTile.html" class="extype" name="geotrellis.raster.ByteArrayTile">ByteArrayTile</a> → <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></dd></dl></div>
     </li>
               </ol>
             </div>
@@ -3125,32 +2169,8 @@ given column and row offsets.
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.Product">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a></h3>
-            </div><div class="parent" name="scala.Equals">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.15/scala/Equals.html#scala.Equals" class="extype" name="scala.Equals">Equals</a></h3>
-            </div><div class="parent" name="geotrellis.raster.ByteArrayTile">
-              <h3>Inherited from <a href="ByteArrayTile.html" class="extype" name="geotrellis.raster.ByteArrayTile">ByteArrayTile</a></h3>
-            </div><div class="parent" name="geotrellis.raster.MutableArrayTile">
-              <h3>Inherited from <a href="MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a></h3>
-            </div><div class="parent" name="geotrellis.raster.ArrayTile">
-              <h3>Inherited from <a href="ArrayTile.html" class="extype" name="geotrellis.raster.ArrayTile">ArrayTile</a></h3>
-            </div><div class="parent" name="geotrellis.raster.Tile">
-              <h3>Inherited from <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a></h3>
-            </div><div class="parent" name="geotrellis.raster.MappableTile">
-              <h3>Inherited from <a href="MappableTile.html" class="extype" name="geotrellis.raster.MappableTile">MappableTile</a>[<a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</h3>
-            </div><div class="parent" name="geotrellis.macros.MacroMappableTile">
-              <h3>Inherited from <a href="../macros/MacroMappableTile.html" class="extype" name="geotrellis.macros.MacroMappableTile">MacroMappableTile</a>[<a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a>]</h3>
-            </div><div class="parent" name="geotrellis.raster.IterableTile">
-              <h3>Inherited from <a href="IterableTile.html" class="extype" name="geotrellis.raster.IterableTile">IterableTile</a></h3>
-            </div><div class="parent" name="geotrellis.macros.MacroIterableTile">
-              <h3>Inherited from <a href="../macros/MacroIterableTile.html" class="extype" name="geotrellis.macros.MacroIterableTile">MacroIterableTile</a></h3>
-            </div><div class="parent" name="geotrellis.raster.CellGrid">
-              <h3>Inherited from <a href="CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</h3>
-            </div><div class="parent" name="geotrellis.raster.GridIntegral">
-              <h3>Inherited from <a href="GridIntegral.html" class="extype" name="geotrellis.raster.GridIntegral">GridIntegral</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</h3>
-            </div><div class="parent" name="geotrellis.raster.Grid">
-              <h3>Inherited from <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</h3>
+        <div class="parent" name="geotrellis.raster.Grid">
+              <h3>Inherited from <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a>[<span class="extype" name="geotrellis.raster.GridIntegral.N">N</span>]</h3>
             </div><div class="parent" name="scala.Serializable">
               <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></h3>
             </div><div class="parent" name="java.io.Serializable">

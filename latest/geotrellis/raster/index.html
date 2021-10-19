@@ -951,7 +951,7 @@
                         <a href="GeoAttrsError.html" title="GeoAttrsError exception.">GeoAttrsError</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="class" href="Grid.html" title=""></a>
+                        <a class="trait" href="Grid.html" title=""></a>
                         <a href="Grid.html" title="">Grid</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="GridBounds$.html" title="The companion object for the GridBounds type."></a>
@@ -961,6 +961,10 @@
                         <a class="object" href="GridExtent$.html" title=""></a>
                         <a class="class" href="GridExtent.html" title="Represents an abstract grid over geographic extent."></a>
                         <a href="GridExtent.html" title="Represents an abstract grid over geographic extent.">GridExtent</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="GridIntegral.html" title=""></a>
+                        <a href="GridIntegral.html" title="">GridIntegral</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="HasNoData.html" title="Base trait for all cell type having a NoData value"></a>
@@ -2211,7 +2215,7 @@ array, with the given number of columns and rows.
       
       <p class="shortcomment cmt">Type class to convert a raster into features of cell geometries</p>
     </li><li name="geotrellis.raster.CellGrid" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="CellGrid[N]extendsGrid[N]"></a><a id="CellGrid[N]:CellGrid[N]"></a>
+      <a id="CellGrid[N]extendsGridIntegral[N]"></a><a id="CellGrid[N]:CellGrid[N]"></a>
       <span class="permalink">
       <a href="../../geotrellis/raster/CellGrid.html" title="Permalink">
         <i class="material-icons"></i>
@@ -2222,7 +2226,7 @@ array, with the given number of columns and rows.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="A grid composed of cells with specific value types" href="CellGrid.html"><span class="name">CellGrid</span></a><span class="tparams">[<span name="N">N</span>]</span><span class="result"> extends <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a>[<span class="extype" name="geotrellis.raster.CellGrid.N">N</span>]</span>
+        <a title="A grid composed of cells with specific value types" href="CellGrid.html"><span class="name">CellGrid</span></a><span class="tparams">[<span name="N">N</span>]</span><span class="result"> extends <a href="GridIntegral.html" class="extype" name="geotrellis.raster.GridIntegral">GridIntegral</a>[<span class="extype" name="geotrellis.raster.CellGrid.N">N</span>]</span>
       </span>
       
       <p class="shortcomment cmt">A grid composed of cells with specific value types
@@ -2919,8 +2923,8 @@ a cell type of the target cell type.
       </a>
     </span>
       <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
       </span>
       <span class="symbol">
         <a title="" href="Grid.html"><span class="name">Grid</span></a><span class="tparams">[<span name="N">N</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
@@ -2946,7 +2950,7 @@ a cell type of the target cell type.
 These coordinates are inclusive.
 </p></div></div>
     </li><li name="geotrellis.raster.GridExtent" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="GridExtent[N]extendsGrid[N]withSerializable"></a><a id="GridExtent[N]:GridExtent[N]"></a>
+      <a id="GridExtent[N]extendsGridIntegral[N]"></a><a id="GridExtent[N]:GridExtent[N]"></a>
       <span class="permalink">
       <a href="../../geotrellis/raster/GridExtent.html" title="Permalink">
         <i class="material-icons"></i>
@@ -2957,7 +2961,7 @@ These coordinates are inclusive.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Represents an abstract grid over geographic extent." href="GridExtent.html"><span class="name">GridExtent</span></a><span class="tparams">[<span name="N">N</span>]</span><span class="result"> extends <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a>[<span class="extype" name="geotrellis.raster.GridExtent.N">N</span>] with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="Represents an abstract grid over geographic extent." href="GridExtent.html"><span class="name">GridExtent</span></a><span class="tparams">[<span name="N">N</span>]</span><span class="result"> extends <a href="GridIntegral.html" class="extype" name="geotrellis.raster.GridIntegral">GridIntegral</a>[<span class="extype" name="geotrellis.raster.GridExtent.N">N</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Represents an abstract grid over geographic extent.</p><div class="fullcomment"><div class="comment cmt"><p>Represents an abstract grid over geographic extent.
@@ -2965,6 +2969,22 @@ Critically while the number of cell rows and columns is implied by the construct
 they are intentionally not expressed to avoid Int overflow for large grids.</p><p>The constructor will throw <span class="extype" name="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException</span> if the provided extent and cell size do not match the
 provided cols and rows (dimensions).
 </p></div></div>
+    </li><li name="geotrellis.raster.GridIntegral" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="GridIntegral[N]extendsGrid[N]"></a><a id="GridIntegral[N]:GridIntegral[N]"></a>
+      <span class="permalink">
+      <a href="../../geotrellis/raster/GridIntegral.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="GridIntegral.html"><span class="name">GridIntegral</span></a><span class="tparams">[<span name="N">N</span>]</span><span class="result"> extends <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a>[<span class="extype" name="geotrellis.raster.GridIntegral.N">N</span>]</span>
+      </span>
+      
+      
     </li><li name="geotrellis.raster.HasNoData" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="HasNoData[T]extendsNoDataHandling"></a><a id="HasNoData[T]:HasNoData[T]"></a>
       <span class="permalink">
