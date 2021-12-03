@@ -862,6 +862,10 @@
                         <a class="class" href="GridBounds.html" title="Represents grid coordinates of a subsection of a RasterExtent."></a>
                         <a href="GridBounds.html" title="Represents grid coordinates of a subsection of a RasterExtent.">GridBounds</a>
                       </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="GridBoxingBench.html" title="See issue https://github.com/locationtech/geotrellis/issues/3427"></a>
+                        <a href="GridBoxingBench.html" title="See issue https://github.com/locationtech/geotrellis/issues/3427">GridBoxingBench</a>
+                      </li><li class="current-entities indented2">
                         <a class="object" href="GridExtent$.html" title=""></a>
                         <a class="class" href="GridExtent.html" title="Represents an abstract grid over geographic extent."></a>
                         <a href="GridExtent.html" title="Represents an abstract grid over geographic extent.">GridExtent</a>
@@ -1756,10 +1760,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a></dd></dl></div>
-    </li><li name="geotrellis.raster.Grid#cols" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="cols:N"></a><a id="cols:Int"></a>
+    </li><li name="geotrellis.raster.Tile#cols" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="cols:Int"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/Tile.html#cols:N" title="Permalink">
+      <a href="../../geotrellis/raster/Tile.html#cols:Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1771,7 +1775,9 @@
         <span class="name">cols</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
+      <p class="shortcomment cmt">cols and rows are explicitly defined to help with the Grid[N].{cols | rows} specialized functions dispatch.</p><div class="fullcomment"><div class="comment cmt"><p>cols and rows are explicitly defined to help with the Grid[N].{cols | rows} specialized functions dispatch.
+See https://github.com/locationtech/geotrellis/issues/3427
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.Tile">Tile</a> → <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
     </li><li name="geotrellis.raster.Tile#combine" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="combine(r2:geotrellis.raster.Tile)(f:(Int,Int)=&gt;Int):geotrellis.raster.Tile"></a><a id="combine(Tile)((Int,Int)⇒Int):Tile"></a>
       <span class="permalink">
@@ -2043,10 +2049,10 @@ then the transformation would effectively be from <code>Int =&gt; Double</code>.
       <p class="shortcomment cmt">Returns a mutable instance of this tile.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a mutable instance of this tile.
 </p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>When the underlying class is an instance of <a href="MutableArrayTile.html" class="extype" name="geotrellis.raster.MutableArrayTile">MutableArrayTile</a> it will return itself without performing a copy.
       This is used internally as a performance optimization when the ownership of the tile is controlled.</p></span></dd></dl></div>
-    </li><li name="geotrellis.raster.Grid#rows" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="rows:N"></a><a id="rows:Int"></a>
+    </li><li name="geotrellis.raster.Tile#rows" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="rows:Int"></a>
       <span class="permalink">
-      <a href="../../geotrellis/raster/Tile.html#rows:N" title="Permalink">
+      <a href="../../geotrellis/raster/Tile.html#rows:Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2058,7 +2064,7 @@ then the transformation would effectively be from <code>Int =&gt; Double</code>.
         <span class="name">rows</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.Tile">Tile</a> → <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
     </li><li name="geotrellis.raster.Tile#toArray" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="toArray():Array[Int]"></a>
       <span class="permalink">

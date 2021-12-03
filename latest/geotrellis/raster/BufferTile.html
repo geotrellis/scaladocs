@@ -862,6 +862,10 @@
                         <a class="class" href="GridBounds.html" title="Represents grid coordinates of a subsection of a RasterExtent."></a>
                         <a href="GridBounds.html" title="Represents grid coordinates of a subsection of a RasterExtent.">GridBounds</a>
                       </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="GridBoxingBench.html" title="See issue https://github.com/locationtech/geotrellis/issues/3427"></a>
+                        <a href="GridBoxingBench.html" title="See issue https://github.com/locationtech/geotrellis/issues/3427">GridBoxingBench</a>
+                      </li><li class="current-entities indented2">
                         <a class="object" href="GridExtent$.html" title=""></a>
                         <a class="class" href="GridExtent.html" title="Represents an abstract grid over geographic extent."></a>
                         <a href="GridExtent.html" title="Represents an abstract grid over geographic extent.">GridExtent</a>
@@ -1927,7 +1931,9 @@ access to the sourceTile or via the mapTile function that maps over the sourceTi
         <span class="name">cols</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.BufferTile">BufferTile</a> → <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
+      <p class="shortcomment cmt">cols and rows are explicitly defined to help with the Grid[N].{cols | rows} specialized functions dispatch.</p><div class="fullcomment"><div class="comment cmt"><p>cols and rows are explicitly defined to help with the Grid[N].{cols | rows} specialized functions dispatch.
+See https://github.com/locationtech/geotrellis/issues/3427
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.BufferTile">BufferTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> → <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
     </li><li name="geotrellis.raster.BufferTile#combine" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="combine(other:geotrellis.raster.Tile)(f:(Int,Int)=&gt;Int):geotrellis.raster.Tile"></a><a id="combine(Tile)((Int,Int)⇒Int):Tile"></a>
       <span class="permalink">
@@ -2786,7 +2792,7 @@ two given values.
         <span class="name">rows</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.BufferTile">BufferTile</a> → <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="geotrellis.raster.BufferTile">BufferTile</a> → <a href="Tile.html" class="extype" name="geotrellis.raster.Tile">Tile</a> → <a href="Grid.html" class="extype" name="geotrellis.raster.Grid">Grid</a></dd></dl></div>
     </li><li name="geotrellis.raster.GridIntegral#size" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="size:N"></a><a id="size:Int"></a>
       <span class="permalink">
