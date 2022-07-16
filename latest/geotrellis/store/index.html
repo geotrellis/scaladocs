@@ -685,63 +685,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="geotrellis">geotrellis</a></dd></dl></div>
-    </li><li name="geotrellis.vectortile" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="vectortile"></a><a id="vectortile:vectortile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/vectortile/index.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="This package is experimental. Expect API flux." href="../vectortile/index.html"><span class="name">vectortile</span></a>
-      </span>
-      
-      <p class="shortcomment cmt"><i>This package is experimental. Expect API flux.</i></p><div class="fullcomment"><div class="comment cmt"><p><i>This package is experimental. Expect API flux.</i></p><p>Invented by <a href="https://www.mapbox.com/" target="_blank">Mapbox</a>, VectorTiles are a combination of the
-ideas of finite-sized tiles and vector geometries. Mapbox maintains the
-official implementation spec for VectorTile codecs. The specification is free
-and open source.</p><p>VectorTiles are advantageous over raster tiles in that:</p><ul><li>They are typically smaller to store</li><li>They can be easily transformed (rotated, etc.) in real time</li><li>They allow for continuous (as opposed to step-wise) zoom in Slippy Maps.</li></ul><p>Raw VectorTile data is stored in the protobuf format. Any codec implementing
-<a href="https://github.com/mapbox/vector-tile-spec/tree/master/2.1" target="_blank">the spec</a> must
-decode and encode data according to
-<a href="https://github.com/mapbox/vector-tile-spec/blob/master/2.1/vector_tile.proto" target="_blank">this <i>.proto</i> schema</a>.</p><h4>What is this package?</h4><p><i>geotrellis-vectortile</i> is a high-performance implementation of
-<b>Version 2.1</b> of the VectorTile spec. It features:</p><ul><li>Decoding of <b>Version 2</b> VectorTiles from Protobuf byte data into useful GeoTrellis types.</li><li>Lazy decoding of Geometries. Only parse what you need!</li></ul><h4>Using this Package</h4><h5>Modules</h5><p>Users of this library need only pay attention to <a href="../vectortile/index.html" class="extype" name="geotrellis.vectortile">geotrellis.vectortile</a>.
-Any classes in the <i>internal.*</i> submodules are unique to the machinery
-of VectorTile {de,en}coding, and can be safely ignored.</p><h5>Types</h5><p>The central type is the <a href="../vectortile/VectorTile.html" class="extype" name="geotrellis.vectortile.VectorTile">geotrellis.vectortile.VectorTile</a> class. Its companion object can
-be used to construct VectorTiles from raw byte data:</p><pre><span class="kw">import</span> geotrellis.spark.SpatialKey
-<span class="kw">import</span> geotrellis.spark.tiling.LayoutDefinition
-<span class="kw">import</span> geotrellis.vector.Extent
-<span class="kw">import</span> geotrellis.vectortile.VectorTile
-
-<span class="kw">val</span> bytes: <span class="std">Array</span>[<span class="std">Byte</span>] = ...  <span class="cmt">// from some `.mvt` file</span>
-<span class="kw">val</span> key: SpatialKey = ...  <span class="cmt">// preknown</span>
-<span class="kw">val</span> layout: LayoutDefinition = ...  <span class="cmt">// preknown</span>
-<span class="kw">val</span> tileExtent: Extent = layout.mapTransform(key)
-
-<span class="cmt">/* Decode Protobuf bytes. */</span>
-<span class="kw">val</span> tile: VectorTile = VectorTile.fromBytes(bytes, tileExtent)
-
-<span class="cmt">/* Encode a VectorTile back into bytes. */</span>
-<span class="kw">val</span> encodedBytes: <span class="std">Array</span>[<span class="std">Byte</span>] = tile.toBytes</pre><p>The <i>V*</i> types form a small <a href="https://en.wikipedia.org/wiki/Sum_type" target="_blank">sum type</a>
-and are used to represent usually untyped Feature-level metadata. This metadata
-is equivalent to a JSON Object, where String keys index values of any type.
-A Scala Map requires more rigidity (for the better), and so we use
-<a href="../vectortile/Value.html" class="extype" name="geotrellis.vectortile.Value">geotrellis.vectortile.Value</a> to guarantee type safety.</p><h4>Implementation Assumptions</h4><p>This particular implementation of the VectorTile spec makes the following
-assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordinate Reference
-    system. That is, there is no such thing as a &quot;projectionless&quot; VectorTile.
-    When decoding a VectorTile, we must provide a GeoTrellis <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">geotrellis.vector.Extent</a> that
-    represents the Tile's area on a map.
-    With this, the grid coordinates stored in the VectorTile's Geometry are
-    shifted from their
-    original [0,4096] range to actual world coordinates in the Extent's CRS.</li><li>The <code>id</code> field in VectorTile Features doesn't matter.</li><li><code>UNKNOWN</code> geometries are safe to ignore.</li><li>If a VectorTile <code>geometry</code> list marked as <code>POINT</code> has only one pair
-    of coordinates, it will be decoded as a GeoTrellis <code>Point</code>. If it has
-    more than one pair, it will be decoded as a <code>MultiPoint</code>. Likewise for
-    the <code>LINESTRING</code> and <code>POLYGON</code> types. A complaint has been made about
-    the spec regarding this, and future versions may include a difference
-    between single and multi geometries.
-</li></ul></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="geotrellis">geotrellis</a></dd><dt>Version</dt><dd><p>2.1</p></dd></dl></div>
     </li>
               </ul>
             </div>
@@ -774,7 +717,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="Implicits.html" class="extype" name="geotrellis.store.Implicits">Implicits</a>, <a href="json/Implicits.html" class="extype" name="geotrellis.store.json.Implicits">store.json.Implicits</a>, <a href="../vector/io/json/CrsFormats.html" class="extype" name="geotrellis.vector.io.json.CrsFormats">CrsFormats</a>, <a href="json/KeyIndexFormats.html" class="extype" name="geotrellis.store.json.KeyIndexFormats">KeyIndexFormats</a>, <a href="avro/codecs/Implicits.html" class="extype" name="geotrellis.store.avro.codecs.Implicits">store.avro.codecs.Implicits</a>, <a href="avro/codecs/KeyCodecs.html" class="extype" name="geotrellis.store.avro.codecs.KeyCodecs">KeyCodecs</a>, <a href="avro/codecs/TemporalProjectedExtentCodec.html" class="extype" name="geotrellis.store.avro.codecs.TemporalProjectedExtentCodec">TemporalProjectedExtentCodec</a>, <a href="avro/codecs/ProjectedExtentCodec.html" class="extype" name="geotrellis.store.avro.codecs.ProjectedExtentCodec">ProjectedExtentCodec</a>, <a href="avro/codecs/ExtentCodec.html" class="extype" name="geotrellis.store.avro.codecs.ExtentCodec">ExtentCodec</a>, <a href="avro/codecs/CRSCodec.html" class="extype" name="geotrellis.store.avro.codecs.CRSCodec">CRSCodec</a>, <a href="avro/codecs/TileFeatureCodec.html" class="extype" name="geotrellis.store.avro.codecs.TileFeatureCodec">TileFeatureCodec</a>, <a href="avro/codecs/ConstantTileCodecs.html" class="extype" name="geotrellis.store.avro.codecs.ConstantTileCodecs">ConstantTileCodecs</a>, <a href="avro/codecs/TileCodecs.html" class="extype" name="geotrellis.store.avro.codecs.TileCodecs">TileCodecs</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="Implicits.html" class="extype" name="geotrellis.store.Implicits">Implicits</a>, <a href="json/Implicits.html" class="extype" name="geotrellis.store.json.Implicits">store.json.Implicits</a>, <a href="../vector/io/json/CrsFormats.html" class="extype" name="geotrellis.vector.io.json.CrsFormats">CrsFormats</a>, <a href="json/KeyIndexFormats.html" class="extype" name="geotrellis.store.json.KeyIndexFormats">KeyIndexFormats</a>, <a href="avro/codecs/Implicits.html" class="extype" name="geotrellis.store.avro.codecs.Implicits">store.avro.codecs.Implicits</a>, <a href="avro/codecs/KeyCodecs.html" class="extype" name="geotrellis.store.avro.codecs.KeyCodecs">KeyCodecs</a>, <a href="avro/codecs/TemporalProjectedExtentCodec.html" class="extype" name="geotrellis.store.avro.codecs.TemporalProjectedExtentCodec">TemporalProjectedExtentCodec</a>, <a href="avro/codecs/ProjectedExtentCodec.html" class="extype" name="geotrellis.store.avro.codecs.ProjectedExtentCodec">ProjectedExtentCodec</a>, <a href="avro/codecs/ExtentCodec.html" class="extype" name="geotrellis.store.avro.codecs.ExtentCodec">ExtentCodec</a>, <a href="avro/codecs/CRSCodec.html" class="extype" name="geotrellis.store.avro.codecs.CRSCodec">CRSCodec</a>, <a href="avro/codecs/TileFeatureCodec.html" class="extype" name="geotrellis.store.avro.codecs.TileFeatureCodec">TileFeatureCodec</a>, <a href="avro/codecs/ConstantTileCodecs.html" class="extype" name="geotrellis.store.avro.codecs.ConstantTileCodecs">ConstantTileCodecs</a>, <a href="avro/codecs/TileCodecs.html" class="extype" name="geotrellis.store.avro.codecs.TileCodecs">TileCodecs</a>, <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.16/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -834,7 +777,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="AsyncWriter.html"><span class="name">AsyncWriter</span></a><span class="tparams">[<span name="Client">Client</span>, <span name="V">V</span>, <span name="E">E</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="AsyncWriter.html"><span class="name">AsyncWriter</span></a><span class="tparams">[<span name="Client">Client</span>, <span name="V">V</span>, <span name="E">E</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -850,7 +793,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="AttributeCaching.html"><span class="name">AttributeCaching</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="AttributeCaching.html"><span class="name">AttributeCaching</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -898,7 +841,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="AttributeStoreProvider.html"><span class="name">AttributeStoreProvider</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="AttributeStoreProvider.html"><span class="name">AttributeStoreProvider</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -946,7 +889,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Wrapper for LayerQuery that binds it to some function that is able to produce a resulting value." href="BoundLayerQuery.html"><span class="name">BoundLayerQuery</span></a><span class="tparams">[<span name="K">K</span>, <span name="M">M</span>, <span name="ReturnType">ReturnType</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Wrapper for LayerQuery that binds it to some function that is able to produce a resulting value." href="BoundLayerQuery.html"><span class="name">BoundLayerQuery</span></a><span class="tparams">[<span name="K">K</span>, <span name="M">M</span>, <span name="ReturnType">ReturnType</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">Wrapper for <a href="LayerQuery.html" class="extype" name="geotrellis.store.LayerQuery">LayerQuery</a> that binds it to some function that is able to produce a resulting value.</p>
@@ -978,7 +921,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="COGLayerAttributes.html"><span class="name">COGLayerAttributes</span></a><span class="tparams">[<span name="H">H</span>, <span name="M">M</span>]</span><span class="params">(<span name="header">header: <span class="extype" name="geotrellis.store.COGLayerAttributes.H">H</span></span>, <span name="metadata">metadata: <span class="extype" name="geotrellis.store.COGLayerAttributes.M">M</span></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="COGLayerAttributes.html"><span class="name">COGLayerAttributes</span></a><span class="tparams">[<span name="H">H</span>, <span name="M">M</span>]</span><span class="params">(<span name="header">header: <span class="extype" name="geotrellis.store.COGLayerAttributes.H">H</span></span>, <span name="metadata">metadata: <span class="extype" name="geotrellis.store.COGLayerAttributes.M">M</span></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -994,7 +937,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="CollectionLayerReader.html"><span class="name">CollectionLayerReader</span></a><span class="tparams">[<span name="ID">ID</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="CollectionLayerReader.html"><span class="name">CollectionLayerReader</span></a><span class="tparams">[<span name="ID">ID</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -1010,7 +953,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="CollectionLayerReaderProvider.html"><span class="name">CollectionLayerReaderProvider</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="CollectionLayerReaderProvider.html"><span class="name">CollectionLayerReaderProvider</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -1058,7 +1001,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="GeoTrellisMetadata.html"><span class="name">GeoTrellisMetadata</span></a><span class="params">(<span name="name">name: <a href="../raster/SourceName.html" class="extype" name="geotrellis.raster.SourceName">SourceName</a></span>, <span name="crs">crs: <a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="bandCount">bandCount: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="cellType">cellType: <a href="../raster/index.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>, <span name="gridExtent">gridExtent: <a href="../raster/GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a>]</span>, <span name="resolutions">resolutions: <span class="extype" name="scala.List">List</span>[<a href="../raster/CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a>]</span>, <span name="attributes">attributes: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="../raster/RasterMetadata.html" class="extype" name="geotrellis.raster.RasterMetadata">RasterMetadata</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="GeoTrellisMetadata.html"><span class="name">GeoTrellisMetadata</span></a><span class="params">(<span name="name">name: <a href="../raster/SourceName.html" class="extype" name="geotrellis.raster.SourceName">SourceName</a></span>, <span name="crs">crs: <a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="bandCount">bandCount: <a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="cellType">cellType: <a href="../raster/index.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>, <span name="gridExtent">gridExtent: <a href="../raster/GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>[<a href="https://www.scala-lang.org/api/2.12.16/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a>]</span>, <span name="resolutions">resolutions: <span class="extype" name="scala.List">List</span>[<a href="../raster/CellSize.html" class="extype" name="geotrellis.raster.CellSize">CellSize</a>]</span>, <span name="attributes">attributes: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="../raster/RasterMetadata.html" class="extype" name="geotrellis.raster.RasterMetadata">RasterMetadata</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -1074,7 +1017,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="Represents a path that points to a GeoTrellis layer saved in a catalog." href="GeoTrellisPath.html"><span class="name">GeoTrellisPath</span></a><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="layerName">layerName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="zoomLevel">zoomLevel: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="bandCount">bandCount: <a href="https://www.scala-lang.org/api/2.12.15/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>)</span><span class="result"> extends <a href="../raster/SourcePath.html" class="extype" name="geotrellis.raster.SourcePath">SourcePath</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="Represents a path that points to a GeoTrellis layer saved in a catalog." href="GeoTrellisPath.html"><span class="name">GeoTrellisPath</span></a><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="layerName">layerName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="zoomLevel">zoomLevel: <a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="bandCount">bandCount: <a href="https://www.scala-lang.org/api/2.12.16/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>)</span><span class="result"> extends <a href="../raster/SourcePath.html" class="extype" name="geotrellis.raster.SourcePath">SourcePath</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Represents a path that points to a GeoTrellis layer saved in a catalog.</p><div class="fullcomment"><div class="comment cmt"><p>Represents a path that points to a GeoTrellis layer saved in a catalog.
@@ -1169,7 +1112,7 @@ It is expected that the caller has significant pre-computed information  about t
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="package$$HeaderMatchError.html"><span class="name">HeaderMatchError</span></a><span class="tparams">[<span name="T">T &lt;: <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a></span>]</span><span class="result"> extends <a href="package$$LayerIOError.html" class="extype" name="geotrellis.store.LayerIOError">LayerIOError</a></span>
+        <a title="" href="package$$HeaderMatchError.html"><span class="name">HeaderMatchError</span></a><span class="tparams">[<span name="T">T &lt;: <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a></span>]</span><span class="result"> extends <a href="package$$LayerIOError.html" class="extype" name="geotrellis.store.LayerIOError">LayerIOError</a></span>
       </span>
       
       
@@ -1201,7 +1144,7 @@ It is expected that the caller has significant pre-computed information  about t
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="Implicits$AttributeStoreOps.html"><span class="name">AttributeStoreOps</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="Implicits$AttributeStoreOps.html"><span class="name">AttributeStoreOps</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Implicits.html" class="extype" name="geotrellis.store.Implicits">Implicits</a></dd></dl></div>
@@ -1233,7 +1176,7 @@ It is expected that the caller has significant pre-computed information  about t
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="Layer.html"><span class="name">Layer</span></a><span class="params">(<span name="id">id: <a href="LayerId.html" class="extype" name="geotrellis.store.LayerId">LayerId</a></span>, <span name="metadata">metadata: <a href="../layer/TileLayerMetadata.html" class="extype" name="geotrellis.layer.TileLayerMetadata">TileLayerMetadata</a>[_]</span>, <span name="bandCount">bandCount: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="Layer.html"><span class="name">Layer</span></a><span class="params">(<span name="id">id: <a href="LayerId.html" class="extype" name="geotrellis.store.LayerId">LayerId</a></span>, <span name="metadata">metadata: <a href="../layer/TileLayerMetadata.html" class="extype" name="geotrellis.layer.TileLayerMetadata">TileLayerMetadata</a>[_]</span>, <span name="bandCount">bandCount: <a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -1249,7 +1192,7 @@ It is expected that the caller has significant pre-computed information  about t
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="LayerAttributeStore.html"><span class="name">LayerAttributeStore</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="LayerAttributeStore.html"><span class="name">LayerAttributeStore</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -1265,7 +1208,7 @@ It is expected that the caller has significant pre-computed information  about t
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="LayerAttributes.html"><span class="name">LayerAttributes</span></a><span class="tparams">[<span name="H">H</span>, <span name="M">M</span>, <span name="K">K</span>]</span><span class="params">(<span name="header">header: <span class="extype" name="geotrellis.store.LayerAttributes.H">H</span></span>, <span name="metadata">metadata: <span class="extype" name="geotrellis.store.LayerAttributes.M">M</span></span>, <span name="keyIndex">keyIndex: <a href="index/KeyIndex.html" class="extype" name="geotrellis.store.index.KeyIndex">KeyIndex</a>[<span class="extype" name="geotrellis.store.LayerAttributes.K">K</span>]</span>, <span name="schema">schema: <span class="extype" name="org.apache.avro.Schema">Schema</span></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="LayerAttributes.html"><span class="name">LayerAttributes</span></a><span class="tparams">[<span name="H">H</span>, <span name="M">M</span>, <span name="K">K</span>]</span><span class="params">(<span name="header">header: <span class="extype" name="geotrellis.store.LayerAttributes.H">H</span></span>, <span name="metadata">metadata: <span class="extype" name="geotrellis.store.LayerAttributes.M">M</span></span>, <span name="keyIndex">keyIndex: <a href="index/KeyIndex.html" class="extype" name="geotrellis.store.index.KeyIndex">KeyIndex</a>[<span class="extype" name="geotrellis.store.LayerAttributes.K">K</span>]</span>, <span name="schema">schema: <span class="extype" name="org.apache.avro.Schema">Schema</span></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -1281,7 +1224,7 @@ It is expected that the caller has significant pre-computed information  about t
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="LayerCopier.html"><span class="name">LayerCopier</span></a><span class="tparams">[<span name="ID">ID</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="LayerCopier.html"><span class="name">LayerCopier</span></a><span class="tparams">[<span name="ID">ID</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -1329,7 +1272,7 @@ It is expected that the caller has significant pre-computed information  about t
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="LayerDeleter.html"><span class="name">LayerDeleter</span></a><span class="tparams">[<span name="ID">ID</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="LayerDeleter.html"><span class="name">LayerDeleter</span></a><span class="tparams">[<span name="ID">ID</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -1377,7 +1320,7 @@ It is expected that the caller has significant pre-computed information  about t
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="LayerFilter.html"><span class="name">LayerFilter</span></a><span class="tparams">[<span name="K">K</span>, <span name="F">F</span>, <span name="T">T</span>, <span name="M">M</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="LayerFilter.html"><span class="name">LayerFilter</span></a><span class="tparams">[<span name="K">K</span>, <span name="F">F</span>, <span name="T">T</span>, <span name="M">M</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
@@ -1399,7 +1342,7 @@ It is expected that the caller has significant pre-computed information  about t
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Base trait for layer headers that store location information for a saved layer" href="LayerHeader.html"><span class="name">LayerHeader</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Base trait for layer headers that store location information for a saved layer" href="LayerHeader.html"><span class="name">LayerHeader</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">Base trait for layer headers that store location information for a saved layer</p>
@@ -1431,7 +1374,7 @@ It is expected that the caller has significant pre-computed information  about t
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="Identifies a Layer by it's name and zoom level" href="LayerId.html"><span class="name">LayerId</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="zoom">zoom: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="Identifies a Layer by it's name and zoom level" href="LayerId.html"><span class="name">LayerId</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="zoom">zoom: <a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Identifies a Layer by it's name and zoom level</p>
@@ -1447,7 +1390,7 @@ It is expected that the caller has significant pre-computed information  about t
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="LayerManager.html"><span class="name">LayerManager</span></a><span class="tparams">[<span name="ID">ID</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="LayerManager.html"><span class="name">LayerManager</span></a><span class="tparams">[<span name="ID">ID</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -1479,7 +1422,7 @@ It is expected that the caller has significant pre-computed information  about t
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="LayerMover.html"><span class="name">LayerMover</span></a><span class="tparams">[<span name="ID">ID</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="LayerMover.html"><span class="name">LayerMover</span></a><span class="tparams">[<span name="ID">ID</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -1527,7 +1470,7 @@ It is expected that the caller has significant pre-computed information  about t
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Accumulation of LayerFilters that will be asked to filter layer KeyBounds" href="LayerQuery.html"><span class="name">LayerQuery</span></a><span class="tparams">[<span name="K">K</span>, <span name="M">M</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Accumulation of LayerFilters that will be asked to filter layer KeyBounds" href="LayerQuery.html"><span class="name">LayerQuery</span></a><span class="tparams">[<span name="K">K</span>, <span name="M">M</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">Accumulation of <a href="LayerFilter.html" class="extype" name="geotrellis.store.LayerFilter">LayerFilter</a>s that will be asked to filter layer <span class="extype" name="KeyBounds">KeyBounds</span>
@@ -1577,7 +1520,7 @@ It is expected that the caller has significant pre-computed information  about t
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="LayerReindexer.html"><span class="name">LayerReindexer</span></a><span class="tparams">[<span name="ID">ID</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="LayerReindexer.html"><span class="name">LayerReindexer</span></a><span class="tparams">[<span name="ID">ID</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -1593,7 +1536,7 @@ It is expected that the caller has significant pre-computed information  about t
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="LayerType.html"><span class="name">LayerType</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="LayerType.html"><span class="name">LayerType</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -1689,7 +1632,7 @@ It is expected that the caller has significant pre-computed information  about t
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="A key-value reader producer to read a layer one value at a time." href="ValueReader.html"><span class="name">ValueReader</span></a><span class="tparams">[<span name="ID">ID</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="A key-value reader producer to read a layer one value at a time." href="ValueReader.html"><span class="name">ValueReader</span></a><span class="tparams">[<span name="ID">ID</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">A key-value reader producer to read a layer one value at a time.</p><div class="fullcomment"><div class="comment cmt"><p>A key-value reader producer to read a layer one value at a time.
@@ -1707,7 +1650,7 @@ constructing a storage back-end specific reader.</p></div></div>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="ValueReaderProvider.html"><span class="name">ValueReaderProvider</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="ValueReaderProvider.html"><span class="name">ValueReaderProvider</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -1723,7 +1666,7 @@ constructing a storage back-end specific reader.</p></div></div>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="Writer.html"><span class="name">Writer</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends (<span class="extype" name="geotrellis.store.Writer.K">K</span>, <span class="extype" name="geotrellis.store.Writer.V">V</span>) ⇒ <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <a title="" href="Writer.html"><span class="name">Writer</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends (<span class="extype" name="geotrellis.store.Writer.K">K</span>, <span class="extype" name="geotrellis.store.Writer.V">V</span>) ⇒ <a href="https://www.scala-lang.org/api/2.12.16/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       
@@ -1840,7 +1783,7 @@ constructing a storage back-end specific reader.</p></div></div>
     </span>
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">crsDecoder</span><span class="result">: <a href="https://circe.github.io/circe/api/io/circe/Decoder.html#io.circe.Decoder" class="extype" name="io.circe.Decoder">Decoder</a>[<a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a>]</span>
@@ -1856,7 +1799,7 @@ constructing a storage back-end specific reader.</p></div></div>
     </span>
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">crsEncoder</span><span class="result">: <a href="https://circe.github.io/circe/api/io/circe/Encoder.html#io.circe.Encoder" class="extype" name="io.circe.Encoder">Encoder</a>[<a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a>]</span>
@@ -2140,7 +2083,7 @@ noDataValue can either be:
     </span>
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">jsonCrsDecoder</span><span class="result">: <a href="https://circe.github.io/circe/api/io/circe/Decoder.html#io.circe.Decoder" class="extype" name="io.circe.Decoder">Decoder</a>[<a href="../vector/io/json/JsonCRS.html" class="extype" name="geotrellis.vector.io.json.JsonCRS">JsonCRS</a>]</span>
@@ -2156,7 +2099,7 @@ noDataValue can either be:
     </span>
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">jsonCrsEncoder</span><span class="result">: <a href="https://circe.github.io/circe/api/io/circe/Encoder.html#io.circe.Encoder" class="extype" name="io.circe.Encoder">Encoder</a>[<a href="../vector/io/json/JsonCRS.html" class="extype" name="geotrellis.vector.io.json.JsonCRS">JsonCRS</a>]</span>
@@ -2175,7 +2118,7 @@ noDataValue can either be:
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">keyIndexDecoder</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.15/scala/reflect/ClassTag.html#scala.reflect.ClassTag" class="extype" name="scala.reflect.ClassTag">ClassTag</a>[<span class="extype" name="geotrellis.store.json.KeyIndexFormats.keyIndexDecoder.K">K</span>]</span>)</span><span class="result">: <a href="https://circe.github.io/circe/api/io/circe/Decoder.html#io.circe.Decoder" class="extype" name="io.circe.Decoder">Decoder</a>[<a href="index/KeyIndex.html" class="extype" name="geotrellis.store.index.KeyIndex">KeyIndex</a>[<span class="extype" name="geotrellis.store.json.KeyIndexFormats.keyIndexDecoder.K">K</span>]]</span>
+        <span class="name">keyIndexDecoder</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.16/scala/reflect/ClassTag.html#scala.reflect.ClassTag" class="extype" name="scala.reflect.ClassTag">ClassTag</a>[<span class="extype" name="geotrellis.store.json.KeyIndexFormats.keyIndexDecoder.K">K</span>]</span>)</span><span class="result">: <a href="https://circe.github.io/circe/api/io/circe/Decoder.html#io.circe.Decoder" class="extype" name="io.circe.Decoder">Decoder</a>[<a href="index/KeyIndex.html" class="extype" name="geotrellis.store.index.KeyIndex">KeyIndex</a>[<span class="extype" name="geotrellis.store.json.KeyIndexFormats.keyIndexDecoder.K">K</span>]]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="json/KeyIndexFormats.html" class="extype" name="geotrellis.store.json.KeyIndexFormats">KeyIndexFormats</a></dd></dl></div>
@@ -2191,7 +2134,7 @@ noDataValue can either be:
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">keyIndexEncoder</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.15/scala/reflect/ClassTag.html#scala.reflect.ClassTag" class="extype" name="scala.reflect.ClassTag">ClassTag</a>[<span class="extype" name="geotrellis.store.json.KeyIndexFormats.keyIndexEncoder.K">K</span>]</span>)</span><span class="result">: <a href="https://circe.github.io/circe/api/io/circe/Encoder.html#io.circe.Encoder" class="extype" name="io.circe.Encoder">Encoder</a>[<a href="index/KeyIndex.html" class="extype" name="geotrellis.store.index.KeyIndex">KeyIndex</a>[<span class="extype" name="geotrellis.store.json.KeyIndexFormats.keyIndexEncoder.K">K</span>]]</span>
+        <span class="name">keyIndexEncoder</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.16/scala/reflect/ClassTag.html#scala.reflect.ClassTag" class="extype" name="scala.reflect.ClassTag">ClassTag</a>[<span class="extype" name="geotrellis.store.json.KeyIndexFormats.keyIndexEncoder.K">K</span>]</span>)</span><span class="result">: <a href="https://circe.github.io/circe/api/io/circe/Encoder.html#io.circe.Encoder" class="extype" name="io.circe.Encoder">Encoder</a>[<a href="index/KeyIndex.html" class="extype" name="geotrellis.store.index.KeyIndex">KeyIndex</a>[<span class="extype" name="geotrellis.store.json.KeyIndexFormats.keyIndexEncoder.K">K</span>]]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="json/KeyIndexFormats.html" class="extype" name="geotrellis.store.json.KeyIndexFormats">KeyIndexFormats</a></dd></dl></div>
@@ -2236,7 +2179,7 @@ noDataValue can either be:
     </span>
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">linkedCRSDecoder</span><span class="result">: <a href="https://circe.github.io/circe/api/io/circe/Decoder.html#io.circe.Decoder" class="extype" name="io.circe.Decoder">Decoder</a>[<a href="../vector/io/json/LinkedCRS.html" class="extype" name="geotrellis.vector.io.json.LinkedCRS">LinkedCRS</a>]</span>
@@ -2252,7 +2195,7 @@ noDataValue can either be:
     </span>
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">linkedCRSEncoder</span><span class="result">: <a href="https://circe.github.io/circe/api/io/circe/Encoder.html#io.circe.Encoder" class="extype" name="io.circe.Encoder">Encoder</a>[<a href="../vector/io/json/LinkedCRS.html" class="extype" name="geotrellis.vector.io.json.LinkedCRS">LinkedCRS</a>]</span>
@@ -2300,7 +2243,7 @@ noDataValue can either be:
     </span>
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">namedCRSDecoder</span><span class="result">: <a href="https://circe.github.io/circe/api/io/circe/Decoder.html#io.circe.Decoder" class="extype" name="io.circe.Decoder">Decoder</a>[<a href="../vector/io/json/NamedCRS.html" class="extype" name="geotrellis.vector.io.json.NamedCRS">NamedCRS</a>]</span>
@@ -2316,7 +2259,7 @@ noDataValue can either be:
     </span>
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">namedCRSEncoder</span><span class="result">: <a href="https://circe.github.io/circe/api/io/circe/Encoder.html#io.circe.Encoder" class="extype" name="io.circe.Encoder">Encoder</a>[<a href="../vector/io/json/NamedCRS.html" class="extype" name="geotrellis.vector.io.json.NamedCRS">NamedCRS</a>]</span>
@@ -2879,7 +2822,7 @@ noDataValue can either be:
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="AttributeStore$.html"><span class="name">AttributeStore</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="AttributeStore$.html"><span class="name">AttributeStore</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -2895,7 +2838,7 @@ noDataValue can either be:
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="AvroLayerType$.html"><span class="name">AvroLayerType</span></a><span class="result"> extends <a href="LayerType.html" class="extype" name="geotrellis.store.LayerType">LayerType</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="AvroLayerType$.html"><span class="name">AvroLayerType</span></a><span class="result"> extends <a href="LayerType.html" class="extype" name="geotrellis.store.LayerType">LayerType</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -2927,7 +2870,7 @@ noDataValue can either be:
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="COGLayerType$.html"><span class="name">COGLayerType</span></a><span class="result"> extends <a href="LayerType.html" class="extype" name="geotrellis.store.LayerType">LayerType</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="COGLayerType$.html"><span class="name">COGLayerType</span></a><span class="result"> extends <a href="LayerType.html" class="extype" name="geotrellis.store.LayerType">LayerType</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -2991,7 +2934,7 @@ noDataValue can either be:
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="GeoTrellisPath$.html"><span class="name">GeoTrellisPath</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="GeoTrellisPath$.html"><span class="name">GeoTrellisPath</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -3007,7 +2950,7 @@ noDataValue can either be:
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="GeoTrellisRasterSource$.html"><span class="name">GeoTrellisRasterSource</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="GeoTrellisRasterSource$.html"><span class="name">GeoTrellisRasterSource</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -3023,7 +2966,7 @@ noDataValue can either be:
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="GeoTrellisReprojectRasterSource$.html"><span class="name">GeoTrellisReprojectRasterSource</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="GeoTrellisReprojectRasterSource$.html"><span class="name">GeoTrellisReprojectRasterSource</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -3103,7 +3046,7 @@ noDataValue can either be:
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="LayerId$.html"><span class="name">LayerId</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="LayerId$.html"><span class="name">LayerId</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -3192,9 +3135,9 @@ noDataValue can either be:
             </div><div class="parent" name="geotrellis.store.avro.codecs.TileCodecs">
               <h3>Inherited from <a href="avro/codecs/TileCodecs.html" class="extype" name="geotrellis.store.avro.codecs.TileCodecs">TileCodecs</a></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.15/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.16/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>

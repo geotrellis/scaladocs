@@ -553,63 +553,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="geotrellis">geotrellis</a></dd></dl></div>
-    </li><li name="geotrellis.vectortile" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="vectortile"></a><a id="vectortile:vectortile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/vectortile/index.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="This package is experimental. Expect API flux." href="../vectortile/index.html"><span class="name">vectortile</span></a>
-      </span>
-      
-      <p class="shortcomment cmt"><i>This package is experimental. Expect API flux.</i></p><div class="fullcomment"><div class="comment cmt"><p><i>This package is experimental. Expect API flux.</i></p><p>Invented by <a href="https://www.mapbox.com/" target="_blank">Mapbox</a>, VectorTiles are a combination of the
-ideas of finite-sized tiles and vector geometries. Mapbox maintains the
-official implementation spec for VectorTile codecs. The specification is free
-and open source.</p><p>VectorTiles are advantageous over raster tiles in that:</p><ul><li>They are typically smaller to store</li><li>They can be easily transformed (rotated, etc.) in real time</li><li>They allow for continuous (as opposed to step-wise) zoom in Slippy Maps.</li></ul><p>Raw VectorTile data is stored in the protobuf format. Any codec implementing
-<a href="https://github.com/mapbox/vector-tile-spec/tree/master/2.1" target="_blank">the spec</a> must
-decode and encode data according to
-<a href="https://github.com/mapbox/vector-tile-spec/blob/master/2.1/vector_tile.proto" target="_blank">this <i>.proto</i> schema</a>.</p><h4>What is this package?</h4><p><i>geotrellis-vectortile</i> is a high-performance implementation of
-<b>Version 2.1</b> of the VectorTile spec. It features:</p><ul><li>Decoding of <b>Version 2</b> VectorTiles from Protobuf byte data into useful GeoTrellis types.</li><li>Lazy decoding of Geometries. Only parse what you need!</li></ul><h4>Using this Package</h4><h5>Modules</h5><p>Users of this library need only pay attention to <a href="../vectortile/index.html" class="extype" name="geotrellis.vectortile">geotrellis.vectortile</a>.
-Any classes in the <i>internal.*</i> submodules are unique to the machinery
-of VectorTile {de,en}coding, and can be safely ignored.</p><h5>Types</h5><p>The central type is the <a href="../vectortile/VectorTile.html" class="extype" name="geotrellis.vectortile.VectorTile">geotrellis.vectortile.VectorTile</a> class. Its companion object can
-be used to construct VectorTiles from raw byte data:</p><pre><span class="kw">import</span> geotrellis.spark.SpatialKey
-<span class="kw">import</span> geotrellis.spark.tiling.LayoutDefinition
-<span class="kw">import</span> geotrellis.vector.Extent
-<span class="kw">import</span> geotrellis.vectortile.VectorTile
-
-<span class="kw">val</span> bytes: <span class="std">Array</span>[<span class="std">Byte</span>] = ...  <span class="cmt">// from some `.mvt` file</span>
-<span class="kw">val</span> key: SpatialKey = ...  <span class="cmt">// preknown</span>
-<span class="kw">val</span> layout: LayoutDefinition = ...  <span class="cmt">// preknown</span>
-<span class="kw">val</span> tileExtent: Extent = layout.mapTransform(key)
-
-<span class="cmt">/* Decode Protobuf bytes. */</span>
-<span class="kw">val</span> tile: VectorTile = VectorTile.fromBytes(bytes, tileExtent)
-
-<span class="cmt">/* Encode a VectorTile back into bytes. */</span>
-<span class="kw">val</span> encodedBytes: <span class="std">Array</span>[<span class="std">Byte</span>] = tile.toBytes</pre><p>The <i>V*</i> types form a small <a href="https://en.wikipedia.org/wiki/Sum_type" target="_blank">sum type</a>
-and are used to represent usually untyped Feature-level metadata. This metadata
-is equivalent to a JSON Object, where String keys index values of any type.
-A Scala Map requires more rigidity (for the better), and so we use
-<a href="../vectortile/Value.html" class="extype" name="geotrellis.vectortile.Value">geotrellis.vectortile.Value</a> to guarantee type safety.</p><h4>Implementation Assumptions</h4><p>This particular implementation of the VectorTile spec makes the following
-assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordinate Reference
-    system. That is, there is no such thing as a &quot;projectionless&quot; VectorTile.
-    When decoding a VectorTile, we must provide a GeoTrellis <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">geotrellis.vector.Extent</a> that
-    represents the Tile's area on a map.
-    With this, the grid coordinates stored in the VectorTile's Geometry are
-    shifted from their
-    original [0,4096] range to actual world coordinates in the Extent's CRS.</li><li>The <code>id</code> field in VectorTile Features doesn't matter.</li><li><code>UNKNOWN</code> geometries are safe to ignore.</li><li>If a VectorTile <code>geometry</code> list marked as <code>POINT</code> has only one pair
-    of coordinates, it will be decoded as a GeoTrellis <code>Point</code>. If it has
-    more than one pair, it will be decoded as a <code>MultiPoint</code>. Likewise for
-    the <code>LINESTRING</code> and <code>POLYGON</code> types. A complaint has been made about
-    the spec regarding this, and future versions may include a difference
-    between single and multi geometries.
-</li></ul></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="geotrellis">geotrellis</a></dd><dt>Version</dt><dd><p>2.1</p></dd></dl></div>
     </li>
               </ul>
             </div>
@@ -642,7 +585,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="Implicits.html" class="extype" name="geotrellis.layer.Implicits">Implicits</a>, <a href="mask/Implicits.html" class="extype" name="geotrellis.layer.mask.Implicits">layer.mask.Implicits</a>, <a href="mapalgebra/local/temporal/Implicits.html" class="extype" name="geotrellis.layer.mapalgebra.local.temporal.Implicits">layer.mapalgebra.local.temporal.Implicits</a>, <a href="mapalgebra/local/Implicits.html" class="extype" name="geotrellis.layer.mapalgebra.local.Implicits">layer.mapalgebra.local.Implicits</a>, <a href="mapalgebra/focal/hillshade/Implicits.html" class="extype" name="geotrellis.layer.mapalgebra.focal.hillshade.Implicits">layer.mapalgebra.focal.hillshade.Implicits</a>, <a href="mapalgebra/focal/Implicits.html" class="extype" name="geotrellis.layer.mapalgebra.focal.Implicits">layer.mapalgebra.focal.Implicits</a>, <a href="mapalgebra/Implicits.html" class="extype" name="geotrellis.layer.mapalgebra.Implicits">layer.mapalgebra.Implicits</a>, <a href="stitch/Implicits.html" class="extype" name="geotrellis.layer.stitch.Implicits">layer.stitch.Implicits</a>, <a href="../vector/io/json/CrsFormats.html" class="extype" name="geotrellis.vector.io.json.CrsFormats">CrsFormats</a>, <a href="buffer/Implicits.html" class="extype" name="geotrellis.layer.buffer.Implicits">layer.buffer.Implicits</a>, <a href="merge/Implicits.html" class="extype" name="geotrellis.layer.merge.Implicits">layer.merge.Implicits</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="Implicits.html" class="extype" name="geotrellis.layer.Implicits">Implicits</a>, <a href="mask/Implicits.html" class="extype" name="geotrellis.layer.mask.Implicits">layer.mask.Implicits</a>, <a href="mapalgebra/local/temporal/Implicits.html" class="extype" name="geotrellis.layer.mapalgebra.local.temporal.Implicits">layer.mapalgebra.local.temporal.Implicits</a>, <a href="mapalgebra/local/Implicits.html" class="extype" name="geotrellis.layer.mapalgebra.local.Implicits">layer.mapalgebra.local.Implicits</a>, <a href="mapalgebra/focal/hillshade/Implicits.html" class="extype" name="geotrellis.layer.mapalgebra.focal.hillshade.Implicits">layer.mapalgebra.focal.hillshade.Implicits</a>, <a href="mapalgebra/focal/Implicits.html" class="extype" name="geotrellis.layer.mapalgebra.focal.Implicits">layer.mapalgebra.focal.Implicits</a>, <a href="mapalgebra/Implicits.html" class="extype" name="geotrellis.layer.mapalgebra.Implicits">layer.mapalgebra.Implicits</a>, <a href="stitch/Implicits.html" class="extype" name="geotrellis.layer.stitch.Implicits">layer.stitch.Implicits</a>, <a href="../vector/io/json/CrsFormats.html" class="extype" name="geotrellis.vector.io.json.CrsFormats">CrsFormats</a>, <a href="buffer/Implicits.html" class="extype" name="geotrellis.layer.buffer.Implicits">layer.buffer.Implicits</a>, <a href="merge/Implicits.html" class="extype" name="geotrellis.layer.merge.Implicits">layer.merge.Implicits</a>, <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.16/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -702,7 +645,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="This type class marks K as point that can be bounded in space." href="Boundable.html"><span class="name">Boundable</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="This type class marks K as point that can be bounded in space." href="Boundable.html"><span class="name">Boundable</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">This type class marks K as point that can be bounded in space.</p><div class="fullcomment"><div class="comment cmt"><p>This type class marks K as point that can be bounded in space.
@@ -721,7 +664,7 @@ Consequently the result may be neither a nor b, but a new value.
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Represents a region of discrete space, bounding it by minimum and maximum points." href="Bounds.html"><span class="name">Bounds</span></a><span class="tparams">[<span name="A">+A</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="Represents a region of discrete space, bounding it by minimum and maximum points." href="Bounds.html"><span class="name">Bounds</span></a><span class="tparams">[<span name="A">+A</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Represents a region of discrete space, bounding it by minimum and maximum points.</p><div class="fullcomment"><div class="comment cmt"><p>Represents a region of discrete space, bounding it by minimum and maximum points.
@@ -741,7 +684,7 @@ for testing and forming region intersection, union and mutation.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="package$$CRSWorldExtent.html"><span class="name">CRSWorldExtent</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyVal.html#scala.AnyVal" class="extype" name="scala.AnyVal">AnyVal</a></span>
+        <a title="" href="package$$CRSWorldExtent.html"><span class="name">CRSWorldExtent</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyVal.html#scala.AnyVal" class="extype" name="scala.AnyVal">AnyVal</a></span>
       </span>
       
       
@@ -757,7 +700,7 @@ for testing and forming region intersection, union and mutation.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="CellGridLayoutCollectionMethods.html"><span class="name">CellGridLayoutCollectionMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V &lt;: <a href="../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>, <span name="M">M</span>]</span><span class="result"> extends <a href="../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="scala.Seq">Seq</span>[(<span class="extype" name="geotrellis.layer.CellGridLayoutCollectionMethods.K">K</span>, <span class="extype" name="geotrellis.layer.CellGridLayoutCollectionMethods.V">V</span>)] with <a href="Metadata.html" class="extype" name="geotrellis.layer.Metadata">Metadata</a>[<span class="extype" name="geotrellis.layer.CellGridLayoutCollectionMethods.M">M</span>]]</span>
+        <a title="" href="CellGridLayoutCollectionMethods.html"><span class="name">CellGridLayoutCollectionMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V &lt;: <a href="../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a>[<a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>, <span name="M">M</span>]</span><span class="result"> extends <a href="../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="scala.Seq">Seq</span>[(<span class="extype" name="geotrellis.layer.CellGridLayoutCollectionMethods.K">K</span>, <span class="extype" name="geotrellis.layer.CellGridLayoutCollectionMethods.V">V</span>)] with <a href="Metadata.html" class="extype" name="geotrellis.layer.Metadata">Metadata</a>[<span class="extype" name="geotrellis.layer.CellGridLayoutCollectionMethods.M">M</span>]]</span>
       </span>
       
       
@@ -805,7 +748,7 @@ for testing and forming region intersection, union and mutation.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="package$$GeoTiffInfoMethods.html"><span class="name">GeoTiffInfoMethods</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="package$$GeoTiffInfoMethods.html"><span class="name">GeoTiffInfoMethods</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -821,7 +764,7 @@ for testing and forming region intersection, union and mutation.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="GlobalLayout.html"><span class="name">GlobalLayout</span></a><span class="params">(<span name="tileSize">tileSize: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="zoom">zoom: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="threshold">threshold: <a href="https://www.scala-lang.org/api/2.12.15/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>)</span><span class="result"> extends <a href="LayoutType.html" class="extype" name="geotrellis.layer.LayoutType">LayoutType</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="GlobalLayout.html"><span class="name">GlobalLayout</span></a><span class="params">(<span name="tileSize">tileSize: <a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="zoom">zoom: <a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="threshold">threshold: <a href="https://www.scala-lang.org/api/2.12.16/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>)</span><span class="result"> extends <a href="LayoutType.html" class="extype" name="geotrellis.layer.LayoutType">LayoutType</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="ZoomedLayoutScheme.html" class="extype" name="geotrellis.layer.ZoomedLayoutScheme">geotrellis.layer.ZoomedLayoutScheme</a></p></span></dd></dl></div>
@@ -853,7 +796,7 @@ for testing and forming region intersection, union and mutation.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="Implicits$TileToLayoutOps.html"><span class="name">TileToLayoutOps</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="Implicits$TileToLayoutOps.html"><span class="name">TileToLayoutOps</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Implicits.html" class="extype" name="geotrellis.layer.Implicits">Implicits</a></dd></dl></div>
@@ -869,7 +812,7 @@ for testing and forming region intersection, union and mutation.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="Implicits$WithContextCollectionWrapper.html"><span class="name">WithContextCollectionWrapper</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="M">M</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="Implicits$WithContextCollectionWrapper.html"><span class="name">WithContextCollectionWrapper</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="M">M</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Implicits.html" class="extype" name="geotrellis.layer.Implicits">Implicits</a></dd></dl></div>
@@ -885,7 +828,7 @@ for testing and forming region intersection, union and mutation.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="Implicits$withCellGridLayoutCollectionMethods.html"><span class="name">withCellGridLayoutCollectionMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V &lt;: <a href="../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>, <span name="M">M</span>]</span><span class="result"> extends <a href="CellGridLayoutCollectionMethods.html" class="extype" name="geotrellis.layer.CellGridLayoutCollectionMethods">CellGridLayoutCollectionMethods</a>[<span class="extype" name="geotrellis.layer.Implicits.withCellGridLayoutCollectionMethods.K">K</span>, <span class="extype" name="geotrellis.layer.Implicits.withCellGridLayoutCollectionMethods.V">V</span>, <span class="extype" name="geotrellis.layer.Implicits.withCellGridLayoutCollectionMethods.M">M</span>]</span>
+        <a title="" href="Implicits$withCellGridLayoutCollectionMethods.html"><span class="name">withCellGridLayoutCollectionMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V &lt;: <a href="../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a>[<a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>, <span name="M">M</span>]</span><span class="result"> extends <a href="CellGridLayoutCollectionMethods.html" class="extype" name="geotrellis.layer.CellGridLayoutCollectionMethods">CellGridLayoutCollectionMethods</a>[<span class="extype" name="geotrellis.layer.Implicits.withCellGridLayoutCollectionMethods.K">K</span>, <span class="extype" name="geotrellis.layer.Implicits.withCellGridLayoutCollectionMethods.V">V</span>, <span class="extype" name="geotrellis.layer.Implicits.withCellGridLayoutCollectionMethods.M">M</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Implicits.html" class="extype" name="geotrellis.layer.Implicits">Implicits</a></dd></dl></div>
@@ -917,7 +860,7 @@ for testing and forming region intersection, union and mutation.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="Represents non-empty region of descrete space." href="KeyBounds.html"><span class="name">KeyBounds</span></a><span class="tparams">[<span name="K">+K</span>]</span><span class="params">(<span name="minKey">minKey: <span class="extype" name="geotrellis.layer.KeyBounds.K">K</span></span>, <span name="maxKey">maxKey: <span class="extype" name="geotrellis.layer.KeyBounds.K">K</span></span>)</span><span class="result"> extends <a href="Bounds.html" class="extype" name="geotrellis.layer.Bounds">Bounds</a>[<span class="extype" name="geotrellis.layer.KeyBounds.K">K</span>] with <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="Represents non-empty region of descrete space." href="KeyBounds.html"><span class="name">KeyBounds</span></a><span class="tparams">[<span name="K">+K</span>]</span><span class="params">(<span name="minKey">minKey: <span class="extype" name="geotrellis.layer.KeyBounds.K">K</span></span>, <span name="maxKey">maxKey: <span class="extype" name="geotrellis.layer.KeyBounds.K">K</span></span>)</span><span class="result"> extends <a href="Bounds.html" class="extype" name="geotrellis.layer.Bounds">Bounds</a>[<span class="extype" name="geotrellis.layer.KeyBounds.K">K</span>] with <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Represents non-empty region of descrete space.</p><div class="fullcomment"><div class="comment cmt"><p>Represents non-empty region of descrete space.
@@ -936,7 +879,7 @@ in each individual dimension is part of the region described by these <a href="B
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="KeyExtractor.html"><span class="name">KeyExtractor</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="KeyExtractor.html"><span class="name">KeyExtractor</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -952,7 +895,7 @@ in each individual dimension is part of the region described by these <a href="B
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="Defines tiled raster layout" href="LayoutDefinition.html"><span class="name">LayoutDefinition</span></a><span class="params">(<span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="tileLayout">tileLayout: <a href="../raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>)</span><span class="result"> extends <a href="../raster/GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a>] with <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="Defines tiled raster layout" href="LayoutDefinition.html"><span class="name">LayoutDefinition</span></a><span class="params">(<span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="tileLayout">tileLayout: <a href="../raster/TileLayout.html" class="extype" name="geotrellis.raster.TileLayout">TileLayout</a></span>)</span><span class="result"> extends <a href="../raster/GridExtent.html" class="extype" name="geotrellis.raster.GridExtent">GridExtent</a>[<a href="https://www.scala-lang.org/api/2.12.16/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a>] with <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Defines tiled raster layout</p><div class="fullcomment"><div class="comment cmt"><p>Defines tiled raster layout</p></div><dl class="paramcmts block"><dt class="param">extent</dt><dd class="cmt"><p>extent covered by the layout tiles, could be greater than extent of data in the layer</p></dd><dt class="param">tileLayout</dt><dd class="cmt"><p>tile layout (tile cols, tile rows, tile pixel size)</p></dd></dl></div>
@@ -968,7 +911,7 @@ in each individual dimension is part of the region described by these <a href="B
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="LayoutLevel.html"><span class="name">LayoutLevel</span></a><span class="params">(<span name="zoom">zoom: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="layout">layout: <a href="LayoutDefinition.html" class="extype" name="geotrellis.layer.LayoutDefinition">LayoutDefinition</a></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="LayoutLevel.html"><span class="name">LayoutLevel</span></a><span class="params">(<span name="zoom">zoom: <a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="layout">layout: <a href="LayoutDefinition.html" class="extype" name="geotrellis.layer.LayoutDefinition">LayoutDefinition</a></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -984,7 +927,7 @@ in each individual dimension is part of the region described by these <a href="B
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="A LayoutScheme is something that provides LayoutLevels based on an integer id or an extent and cellsize." href="LayoutScheme.html"><span class="name">LayoutScheme</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="A LayoutScheme is something that provides LayoutLevels based on an integer id or an extent and cellsize." href="LayoutScheme.html"><span class="name">LayoutScheme</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">A LayoutScheme is something that provides LayoutLevels based on an integer id or
@@ -1005,7 +948,7 @@ selection will be made.</p><p>It also provides methods for next zoomed out tile 
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Reads tiles by key from a RasterSource as keyed by a LayoutDefinition" href="LayoutTileSource.html"><span class="name">LayoutTileSource</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Reads tiles by key from a RasterSource as keyed by a LayoutDefinition" href="LayoutTileSource.html"><span class="name">LayoutTileSource</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">Reads tiles by key from a <span class="extype" name="RasterSource">RasterSource</span> as keyed by a <a href="LayoutDefinition.html" class="extype" name="geotrellis.layer.LayoutDefinition">LayoutDefinition</a></p><div class="fullcomment"><div class="comment cmt"><p>Reads tiles by key from a <span class="extype" name="RasterSource">RasterSource</span> as keyed by a <a href="LayoutDefinition.html" class="extype" name="geotrellis.layer.LayoutDefinition">LayoutDefinition</a></p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>It is required that the <span class="extype" name="RasterSource">RasterSource</span> is pixel aligned with the <a href="LayoutDefinition.html" class="extype" name="geotrellis.layer.LayoutDefinition">LayoutDefinition</a></p></span></dd></dl></div>
@@ -1021,7 +964,7 @@ selection will be made.</p><p>It also provides methods for next zoomed out tile 
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Strategy for selecting LayoutScheme before metadata is collected" href="LayoutType.html"><span class="name">LayoutType</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Strategy for selecting LayoutScheme before metadata is collected" href="LayoutType.html"><span class="name">LayoutType</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">Strategy for selecting LayoutScheme before metadata is collected</p>
@@ -1037,7 +980,7 @@ selection will be made.</p><p>It also provides methods for next zoomed out tile 
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="LocalLayout.html"><span class="name">LocalLayout</span></a><span class="params">(<span name="tileCols">tileCols: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="tileRows">tileRows: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result"> extends <a href="LayoutType.html" class="extype" name="geotrellis.layer.LayoutType">LayoutType</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="LocalLayout.html"><span class="name">LocalLayout</span></a><span class="params">(<span name="tileCols">tileCols: <a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="tileRows">tileRows: <a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result"> extends <a href="LayoutType.html" class="extype" name="geotrellis.layer.LayoutType">LayoutType</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="FloatingLayoutScheme.html" class="extype" name="geotrellis.layer.FloatingLayoutScheme">geotrellis.layer.FloatingLayoutScheme</a></p></span></dd></dl></div>
@@ -1073,7 +1016,7 @@ Uneven layouts will pyramid up until they are reduced to a single tile.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Transforms between geographic map coordinates and spatial keys." href="MapKeyTransform.html"><span class="name">MapKeyTransform</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="Transforms between geographic map coordinates and spatial keys." href="MapKeyTransform.html"><span class="name">MapKeyTransform</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Transforms between geographic map coordinates and spatial keys.</p><div class="fullcomment"><div class="comment cmt"><p>Transforms between geographic map coordinates and spatial keys.
@@ -1093,7 +1036,7 @@ produce the original geographic extent, but a larger one.
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="Metadata.html"><span class="name">Metadata</span></a><span class="tparams">[<span name="M">M</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="Metadata.html"><span class="name">Metadata</span></a><span class="tparams">[<span name="M">M</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -1157,7 +1100,7 @@ produce the original geographic extent, but a larger one.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="SpaceTimeKey.html"><span class="name">SpaceTimeKey</span></a><span class="params">(<span name="col">col: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="row">row: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="instant">instant: <a href="https://www.scala-lang.org/api/2.12.15/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="SpaceTimeKey.html"><span class="name">SpaceTimeKey</span></a><span class="params">(<span name="col">col: <a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="row">row: <a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="instant">instant: <a href="https://www.scala-lang.org/api/2.12.16/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -1189,7 +1132,7 @@ produce the original geographic extent, but a larger one.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="A SpatialKey designates the spatial positioning of a layer's tile." href="SpatialKey.html"><span class="name">SpatialKey</span></a><span class="params">(<span name="col">col: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="row">row: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Product2.html#scala.Product2" class="extype" name="scala.Product2">Product2</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>] with <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="A SpatialKey designates the spatial positioning of a layer's tile." href="SpatialKey.html"><span class="name">SpatialKey</span></a><span class="params">(<span name="col">col: <a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="row">row: <a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Product2.html#scala.Product2" class="extype" name="scala.Product2">Product2</a>[<a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>] with <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">A SpatialKey designates the spatial positioning of a layer's tile.</p>
@@ -1221,7 +1164,7 @@ produce the original geographic extent, but a larger one.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="A TemporalKey designates the temporal positioning of a layer's tile." href="TemporalKey.html"><span class="name">TemporalKey</span></a><span class="params">(<span name="instant">instant: <a href="https://www.scala-lang.org/api/2.12.15/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="A TemporalKey designates the temporal positioning of a layer's tile." href="TemporalKey.html"><span class="name">TemporalKey</span></a><span class="params">(<span name="instant">instant: <a href="https://www.scala-lang.org/api/2.12.16/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">A TemporalKey designates the temporal positioning of a layer's tile.</p>
@@ -1253,7 +1196,7 @@ produce the original geographic extent, but a larger one.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="A key for a Tile with temporal as well as spatial dimension" href="TemporalProjectedExtent.html"><span class="name">TemporalProjectedExtent</span></a><span class="params">(<span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="crs">crs: <a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="instant">instant: <a href="https://www.scala-lang.org/api/2.12.15/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="A key for a Tile with temporal as well as spatial dimension" href="TemporalProjectedExtent.html"><span class="name">TemporalProjectedExtent</span></a><span class="params">(<span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="crs">crs: <a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="instant">instant: <a href="https://www.scala-lang.org/api/2.12.16/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">A key for a Tile with temporal as well as spatial dimension</p>
@@ -1269,7 +1212,7 @@ produce the original geographic extent, but a larger one.
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">TileBounds</span><span class="result alias"> = <a href="../raster/GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>
+        <span class="name">TileBounds</span><span class="result alias"> = <a href="../raster/GridBounds.html" class="extype" name="geotrellis.raster.GridBounds">GridBounds</a>[<a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>
       </span>
       
       
@@ -1317,7 +1260,7 @@ produce the original geographic extent, but a larger one.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="TileLayerMetadata.html"><span class="name">TileLayerMetadata</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="cellType">cellType: <a href="../raster/index.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>, <span name="layout">layout: <a href="LayoutDefinition.html" class="extype" name="geotrellis.layer.LayoutDefinition">LayoutDefinition</a></span>, <span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="crs">crs: <a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="bounds">bounds: <a href="Bounds.html" class="extype" name="geotrellis.layer.Bounds">Bounds</a>[<span class="extype" name="geotrellis.layer.TileLayerMetadata.K">K</span>]</span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="TileLayerMetadata.html"><span class="name">TileLayerMetadata</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="cellType">cellType: <a href="../raster/index.html#CellType=geotrellis.raster.DataTypewithgeotrellis.raster.NoDataHandling" class="extmbr" name="geotrellis.raster.CellType">CellType</a></span>, <span name="layout">layout: <a href="LayoutDefinition.html" class="extype" name="geotrellis.layer.LayoutDefinition">LayoutDefinition</a></span>, <span name="extent">extent: <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">Extent</a></span>, <span name="crs">crs: <a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a></span>, <span name="bounds">bounds: <a href="Bounds.html" class="extype" name="geotrellis.layer.Bounds">Bounds</a>[<span class="extype" name="geotrellis.layer.TileLayerMetadata.K">K</span>]</span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">cellType</dt><dd class="cmt"><p>value type of each cell</p></dd><dt class="param">layout</dt><dd class="cmt"><p>definition of the tiled raster layout</p></dd><dt class="param">extent</dt><dd class="cmt"><p>Extent covering the source data</p></dd><dt class="param">crs</dt><dd class="cmt"><p>CRS of the raster projection</p></dd></dl></div>
@@ -1350,7 +1293,7 @@ used in Leaflet et al.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="buffer/Implicits$withCollectionsBufferTilesMethodsWrapper.html"><span class="name">withCollectionsBufferTilesMethodsWrapper</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V &lt;: <a href="../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>]</span><span class="result"> extends <a href="buffer/CollectionBufferTilesMethods.html" class="extype" name="geotrellis.layer.buffer.CollectionBufferTilesMethods">CollectionBufferTilesMethods</a>[<span class="extype" name="geotrellis.layer.buffer.Implicits.withCollectionsBufferTilesMethodsWrapper.K">K</span>, <span class="extype" name="geotrellis.layer.buffer.Implicits.withCollectionsBufferTilesMethodsWrapper.V">V</span>]</span>
+        <a title="" href="buffer/Implicits$withCollectionsBufferTilesMethodsWrapper.html"><span class="name">withCollectionsBufferTilesMethodsWrapper</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V &lt;: <a href="../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a>[<a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>]</span><span class="result"> extends <a href="buffer/CollectionBufferTilesMethods.html" class="extype" name="geotrellis.layer.buffer.CollectionBufferTilesMethods">CollectionBufferTilesMethods</a>[<span class="extype" name="geotrellis.layer.buffer.Implicits.withCollectionsBufferTilesMethodsWrapper.K">K</span>, <span class="extype" name="geotrellis.layer.buffer.Implicits.withCollectionsBufferTilesMethodsWrapper.V">V</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="buffer/Implicits.html" class="extype" name="geotrellis.layer.buffer.Implicits">Implicits</a></dd></dl></div>
@@ -1382,7 +1325,7 @@ used in Leaflet et al.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="mapalgebra/Implicits$withCollectionCombineTraversableMethods.html"><span class="name">withCollectionCombineTraversableMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="mapalgebra/Implicits$withCollectionCombineTraversableMethods.html"><span class="name">withCollectionCombineTraversableMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="mapalgebra/Implicits.html" class="extype" name="geotrellis.layer.mapalgebra.Implicits">Implicits</a></dd></dl></div>
@@ -1398,7 +1341,7 @@ used in Leaflet et al.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="mapalgebra/Implicits$withCollectionMapValuesOptionMethods.html"><span class="name">withCollectionMapValuesOptionMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="scala.Seq">Seq</span>[(<span class="extype" name="geotrellis.layer.mapalgebra.Implicits.withCollectionMapValuesOptionMethods.K">K</span>, (<span class="extype" name="geotrellis.layer.mapalgebra.Implicits.withCollectionMapValuesOptionMethods.V">V</span>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="geotrellis.layer.mapalgebra.Implicits.withCollectionMapValuesOptionMethods.V">V</span>]))]]</span>
+        <a title="" href="mapalgebra/Implicits$withCollectionMapValuesOptionMethods.html"><span class="name">withCollectionMapValuesOptionMethods</span></a><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="result"> extends <a href="../util/MethodExtensions.html" class="extype" name="geotrellis.util.MethodExtensions">MethodExtensions</a>[<span class="extype" name="scala.Seq">Seq</span>[(<span class="extype" name="geotrellis.layer.mapalgebra.Implicits.withCollectionMapValuesOptionMethods.K">K</span>, (<span class="extype" name="geotrellis.layer.mapalgebra.Implicits.withCollectionMapValuesOptionMethods.V">V</span>, <a href="https://www.scala-lang.org/api/2.12.16/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="geotrellis.layer.mapalgebra.Implicits.withCollectionMapValuesOptionMethods.V">V</span>]))]]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="mapalgebra/Implicits.html" class="extype" name="geotrellis.layer.mapalgebra.Implicits">Implicits</a></dd></dl></div>
@@ -1446,7 +1389,7 @@ used in Leaflet et al.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="mapalgebra/focal/hillshade/Implicits$withElevationTileLayerCollectionMethods.html"><span class="name">withElevationTileLayerCollectionMethods</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="mapalgebra/focal/CollectionFocalOperation.html" class="extype" name="geotrellis.layer.mapalgebra.focal.CollectionFocalOperation">CollectionFocalOperation</a>[<span class="extype" name="geotrellis.layer.mapalgebra.focal.hillshade.Implicits.withElevationTileLayerCollectionMethods.K">K</span>] with <a href="mapalgebra/focal/hillshade/HillshadeTileLayerCollectionMethods.html" class="extype" name="geotrellis.layer.mapalgebra.focal.hillshade.HillshadeTileLayerCollectionMethods">HillshadeTileLayerCollectionMethods</a>[<span class="extype" name="geotrellis.layer.mapalgebra.focal.hillshade.Implicits.withElevationTileLayerCollectionMethods.K">K</span>] with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="mapalgebra/focal/hillshade/Implicits$withElevationTileLayerCollectionMethods.html"><span class="name">withElevationTileLayerCollectionMethods</span></a><span class="tparams">[<span name="K">K</span>]</span><span class="result"> extends <a href="mapalgebra/focal/CollectionFocalOperation.html" class="extype" name="geotrellis.layer.mapalgebra.focal.CollectionFocalOperation">CollectionFocalOperation</a>[<span class="extype" name="geotrellis.layer.mapalgebra.focal.hillshade.Implicits.withElevationTileLayerCollectionMethods.K">K</span>] with <a href="mapalgebra/focal/hillshade/HillshadeTileLayerCollectionMethods.html" class="extype" name="geotrellis.layer.mapalgebra.focal.hillshade.HillshadeTileLayerCollectionMethods">HillshadeTileLayerCollectionMethods</a>[<span class="extype" name="geotrellis.layer.mapalgebra.focal.hillshade.Implicits.withElevationTileLayerCollectionMethods.K">K</span>] with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="mapalgebra/focal/hillshade/Implicits.html" class="extype" name="geotrellis.layer.mapalgebra.focal.hillshade.Implicits">Implicits</a></dd></dl></div>
@@ -1542,7 +1485,7 @@ used in Leaflet et al.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="stitch/Implicits$withSpatialTileCollectionMethods.html"><span class="name">withSpatialTileCollectionMethods</span></a><span class="tparams">[<span name="V">V &lt;: <a href="../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>]</span><span class="result"> extends <a href="stitch/SpatialTileCollectionStitchMethods.html" class="extype" name="geotrellis.layer.stitch.SpatialTileCollectionStitchMethods">SpatialTileCollectionStitchMethods</a>[<span class="extype" name="geotrellis.layer.stitch.Implicits.withSpatialTileCollectionMethods.V">V</span>]</span>
+        <a title="" href="stitch/Implicits$withSpatialTileCollectionMethods.html"><span class="name">withSpatialTileCollectionMethods</span></a><span class="tparams">[<span name="V">V &lt;: <a href="../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a>[<a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>]</span><span class="result"> extends <a href="stitch/SpatialTileCollectionStitchMethods.html" class="extype" name="geotrellis.layer.stitch.SpatialTileCollectionStitchMethods">SpatialTileCollectionStitchMethods</a>[<span class="extype" name="geotrellis.layer.stitch.Implicits.withSpatialTileCollectionMethods.V">V</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="stitch/Implicits.html" class="extype" name="geotrellis.layer.stitch.Implicits">Implicits</a></dd></dl></div>
@@ -1558,7 +1501,7 @@ used in Leaflet et al.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="stitch/Implicits$withSpatialTileLayoutCollectionMethods.html"><span class="name">withSpatialTileLayoutCollectionMethods</span></a><span class="tparams">[<span name="V">V &lt;: <a href="../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>, <span name="M">M</span>]</span><span class="result"> extends <a href="stitch/SpatialTileLayoutCollectionStitchMethods.html" class="extype" name="geotrellis.layer.stitch.SpatialTileLayoutCollectionStitchMethods">SpatialTileLayoutCollectionStitchMethods</a>[<span class="extype" name="geotrellis.layer.stitch.Implicits.withSpatialTileLayoutCollectionMethods.V">V</span>, <span class="extype" name="geotrellis.layer.stitch.Implicits.withSpatialTileLayoutCollectionMethods.M">M</span>]</span>
+        <a title="" href="stitch/Implicits$withSpatialTileLayoutCollectionMethods.html"><span class="name">withSpatialTileLayoutCollectionMethods</span></a><span class="tparams">[<span name="V">V &lt;: <a href="../raster/CellGrid.html" class="extype" name="geotrellis.raster.CellGrid">CellGrid</a>[<a href="https://www.scala-lang.org/api/2.12.16/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>, <span name="M">M</span>]</span><span class="result"> extends <a href="stitch/SpatialTileLayoutCollectionStitchMethods.html" class="extype" name="geotrellis.layer.stitch.SpatialTileLayoutCollectionStitchMethods">SpatialTileLayoutCollectionStitchMethods</a>[<span class="extype" name="geotrellis.layer.stitch.Implicits.withSpatialTileLayoutCollectionMethods.V">V</span>, <span class="extype" name="geotrellis.layer.stitch.Implicits.withSpatialTileLayoutCollectionMethods.M">M</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="stitch/Implicits.html" class="extype" name="geotrellis.layer.stitch.Implicits">Implicits</a></dd></dl></div>
@@ -1579,7 +1522,7 @@ used in Leaflet et al.</p>
     </span>
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">crsDecoder</span><span class="result">: <a href="https://circe.github.io/circe/api/io/circe/Decoder.html#io.circe.Decoder" class="extype" name="io.circe.Decoder">Decoder</a>[<a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a>]</span>
@@ -1595,7 +1538,7 @@ used in Leaflet et al.</p>
     </span>
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">crsEncoder</span><span class="result">: <a href="https://circe.github.io/circe/api/io/circe/Encoder.html#io.circe.Encoder" class="extype" name="io.circe.Encoder">Encoder</a>[<a href="../proj4/CRS.html" class="extype" name="geotrellis.proj4.CRS">CRS</a>]</span>
@@ -1611,7 +1554,7 @@ used in Leaflet et al.</p>
     </span>
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">jsonCrsDecoder</span><span class="result">: <a href="https://circe.github.io/circe/api/io/circe/Decoder.html#io.circe.Decoder" class="extype" name="io.circe.Decoder">Decoder</a>[<a href="../vector/io/json/JsonCRS.html" class="extype" name="geotrellis.vector.io.json.JsonCRS">JsonCRS</a>]</span>
@@ -1627,7 +1570,7 @@ used in Leaflet et al.</p>
     </span>
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">jsonCrsEncoder</span><span class="result">: <a href="https://circe.github.io/circe/api/io/circe/Encoder.html#io.circe.Encoder" class="extype" name="io.circe.Encoder">Encoder</a>[<a href="../vector/io/json/JsonCRS.html" class="extype" name="geotrellis.vector.io.json.JsonCRS">JsonCRS</a>]</span>
@@ -1643,7 +1586,7 @@ used in Leaflet et al.</p>
     </span>
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">linkedCRSDecoder</span><span class="result">: <a href="https://circe.github.io/circe/api/io/circe/Decoder.html#io.circe.Decoder" class="extype" name="io.circe.Decoder">Decoder</a>[<a href="../vector/io/json/LinkedCRS.html" class="extype" name="geotrellis.vector.io.json.LinkedCRS">LinkedCRS</a>]</span>
@@ -1659,7 +1602,7 @@ used in Leaflet et al.</p>
     </span>
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">linkedCRSEncoder</span><span class="result">: <a href="https://circe.github.io/circe/api/io/circe/Encoder.html#io.circe.Encoder" class="extype" name="io.circe.Encoder">Encoder</a>[<a href="../vector/io/json/LinkedCRS.html" class="extype" name="geotrellis.vector.io.json.LinkedCRS">LinkedCRS</a>]</span>
@@ -1678,7 +1621,7 @@ used in Leaflet et al.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">longToInstant</span><span class="params">(<span name="millis">millis: <a href="https://www.scala-lang.org/api/2.12.15/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <span class="extype" name="java.time.Instant">Instant</span></span>
+        <span class="name">longToInstant</span><span class="params">(<span name="millis">millis: <a href="https://www.scala-lang.org/api/2.12.16/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <span class="extype" name="java.time.Instant">Instant</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Implicits.html" class="extype" name="geotrellis.layer.Implicits">Implicits</a></dd></dl></div>
@@ -1691,7 +1634,7 @@ used in Leaflet et al.</p>
     </span>
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">namedCRSDecoder</span><span class="result">: <a href="https://circe.github.io/circe/api/io/circe/Decoder.html#io.circe.Decoder" class="extype" name="io.circe.Decoder">Decoder</a>[<a href="../vector/io/json/NamedCRS.html" class="extype" name="geotrellis.vector.io.json.NamedCRS">NamedCRS</a>]</span>
@@ -1707,7 +1650,7 @@ used in Leaflet et al.</p>
     </span>
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">namedCRSEncoder</span><span class="result">: <a href="https://circe.github.io/circe/api/io/circe/Encoder.html#io.circe.Encoder" class="extype" name="io.circe.Encoder">Encoder</a>[<a href="../vector/io/json/NamedCRS.html" class="extype" name="geotrellis.vector.io.json.NamedCRS">NamedCRS</a>]</span>
@@ -1774,7 +1717,7 @@ used in Leaflet et al.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="Boundable$.html"><span class="name">Boundable</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="Boundable$.html"><span class="name">Boundable</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -1790,7 +1733,7 @@ used in Leaflet et al.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="Bounds$.html"><span class="name">Bounds</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="Bounds$.html"><span class="name">Bounds</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -1822,7 +1765,7 @@ used in Leaflet et al.</p>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="Represents empty region of space." href="EmptyBounds$.html"><span class="name">EmptyBounds</span></a><span class="result"> extends <a href="Bounds.html" class="extype" name="geotrellis.layer.Bounds">Bounds</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Nothing.html#scala.Nothing" class="extype" name="scala.Nothing">Nothing</a>] with <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="Represents empty region of space." href="EmptyBounds$.html"><span class="name">EmptyBounds</span></a><span class="result"> extends <a href="Bounds.html" class="extype" name="geotrellis.layer.Bounds">Bounds</a>[<a href="https://www.scala-lang.org/api/2.12.16/scala/Nothing.html#scala.Nothing" class="extype" name="scala.Nothing">Nothing</a>] with <a href="https://www.scala-lang.org/api/2.12.16/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Represents empty region of space.</p><div class="fullcomment"><div class="comment cmt"><p>Represents empty region of space.
@@ -1840,7 +1783,7 @@ Empty region contains no possible key.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="FloatingLayoutScheme$.html"><span class="name">FloatingLayoutScheme</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="FloatingLayoutScheme$.html"><span class="name">FloatingLayoutScheme</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -1872,7 +1815,7 @@ Empty region contains no possible key.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="KeyBounds$.html"><span class="name">KeyBounds</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="KeyBounds$.html"><span class="name">KeyBounds</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -1888,7 +1831,7 @@ Empty region contains no possible key.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="KeyExtractor$.html"><span class="name">KeyExtractor</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="KeyExtractor$.html"><span class="name">KeyExtractor</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -1904,7 +1847,7 @@ Empty region contains no possible key.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="LayoutDefinition$.html"><span class="name">LayoutDefinition</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="LayoutDefinition$.html"><span class="name">LayoutDefinition</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -1920,7 +1863,7 @@ Empty region contains no possible key.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="LayoutLevel$.html"><span class="name">LayoutLevel</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="LayoutLevel$.html"><span class="name">LayoutLevel</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -1952,7 +1895,7 @@ Empty region contains no possible key.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="LocalLayout$.html"><span class="name">LocalLayout</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="LocalLayout$.html"><span class="name">LocalLayout</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -1968,7 +1911,7 @@ Empty region contains no possible key.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="LocalLayoutScheme$.html"><span class="name">LocalLayoutScheme</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="LocalLayoutScheme$.html"><span class="name">LocalLayoutScheme</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -1984,7 +1927,7 @@ Empty region contains no possible key.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="MapKeyTransform$.html"><span class="name">MapKeyTransform</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="MapKeyTransform$.html"><span class="name">MapKeyTransform</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -2016,7 +1959,7 @@ Empty region contains no possible key.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="SpaceTimeKey$.html"><span class="name">SpaceTimeKey</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="SpaceTimeKey$.html"><span class="name">SpaceTimeKey</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -2032,7 +1975,7 @@ Empty region contains no possible key.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="SpatialKey$.html"><span class="name">SpatialKey</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="SpatialKey$.html"><span class="name">SpatialKey</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -2048,7 +1991,7 @@ Empty region contains no possible key.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="TemporalKey$.html"><span class="name">TemporalKey</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="TemporalKey$.html"><span class="name">TemporalKey</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -2064,7 +2007,7 @@ Empty region contains no possible key.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="TemporalKeyExtractor$.html"><span class="name">TemporalKeyExtractor</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="TemporalKeyExtractor$.html"><span class="name">TemporalKeyExtractor</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -2080,7 +2023,7 @@ Empty region contains no possible key.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="TemporalProjectedExtent$.html"><span class="name">TemporalProjectedExtent</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="TemporalProjectedExtent$.html"><span class="name">TemporalProjectedExtent</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -2112,7 +2055,7 @@ Empty region contains no possible key.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="TileLayerMetadata$.html"><span class="name">TileLayerMetadata</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="TileLayerMetadata$.html"><span class="name">TileLayerMetadata</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -2128,7 +2071,7 @@ Empty region contains no possible key.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="ZoomedLayoutScheme$.html"><span class="name">ZoomedLayoutScheme</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="ZoomedLayoutScheme$.html"><span class="name">ZoomedLayoutScheme</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -2165,9 +2108,9 @@ Empty region contains no possible key.
             </div><div class="parent" name="geotrellis.layer.merge.Implicits">
               <h3>Inherited from <a href="merge/Implicits.html" class="extype" name="geotrellis.layer.merge.Implicits">layer.merge.Implicits</a></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.15/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.16/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>

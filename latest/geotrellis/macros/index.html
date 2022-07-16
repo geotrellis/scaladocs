@@ -373,63 +373,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="geotrellis">geotrellis</a></dd></dl></div>
-    </li><li name="geotrellis.vectortile" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="vectortile"></a><a id="vectortile:vectortile"></a>
-      <span class="permalink">
-      <a href="../../geotrellis/vectortile/index.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="This package is experimental. Expect API flux." href="../vectortile/index.html"><span class="name">vectortile</span></a>
-      </span>
-      
-      <p class="shortcomment cmt"><i>This package is experimental. Expect API flux.</i></p><div class="fullcomment"><div class="comment cmt"><p><i>This package is experimental. Expect API flux.</i></p><p>Invented by <a href="https://www.mapbox.com/" target="_blank">Mapbox</a>, VectorTiles are a combination of the
-ideas of finite-sized tiles and vector geometries. Mapbox maintains the
-official implementation spec for VectorTile codecs. The specification is free
-and open source.</p><p>VectorTiles are advantageous over raster tiles in that:</p><ul><li>They are typically smaller to store</li><li>They can be easily transformed (rotated, etc.) in real time</li><li>They allow for continuous (as opposed to step-wise) zoom in Slippy Maps.</li></ul><p>Raw VectorTile data is stored in the protobuf format. Any codec implementing
-<a href="https://github.com/mapbox/vector-tile-spec/tree/master/2.1" target="_blank">the spec</a> must
-decode and encode data according to
-<a href="https://github.com/mapbox/vector-tile-spec/blob/master/2.1/vector_tile.proto" target="_blank">this <i>.proto</i> schema</a>.</p><h4>What is this package?</h4><p><i>geotrellis-vectortile</i> is a high-performance implementation of
-<b>Version 2.1</b> of the VectorTile spec. It features:</p><ul><li>Decoding of <b>Version 2</b> VectorTiles from Protobuf byte data into useful GeoTrellis types.</li><li>Lazy decoding of Geometries. Only parse what you need!</li></ul><h4>Using this Package</h4><h5>Modules</h5><p>Users of this library need only pay attention to <a href="../vectortile/index.html" class="extype" name="geotrellis.vectortile">geotrellis.vectortile</a>.
-Any classes in the <i>internal.*</i> submodules are unique to the machinery
-of VectorTile {de,en}coding, and can be safely ignored.</p><h5>Types</h5><p>The central type is the <a href="../vectortile/VectorTile.html" class="extype" name="geotrellis.vectortile.VectorTile">geotrellis.vectortile.VectorTile</a> class. Its companion object can
-be used to construct VectorTiles from raw byte data:</p><pre><span class="kw">import</span> geotrellis.spark.SpatialKey
-<span class="kw">import</span> geotrellis.spark.tiling.LayoutDefinition
-<span class="kw">import</span> geotrellis.vector.Extent
-<span class="kw">import</span> geotrellis.vectortile.VectorTile
-
-<span class="kw">val</span> bytes: <span class="std">Array</span>[<span class="std">Byte</span>] = ...  <span class="cmt">// from some `.mvt` file</span>
-<span class="kw">val</span> key: SpatialKey = ...  <span class="cmt">// preknown</span>
-<span class="kw">val</span> layout: LayoutDefinition = ...  <span class="cmt">// preknown</span>
-<span class="kw">val</span> tileExtent: Extent = layout.mapTransform(key)
-
-<span class="cmt">/* Decode Protobuf bytes. */</span>
-<span class="kw">val</span> tile: VectorTile = VectorTile.fromBytes(bytes, tileExtent)
-
-<span class="cmt">/* Encode a VectorTile back into bytes. */</span>
-<span class="kw">val</span> encodedBytes: <span class="std">Array</span>[<span class="std">Byte</span>] = tile.toBytes</pre><p>The <i>V*</i> types form a small <a href="https://en.wikipedia.org/wiki/Sum_type" target="_blank">sum type</a>
-and are used to represent usually untyped Feature-level metadata. This metadata
-is equivalent to a JSON Object, where String keys index values of any type.
-A Scala Map requires more rigidity (for the better), and so we use
-<a href="../vectortile/Value.html" class="extype" name="geotrellis.vectortile.Value">geotrellis.vectortile.Value</a> to guarantee type safety.</p><h4>Implementation Assumptions</h4><p>This particular implementation of the VectorTile spec makes the following
-assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordinate Reference
-    system. That is, there is no such thing as a &quot;projectionless&quot; VectorTile.
-    When decoding a VectorTile, we must provide a GeoTrellis <a href="../vector/Extent.html" class="extype" name="geotrellis.vector.Extent">geotrellis.vector.Extent</a> that
-    represents the Tile's area on a map.
-    With this, the grid coordinates stored in the VectorTile's Geometry are
-    shifted from their
-    original [0,4096] range to actual world coordinates in the Extent's CRS.</li><li>The <code>id</code> field in VectorTile Features doesn't matter.</li><li><code>UNKNOWN</code> geometries are safe to ignore.</li><li>If a VectorTile <code>geometry</code> list marked as <code>POINT</code> has only one pair
-    of coordinates, it will be decoded as a GeoTrellis <code>Point</code>. If it has
-    more than one pair, it will be decoded as a <code>MultiPoint</code>. Likewise for
-    the <code>LINESTRING</code> and <code>POLYGON</code> types. A complaint has been made about
-    the spec regarding this, and future versions may include a difference
-    between single and multi geometries.
-</li></ul></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="geotrellis">geotrellis</a></dd><dt>Version</dt><dd><p>2.1</p></dd></dl></div>
     </li>
               </ul>
             </div>
@@ -505,7 +448,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="DoubleTileCombiner10.html"><span class="name">DoubleTileCombiner10</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="DoubleTileCombiner10.html"><span class="name">DoubleTileCombiner10</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -521,7 +464,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="DoubleTileCombiner3.html"><span class="name">DoubleTileCombiner3</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="DoubleTileCombiner3.html"><span class="name">DoubleTileCombiner3</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -537,7 +480,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="DoubleTileCombiner4.html"><span class="name">DoubleTileCombiner4</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="DoubleTileCombiner4.html"><span class="name">DoubleTileCombiner4</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -553,7 +496,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="DoubleTileCombiner5.html"><span class="name">DoubleTileCombiner5</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="DoubleTileCombiner5.html"><span class="name">DoubleTileCombiner5</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -569,7 +512,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="DoubleTileCombiner6.html"><span class="name">DoubleTileCombiner6</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="DoubleTileCombiner6.html"><span class="name">DoubleTileCombiner6</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -585,7 +528,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="DoubleTileCombiner7.html"><span class="name">DoubleTileCombiner7</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="DoubleTileCombiner7.html"><span class="name">DoubleTileCombiner7</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -601,7 +544,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="DoubleTileCombiner8.html"><span class="name">DoubleTileCombiner8</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="DoubleTileCombiner8.html"><span class="name">DoubleTileCombiner8</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -617,7 +560,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="DoubleTileCombiner9.html"><span class="name">DoubleTileCombiner9</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="DoubleTileCombiner9.html"><span class="name">DoubleTileCombiner9</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -633,7 +576,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="DoubleTileMapper.html"><span class="name">DoubleTileMapper</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="DoubleTileMapper.html"><span class="name">DoubleTileMapper</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -649,7 +592,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="DoubleTileVisitor.html"><span class="name">DoubleTileVisitor</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="DoubleTileVisitor.html"><span class="name">DoubleTileVisitor</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -665,7 +608,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="IntTileCombiner10.html"><span class="name">IntTileCombiner10</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="IntTileCombiner10.html"><span class="name">IntTileCombiner10</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -681,7 +624,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="IntTileCombiner3.html"><span class="name">IntTileCombiner3</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="IntTileCombiner3.html"><span class="name">IntTileCombiner3</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -697,7 +640,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="IntTileCombiner4.html"><span class="name">IntTileCombiner4</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="IntTileCombiner4.html"><span class="name">IntTileCombiner4</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -713,7 +656,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="IntTileCombiner5.html"><span class="name">IntTileCombiner5</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="IntTileCombiner5.html"><span class="name">IntTileCombiner5</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -729,7 +672,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="IntTileCombiner6.html"><span class="name">IntTileCombiner6</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="IntTileCombiner6.html"><span class="name">IntTileCombiner6</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -745,7 +688,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="IntTileCombiner7.html"><span class="name">IntTileCombiner7</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="IntTileCombiner7.html"><span class="name">IntTileCombiner7</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -761,7 +704,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="IntTileCombiner8.html"><span class="name">IntTileCombiner8</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="IntTileCombiner8.html"><span class="name">IntTileCombiner8</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -777,7 +720,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="IntTileCombiner9.html"><span class="name">IntTileCombiner9</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="IntTileCombiner9.html"><span class="name">IntTileCombiner9</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -793,7 +736,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="IntTileMapper.html"><span class="name">IntTileMapper</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="IntTileMapper.html"><span class="name">IntTileMapper</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -809,7 +752,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="IntTileVisitor.html"><span class="name">IntTileVisitor</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="IntTileVisitor.html"><span class="name">IntTileVisitor</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -825,7 +768,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="MacroCombinableMultibandTile.html"><span class="name">MacroCombinableMultibandTile</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="MacroCombinableMultibandTile.html"><span class="name">MacroCombinableMultibandTile</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -841,7 +784,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="MacroCombineFunctions.html"><span class="name">MacroCombineFunctions</span></a><span class="tparams">[<span name="T">T</span>, <span name="MBT">MBT &lt;: <a href="MacroCombinableMultibandTile.html" class="extype" name="geotrellis.macros.MacroCombinableMultibandTile">MacroCombinableMultibandTile</a>[<span class="extype" name="geotrellis.macros.MacroCombineFunctions.T">T</span>]</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="MacroCombineFunctions.html"><span class="name">MacroCombineFunctions</span></a><span class="tparams">[<span name="T">T</span>, <span name="MBT">MBT &lt;: <a href="MacroCombinableMultibandTile.html" class="extype" name="geotrellis.macros.MacroCombinableMultibandTile">MacroCombinableMultibandTile</a>[<span class="extype" name="geotrellis.macros.MacroCombineFunctions.T">T</span>]</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -857,7 +800,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="MacroIterableTile.html"><span class="name">MacroIterableTile</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="MacroIterableTile.html"><span class="name">MacroIterableTile</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -873,7 +816,7 @@ assumptions:</p><ul><li>Geometries are implicitly encoded in <i>some</i> Coordin
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="MacroMappableTile.html"><span class="name">MacroMappableTile</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.15/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="MacroMappableTile.html"><span class="name">MacroMappableTile</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.16/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
